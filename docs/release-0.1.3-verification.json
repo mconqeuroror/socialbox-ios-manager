@@ -1,0 +1,124 @@
+{
+  "version": "0.1.3",
+  "checkedAtUTC": "2026-09-10T22:44:32.035975+00:00",
+  "installURL": "https://redditspoof.vercel.app/install",
+  "aptSigningFingerprint": "B020EEB51600D74C02D6FE57448FA877778E0D1F",
+  "repositories": [
+    {
+      "scheme": "rootless",
+      "url": "https://redditspoof.vercel.app/apt/redditbox/",
+      "architecture": "iphoneos-arm64",
+      "version": "0.1.3",
+      "filename": "debs/com.redditbox_0.1.3_iphoneos-arm64.deb",
+      "sha256": "b7765c0fcdfb3a0ebc876e970699a269b79d1cd1925c8b5dc9d2f0b721030e83",
+      "size": 1469664,
+      "retainedVersions": [
+        "0.1.3",
+        "0.1.2",
+        "0.1.1"
+      ],
+      "dependencies": [
+        "ai.akemi.appinst@2.1.1-redditbox1",
+        "ai.akemi.appsyncunified@116.0"
+      ],
+      "requiresMDMReadoption": false,
+      "stagedDeployment": "https://redditspoof-xoxjb92p8-modelclone.vercel.app",
+      "signedIndexesAndAllRetainedDownloads": "PASS",
+      "localMetadataMatchesProduction": true,
+      "stagingLicenseHealthEvidence": {
+        "beforePromotionConfirmed": true,
+        "deploymentURL": "https://redditspoof-xoxjb92p8-modelclone.vercel.app",
+        "expectedIssuer": "https://redditspoof.vercel.app",
+        "expectedKeyId": "b2c5d4176c727107c9826ad69386d4d65f90920074981bd842127d6b22add6e9",
+        "httpStatus": 200,
+        "isReleaseGate": false,
+        "issuerMatches": true,
+        "journalObservedAfterAt": "2026-09-10T22:33:44.677719+00:00",
+        "journalPhaseAfterRequest": "deployed",
+        "journalPhaseBeforeRequest": "deployed",
+        "keyIdMatches": true,
+        "observedAt": "2026-09-10T22:33:44.128457+00:00",
+        "ready": true,
+        "requestCompletedAt": "2026-09-10T22:33:44.677168+00:00",
+        "requestStartedAt": "2026-09-10T22:33:44.144653+00:00",
+        "schemaVersion": 1,
+        "startedAt": "2026-09-10T22:33:29.108445+00:00",
+        "status": "PASS",
+        "variant": "rootless",
+        "version": "0.1.3"
+      }
+    },
+    {
+      "scheme": "rootful",
+      "url": "https://redditspoof.vercel.app/apt/redditbox-rootful/",
+      "architecture": "iphoneos-arm",
+      "version": "0.1.3",
+      "filename": "debs/com.redditbox_0.1.3_iphoneos-arm.deb",
+      "sha256": "f0f60af3ea5eb5928ea9603cb8da11eff6b3973d6379052e91e46eaeb095c57a",
+      "size": 1463700,
+      "retainedVersions": [
+        "0.1.3",
+        "0.1.2",
+        "0.1.1"
+      ],
+      "dependencies": [
+        "ai.akemi.appinst@2.1.1-redditbox1",
+        "ai.akemi.appsyncunified@116.0"
+      ],
+      "requiresMDMReadoption": false,
+      "stagedDeployment": "https://redditspoof-ic7t5nxsg-modelclone.vercel.app",
+      "signedIndexesAndAllRetainedDownloads": "PASS",
+      "localMetadataMatchesProduction": true,
+      "stagingLicenseHealthEvidence": {
+        "beforePromotionConfirmed": true,
+        "deploymentURL": "https://redditspoof-ic7t5nxsg-modelclone.vercel.app",
+        "expectedIssuer": "https://redditspoof.vercel.app",
+        "expectedKeyId": "b2c5d4176c727107c9826ad69386d4d65f90920074981bd842127d6b22add6e9",
+        "httpStatus": 200,
+        "isReleaseGate": false,
+        "issuerMatches": true,
+        "journalObservedAfterAt": "2026-09-10T22:41:19.441202+00:00",
+        "journalPhaseAfterRequest": "deployed",
+        "journalPhaseBeforeRequest": "deployed",
+        "keyIdMatches": true,
+        "observedAt": "2026-09-10T22:41:18.988534+00:00",
+        "ready": true,
+        "requestCompletedAt": "2026-09-10T22:41:19.439581+00:00",
+        "requestStartedAt": "2026-09-10T22:41:19.005743+00:00",
+        "schemaVersion": 1,
+        "startedAt": "2026-09-10T22:38:53.815403+00:00",
+        "status": "PASS",
+        "variant": "rootful",
+        "version": "0.1.3"
+      }
+    }
+  ],
+  "deviceAcceptance": "NOT_RUN for published 0.1.3",
+  "licenseSigner": {
+    "ready": true,
+    "issuer": "https://redditspoof.vercel.app",
+    "keyId": "b2c5d4176c727107c9826ad69386d4d65f90920074981bd842127d6b22add6e9",
+    "matchesExistingPublicPEM": true
+  },
+  "web": {
+    "installHTTP": 200,
+    "homeHTTP": 200,
+    "homeLinksToInstall": true,
+    "canonicalSileoLinks": [
+      "sileo://source/https://redditspoof.vercel.app/apt/redditbox/",
+      "sileo://source/https://redditspoof.vercel.app/apt/redditbox-rootful/"
+    ],
+    "bothDisplayedVersions": "0.1.3",
+    "copyButtonsRendered": 2,
+    "renderedHomeEvidence": {
+      "url": "https://redditspoof.vercel.app/",
+      "method": "CUA browser accessibility snapshot after client rendering",
+      "browserTabId": "4",
+      "installationLinkLabel": "In\u0161tal\u00e1cia RedditBox",
+      "installationLinkURL": "https://redditspoof.vercel.app/install",
+      "homeLinksToInstall": true,
+      "note": "The home page initially returns client-rendered HTML without anchors; the hydrated authenticated page contains the canonical installation link."
+    },
+    "browserClickOrSileoAcceptance": "NOT_RUN"
+  }
+}

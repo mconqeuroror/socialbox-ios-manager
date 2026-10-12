@@ -1,0 +1,262 @@
+{
+  "date": "2026-09-10",
+  "branch": "feat/lifecycle-and-distribution",
+  "baseline": "15ed4860817d5337911f0866eb9f5ac5397abcde",
+  "nativeCodeCommit": "3e6f10910dffe7fcbbf2fb78af7d974573c0f80f",
+  "checks": [
+    {
+      "name": "scripts/build-mac.sh (rootless)",
+      "status": "PASS",
+      "logSHA256": "b5f9c788018515efa5b57ad011d98f38cac9b2fce328a5e4fbf318c5e572262e",
+      "scope": "All build-script tests, Xcode archive, Theos arm64/arm64e compile/link/sign/package. Procursus ldid only; no Apple team; existing license public key retained."
+    },
+    {
+      "name": "scripts/build-mac.sh (rootful)",
+      "status": "PASS",
+      "logSHA256": "0bcc64d073b7bdba4b9ac5eba680be48ed923bf0276d0cbd910689ad20bce2c4",
+      "scope": "All build-script tests, Xcode archive, Theos arm64/arm64e compile/link/sign/package. Procursus ldid only; no Apple team; existing license public key retained."
+    }
+  ],
+  "packages": [
+    {
+      "file": "packages/com.redditbox_0.1.3_iphoneos-arm64.deb",
+      "version": "0.1.3",
+      "architecture": "iphoneos-arm64",
+      "bytes": 1469654,
+      "sha256": "a49e7bf64ac0dcbbde943d6eaf66c7e0a3af8bdede88536d69b969b0eab5f8b8",
+      "scheme": "rootless",
+      "signingContractHash": "1dcb7e5bd8ed5d85abe6f23d66d80564fe816be8d2a4dd48a8d076f825655c23",
+      "requiresMDMReadoption": true,
+      "status": "PASS local packaging; not installed or published"
+    },
+    {
+      "file": "packages/com.redditbox_0.1.3_iphoneos-arm.deb",
+      "version": "0.1.3",
+      "architecture": "iphoneos-arm",
+      "bytes": 1463692,
+      "sha256": "8e7a5d92f056c44d6925a3f7111a1b2e32fd934df9bcb1b47e6744693ff9a438",
+      "scheme": "rootful",
+      "signingContractHash": "86068c9742602735484a2e339d9fb8670826820c3ce6b5d8fed8b3db5b274564",
+      "requiresMDMReadoption": true,
+      "status": "PASS local packaging; not installed or published"
+    }
+  ],
+  "deviceAcceptance": "NOT_RUN: final integration prepares the operator sequence; no phone mutation, account action or captured traffic acceptance was performed.",
+  "publication": "Local acceptance packages only; production APT/Vercel was not changed.",
+  "warnings": "Build completed with existing nullability/deprecation and obsolete linker-option warnings; success is not warning-free compilation.",
+  "toolingCommit": "d1d8964ece744286ee2790aca32f72a940bd2750",
+  "rowCount": 304,
+  "verdictCounts": {
+    "covered-in-code": 126,
+    "gap": 25,
+    "unverified": 153
+  },
+  "originalGapCount": 27,
+  "codeGapClosures": [
+    "WIRE-003",
+    "WIRE-004"
+  ],
+  "finalToolChecks": [
+    {
+      "name": "8 SSH transport/freshness/provenance fixtures",
+      "status": "PASS"
+    },
+    {
+      "name": "5 canary collection fixtures",
+      "status": "PASS"
+    },
+    {
+      "name": "shared native evaluator and license expiry fixtures",
+      "status": "PASS"
+    },
+    {
+      "name": "arm64 iOS temporary observer compile + Procursus ldid",
+      "status": "PASS"
+    },
+    {
+      "name": "static_check.py",
+      "status": "PASS"
+    },
+    {
+      "name": "check_leak_surface.py --base 15ed486",
+      "status": "PASS"
+    }
+  ],
+  "nativeProductUnchangedAfterBuild": true,
+  "fixCommits": [
+    {
+      "commit": "a8e61ec53a1eeb188ff326d46eb5e8f8e3c96d52",
+      "title": "Scope payload mutation to Reddit request dispatch",
+      "rows": [
+        "WIRE-003",
+        "WIRE-004",
+        "WIRE-006",
+        "WIRE-007",
+        "WIRE-009"
+      ]
+    },
+    {
+      "commit": "63affd68e3a534c7c47dbfd5f55e40485ac13e51",
+      "title": "Add shared read-only acceptance readiness evaluator",
+      "rows": [
+        "ACCEPT-001"
+      ]
+    },
+    {
+      "commit": "221ab717dab0d81ff3d920b052e7e7eb2cb4bbe9",
+      "title": "Preserve authenticated request bytes and signature headers",
+      "rows": [
+        "WIRE-005"
+      ]
+    },
+    {
+      "commit": "86eaf98cbb73d01bb585121541059fe9ca5c4446",
+      "title": "Add opt-in local-only keychain sync policy",
+      "rows": [
+        "OS-011"
+      ]
+    },
+    {
+      "commit": "94c630c69462d53299281d5a6f3ff8c7350396d1",
+      "title": "Record bounded shared-state and hardware fingerprint decisions",
+      "rows": [
+        "NET-026",
+        "NET-027",
+        "NET-033",
+        "OS-005",
+        "OS-036",
+        "OS-038",
+        "OS-039",
+        "OS-049",
+        "OS-052",
+        "OS-054",
+        "OS-057",
+        "OS-066",
+        "OS-068",
+        "OS-072",
+        "OS-074",
+        "OS-077",
+        "OS-081",
+        "OS-087",
+        "OS-088"
+      ]
+    },
+    {
+      "commit": "7078c5eb74806908c356c00c06ffaf3c95b73f5a",
+      "title": "Prepare ordered device acceptance and bounded SSH observations",
+      "rows": [
+        "ACCEPT-001",
+        "ACCEPT-002",
+        "ACCEPT-003",
+        "LIFE-007",
+        "LIFE-021",
+        "LIFE-027",
+        "NET-034",
+        "NET-036",
+        "NET-037",
+        "OS-008",
+        "OS-009",
+        "OS-030"
+      ]
+    },
+    {
+      "commit": "69eefb4e3381c67c0dd1180f9a53f559ac6f8420",
+      "title": "Document residual schema and OAuth acceptance limits",
+      "rows": [
+        "LIFE-007",
+        "WIRE-003",
+        "WIRE-004",
+        "WIRE-005",
+        "WIRE-006",
+        "WIRE-007",
+        "WIRE-009",
+        "WIRE-011"
+      ]
+    },
+    {
+      "commit": "ddbb9b39f95dd2435609f90fab6ca62d60448623",
+      "title": "Add Simple launcher overview and guided identity review",
+      "rows": [
+        "ACCEPT-001",
+        "UI-001",
+        "UI-002",
+        "UI-003",
+        "UI-004",
+        "UI-005"
+      ]
+    },
+    {
+      "commit": "8a8d230aac292adbe6e540e041285d4ab7a1cf80",
+      "title": "Prepare opt-in acceptance canaries inside actual clones",
+      "rows": [
+        "OS-008",
+        "OS-009",
+        "OS-033",
+        "OS-035"
+      ]
+    },
+    {
+      "commit": "9e692c9381cad0922c0e0cd0a89ab9c03abcf7e2",
+      "title": "Defer request header transformation until dispatch",
+      "rows": [
+        "WIRE-004",
+        "WIRE-005",
+        "WIRE-013"
+      ]
+    },
+    {
+      "commit": "417cd121640cdc6ae5868cf49f30527cd6187264",
+      "title": "Match diagnostic receipt timing to the armed-to-open sequence",
+      "rows": [
+        "NET-037"
+      ]
+    },
+    {
+      "commit": "7a19985bd494af9acc026935306fb64c987f0e76",
+      "title": "Expire acceptance license status with the launcher grant",
+      "rows": [
+        "ACCEPT-001",
+        "UI-001",
+        "UI-004"
+      ]
+    },
+    {
+      "commit": "c2166843efba8fae5ddd3b2e8c1fd8b7adadd6f4",
+      "title": "Allow explicit recovery from proven failed Simple create steps",
+      "rows": [
+        "UI-002"
+      ]
+    },
+    {
+      "commit": "3e6f10910dffe7fcbbf2fb78af7d974573c0f80f",
+      "title": "Run final acceptance and Simple UI fixtures in both package builds",
+      "rows": [
+        "ACCEPT-002",
+        "OS-008",
+        "OS-011",
+        "UI-002",
+        "WIRE-002"
+      ]
+    },
+    {
+      "commit": "d1d8964ece744286ee2790aca32f72a940bd2750",
+      "title": "Prepare nonce-bound in-clone acceptance and safe SSH authentication",
+      "rows": [
+        "ACCEPT-001",
+        "ACCEPT-002",
+        "ACCEPT-003",
+        "ACCEPT-004",
+        "LIFE-021",
+        "LIFE-026",
+        "LIFE-027",
+        "NET-036",
+        "NET-037",
+        "OS-008",
+        "OS-009",
+        "OS-033",
+        "OS-035"
+      ]
+    }
+  ],
+  "result": "PREPARATION COMPLETE; DEVICE ACCEPTANCE NOT_RUN. 25 confirmed gaps remain; no all-clear claim."
+}

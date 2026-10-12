@@ -1,0 +1,51 @@
+{
+  "date": "2026-09-22",
+  "version": "3.1.0-1+socialbox.9",
+  "packageSHA256": "2ba17031ac74c22a41019cba51a3f3fe8b9531c6151d2eb37ec6704f66eeef04",
+  "device": {
+    "model": "iPhone10,6",
+    "iOS": "16.7.16",
+    "runtimeArchitecture": "arm64"
+  },
+  "status": "PASS_AUTHENTICATED_ORIGINAL_HELPER_ROUND_TRIP",
+  "observed": {
+    "originalHelperMethodInstalled": true,
+    "clientAuthenticatedResponse": true,
+    "serviceAuthenticatedRequest": true,
+    "sameRequestNonce": "5080BA15-BD85-41A8-A30C-6D41BD94E326",
+    "helperProcess": 19060,
+    "serviceProcess": 19057,
+    "localTime": "20:51:46",
+    "scope": "read-only check; no target-app resolve, process enumeration or stop"
+  },
+  "package": {
+    "installed": true,
+    "payloadFilesVerified": 59,
+    "metadataByteIdentical": true,
+    "originalProgramsByteIdentical": 15,
+    "originalSlicesByteIdentical": 25,
+    "privateRecoverySHA256": "7f8c88de58f30312896f7045c9139fde2ace3958f5e0e89324ee0361f019fde2",
+    "priorVersion": "3.1.0-1+socialbox.8",
+    "priorSHA256": "609177c27ab9c07ada9ec95362e86ee1c4d811ee3a6fd6aa832328b01bd117a8"
+  },
+  "validation": {
+    "nativeHelperAssertions": 636,
+    "deviceProtocolAssertions": 129,
+    "deviceClientAssertions": 87,
+    "deviceClientTransport": "mocked; actual original helper IPC is separately recorded above",
+    "packageGroups": 33,
+    "packageCompositionGroups": 7,
+    "staticCheck": "ALL CLEAN",
+    "architecturesBuilt": [
+      "arm64",
+      "arm64e"
+    ],
+    "leakContractTests": 8
+  },
+  "residuals": [
+    "Authenticated service availability does not authorize launching a container or report that an app is absent.",
+    "Original manager UI, licence and real target-app switching remain NOT_RUN.",
+    "Data/network isolation and global/deactivation/batch transactions remain unfinished; ADOPT-003 stays a gap.",
+    "No physical arm64e runtime acceptance."
+  ]
+}

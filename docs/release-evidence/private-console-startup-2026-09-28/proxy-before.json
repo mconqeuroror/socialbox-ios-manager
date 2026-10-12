@@ -1,0 +1,99 @@
+{
+  "status" : {
+    "implementation" : "source-owned-workspace",
+    "screens" : [
+      "containers",
+      "home",
+      "license",
+      "location",
+      "proxies",
+      "settings",
+      "startup",
+      "welcome"
+    ],
+    "backendAdmissionUnchanged" : true,
+    "isolationVerified" : false
+  },
+  "scope" : "Actual source-owned UI with synthetic backend; no device\/backend\/isolation acceptance",
+  "failures" : [
+    "proxy empty hero has authored copy and layout",
+    "proxy import keeps the original callback sender",
+    "empty proxy capture includes authored guidance and all original import controls without clipping"
+  ],
+  "ok" : 0,
+  "assertions" : 174,
+  "captureReadiness" : [
+    {
+      "owner" : "SettingsViewController",
+      "ready" : true,
+      "checks" : {
+        "modalDismissed" : 1,
+        "contentHitTest" : 1,
+        "keyWindow" : true,
+        "previousNotVisible" : 1,
+        "navigationTransitionComplete" : 1,
+        "previousTransitionComplete" : 1,
+        "contentVisible" : true,
+        "appActive" : 1,
+        "tabTransitionComplete" : 1,
+        "selectedNavigation" : 1,
+        "topController" : 1,
+        "dockVisible" : true
+      }
+    },
+    {
+      "owner" : "SBSettingsPage",
+      "ready" : true,
+      "checks" : {
+        "modalDismissed" : 1,
+        "contentHitTest" : 1,
+        "keyWindow" : true,
+        "previousNotVisible" : 1,
+        "navigationTransitionComplete" : 1,
+        "previousTransitionComplete" : 1,
+        "contentVisible" : true,
+        "appActive" : 1,
+        "tabTransitionComplete" : 1,
+        "selectedNavigation" : 1,
+        "topController" : 1,
+        "dockVisible" : true
+      }
+    },
+    {
+      "owner" : "_Xc9m",
+      "ready" : true,
+      "checks" : {
+        "modalDismissed" : 1,
+        "contentHitTest" : 1,
+        "keyWindow" : true,
+        "previousNotVisible" : 1,
+        "navigationTransitionComplete" : 1,
+        "previousTransitionComplete" : 1,
+        "contentVisible" : true,
+        "appActive" : 1,
+        "tabTransitionComplete" : 1,
+        "selectedNavigation" : 1,
+        "topController" : 1,
+        "dockVisible" : true
+      }
+    },
+    {
+      "owner" : "ProxyViewController",
+      "ready" : true,
+      "checks" : {
+        "modalDismissed" : 1,
+        "contentHitTest" : 1,
+        "keyWindow" : true,
+        "previousNotVisible" : 1,
+        "navigationTransitionComplete" : 1,
+        "previousTransitionComplete" : 1,
+        "contentVisible" : true,
+        "appActive" : 1,
+        "tabTransitionComplete" : 1,
+        "selectedNavigation" : 1,
+        "topController" : 1,
+        "dockVisible" : true
+      }
+    }
+  ]
+}

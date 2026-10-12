@@ -1,0 +1,189 @@
+{
+  "schemaVersion": 1,
+  "kind": "socialbox-console-read-snapshot-authority",
+  "unit": 26,
+  "recordedAt": "2026-10-01T14:04:50.512342+00:00",
+  "status": "PASS_SOURCE_WITH_DEPLOYMENT_AND_CUSTOMER_GAPS",
+  "clientDeliveryReady": false,
+  "customerArtifactReleased": false,
+  "customerCodeIssued": false,
+  "contract": {
+    "before": "Initially valid owner could lose role/canonical email, be removed or become duplicate while GET waited; both routes still exposed private projections. License handler captured auth state before separate audit await; users handler read users/devices independently.",
+    "after": "License handler completes audit read first, then requires one unique current owner in its final auth snapshot. Users handler uses one same guarded auth snapshot for user rows/device counts. Auth-derived response projection is synchronous with no later await; typed policy denial is existing403, other read failures propagate.",
+    "unchanged": "Initial session resolution, canonical owner/admin policy, license mutations/signer/device claims/limits, storage/schema/migration contracts and response shape. No authorization write transaction, native installation, identifier, allocation, legacy CID, app UI or runtime changes."
+  },
+  "host": {
+    "status": "PASS",
+    "groups": {
+      "kind": "console-read-authority",
+      "groups": 20,
+      "passed": 20,
+      "failed": 0,
+      "executions": 20,
+      "normalControls": 2,
+      "preexistingAmbiguousReads": 2,
+      "committedActorDriftReads": 12,
+      "coherentSnapshotReads": 1,
+      "preservedNonPolicyErrors": 3,
+      "networkOrDeviceEffects": false
+    },
+    "regressionGroups": {
+      "ownerConsole": 10,
+      "mutationAuthority": 42,
+      "deviceLicensing": 23,
+      "authenticationConcurrency": 11,
+      "legacyLicenseAuth": 18
+    },
+    "regressionTotal": 104,
+    "typecheck": "PASS",
+    "jobs": [
+      {
+        "job": "focused",
+        "exitCode": 0,
+        "privateLogSHA256": "b3db05df4bfdc24df818cf07afe8911cda031495d3016cdae6e669aca9da0710",
+        "elapsedSeconds": 0.784
+      },
+      {
+        "job": "owner-console",
+        "exitCode": 0,
+        "privateLogSHA256": "9af8fabb2e83504dc1cf13d8c49d50ed04fc1d5a5d44f1160a40a5ed0e421070",
+        "elapsedSeconds": 0.652
+      },
+      {
+        "job": "mutation-authority",
+        "exitCode": 0,
+        "privateLogSHA256": "7899f817077946e085fc7509d2ef6db1d6d137745684c772402ca297517aee94",
+        "elapsedSeconds": 1.785
+      },
+      {
+        "job": "device",
+        "exitCode": 0,
+        "privateLogSHA256": "6564c7b57615995a580332ba8b42c25cb165cfb130c1956ca62e422d0ff52c23",
+        "elapsedSeconds": 1.657
+      },
+      {
+        "job": "auth-concurrency",
+        "exitCode": 0,
+        "privateLogSHA256": "33530d5666f5cb6f01a9e68c96e34f20ecc8e0eb65ee23082c59cc352a94016a",
+        "elapsedSeconds": 0.902
+      },
+      {
+        "job": "legacy",
+        "exitCode": 0,
+        "privateLogSHA256": "448c6ccd4e8bacacfd2561e13091a4534ea05106dcdde3d8a8efa674a561a46a",
+        "elapsedSeconds": 0.363
+      },
+      {
+        "job": "typecheck",
+        "exitCode": 0,
+        "privateLogSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "elapsedSeconds": 1.15
+      }
+    ],
+    "frozenCloudInputs": 151,
+    "sourceStable": true,
+    "copiedSourceCurrent": true,
+    "privateReportSHA256": "1f1ea574e3d1fb4763fa1a8348ea2a59d25730e37d75cdac19e0b9d5104c13c3",
+    "scope": "Real read handlers and synthetic local commits, migrated typed fixtures, paused actual storage reads and injected non-policy read failures; no network/device effects. Copied cloud inputs and prototype fixture frozen before/after. Node/dependencies/toolchain/OS excluded; not real Blob conflict or deployment.",
+    "denial": "Exact403/error-only response and byte equality of established migrated auth/audit after the deliberate fixture drift commit; valid owner and exact injected non-policy error controls also preserve bytes. This does not claim legacy readAuthState never migrates."
+  },
+  "counterfactual": {
+    "status": "FAIL_EXPECTED",
+    "groups": {
+      "kind": "console-read-authority",
+      "groups": 20,
+      "passed": 5,
+      "failed": 15,
+      "executions": 20,
+      "normalControls": 2,
+      "preexistingAmbiguousReads": 2,
+      "committedActorDriftReads": 12,
+      "coherentSnapshotReads": 1,
+      "preservedNonPolicyErrors": 3,
+      "networkOrDeviceEffects": false
+    },
+    "oldSourceCommit": "ebaab6a899029c7beec520fe75f36ce1093f3ed9",
+    "committedCloudInputCount": 150,
+    "currentCloudInputCount": 151,
+    "committedSourceCopyExact": true,
+    "currentSourceStable": true,
+    "fixtureSHA256": "83953e8fd95f03d2906cd81ef3b2b3f34ba71fdd293d7020a3aa261b99ce043d",
+    "privateReportSHA256": "11dbe465121029472cdd6a99427e87df3f4ccdc38a60ed3c6715ad4fbe0c6983",
+    "privateLogSHA256": "faca9a5c8a762810d8e558bea80ac3a00cf7d0e6bbc3e25884b3a1766f05213c",
+    "scope": "Final exact typed new fixture against a fresh archive of original committed cloud source.150 original committed inputs exact and151 current cloud inputs plus private prototype frozen before/after. No completed fixture state copied/reused, no network/device effects. Type-only Response-array annotation corrects initial fixture compile failure."
+  },
+  "productionBuild": {
+    "status": "PASS",
+    "framework": "Next14.2.35 optimized compile/typecheck/prerender30 pages/build tracing",
+    "sourceStable": true,
+    "sourceCopyCurrent": true,
+    "frozenCopiedCloudInputs": 151,
+    "privateReportSHA256": "c7096e3b7001e7bd34e3f81c34bc0dc51b8108052607fa2409a0551724cf9a68",
+    "privateLogSHA256": "14e1415847633e7ae4922866af56fe5f4a807bac0aa344d9cf84e584978d0542",
+    "scope": "New private copy with synthetic in-memory RSA and auth secrets. Retained parent launcher removes BLOB_READ_WRITE_TOKEN, APT_BLOB_READ_WRITE_TOKEN, LICENSE_SIGNING_PRIVATE_KEY, JWT_SECRET, AUTH_SECRET, ROTATION_SECRET, PROFILE_SECRET_KEY, PROXY_SECRET_KEY, VERCEL_TOKEN and ADMIN_PASSWORD before the child supplies synthetic signing/auth inputs. No environment files copied; local storage and telemetry disabled. Dependencies/Node/SDK/toolchain/OS excluded. No deployment or real license."
+  },
+  "independentReview": {
+    "status": "PASS_WITH_LIMITS",
+    "reviewer": "normal_activation_route_review",
+    "findings": [
+      "Same final guarded auth snapshot supplies all auth-derived projection; no later await",
+      "Separate audit is awaited before final guard; user rows/counts share one snapshot",
+      "Only typed policy denial becomes403; other errors retain their behavior",
+      "20 actual-handler/local-storage groups and old PASS5/FAIL15 are meaningful; no production/Blob contention or lifetime guarantee implied",
+      "All report/log hashes, exact final fixture,150 original committed cloud inputs and151 current copies match;539 inventory files retain1438 references",
+      "Retained parent build launcher filters the ten named variables; no blanket claim that every possible inherited secret was removed"
+    ],
+    "effects": "Read-only source/test review; no edits/reruns/live calls."
+  },
+  "retainedAttempts": [
+    {
+      "name": "counterfactual-before",
+      "status": "FAIL_EXPECTED",
+      "scope": "Initial15 narrower groups oldPASS2/FAIL13; coherence device/audit fixture omitted typed fields. Corrected before final acceptance, no production change."
+    },
+    {
+      "name": "counterfactual-valid-fixture",
+      "status": "FAIL_EXPECTED",
+      "scope": "Corrected device fields,15 narrower groups oldPASS2/FAIL13; superseded by final20 typed audit/device cases."
+    },
+    {
+      "name": "counterfactual-final",
+      "status": "FAIL_EXPECTED",
+      "scope": "20 groups oldPASS5/FAIL15 before type-only heterogeneous Response-array annotation correction."
+    },
+    {
+      "name": "attempt-01",
+      "status": "FAIL_FIXTURE_TYPECHECK",
+      "scope": "20 focused and104 regression groups passed; tsc rejected heterogeneous NextResponse union inference in the test helper. Explicit common Response annotation corrected only fixture typing; final new attempt passes."
+    }
+  ],
+  "deployment": {
+    "status": "NOT_RUN",
+    "existingWebsiteDeploymentID": "dpl_H7CgNzAtQo51hW27iqA2LY9KNJAZ",
+    "existingWebsiteSourceCommit": "7f1d88092aac4fc0825f4c503f7553031c72b81e",
+    "scope": "Unit25 published mutation authorization remains current. This read correction is tested source only; no live probes, account/password/license changes or APT/customer publication effects."
+  },
+  "device": {
+    "status": "NOT_RUN",
+    "effectsPerformed": false,
+    "newRealLicenseIssued": false,
+    "ownerProgramsOrAccountsChanged": false
+  },
+  "limits": [
+    "Read authorization reflects a final observed snapshot, not permission lifetime after the read or an atomic response/remote commit.",
+    "Audit is separately observed and is not atomic with the final auth snapshot; no audit/auth timeline equality guarantee.",
+    "readAuthState and initial session resolution can initialize/migrate legacy state under unchanged adapter contract. No-rewrite tests deliberately use established migrated fixtures.",
+    "Synthetic scheduling of actual local handlers/storage and committed fixture drifts, not actual Blob read contention, deployment or owner sign-in.",
+    "Other admin endpoints and session-wide duplicate-ID policy are outside this bounded read correction.",
+    "No first-provisioning issuer/verifier, target/history or durable external one-shot authority; pending clean-device question remains unanswered.",
+    "Customer check-only package remains unusable for fresh configure and private; no app package/code released.",
+    "Known Instagram sibling normal/direct read FAIL remains unfixed, Facebook launch FAIL, Twitter runtime unaccepted. Actual default native activation, safe switching/isolation/recovery, running-session licensing, two-account/proxy/customer flow remain NOT_RUN or retain earlier FAIL."
+  ],
+  "sourceSHA256": {
+    "cloud/src/app/api/admin/licenses/route.ts": "12619004606fe853747d381bf8860446a57ad62414ada004c81261fe7185df2f",
+    "cloud/src/app/api/admin/users/route.ts": "18799add96ec971d62074219e604700899926e26a09689c5910e115991c82120",
+    "cloud/scripts/console-read-authority-test.ts": "83953e8fd95f03d2906cd81ef3b2b3f34ba71fdd293d7020a3aa261b99ce043d",
+    "cloud/package.json": "7719a38575132a1bf7067338d4743266abb6eca9671f9d3ef68d9a7dc5588361"
+  },
+  "next": "Accept this source fix through a NEW exact cloud-only deployment, preserving both public repositories/download gate and production credentials. Await legitimate first-preparation contracts and pending fresh target input; source-only removal requires a reviewed permanent retirement/IPC policy, not unlink/discard."
+}

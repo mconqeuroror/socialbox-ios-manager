@@ -1,0 +1,303 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-09-20",
+  "branch": "feat/lucid-base",
+  "scope": "Private source-owned UI/evidence overlay and package construction; not completed runtime integration or device acceptance",
+  "artifact": {
+    "filename": "socialbox-owner-base-unvalidated.deb",
+    "bytes": 10875598,
+    "privateArtifact": true,
+    "publishedToAPT": false
+  },
+  "build": {
+    "added_paths": [
+      "var/jb/Applications/DoritosApp.app/SocialBoxIcon60@2x.png",
+      "var/jb/Applications/DoritosApp.app/SocialBoxIcon60@3x.png",
+      "var/jb/Library/MobileSubstrate/DynamicLibraries/LBXPresentation.dylib",
+      "var/jb/Library/MobileSubstrate/DynamicLibraries/LBXPresentation.plist"
+    ],
+    "base_version": "3.1.0-1",
+    "builder_sha256": "bc8e230a9b07f559aa92d6f43294c5735e256f07dbefed939b17eae8218d43f0",
+    "changed_original_paths": [
+      "var/jb/Applications/DoritosApp.app/Info.plist"
+    ],
+    "deployment_requirements": [
+      "DEPLOYMENT BLOCKED until emitted narrow rollback-postinst.sh is separately reviewed/applied as the old package postinst with the exact original backed up privately. No preparation was applied by this builder.",
+      "The original postinst has no action guard: direct dpkg can execute its broad system/data actions on abort-upgrade. Merely checking its original hash is insufficient.",
+      "Run emitted read-only preflight BEFORE dpkg; original prerm runs before incoming preinst.",
+      "Original preinst/postrm absent from handoff: any installed instance blocks pending review.",
+      "Existing com.redditbox is preserved and blocks installation pending an explicit tested migration.",
+      "Close original app and review active tunnel/account state before any upgrade; no automatic reset.",
+      "Acceptance must verify injection, signing trust, original services, licensing and rollback.",
+      "Preflight checks the linked CydiaSubstrate framework is present/readable/root-owned at an exact rootless rpath; runtime ABI, symbol resolution and actual injection remain NOT_RUN.",
+      "No MDM/per-app/kernel network enforcement or fail-closed guarantee added by this candidate."
+    ],
+    "device_acceptance": "NOT_RUN",
+    "handoff_sha256": "8730c17abbfb8cf12fbbbe19669120e5266b1782dd2a34f814ef0fab557187a2",
+    "installed": false,
+    "ldid_sha256": "932cfe6d92f07dca3e85a8288a43271aa8e9c0881f026fdcdecaecfbf1a7dea4",
+    "maintainer_scripts_sha256": {
+      "postinst": "f62ff92ae5c1e6e68711e6c3812b22f861885583fef5ef22b64fc56f646f5987",
+      "preinst": "7c5defba050702d0a2a5bbcb1b46f93487317bfcd8240a03f876d7403fed4642",
+      "prerm": "8fdb7352a093a8b819b5c0553d5e2ca878afe60ed1e14c2318eb6f0c60e00b43"
+    },
+    "original_controls_executed": false,
+    "original_manifest_files": 52,
+    "original_programs": [
+      {
+        "byte_identical_including_signature": true,
+        "path": "var/jb/Applications/DoritosApp.app/DoritosApp",
+        "sha256": "e230dab07690e30c292962a3c0a3ea8301f9532aaa583a7209fdf33142552dd0",
+        "slices": 2
+      },
+      {
+        "byte_identical_including_signature": true,
+        "path": "var/jb/Applications/DoritosApp.app/PlugIns/DoritosFilesProvider.appex/DoritosFilesProvider",
+        "sha256": "33bb1055f7fb5334268728e4ca707fab87c0e2b9b1abe9953f6867c39ea9cd5f",
+        "slices": 1
+      },
+      {
+        "byte_identical_including_signature": true,
+        "path": "var/jb/Applications/DoritosApp.app/PlugIns/DoritosPacketTunnel.appex/DoritosPacketTunnel",
+        "sha256": "dadff71b596db02306e76970ff11bc9ac304af45ea001bcf5960986dd0f44187",
+        "slices": 1
+      },
+      {
+        "byte_identical_including_signature": true,
+        "path": "var/jb/Library/MobileSubstrate/DynamicLibraries/Doritos.dylib",
+        "sha256": "7172791ab8e102e0330d156eaebba130f9b6d2a5491e0b3cbc5d07bc5965c4ca",
+        "slices": 2
+      },
+      {
+        "byte_identical_including_signature": true,
+        "path": "var/jb/Library/MobileSubstrate/DynamicLibraries/DoritosAccountsd.dylib",
+        "sha256": "06c3d125edc029925d10438cf43ac8253545a783d2222e9a7843cdbcf458c3e8",
+        "slices": 2
+      },
+      {
+        "byte_identical_including_signature": true,
+        "path": "var/jb/Library/MobileSubstrate/DynamicLibraries/DoritosCfPrefsd.dylib",
+        "sha256": "dba106b80dd677b9d05b0df4588995bb4e24dfa3dbfb48fe2402a649faf586c4",
+        "slices": 2
+      },
+      {
+        "byte_identical_including_signature": true,
+        "path": "var/jb/Library/MobileSubstrate/DynamicLibraries/DoritosContainermanagerd.dylib",
+        "sha256": "dd45d69acec2505f09da32f6fd21737184c7425153051517c3f0d1542bb23aea",
+        "slices": 2
+      },
+      {
+        "byte_identical_including_signature": true,
+        "path": "var/jb/Library/MobileSubstrate/DynamicLibraries/DoritosLsd.dylib",
+        "sha256": "9837c536a0cb4078afc87caa57aff5562dea513f6b7a74c153dc41c49db8d6ba",
+        "slices": 2
+      },
+      {
+        "byte_identical_including_signature": true,
+        "path": "var/jb/Library/MobileSubstrate/DynamicLibraries/DoritosMediaServerd.dylib",
+        "sha256": "77eadab63825f6e9aa705b1358bb5614b60add5c45a6e8507a6be2266bdab1f8",
+        "slices": 2
+      },
+      {
+        "byte_identical_including_signature": true,
+        "path": "var/jb/Library/MobileSubstrate/DynamicLibraries/DoritosSecurityd.dylib",
+        "sha256": "b5bef7648272948298cdec201c955b47bed523e43ede2a9bfeb439660f5501a2",
+        "slices": 2
+      },
+      {
+        "byte_identical_including_signature": true,
+        "path": "var/jb/Library/MobileSubstrate/DynamicLibraries/DoritosSpringBoard.dylib",
+        "sha256": "af06a9930986ea919241cf3291c34843e2822e31a3a4478f875fcced753b2ee5",
+        "slices": 2
+      },
+      {
+        "byte_identical_including_signature": true,
+        "path": "var/jb/usr/libexec/DoritosHelper",
+        "sha256": "a0455fd7aeb19712d7ebf147fe773788981204710cd2bfa6f5b087191d0888d2",
+        "slices": 1
+      },
+      {
+        "byte_identical_including_signature": true,
+        "path": "var/jb/usr/local/bin/DoritosCLI",
+        "sha256": "cb76f410122ff5fd66905fb07b96f7f45021341f530c0510d4f2dd2ff75ac5a3",
+        "slices": 2
+      },
+      {
+        "byte_identical_including_signature": true,
+        "path": "var/jb/usr/local/bin/secretsauced",
+        "sha256": "e21659cbacd5e74399cfcd0d3e370dbbb8dca395a23266577dff25c85d033a25",
+        "slices": 1
+      },
+      {
+        "byte_identical_including_signature": true,
+        "path": "var/jb/usr/local/bin/secretsaucemonitor",
+        "sha256": "1aaf600ea991a13b20bbadb785abbd6988709f9d9194d1e4c2796beaa03d0b23",
+        "slices": 1
+      }
+    ],
+    "original_programs_resigned": false,
+    "original_resource_binding": [
+      {
+        "code_directories": [
+          {
+            "hash_type": 1,
+            "info_and_resources_unbound": true,
+            "slot": 0
+          },
+          {
+            "hash_type": 2,
+            "info_and_resources_unbound": true,
+            "slot": 4096
+          }
+        ],
+        "cpu": 16777228,
+        "signature_sha256": "aaf2fb37bb8b7e9ef865be8db2a5212ebc97e13fd8e7653d466c1753094dfc66",
+        "slice_offset": 16384,
+        "subtype": 0
+      },
+      {
+        "code_directories": [
+          {
+            "hash_type": 1,
+            "info_and_resources_unbound": true,
+            "slot": 0
+          },
+          {
+            "hash_type": 2,
+            "info_and_resources_unbound": true,
+            "slot": 4096
+          }
+        ],
+        "cpu": 16777228,
+        "signature_sha256": "2000fd6767c63b73f876fdca3504bb5070beb5d93a1c608ddcb1f0b6419ebf19",
+        "slice_offset": 4751360,
+        "subtype": 2147483650
+      }
+    ],
+    "overlay_sha256": "0902595fde26bca5fcb2259c12c3876a1740fbbfca892b5bbd1b73202438bd79",
+    "overlay_slices": [
+      {
+        "cpu": 16777228,
+        "sha256": "184f90d3889b94aa35015d641f8beaf4fffe07a97d32208d731f52f84cae5060",
+        "subtype": 0
+      },
+      {
+        "cpu": 16777228,
+        "sha256": "72798d032ff472cd5ed91068a3e542e7cd003e2ad9eb29104fb25cdd61fd9cd6",
+        "subtype": 2147483650
+      }
+    ],
+    "package": "com.secretsauce.doritos",
+    "package_sha256": "8abd05829d51146fbb45d95ce0d29c0dfe55f545a32d15ea49ecca632c6750ad",
+    "payload_files": 53,
+    "presentation_sources": {
+      "lucid/Diagnostics/LBXIsolationAssessment.h": "bf14c6febf68b555e90a2374299ec82fc34021b735c284d1262355e9e55d82b9",
+      "lucid/Diagnostics/LBXIsolationAssessment.m": "001acf0e5725bfd8f57a7fc4976ddacd47b895d408534300cdce6ba850ddae13",
+      "lucid/Diagnostics/LBXIsolationViewController.h": "3a6e909eac3c7a04641f29559f563e48c268ba11c350e2f3b261f651fea27275",
+      "lucid/Diagnostics/LBXIsolationViewController.m": "9d697faca9c172cc67560060aa3dc48e1397659e56c5f2a8ee998b1a208b0e80",
+      "lucid/Diagnostics/LBXRecoveredContextAdapter.h": "ffa6aa40adada3e04058638c799e3214c8f946aca7122b6a58a776b48d0f32a7",
+      "lucid/Diagnostics/LBXRecoveredContextAdapter.m": "6398569e9c05f6e65a46120c180571d90e8d2a5bf432e581268941d3eb9b36e7",
+      "lucid/LBXPresentation.plist": "0e8a081a5b34a863af91c1cf30cffe29c203a3cd7f8323588e96e09f6128b4af",
+      "lucid/Makefile": "93cd062dc2bbf906366de373db27888861eba18d98c8255ab06846ec9f3b51b7",
+      "lucid/Presentation/LBXPresentation.h": "f7b4065942e1c31ea344f3e0a49cba18fae80f75345b4bdecb2a6f5f4b241346",
+      "lucid/Presentation/LBXPresentation.m": "09ed8cfcfbd0454105507be52b0ca0f633d39bbafa35e6fbe7fa7faea46f5746",
+      "lucid/Presentation/Tests/fixture.m": "6f9d9e02a30f534105b3cd304b044da00fd039598a7cc25202dc3eaf403d90a6",
+      "lucid/tests/recovered_context_adapter.m": "9ebdcb59671b7ace15b0e4158fa37f11e5e3aea2a37f852fbae39af10872c269"
+    },
+    "preserved_installed_setuid_paths": [
+      "var/jb/Applications/DoritosApp.app/DoritosApp",
+      "var/jb/usr/local/bin/DoritosCLI"
+    ],
+    "schema_version": 1,
+    "status": "UNVALIDATED_UPGRADE_ONLY",
+    "version": "3.1.0-1+socialbox.1"
+  },
+  "independentPackageVerification": {
+    "status": "PASS",
+    "verifier": "system libarchive bsdtar + Python tarfile (independent container reader)",
+    "package_sha256": "8abd05829d51146fbb45d95ce0d29c0dfe55f545a32d15ea49ecca632c6750ad",
+    "payload_files": 53,
+    "unchanged_original_files": 48,
+    "preserved_programs": 15,
+    "preserved_slices": 25,
+    "changed_original_paths": [
+      "var/jb/Applications/DoritosApp.app/Info.plist"
+    ],
+    "added_paths": [
+      "var/jb/Applications/DoritosApp.app/SocialBoxIcon60@2x.png",
+      "var/jb/Applications/DoritosApp.app/SocialBoxIcon60@3x.png",
+      "var/jb/Library/MobileSubstrate/DynamicLibraries/LBXPresentation.dylib",
+      "var/jb/Library/MobileSubstrate/DynamicLibraries/LBXPresentation.plist"
+    ],
+    "all_payload_md5_matches": true,
+    "root_owned_tar_entries": true,
+    "setuid_paths_limited_to_original_two": true,
+    "source_hashes_current": true,
+    "both_architectures_no_test_exports": true,
+    "required_rollback_replacement_hash_and_original_backup_match_manifest": true,
+    "installed": false,
+    "runtime_acceptance": "NOT_RUN",
+    "deployment_preparation": "NOT_APPLIED_DEPLOYMENT_BLOCKER"
+  },
+  "packagingTests": {
+    "status": "PASS",
+    "command": "python3 tools/test_socialbox_recovered.py",
+    "behavioral_test_groups": 23,
+    "elapsed_seconds": 91.579,
+    "test_sha256": "20d7ce8453ceb3ad2912a45f3543d8653cd2d5ab34a2c19a0d8baa0c55dab226",
+    "builder_sha256": "bc8e230a9b07f559aa92d6f43294c5735e256f07dbefed939b17eae8218d43f0",
+    "test_groups": [
+      "Packaging.test_exact_original_bytes_and_abi_preserved",
+      "Packaging.test_package_contents_and_no_installer_side_effects",
+      "Packaging.test_payload_mutations_and_abi_changes_are_rejected",
+      "Packaging.test_reject_unpinned_zip_before_parsing",
+      "Packaging.test_resource_bindings_all_slices_and_directories",
+      "Packaging.test_signature_bounds_and_missing_directory_rejected",
+      "Packaging.test_signed_resources_and_wrong_filter_or_arch_rejected",
+      "ScriptBehavior.test_abort_upgrade_recovers_only_owned_services",
+      "ScriptBehavior.test_baseline_and_old_control_tampering_blocked",
+      "ScriptBehavior.test_exact_base_preflight_is_read_only",
+      "ScriptBehavior.test_foreign_cli_alias_and_added_destinations_block_in_external_preflight",
+      "ScriptBehavior.test_foreign_cli_alias_and_service_failure_not_ignored",
+      "ScriptBehavior.test_foreign_parent_symlink_is_rejected_before_upgrade",
+      "ScriptBehavior.test_fresh_wrong_version_rootful_old_os_coexistence_and_controls_block",
+      "ScriptBehavior.test_linked_shim_presence_at_exact_rootless_rpaths",
+      "ScriptBehavior.test_nonexecutable_controls_are_rejected",
+      "ScriptBehavior.test_only_exact_injection_alias_allowed",
+      "ScriptBehavior.test_original_unsafe_postinst_without_reviewed_replacement_is_blocked",
+      "ScriptBehavior.test_postinst_only_owned_services_and_app",
+      "ScriptBehavior.test_prerm_preserves_storage_stops_monitor_first_and_ignores_abort",
+      "ScriptBehavior.test_rollback_backup_required_private_original_bytes",
+      "ScriptBehavior.test_rootless_bootstrap_link_allowed",
+      "ScriptBehavior.test_writable_or_nonroot_parent_rejected"
+    ],
+    "failing_first_reproductions": [
+      "abort-upgrade did not recover owned services",
+      "foreign CLI and added destinations passed external preflight",
+      "symlink app parent passed preflight",
+      "writable/nonroot parents passed preflight",
+      "nonexecutable installed controls passed preflight"
+    ],
+    "separate_baseline_recovery_regression_tests": 6,
+    "baseline_recovery_regression_result": "PASS",
+    "device_operations": false
+  },
+  "sourceChecks": {
+    "adapterAssertions": 185,
+    "assessmentAssertions": 204,
+    "syntheticUIKitAssertions": 107,
+    "legacyHostEntrypoints": 138,
+    "all": "PASS"
+  },
+  "remaining": {
+    "originalLicensingReplacement": "NOT_IMPLEMENTED",
+    "strongerRuntimeIsolationPorts": "NOT_IMPLEMENTED",
+    "deploymentPreparation": "NOT_APPLIED",
+    "phoneInstallation": "NOT_RUN",
+    "runtimeIsolation": "NOT_RUN",
+    "networkCapture": "NOT_RUN",
+    "fortyRealContexts": "NOT_RUN",
+    "crossDeviceCloudRestore": "NOT_RUN"
+  },
+  "sourceCommit": "af935f4a5d5c9bb578bb5cc3488792cf54651ccc"
+}

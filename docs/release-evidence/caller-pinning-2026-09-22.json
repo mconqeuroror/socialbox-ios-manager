@@ -1,0 +1,57 @@
+{
+  "date": "2026-09-22",
+  "version": "3.1.0-1+socialbox.8",
+  "packageSHA256": "609177c27ab9c07ada9ec95362e86ee1c4d811ee3a6fd6aa832328b01bd117a8",
+  "finding": "Approved path and root/non-writable mode alone admitted different executable bytes.",
+  "repair": {
+    "exactCallerSizeAndSHA256": true,
+    "rootOwnedSingleLinkNonWritable": true,
+    "descriptorAndNameRechecked": true,
+    "sameAuditTokenRecheckedAfterHash": true,
+    "originalProgramsByteIdentical": 15,
+    "originalSlicesByteIdentical": 25,
+    "licensingChanged": false
+  },
+  "validation": {
+    "failingFirstPeerRegression": true,
+    "hostHelperAssertions": 569,
+    "hostDrainAssertions": 281,
+    "devicePeerAssertions": 53,
+    "deviceFilesystemAssertions": 45,
+    "deviceOriginalFilesAccepted": true,
+    "staticCheck": "ALL CLEAN",
+    "packageCompositionGroups": 7,
+    "packageGroups": 33,
+    "leakContractTests": 8,
+    "sourceSnapshotFiles": 433
+  },
+  "device": {
+    "model": "iPhone10,6",
+    "iOS": "16.7.16",
+    "runtimeArchitecture": "arm64"
+  },
+  "package": {
+    "installed": true,
+    "independentlyVerifiedPayloadFiles": 59,
+    "priorVersion": "3.1.0-1+socialbox.7",
+    "priorSHA256": "521ed1871a79413a0143c9b2d3b5f9e7331d4e5f0664b1939df06b04804e326c",
+    "installedPayloadFilesVerified": 59,
+    "metadataByteIdentical": true,
+    "privateRecoverySHA256": "6cb84a2da89ae871148675eb1df1f20fd903c13c8d4ead46b9004278f709e891"
+  },
+  "residuals": [
+    "On-disk hash plus kernel identity is not in-memory or injected-library attestation.",
+    "Original-manager positive IPC, real app switches and data/network isolation remain NOT_RUN.",
+    "Global/deactivation/batch workers still need acknowledged pre-write failures and recovery. ADOPT-003 remains a gap.",
+    "No Facebook/Reddit/Instagram/X installed on this phone at the beginning of this pass.",
+    "Arm64e build passes; physical arm64e runtime NOT_RUN."
+  ],
+  "runtime": {
+    "unrelatedRootCallerRefused": true,
+    "serviceRejectionLogged": true,
+    "uiOpenExit": 0,
+    "foregroundLaunch": "DENIED_DEVICE_LOCKED",
+    "originalHelperLibraryMapped": true,
+    "mappingIsNotMethodOrSwitchProof": true
+  }
+}

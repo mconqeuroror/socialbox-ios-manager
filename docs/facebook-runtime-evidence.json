@@ -1,0 +1,1839 @@
+{
+  "schemaVersion": 1,
+  "appType": "facebook",
+  "ledgerRow": "FBRUN-001",
+  "source": {
+    "bundleIdentifier": "com.facebook.Facebook",
+    "version": "578.1.0",
+    "build": "1063022819",
+    "ipaSHA256": "2cdaab3bd8bd0238660ea23b566b7bd7713121d996032bbc045d4066d2233e8a",
+    "installedVersionEvidence": "Operator confirmed original installed build matches the audited IPA; probe did not independently read Info.plist.",
+    "iOSBuild": null,
+    "deviceIdentifier": null
+  },
+  "method": {
+    "fridaVersion": "17.18.0",
+    "transport": "USB",
+    "phoneOperator": "root agent",
+    "metadataOnly": true,
+    "rawIdentifierOrCredentialValuesRequested": false,
+    "unknownNames": "redacted",
+    "unknownHostSubdomains": "collapsed-to-registered-root",
+    "recordLimits": "At most three identical metadata/caller records and 5000 total events per run; counts are emitted records, not complete call counts.",
+    "v1Correction": "NSUserDefaults current-app label was a placeholder; selected v1 defaults records are normalized to unresolved-receiver-suite. V2 tracks observed initializer/standard-defaults returned receivers with zeroing weak lifetime, not the domain that supplied a returned value.",
+    "exclusions": [
+      "No result data, account fields, tokens, key material, persistent-reference bytes or identifier values requested.",
+      "No HTTP header values, URL paths/query/userinfo or bodies requested.",
+      "No new-container, clone, login/post/share, restore, import or MDM acceptance established.",
+      "Hook registration and zero probe errors do not establish complete API/transport coverage."
+    ]
+  },
+  "captures": [
+    {
+      "captureId": "v1-untracked-defaults-receivers",
+      "privateArtifactName": "metadata-2026-09-13T21-30-35-591Z.jsonl",
+      "privateArtifactSHA256": "178972e5b4fc77e1e22d35721ac0defd46a60e99294010f7b3989892e30428c7",
+      "operatorDurationSeconds": 20,
+      "process": "com.facebook.Facebook",
+      "context": "Existing original installation; no login or UI action automated; same app stopped after capture.",
+      "probeSourceSHA256": null,
+      "recordCount": 430,
+      "recordCountsByKind": {
+        "hook-installed": 36,
+        "probe-ready": 1,
+        "defaults-suite": 8,
+        "preferences": 349,
+        "keychain": 21,
+        "identity-api-call": 14,
+        "http-request-metadata": 1
+      },
+      "probeErrorRecords": 0,
+      "recordedKeychainOperations": [
+        {
+          "api": "SecItemCopyMatching",
+          "status": -25300,
+          "recordedEvents": 3
+        },
+        {
+          "api": "SecItemCopyMatching",
+          "status": 0,
+          "recordedEvents": 14
+        },
+        {
+          "api": "SecItemDelete",
+          "status": -25300,
+          "recordedEvents": 3
+        },
+        {
+          "api": "SecItemUpdate",
+          "status": 0,
+          "recordedEvents": 1
+        }
+      ],
+      "recordedKeychainGroups": [
+        {
+          "group": "T84QZS65DQ.platformFamily",
+          "status": -25300,
+          "recordedEvents": 4
+        },
+        {
+          "group": "T84QZS65DQ.platformFamily",
+          "status": 0,
+          "recordedEvents": 7
+        },
+        {
+          "group": "group.com.facebook.Facebook",
+          "status": 0,
+          "recordedEvents": 2
+        },
+        {
+          "group": "group.com.facebook.family",
+          "status": -25300,
+          "recordedEvents": 2
+        },
+        {
+          "group": "group.com.facebook.family",
+          "status": 0,
+          "recordedEvents": 6
+        }
+      ],
+      "recordedIdentityAPIs": {
+        "UIDevice-identifierForVendor": 1,
+        "FBFamilyDeviceID-familyDeviceIDWithConfiguration:SourceFile:SourceLine:": 3,
+        "FBFamilyDeviceID-cachedFamilyDeviceIDWithConfiguration:SourceFile:SourceLine:": 8,
+        "DCAppAttestService-isSupported": 1,
+        "UIDevice-systemVersion": 1
+      },
+      "selectedRecordCount": 35,
+      "selectedRecords": [
+        {
+          "schema": 1,
+          "kind": "probe-ready",
+          "hooks": 27,
+          "metadataOnly": true,
+          "unlistedNames": "redacted"
+        },
+        {
+          "schema": 1,
+          "event": 40,
+          "kind": "defaults-suite",
+          "suite": "group.com.facebook.Facebook",
+          "stack": [
+            "FBSharedFramework+0x144850",
+            "FBSharedFramework+0x144748",
+            "libsystem_pthread.dylib+0x673c",
+            "libsystem_platform.dylib+0x7610",
+            "libsystem_pthread.dylib+0x1e38",
+            "FBSharedFramework+0x143ea8",
+            "FBSharedFramework+0x143d88",
+            "FBSharedFramework+0x143c94"
+          ]
+        },
+        {
+          "schema": 1,
+          "event": 70,
+          "kind": "keychain",
+          "api": "SecItemCopyMatching",
+          "query": {
+            "kSecAttrAccessGroup": "T84QZS65DQ.platformFamily",
+            "kSecAttrService": "<redacted-unlisted-name>",
+            "kSecClass": "genp"
+          },
+          "status": 0,
+          "caller": [
+            "FBSharedFramework+0x3af890",
+            "FBSharedFramework+0x3be770",
+            "FBSharedFramework+0x3cb8f0",
+            "libdispatch.dylib+0x64780",
+            "libdispatch.dylib+0x46a50",
+            "FBSharedFramework+0x3af804",
+            "FBSharedFramework+0x3a6a68",
+            "FBSharedFramework+0x3a46fc"
+          ],
+          "stack": []
+        },
+        {
+          "schema": 1,
+          "event": 71,
+          "kind": "identity-api-call",
+          "api": "UIDevice-identifierForVendor",
+          "stack": [
+            "FBSharedFramework+0x1aa54",
+            "FBSharedFramework+0x3a6da0",
+            "FBSharedFramework+0x3afd04",
+            "libdispatch.dylib+0x637a8",
+            "libdispatch.dylib+0x64780",
+            "libdispatch.dylib+0x3f6fc",
+            "libdispatch.dylib+0x401b0",
+            "libdispatch.dylib+0x49f14"
+          ]
+        },
+        {
+          "schema": 1,
+          "event": 75,
+          "kind": "preferences",
+          "operation": "read:stringForKey:",
+          "key": "com.facebook.familydeviceid.backup.vendordeviceid",
+          "domain": "<unresolved-receiver-suite>",
+          "stack": [
+            "FBSharedFramework+0x1aa54",
+            "FBSharedFramework+0x3a6dd8",
+            "FBSharedFramework+0x3afd04",
+            "libdispatch.dylib+0x637a8",
+            "libdispatch.dylib+0x64780",
+            "libdispatch.dylib+0x3f6fc",
+            "libdispatch.dylib+0x401b0",
+            "libdispatch.dylib+0x49f14"
+          ],
+          "domainEvidence": "receiver-not-tracked-in-v1",
+          "domainMeaning": "original-current-app-label-was-a-placeholder-not-observed-domain"
+        },
+        {
+          "schema": 1,
+          "event": 76,
+          "kind": "preferences",
+          "operation": "read:objectForKey:",
+          "key": "com.facebook.familydeviceid.backup.vendordeviceid",
+          "domain": "<unresolved-receiver-suite>",
+          "stack": [
+            "<unknown-module>",
+            "FBSharedFramework+0x1aa54",
+            "FBSharedFramework+0x3a6dd8",
+            "FBSharedFramework+0x3afd04",
+            "libdispatch.dylib+0x637a8",
+            "libdispatch.dylib+0x64780",
+            "libdispatch.dylib+0x3f6fc",
+            "libdispatch.dylib+0x401b0"
+          ],
+          "domainEvidence": "receiver-not-tracked-in-v1",
+          "domainMeaning": "original-current-app-label-was-a-placeholder-not-observed-domain"
+        },
+        {
+          "schema": 1,
+          "event": 77,
+          "kind": "defaults-suite",
+          "suite": "group.com.facebook.family",
+          "stack": [
+            "FBSharedFramework+0x144850",
+            "FBSharedFramework+0x3afe0c",
+            "libsystem_pthread.dylib+0x673c",
+            "libsystem_platform.dylib+0x7610",
+            "libsystem_pthread.dylib+0x1e38",
+            "FBSharedFramework+0x144000",
+            "FBSharedFramework+0x143d88",
+            "FBSharedFramework+0x3a50dc"
+          ]
+        },
+        {
+          "schema": 1,
+          "event": 78,
+          "kind": "defaults-suite",
+          "suite": "group.com.facebook.family",
+          "stack": [
+            "FBSharedFramework+0x3a516c",
+            "FBSharedFramework+0x3aff10",
+            "libdispatch.dylib+0x64780",
+            "libdispatch.dylib+0x34ddc",
+            "FBSharedFramework+0x3afe98",
+            "FBSharedFramework+0x3a62c4",
+            "FBSharedFramework+0x1aa54",
+            "FBSharedFramework+0x3a6e5c"
+          ]
+        },
+        {
+          "schema": 1,
+          "event": 82,
+          "kind": "defaults-suite",
+          "suite": "group.com.facebook.Facebook",
+          "stack": [
+            "FBSharedFramework+0x3a7400",
+            "FBSharedFramework+0x3bf7c0",
+            "FBSharedFramework+0x3bf6e8",
+            "Facebook+0x5671c",
+            "Facebook+0x54d68",
+            "libdispatch.dylib+0x64780",
+            "libdispatch.dylib+0x34ddc",
+            "Facebook+0x566b4"
+          ]
+        },
+        {
+          "schema": 1,
+          "event": 83,
+          "kind": "keychain",
+          "api": "SecItemCopyMatching",
+          "query": {
+            "kSecAttrAccessGroup": "T84QZS65DQ.platformFamily",
+            "kSecAttrService": "<redacted-unlisted-name>",
+            "kSecClass": "genp"
+          },
+          "status": -25300,
+          "caller": [
+            "FBSharedFramework+0x3af890",
+            "FBSharedFramework+0x3aee94",
+            "FBSharedFramework+0x3a821c",
+            "libdispatch.dylib+0x64780",
+            "libdispatch.dylib+0x46a50",
+            "FBSharedFramework+0x3a5604",
+            "FBSharedFramework+0xc091c",
+            "FBSharedFramework+0x3a7794"
+          ],
+          "stack": []
+        },
+        {
+          "schema": 1,
+          "event": 120,
+          "kind": "identity-api-call",
+          "api": "FBFamilyDeviceID-familyDeviceIDWithConfiguration:SourceFile:SourceLine:",
+          "stack": [
+            "Facebook+0x51300",
+            "libsystem_pthread.dylib+0x673c",
+            "libsystem_platform.dylib+0x7610",
+            "libsystem_pthread.dylib+0x1e38",
+            "Facebook+0x5df64",
+            "Facebook+0x50c54",
+            "Facebook+0x5df00",
+            "Facebook+0x504fc"
+          ]
+        },
+        {
+          "schema": 1,
+          "event": 204,
+          "kind": "keychain",
+          "api": "SecItemDelete",
+          "query": {
+            "kSecAttrAccessGroup": "T84QZS65DQ.platformFamily",
+            "kSecAttrService": "<redacted-unlisted-name>",
+            "kSecClass": "genp"
+          },
+          "status": -25300,
+          "caller": [
+            "FBSharedFramework+0x173b700",
+            "FBSharedFramework+0x173b694",
+            "libdispatch.dylib+0x64780",
+            "libdispatch.dylib+0x46a50",
+            "FBSharedFramework+0x173b618",
+            "FBSharedFramework+0x173b5a8",
+            "FBSharedFramework+0x173b560",
+            "libdispatch.dylib+0x637a8"
+          ],
+          "stack": []
+        },
+        {
+          "schema": 1,
+          "event": 205,
+          "kind": "keychain",
+          "api": "SecItemDelete",
+          "query": {
+            "kSecAttrAccessGroup": "group.com.facebook.family",
+            "kSecAttrService": "<redacted-unlisted-name>",
+            "kSecClass": "genp"
+          },
+          "status": -25300,
+          "caller": [
+            "FBSharedFramework+0x173b700",
+            "FBSharedFramework+0x173b694",
+            "libdispatch.dylib+0x64780",
+            "libdispatch.dylib+0x46a50",
+            "FBSharedFramework+0x173b618",
+            "FBSharedFramework+0x173b5a8",
+            "FBSharedFramework+0x173b560",
+            "libdispatch.dylib+0x637a8"
+          ],
+          "stack": []
+        },
+        {
+          "schema": 1,
+          "event": 210,
+          "kind": "keychain",
+          "api": "SecItemCopyMatching",
+          "query": {
+            "kSecAttrAccessGroup": "group.com.facebook.family",
+            "kSecAttrService": "<redacted-unlisted-name>",
+            "kSecClass": "genp"
+          },
+          "status": 0,
+          "caller": [
+            "FBSharedFramework+0xa79c64",
+            "libdispatch.dylib+0x637a8",
+            "libdispatch.dylib+0x64780",
+            "libdispatch.dylib+0x3f6fc",
+            "libdispatch.dylib+0x401b0",
+            "libdispatch.dylib+0x49f14",
+            "libsystem_pthread.dylib+0x1bd0"
+          ],
+          "stack": []
+        },
+        {
+          "schema": 1,
+          "event": 213,
+          "kind": "keychain",
+          "api": "SecItemDelete",
+          "query": {
+            "kSecAttrAccessGroup": "group.com.facebook.family",
+            "kSecAttrService": "<redacted-unlisted-name>",
+            "kSecClass": "genp"
+          },
+          "status": -25300,
+          "caller": [
+            "FBSharedFramework+0x173cb10",
+            "FBSharedFramework+0x173ca74",
+            "FBSharedFramework+0x1aa54",
+            "FBSharedFramework+0x173c348",
+            "libdispatch.dylib+0x637a8",
+            "libdispatch.dylib+0x64780",
+            "libdispatch.dylib+0x3f6fc",
+            "libdispatch.dylib+0x401b0"
+          ],
+          "stack": []
+        },
+        {
+          "schema": 1,
+          "event": 214,
+          "kind": "keychain",
+          "api": "SecItemCopyMatching",
+          "query": {
+            "kSecAttrAccessGroup": "group.com.facebook.Facebook",
+            "kSecAttrService": "<redacted-unlisted-name>",
+            "kSecClass": "genp"
+          },
+          "status": 0,
+          "caller": [
+            "FBSharedFramework+0x3af890",
+            "FBSharedFramework+0x3be770",
+            "libdispatch.dylib+0x637a8",
+            "libdispatch.dylib+0x64780",
+            "libdispatch.dylib+0x3f6fc",
+            "libdispatch.dylib+0x401b0",
+            "libdispatch.dylib+0x49f14",
+            "libsystem_pthread.dylib+0x1bd0"
+          ],
+          "stack": []
+        },
+        {
+          "schema": 1,
+          "event": 215,
+          "kind": "keychain",
+          "api": "SecItemUpdate",
+          "query": {
+            "kSecAttrAccessGroup": "group.com.facebook.Facebook",
+            "kSecAttrService": "<redacted-unlisted-name>",
+            "kSecClass": "genp"
+          },
+          "status": 0,
+          "caller": [
+            "FBSharedFramework+0x3cbd58",
+            "FBSharedFramework+0x3af900",
+            "FBSharedFramework+0x3be770",
+            "libdispatch.dylib+0x637a8",
+            "libdispatch.dylib+0x64780",
+            "libdispatch.dylib+0x3f6fc",
+            "libdispatch.dylib+0x401b0",
+            "libdispatch.dylib+0x49f14"
+          ],
+          "stack": []
+        },
+        {
+          "schema": 1,
+          "event": 216,
+          "kind": "keychain",
+          "api": "SecItemCopyMatching",
+          "query": {
+            "kSecAttrAccessGroup": "T84QZS65DQ.platformFamily",
+            "kSecAttrService": "<redacted-unlisted-name>",
+            "kSecClass": "genp"
+          },
+          "status": -25300,
+          "caller": [
+            "FBSharedFramework+0x3af890",
+            "FBSharedFramework+0x3aee94",
+            "FBSharedFramework+0x3a821c",
+            "libdispatch.dylib+0x64780",
+            "libdispatch.dylib+0x46e24",
+            "libdispatch.dylib+0x46918",
+            "FBSharedFramework+0x3a5604",
+            "FBSharedFramework+0xc091c"
+          ],
+          "stack": []
+        },
+        {
+          "schema": 1,
+          "event": 219,
+          "kind": "keychain",
+          "api": "SecItemCopyMatching",
+          "query": {
+            "kSecAttrAccessGroup": "T84QZS65DQ.platformFamily",
+            "kSecAttrService": "<redacted-unlisted-name>",
+            "kSecClass": "genp"
+          },
+          "status": 0,
+          "caller": [
+            "FBSharedFramework+0x3af890",
+            "FBSharedFramework+0x3aee94",
+            "FBSharedFramework+0x3a821c",
+            "libdispatch.dylib+0x64780",
+            "libdispatch.dylib+0x46a50",
+            "FBSharedFramework+0x3a5604",
+            "FBSharedFramework+0xc091c",
+            "FBSharedFramework+0x3a7794"
+          ],
+          "stack": []
+        },
+        {
+          "schema": 1,
+          "event": 220,
+          "kind": "identity-api-call",
+          "api": "FBFamilyDeviceID-cachedFamilyDeviceIDWithConfiguration:SourceFile:SourceLine:",
+          "stack": [
+            "Facebook+0x556c0",
+            "FBSharedFramework+0x470f18",
+            "FBSharedFramework+0x470b98",
+            "FBSharedFramework+0x46f1f4",
+            "FBSharedFramework+0x46ed60",
+            "FBSharedFramework+0x46e7d8",
+            "FBSharedFramework+0x470494",
+            "FBSharedFramework+0x46d1e8"
+          ]
+        },
+        {
+          "schema": 1,
+          "event": 279,
+          "kind": "keychain",
+          "api": "SecItemCopyMatching",
+          "query": {
+            "kSecAttrAccessGroup": "T84QZS65DQ.platformFamily",
+            "kSecAttrService": "<redacted-unlisted-name>",
+            "kSecClass": "genp"
+          },
+          "status": 0,
+          "caller": [
+            "FBSharedFramework+0x3af890",
+            "FBSharedFramework+0x3aee94",
+            "libdispatch.dylib+0x637a8",
+            "libdispatch.dylib+0x64780",
+            "libdispatch.dylib+0x3f6fc",
+            "libdispatch.dylib+0x401b0",
+            "libdispatch.dylib+0x49f14",
+            "libsystem_pthread.dylib+0x1bd0"
+          ],
+          "stack": []
+        },
+        {
+          "schema": 1,
+          "event": 280,
+          "kind": "keychain",
+          "api": "SecItemCopyMatching",
+          "query": {
+            "kSecAttrAccessGroup": "T84QZS65DQ.platformFamily",
+            "kSecAttrService": "<redacted-unlisted-name>",
+            "kSecClass": "genp"
+          },
+          "status": 0,
+          "caller": [
+            "FBSharedFramework+0x3af890",
+            "FBSharedFramework+0x3aee94",
+            "libdispatch.dylib+0x637a8",
+            "libdispatch.dylib+0x64780",
+            "libdispatch.dylib+0x3f6fc",
+            "libdispatch.dylib+0x401b0",
+            "libdispatch.dylib+0x49f14",
+            "libsystem_pthread.dylib+0x1bd0"
+          ],
+          "stack": []
+        },
+        {
+          "schema": 1,
+          "event": 281,
+          "kind": "keychain",
+          "api": "SecItemCopyMatching",
+          "query": {
+            "kSecAttrAccessGroup": "T84QZS65DQ.platformFamily",
+            "kSecAttrService": "<redacted-unlisted-name>",
+            "kSecClass": "genp"
+          },
+          "status": 0,
+          "caller": [
+            "FBSharedFramework+0x3af890",
+            "FBSharedFramework+0x3aee94",
+            "FBSharedFramework+0x3a821c",
+            "libdispatch.dylib+0x64780",
+            "libdispatch.dylib+0x46e24",
+            "libdispatch.dylib+0x46918",
+            "FBSharedFramework+0x3a5604",
+            "FBSharedFramework+0xc091c"
+          ],
+          "stack": []
+        },
+        {
+          "schema": 1,
+          "event": 284,
+          "kind": "keychain",
+          "api": "SecItemCopyMatching",
+          "query": {
+            "kSecAttrAccessGroup": "T84QZS65DQ.platformFamily",
+            "kSecAttrService": "<redacted-unlisted-name>",
+            "kSecClass": "genp"
+          },
+          "status": 0,
+          "caller": [
+            "FBSharedFramework+0x3af890",
+            "FBSharedFramework+0x3aee94",
+            "FBSharedFramework+0x3a821c",
+            "libdispatch.dylib+0x64780",
+            "libdispatch.dylib+0x46a50",
+            "FBSharedFramework+0x3a5604",
+            "FBSharedFramework+0xc091c",
+            "FBSharedFramework+0x3a7794"
+          ],
+          "stack": []
+        },
+        {
+          "schema": 1,
+          "event": 285,
+          "kind": "keychain",
+          "api": "SecItemCopyMatching",
+          "query": {
+            "kSecAttrAccessGroup": "group.com.facebook.family",
+            "kSecAttrService": "<absent-or-nonstring>",
+            "kSecClass": "genp"
+          },
+          "status": 0,
+          "caller": [
+            "FBSharedFramework+0xa7b650",
+            "FBSharedFramework+0xa7b4d0",
+            "FBSharedFramework+0xa7b834",
+            "FBSharedFramework+0xa7af98",
+            "FBSharedFramework+0xe30874",
+            "libdispatch.dylib+0x637a8",
+            "libdispatch.dylib+0x64780",
+            "libdispatch.dylib+0x3f6fc"
+          ],
+          "stack": []
+        },
+        {
+          "schema": 1,
+          "event": 286,
+          "kind": "keychain",
+          "api": "SecItemCopyMatching",
+          "query": {
+            "kSecAttrAccessGroup": "group.com.facebook.family",
+            "kSecAttrService": "<absent-or-nonstring>",
+            "kSecClass": "genp"
+          },
+          "status": 0,
+          "caller": [
+            "FBSharedFramework+0xa7b650",
+            "FBSharedFramework+0xa7b4d0",
+            "FBSharedFramework+0xa7b834",
+            "FBSharedFramework+0xa7af98",
+            "FBSharedFramework+0xe30874",
+            "libdispatch.dylib+0x637a8",
+            "libdispatch.dylib+0x64780",
+            "libdispatch.dylib+0x3f6fc"
+          ],
+          "stack": []
+        },
+        {
+          "schema": 1,
+          "event": 294,
+          "kind": "keychain",
+          "api": "SecItemCopyMatching",
+          "query": {
+            "kSecAttrAccessGroup": "T84QZS65DQ.platformFamily",
+            "kSecAttrService": "<redacted-unlisted-name>",
+            "kSecClass": "genp"
+          },
+          "status": 0,
+          "caller": [
+            "FBSharedFramework+0x3af890",
+            "FBSharedFramework+0x3aee94",
+            "FBSharedFramework+0x3a821c",
+            "libdispatch.dylib+0x64780",
+            "libdispatch.dylib+0x46a50",
+            "FBSharedFramework+0x3a5604",
+            "FBSharedFramework+0xc091c",
+            "FBSharedFramework+0x3a7794"
+          ],
+          "stack": []
+        },
+        {
+          "schema": 1,
+          "event": 304,
+          "kind": "keychain",
+          "api": "SecItemCopyMatching",
+          "query": {
+            "kSecAttrAccessGroup": "group.com.facebook.family",
+            "kSecAttrService": "<absent-or-nonstring>",
+            "kSecClass": "genp"
+          },
+          "status": 0,
+          "caller": [
+            "FBSharedFramework+0xa7b650",
+            "FBSharedFramework+0xa7b4d0",
+            "FBSharedFramework+0xa7b834",
+            "FBSharedFramework+0xa7af98",
+            "FBSharedFramework+0xe30874",
+            "libdispatch.dylib+0x637a8",
+            "libdispatch.dylib+0x64780",
+            "libdispatch.dylib+0x3f6fc"
+          ],
+          "stack": []
+        },
+        {
+          "schema": 1,
+          "event": 312,
+          "kind": "keychain",
+          "api": "SecItemCopyMatching",
+          "query": {
+            "kSecAttrAccessGroup": "T84QZS65DQ.platformFamily",
+            "kSecAttrService": "<redacted-unlisted-name>",
+            "kSecClass": "genp"
+          },
+          "status": -25300,
+          "caller": [
+            "FBSharedFramework+0x3af890",
+            "FBSharedFramework+0x3aee94",
+            "FBSharedFramework+0x3a821c",
+            "libdispatch.dylib+0x64780",
+            "libdispatch.dylib+0x46a50",
+            "FBSharedFramework+0x3a5604",
+            "FBSharedFramework+0xc08fc",
+            "FBSharedFramework+0x9b536c"
+          ],
+          "stack": []
+        },
+        {
+          "schema": 1,
+          "event": 344,
+          "kind": "defaults-suite",
+          "suite": "group.com.facebook.Facebook",
+          "stack": [
+            "FBSharedFramework+0x144850",
+            "FBSharedFramework+0x144748",
+            "libsystem_pthread.dylib+0x673c",
+            "libsystem_platform.dylib+0x7610",
+            "libsystem_pthread.dylib+0x1e38",
+            "FBSharedFramework+0x143efc",
+            "FBSharedFramework+0xda530c",
+            "libsystem_pthread.dylib+0x673c"
+          ]
+        },
+        {
+          "schema": 1,
+          "event": 348,
+          "kind": "http-request-metadata",
+          "host": "www.facebook.com",
+          "headerNames": [
+            "content-length",
+            "content-type"
+          ],
+          "stack": [
+            "FBSharedFramework+0xb1ebc",
+            "FBSharedFramework+0x1099824",
+            "FBSharedFramework+0x109ae00",
+            "libdispatch.dylib+0x637a8",
+            "libdispatch.dylib+0x64780",
+            "libdispatch.dylib+0x3f6fc",
+            "libdispatch.dylib+0x401e4",
+            "libdispatch.dylib+0x49f14"
+          ]
+        },
+        {
+          "schema": 1,
+          "event": 395,
+          "kind": "keychain",
+          "api": "SecItemCopyMatching",
+          "query": {
+            "kSecAttrAccessGroup": "group.com.facebook.family",
+            "kSecAttrService": "group.com.facebook.family.securefamilydeviceid",
+            "kSecClass": "genp"
+          },
+          "status": 0,
+          "caller": [
+            "FBSharedFramework+0x176a7b4",
+            "FBSharedFramework+0x176ebb0",
+            "libdispatch.dylib+0x637a8",
+            "libdispatch.dylib+0x64780",
+            "libdispatch.dylib+0x3f6fc",
+            "libdispatch.dylib+0x401b0",
+            "libdispatch.dylib+0x49f14",
+            "libsystem_pthread.dylib+0x1bd0"
+          ],
+          "stack": []
+        },
+        {
+          "schema": 1,
+          "event": 396,
+          "kind": "identity-api-call",
+          "api": "DCAppAttestService-isSupported",
+          "stack": [
+            "FBSharedDynamicFramework+0x5fbb8",
+            "libswift_Concurrency.dylib+0x2dc30"
+          ]
+        },
+        {
+          "schema": 1,
+          "event": 407,
+          "kind": "keychain",
+          "api": "SecItemCopyMatching",
+          "query": {
+            "kSecAttrAccessGroup": "group.com.facebook.family",
+            "kSecAttrService": "<absent-or-nonstring>",
+            "kSecClass": "keys"
+          },
+          "status": 0,
+          "caller": [
+            "FBSharedFramework+0x35d9f80",
+            "FBSharedFramework+0xc091c",
+            "FBSharedFramework+0x4eca794",
+            "FBSharedFramework+0xc08fc",
+            "FBSharedFramework+0x4bb7398",
+            "FBSharedFramework+0x21bae6c",
+            "libdispatch.dylib+0x64780",
+            "libdispatch.dylib+0x3bd48"
+          ],
+          "stack": []
+        },
+        {
+          "schema": 1,
+          "event": 424,
+          "kind": "identity-api-call",
+          "api": "UIDevice-systemVersion",
+          "stack": [
+            "UIKitCore+0x4b0ae4",
+            "UIKitCore+0x18ebc8",
+            "UIKitCore+0x18e260",
+            "UIKitCore+0x18dae8",
+            "UIKitCore+0x94bf8",
+            "UIKitCore+0x3aabcc",
+            "UIKitCore+0x26ce50",
+            "UIKitCore+0x26cc14"
+          ]
+        }
+      ]
+    },
+    {
+      "captureId": "v2-observed-weak-defaults-receivers",
+      "privateArtifactName": "metadata-2026-09-13T21-37-28-794Z.jsonl",
+      "privateArtifactSHA256": "abd1a520142620af8adcbd3b880001184c1528b496f0b60f192dd4971adb9c2c",
+      "operatorDurationSeconds": 20,
+      "process": "com.facebook.Facebook",
+      "context": "Existing original installation; no login or UI action automated; same app stopped after capture.",
+      "probeSourceSHA256": "d7a83ecbf5761ba1f3c4c2e45e159527e547dcbb476886ddf2975832f9e8c20b",
+      "recordCount": 448,
+      "recordCountsByKind": {
+        "hook-installed": 39,
+        "probe-ready": 1,
+        "preferences": 354,
+        "keychain": 31,
+        "identity-api-call": 16,
+        "defaults-suite": 6,
+        "http-request-metadata": 1
+      },
+      "probeErrorRecords": 0,
+      "recordedKeychainOperations": [
+        {
+          "api": "SecItemAdd",
+          "status": 0,
+          "recordedEvents": 2
+        },
+        {
+          "api": "SecItemCopyMatching",
+          "status": -25300,
+          "recordedEvents": 9
+        },
+        {
+          "api": "SecItemCopyMatching",
+          "status": 0,
+          "recordedEvents": 16
+        },
+        {
+          "api": "SecItemDelete",
+          "status": -25300,
+          "recordedEvents": 3
+        },
+        {
+          "api": "SecItemUpdate",
+          "status": 0,
+          "recordedEvents": 1
+        }
+      ],
+      "recordedKeychainGroups": [
+        {
+          "group": "T84QZS65DQ.platformFamily",
+          "status": -25300,
+          "recordedEvents": 10
+        },
+        {
+          "group": "T84QZS65DQ.platformFamily",
+          "status": 0,
+          "recordedEvents": 11
+        },
+        {
+          "group": "group.com.facebook.Facebook",
+          "status": 0,
+          "recordedEvents": 2
+        },
+        {
+          "group": "group.com.facebook.family",
+          "status": -25300,
+          "recordedEvents": 2
+        },
+        {
+          "group": "group.com.facebook.family",
+          "status": 0,
+          "recordedEvents": 6
+        }
+      ],
+      "recordedIdentityAPIs": {
+        "UIDevice-identifierForVendor": 1,
+        "FBFamilyDeviceID-familyDeviceIDWithConfiguration:SourceFile:SourceLine:": 3,
+        "FBFamilyDeviceID-cachedFamilyDeviceIDWithConfiguration:SourceFile:SourceLine:": 8,
+        "DCAppAttestService-isSupported": 1,
+        "DCAppAttestService-generateKeyWithCompletionHandler:": 1,
+        "DCAppAttestService-attestKey:clientDataHash:completionHandler:": 1,
+        "UIDevice-systemVersion": 1
+      },
+      "selectedRecordCount": 46,
+      "selectedRecords": [
+        {
+          "schema": 1,
+          "kind": "probe-ready",
+          "hooks": 27,
+          "metadataOnly": true,
+          "unlistedNames": "redacted",
+          "suiteTracking": "observed-receivers-with-zeroing-weak-lifetime"
+        },
+        {
+          "schema": 1,
+          "event": 69,
+          "kind": "keychain",
+          "api": "SecItemCopyMatching",
+          "query": {
+            "kSecAttrAccessGroup": "T84QZS65DQ.platformFamily",
+            "kSecAttrService": "<redacted-unlisted-name>",
+            "kSecClass": "genp"
+          },
+          "status": 0,
+          "caller": [
+            "FBSharedFramework+0x3af890",
+            "FBSharedFramework+0x3be770",
+            "FBSharedFramework+0x3cb8f0",
+            "libdispatch.dylib+0x64780",
+            "libdispatch.dylib+0x46a50",
+            "FBSharedFramework+0x3af804",
+            "FBSharedFramework+0x3a6a68",
+            "FBSharedFramework+0x3a46fc"
+          ],
+          "stack": []
+        },
+        {
+          "schema": 1,
+          "event": 72,
+          "kind": "identity-api-call",
+          "api": "UIDevice-identifierForVendor",
+          "stack": [
+            "FBSharedFramework+0x1aa54",
+            "FBSharedFramework+0x3a6da0",
+            "FBSharedFramework+0x3afd04",
+            "libdispatch.dylib+0x637a8",
+            "libdispatch.dylib+0x64780",
+            "libdispatch.dylib+0x3f6fc",
+            "libdispatch.dylib+0x401b0",
+            "libdispatch.dylib+0x49f14"
+          ]
+        },
+        {
+          "schema": 1,
+          "event": 74,
+          "kind": "preferences",
+          "operation": "read:stringForKey:",
+          "key": "com.facebook.familydeviceid.backup.vendordeviceid",
+          "domain": "<observed-standardUserDefaults>",
+          "domainEvidence": "observed-standardUserDefaults-return",
+          "domainMeaning": "receiver-origin-only; returned-value-domain-unproven",
+          "stack": [
+            "FBSharedFramework+0x1aa54",
+            "FBSharedFramework+0x3a6dd8",
+            "FBSharedFramework+0x3afd04",
+            "libdispatch.dylib+0x637a8",
+            "libdispatch.dylib+0x64780",
+            "libdispatch.dylib+0x3f6fc",
+            "libdispatch.dylib+0x401b0",
+            "libdispatch.dylib+0x49f14"
+          ]
+        },
+        {
+          "schema": 1,
+          "event": 75,
+          "kind": "preferences",
+          "operation": "read:objectForKey:",
+          "key": "com.facebook.familydeviceid.backup.vendordeviceid",
+          "domain": "<observed-standardUserDefaults>",
+          "domainEvidence": "observed-standardUserDefaults-return",
+          "domainMeaning": "receiver-origin-only; returned-value-domain-unproven",
+          "stack": [
+            "<unknown-module>",
+            "FBSharedFramework+0x1aa54",
+            "FBSharedFramework+0x3a6dd8",
+            "FBSharedFramework+0x3afd04",
+            "libdispatch.dylib+0x637a8",
+            "libdispatch.dylib+0x64780",
+            "libdispatch.dylib+0x3f6fc",
+            "libdispatch.dylib+0x401b0"
+          ]
+        },
+        {
+          "schema": 1,
+          "event": 77,
+          "kind": "defaults-suite",
+          "suite": "group.com.facebook.family",
+          "stack": [
+            "FBSharedFramework+0x144850",
+            "FBSharedFramework+0x3afe0c",
+            "libsystem_pthread.dylib+0x673c",
+            "libsystem_platform.dylib+0x7610",
+            "libsystem_pthread.dylib+0x1e38",
+            "FBSharedFramework+0x144000",
+            "FBSharedFramework+0x143d88",
+            "FBSharedFramework+0x3a50dc"
+          ]
+        },
+        {
+          "schema": 1,
+          "event": 79,
+          "kind": "defaults-suite",
+          "suite": "group.com.facebook.family",
+          "stack": [
+            "FBSharedFramework+0x3a516c",
+            "FBSharedFramework+0x3aff10",
+            "libdispatch.dylib+0x64780",
+            "libdispatch.dylib+0x34ddc",
+            "FBSharedFramework+0x3afe98",
+            "FBSharedFramework+0x3a62c4",
+            "FBSharedFramework+0x1aa54",
+            "FBSharedFramework+0x3a6e5c"
+          ]
+        },
+        {
+          "schema": 1,
+          "event": 92,
+          "kind": "defaults-suite",
+          "suite": "group.com.facebook.Facebook",
+          "stack": [
+            "FBSharedFramework+0x3a7400",
+            "FBSharedFramework+0x3bf7c0",
+            "FBSharedFramework+0x3bf6e8",
+            "Facebook+0x5671c",
+            "Facebook+0x54d68",
+            "libdispatch.dylib+0x64780",
+            "libdispatch.dylib+0x34ddc",
+            "Facebook+0x566b4"
+          ]
+        },
+        {
+          "schema": 1,
+          "event": 101,
+          "kind": "keychain",
+          "api": "SecItemCopyMatching",
+          "query": {
+            "kSecAttrAccessGroup": "T84QZS65DQ.platformFamily",
+            "kSecAttrService": "<redacted-unlisted-name>",
+            "kSecClass": "genp"
+          },
+          "status": -25300,
+          "caller": [
+            "FBSharedFramework+0x3af890",
+            "FBSharedFramework+0x3aee94",
+            "FBSharedFramework+0x3a821c",
+            "libdispatch.dylib+0x64780",
+            "libdispatch.dylib+0x46a50",
+            "FBSharedFramework+0x3a5604",
+            "FBSharedFramework+0xc091c",
+            "FBSharedFramework+0x3a7794"
+          ],
+          "stack": []
+        },
+        {
+          "schema": 1,
+          "event": 151,
+          "kind": "identity-api-call",
+          "api": "FBFamilyDeviceID-familyDeviceIDWithConfiguration:SourceFile:SourceLine:",
+          "stack": [
+            "Facebook+0x51300",
+            "libsystem_pthread.dylib+0x673c",
+            "libsystem_platform.dylib+0x7610",
+            "libsystem_pthread.dylib+0x1e38",
+            "Facebook+0x5df64",
+            "Facebook+0x50c54",
+            "Facebook+0x5df00",
+            "Facebook+0x504fc"
+          ]
+        },
+        {
+          "schema": 1,
+          "event": 205,
+          "kind": "keychain",
+          "api": "SecItemDelete",
+          "query": {
+            "kSecAttrAccessGroup": "T84QZS65DQ.platformFamily",
+            "kSecAttrService": "<redacted-unlisted-name>",
+            "kSecClass": "genp"
+          },
+          "status": -25300,
+          "caller": [
+            "FBSharedFramework+0x173b700",
+            "FBSharedFramework+0x173b694",
+            "libdispatch.dylib+0x64780",
+            "libdispatch.dylib+0x46a50",
+            "FBSharedFramework+0x173b618",
+            "FBSharedFramework+0x173b5a8",
+            "FBSharedFramework+0x173b560",
+            "libdispatch.dylib+0x637a8"
+          ],
+          "stack": []
+        },
+        {
+          "schema": 1,
+          "event": 208,
+          "kind": "keychain",
+          "api": "SecItemDelete",
+          "query": {
+            "kSecAttrAccessGroup": "group.com.facebook.family",
+            "kSecAttrService": "<redacted-unlisted-name>",
+            "kSecClass": "genp"
+          },
+          "status": -25300,
+          "caller": [
+            "FBSharedFramework+0x173b700",
+            "FBSharedFramework+0x173b694",
+            "libdispatch.dylib+0x64780",
+            "libdispatch.dylib+0x46a50",
+            "FBSharedFramework+0x173b618",
+            "FBSharedFramework+0x173b5a8",
+            "FBSharedFramework+0x173b560",
+            "libdispatch.dylib+0x637a8"
+          ],
+          "stack": []
+        },
+        {
+          "schema": 1,
+          "event": 209,
+          "kind": "keychain",
+          "api": "SecItemCopyMatching",
+          "query": {
+            "kSecAttrAccessGroup": "T84QZS65DQ.platformFamily",
+            "kSecAttrService": "<redacted-unlisted-name>",
+            "kSecClass": "genp"
+          },
+          "status": -25300,
+          "caller": [
+            "FBSharedFramework+0x3af890",
+            "FBSharedFramework+0x3aee94",
+            "FBSharedFramework+0x3a821c",
+            "libdispatch.dylib+0x64780",
+            "libdispatch.dylib+0x46e24",
+            "libdispatch.dylib+0x46918",
+            "FBSharedFramework+0x3a5604",
+            "FBSharedFramework+0xc091c"
+          ],
+          "stack": []
+        },
+        {
+          "schema": 1,
+          "event": 210,
+          "kind": "keychain",
+          "api": "SecItemCopyMatching",
+          "query": {
+            "kSecAttrAccessGroup": "group.com.facebook.family",
+            "kSecAttrService": "<redacted-unlisted-name>",
+            "kSecClass": "genp"
+          },
+          "status": 0,
+          "caller": [
+            "FBSharedFramework+0xa79c64",
+            "libdispatch.dylib+0x637a8",
+            "libdispatch.dylib+0x64780",
+            "libdispatch.dylib+0x3f6fc",
+            "libdispatch.dylib+0x401b0",
+            "libdispatch.dylib+0x49f14",
+            "libsystem_pthread.dylib+0x1bd0"
+          ],
+          "stack": []
+        },
+        {
+          "schema": 1,
+          "event": 212,
+          "kind": "keychain",
+          "api": "SecItemDelete",
+          "query": {
+            "kSecAttrAccessGroup": "group.com.facebook.family",
+            "kSecAttrService": "<redacted-unlisted-name>",
+            "kSecClass": "genp"
+          },
+          "status": -25300,
+          "caller": [
+            "FBSharedFramework+0x173cb10",
+            "FBSharedFramework+0x173ca74",
+            "FBSharedFramework+0x1aa54",
+            "FBSharedFramework+0x173c348",
+            "libdispatch.dylib+0x637a8",
+            "libdispatch.dylib+0x64780",
+            "libdispatch.dylib+0x3f6fc",
+            "libdispatch.dylib+0x401b0"
+          ],
+          "stack": []
+        },
+        {
+          "schema": 1,
+          "event": 214,
+          "kind": "keychain",
+          "api": "SecItemCopyMatching",
+          "query": {
+            "kSecAttrAccessGroup": "group.com.facebook.Facebook",
+            "kSecAttrService": "<redacted-unlisted-name>",
+            "kSecClass": "genp"
+          },
+          "status": 0,
+          "caller": [
+            "FBSharedFramework+0x3af890",
+            "FBSharedFramework+0x3be770",
+            "libdispatch.dylib+0x637a8",
+            "libdispatch.dylib+0x64780",
+            "libdispatch.dylib+0x3f6fc",
+            "libdispatch.dylib+0x401b0",
+            "libdispatch.dylib+0x49f14",
+            "libsystem_pthread.dylib+0x1bd0"
+          ],
+          "stack": []
+        },
+        {
+          "schema": 1,
+          "event": 219,
+          "kind": "keychain",
+          "api": "SecItemUpdate",
+          "query": {
+            "kSecAttrAccessGroup": "group.com.facebook.Facebook",
+            "kSecAttrService": "<redacted-unlisted-name>",
+            "kSecClass": "genp"
+          },
+          "status": 0,
+          "caller": [
+            "FBSharedFramework+0x3cbd58",
+            "FBSharedFramework+0x3af900",
+            "FBSharedFramework+0x3be770",
+            "libdispatch.dylib+0x637a8",
+            "libdispatch.dylib+0x64780",
+            "libdispatch.dylib+0x3f6fc",
+            "libdispatch.dylib+0x401b0",
+            "libdispatch.dylib+0x49f14"
+          ],
+          "stack": []
+        },
+        {
+          "schema": 1,
+          "event": 223,
+          "kind": "keychain",
+          "api": "SecItemCopyMatching",
+          "query": {
+            "kSecAttrAccessGroup": "T84QZS65DQ.platformFamily",
+            "kSecAttrService": "<redacted-unlisted-name>",
+            "kSecClass": "genp"
+          },
+          "status": 0,
+          "caller": [
+            "FBSharedFramework+0x3af890",
+            "FBSharedFramework+0x3aee94",
+            "FBSharedFramework+0x3a821c",
+            "libdispatch.dylib+0x64780",
+            "libdispatch.dylib+0x46a50",
+            "FBSharedFramework+0x3a5604",
+            "FBSharedFramework+0xc091c",
+            "FBSharedFramework+0x3a7794"
+          ],
+          "stack": []
+        },
+        {
+          "schema": 1,
+          "event": 224,
+          "kind": "identity-api-call",
+          "api": "FBFamilyDeviceID-cachedFamilyDeviceIDWithConfiguration:SourceFile:SourceLine:",
+          "stack": [
+            "Facebook+0x556c0",
+            "FBSharedFramework+0x470f18",
+            "FBSharedFramework+0x470b98",
+            "FBSharedFramework+0x46f1f4",
+            "FBSharedFramework+0x46ed60",
+            "FBSharedFramework+0x46e7d8",
+            "FBSharedFramework+0x470494",
+            "FBSharedFramework+0x46d1e8"
+          ]
+        },
+        {
+          "schema": 1,
+          "event": 283,
+          "kind": "keychain",
+          "api": "SecItemCopyMatching",
+          "query": {
+            "kSecAttrAccessGroup": "T84QZS65DQ.platformFamily",
+            "kSecAttrService": "<redacted-unlisted-name>",
+            "kSecClass": "genp"
+          },
+          "status": 0,
+          "caller": [
+            "FBSharedFramework+0x3af890",
+            "FBSharedFramework+0x3aee94",
+            "libdispatch.dylib+0x637a8",
+            "libdispatch.dylib+0x64780",
+            "libdispatch.dylib+0x3f6fc",
+            "libdispatch.dylib+0x401b0",
+            "libdispatch.dylib+0x49f14",
+            "libsystem_pthread.dylib+0x1bd0"
+          ],
+          "stack": []
+        },
+        {
+          "schema": 1,
+          "event": 284,
+          "kind": "keychain",
+          "api": "SecItemCopyMatching",
+          "query": {
+            "kSecAttrAccessGroup": "T84QZS65DQ.platformFamily",
+            "kSecAttrService": "<redacted-unlisted-name>",
+            "kSecClass": "genp"
+          },
+          "status": 0,
+          "caller": [
+            "FBSharedFramework+0x3af890",
+            "FBSharedFramework+0x3aee94",
+            "libdispatch.dylib+0x637a8",
+            "libdispatch.dylib+0x64780",
+            "libdispatch.dylib+0x3f6fc",
+            "libdispatch.dylib+0x401b0",
+            "libdispatch.dylib+0x49f14",
+            "libsystem_pthread.dylib+0x1bd0"
+          ],
+          "stack": []
+        },
+        {
+          "schema": 1,
+          "event": 287,
+          "kind": "keychain",
+          "api": "SecItemCopyMatching",
+          "query": {
+            "kSecAttrAccessGroup": "T84QZS65DQ.platformFamily",
+            "kSecAttrService": "<redacted-unlisted-name>",
+            "kSecClass": "genp"
+          },
+          "status": 0,
+          "caller": [
+            "FBSharedFramework+0x3af890",
+            "FBSharedFramework+0x3aee94",
+            "FBSharedFramework+0x3a821c",
+            "libdispatch.dylib+0x64780",
+            "libdispatch.dylib+0x46e24",
+            "libdispatch.dylib+0x46918",
+            "FBSharedFramework+0x3a5604",
+            "FBSharedFramework+0xc091c"
+          ],
+          "stack": []
+        },
+        {
+          "schema": 1,
+          "event": 300,
+          "kind": "keychain",
+          "api": "SecItemCopyMatching",
+          "query": {
+            "kSecAttrAccessGroup": "T84QZS65DQ.platformFamily",
+            "kSecAttrService": "<redacted-unlisted-name>",
+            "kSecClass": "genp"
+          },
+          "status": 0,
+          "caller": [
+            "FBSharedFramework+0x3af890",
+            "FBSharedFramework+0x3aee94",
+            "FBSharedFramework+0x3a821c",
+            "libdispatch.dylib+0x64780",
+            "libdispatch.dylib+0x46e24",
+            "libdispatch.dylib+0x46918",
+            "FBSharedFramework+0x3a5604",
+            "FBSharedFramework+0xc091c"
+          ],
+          "stack": []
+        },
+        {
+          "schema": 1,
+          "event": 301,
+          "kind": "keychain",
+          "api": "SecItemCopyMatching",
+          "query": {
+            "kSecAttrAccessGroup": "group.com.facebook.family",
+            "kSecAttrService": "<absent-or-nonstring>",
+            "kSecClass": "genp"
+          },
+          "status": 0,
+          "caller": [
+            "FBSharedFramework+0xa7b650",
+            "FBSharedFramework+0xa7b4d0",
+            "FBSharedFramework+0xa7b834",
+            "FBSharedFramework+0xa7af98",
+            "FBSharedFramework+0xe30874",
+            "libdispatch.dylib+0x637a8",
+            "libdispatch.dylib+0x64780",
+            "libdispatch.dylib+0x3f6fc"
+          ],
+          "stack": []
+        },
+        {
+          "schema": 1,
+          "event": 304,
+          "kind": "keychain",
+          "api": "SecItemCopyMatching",
+          "query": {
+            "kSecAttrAccessGroup": "T84QZS65DQ.platformFamily",
+            "kSecAttrService": "<redacted-unlisted-name>",
+            "kSecClass": "genp"
+          },
+          "status": 0,
+          "caller": [
+            "FBSharedFramework+0x3af890",
+            "FBSharedFramework+0x3aee94",
+            "FBSharedFramework+0x3a821c",
+            "libdispatch.dylib+0x64780",
+            "libdispatch.dylib+0x46e24",
+            "libdispatch.dylib+0x46918",
+            "FBSharedFramework+0x3a5604",
+            "FBSharedFramework+0xc091c"
+          ],
+          "stack": []
+        },
+        {
+          "schema": 1,
+          "event": 306,
+          "kind": "keychain",
+          "api": "SecItemCopyMatching",
+          "query": {
+            "kSecAttrAccessGroup": "T84QZS65DQ.platformFamily",
+            "kSecAttrService": "<redacted-unlisted-name>",
+            "kSecClass": "genp"
+          },
+          "status": 0,
+          "caller": [
+            "FBSharedFramework+0x3af890",
+            "FBSharedFramework+0x3aee94",
+            "FBSharedFramework+0x3a821c",
+            "libdispatch.dylib+0x64780",
+            "libdispatch.dylib+0x46a50",
+            "FBSharedFramework+0x3a5604",
+            "FBSharedFramework+0xc091c",
+            "FBSharedFramework+0x3a7794"
+          ],
+          "stack": []
+        },
+        {
+          "schema": 1,
+          "event": 309,
+          "kind": "keychain",
+          "api": "SecItemCopyMatching",
+          "query": {
+            "kSecAttrAccessGroup": "group.com.facebook.family",
+            "kSecAttrService": "<absent-or-nonstring>",
+            "kSecClass": "genp"
+          },
+          "status": 0,
+          "caller": [
+            "FBSharedFramework+0xa7b650",
+            "FBSharedFramework+0xa7b4d0",
+            "FBSharedFramework+0xa7b834",
+            "FBSharedFramework+0xa7af98",
+            "FBSharedFramework+0xe30874",
+            "libdispatch.dylib+0x637a8",
+            "libdispatch.dylib+0x64780",
+            "libdispatch.dylib+0x3f6fc"
+          ],
+          "stack": []
+        },
+        {
+          "schema": 1,
+          "event": 314,
+          "kind": "keychain",
+          "api": "SecItemCopyMatching",
+          "query": {
+            "kSecAttrAccessGroup": "T84QZS65DQ.platformFamily",
+            "kSecAttrService": "<redacted-unlisted-name>",
+            "kSecClass": "genp"
+          },
+          "status": -25300,
+          "caller": [
+            "FBSharedFramework+0x3af890",
+            "FBSharedFramework+0x3aee94",
+            "FBSharedFramework+0x3a821c",
+            "libdispatch.dylib+0x64780",
+            "libdispatch.dylib+0x46a50",
+            "FBSharedFramework+0x3a5604",
+            "FBSharedFramework+0xc08fc",
+            "FBSharedFramework+0x9b536c"
+          ],
+          "stack": []
+        },
+        {
+          "schema": 1,
+          "event": 325,
+          "kind": "keychain",
+          "api": "SecItemCopyMatching",
+          "query": {
+            "kSecAttrAccessGroup": "group.com.facebook.family",
+            "kSecAttrService": "<absent-or-nonstring>",
+            "kSecClass": "genp"
+          },
+          "status": 0,
+          "caller": [
+            "FBSharedFramework+0xa7b650",
+            "FBSharedFramework+0xa7b4d0",
+            "FBSharedFramework+0xa7b834",
+            "FBSharedFramework+0xa7af98",
+            "FBSharedFramework+0xe30874",
+            "libdispatch.dylib+0x637a8",
+            "libdispatch.dylib+0x64780",
+            "libdispatch.dylib+0x3f6fc"
+          ],
+          "stack": []
+        },
+        {
+          "schema": 1,
+          "event": 350,
+          "kind": "http-request-metadata",
+          "host": "www.facebook.com",
+          "headerNames": [
+            "content-length",
+            "content-type"
+          ],
+          "stack": [
+            "FBSharedFramework+0xb1ebc",
+            "FBSharedFramework+0x1099824",
+            "FBSharedFramework+0x109ae00",
+            "libdispatch.dylib+0x637a8",
+            "libdispatch.dylib+0x64780",
+            "libdispatch.dylib+0x3f6fc",
+            "libdispatch.dylib+0x401e4",
+            "libdispatch.dylib+0x49f14"
+          ]
+        },
+        {
+          "schema": 1,
+          "event": 354,
+          "kind": "defaults-suite",
+          "suite": "group.com.facebook.Facebook",
+          "stack": [
+            "FBSharedFramework+0x144850",
+            "FBSharedFramework+0x144748",
+            "libsystem_pthread.dylib+0x673c",
+            "libsystem_platform.dylib+0x7610",
+            "libsystem_pthread.dylib+0x1e38",
+            "FBSharedFramework+0x143efc",
+            "FBSharedFramework+0xda530c",
+            "libsystem_pthread.dylib+0x673c"
+          ]
+        },
+        {
+          "schema": 1,
+          "event": 402,
+          "kind": "keychain",
+          "api": "SecItemCopyMatching",
+          "query": {
+            "kSecAttrAccessGroup": "group.com.facebook.family",
+            "kSecAttrService": "group.com.facebook.family.securefamilydeviceid",
+            "kSecClass": "genp"
+          },
+          "status": 0,
+          "caller": [
+            "FBSharedFramework+0x176a7b4",
+            "FBSharedFramework+0x176ebb0",
+            "libdispatch.dylib+0x637a8",
+            "libdispatch.dylib+0x64780",
+            "libdispatch.dylib+0x3f6fc",
+            "libdispatch.dylib+0x401b0",
+            "libdispatch.dylib+0x49f14",
+            "libsystem_pthread.dylib+0x1bd0"
+          ],
+          "stack": []
+        },
+        {
+          "schema": 1,
+          "event": 403,
+          "kind": "identity-api-call",
+          "api": "DCAppAttestService-isSupported",
+          "stack": [
+            "FBSharedDynamicFramework+0x5fbb8",
+            "libswift_Concurrency.dylib+0x2dc30"
+          ]
+        },
+        {
+          "schema": 1,
+          "event": 405,
+          "kind": "keychain",
+          "api": "SecItemCopyMatching",
+          "query": {
+            "kSecAttrAccessGroup": "T84QZS65DQ.platformFamily",
+            "kSecAttrService": "group.com.facebook.family.appattestation.reinstallationflagalreadyset",
+            "kSecClass": "genp"
+          },
+          "status": -25300,
+          "caller": [
+            "FBSharedFramework+0x3af890",
+            "FBSharedFramework+0x3aee94",
+            "FBSharedFramework+0x3a821c",
+            "libdispatch.dylib+0x64780",
+            "libdispatch.dylib+0x46a50",
+            "FBSharedFramework+0x3a5604",
+            "FBSharedFramework+0xc091c",
+            "FBSharedFramework+0x3a7794"
+          ],
+          "stack": []
+        },
+        {
+          "schema": 1,
+          "event": 409,
+          "kind": "keychain",
+          "api": "SecItemCopyMatching",
+          "query": {
+            "kSecAttrAccessGroup": "T84QZS65DQ.platformFamily",
+            "kSecAttrService": "group.com.facebook.family.appattestation.reinstallationflagalreadyset",
+            "kSecClass": "genp"
+          },
+          "status": -25300,
+          "caller": [
+            "FBSharedFramework+0x3af890",
+            "FBSharedFramework+0x3be770",
+            "FBSharedFramework+0x3cb8f0",
+            "libdispatch.dylib+0x64780",
+            "libdispatch.dylib+0x46a50",
+            "FBSharedFramework+0x3af804",
+            "FBSharedFramework+0x17802bc",
+            "FBSharedFramework+0x177fbfc"
+          ],
+          "stack": []
+        },
+        {
+          "schema": 1,
+          "event": 410,
+          "kind": "keychain",
+          "api": "SecItemAdd",
+          "query": {
+            "kSecAttrAccessGroup": "T84QZS65DQ.platformFamily",
+            "kSecAttrService": "group.com.facebook.family.appattestation.reinstallationflagalreadyset",
+            "kSecClass": "genp"
+          },
+          "status": 0,
+          "caller": [
+            "FBSharedFramework+0x1743b4c",
+            "FBSharedFramework+0x3a4bb4",
+            "FBSharedFramework+0x3af900",
+            "FBSharedFramework+0x3be770",
+            "FBSharedFramework+0x3cb8f0",
+            "libdispatch.dylib+0x64780",
+            "libdispatch.dylib+0x46a50",
+            "FBSharedFramework+0x3af804"
+          ],
+          "stack": []
+        },
+        {
+          "schema": 1,
+          "event": 411,
+          "kind": "keychain",
+          "api": "SecItemCopyMatching",
+          "query": {
+            "kSecAttrAccessGroup": "T84QZS65DQ.platformFamily",
+            "kSecAttrService": "group.com.facebook.family.appattestation",
+            "kSecClass": "genp"
+          },
+          "status": -25300,
+          "caller": [
+            "FBSharedFramework+0x3af890",
+            "FBSharedFramework+0x3aee94",
+            "FBSharedFramework+0x3a821c",
+            "libdispatch.dylib+0x64780",
+            "libdispatch.dylib+0x46a50",
+            "FBSharedFramework+0x3a5604",
+            "FBSharedFramework+0xc091c",
+            "FBSharedFramework+0x3a7794"
+          ],
+          "stack": []
+        },
+        {
+          "schema": 1,
+          "event": 412,
+          "kind": "keychain",
+          "api": "SecItemCopyMatching",
+          "query": {
+            "kSecAttrAccessGroup": "T84QZS65DQ.platformFamily",
+            "kSecAttrService": "group.com.facebook.family.appattestation.reinstallationflagalreadyset",
+            "kSecClass": "genp"
+          },
+          "status": 0,
+          "caller": [
+            "FBSharedFramework+0x3af890",
+            "FBSharedFramework+0x3aee94",
+            "FBSharedFramework+0x3a821c",
+            "libdispatch.dylib+0x64780",
+            "libdispatch.dylib+0x46a50",
+            "FBSharedFramework+0x3a5604",
+            "FBSharedFramework+0xc091c",
+            "FBSharedFramework+0x3a7794"
+          ],
+          "stack": []
+        },
+        {
+          "schema": 1,
+          "event": 413,
+          "kind": "keychain",
+          "api": "SecItemCopyMatching",
+          "query": {
+            "kSecAttrAccessGroup": "T84QZS65DQ.platformFamily",
+            "kSecAttrService": "group.com.facebook.family.appattestation",
+            "kSecClass": "genp"
+          },
+          "status": -25300,
+          "caller": [
+            "FBSharedFramework+0x3af890",
+            "FBSharedFramework+0x3aee94",
+            "FBSharedFramework+0x3a821c",
+            "libdispatch.dylib+0x64780",
+            "libdispatch.dylib+0x46a50",
+            "FBSharedFramework+0x3a5604",
+            "FBSharedFramework+0xc091c",
+            "FBSharedFramework+0x3a7794"
+          ],
+          "stack": []
+        },
+        {
+          "schema": 1,
+          "event": 414,
+          "kind": "identity-api-call",
+          "api": "DCAppAttestService-generateKeyWithCompletionHandler:",
+          "stack": [
+            "FBSharedDynamicFramework+0xa056a8",
+            "libswift_Concurrency.dylib+0x2dc30"
+          ]
+        },
+        {
+          "schema": 1,
+          "event": 418,
+          "kind": "identity-api-call",
+          "api": "DCAppAttestService-attestKey:clientDataHash:completionHandler:",
+          "stack": [
+            "FBSharedDynamicFramework+0xa06a4c",
+            "libswift_Concurrency.dylib+0x2dc30"
+          ]
+        },
+        {
+          "schema": 1,
+          "event": 423,
+          "kind": "keychain",
+          "api": "SecItemCopyMatching",
+          "query": {
+            "kSecAttrAccessGroup": "group.com.facebook.family",
+            "kSecAttrService": "<absent-or-nonstring>",
+            "kSecClass": "keys"
+          },
+          "status": 0,
+          "caller": [
+            "FBSharedFramework+0x35d9f80",
+            "FBSharedFramework+0xc091c",
+            "FBSharedFramework+0x4eca794",
+            "FBSharedFramework+0xc08fc",
+            "FBSharedFramework+0x4bb7398",
+            "FBSharedFramework+0x21bae6c",
+            "libdispatch.dylib+0x64780",
+            "libdispatch.dylib+0x3bd48"
+          ],
+          "stack": []
+        },
+        {
+          "schema": 1,
+          "event": 427,
+          "kind": "keychain",
+          "api": "SecItemCopyMatching",
+          "query": {
+            "kSecAttrAccessGroup": "T84QZS65DQ.platformFamily",
+            "kSecAttrService": "group.com.facebook.family.appattestation",
+            "kSecClass": "genp"
+          },
+          "status": -25300,
+          "caller": [
+            "FBSharedFramework+0x3af890",
+            "FBSharedFramework+0x3aee94",
+            "FBSharedFramework+0x3a821c",
+            "libdispatch.dylib+0x64780",
+            "libdispatch.dylib+0x46a50",
+            "FBSharedFramework+0x3a5604",
+            "FBSharedFramework+0xc091c",
+            "FBSharedFramework+0x3a7794"
+          ],
+          "stack": []
+        },
+        {
+          "schema": 1,
+          "event": 428,
+          "kind": "keychain",
+          "api": "SecItemCopyMatching",
+          "query": {
+            "kSecAttrAccessGroup": "T84QZS65DQ.platformFamily",
+            "kSecAttrService": "group.com.facebook.family.appattestation",
+            "kSecClass": "genp"
+          },
+          "status": -25300,
+          "caller": [
+            "FBSharedFramework+0x3af890",
+            "FBSharedFramework+0x3be770",
+            "FBSharedFramework+0x3cb8f0",
+            "libdispatch.dylib+0x64780",
+            "libdispatch.dylib+0x46a50",
+            "FBSharedFramework+0x3af804",
+            "FBSharedFramework+0x17802bc",
+            "FBSharedFramework+0x177fbfc"
+          ],
+          "stack": []
+        },
+        {
+          "schema": 1,
+          "event": 429,
+          "kind": "keychain",
+          "api": "SecItemAdd",
+          "query": {
+            "kSecAttrAccessGroup": "T84QZS65DQ.platformFamily",
+            "kSecAttrService": "group.com.facebook.family.appattestation",
+            "kSecClass": "genp"
+          },
+          "status": 0,
+          "caller": [
+            "FBSharedFramework+0x1743b4c",
+            "FBSharedFramework+0x3a4bb4",
+            "FBSharedFramework+0x3af900",
+            "FBSharedFramework+0x3be770",
+            "FBSharedFramework+0x3cb8f0",
+            "libdispatch.dylib+0x64780",
+            "libdispatch.dylib+0x46a50",
+            "FBSharedFramework+0x3af804"
+          ],
+          "stack": []
+        },
+        {
+          "schema": 1,
+          "event": 442,
+          "kind": "identity-api-call",
+          "api": "UIDevice-systemVersion",
+          "stack": [
+            "UIKitCore+0x4b0ae4",
+            "UIKitCore+0x18ebc8",
+            "UIKitCore+0x18e260",
+            "UIKitCore+0x18dae8",
+            "UIKitCore+0x94bf8",
+            "UIKitCore+0x3aabcc",
+            "UIKitCore+0x26ce50",
+            "UIKitCore+0x26cc14"
+          ]
+        }
+      ]
+    }
+  ]
+}

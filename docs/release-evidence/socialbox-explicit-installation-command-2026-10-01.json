@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 1,
+  "kind": "socialbox-explicit-root-installation-command",
+  "unit": 22,
+  "recordedAt": "2026-10-01T11:49:00.956623+00:00",
+  "status": "PASS_WITH_EXTERNAL_PREPARATION_AND_CUSTOMER_GAPS",
+  "clientDeliveryReady": false,
+  "customerArtifactReleased": false,
+  "customerCodeIssued": false,
+  "contract": {
+    "grammar": "Only exact prepare/check with argc2 are dispatched. No arguments, unknown/empty/case/whitespace/extra arguments return usage64 without factory calls under root role.",
+    "role": "Unchanged real/effective UID0 and effective GID0 guard precedes grammar; denied roles return77. Owner real501/effective0 cannot initialize.",
+    "dispatch": "prepare selects the unchanged fixed exclusive-creation factory; check selects existing-only observation. Factory/current failure returns1, never switches routes or retries. Public output remains only status/prepared and false pairedPendingReady/runtimeAccepted/customerDeliveryReady.",
+    "authority": "Command intent is not independent first-install authority/history, a caller Boolean proof or a license/runtime grant. Existing fixed-process/image/path/exclusive-state policy unchanged. Missing/lost provenance does not prove virgin history; no issuer/reset/adoption/migration supplied.",
+    "images": "Installer image changes are bound into prepared policy. Existing prepared installations may not receive replacement without reviewed migration; package source-state refusal is unchanged."
+  },
+  "commandBoundary": {
+    "status": "PASS",
+    "assertions": 492,
+    "inertEntryDispatches": 35,
+    "failures": 0,
+    "sourceStable": true,
+    "quotedGraphFiles": 4,
+    "sourceStabilityScope": "Complete quoted repository graph for the actual CLI dispatch translation unit plus this runner. Native factory implementation is deliberately not linked; Foundation/SDK/compiler/OS dependencies are excluded.",
+    "acceptanceScope": "Actual CLI entry with fixture-only identity substitutions, inert factory/current results and temporary sentinel preservation. No native preparation/provenance, first-install authority/history, customer/device/network/package/runtime/admission acceptance.",
+    "privateLogSHA256": "fb6b9d4f18bfd2fe873d3b6441926f96da03d433ede87c732979edd68b4aa0e5",
+    "privateReportSHA256": "197148ea04c70289148a5d63bedaf7b51a94a235607e54de8d6e1fad09f4b089"
+  },
+  "production": {
+    "status": "PASS",
+    "architectures": [
+      "arm64",
+      "arm64e"
+    ],
+    "sourceFiles": 45,
+    "sourcesCurrentAfterBuild": true,
+    "sourceStabilityScope": "Quoted native source/declaration/build-script graph frozen by the builder; SDK/compiler/OS/public-pin input excluded. Generated owner-config.h digest verified after build, not a64-file graph.",
+    "programs": {
+      "service": {
+        "sha256": "c174e09807228e6229e29b662dc1516a256281a5845809538f4710677fafea7a",
+        "size": 1121136,
+        "slices": [
+          {
+            "subtype": 0,
+            "sha256": "a0dd503c1212cd22e702ec639fb39bce6b32be4af94c947da96c5a2f9272b604"
+          },
+          {
+            "subtype": 2147483650,
+            "sha256": "0f98fa80f1eb3f89dd8568ff38e07033c4b67c86f06cffe4e07944326a27a8c9"
+          }
+        ],
+        "fixtureProvidersAbsent": true
+      },
+      "installer": {
+        "sha256": "d016cd450e8587e9a2243a1a052883c3c4f815d349fca9bd2cf9703058fe3919",
+        "size": 1119520,
+        "slices": [
+          {
+            "subtype": 0,
+            "sha256": "b500248a87a9dceecb7765eb47c6502a535c9f58e739de76f9800a6d9834d8db"
+          },
+          {
+            "subtype": 2147483650,
+            "sha256": "079599642ed6648b6644072adfdd5df9a62b893e60a2dc4333b63e93d1dc24b4"
+          }
+        ],
+        "fixtureProvidersAbsent": true
+      }
+    },
+    "configurationHeaderCount": 1,
+    "configurationHeaderSHA256": "e1d5e2c1c7f1f024396b7b4760823123801493af72db78d00d001772bdd8be93",
+    "configurationObservation": "One generated header digest verified after compilation; not a64-file frozen input graph.",
+    "privateBuildReportSHA256": "c79d4648e99bc2098596fdc3bc3f940d82bdfdcfc509828434a9ccbe4586f461",
+    "privateVerificationSHA256": "5224aa2a238331f7d3639055094df1614e009b3eac21cc9ce07813ac473e2d1f",
+    "sourceFactoryExecution": "NOT_RUN",
+    "deviceExecution": "NOT_RUN",
+    "ownerUpdate": "NOT_RUN",
+    "defaultActivation": "NOT_RUN",
+    "customerInstall": "NOT_RUN",
+    "freshInstallReady": false,
+    "customerDeliveryReady": false
+  },
+  "evidenceCorrection": {
+    "unit": 21,
+    "previous": "One 64-character configSHA256 digest was mistakenly reported as64 configuration input files.",
+    "corrected": "One generated configuration-header digest observed at report time. Actual132 Python,69 overlay and45 native source dictionary counts are unchanged.",
+    "originalUnit21PackageSourceAndTestHashesChanged": false,
+    "originalUnit21PackageSHA256": "d52d60de37f3cbb93dbe5d356008f549fbbc37bf5dfc44a3b83ca7d437e06fbd"
+  },
+  "retainedFailure": "Attempt01 FAIL fixture helper Boolean collided with Apple typedef before dispatch. Fixture-only helper renamed; actual production entry/factory/role policy unchanged. Attempt02 frozen graph passes.",
+  "device": {
+    "status": "NOT_RUN",
+    "effectsPerformed": false,
+    "newLicenseIssued": false,
+    "ownerProgramsOrAccountsModified": false
+  },
+  "limits": [
+    "No external trusted first-authority issuer/history/transaction implemented",
+    "Inert actual-entry routing is not source factory/provenance/initializer acceptance",
+    "No actual default endpoint/locked page, package installation, client code or download",
+    "No installed owner UI/service or website/APT publication",
+    "Safe automatic isolation/switching/recovery and ongoing runtime licensing NOT_RUN",
+    "Earlier Instagram sibling normal/direct read FAIL remains unfixed; Facebook launch FAIL and Twitter runtime unaccepted",
+    "Actual two-account/proxy acceptance NOT_RUN"
+  ],
+  "next": "Review an independently trusted explicit root first-preparation transaction/provenance outside routine package lifecycle; do not infer authority/history from command strings or missing state. Accept exact normal endpoint/locked page/package and actual runtime/account/proxy flow before release.",
+  "sourceSHA256": {
+    "lucid/Authorization/InstallPreparation.m": "f373c755463fe34ad093b3046579e8c32082796159f2d1f5f8c0f8a5193ae8cd",
+    "lucid/Authorization/LBXLicenseInstallationEstablishment.h": "3a88f7bd3b2e6f5dfc3c7409ac0a910c8e9e2c0d768adc09fda45b39f308ddad",
+    "lucid/tests/installation_command.m": "8f4667b95220af5bc69c0316195c4d1630c7c7d0c6903649300ecd8599d2f9d4",
+    "lucid/tests/test_installation_command.sh": "a17412ce7cd0c5bda8d909b310a63967397357f56fc8f9f7f41be7b0d14c8dc7",
+    "scripts/build-socialbox-license-service.py": "f1ad0e22cc1c4893a841951680ef32334cd2214b1af33767faececd91cabc903"
+  },
+  "independentReview": {
+    "status": "PASS_WITH_LIMITS",
+    "scope": "Read-only actual dispatch/unchanged factory-policy/customer-contract/evidence review; no concrete defect. All45 current production source hashes, program/report hashes and four-file492/35 test evidence match. Corrected Unit21 single generated-header digest matches original report. Native preparation, issuer/history and customer/device/runtime acceptance remain NOT_RUN."
+  }
+}

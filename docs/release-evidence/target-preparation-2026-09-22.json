@@ -1,0 +1,69 @@
+{
+  "date": "2026-09-22",
+  "device": {
+    "model": "iPhone10,6",
+    "iOS": "16.7.16"
+  },
+  "manager": {
+    "installedVersion": "3.1.0-1+socialbox.7",
+    "launchRequestExit": 0,
+    "actualSystemVerdict": "FBSOpenApplicationErrorDomain code 7 Locked",
+    "foregroundAcceptance": "BLOCKED_DEVICE_LOCKED",
+    "lockBypassed": false
+  },
+  "targetApplications": [
+    {
+      "status": "BLOCKED",
+      "bundleID": "com.facebook.Facebook",
+      "physicalDevice": "iPhone10,6",
+      "physicalOS": "16.7.16",
+      "bundlesChecked": 10,
+      "issues": [
+        {
+          "bundleID": "com.facebook.Facebook",
+          "reason": "device_variant_mismatch"
+        }
+      ],
+      "remediation": "Obtain this app for the current physical device; do not erase device restrictions to claim compatibility.",
+      "runtimeAndIsolation": "NOT_VERIFIED",
+      "archiveModified": false,
+      "ipaSHA256": "2cdaab3bd8bd0238660ea23b566b7bd7713121d996032bbc045d4066d2233e8a",
+      "version": "578.1.0",
+      "binaryCount": 20,
+      "encryptedSlicesFound": false,
+      "registeredOnPhone": false,
+      "actualInstaller": {
+        "exit": 6,
+        "domain": "MIInstallerErrorDomain",
+        "code": 86,
+        "legacyReason": "DeviceNotSupportedByThinning"
+      }
+    },
+    {
+      "status": "BLOCKED",
+      "bundleID": "com.reddit.Reddit",
+      "physicalDevice": "iPhone10,6",
+      "physicalOS": "16.7.16",
+      "bundlesChecked": 6,
+      "issues": [
+        {
+          "bundleID": "com.reddit.Reddit",
+          "reason": "device_variant_mismatch"
+        }
+      ],
+      "remediation": "Obtain this app for the current physical device; do not erase device restrictions to claim compatibility.",
+      "runtimeAndIsolation": "NOT_VERIFIED",
+      "archiveModified": false,
+      "ipaSHA256": "68cf3bb1ea394d225c5eec2d85032deeebaff2ccfd2153e9b1ce92c726782046",
+      "version": "2026.36.0",
+      "binaryCount": 8,
+      "encryptedSlicesFound": false,
+      "registeredOnPhone": false,
+      "actualInstaller": "NOT_RUN: same physical-device restriction detected in preflight"
+    }
+  ],
+  "tests": {
+    "metadataRegressionGroups": 5
+  },
+  "scope": "Input preparation and actual installation/launch failures; no isolation or account acceptance claimed."
+}

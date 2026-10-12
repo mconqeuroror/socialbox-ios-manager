@@ -1,0 +1,490 @@
+{
+  "schemaVersion": 1,
+  "appType": "facebook",
+  "rows": [
+    {
+      "id": "FBLIFE-001",
+      "category": "Facebook lifecycle ownership",
+      "surface": "Installation journal identity, private installer evidence and per-app rollback/removal ownership",
+      "mechanism": "Reddit format-2 installation identity is preserved. Facebook format 3 requires explicit app/source/container/exact bundle, primary and complete versioned groups plus typed recovery flags. Installer and recovery validate the immutable owner before service calls, quiesce that app and preserve original/failed-install snapshots. Removal capture checks the app marker and sandbox metadata; uninstall is limited to its manager descriptor. Validated foreign journals are left to their own app manager; unknown journals remain recovery blockers. Only exactly owned legacy Facebook integer 0/1 flags are admitted for compatibility; recovery durably normalizes them to CFBoolean before any cleanup or replay. Strings, floats and other integers are rejected.",
+      "coverage": [
+        "sandbox"
+      ],
+      "verdict": "covered-in-code",
+      "verification": "Physical offline Facebook clone installation reproduced rejection of the producer's own numeric hadPreviousInstall flag before appinst. Failing-first tests now extract that actual production expression: Facebook emits CFBoolean, while legacy Reddit bytes remain numeric. 799 actual per-app recovery assertions and 99 inactive / 122 temporary active-Facebook global recovery assertions pass. Both disposable Facebook clones then installed and synchronized on iPhone 8 / iOS 16.7.16. Full 0.1.30 rootless build passed 119 test entrypoints plus the pasteboard API check; seven Mach-O components / twelve slices retain entitlements and license pin. This establishes installation/recovery, not account or network readiness.",
+      "fix": "Installation/recovery/capture implemented; deletion follows in FBLIFE-002. Other global maintenance, replacement, restored app state and live Facebook/network/MDM acceptance remain pending; registry stays inactive.",
+      "evidence": [
+        {
+          "path": "shared/RBXAppLifecycle.h",
+          "anchor": "static inline NSDictionary *RBXAppInstallationRecordDescriptor",
+          "detail": "Versioned immutable installation identity and typed Facebook state validation.",
+          "line": 22
+        },
+        {
+          "path": "daemon/RBXCloneManager.m",
+          "anchor": "- (BOOL)_recoverInterruptedTransactions:(NSError **)error {",
+          "detail": "Actual recovery dispatch is app-scoped; installer, snapshots and removal capture validate complete ownership.",
+          "line": 1681
+        },
+        {
+          "path": "scripts/build-version.py",
+          "anchor": "\"shared/RBXAppLifecycle.h\",",
+          "detail": "Lifecycle signing/installer policy participates in signing-contract fingerprint.",
+          "line": 30
+        },
+        {
+          "path": "scripts/build-mac.sh",
+          "anchor": "python3 \"$ROOT/tools/test_app_install_recovery.py\"",
+          "detail": "Actual recovery and removal identity fixtures are mandatory build gates.",
+          "line": 67
+        },
+        {
+          "path": "tools/test_app_install_recovery.py",
+          "anchor": "Actual clone recovery methods,",
+          "detail": "Actual shipped methods and durable writer, temporary real files, synthetic process/install/registration boundaries.",
+          "line": 2
+        },
+        {
+          "path": "tools/test_app_removal_identity.py",
+          "anchor": "Actual removal identity guards/capture",
+          "detail": "Actual metadata capture, selector dispatch and pre-service owner guard; physical roots/service removal explicitly outside fixture.",
+          "line": 2
+        },
+        {
+          "path": "tools/test_installer_evidence.py",
+          "anchor": "Facebook own format-3 journal reaches existing bounded installer",
+          "detail": "Both new and rollback IPA paths require exact app/group-bound records before invoking the existing installer.",
+          "line": 218
+        },
+        {
+          "path": "docs/facebook-install-recovery-build-0.1.22.json",
+          "anchor": "\"stage\": \"Intermediate per-app",
+          "detail": "Intermediate package inspection and native/build checks; not installed or published.",
+          "line": 215
+        }
+      ]
+    },
+    {
+      "id": "FBLIFE-002",
+      "category": "Facebook lifecycle ownership",
+      "surface": "App-bound deletion journal, retry ownership, cleanup target and streamed ZIP export authority",
+      "mechanism": "Reddit target/journal format 1 retains its fields. Facebook format 2 binds app/source/container/bundle/full groups. Independently derived ownership is checked before publication, on retry and before final removal; phases use the same app manager and operation context. Artifacts, backups and signed export markers must belong to that app. Decoded ZIP reads enforce 64 KiB even with a sizeless streamed header. Deletion verifies CLOSED and stops all runnable app families through the compiled coordinator.",
+      "coverage": [
+        "sandbox"
+      ],
+      "verdict": "covered-in-code",
+      "verification": "Failing-first tests reproduced bad-owner checkpoint overwrite, foreign-profile deletion on retry and valid streamed ZIP rejection. Actual orchestration: 335 assertions; actual target/phase/backup/export: 137; closure ordering: 38. Journal syscall fault fixtures cover both apps. Real temporary files and shipped methods use explicit synthetic service/UID/gate providers. The fixture now verifies the production initializer and current operation context after the iOS build caught a mismatched initializer. Build/package evidence is recorded separately.",
+      "fix": "Deletion integration implemented. Other global maintenance callers, replacement, restored app-specific state and live installation/account/network/MDM acceptance remain pending; Facebook stays inactive.",
+      "evidence": [
+        {
+          "path": "shared/RBXAppLifecycle.h",
+          "anchor": "static inline NSDictionary *RBXAppDeletionTargetIdentity",
+          "detail": "App-bound deletion implementation or its mandatory executable validation.",
+          "line": 55
+        },
+        {
+          "path": "daemon/RBXContainerRegistry.m",
+          "anchor": "static BOOL RBXWriteDeletion(",
+          "detail": "App-bound deletion implementation or its mandatory executable validation.",
+          "line": 146
+        },
+        {
+          "path": "daemon/RBXCloneManager.m",
+          "anchor": "static BOOL RBXDeletionPhase(",
+          "detail": "App-bound deletion implementation or its mandatory executable validation.",
+          "line": 579
+        },
+        {
+          "path": "daemon/Makefile",
+          "anchor": "RBXAppProcessCoordinator.m",
+          "detail": "App-bound deletion implementation or its mandatory executable validation.",
+          "line": 10
+        },
+        {
+          "path": "scripts/build-mac.sh",
+          "anchor": "python3 \"$ROOT/tools/test_app_deletion_flow.py\"",
+          "detail": "App-bound deletion implementation or its mandatory executable validation.",
+          "line": 69
+        },
+        {
+          "path": "tools/static_check.py",
+          "anchor": "RBXAppProcessCoordinator.m",
+          "detail": "App-bound deletion implementation or its mandatory executable validation.",
+          "line": 40
+        },
+        {
+          "path": "tools/test_deletion_journal.m",
+          "anchor": "static void TestOwnerRejection",
+          "detail": "App-bound deletion implementation or its mandatory executable validation.",
+          "line": 120
+        },
+        {
+          "path": "tools/test_app_deletion_flow.py",
+          "anchor": "Actual Registry deletion",
+          "detail": "App-bound deletion implementation or its mandatory executable validation.",
+          "line": 2
+        },
+        {
+          "path": "tools/test_app_deletion_targets.py",
+          "anchor": "Actual deletion target/phase/backup",
+          "detail": "App-bound deletion implementation or its mandatory executable validation.",
+          "line": 2
+        },
+        {
+          "path": "tools/test_app_deletion_closure.py",
+          "anchor": "Actual deletion closure sequence",
+          "detail": "App-bound deletion implementation or its mandatory executable validation.",
+          "line": 2
+        },
+        {
+          "path": "docs/facebook-deletion-build-0.1.22.json",
+          "anchor": "\"stage\": \"Intermediate",
+          "detail": "Full build and all packaged Mach-O signatures/license inspected; not installed or published.",
+          "line": 215
+        }
+      ]
+    },
+    {
+      "id": "FBLIFE-003",
+      "category": "Facebook lifecycle ownership",
+      "surface": "Global app transition dispatch, clone-local network control and current-lease readiness consumption",
+      "mechanism": "Long-lived coordinator stops/drains every runnable family before rotation and launches the selected exact app under the existing ARMED gate. App-bound managers validate/sync the correct clone. Gate emergency stop attempts target every exact runnable family. Local control cannot target source/system/loose families. Post-rotation app/container/bundle identity must remain unchanged. Readiness requires typed non-future time and a still-current ARMED app/container/bundle/generation/boot lease.",
+      "coverage": [
+        "sandbox"
+      ],
+      "verdict": "covered-in-code",
+      "verification": "Actual main launch sequence plus real coordinator: 492 assertions. Actual gate publication/sync: 34 production-registry and 34 temporary active-Facebook registry assertions. Actual readiness waiter with real private files and synthetic PID/service providers: 71 assertions. Failing-first tests reproduced Reddit-only control dispatch and acceptance of future-dated readiness. Existing request cancellation and coordinator/ThreadSanitizer suites retained. No real app execution or network acceptance is claimed. Follow-up: the previous fixture mocked the final clone writer, hiding a Reddit-only derivation in that writer and acceptance of a conflicting profile owner. A failing-first fixture now executes the actual writer against real files: 74 assertions cover Facebook and Reddit CLOSED/ARMED/OPEN mirrors, exact owner/container/generation, scoped epochs and foreign-home rejection. The final writer now derives the bundle from its immutable descriptor and checks the profile owner before an OS lookup.",
+      "fix": "Global launch and gate callers integrated. All-app installation recovery dispatch, replacement, restored state and live Facebook/MDM/network acceptance remain pending; registry and defaults/wire readiness stay inactive.",
+      "evidence": [
+        {
+          "path": "daemon/main.m",
+          "anchor": "static RBXAppProcessCoordinator *sProc;",
+          "line": 50,
+          "detail": "App-scoped runtime transition implementation or executable evidence with explicit fixture boundaries."
+        },
+        {
+          "path": "daemon/RBXNetworkGate.m",
+          "anchor": "static RBXCloneManager *RBXGateManagerForProfile(",
+          "line": 75,
+          "detail": "App-scoped runtime transition implementation or executable evidence with explicit fixture boundaries."
+        },
+        {
+          "path": "scripts/build-mac.sh",
+          "anchor": "python3 \"$ROOT/tools/test_app_launch_flow.py\"",
+          "line": 72,
+          "detail": "App-scoped runtime transition implementation or executable evidence with explicit fixture boundaries."
+        },
+        {
+          "path": "tools/test_app_launch_flow.py",
+          "anchor": "Actual main launch sequence",
+          "line": 2,
+          "detail": "App-scoped runtime transition implementation or executable evidence with explicit fixture boundaries."
+        },
+        {
+          "path": "tools/test_app_gate_control.py",
+          "anchor": "Actual gate publication/sync",
+          "line": 2,
+          "detail": "App-scoped runtime transition implementation or executable evidence with explicit fixture boundaries."
+        },
+        {
+          "path": "tools/test_app_gate_readiness.py",
+          "anchor": "Actual readiness waiter",
+          "line": 2,
+          "detail": "App-scoped runtime transition implementation or executable evidence with explicit fixture boundaries."
+        },
+        {
+          "path": "tools/test_request_deadlines.m",
+          "anchor": "@implementation RBXAppProcessCoordinator",
+          "line": 36,
+          "detail": "App-scoped runtime transition implementation or executable evidence with explicit fixture boundaries."
+        },
+        {
+          "path": "docs/facebook-launch-integration.md",
+          "anchor": "# Per-app launch and gate integration",
+          "line": 1,
+          "detail": "App-scoped runtime transition implementation or executable evidence with explicit fixture boundaries."
+        },
+        {
+          "path": "tools/test_identity_freeze.py",
+          "anchor": "launch.index('launchCloneForProfile:')",
+          "line": 125,
+          "detail": "Preserves irreversible identity freeze before ARM and the common launch method."
+        },
+        {
+          "path": "docs/facebook-launch-build-0.1.22.json",
+          "anchor": "\"stage\": \"Intermediate",
+          "detail": "Full rootless package validation, unchanged entitlements/license pin; private and not installed or published.",
+          "line": 215
+        },
+        {
+          "path": "daemon/RBXCloneManager.m",
+          "anchor": "- (BOOL)writeGateControlPlist:",
+          "line": 3419,
+          "detail": "Final writer binds both descriptor and container before publishing clone-local control."
+        },
+        {
+          "path": "tools/test_clone_gate_writer.py",
+          "anchor": "Execute the actual clone-local control writer",
+          "line": 2,
+          "detail": "Actual final method with real temporary control files; OS registration seam is explicit."
+        },
+        {
+          "path": "scripts/build-mac.sh",
+          "anchor": "python3 \"$ROOT/tools/test_clone_gate_writer.py\"",
+          "line": 74,
+          "detail": "Mandatory final-writer regression gate."
+        },
+        {
+          "path": "docs/release-evidence/facebook-gate-writer-build-0.1.34.json",
+          "line": 1,
+          "detail": "Full rootless build and SSH installation; experimental filesystem primitive excluded."
+        }
+      ]
+    },
+    {
+      "id": "FBLIFE-004",
+      "category": "Facebook lifecycle ownership",
+      "surface": "Complete installation-recovery dispatch and global cloud maintenance closure",
+      "mechanism": "Preflight the full owner/group-bound installation inventory before effects; unknown owners and pending inactive-app work block recovery. Replay each runnable owner under one counted operation/transaction lock through the existing app-specific method. Migration and CLI provisioning use this entry point; pending deletion suppresses rollback. Cloud snapshot quiescence and active cloud retirement revoke first, then stop/drain every runnable app before acknowledging closure. The legacy assignment-revocation method also establishes CLOSED, stops all app families and verifies socket drain before updating the profile; failure fences recovery.",
+      "coverage": [
+        "sandbox"
+      ],
+      "verdict": "covered-in-code",
+      "verification": "Actual global dispatcher and migration: 99 production-registry and 122 temporary active-Facebook fixture assertions; real journals/lock, inert services. Underlying actual per-app recovery remains covered by 799 assertions. Actual cloud/retirement closure: 45 assertions with temporary lease files and synthetic gate/coordinator/store. Failing-first cases found Reddit-only migration/stop selection. Exceptions drain lock/work, unknown/partial owners preserve all journals, pending deletion suppresses rollback. tools/test_cloud_assignment_closure.py: 18 assertions execute the actual formerly Reddit-only revocation method, including closure/write failures. This legacy polling method is not activated or scheduled by this change.",
+      "fix": "Global recovery and these maintenance callers implemented. Replacement and app-specific restored state remain pending. Legacy unscheduled assignment-polling methods are not activated. Live Facebook runtime/MDM/network acceptance is still required.",
+      "evidence": [
+        {
+          "path": "daemon/RBXCloneManager.h",
+          "anchor": "+ (BOOL)recoverAllInterruptedTransactionsWithContext:",
+          "line": 22,
+          "detail": "Global recovery/maintenance implementation or its executable fixture evidence."
+        },
+        {
+          "path": "daemon/RBXCloneManager.m",
+          "anchor": "+ (BOOL)recoverAllInterruptedTransactionsWithContext:",
+          "line": 1596,
+          "detail": "Global recovery/maintenance implementation or its executable fixture evidence."
+        },
+        {
+          "path": "daemon/RBXContainerRegistry.m",
+          "anchor": "recoverAllInterruptedTransactionsWithContext:",
+          "line": 809,
+          "detail": "Global recovery/maintenance implementation or its executable fixture evidence."
+        },
+        {
+          "path": "daemon/RBXCloudSync.m",
+          "anchor": "static BOOL RBXCloudQuiesce(",
+          "line": 120,
+          "detail": "Global recovery/maintenance implementation or its executable fixture evidence."
+        },
+        {
+          "path": "daemon/main.m",
+          "anchor": "if (![RBXCloneManager recoverAllInterruptedTransactionsWithContext:",
+          "line": 1715,
+          "detail": "Global recovery/maintenance implementation or its executable fixture evidence."
+        },
+        {
+          "path": "scripts/build-mac.sh",
+          "anchor": "python3 \"$ROOT/tools/test_app_global_recovery.py\"",
+          "line": 76,
+          "detail": "Global recovery/maintenance implementation or its executable fixture evidence."
+        },
+        {
+          "path": "tools/test_app_global_recovery.py",
+          "anchor": "Actual global recovery dispatcher",
+          "line": 2,
+          "detail": "Global recovery/maintenance implementation or its executable fixture evidence."
+        },
+        {
+          "path": "tools/test_app_maintenance_closure.py",
+          "anchor": "Actual cloud snapshot and retirement closure",
+          "line": 2,
+          "detail": "Global recovery/maintenance implementation or its executable fixture evidence."
+        },
+        {
+          "path": "docs/facebook-global-recovery.md",
+          "anchor": "# Global recovery and maintenance",
+          "line": 1,
+          "detail": "Global recovery/maintenance implementation or its executable fixture evidence."
+        },
+        {
+          "path": "docs/facebook-maintenance-build-0.1.22.json",
+          "anchor": "\"stage\": \"Intermediate",
+          "detail": "Full rootless package validation, unchanged global entitlements/license pin; private, not installed/published.",
+          "line": 215
+        },
+        {
+          "path": "tools/test_cloud_assignment_closure.py",
+          "line": 1,
+          "detail": "Failing-first execution of production revocation method with inert network/process/profile boundaries."
+        }
+      ]
+    },
+    {
+      "id": "FBLIFE-005",
+      "category": "Facebook lifecycle ownership",
+      "surface": "App-bound original/candidate replacement, immutable checkpoints and durable deletion ownership",
+      "mechanism": "Reddit format-1 identity fields retained; Facebook format 2 binds source/app and complete distinct old/new group targets. Original inactivity is per app, closure is global, candidate creation uses the same app registry. Existing/new candidate profiles are checked before provisioning/auth/proxy work, after rotation and before deleting the original. Checkpoints cannot change their published app/candidate or overlap another transaction. Original deletion needs matching live profile or canonical identity read from its validated durable journal; no private recovery bytes are returned.",
+      "coverage": [
+        "sandbox"
+      ],
+      "verdict": "covered-in-code",
+      "verification": "Actual transition engine: 21 scenarios per app, 43 shared ownership cases and 26 app identity cases. Actual backend with real temporary store and inert device/cloud/proxy providers: 250 assertions. Actual deletion orchestration/accessor: 341 assertions. Failing-first fixtures reproduced Facebook format rejection and Reddit-only backend process selection; failure/retry retains candidate identity and blocks foreign app data before effects.",
+      "fix": "Replacement integrated without enabling Facebook. Restored app-specific state and live Facebook/MDM/network acceptance remain pending. The existing successful-new-exit requirement is retained.",
+      "evidence": [
+        {
+          "path": "shared/RBXAppLifecycle.h",
+          "anchor": "static inline NSDictionary *RBXAppReplacementJournalIdentity",
+          "line": 115,
+          "detail": "App-bound replacement implementation or executable evidence with explicit synthetic service boundaries."
+        },
+        {
+          "path": "daemon/RBXReplacement.m",
+          "anchor": "static BOOL RBXReplacementProfileOwned(",
+          "line": 35,
+          "detail": "App-bound replacement implementation or executable evidence with explicit synthetic service boundaries."
+        },
+        {
+          "path": "daemon/RBXContainerRegistry.h",
+          "anchor": "deletionIdentityForContainer:",
+          "line": 103,
+          "detail": "App-bound replacement implementation or executable evidence with explicit synthetic service boundaries."
+        },
+        {
+          "path": "daemon/RBXContainerRegistry.m",
+          "anchor": "- (NSDictionary *)deletionIdentityForContainer:",
+          "line": 532,
+          "detail": "App-bound replacement implementation or executable evidence with explicit synthetic service boundaries."
+        },
+        {
+          "path": "scripts/build-mac.sh",
+          "anchor": "python3 \"$ROOT/tools/test_app_replacement_backend.py\"",
+          "line": 78,
+          "detail": "App-bound replacement implementation or executable evidence with explicit synthetic service boundaries."
+        },
+        {
+          "path": "tests/test_replacement.m",
+          "anchor": "static NSUInteger AppIdentityCases(",
+          "line": 149,
+          "detail": "App-bound replacement implementation or executable evidence with explicit synthetic service boundaries."
+        },
+        {
+          "path": "tools/test_app_replacement_backend.py",
+          "anchor": "Actual replacement engine/backend",
+          "line": 2,
+          "detail": "App-bound replacement implementation or executable evidence with explicit synthetic service boundaries."
+        },
+        {
+          "path": "tools/test_app_deletion_flow.py",
+          "anchor": "durable deletion exposes canonical ownership only",
+          "line": 124,
+          "detail": "App-bound replacement implementation or executable evidence with explicit synthetic service boundaries."
+        },
+        {
+          "path": "docs/facebook-replacement-integration.md",
+          "anchor": "# App-bound replacement",
+          "line": 1,
+          "detail": "App-bound replacement implementation or executable evidence with explicit synthetic service boundaries."
+        },
+        {
+          "path": "docs/facebook-replacement-build-0.1.22.json",
+          "anchor": "\"stage\": \"Intermediate",
+          "line": 215,
+          "detail": "Complete rootless build and all 12 Mach-O slices inspected; existing license pin and global entitlements unchanged. Private, not installed or published."
+        }
+      ]
+    },
+    {
+      "id": "FBLIFE-006",
+      "category": "Facebook lifecycle ownership",
+      "surface": "Authenticated backup app ownership, worker reconstruction and failed-candidate recovery",
+      "mechanism": "Legacy Reddit envelope preserved; future active Facebook requires explicit version-2 same-logical-identity contract and matching envelope/profile/seed/source ownership. Full profile is the Facebook seed authority. Selected app drives generation, sandbox lookup, clone synchronization and registry state. Rechecks prevent deleting substituted candidates. Uncertain profile writes retain the prepared recovery stage. App files do not transfer Keychain/device-bound keys or prove login continuity.",
+      "coverage": [
+        "sandbox"
+      ],
+      "verdict": "covered-in-code",
+      "verification": "Actual manifest/schema/worker/lookup: 73 assertions. Actual post-decryption import transaction/export envelope/copier: 190 assertions with real temporary files and inert services. Existing manifest owner 50 and restore cleanup 42 assertions retained. Failing-first mismatched sandbox lookup and uncertain-write recovery-stage loss reproduced.",
+      "fix": "Facebook remains inactive. Actual app preference migration, SDK identity provenance, account continuity and managed network acceptance remain unverified; no opaque app-owned identifiers are rewritten.",
+      "evidence": [
+        {
+          "path": "daemon/RBXCloudSync.m",
+          "anchor": "static NSDictionary *RBXCloudBackupDescriptor(",
+          "line": 298,
+          "detail": "Actual app-bound backup implementation or executable evidence with explicit synthetic boundaries."
+        },
+        {
+          "path": "daemon/RBXCloudSync.m",
+          "anchor": "- (NSString *)_dataContainerForProfile:",
+          "line": 1598,
+          "detail": "Actual app-bound backup implementation or executable evidence with explicit synthetic boundaries."
+        },
+        {
+          "path": "daemon/RBXCloudSync.m",
+          "anchor": "BOOL profileWriteAttempted = NO",
+          "line": 2227,
+          "detail": "Actual app-bound backup implementation or executable evidence with explicit synthetic boundaries."
+        },
+        {
+          "path": "daemon/RBXCloudSync.m",
+          "anchor": "Worker ownership changed; candidate retained",
+          "line": 2386,
+          "detail": "Actual app-bound backup implementation or executable evidence with explicit synthetic boundaries."
+        },
+        {
+          "path": "tools/test_app_backup_flow.py",
+          "anchor": "Actual backup manifest and worker reconstruction",
+          "line": 2,
+          "detail": "Actual app-bound backup implementation or executable evidence with explicit synthetic boundaries."
+        },
+        {
+          "path": "tools/test_app_backup_transaction.py",
+          "anchor": "Actual post-decryption import transaction",
+          "line": 2,
+          "detail": "Actual app-bound backup implementation or executable evidence with explicit synthetic boundaries."
+        },
+        {
+          "path": "scripts/build-mac.sh",
+          "anchor": "python3 \"$ROOT/tools/test_app_backup_flow.py\"",
+          "line": 123,
+          "detail": "Actual app-bound backup implementation or executable evidence with explicit synthetic boundaries."
+        },
+        {
+          "path": "scripts/build-mac.sh",
+          "anchor": "python3 \"$ROOT/tools/test_app_backup_transaction.py\"",
+          "line": 124,
+          "detail": "Actual app-bound backup implementation or executable evidence with explicit synthetic boundaries."
+        },
+        {
+          "path": "tools/test_backup_identity.py",
+          "anchor": "function(\"RBXCloudInputError\"), function(\"RBXCloudOptionalStrings\"), function(\"RBXCloudBackupDescriptor\")",
+          "line": 94,
+          "detail": "Actual app-bound backup implementation or executable evidence with explicit synthetic boundaries."
+        },
+        {
+          "path": "docs/facebook-backup-integration.md",
+          "anchor": "# App-bound backup and restore",
+          "line": 1,
+          "detail": "Actual app-bound backup implementation or executable evidence with explicit synthetic boundaries."
+        },
+        {
+          "path": "docs/facebook-backup-build-0.1.22.json",
+          "anchor": "\"stage\": \"Intermediate",
+          "line": 215,
+          "detail": "107 native entrypoints and full rootless artifact inspection; private, not installed or published."
+        },
+        {
+          "path": "docs/facebook-keychain-boundary-plan.md",
+          "anchor": "Latest integration:",
+          "line": 5,
+          "detail": "Current code progress is distinct from outstanding live Facebook acceptance."
+        },
+        {
+          "path": "docs/facebook-acceptance-runbook.md",
+          "anchor": "Host transaction evidence",
+          "line": 77,
+          "detail": "Current code progress is distinct from outstanding live Facebook acceptance."
+        }
+      ]
+    }
+  ]
+}

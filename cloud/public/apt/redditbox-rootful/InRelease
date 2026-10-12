@@ -1,0 +1,30 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+Origin: RedditBox
+Label: RedditBox
+Suite: stable
+Codename: redditbox
+Architectures: iphoneos-arm
+Components: main
+Description: RedditBox packages
+Date: Thu, 17 Sep 2026 18:54:05 GMT
+Acquire-By-Hash: yes
+SHA256:
+ 752b45bd1b31a928b766e4723731e2be0c2513b611cf9bfd628ebad2df8f62c4 3919 Packages
+ 81e3b6c9b4313db61b05e60f65c7e56fd51e29e2d0f05721cdef91acd5dc03d5 1305 Packages.gz
+ 78718111a692acac6349dc1656fa64444d345cc890df33c1668ff629e15fc206 9024 repository.json
+-----BEGIN PGP SIGNATURE-----
+
+iQHPBAEBCAA5FiEEsCDutRYA10wC1v5XRI+od3eODR8FAmqsN00bFIAAAAAABAAO
+bWFudTIsMi41KzEuMTIsMCwzAAoJEESPqHd3jg0fILYL/Ag3VN9ekvbtO4dFRCZV
+Jngb/7OzAgBfoy7bo0tyCiT+xlyLV1s77Rk1wkoVNdjWlK4IqI9S44d+rO8/a/BA
+ndxoK7X4DHXKDHvRy9rKfaSuinO/ZjOukpr7lKLskbrMJAFXiEYPbHA+wGjOOaGz
+D43JaUOO+VAkH5ChQ8Q80bAlJLETrdDeIr2Szd3keZ5CQFP8YwRBq4+J+IB520K8
+KA4K+odZiA3ljZIhHGGe4OVIodom4+EdaO1yjKwgSOjmMFvyLqAoTCa7XEyOEcw3
+6DC7NC61l6MfWLpsT1qKbZqBMpMdE5B9TnSl8RSGe80pUKnzWC+Dl38Sla0pl/M/
+iSXaMmpOoYl7bqTsBpsYr8o37WsmdgzjwXfwFoteOEzuzlNtMxD5wORDQpNayPIg
+lD5CsD0cCpEMfeww4JbcugbuR0zHoZvjrS61+uclpYXK3nzPu6Lh7+lKSTT8xFxu
+9d9W9cyqSMzU8TCfU+DSDlxNPLprV/e7QcgOfdeJZ7C7iQ==
+=385s
+-----END PGP SIGNATURE-----

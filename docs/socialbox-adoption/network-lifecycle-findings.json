@@ -1,0 +1,1476 @@
+{
+  "artifact_sha256_inputs": {
+    "socialbox-3.1.0-1/README.md": "2bb2d46228b80eaaa78fc445bb28599d3e682dc4307b02020228c4b119822e2c",
+    "socialbox-3.1.0-1/coverage.json": "28ae7219e3c90f21c22bfec99c91e2ae8ebf2c0891672477bcb04e725f88f54c",
+    "socialbox-3.1.0-1/decompiled/SocialBox.c": "1b5cb98498c37f04cfa7283b1872d46543e822387935afa97fe0a0225e473c48",
+    "socialbox-3.1.0-1/decompiled/SocialBox.functions.tsv": "e31dbc9000632eeb8b56cf21949b6f7eee134768c08738d054cbfd3aee7c806d",
+    "socialbox-3.1.0-1/decompiled/SocialBox.unresolved.asm": "2c017ada201458b5f4ff08adf5c56ad805c34f7a300987817120c8521528f1ff",
+    "socialbox-3.1.0-1/decompiled/SocialBoxCLI.c": "d3b636218162d06be2e5e5bfa1a9e88de257a5fe3f9aad43ad08b8ebc38d29ed",
+    "socialbox-3.1.0-1/decompiled/SocialBoxCLI.functions.tsv": "34ff03db92e407690ffefbed44477a4f47b810357229e21c1ae285cbf1a4cd61",
+    "socialbox-3.1.0-1/decompiled/SocialBoxHelper.c": "aa75f7c1247181ad9189648b9fe02d9adb89379097a0cc355ff05ed429468009",
+    "socialbox-3.1.0-1/decompiled/SocialBoxHelper.functions.tsv": "ec6fe0653061f82a3d8a6560324e20f3bdb81bc342cafc6b6c20dd1d8d7731fa",
+    "socialbox-3.1.0-1/decompiled/SocialBoxPacketTunnel.c": "cb8c7bfdd73b5c91cdbd0d57e7c5fd8a306ac5c5b7e1bc97b373558e5337b06e",
+    "socialbox-3.1.0-1/decompiled/SocialBoxPacketTunnel.functions.tsv": "8000e19696dff90f7b3017876b0f6d2952bfa8825783bdd3fc4ad5dfd51250c1",
+    "socialbox-3.1.0-1/decompiled/secretsauced.c": "2a51699ebb6762a00338fef7ab326842423e40755dc1c86b0261aa21b6ffcc92",
+    "socialbox-3.1.0-1/decompiled/secretsauced.functions.tsv": "1cc2d18ef7c363bcfe99bdbdabb30be4f24809e0625a3cf0723fd1efce40fe10",
+    "socialbox-3.1.0-1/metadata/SocialBox.objc-selectors.tsv": "ae6360db4d50cc80c6856a94581d444bf0b6f821ca86e54a0ec8129dd57c6f3c",
+    "socialbox-3.1.0-1/metadata/SocialBoxCLI.objc-selectors.tsv": "e071c0c723ee0a8736d9215c79a2bb835001fb869840cd7610172075a3032b3f",
+    "socialbox-3.1.0-1/metadata/SocialBoxHelper.objc-selectors.tsv": "0e8b052961cf861127d7d524d71e8f7819846ff47020c281ce252d9f7ee7ec7b",
+    "socialbox-3.1.0-1/metadata/SocialBoxPacketTunnel.objc-selectors.tsv": "55bb988e913600de357e67e21a0b959c9f9c7525a9094775d7222b65294b48b0",
+    "socialbox-3.1.0-1/metadata/secretsauced.objc-selectors.tsv": "a511a796b9482ec551952c024451ecea8514c629b524907ad92ef0f48201fb28"
+  },
+  "coverage": [
+    {
+      "component": "SocialBox",
+      "final_analysis_timed_out": false,
+      "first_pass_analysis_timed_out": true,
+      "functions": {
+        "auth_license_name_omitted": 88,
+        "decompiled": 5683,
+        "decompiled_after_retry": 2304,
+        "external_or_thunk": 866,
+        "unresolved_with_instruction_listing": 1
+      },
+      "pseudocode_bytes": 17777211
+    },
+    {
+      "component": "SocialBoxPacketTunnel",
+      "final_analysis_timed_out": false,
+      "first_pass_analysis_timed_out": true,
+      "functions": {
+        "decompiled": 877,
+        "decompiled_after_retry": 341,
+        "external_or_thunk": 219
+      },
+      "pseudocode_bytes": 9346765
+    },
+    {
+      "component": "SocialBoxHelper",
+      "final_analysis_timed_out": false,
+      "first_pass_analysis_timed_out": false,
+      "functions": {
+        "auth_license_name_omitted": 2,
+        "decompiled": 493,
+        "decompiled_after_retry": 1,
+        "external_or_thunk": 330
+      },
+      "pseudocode_bytes": 2883360
+    },
+    {
+      "component": "secretsauced",
+      "final_analysis_timed_out": false,
+      "first_pass_analysis_timed_out": true,
+      "functions": {
+        "auth_license_name_omitted": 17,
+        "decompiled": 871,
+        "decompiled_after_retry": 716,
+        "external_or_thunk": 531,
+        "unresolved_with_instruction_listing": 1
+      },
+      "pseudocode_bytes": 10722864
+    },
+    {
+      "component": "SocialBoxCLI",
+      "final_analysis_timed_out": false,
+      "first_pass_analysis_timed_out": true,
+      "functions": {
+        "auth_license_name_omitted": 34,
+        "decompiled": 1902,
+        "decompiled_after_retry": 634,
+        "external_or_thunk": 366
+      },
+      "pseudocode_bytes": 10352856
+    }
+  ],
+  "created_utc": "2026-09-20T19:43:46.249403+00:00",
+  "executive_verdict": {
+    "adoption_decision": "Transport/UI architecture can inform a separately tested implementation. Do not replace SocialBox admission proof with reference VPN status, copy broad exclusions, or claim no-MDM isolation from this static extraction. NET-040 remains GAP.",
+    "architecture": "Personal/on-demand IPv4 packet tunnel with explicit excluded routes, localhost HTTP(S) bridge, lwIP TCP/SOCKS path and shared global proxy selection. Helpers and secretsauced support lifecycle/control-plane work.",
+    "not_demonstrated": [
+      "Kernel-enforced deny-all that survives provider/controller death",
+      "Per-app or selected-container attribution of raw packet/broker traffic",
+      "Complete IPv6 or all-egress coverage",
+      "Verified socket drain before reconfigure restart",
+      "Recovered transactional whole-container switch and rollback ordering"
+    ],
+    "statically_demonstrated": [
+      "IPv4 default routing plus explicit exclusions",
+      "Local proxy and upstream TCP/SOCKS processing",
+      "Captured UDP filtering and synthetic DNS/ICMP behavior",
+      "Orderly session shutdown",
+      "Queued proxy reconfiguration and availability recovery"
+    ]
+  },
+  "limitations": [
+    "Reconstructed pseudocode may misinfer locals, return types, callbacks and branch conditions.",
+    "Obfuscated runtime strings were not decoded; negative text searches only bound the inspected representation.",
+    "Some authentication/licensing-named methods were intentionally omitted by the extractor; no conclusion relies on removing them.",
+    "FUN_100236804 (global switch worker) remains unresolved; representative assembly calls do not reconstruct the full transaction.",
+    "No packets, runtime bindings, death/reboot behavior or retained connection state were measured in this task.",
+    "Existing read-only PF/device observations are separate historical evidence and not a validation of this reference transport."
+  ],
+  "mechanical_search": {
+    "case_sensitive": true,
+    "counts": {
+      "/dev/pf": 0,
+      "DIOC": 0,
+      "NEAppRule": 0,
+      "NEIPv6": 0,
+      "appRules": 0,
+      "enforceRoutes": 0,
+      "includeAllNetworks": 0,
+      "pfctl": 0,
+      "routingMethod": 0
+    },
+    "files": [
+      "socialbox-3.1.0-1/decompiled/SocialBoxPacketTunnel.c",
+      "socialbox-3.1.0-1/decompiled/SocialBox.c",
+      "socialbox-3.1.0-1/decompiled/SocialBoxHelper.c",
+      "socialbox-3.1.0-1/decompiled/secretsauced.c",
+      "socialbox-3.1.0-1/decompiled/SocialBoxCLI.c"
+    ],
+    "interpretation": "Zero matches is not proof of runtime absence."
+  },
+  "required_before_adoption": [
+    "Recover or replace central switch ordering with explicit durable operation ownership, stale-callback fencing and interruption recovery.",
+    "Define honest assurance scope: one active container with device-wide transport is not independent per-app attribution. Address shared UID, brokers, loopback and unsolicited inactive app traffic.",
+    "Replace fixed stop delay with explicit flow cancellation/drain acknowledgement and prove process plus socket quiescence.",
+    "Specify fail-closed enforcement independent of controller/provider death, with tested finite revocation and safe USB/out-of-band recovery.",
+    "Eliminate or tightly justify every direct route/DNS exception; do not copy 17/8 or LAN blanket bypasses as isolation defaults.",
+    "Measure IPv4/IPv6, DNS/DoH, UDP/QUIC, ICMP, interface changes, proxy outage, provider death, daemon death, retained sockets and reboot using physical captures.",
+    "Review privileged caller identity checks and broad process-name termination independently before reusing helper APIs.",
+    "Preserve licenses, cloud ownership, original application data and current fail-closed SocialBox gating while evaluating transport alternatives."
+  ],
+  "rows": [
+    {
+      "evidence": [
+        {
+          "address": "0x10024ab9c",
+          "anchor": "/* 10024ab9c | _Xvm1::startWithHost:port:type:username:password:excludeIPs:rotationURL:completion: */",
+          "focus_lines": [
+            [
+              190507,
+              190527
+            ],
+            [
+              190619,
+              190723
+            ]
+          ],
+          "function": "_Xvm1::startWithHost:port:type:username:password:excludeIPs:rotationURL:completion:",
+          "function_lines": [
+            190219,
+            190750
+          ],
+          "path": "socialbox-3.1.0-1/decompiled/SocialBox.c"
+        },
+        {
+          "address": "0x10002cc1c",
+          "anchor": "/* 10002cc1c | SocialBoxPacketTunnelProvider::startTunnelWithOptions:completionHandler: */",
+          "focus_lines": [
+            [
+              13975,
+              13975
+            ],
+            [
+              14572,
+              14589
+            ],
+            [
+              15194,
+              15219
+            ]
+          ],
+          "function": "SocialBoxPacketTunnelProvider::startTunnelWithOptions:completionHandler:",
+          "function_lines": [
+            13807,
+            15848
+          ],
+          "path": "socialbox-3.1.0-1/decompiled/SocialBoxPacketTunnel.c"
+        }
+      ],
+      "id": "DRT-NET-001",
+      "not_proven_or_risk": "Shared configuration is not a container/generation-bound authorization receipt. Atomic plist writes alone do not establish transaction-wide consistency across both stores.",
+      "socialbox_comparison": "Keep SocialBox authoritative profile/proxy binding, operation ownership and generation revalidation; do not substitute global defaults for a scoped lease.",
+      "static_observation": "The host writes proxy host, port, type, credentials, exclusions and rotation URL into shared defaults and vpn_config.plist. The extension reads suite defaults and falls back to the shared group configuration file. No credential values are reproduced here.",
+      "surface": "Proxy configuration handoff",
+      "verdict": "transport-configuration-demonstrated"
+    },
+    {
+      "evidence": [
+        {
+          "address": "0x10024b9d0",
+          "anchor": "/* Recovered after extended analysis: 10024b9d0 | FUN_10024b9d0 */",
+          "focus_lines": [
+            [
+              404333,
+              404345
+            ],
+            [
+              404416,
+              404436
+            ]
+          ],
+          "function": "FUN_10024b9d0",
+          "function_lines": [
+            404193,
+            404449
+          ],
+          "path": "socialbox-3.1.0-1/decompiled/SocialBox.c"
+        },
+        {
+          "address": "0x10024c188",
+          "anchor": "/* Recovered after extended analysis: 10024c188 | FUN_10024c188 */",
+          "focus_lines": [
+            [
+              404450,
+              404488
+            ]
+          ],
+          "function": "FUN_10024c188",
+          "function_lines": [
+            404450,
+            404488
+          ],
+          "path": "socialbox-3.1.0-1/decompiled/SocialBox.c"
+        },
+        {
+          "address": "0x10024c55c",
+          "anchor": "/* Recovered after extended analysis: 10024c55c | FUN_10024c55c */",
+          "focus_lines": [
+            [
+              404655,
+              404685
+            ]
+          ],
+          "function": "FUN_10024c55c",
+          "function_lines": [
+            404655,
+            404685
+          ],
+          "path": "socialbox-3.1.0-1/decompiled/SocialBox.c"
+        }
+      ],
+      "id": "DRT-NET-002",
+      "not_proven_or_risk": "On-demand activation is not an independent kill switch, an all-networks rule, a per-app identity check or proof that flows remain blocked while the provider restarts.",
+      "socialbox_comparison": "This could support a separately labelled no-MDM transport experiment. Current SocialBox app-proxy MDM receipt cannot be satisfied by this personal tunnel.",
+      "static_observation": "The host creates NETunnelProviderProtocol, sets provider bundle/server/configuration, enables the manager and installs NEOnDemandRuleConnect with interface match 0. The save/load/start chain is present.",
+      "surface": "Personal/on-demand VPN manager",
+      "verdict": "personal-packet-tunnel-demonstrated"
+    },
+    {
+      "evidence": [
+        {
+          "address": "0x10002cc1c",
+          "anchor": "/* 10002cc1c | SocialBoxPacketTunnelProvider::startTunnelWithOptions:completionHandler: */",
+          "focus_lines": [
+            [
+              15496,
+              15508
+            ],
+            [
+              15584,
+              15585
+            ],
+            [
+              15638,
+              15650
+            ]
+          ],
+          "function": "SocialBoxPacketTunnelProvider::startTunnelWithOptions:completionHandler:",
+          "function_lines": [
+            13807,
+            15848
+          ],
+          "path": "socialbox-3.1.0-1/decompiled/SocialBoxPacketTunnel.c"
+        }
+      ],
+      "id": "DRT-NET-003",
+      "not_proven_or_risk": "Route configuration does not prove every app flow enters this provider, and exclusions in the next row intentionally remove destinations.",
+      "socialbox_comparison": "A no-MDM backend needs a distinct device-wide assurance scope and physical routing evidence; NET-040 remains a gap.",
+      "static_observation": "Provider startup sets 198.18.0.1/24 and an NEIPv4Route defaultRoute before submitting NEPacketTunnelNetworkSettings.",
+      "surface": "IPv4 capture and routing",
+      "verdict": "ipv4-route-configuration-demonstrated"
+    },
+    {
+      "evidence": [
+        {
+          "address": "0x10002cc1c",
+          "anchor": "/* 10002cc1c | SocialBoxPacketTunnelProvider::startTunnelWithOptions:completionHandler: */",
+          "focus_lines": [
+            [
+              15509,
+              15541
+            ],
+            [
+              15542,
+              15585
+            ]
+          ],
+          "function": "SocialBoxPacketTunnelProvider::startTunnelWithOptions:completionHandler:",
+          "function_lines": [
+            13807,
+            15848
+          ],
+          "path": "socialbox-3.1.0-1/decompiled/SocialBoxPacketTunnel.c"
+        }
+      ],
+      "id": "DRT-NET-004",
+      "not_proven_or_risk": "This cannot be described as proxy-only for all destinations. In particular broad Apple/LAN exclusions are not restricted to a single control-plane process or socket. Actual route precedence and egress still require device measurement.",
+      "socialbox_comparison": "Do not copy these exclusions into SocialBox fail-closed policy. USB recovery, DNS and control traffic require precise separately reviewed exceptions.",
+      "static_observation": "Startup explicitly excludes 192.168/16, 10/8, 172.16/12, 127/8, the proxy IPv4 /32, 17/8, 224/4 and 169.254/16; configured values are appended as /32 exclusions.",
+      "surface": "Direct route exclusions",
+      "verdict": "bypass-surface-demonstrated"
+    },
+    {
+      "evidence": [
+        {
+          "address": "0x10002cc1c",
+          "anchor": "/* 10002cc1c | SocialBoxPacketTunnelProvider::startTunnelWithOptions:completionHandler: */",
+          "focus_lines": [
+            [
+              15496,
+              15650
+            ]
+          ],
+          "function": "SocialBoxPacketTunnelProvider::startTunnelWithOptions:completionHandler:",
+          "function_lines": [
+            13807,
+            15848
+          ],
+          "path": "socialbox-3.1.0-1/decompiled/SocialBoxPacketTunnel.c"
+        },
+        {
+          "address": "0x100031ff8",
+          "anchor": "/* 100031ff8 | SocialBoxPacketTunnelProvider::classifyPacket:protocol: */",
+          "focus_lines": [
+            [
+              3352,
+              3390
+            ]
+          ],
+          "function": "SocialBoxPacketTunnelProvider::classifyPacket:protocol:",
+          "function_lines": [
+            3331,
+            3394
+          ],
+          "path": "socialbox-3.1.0-1/decompiled/SocialBoxPacketTunnel.c"
+        }
+      ],
+      "id": "DRT-NET-005",
+      "not_proven_or_risk": "A branch capable of reading an IPv6 TCP packet does not prove an IPv6 default route, extension-header handling, all IPv6 transport interception, or direct IPv6 blocking.",
+      "socialbox_comparison": "Retain NET-040 IPv4/IPv6 acceptance as NOT_RUN. A device-wide adapter must explicitly define and measure both families.",
+      "static_observation": "The inspected startup constructs IPv4 and DNS/proxy settings; its body contains no IPv6 settings assignment. classifyPacket has a non-AF_INET branch that only admits a fixed-header next-protocol TCP value into lwIP.",
+      "surface": "IPv6 capture completeness",
+      "verdict": "ipv6-enforcement-not-demonstrated"
+    },
+    {
+      "evidence": [
+        {
+          "address": "0x10002cc1c",
+          "anchor": "/* 10002cc1c | SocialBoxPacketTunnelProvider::startTunnelWithOptions:completionHandler: */",
+          "focus_lines": [
+            [
+              15586,
+              15627
+            ]
+          ],
+          "function": "SocialBoxPacketTunnelProvider::startTunnelWithOptions:completionHandler:",
+          "function_lines": [
+            13807,
+            15848
+          ],
+          "path": "socialbox-3.1.0-1/decompiled/SocialBoxPacketTunnel.c"
+        }
+      ],
+      "id": "DRT-NET-006",
+      "not_proven_or_risk": "Do not infer all DNS is sent through the proxy merely from the presence of the DNS mapper. Successful bridge operation does not follow the same synthetic-DNS setup branch.",
+      "socialbox_comparison": "SocialBox must separately measure resolver, background and encrypted-DNS behavior; its current app-proxy DNS responder is a different mechanism.",
+      "static_observation": "When no local listener or no listener port exists, startup assigns the synthetic DNS server 198.18.0.2 and match domains. When a live local listener exists it instead adds HTTP/HTTPS proxy settings; the DNS assignment is conditional.",
+      "surface": "DNS interception varies with bridge availability",
+      "verdict": "conditional-dns-configuration-demonstrated"
+    },
+    {
+      "evidence": [
+        {
+          "address": "0x1000f8af0",
+          "anchor": "/* 1000f8af0 | DLWDnsMapper::_isDomainBypassed: */",
+          "focus_lines": [
+            [
+              18542,
+              18584
+            ]
+          ],
+          "function": "DLWDnsMapper::_isDomainBypassed:",
+          "function_lines": [
+            18510,
+            18594
+          ],
+          "path": "socialbox-3.1.0-1/decompiled/SocialBoxPacketTunnel.c"
+        },
+        {
+          "address": "0x1000f8c88",
+          "anchor": "/* 1000f8c88 | DLWDnsMapper::handleDNSQuery: */",
+          "focus_lines": [
+            [
+              18696,
+              18778
+            ]
+          ],
+          "function": "DLWDnsMapper::handleDNSQuery:",
+          "function_lines": [
+            18595,
+            18792
+          ],
+          "path": "socialbox-3.1.0-1/decompiled/SocialBoxPacketTunnel.c"
+        }
+      ],
+      "id": "DRT-NET-007",
+      "not_proven_or_risk": "Bypassed domains are resolved by the system path, whose egress is not proven proxy-confined here. Exact runtime bypass list and suffix delimiter need retained data/disassembly validation before reuse; no hidden constants were decoded.",
+      "socialbox_comparison": "Keep control-plane attribution separate from clone DNS; do not claim NXDOMAIN-only policy matches this mapper.",
+      "static_observation": "The DNS mapper returns synthetic IPv4 addresses for ordinary A questions, empty answer data for other ordinary types, and uses getaddrinfo(AF_INET) on its bypass branch. Bypass matching lowercases names and checks equality or suffix.",
+      "surface": "Fake DNS and resolver bypass",
+      "verdict": "fake-dns-and-bypass-demonstrated"
+    },
+    {
+      "evidence": [
+        {
+          "address": "0x100031ff8",
+          "anchor": "/* 100031ff8 | SocialBoxPacketTunnelProvider::classifyPacket:protocol: */",
+          "focus_lines": [
+            [
+              3352,
+              3390
+            ]
+          ],
+          "function": "SocialBoxPacketTunnelProvider::classifyPacket:protocol:",
+          "function_lines": [
+            3331,
+            3394
+          ],
+          "path": "socialbox-3.1.0-1/decompiled/SocialBoxPacketTunnel.c"
+        },
+        {
+          "address": "0x100032610",
+          "anchor": "/* 100032610 | SocialBoxPacketTunnelProvider::handleICMPPacket: */",
+          "focus_lines": [
+            [
+              3475,
+              3540
+            ]
+          ],
+          "function": "SocialBoxPacketTunnelProvider::handleICMPPacket:",
+          "function_lines": [
+            3438,
+            3550
+          ],
+          "path": "socialbox-3.1.0-1/decompiled/SocialBoxPacketTunnel.c"
+        }
+      ],
+      "id": "DRT-NET-008",
+      "not_proven_or_risk": "Dropping a captured QUIC packet is not proof no QUIC takes excluded routes. Local ICMP success is not an internet reachability or proxy-health measurement.",
+      "socialbox_comparison": "Acceptance must distinguish synthetic replies, denied captured traffic and independently observed physical egress.",
+      "static_observation": "IPv4 classifier only sends TCP to lwIP, UDP destination port 53 to DNS processing and protocol 1 to local ICMP processing; other captured UDP/protocols return. ICMP echo requests are answered by swapping IP addresses and writing a locally synthesized reply.",
+      "surface": "Captured UDP/QUIC and ICMP",
+      "verdict": "captured-protocol-behavior-demonstrated"
+    },
+    {
+      "evidence": [
+        {
+          "address": "0x100031d00",
+          "anchor": "/* 100031d00 | SocialBoxPacketTunnelProvider::startReadingPackets */",
+          "focus_lines": [
+            [
+              3026,
+              3059
+            ]
+          ],
+          "function": "SocialBoxPacketTunnelProvider::startReadingPackets",
+          "function_lines": [
+            3026,
+            3059
+          ],
+          "path": "socialbox-3.1.0-1/decompiled/SocialBoxPacketTunnel.c"
+        },
+        {
+          "address": "0x100031ebc",
+          "anchor": "/* 100031ebc | FUN_100031ebc */",
+          "focus_lines": [
+            [
+              3060,
+              3098
+            ]
+          ],
+          "function": "FUN_100031ebc",
+          "function_lines": [
+            3060,
+            3098
+          ],
+          "path": "socialbox-3.1.0-1/decompiled/SocialBoxPacketTunnel.c"
+        },
+        {
+          "address": "0x100032154",
+          "anchor": "/* 100032154 | SocialBoxPacketTunnelProvider::handleTcpAccept:port:pcb: */",
+          "focus_lines": [
+            [
+              3395,
+              3437
+            ]
+          ],
+          "function": "SocialBoxPacketTunnelProvider::handleTcpAccept:port:pcb:",
+          "function_lines": [
+            3395,
+            3437
+          ],
+          "path": "socialbox-3.1.0-1/decompiled/SocialBoxPacketTunnel.c"
+        }
+      ],
+      "id": "DRT-NET-009",
+      "not_proven_or_risk": "The adapter receives packets without an app identity field in these call paths. Sessions dictionary membership is not per-container attribution or a finite lease.",
+      "socialbox_comparison": "SocialBox current NEAppProxyFlow sourceAppSigningIdentifier and exact bundle checks cannot be inferred from raw packetFlow.",
+      "static_observation": "readPackets callbacks classify frames. handleTcpAccept resolves fake destination addresses back to hostnames, creates a DLWTcpSession, registers the PCB in sessions and starts the SOCKS client path.",
+      "surface": "TCP packet adaptation",
+      "verdict": "lwip-tcp-adapter-demonstrated"
+    },
+    {
+      "evidence": [
+        {
+          "address": "0x100129fac",
+          "anchor": "/* 100129fac | DLWLocalConnectListener::startWithProxyType:proxyHost:proxyPort:username:password: */",
+          "focus_lines": [
+            [
+              21819,
+              21858
+            ]
+          ],
+          "function": "DLWLocalConnectListener::startWithProxyType:proxyHost:proxyPort:username:password:",
+          "function_lines": [
+            21763,
+            21872
+          ],
+          "path": "socialbox-3.1.0-1/decompiled/SocialBoxPacketTunnel.c"
+        },
+        {
+          "address": "0x10012a234",
+          "anchor": "/* Recovered after extended analysis: 10012a234 | FUN_10012a234 */",
+          "focus_lines": [
+            [
+              253129,
+              253165
+            ]
+          ],
+          "function": "FUN_10012a234",
+          "function_lines": [
+            253108,
+            253176
+          ],
+          "path": "socialbox-3.1.0-1/decompiled/SocialBoxPacketTunnel.c"
+        },
+        {
+          "address": "0x10002cc1c",
+          "anchor": "/* 10002cc1c | SocialBoxPacketTunnelProvider::startTunnelWithOptions:completionHandler: */",
+          "focus_lines": [
+            [
+              15606,
+              15627
+            ]
+          ],
+          "function": "SocialBoxPacketTunnelProvider::startTunnelWithOptions:completionHandler:",
+          "function_lines": [
+            13807,
+            15848
+          ],
+          "path": "socialbox-3.1.0-1/decompiled/SocialBoxPacketTunnel.c"
+        }
+      ],
+      "id": "DRT-NET-010",
+      "not_proven_or_risk": "No client identity or per-container authorization is demonstrated by the listener accept path. Loopback reachability does not identify the selected container.",
+      "socialbox_comparison": "Treat localhost proxy as shared broker traffic; NET-040 cannot claim selected-container-only access simply from the bridge.",
+      "static_observation": "DLWLocalConnectListener binds an AF_INET stream listener to 127.0.0.1 with an ephemeral port, listens and dispatches accepted clients to a worker. Startup installs that local listener as the system HTTP and HTTPS proxy.",
+      "surface": "Local HTTP(S) bridge",
+      "verdict": "local-bridge-demonstrated"
+    },
+    {
+      "evidence": [
+        {
+          "address": "0x100133a00",
+          "anchor": "/* 100133a00 | FUN_100133a00 */",
+          "focus_lines": [
+            [
+              24306,
+              24407
+            ]
+          ],
+          "function": "FUN_100133a00",
+          "function_lines": [
+            24306,
+            24407
+          ],
+          "path": "socialbox-3.1.0-1/decompiled/SocialBoxPacketTunnel.c"
+        },
+        {
+          "address": "0x10012a40c",
+          "anchor": "/* 10012a40c | FUN_10012a40c */",
+          "focus_lines": [
+            [
+              53691,
+              53728
+            ],
+            [
+              53756,
+              53774
+            ]
+          ],
+          "function": "FUN_10012a40c",
+          "function_lines": [
+            52631,
+            53865
+          ],
+          "note": "Large recovered function has uncertain inferred locals; restrict this observation to explicit calls and close/error branches.",
+          "path": "socialbox-3.1.0-1/decompiled/SocialBoxPacketTunnel.c"
+        },
+        {
+          "address": "0x1000c7274",
+          "anchor": "/* 1000c7274 | DLWSocks5Client::_syncConnectToHost:port: */",
+          "focus_lines": [
+            [
+              17593,
+              17615
+            ],
+            [
+              17659,
+              17778
+            ]
+          ],
+          "function": "DLWSocks5Client::_syncConnectToHost:port:",
+          "function_lines": [
+            17538,
+            17792
+          ],
+          "path": "socialbox-3.1.0-1/decompiled/SocialBoxPacketTunnel.c"
+        }
+      ],
+      "id": "DRT-NET-011",
+      "not_proven_or_risk": "Socket option numeric values and obfuscated branch behavior need deeper ABI/disassembly review before assigning special bypass claims. Proxy handshake success alone is not a measured exit-IP or immutable route receipt.",
+      "socialbox_comparison": "Reuse protocol ideas only behind exact proxy endpoint policy, bounded cancellation and evidence binding; retain no-direct-fallback tests.",
+      "static_observation": "The bridge worker creates upstream connections using FUN_100133a00; that helper opens AF_INET TCP sockets, applies socket options and connects to a literal or a system-resolved host. Bridge error paths emit HTTP 502 and close handles. DLWSocks5Client separately creates a proxy TCP connection and performs SOCKS negotiation.",
+      "surface": "Upstream socket behavior",
+      "verdict": "proxy-relay-demonstrated"
+    },
+    {
+      "evidence": [
+        {
+          "address": "0x100032890",
+          "anchor": "/* 100032890 | SocialBoxPacketTunnelProvider::stopTunnelWithReason:completionHandler: */",
+          "focus_lines": [
+            [
+              3701,
+              3764
+            ]
+          ],
+          "function": "SocialBoxPacketTunnelProvider::stopTunnelWithReason:completionHandler:",
+          "function_lines": [
+            3662,
+            3764
+          ],
+          "path": "socialbox-3.1.0-1/decompiled/SocialBoxPacketTunnel.c"
+        },
+        {
+          "address": "0x100095774",
+          "anchor": "/* 100095774 | DLWTcpSession::close */",
+          "focus_lines": [
+            [
+              11172,
+              11204
+            ]
+          ],
+          "function": "DLWTcpSession::close",
+          "function_lines": [
+            11172,
+            11204
+          ],
+          "path": "socialbox-3.1.0-1/decompiled/SocialBoxPacketTunnel.c"
+        },
+        {
+          "address": "0x10012ca80",
+          "anchor": "/* 10012ca80 | DLWLocalConnectListener::stop */",
+          "focus_lines": [
+            [
+              22688,
+              22713
+            ]
+          ],
+          "function": "DLWLocalConnectListener::stop",
+          "function_lines": [
+            22688,
+            22713
+          ],
+          "path": "socialbox-3.1.0-1/decompiled/SocialBoxPacketTunnel.c"
+        }
+      ],
+      "id": "DRT-NET-012",
+      "not_proven_or_risk": "This is normal provider teardown. It does not demonstrate post-crash kernel blocking, old external socket/state purge, or that the host waits for this completion before starting a replacement.",
+      "socialbox_comparison": "Retain explicit CLOSE acknowledgement, registered process death and socket drain in the SocialBox transaction.",
+      "static_observation": "stopTunnel cancels both timers, stops the local listener, closes each tracked lwIP session, clears the session dictionary, shuts down the net stack, invokes completion and calls _exit(0). DLWTcpSession.close marks closed and cancels its read source or closes a proxy descriptor.",
+      "surface": "Orderly extension shutdown",
+      "verdict": "orderly-shutdown-cleanup-demonstrated"
+    },
+    {
+      "evidence": [
+        {
+          "address": "0x100032af4",
+          "anchor": "/* 100032af4 | SocialBoxPacketTunnelProvider::handleAppMessage:completionHandler: */",
+          "focus_lines": [
+            [
+              3873,
+              3909
+            ]
+          ],
+          "function": "SocialBoxPacketTunnelProvider::handleAppMessage:completionHandler:",
+          "function_lines": [
+            3834,
+            3909
+          ],
+          "path": "socialbox-3.1.0-1/decompiled/SocialBoxPacketTunnel.c"
+        }
+      ],
+      "id": "DRT-NET-013",
+      "not_proven_or_risk": "No container UUID, boot epoch, generation, expiry, source-app binding or verified CLOSED/ARMED/OPEN receipt is returned by this method.",
+      "socialbox_comparison": "Never convert these stats to SocialBox systemFirewall enforced=true; preserve the existing provider identity and fresh scoped receipt requirements.",
+      "static_observation": "handleAppMessage only recognizes a stats request and returns tx/rx packet/byte counters, tracked sessions and running=true; other messages reply nil.",
+      "surface": "Runtime tunnel status",
+      "verdict": "telemetry-not-enforcement-proof"
+    },
+    {
+      "evidence": [
+        {
+          "address": "0x10024d21c",
+          "anchor": "/* 10024d21c | _Xvm1::reconfigureWithHost:port:type:username:password:rotationURL:completion: */",
+          "focus_lines": [
+            [
+              191050,
+              191103
+            ]
+          ],
+          "function": "_Xvm1::reconfigureWithHost:port:type:username:password:rotationURL:completion:",
+          "function_lines": [
+            190980,
+            191108
+          ],
+          "path": "socialbox-3.1.0-1/decompiled/SocialBox.c"
+        },
+        {
+          "address": "0x10024d65c",
+          "anchor": "/* 10024d65c | _Xvm1::_drainReconfigureQueue */",
+          "focus_lines": [
+            [
+              191109,
+              191185
+            ]
+          ],
+          "function": "_Xvm1::_drainReconfigureQueue",
+          "function_lines": [
+            191109,
+            191185
+          ],
+          "path": "socialbox-3.1.0-1/decompiled/SocialBox.c"
+        },
+        {
+          "address": "0x10024daf8",
+          "anchor": "/* 10024daf8 | _Xvm1::_applyReconfigureWithHost:port:type:username:password:rotationURL:completion: */",
+          "focus_lines": [
+            [
+              191382,
+              191415
+            ]
+          ],
+          "function": "_Xvm1::_applyReconfigureWithHost:port:type:username:password:rotationURL:completion:",
+          "function_lines": [
+            191186,
+            191424
+          ],
+          "path": "socialbox-3.1.0-1/decompiled/SocialBox.c"
+        },
+        {
+          "address": "0x10024e1c8",
+          "anchor": "/* Recovered after extended analysis: 10024e1c8 | FUN_10024e1c8 */",
+          "focus_lines": [
+            [
+              405122,
+              405136
+            ]
+          ],
+          "function": "FUN_10024e1c8",
+          "function_lines": [
+            405122,
+            405136
+          ],
+          "path": "socialbox-3.1.0-1/decompiled/SocialBox.c"
+        }
+      ],
+      "id": "DRT-NET-014",
+      "not_proven_or_risk": "Serializing parameter updates does not prove no packet escapes during stop/restart. In-flight sockets and app launch remain separate concerns.",
+      "socialbox_comparison": "Useful UI/control-plane pattern; preserve SocialBox operation token, stale callback fencing and exact lease generations.",
+      "static_observation": "Host reconfigure builds a fingerprint, deduplicates an equivalent connection, retains latest pending parameters and completion callbacks under objc_sync, and drains the pending configuration queue. Apply reconfigure short-circuits unchanged configuration or uses stopWithCompletion then startWithHost.",
+      "surface": "Serialized proxy reconfiguration",
+      "verdict": "configuration-serialization-demonstrated"
+    },
+    {
+      "evidence": [
+        {
+          "address": "0x10024c728",
+          "anchor": "/* Recovered after extended analysis: 10024c728 | FUN_10024c728 */",
+          "focus_lines": [
+            [
+              404699,
+              404752
+            ]
+          ],
+          "function": "FUN_10024c728",
+          "function_lines": [
+            404699,
+            404752
+          ],
+          "path": "socialbox-3.1.0-1/decompiled/SocialBox.c"
+        },
+        {
+          "address": "0x10024c858",
+          "anchor": "/* Recovered after extended analysis: 10024c858 | FUN_10024c858 */",
+          "focus_lines": [
+            [
+              404753,
+              404786
+            ]
+          ],
+          "function": "FUN_10024c858",
+          "function_lines": [
+            404753,
+            404786
+          ],
+          "path": "socialbox-3.1.0-1/decompiled/SocialBox.c"
+        },
+        {
+          "address": "0x10024c900",
+          "anchor": "/* Recovered after extended analysis: 10024c900 | FUN_10024c900 */",
+          "focus_lines": [
+            [
+              404787,
+              404814
+            ]
+          ],
+          "function": "FUN_10024c900",
+          "function_lines": [
+            404787,
+            404814
+          ],
+          "path": "socialbox-3.1.0-1/decompiled/SocialBox.c"
+        },
+        {
+          "address": "0x10024c980",
+          "anchor": "/* Recovered after extended analysis: 10024c980 | FUN_10024c980 */",
+          "focus_lines": [
+            [
+              404815,
+              404833
+            ]
+          ],
+          "function": "FUN_10024c980",
+          "function_lines": [
+            404815,
+            404833
+          ],
+          "path": "socialbox-3.1.0-1/decompiled/SocialBox.c"
+        },
+        {
+          "address": "0x10024c9cc",
+          "anchor": "/* Recovered after extended analysis: 10024c9cc | FUN_10024c9cc */",
+          "focus_lines": [
+            [
+              404834,
+              404849
+            ]
+          ],
+          "function": "FUN_10024c9cc",
+          "function_lines": [
+            404834,
+            404849
+          ],
+          "path": "socialbox-3.1.0-1/decompiled/SocialBox.c"
+        },
+        {
+          "address": "0x10024e1c8",
+          "anchor": "/* Recovered after extended analysis: 10024e1c8 | FUN_10024e1c8 */",
+          "focus_lines": [
+            [
+              405122,
+              405136
+            ]
+          ],
+          "function": "FUN_10024e1c8",
+          "function_lines": [
+            405122,
+            405136
+          ],
+          "path": "socialbox-3.1.0-1/decompiled/SocialBox.c"
+        }
+      ],
+      "id": "DRT-NET-015",
+      "not_proven_or_risk": "A 500 ms timer cannot establish that the old provider and every upstream socket have stopped. Reconfiguration callback starts a new tunnel; this timing assumption must not serve as isolation proof.",
+      "socialbox_comparison": "SocialBox killAndWait/CLOSED receipt/socket drain ordering is stricter in code and must survive any backend adoption.",
+      "static_observation": "FUN_10024c728 disables on-demand, initiates save/stop callbacks, and independently schedules caller completion after 500,000,000 ns. FUN_10024c980 calls selector stopTunnel; FUN_10024c9cc invokes the retained completion without a status/readback predicate in that callback.",
+      "surface": "Stop completion uses a timer",
+      "verdict": "drain-acknowledgement-gap-demonstrated"
+    },
+    {
+      "evidence": [
+        {
+          "address": "0x100038ccc",
+          "anchor": "/* 100038ccc | AppDelegate::reconfigureVPNForActiveContainer */",
+          "focus_lines": [
+            [
+              202,
+              222
+            ],
+            [
+              389,
+              440
+            ]
+          ],
+          "function": "AppDelegate::reconfigureVPNForActiveContainer",
+          "function_lines": [
+            137,
+            451
+          ],
+          "path": "socialbox-3.1.0-1/decompiled/SocialBox.c"
+        }
+      ],
+      "id": "DRT-NET-016",
+      "not_proven_or_risk": "A per-container proxy association in metadata can select a global transport, but does not create multiple concurrent app-attributed enforcement domains.",
+      "socialbox_comparison": "Adopt one-active-container semantics explicitly if pursued; do not advertise independent simultaneous proxy isolation from this global manager.",
+      "static_observation": "AppDelegate reloads the proxy store, reads ActiveProxyUUID, chooses a record, updates active selection/status and calls the shared VPN manager reconfigure with host, port, protocol and credentials.",
+      "surface": "Active proxy is global selection",
+      "verdict": "global-selection-demonstrated"
+    },
+    {
+      "evidence": [
+        {
+          "address": "0x100055c34",
+          "anchor": "/* 100055c34 | _Zw5h::switchToContainer:forBundleID:reply: */",
+          "focus_lines": [
+            [
+              53686,
+              53699
+            ]
+          ],
+          "function": "_Zw5h::switchToContainer:forBundleID:reply:",
+          "function_lines": [
+            53574,
+            53701
+          ],
+          "path": "socialbox-3.1.0-1/decompiled/SocialBoxHelper.c"
+        }
+      ],
+      "id": "DRT-NET-017",
+      "not_proven_or_risk": "A selector in the API inventory is not implemented behavior. Actual global switching is elsewhere and must be traced separately.",
+      "socialbox_comparison": "Do not replace the tested SocialBox transaction with this endpoint or count it as implementation coverage.",
+      "static_observation": "Helper switchToContainer:forBundleID:reply: constructs NSError code 0x1f5 (501) with the visible Notimplemented_Phase2 description and replies with failure; it performs no container or network transition.",
+      "surface": "Helper container switch endpoint is a stub",
+      "verdict": "unimplemented-endpoint-demonstrated"
+    },
+    {
+      "evidence": [
+        {
+          "address": "0x100050668",
+          "anchor": "/* 100050668 | _Zw5h::killApp:reply: */",
+          "focus_lines": [
+            [
+              50165,
+              50223
+            ]
+          ],
+          "function": "_Zw5h::killApp:reply:",
+          "function_lines": [
+            50165,
+            50223
+          ],
+          "path": "socialbox-3.1.0-1/decompiled/SocialBoxHelper.c"
+        },
+        {
+          "address": "0x1000507bc",
+          "anchor": "/* 1000507bc | FUN_1000507bc */",
+          "focus_lines": [
+            [
+              50291,
+              50388
+            ],
+            [
+              50394,
+              50433
+            ]
+          ],
+          "function": "FUN_1000507bc",
+          "function_lines": [
+            50224,
+            50447
+          ],
+          "path": "socialbox-3.1.0-1/decompiled/SocialBoxHelper.c"
+        },
+        {
+          "address": "0x100050df4",
+          "anchor": "/* 100050df4 | FUN_100050df4 */",
+          "focus_lines": [
+            [
+              50448,
+              50489
+            ]
+          ],
+          "function": "FUN_100050df4",
+          "function_lines": [
+            50448,
+            50489
+          ],
+          "path": "socialbox-3.1.0-1/decompiled/SocialBoxHelper.c"
+        }
+      ],
+      "id": "DRT-NET-018",
+      "not_proven_or_risk": "Name-based killall and its exit status do not prove exact registered process paths, descendants/brokers or zero residual sockets. The decompiler infers a void helper even though the caller uses a result; retain that uncertainty.",
+      "socialbox_comparison": "Keep SocialBox exact registered bundle paths, explicit service exclusions, cancellation fencing and independent process/socket verification (including the earlier C04 regression).",
+      "static_observation": "killApp dispatches to a worker that scans installed bundle Info.plist for matching CFBundleIdentifier and derives CFBundleExecutable; it uses killall -9 and falls back to transformed bundle-name components. A helper waits for the killall subprocess exit.",
+      "surface": "Helper process termination",
+      "verdict": "termination-attempt-demonstrated"
+    },
+    {
+      "evidence": [
+        {
+          "address": "0x1000c152c",
+          "anchor": "/* 1000c152c | _Yca1m::killAppViaSocket: */",
+          "focus_lines": [
+            [
+              40354,
+              40365
+            ],
+            [
+              40486,
+              40541
+            ]
+          ],
+          "function": "_Yca1m::killAppViaSocket:",
+          "function_lines": [
+            40275,
+            40552
+          ],
+          "path": "socialbox-3.1.0-1/decompiled/SocialBoxCLI.c"
+        },
+        {
+          "address": "0x1000c0e24",
+          "anchor": "/* 1000c0e24 | _Yca1m::killApp: */",
+          "focus_lines": [
+            [
+              40241,
+              40274
+            ]
+          ],
+          "function": "_Yca1m::killApp:",
+          "function_lines": [
+            39963,
+            40274
+          ],
+          "path": "socialbox-3.1.0-1/decompiled/SocialBoxCLI.c"
+        }
+      ],
+      "id": "DRT-NET-019",
+      "not_proven_or_risk": "CLI/helper request success alone cannot replace process or socket-table verification; endpoint identity and concurrency need a separate review.",
+      "socialbox_comparison": "Expose a constrained operation-owned CLI if needed; do not adopt an unchecked kill result as CLOSED proof.",
+      "static_observation": "CLI killAppViaSocket creates an AF_UNIX stream, connects to its helper endpoint and exchanges a request, with fallback into the CLI kill path. killApp includes a posix_spawn path deriving a process name.",
+      "surface": "CLI termination route",
+      "verdict": "cli-control-channel-demonstrated"
+    },
+    {
+      "evidence": [
+        {
+          "address": "0x100025f90",
+          "anchor": "/* 100025f90 | _Zy1d::listener:shouldAcceptNewConnection: */",
+          "focus_lines": [
+            [
+              22161,
+              22175
+            ],
+            [
+              22362,
+              22400
+            ],
+            [
+              22476,
+              22495
+            ]
+          ],
+          "function": "_Zy1d::listener:shouldAcceptNewConnection:",
+          "function_lines": [
+            22102,
+            22506
+          ],
+          "path": "socialbox-3.1.0-1/decompiled/SocialBoxHelper.c"
+        }
+      ],
+      "id": "DRT-NET-020",
+      "not_proven_or_risk": "The shown branch admits generic installed-app paths for mobile/root; exact code-signature/team/bundle allowlisting is not demonstrated here. Audit-token presence in imports is not sufficient. Do not expose privileged mutation methods by copying this admission policy.",
+      "socialbox_comparison": "Preserve SocialBox own authenticated/scoped IPC and root-owned private state; review caller admission independently of the tunnel.",
+      "static_observation": "The listener obtains a process identifier/path, accepts a path substring match or an installed-app path containing .app/, and then admits effective UID 0 or 501 before exporting an XPC object.",
+      "surface": "Privileged helper caller admission",
+      "verdict": "broad-caller-boundary-observed"
+    },
+    {
+      "evidence": [
+        {
+          "address": "0x1000471ec",
+          "anchor": "/* 1000471ec | _Zy3d::prepareForAirplaneDisconnect */",
+          "focus_lines": [
+            [
+              4506,
+              4515
+            ]
+          ],
+          "function": "_Zy3d::prepareForAirplaneDisconnect",
+          "function_lines": [
+            4468,
+            4524
+          ],
+          "path": "socialbox-3.1.0-1/decompiled/secretsauced.c"
+        },
+        {
+          "address": "0x100047490",
+          "anchor": "/* 100047490 | _Zy3d::disconnect */",
+          "focus_lines": [
+            [
+              4723,
+              4737
+            ],
+            [
+              4840,
+              4847
+            ]
+          ],
+          "function": "_Zy3d::disconnect",
+          "function_lines": [
+            4525,
+            4929
+          ],
+          "path": "socialbox-3.1.0-1/decompiled/secretsauced.c"
+        }
+      ],
+      "id": "DRT-NET-021",
+      "not_proven_or_risk": "These methods concern the daemon transport. No kernel packet policy or selected-clone lease revocation is demonstrated by these methods; do not relabel server keepalive as an independent firewall revoker.",
+      "socialbox_comparison": "SocialBox lease heartbeat expiry is separately consumed in its provider; NET-040 still requires independent revocation after controller death.",
+      "static_observation": "secretsauced disconnect stops pending keepalive, invalidates/cancels its connection with daemon_intentional, and transitions connection phase. prepareForAirplaneDisconnect schedules follow-up work after 200 ms.",
+      "surface": "Daemon disconnect is control-plane cleanup",
+      "verdict": "control-plane-reconnect-lifecycle-demonstrated"
+    },
+    {
+      "evidence": [
+        {
+          "address": "0x100070080",
+          "anchor": "/* 100070080 | _Zy3d::setupNetworkMonitor */",
+          "focus_lines": [
+            [
+              12257,
+              12270
+            ]
+          ],
+          "function": "_Zy3d::setupNetworkMonitor",
+          "function_lines": [
+            12137,
+            12353
+          ],
+          "path": "socialbox-3.1.0-1/decompiled/secretsauced.c"
+        },
+        {
+          "address": "0x100070468",
+          "anchor": "/* Recovered after extended analysis: 100070468 | FUN_100070468 */",
+          "focus_lines": [
+            [
+              105122,
+              105138
+            ],
+            [
+              105371,
+              105371
+            ],
+            [
+              105609,
+              105609
+            ],
+            [
+              105832,
+              105832
+            ]
+          ],
+          "function": "FUN_100070468",
+          "function_lines": [
+            105081,
+            105925
+          ],
+          "path": "socialbox-3.1.0-1/decompiled/secretsauced.c"
+        },
+        {
+          "address": "0x100047c98",
+          "anchor": "/* 100047c98 | _Zy3d::reconnectDelayForError: */",
+          "focus_lines": [
+            [
+              4954,
+              4992
+            ]
+          ],
+          "function": "_Zy3d::reconnectDelayForError:",
+          "function_lines": [
+            4954,
+            4992
+          ],
+          "path": "socialbox-3.1.0-1/decompiled/secretsauced.c"
+        }
+      ],
+      "id": "DRT-NET-022",
+      "not_proven_or_risk": "Detecting network/VPN changes and reconnecting a cloud socket is not evidence of a packet-level deny policy while connectivity is unavailable or changing.",
+      "socialbox_comparison": "Retain network-change, tunnel-death and stale-lease acceptance tests rather than treating path satisfied as permission to OPEN.",
+      "static_observation": "setupNetworkMonitor starts nw_path_monitor on the main queue. Its callback observes path status/interface type and calls connect on recovery branches; reconnectDelayForError returns bounded retry delays.",
+      "surface": "Daemon path monitoring and reconnect",
+      "verdict": "availability-monitoring-demonstrated"
+    },
+    {
+      "evidence": [
+        {
+          "address": "0x1002366ec",
+          "anchor": "/* 1002366ec | _Xr4s::switchToGlobalContainer:progress:completion: */",
+          "focus_lines": [
+            [
+              189807,
+              189851
+            ]
+          ],
+          "function": "_Xr4s::switchToGlobalContainer:progress:completion:",
+          "function_lines": [
+            189807,
+            189851
+          ],
+          "path": "socialbox-3.1.0-1/decompiled/SocialBox.c"
+        },
+        {
+          "anchor": "100236804\tFUN_100236804\tunresolved_with_instruction_listing",
+          "lines": [
+            4011,
+            4012
+          ],
+          "path": "socialbox-3.1.0-1/decompiled/SocialBox.functions.tsv"
+        },
+        {
+          "address": "0x100237160",
+          "anchor": "bl 0x10034e2c0",
+          "lines": [
+            580,
+            617
+          ],
+          "path": "socialbox-3.1.0-1/decompiled/SocialBox.unresolved.asm"
+        },
+        {
+          "anchor": "0x10034e2c0\tkillApp:reply:",
+          "lines": [
+            1142,
+            1142
+          ],
+          "path": "socialbox-3.1.0-1/metadata/SocialBox.objc-selectors.tsv"
+        }
+      ],
+      "id": "DRT-NET-023",
+      "not_proven_or_risk": "No reliable complete CLOSE \u2192 kill \u2192 socket drain \u2192 rotate \u2192 arm \u2192 open ordering can be asserted for the whole worker from this extraction. Presence of one call is not a verified transaction or rollback design.",
+      "socialbox_comparison": "Retain SocialBox ordering invariant and interruption journal. Do not replace it wholesale based on UI behavior or this unresolved worker.",
+      "static_observation": "switchToGlobalContainer asynchronously dispatches FUN_100236804. The extraction marks that worker unresolved_with_instruction_listing. Its retained ARM64 listing contains a call to the killApp:reply: selector at instruction 0x100237160, so termination is attempted somewhere in the worker.",
+      "surface": "Global switch worker coverage limit",
+      "verdict": "central-ordering-not-recovered"
+    },
+    {
+      "evidence": [
+        {
+          "address": "0x10002cc1c",
+          "anchor": "/* 10002cc1c | SocialBoxPacketTunnelProvider::startTunnelWithOptions:completionHandler: */",
+          "focus_lines": [
+            [
+              15496,
+              15650
+            ]
+          ],
+          "function": "SocialBoxPacketTunnelProvider::startTunnelWithOptions:completionHandler:",
+          "function_lines": [
+            13807,
+            15848
+          ],
+          "path": "socialbox-3.1.0-1/decompiled/SocialBoxPacketTunnel.c"
+        },
+        {
+          "address": "0x10024b9d0",
+          "anchor": "/* Recovered after extended analysis: 10024b9d0 | FUN_10024b9d0 */",
+          "focus_lines": [
+            [
+              404333,
+              404427
+            ]
+          ],
+          "function": "FUN_10024b9d0",
+          "function_lines": [
+            404193,
+            404449
+          ],
+          "path": "socialbox-3.1.0-1/decompiled/SocialBox.c"
+        }
+      ],
+      "id": "DRT-NET-024",
+      "not_proven_or_risk": "Obfuscated strings, dynamic selectors, omitted methods and external OS/provider policy mean a negative text search is not proof no such mechanism exists. No kernel policy installation or per-app enforcement proof was recovered in the inspected paths.",
+      "socialbox_comparison": "NET-040 remains GAP. Existing actual PF read-only observations and unlinked policy model do not become deployment evidence through reference-product adoption.",
+      "static_observation": "A case-sensitive mechanical search of the five inspected component pseudocode files for NEIPv6, includeAllNetworks, enforceRoutes, NEAppRule, appRules, routingMethod, DIOC, /dev/pf and pfctl found no match. On-demand selectors were found separately and traced above.",
+      "surface": "Kernel and per-app enforcement inventory",
+      "verdict": "not-demonstrated-not-proof-of-absence"
+    },
+    {
+      "evidence": [
+        {
+          "address": "0x10024e8d8",
+          "anchor": "/* 10024e8d8 | _Xvm1::_updateStuckStateWatchdogForStatus: */",
+          "focus_lines": [
+            [
+              191689,
+              191783
+            ]
+          ],
+          "function": "_Xvm1::_updateStuckStateWatchdogForStatus:",
+          "function_lines": [
+            191689,
+            191783
+          ],
+          "path": "socialbox-3.1.0-1/decompiled/SocialBox.c"
+        },
+        {
+          "address": "0x10024eba8",
+          "anchor": "/* 10024eba8 | _Xvm1::_stuckStateWatchdogFiredTier1 */",
+          "focus_lines": [
+            [
+              191819,
+              191855
+            ]
+          ],
+          "function": "_Xvm1::_stuckStateWatchdogFiredTier1",
+          "function_lines": [
+            191784,
+            191868
+          ],
+          "path": "socialbox-3.1.0-1/decompiled/SocialBox.c"
+        },
+        {
+          "address": "0x10024eec8",
+          "anchor": "/* 10024eec8 | _Xvm1::_stuckStateWatchdogFiredTier2 */",
+          "focus_lines": [
+            [
+              191893,
+              191916
+            ]
+          ],
+          "function": "_Xvm1::_stuckStateWatchdogFiredTier2",
+          "function_lines": [
+            191869,
+            191928
+          ],
+          "path": "socialbox-3.1.0-1/decompiled/SocialBox.c"
+        }
+      ],
+      "id": "DRT-NET-025",
+      "not_proven_or_risk": "Availability recovery is not default-deny behavior. Removing/stopping a personal tunnel can restore ordinary routing; actual physical egress during both recovery tiers remains untested.",
+      "socialbox_comparison": "Keep safe closure and explicit operator recovery separate from UI availability. Never mark protected because a stuck tunnel was removed.",
+      "static_observation": "Host watchdog starts for connecting/disconnecting states, Tier1 requests stop/changes on-demand preferences and schedules another timer, and Tier2 can remove the VPN manager configuration from preferences.",
+      "surface": "Stuck-VPN recovery policy",
+      "verdict": "availability-recovery-demonstrated"
+    }
+  ],
+  "schema_version": 1,
+  "scope": {
+    "binary_execution": false,
+    "binary_modifications": false,
+    "device_actions": false,
+    "extraction": "<handoff>",
+    "method": "Inspected Ghidra pseudocode and function/selector indexes; exact decoded instructions used only for one unresolved-worker call. No original source was supplied.",
+    "read_only": true,
+    "repository_modifications": false,
+    "secrets": "No credential, token or hidden decoded constant values included. Symbol names and configuration key names only."
+  },
+  "socialbox_reference_contract": [
+    {
+      "lines": [
+        483,
+        698
+      ],
+      "path": "<socialbox-repository>/daemon/main.m",
+      "sha256": "b11c6df8eb3379fc7de903b05b559dcc2ce491520a7ce2b6d8237077ba568ff5",
+      "summary": "CLOSE, global kill/wait, CLOSED provider acknowledgement, license/profile/managed-install validation, rotation, socket drain, freeze, ARM acknowledgement, launch/hook readiness and isolation refresh before OPEN."
+    },
+    {
+      "lines": [
+        65,
+        70
+      ],
+      "path": "<socialbox-repository>/daemon/RBXNetworkGate.m",
+      "sha256": "d8b852e56e15eff32c6ee6de3e70664bdbf15d6dfd47c1a217c1d62919820dcf",
+      "summary": "Provider identity requires transport app-proxy, not just a running tunnel."
+    },
+    {
+      "lines": [
+        443,
+        512
+      ],
+      "path": "<socialbox-repository>/daemon/RBXNetworkGate.m",
+      "sha256": "d8b852e56e15eff32c6ee6de3e70664bdbf15d6dfd47c1a217c1d62919820dcf",
+      "summary": "ARM-to-OPEN generation and scoped acknowledgement checks, failure closes lease."
+    },
+    {
+      "lines": [
+        23,
+        54
+      ],
+      "path": "<socialbox-repository>/network-extension/PacketTunnel/FirewallPolicy.swift",
+      "sha256": "4bf2d04c4e1adddb9467a3e9321767e2b93591496303eff08ed08c702fd2f01d",
+      "summary": "Finite heartbeat/expiry, per-app scope, managed bundle membership and exact source/proxy checks."
+    },
+    {
+      "lines": [
+        25,
+        93
+      ],
+      "path": "<socialbox-repository>/network-extension/PacketTunnel/PacketTunnelProvider.swift",
+      "sha256": "49f2069b232060085ad908ed2f27e3eff6c5abe6c48b91f2db74d12d5ec4a0bb",
+      "summary": "Actual NEAppProxyProvider; closes all tracked flows before policy change acknowledgement; stale async completion cannot revive old lease."
+    },
+    {
+      "lines": [
+        34,
+        52
+      ],
+      "path": "<socialbox-repository>/network-extension/FirewallHost/AppDelegate.swift",
+      "sha256": "26c9e7462315775938ac26ad61c83bf86874d24af882aa4afd890858867ef2e0",
+      "summary": "Managed per-app assignment requirement; does not install a personal/global VPN fallback."
+    },
+    {
+      "lines": [
+        1,
+        1
+      ],
+      "path": "<socialbox-repository>/experimental/pf/README.md",
+      "sha256": "aa58b8f89865926d8e3eafe8de75f485f4e6520b7549997d1f197d92d938a761",
+      "summary": "Non-shipping model only; no kernel adapter or independent revoker implementation."
+    },
+    {
+      "lines": [
+        817,
+        817
+      ],
+      "path": "<socialbox-repository>/LEAK_SURFACE.md",
+      "sha256": "5330ee1e59049528361df5316b5e11e601da15bcef01347b3c26a0f015b6d697",
+      "summary": "NET-040 remains a gap; no-MDM measured enforcement absent."
+    }
+  ],
+  "title": "Private static network and lifecycle findings: SocialBox 3.1.0-1 versus SocialBox"
+}

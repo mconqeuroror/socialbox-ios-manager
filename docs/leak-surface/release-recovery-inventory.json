@@ -1,0 +1,44 @@
+{
+  "formatVersion": 1,
+  "rows": [
+    {
+      "id": "REL-001",
+      "category": "Cloud workspace and transfer",
+      "surface": "Release recovery preserves requested version and exclusive publisher ownership",
+      "mechanism": "Save requestedVersion before the first remote lock operation. Legacy prepared journals require an explicit resume version. Only post-create reads use bounded visibility retries; expected owner and acknowledged ETag must match. Pre-promotion missing-lock checks still fail immediately.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "scripts/release.py",
+          "line": 1,
+          "detail": "Release resume or actual publisher regression, including lost lock acknowledgement, delayed visibility and replacement ownership."
+        },
+        {
+          "path": "cloud/scripts/apt-publisher.mjs",
+          "line": 1,
+          "detail": "Release resume or actual publisher regression, including lost lock acknowledgement, delayed visibility and replacement ownership."
+        },
+        {
+          "path": "cloud/scripts/apt-publication-test.mjs",
+          "line": 1,
+          "detail": "Release resume or actual publisher regression, including lost lock acknowledgement, delayed visibility and replacement ownership."
+        },
+        {
+          "path": "tools/test_apt_release.py",
+          "line": 1,
+          "detail": "Release resume or actual publisher regression, including lost lock acknowledgement, delayed visibility and replacement ownership."
+        },
+        {
+          "path": "docs/apt-distribution.md",
+          "line": 1,
+          "detail": "Release resume or actual publisher regression, including lost lock acknowledgement, delayed visibility and replacement ownership."
+        }
+      ],
+      "verification": "Both regressions failed before the fixes. Real driver fixtures cover rootless/rootful lost lock acknowledgement and legacy prepared resume; injected SDK verifies bounded reads, one PUT and rejection of replacement owners. No lock was stolen or signature check disabled.",
+      "fix": "Retain the journal on timeout; resume the same owner. Production verification and device acceptance remain separate requirements."
+    }
+  ]
+}

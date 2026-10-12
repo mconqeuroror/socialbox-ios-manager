@@ -1,0 +1,452 @@
+{
+  "schemaVersion": 1,
+  "appType": "facebook",
+  "scope": "Original-app User-Agent producer observation; not clone or wire acceptance",
+  "recordedAtUTC": "2026-09-14T22:37:03.067553+00:00",
+  "sourceIPA": {
+    "version": "578.1.0",
+    "build": "1063022819",
+    "sha256": "2cdaab3bd8bd0238660ea23b566b7bd7713121d996032bbc045d4066d2233e8a"
+  },
+  "capture": {
+    "startedAtUTC": "2026-09-14T22:33:28.410Z",
+    "durationSeconds": 20,
+    "mode": "spawn fixed original Facebook, observe, stop same process",
+    "sha256": "0b1aa4b3c7eca05471770db16d880b11eba07655fb2200f353c1ac26332525ff",
+    "eventCount": 305,
+    "eventKinds": {
+      "hook-installed": 43,
+      "probe-ready": 1,
+      "preferences": 205,
+      "keychain": 30,
+      "identity-api-call": 14,
+      "facebook-user-agent-fields": 10,
+      "http-request-metadata": 1,
+      "defaults-suite": 1
+    },
+    "probeSHA256": "1e15930443e43363a1c143138843569a5beeeb51cfeb6b4161fe21cb4b8ad168",
+    "runnerSHA256": "0bea98092d08cdb66211524207c3c556f688afc16e6b4ad78b04b95c7f11fc78",
+    "offlinePrivacyTests": "PASS",
+    "probeErrors": 0
+  },
+  "staticEvidence": {
+    "image": "FBSharedFramework",
+    "imageSHA256": "16f3c4752486bdfd421c73d6e62746bc2481b13b841fecd4c51e1a3781a2dc94",
+    "producer": "_FBUserAgent",
+    "virtualAddress": "0x413a98",
+    "returnSequence": "0x413b74..0x413ba8 retains the returned object and tail-calls objc_autoreleaseReturnValue",
+    "verifiedIndirectSymbols": {
+      "0x5535338": "_objc_autoreleaseReturnValue",
+      "0x5535344": "_objc_release",
+      "0x553535c": "_objc_retainAutoreleasedReturnValue",
+      "0x5535368": "_objc_retain"
+    }
+  },
+  "selectedRecords": [
+    {
+      "schema": 1,
+      "event": 57,
+      "kind": "facebook-user-agent-fields",
+      "api": "FBUserAgent-return",
+      "fields": {
+        "FBAN": "FBIOS",
+        "FBDV": "iPhone10,4",
+        "FBMD": "iPhone",
+        "FBSN": "iOS",
+        "FBSV": "16.7.16",
+        "FBSS": "2",
+        "FBID": "phone",
+        "FBLC": "en_GB"
+      },
+      "omittedFields": 1,
+      "prefixLength": 113,
+      "suffixLength": 0,
+      "systemFields": {
+        "mozilla": "5.0",
+        "device": "iPhone",
+        "os": "16_7_16",
+        "webkit": "605.1.15",
+        "browser": null,
+        "mobileBuild": "20H392",
+        "safari": null
+      },
+      "stack": [
+        "FBSharedFramework+0x46a1f8",
+        "FBSharedFramework+0x464168",
+        "Facebook+0x5735c",
+        "FBSharedFramework+0x10976b0",
+        "UIKitCore+0x32d644",
+        "UIKitCore+0x32cd9c",
+        "UIKitCore+0x32bdd0",
+        "UIKitCore+0x32ba30"
+      ]
+    },
+    {
+      "schema": 1,
+      "event": 69,
+      "kind": "facebook-user-agent-fields",
+      "api": "FBUserAgent-return",
+      "fields": {
+        "FBAN": "FBIOS",
+        "FBAV": "578.1.0.71.72",
+        "FBBV": "1063022819",
+        "FBDV": "iPhone10,4",
+        "FBMD": "iPhone",
+        "FBSN": "iOS",
+        "FBSV": "16.7.16",
+        "FBSS": "2",
+        "FBID": "phone",
+        "FBLC": "en_GB"
+      },
+      "omittedFields": 2,
+      "prefixLength": 113,
+      "suffixLength": 0,
+      "systemFields": {
+        "mozilla": "5.0",
+        "device": "iPhone",
+        "os": "16_7_16",
+        "webkit": "605.1.15",
+        "browser": null,
+        "mobileBuild": "20H392",
+        "safari": null
+      },
+      "stack": [
+        "FBSharedFramework+0x46f390",
+        "FBSharedFramework+0x470f18",
+        "FBSharedFramework+0x470b98",
+        "FBSharedFramework+0x46f1f4",
+        "FBSharedFramework+0x46ed60",
+        "FBSharedFramework+0x46e7d8",
+        "FBSharedFramework+0x470494",
+        "FBSharedFramework+0x46d1e8"
+      ]
+    },
+    {
+      "schema": 1,
+      "event": 206,
+      "kind": "facebook-user-agent-fields",
+      "api": "FBUserAgent-return",
+      "fields": {
+        "FBAN": "FBIOS",
+        "FBAV": "578.1.0.71.72",
+        "FBBV": "1063022819",
+        "FBDV": "iPhone10,4",
+        "FBMD": "iPhone",
+        "FBSN": "iOS",
+        "FBSV": "16.7.16",
+        "FBSS": "2",
+        "FBID": "phone",
+        "FBLC": "en_GB"
+      },
+      "omittedFields": 2,
+      "prefixLength": 113,
+      "suffixLength": 0,
+      "systemFields": {
+        "mozilla": "5.0",
+        "device": "iPhone",
+        "os": "16_7_16",
+        "webkit": "605.1.15",
+        "browser": null,
+        "mobileBuild": "20H392",
+        "safari": null
+      },
+      "stack": [
+        "FBSharedFramework+0x46f390",
+        "FBSharedFramework+0x470f18",
+        "FBSharedFramework+0x470b98",
+        "FBSharedFramework+0x46f1f4",
+        "FBSharedFramework+0x46ed60",
+        "FBSharedFramework+0x46e7d8",
+        "FBSharedFramework+0x470494",
+        "FBSharedFramework+0x62da1c"
+      ]
+    },
+    {
+      "schema": 1,
+      "event": 218,
+      "kind": "facebook-user-agent-fields",
+      "api": "FBUserAgent-return",
+      "fields": {
+        "FBAN": "FBIOS",
+        "FBAV": "578.1.0.71.72",
+        "FBBV": "1063022819",
+        "FBDV": "iPhone10,4",
+        "FBMD": "iPhone",
+        "FBSN": "iOS",
+        "FBSV": "16.7.16",
+        "FBSS": "2",
+        "FBID": "phone",
+        "FBLC": "en_GB"
+      },
+      "omittedFields": 2,
+      "prefixLength": 113,
+      "suffixLength": 0,
+      "systemFields": {
+        "mozilla": "5.0",
+        "device": "iPhone",
+        "os": "16_7_16",
+        "webkit": "605.1.15",
+        "browser": null,
+        "mobileBuild": "20H392",
+        "safari": null
+      },
+      "stack": [
+        "FBSharedFramework+0x63d950",
+        "Facebook+0xa245c",
+        "libdispatch.dylib+0x637a8",
+        "libdispatch.dylib+0x64780",
+        "libdispatch.dylib+0x3f6fc",
+        "libdispatch.dylib+0x401b0",
+        "libdispatch.dylib+0x49f14",
+        "libsystem_pthread.dylib+0x1bd0"
+      ]
+    },
+    {
+      "schema": 1,
+      "event": 222,
+      "kind": "facebook-user-agent-fields",
+      "api": "FBUserAgent-return",
+      "fields": {
+        "FBAN": "FBIOS",
+        "FBAV": "578.1.0.71.72",
+        "FBBV": "1063022819",
+        "FBDV": "iPhone10,4",
+        "FBMD": "iPhone",
+        "FBSN": "iOS",
+        "FBSV": "16.7.16",
+        "FBSS": "2",
+        "FBID": "phone",
+        "FBLC": "en_GB"
+      },
+      "omittedFields": 2,
+      "prefixLength": 113,
+      "suffixLength": 0,
+      "systemFields": {
+        "mozilla": "5.0",
+        "device": "iPhone",
+        "os": "16_7_16",
+        "webkit": "605.1.15",
+        "browser": null,
+        "mobileBuild": "20H392",
+        "safari": null
+      },
+      "stack": [
+        "FBSharedFramework+0x9d3cb0",
+        "libsystem_pthread.dylib+0x673c",
+        "libsystem_platform.dylib+0x7610",
+        "libsystem_pthread.dylib+0x1e38",
+        "FBSharedFramework+0x9d3bfc",
+        "FBSharedFramework+0x640284",
+        "libsystem_pthread.dylib+0x673c",
+        "libsystem_platform.dylib+0x7610"
+      ]
+    },
+    {
+      "schema": 1,
+      "event": 225,
+      "kind": "facebook-user-agent-fields",
+      "api": "FBUserAgent-return",
+      "fields": {
+        "FBAN": "FBIOS",
+        "FBAV": "578.1.0.71.72",
+        "FBBV": "1063022819",
+        "FBDV": "iPhone10,4",
+        "FBMD": "iPhone",
+        "FBSN": "iOS",
+        "FBSV": "16.7.16",
+        "FBSS": "2",
+        "FBID": "phone",
+        "FBLC": "en_GB"
+      },
+      "omittedFields": 2,
+      "prefixLength": 113,
+      "suffixLength": 0,
+      "systemFields": {
+        "mozilla": "5.0",
+        "device": "iPhone",
+        "os": "16_7_16",
+        "webkit": "605.1.15",
+        "browser": null,
+        "mobileBuild": "20H392",
+        "safari": null
+      },
+      "stack": [
+        "FBSharedFramework+0x46f390",
+        "FBSharedFramework+0x470f18",
+        "FBSharedFramework+0x470b98",
+        "FBSharedFramework+0x46f1f4",
+        "FBSharedFramework+0x46ed60",
+        "FBSharedFramework+0x46e7d8",
+        "FBSharedFramework+0x470494",
+        "FBSharedFramework+0x46d1e8"
+      ]
+    },
+    {
+      "schema": 1,
+      "event": 228,
+      "kind": "facebook-user-agent-fields",
+      "api": "FBUserAgent-return",
+      "fields": {
+        "FBAN": "FBIOS",
+        "FBAV": "578.1.0.71.72",
+        "FBBV": "1063022819",
+        "FBDV": "iPhone10,4",
+        "FBMD": "iPhone",
+        "FBSN": "iOS",
+        "FBSV": "16.7.16",
+        "FBSS": "2",
+        "FBID": "phone",
+        "FBLC": "en_GB"
+      },
+      "omittedFields": 2,
+      "prefixLength": 113,
+      "suffixLength": 0,
+      "systemFields": {
+        "mozilla": "5.0",
+        "device": "iPhone",
+        "os": "16_7_16",
+        "webkit": "605.1.15",
+        "browser": null,
+        "mobileBuild": "20H392",
+        "safari": null
+      },
+      "stack": [
+        "FBSharedFramework+0x46f390",
+        "FBSharedFramework+0x470f18",
+        "FBSharedFramework+0x470b98",
+        "FBSharedFramework+0x46f1f4",
+        "FBSharedFramework+0x46ed60",
+        "FBSharedFramework+0x46e7d8",
+        "FBSharedFramework+0x470494",
+        "FBSharedFramework+0x46d1e8"
+      ]
+    },
+    {
+      "schema": 1,
+      "event": 232,
+      "kind": "facebook-user-agent-fields",
+      "api": "FBUserAgent-return",
+      "fields": {
+        "FBAN": "FBIOS",
+        "FBAV": "578.1.0.71.72",
+        "FBBV": "1063022819",
+        "FBDV": "iPhone10,4",
+        "FBMD": "iPhone",
+        "FBSN": "iOS",
+        "FBSV": "16.7.16",
+        "FBSS": "2",
+        "FBID": "phone",
+        "FBLC": "en_GB"
+      },
+      "omittedFields": 2,
+      "prefixLength": 113,
+      "suffixLength": 0,
+      "systemFields": {
+        "mozilla": "5.0",
+        "device": "iPhone",
+        "os": "16_7_16",
+        "webkit": "605.1.15",
+        "browser": null,
+        "mobileBuild": "20H392",
+        "safari": null
+      },
+      "stack": [
+        "FBSharedFramework+0x46f390",
+        "FBSharedFramework+0x470f18",
+        "FBSharedFramework+0x470b98",
+        "FBSharedFramework+0x46f1f4",
+        "FBSharedFramework+0x46ed60",
+        "FBSharedFramework+0x46e7d8",
+        "FBSharedFramework+0x470494",
+        "FBSharedFramework+0x62da1c"
+      ]
+    },
+    {
+      "schema": 1,
+      "event": 251,
+      "kind": "facebook-user-agent-fields",
+      "api": "FBUserAgent-return",
+      "fields": {
+        "FBAN": "FBIOS",
+        "FBAV": "578.1.0.71.72",
+        "FBBV": "1063022819",
+        "FBDV": "iPhone10,4",
+        "FBMD": "iPhone",
+        "FBSN": "iOS",
+        "FBSV": "16.7.16",
+        "FBSS": "2",
+        "FBID": "phone",
+        "FBLC": "en_GB"
+      },
+      "omittedFields": 2,
+      "prefixLength": 113,
+      "suffixLength": 0,
+      "systemFields": {
+        "mozilla": "5.0",
+        "device": "iPhone",
+        "os": "16_7_16",
+        "webkit": "605.1.15",
+        "browser": null,
+        "mobileBuild": "20H392",
+        "safari": null
+      },
+      "stack": [
+        "FBSharedFramework+0x46f390",
+        "FBSharedFramework+0x470f18",
+        "FBSharedFramework+0x470b98",
+        "FBSharedFramework+0x46f1f4",
+        "FBSharedFramework+0x46ed60",
+        "FBSharedFramework+0x46e7d8",
+        "FBSharedFramework+0x470494",
+        "FBSharedFramework+0x62da1c"
+      ]
+    },
+    {
+      "schema": 1,
+      "event": 286,
+      "kind": "facebook-user-agent-fields",
+      "api": "FBUserAgent-return",
+      "fields": {
+        "FBAN": "FBIOS",
+        "FBAV": "578.1.0.71.72",
+        "FBBV": "1063022819",
+        "FBDV": "iPhone10,4",
+        "FBMD": "iPhone",
+        "FBSN": "iOS",
+        "FBSV": "16.7.16",
+        "FBSS": "2",
+        "FBID": "phone",
+        "FBLC": "en_GB"
+      },
+      "omittedFields": 2,
+      "prefixLength": 113,
+      "suffixLength": 0,
+      "systemFields": {
+        "mozilla": "5.0",
+        "device": "iPhone",
+        "os": "16_7_16",
+        "webkit": "605.1.15",
+        "browser": null,
+        "mobileBuild": "20H392",
+        "safari": null
+      },
+      "stack": [
+        "FBSharedFramework+0x46f390",
+        "FBSharedFramework+0x470f18",
+        "FBSharedFramework+0x470b98",
+        "FBSharedFramework+0x46f1f4",
+        "FBSharedFramework+0x46ed60",
+        "FBSharedFramework+0x46e7d8",
+        "FBSharedFramework+0x470494",
+        "FBSharedFramework+0xa07ec4"
+      ]
+    }
+  ],
+  "limitations": [
+    "Only whitelisted structured UA fields were retained; unknown fields/values and full UA strings were omitted.",
+    "No account, token, cookie, request body, key material or identifier return value was captured.",
+    "This is the original app producer, not proof that a request reached the wire with those fields.",
+    "The first attach attempt failed in dyld probing; a fresh bounded original-app launch succeeded.",
+    "Facebook clone SDK ordering, namespace provenance, MDM routing and custom transports remain unverified."
+  ]
+}

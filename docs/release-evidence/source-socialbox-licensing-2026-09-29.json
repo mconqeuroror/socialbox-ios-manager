@@ -1,0 +1,199 @@
+{
+  "date": "2026-09-29",
+  "scope": "Source-built SocialBox; independent daemon licensing. This is not admission into the recovered binary.",
+  "publicKeyID": "b2c5d4176c727107c9826ad69386d4d65f90920074981bd842127d6b22add6e9",
+  "origin": "https://redditspoof.vercel.app",
+  "signerReplaced": false,
+  "existingOwnerLicensesChanged": false,
+  "checks": {
+    "actual_daemon_native_regressions": "PASS",
+    "fresh_install_production_origin": "PASS",
+    "first_rejection_regression_failed_before_fix": "PASS",
+    "mac_production_activation": "PASS",
+    "mac_process_restart": "PASS",
+    "mac_saved_credential_validation": "PASS",
+    "mac_copied_identity_without_credential_denied": "PASS",
+    "mac_second_installation_denied": "PASS",
+    "mac_signed_revocation": "PASS",
+    "phone_production_activation": "PASS",
+    "phone_keychain_identity_process_restart": "PASS",
+    "phone_saved_credential_validation": "PASS",
+    "phone_second_installation_denied": "PASS",
+    "phone_signed_revocation": "PASS",
+    "phone_acceptance_cleanup": "PASS",
+    "root_uikit_49_checks": "PASS",
+    "workspace_uikit_240_checks": "PASS",
+    "cloud_device_license_23_checks": "PASS",
+    "second_physical_phone": "NOT_RUN",
+    "installed_app_upgrade": "NOT_RUN",
+    "container_data_migration": "NOT_RUN",
+    "end_to_end_container_network_isolation": "NOT_RUN",
+    "queued_license_admission_failed_before_fix": "PASS",
+    "queued_license_admission_166_checks": "PASS",
+    "workspace_dispatch_177_checks": "PASS",
+    "cloud_profile_ownership_dispatch": "PASS",
+    "preinstall_preserves_existing_engine_both_variants": "PASS",
+    "source_package_adversarial_fixtures_both_variants": "PASS",
+    "static_checks": "PASS",
+    "leak_ledger_390_rows": "PASS",
+    "existing_engine_data_read_only_inventory": "PASS",
+    "full_source_build_and_137_mandatory_checks": "PASS",
+    "rootless_archive_boundary": "PASS",
+    "rootful_variant_build_and_archive_boundary": "PASS"
+  },
+  "installedApplicationChanged": false,
+  "testKeysRevoked": 2,
+  "phoneTestKeychainIdentitiesRemoved": 2,
+  "independentSourceRuntime": true,
+  "customerReleaseReady": false,
+  "published": false,
+  "limits": [
+    "Phone tests run the production verifier/transport with an isolated acceptance pairing store and Keychain access group, not the installed UI-to-daemon flow.",
+    "The source registry still disables Facebook launch; MDM/per-app network acceptance remains required.",
+    "The source package cannot be coinstalled with the recovered engine. Container format migration and full device acceptance remain outstanding.",
+    "The one-device policy binds an installation credential. It is not a claim of uncopyable hardware identity against a fully privileged device owner.",
+    "A fresh read-only SSH inventory found existing engine data; a directory entry count is not proof of a migrated container or preserved login."
+  ],
+  "evidence": [
+    "tools/license_guard_live_probe.m",
+    "tools/test_service_lifetime.m",
+    "docs/socialbox-source-licensing.md",
+    "tools/test_license_dispatch.py",
+    "tools/test_source_socialbox_package.py",
+    "tools/test_preinstall.py",
+    "docs/source-socialbox-candidate-checklist.md"
+  ],
+  "artifacts": {
+    "rootless": {
+      "packageSHA256": "f966d1fcb3f7294e19644efbae53686e203ed531c433f97142413460f58d1480",
+      "version": "0.2.0",
+      "scheme": "rootless",
+      "implementation": "source-owned launcher, daemon and tweak; no recovered binaries",
+      "licenseKeyID": "b2c5d4176c727107c9826ad69386d4d65f90920074981bd842127d6b22add6e9",
+      "executables": {
+        "Applications/RedditBox.app/RedditBox": {
+          "sha256": "e4644cfd8070f0c8a6ce6c886e35bc153ff08e74f073c1a4337fc98fddb399a4",
+          "architectures": [
+            "arm64",
+            "arm64e"
+          ]
+        },
+        "Applications/RedditBoxFirewall.app/PlugIns/PacketTunnel.appex/PacketTunnel": {
+          "sha256": "c438261e0e414488884f82d522d6bfa7ac771458f2effe425a4810fb39371e5a",
+          "architectures": [
+            "arm64"
+          ]
+        },
+        "Applications/RedditBoxFirewall.app/RedditBoxFirewall": {
+          "sha256": "e192618b79755215bf902148de3853b64c21467e908a500b16b9342170588e21",
+          "architectures": [
+            "arm64"
+          ]
+        },
+        "Library/MobileSubstrate/DynamicLibraries/RedditBox.dylib": {
+          "sha256": "6529b4d9f52ae38394ec25b1b2f177f765b638252524028b4e380bb60cf93c30",
+          "architectures": [
+            "arm64",
+            "arm64e"
+          ]
+        },
+        "Library/PreferenceBundles/RedditBoxPrefs.bundle/RedditBoxPrefs": {
+          "sha256": "0c5c1621b4b3e4c5249a612f6fa5349bcad15fcd31490bced8cb17f66b50bebf",
+          "architectures": [
+            "arm64",
+            "arm64e"
+          ]
+        },
+        "usr/bin/redditboxd": {
+          "sha256": "71c8064ea0a42b3b185f2511b4af3caf63d8d2b95076c34fafa37f5a5f2fb84b",
+          "architectures": [
+            "arm64",
+            "arm64e"
+          ]
+        },
+        "usr/libexec/redditbox-keychain-cleaner": {
+          "sha256": "f40ef943c91b6bf330ea3cfe41065df8d7ecac2b17249a9c59fbeab882e38a94",
+          "architectures": [
+            "arm64",
+            "arm64e"
+          ]
+        }
+      },
+      "deviceAcceptance": "NOT_RUN",
+      "packageBytes": 2317076
+    },
+    "rootful": {
+      "packageSHA256": "3170a58262dd5a40a6eda1b69455ebffb75275237e4814185c7a8d39db7f3ac8",
+      "version": "0.2.0",
+      "scheme": "rootful",
+      "implementation": "source-owned launcher, daemon and tweak; no recovered binaries",
+      "licenseKeyID": "b2c5d4176c727107c9826ad69386d4d65f90920074981bd842127d6b22add6e9",
+      "executables": {
+        "Applications/RedditBox.app/RedditBox": {
+          "sha256": "292b5c087de2278e19ea2c17ad19efbc64e59162bd4172f52b9dbd609426ffad",
+          "architectures": [
+            "arm64",
+            "arm64e"
+          ]
+        },
+        "Applications/RedditBoxFirewall.app/PlugIns/PacketTunnel.appex/PacketTunnel": {
+          "sha256": "c438261e0e414488884f82d522d6bfa7ac771458f2effe425a4810fb39371e5a",
+          "architectures": [
+            "arm64"
+          ]
+        },
+        "Applications/RedditBoxFirewall.app/RedditBoxFirewall": {
+          "sha256": "e192618b79755215bf902148de3853b64c21467e908a500b16b9342170588e21",
+          "architectures": [
+            "arm64"
+          ]
+        },
+        "Library/MobileSubstrate/DynamicLibraries/RedditBox.dylib": {
+          "sha256": "e32fe58584a18e133fbebf3ecbe10781e3963a7f7f19828d8ee3717c96c7b631",
+          "architectures": [
+            "arm64",
+            "arm64e"
+          ]
+        },
+        "Library/PreferenceBundles/RedditBoxPrefs.bundle/RedditBoxPrefs": {
+          "sha256": "34f4dc3741b79db85ba6f52026ab97017ab378c50b147986bf95036e8c7c147c",
+          "architectures": [
+            "arm64",
+            "arm64e"
+          ]
+        },
+        "usr/bin/redditboxd": {
+          "sha256": "a424d9de006e1c71cafbba976ef752cd251257ecddf08854d0292d215cc3a416",
+          "architectures": [
+            "arm64",
+            "arm64e"
+          ]
+        },
+        "usr/libexec/redditbox-keychain-cleaner": {
+          "sha256": "96c5910e4b9dfe9a6c5fc07644b7f5e397111dccab32a843b42ea5c1971c80f4",
+          "architectures": [
+            "arm64",
+            "arm64e"
+          ]
+        }
+      },
+      "deviceAcceptance": "NOT_RUN",
+      "packageBytes": 2309414
+    }
+  },
+  "uiRecording": {
+    "path": "private-release/source-socialbox-2026-09-29/license-flow.mp4",
+    "durationSeconds": 12.623333,
+    "resolution": "750x1334",
+    "scope": "Own UIKit simulator fixture; synthetic publications and inert IPC, not installed phone activation."
+  },
+  "sourceInventorySHA256": "0f0b68369ebffe0171b8e225e50b273f040bb889831c90c4c32f2fae23ff9e49",
+  "buildValidation": {
+    "mandatoryCheckInvocations": 137,
+    "regressionScope": "Source-native suites and fixtures; see per-check scope. A passed host fixture is not physical-device isolation acceptance.",
+    "signing": "Procursus ldid; no Apple Development Team",
+    "rootless": "Full scripts/build-socialbox-source.sh; all mandatory checks and native/Swift builds.",
+    "rootful": "Same tested source; rootful layout regenerated and Theos rebuilt with RBX_PACKAGE_ROOTLESS=0. Reuses the signed Swift firewall archive shared by both layouts; the unchanged native suites were not redundantly rerun."
+  },
+  "sourceCodeCommit": "e03eaeace21bbe3faccb469e85bf30bb58679561"
+}

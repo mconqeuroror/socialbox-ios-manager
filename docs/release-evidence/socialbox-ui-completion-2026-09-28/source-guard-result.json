@@ -1,0 +1,354 @@
+{
+  "schemaVersion": 1,
+  "status": "PASS",
+  "scope": "Top-level production Objective-C sources in lucid/Presentation",
+  "excluded": [
+    {
+      "path": "lucid/Presentation/Tests",
+      "reason": "Synthetic original-host inputs and regressions; never shipped"
+    }
+  ],
+  "scannedFiles": [
+    "lucid/Presentation/LBXDisplayCopy.h",
+    "lucid/Presentation/LBXDisplayCopy.m",
+    "lucid/Presentation/LBXPresentation.h",
+    "lucid/Presentation/LBXPresentation.m",
+    "lucid/Presentation/LBXWorkspace.h",
+    "lucid/Presentation/LBXWorkspace.m",
+    "lucid/Presentation/SBBackendAdapter.h",
+    "lucid/Presentation/SBBackendAdapter.m",
+    "lucid/Presentation/SBContainersView.h",
+    "lucid/Presentation/SBContainersView.m",
+    "lucid/Presentation/SBDesign.h",
+    "lucid/Presentation/SBDesign.m",
+    "lucid/Presentation/SBIdentityForm.h",
+    "lucid/Presentation/SBIdentityForm.m",
+    "lucid/Presentation/SBInterfaceCopy.h",
+    "lucid/Presentation/SBInterfaceCopy.m",
+    "lucid/Presentation/SBLegacyDisplayCatalog.h",
+    "lucid/Presentation/SBLegacyDisplayCatalog.m",
+    "lucid/Presentation/SBSecondaryScreens.h",
+    "lucid/Presentation/SBSecondaryScreens.m",
+    "lucid/Presentation/SBWorkspaceCoordinator.h",
+    "lucid/Presentation/SBWorkspaceCoordinator.m"
+  ],
+  "approvedReferences": [
+    {
+      "file": "lucid/Presentation/SBBackendAdapter.m",
+      "line": 36,
+      "reason": "Backend host ABI bundle pin"
+    },
+    {
+      "file": "lucid/Presentation/SBBackendAdapter.m",
+      "line": 36,
+      "reason": "Backend host ABI bundle pin"
+    },
+    {
+      "file": "lucid/Presentation/SBBackendAdapter.m",
+      "line": 36,
+      "reason": "Backend host ABI executable pin"
+    },
+    {
+      "file": "lucid/Presentation/SBBackendAdapter.m",
+      "line": 53,
+      "reason": "Typed recovered screen registry key"
+    },
+    {
+      "file": "lucid/Presentation/SBLegacyDisplayCatalog.m",
+      "line": 12,
+      "reason": "Marked reviewed compatibility input"
+    },
+    {
+      "file": "lucid/Presentation/SBLegacyDisplayCatalog.m",
+      "line": 13,
+      "reason": "Marked reviewed compatibility input"
+    },
+    {
+      "file": "lucid/Presentation/SBLegacyDisplayCatalog.m",
+      "line": 14,
+      "reason": "Marked reviewed compatibility input"
+    },
+    {
+      "file": "lucid/Presentation/SBLegacyDisplayCatalog.m",
+      "line": 21,
+      "reason": "Marked reviewed compatibility input"
+    },
+    {
+      "file": "lucid/Presentation/SBLegacyDisplayCatalog.m",
+      "line": 22,
+      "reason": "Marked reviewed compatibility input"
+    },
+    {
+      "file": "lucid/Presentation/SBLegacyDisplayCatalog.m",
+      "line": 23,
+      "reason": "Marked reviewed compatibility input"
+    },
+    {
+      "file": "lucid/Presentation/SBLegacyDisplayCatalog.m",
+      "line": 24,
+      "reason": "Marked reviewed compatibility input"
+    },
+    {
+      "file": "lucid/Presentation/SBLegacyDisplayCatalog.m",
+      "line": 25,
+      "reason": "Marked reviewed compatibility input"
+    },
+    {
+      "file": "lucid/Presentation/SBLegacyDisplayCatalog.m",
+      "line": 26,
+      "reason": "Marked reviewed compatibility input"
+    },
+    {
+      "file": "lucid/Presentation/SBLegacyDisplayCatalog.m",
+      "line": 27,
+      "reason": "Marked reviewed compatibility input"
+    },
+    {
+      "file": "lucid/Presentation/SBLegacyDisplayCatalog.m",
+      "line": 28,
+      "reason": "Marked reviewed compatibility input"
+    },
+    {
+      "file": "lucid/Presentation/SBLegacyDisplayCatalog.m",
+      "line": 29,
+      "reason": "Marked reviewed compatibility input"
+    },
+    {
+      "file": "lucid/Presentation/SBLegacyDisplayCatalog.m",
+      "line": 30,
+      "reason": "Marked reviewed compatibility input"
+    },
+    {
+      "file": "lucid/Presentation/SBLegacyDisplayCatalog.m",
+      "line": 31,
+      "reason": "Marked reviewed compatibility input"
+    },
+    {
+      "file": "lucid/Presentation/SBLegacyDisplayCatalog.m",
+      "line": 32,
+      "reason": "Marked reviewed compatibility input"
+    },
+    {
+      "file": "lucid/Presentation/SBLegacyDisplayCatalog.m",
+      "line": 33,
+      "reason": "Marked reviewed compatibility input"
+    },
+    {
+      "file": "lucid/Presentation/SBLegacyDisplayCatalog.m",
+      "line": 34,
+      "reason": "Marked reviewed compatibility input"
+    },
+    {
+      "file": "lucid/Presentation/SBLegacyDisplayCatalog.m",
+      "line": 35,
+      "reason": "Marked reviewed compatibility input"
+    },
+    {
+      "file": "lucid/Presentation/SBLegacyDisplayCatalog.m",
+      "line": 36,
+      "reason": "Marked reviewed compatibility input"
+    },
+    {
+      "file": "lucid/Presentation/SBLegacyDisplayCatalog.m",
+      "line": 37,
+      "reason": "Marked reviewed compatibility input"
+    },
+    {
+      "file": "lucid/Presentation/SBLegacyDisplayCatalog.m",
+      "line": 38,
+      "reason": "Marked reviewed compatibility input"
+    },
+    {
+      "file": "lucid/Presentation/SBLegacyDisplayCatalog.m",
+      "line": 39,
+      "reason": "Marked reviewed compatibility input"
+    },
+    {
+      "file": "lucid/Presentation/SBLegacyDisplayCatalog.m",
+      "line": 40,
+      "reason": "Marked reviewed compatibility input"
+    },
+    {
+      "file": "lucid/Presentation/SBLegacyDisplayCatalog.m",
+      "line": 41,
+      "reason": "Marked reviewed compatibility input"
+    },
+    {
+      "file": "lucid/Presentation/SBLegacyDisplayCatalog.m",
+      "line": 42,
+      "reason": "Marked reviewed compatibility input"
+    },
+    {
+      "file": "lucid/Presentation/SBLegacyDisplayCatalog.m",
+      "line": 43,
+      "reason": "Marked reviewed compatibility input"
+    },
+    {
+      "file": "lucid/Presentation/SBLegacyDisplayCatalog.m",
+      "line": 44,
+      "reason": "Marked reviewed compatibility input"
+    },
+    {
+      "file": "lucid/Presentation/SBLegacyDisplayCatalog.m",
+      "line": 44,
+      "reason": "Marked reviewed compatibility input"
+    },
+    {
+      "file": "lucid/Presentation/SBLegacyDisplayCatalog.m",
+      "line": 45,
+      "reason": "Marked reviewed compatibility input"
+    },
+    {
+      "file": "lucid/Presentation/SBLegacyDisplayCatalog.m",
+      "line": 47,
+      "reason": "Marked reviewed compatibility input"
+    },
+    {
+      "file": "lucid/Presentation/SBLegacyDisplayCatalog.m",
+      "line": 47,
+      "reason": "Marked reviewed compatibility input"
+    },
+    {
+      "file": "lucid/Presentation/SBLegacyDisplayCatalog.m",
+      "line": 47,
+      "reason": "Marked reviewed compatibility input"
+    },
+    {
+      "file": "lucid/Presentation/SBLegacyDisplayCatalog.m",
+      "line": 47,
+      "reason": "Marked reviewed compatibility input"
+    },
+    {
+      "file": "lucid/Presentation/SBLegacyDisplayCatalog.m",
+      "line": 48,
+      "reason": "Marked reviewed compatibility input"
+    },
+    {
+      "file": "lucid/Presentation/SBLegacyDisplayCatalog.m",
+      "line": 48,
+      "reason": "Marked reviewed compatibility input"
+    },
+    {
+      "file": "lucid/Presentation/SBLegacyDisplayCatalog.m",
+      "line": 49,
+      "reason": "Marked reviewed compatibility input"
+    },
+    {
+      "file": "lucid/Presentation/SBLegacyDisplayCatalog.m",
+      "line": 50,
+      "reason": "Marked reviewed compatibility input"
+    },
+    {
+      "file": "lucid/Presentation/SBLegacyDisplayCatalog.m",
+      "line": 51,
+      "reason": "Marked reviewed compatibility input"
+    },
+    {
+      "file": "lucid/Presentation/SBLegacyDisplayCatalog.m",
+      "line": 52,
+      "reason": "Marked reviewed compatibility input"
+    },
+    {
+      "file": "lucid/Presentation/SBLegacyDisplayCatalog.m",
+      "line": 53,
+      "reason": "Marked reviewed compatibility input"
+    },
+    {
+      "file": "lucid/Presentation/SBLegacyDisplayCatalog.m",
+      "line": 54,
+      "reason": "Marked reviewed compatibility input"
+    },
+    {
+      "file": "lucid/Presentation/SBLegacyDisplayCatalog.m",
+      "line": 55,
+      "reason": "Marked reviewed compatibility input"
+    },
+    {
+      "file": "lucid/Presentation/SBLegacyDisplayCatalog.m",
+      "line": 56,
+      "reason": "Marked reviewed compatibility input"
+    },
+    {
+      "file": "lucid/Presentation/SBLegacyDisplayCatalog.m",
+      "line": 57,
+      "reason": "Marked reviewed compatibility input"
+    },
+    {
+      "file": "lucid/Presentation/SBLegacyDisplayCatalog.m",
+      "line": 58,
+      "reason": "Marked reviewed compatibility input"
+    },
+    {
+      "file": "lucid/Presentation/SBLegacyDisplayCatalog.m",
+      "line": 81,
+      "reason": "Marked reviewed compatibility input"
+    },
+    {
+      "file": "lucid/Presentation/SBLegacyDisplayCatalog.m",
+      "line": 83,
+      "reason": "Marked reviewed compatibility input"
+    },
+    {
+      "file": "lucid/Presentation/SBLegacyDisplayCatalog.m",
+      "line": 85,
+      "reason": "Marked reviewed compatibility input"
+    },
+    {
+      "file": "lucid/Presentation/SBLegacyDisplayCatalog.m",
+      "line": 87,
+      "reason": "Marked reviewed compatibility input"
+    },
+    {
+      "file": "lucid/Presentation/SBLegacyDisplayCatalog.m",
+      "line": 89,
+      "reason": "Marked reviewed compatibility input"
+    },
+    {
+      "file": "lucid/Presentation/SBLegacyDisplayCatalog.m",
+      "line": 91,
+      "reason": "Marked reviewed compatibility input"
+    },
+    {
+      "file": "lucid/Presentation/SBLegacyDisplayCatalog.m",
+      "line": 91,
+      "reason": "Marked reviewed compatibility input"
+    },
+    {
+      "file": "lucid/Presentation/SBLegacyDisplayCatalog.m",
+      "line": 93,
+      "reason": "Marked reviewed compatibility input"
+    },
+    {
+      "file": "lucid/Presentation/SBLegacyDisplayCatalog.m",
+      "line": 93,
+      "reason": "Marked reviewed compatibility input"
+    },
+    {
+      "file": "lucid/Presentation/SBLegacyDisplayCatalog.m",
+      "line": 93,
+      "reason": "Marked reviewed compatibility input"
+    },
+    {
+      "file": "lucid/Presentation/SBLegacyDisplayCatalog.m",
+      "line": 105,
+      "reason": "Marked reviewed compatibility input"
+    },
+    {
+      "file": "lucid/Presentation/SBLegacyDisplayCatalog.m",
+      "line": 105,
+      "reason": "Marked reviewed compatibility input"
+    },
+    {
+      "file": "lucid/Presentation/SBLegacyDisplayCatalog.m",
+      "line": 128,
+      "reason": "Marked reviewed compatibility input"
+    },
+    {
+      "file": "lucid/Presentation/SBLegacyDisplayCatalog.m",
+      "line": 134,
+      "reason": "Marked reviewed compatibility input"
+    }
+  ],
+  "violations": [],
+  "phoneAcceptance": "NOT_RUN"
+}

@@ -1,0 +1,338 @@
+{
+  "schemaVersion": 1,
+  "scope": "Acceptance tooling evidence is distinct from runtime isolation evidence.",
+  "rows": [
+    {
+      "id": "ACCEPT-001",
+      "category": "Acceptance readiness",
+      "surface": "Shared read-only launcher and SSH readiness presentation",
+      "mechanism": "One Foundation evaluator consumes the existing published launcher/diagnostics schema, rejects stale/malformed/future evidence, and retains explicit manual NOT_RUN rows. It neither mutates gates nor treats root probes as sandbox/keychain denial proof.",
+      "coverage": "none",
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "shared/RBXAcceptanceChecks.h",
+          "line": 4,
+          "detail": "Read-only public evaluator API and bounded PASS meaning."
+        },
+        {
+          "path": "shared/RBXAcceptanceChecks.m",
+          "line": 23,
+          "detail": "Current snapshot and last requested diagnostics evaluated separately."
+        },
+        {
+          "path": "tools/test_acceptance_checks.m",
+          "line": 12,
+          "detail": "Native fresh, stale, malformed, privacy and manual-evidence fixtures."
+        },
+        {
+          "path": "tools/device_acceptance_cli.m",
+          "line": 3,
+          "detail": "SSH host CLI invokes the identical Foundation implementation."
+        }
+      ],
+      "verification": "bash tools/test_acceptance_checks.sh passes. This establishes evaluator behavior only, not phone readiness or account isolation.",
+      "fix": "Run checks on the installed phone and retain the source revision, capture time and per-check result. Never promote manual NOT_RUN items from daemon self-reports."
+    },
+    {
+      "id": "ACCEPT-002",
+      "category": "Acceptance readiness",
+      "surface": "Bounded SSH acceptance battery and row-scoped observations",
+      "mechanism": "A Mac collector reads current control/profile/OS metadata, binds live executable and hook receipts, inspects installed main entitlements, and optionally creates one temporary storage-location marker. Root observations cannot establish clone-context access denial. Optional canary stages are a separately scoped in-clone experiment (ACCEPT-004). Deletion baselines bind the same daemon boot epoch; hook timing respects ARMED/OPEN ordering and rejects stale/future evidence.",
+      "coverage": "none",
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "scripts/device-acceptance-ssh.sh",
+          "line": 1,
+          "detail": "SSH battery entry point."
+        },
+        {
+          "path": "tools/device_acceptance_ssh.py",
+          "line": 1,
+          "detail": "Bounded SSH orchestration, secret-free report and scoped observations."
+        },
+        {
+          "path": "tools/device_acceptance_probe.m",
+          "line": 1,
+          "detail": "Temporary observer; GET-only kernel query, PID binding and optional owned sentinel."
+        },
+        {
+          "path": "docs/leak-surface/device-acceptance-mapping.json",
+          "line": 1,
+          "detail": "Exact check patterns, row IDs, and claims each observation cannot close."
+        },
+        {
+          "path": "tools/test_device_acceptance_ssh.py",
+          "line": 1,
+          "detail": "Behavioral freshness, receipt binding, path, transport quoting and redaction fixtures."
+        },
+        {
+          "path": "scripts/build-mac.sh",
+          "line": 1,
+          "detail": "Both package schemes run shared acceptance, optional canary, Simple wording/wizard and SSH collector fixture gates before native packaging."
+        },
+        {
+          "path": "docs/isolation-review-device-0.1.16.json",
+          "line": 1,
+          "detail": "Timestamped partial capture; installed/host revisions and unrun evidence explicitly separated."
+        }
+      ],
+      "verification": "Host freshness/provenance/transport fixtures and compiled native Boolean-schema tests pass. Partial 0.1.16 device capture in docs/isolation-review-device-0.1.16.json proves named structural observations only. Missing pgrep, rootless observer staging and numeric JSON Boolean defects were fixed. Final collector rerun, A/B probes and managed routing remain NOT_RUN after USB disconnection.",
+      "fix": "Run the ordered acceptance on the target device; retain PASS/FAIL/NOT_RUN per observation and generation. Use in-clone evidence for keychain and foreign-sandbox denial."
+    },
+    {
+      "id": "ACCEPT-003",
+      "category": "Acceptance readiness",
+      "surface": "H02 budget, installed daemon and ordered device acceptance",
+      "mechanism": "The runbook distinguishes a live daemon and explicit kernel memory limit readback from full source-import/Jetsam survival, then orders activation, launcher setup, A/B critical path, diagnostics, public visibility, deletion and fail-closed checks.",
+      "coverage": "none",
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/device-acceptance-final.md",
+          "line": 1,
+          "detail": "Final ordered procedure and known limitations, including LIFE-007 one-at-a-time mitigation."
+        },
+        {
+          "path": "tools/device_acceptance_probe.m",
+          "line": 28,
+          "detail": "GET-only kernel memory-limit query; no budget mutation."
+        },
+        {
+          "path": "tools/device_acceptance_ssh.py",
+          "line": 1,
+          "detail": "Daemon process and H02 observation handling."
+        },
+        {
+          "path": "docs/final-integration.md",
+          "line": 1,
+          "detail": "Single final document combines commit/status dispositions, exact ordered runbook, row mapping, Simple screen descriptions and ranked residuals."
+        },
+        {
+          "path": "docs/leak-surface/integration-validation.json",
+          "line": 1,
+          "detail": "Local build/tool validation with exact revisions and artifact hashes; device acceptance remains NOT_RUN."
+        }
+      ],
+      "verification": "Host preparation only. Actual H02 import survival, login/post/vote, A/B switching and packet capture are NOT_RUN for the final integration build.",
+      "fix": "Follow docs/device-acceptance-final.md in order. Keep failed/unrun steps and their evidence; do not bypass managed VPN or browser gates."
+    },
+    {
+      "id": "ACCEPT-004",
+      "category": "Acceptance readiness",
+      "surface": "Opt-in A/B/A in-clone nonce challenge preparation and evidence chain",
+      "mechanism": "Private root-owned requests authorize fixed in-clone generic-password and filesystem probes after ordinary readiness. Host collection requires exact request/receipt IDs, process and epoch/generation binding, chronological A seed/B denial/A continuity-cleanup, and before/after source sentinel witnesses. No daemon IPC, lease or isolation policy is changed.",
+      "coverage": "none",
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "tools/device_acceptance_canaries.py",
+          "line": 1,
+          "detail": "Opt-in stage orchestration and nonce/epoch-bound evidence ledger; default battery does not run Security probes."
+        },
+        {
+          "path": "tools/device_acceptance_probe.m",
+          "line": 1,
+          "detail": "Safe root-owned control setup, no-follow file observation and exact nonce cleanup; no root Security queries."
+        },
+        {
+          "path": "tools/test_device_acceptance_canaries.py",
+          "line": 1,
+          "detail": "Actual host orchestration fixtures for ordered A/B/A, missing seed, wrong errno, replay, epoch and private-ledger rejection."
+        },
+        {
+          "path": "docs/device-acceptance-final.md",
+          "line": 1,
+          "detail": "Ordered commands integrated into the normal launcher A/B/A sequence; scoped verdict and abort-cleanup procedure."
+        },
+        {
+          "path": "scripts/build-mac.sh",
+          "line": 1,
+          "detail": "Both build flows run canary collector fixtures in addition to actual shared clone probe tests; host success is not on-device denial evidence."
+        }
+      ],
+      "verification": "Host fixtures and ldid-only iOS helper compilation pass. Actual in-clone Security and sandbox outcomes require running the prepared sequence on the target iPhone; no current device result is asserted.",
+      "fix": "Run the explicit nonce sequence on disposable A/B profiles. Keep missing/failed probes open and distinguish default/foreign keychain and foreign-file denial from root observations. Future API families need their own probes."
+    },
+    {
+      "id": "ACCEPT-005",
+      "category": "Runtime isolation observer",
+      "surface": "Per-clone sentinel probes through ordinary public API paths, without network admission changes",
+      "mechanism": "Off by default; per-profile diagnostic settings are stored separately from identity and compatibility policies. Daemon supplies bounded sibling paths and existing nonce-bound SSH acceptance seed evidence. In-clone Foundation/Security/defaults/pasteboard probes execute after hook readiness, on foreground return, and periodically (default 15 minutes while scheduled by iOS). Successful foreign reads or blocked-policy clipboard visibility report LEAK. Missing/expired witnesses and inconclusive errors report NOT_RUN. Optional clipboard write challenge is separately off by default. No automatic gate close/open, hook replacement, or entitlement changes. Reports bind the current process, generation, clone-scoped boot epoch and control revision; the observer itself never changes an active gate. Subsequent launch admission rejects retained findings even if sentinel settings are OFF, and unreadable safety state fails closed. Current evidence additionally requires the daemon coordinator's active launch identity, a fresh kernel PID/birth/executable observation, explicit profile/lease/readiness agreement, and a second unchanged daemon identity sample. No provider, closed lease, reused PID or changed authority yields current evidence. For an eligible active clone, durable operation ownership is established before consuming its report. LEAK quarantine and alert publish together through the checked compare-and-write store API, then read back. Failed or interrupted publication retains the operation journal and requires recovery before subsequent mutations/admission; successful retention retires ownership while keeping per-profile quarantine. Observer has no network close/open call.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "shared/RBXIsolationSentinel.h",
+          "line": 1,
+          "detail": "Sentinel observer implementation, configuration/report plumbing, or mocked boundary/registration regression coverage; does not establish actual iOS isolation."
+        },
+        {
+          "path": "shared/RBXSentinelIO.h",
+          "line": 1,
+          "detail": "Sentinel observer implementation, configuration/report plumbing, or mocked boundary/registration regression coverage; does not establish actual iOS isolation."
+        },
+        {
+          "path": "tweak/LeakDetection/RBXIsolationSentinel.m",
+          "line": 1,
+          "detail": "Sentinel observer implementation, configuration/report plumbing, or mocked boundary/registration regression coverage; does not establish actual iOS isolation."
+        },
+        {
+          "path": "tweak/RedditBox.xm",
+          "line": 1,
+          "detail": "Sentinel observer implementation, configuration/report plumbing, or mocked boundary/registration regression coverage; does not establish actual iOS isolation."
+        },
+        {
+          "path": "tweak/Makefile",
+          "line": 1,
+          "detail": "Sentinel observer implementation, configuration/report plumbing, or mocked boundary/registration regression coverage; does not establish actual iOS isolation."
+        },
+        {
+          "path": "daemon/RBXSentinelController.h",
+          "line": 1,
+          "detail": "Sentinel observer implementation, configuration/report plumbing, or mocked boundary/registration regression coverage; does not establish actual iOS isolation."
+        },
+        {
+          "path": "daemon/RBXSentinelController.m",
+          "line": 1,
+          "detail": "Sentinel observer implementation, configuration/report plumbing, or mocked boundary/registration regression coverage; does not establish actual iOS isolation."
+        },
+        {
+          "path": "daemon/RBXLauncherState.m",
+          "line": 1,
+          "detail": "Sentinel observer implementation, configuration/report plumbing, or mocked boundary/registration regression coverage; does not establish actual iOS isolation."
+        },
+        {
+          "path": "daemon/main.m",
+          "line": 1,
+          "detail": "Sentinel observer implementation, configuration/report plumbing, or mocked boundary/registration regression coverage; does not establish actual iOS isolation."
+        },
+        {
+          "path": "daemon/Makefile",
+          "line": 1,
+          "detail": "Sentinel observer implementation, configuration/report plumbing, or mocked boundary/registration regression coverage; does not establish actual iOS isolation."
+        },
+        {
+          "path": "launcher/RBXIdentityViewController.m",
+          "line": 1,
+          "detail": "Sentinel observer implementation, configuration/report plumbing, or mocked boundary/registration regression coverage; does not establish actual iOS isolation."
+        },
+        {
+          "path": "launcher/RBXDiagnosticsViewController.m",
+          "line": 1,
+          "detail": "Sentinel observer implementation, configuration/report plumbing, or mocked boundary/registration regression coverage; does not establish actual iOS isolation."
+        },
+        {
+          "path": "launcher/RBXLauncherViewController.m",
+          "line": 1,
+          "detail": "Sentinel observer implementation, configuration/report plumbing, or mocked boundary/registration regression coverage; does not establish actual iOS isolation."
+        },
+        {
+          "path": "shared/RBXCloneAcceptanceProbe.h",
+          "line": 1,
+          "detail": "Sentinel observer implementation, configuration/report plumbing, or mocked boundary/registration regression coverage; does not establish actual iOS isolation."
+        },
+        {
+          "path": "tweak/Container/RBXContainerManager.xm",
+          "line": 1,
+          "detail": "Sentinel observer implementation, configuration/report plumbing, or mocked boundary/registration regression coverage; does not establish actual iOS isolation."
+        },
+        {
+          "path": "tools/test_isolation_sentinel.m",
+          "line": 1,
+          "detail": "Sentinel observer implementation, configuration/report plumbing, or mocked boundary/registration regression coverage; does not establish actual iOS isolation."
+        },
+        {
+          "path": "tools/test_isolation_sentinel.sh",
+          "line": 1,
+          "detail": "Sentinel observer implementation, configuration/report plumbing, or mocked boundary/registration regression coverage; does not establish actual iOS isolation."
+        },
+        {
+          "path": "tools/test_clone_architecture.py",
+          "line": 1,
+          "detail": "Sentinel observer implementation, configuration/report plumbing, or mocked boundary/registration regression coverage; does not establish actual iOS isolation."
+        },
+        {
+          "path": "tools/test_clone_acceptance.m",
+          "line": 1,
+          "detail": "Sentinel observer implementation, configuration/report plumbing, or mocked boundary/registration regression coverage; does not establish actual iOS isolation."
+        },
+        {
+          "path": "scripts/build-mac.sh",
+          "line": 1,
+          "detail": "Sentinel observer implementation, configuration/report plumbing, or mocked boundary/registration regression coverage; does not establish actual iOS isolation."
+        },
+        {
+          "path": "docs/isolation-sentinel.md",
+          "line": 1,
+          "detail": "Operator contract, seed preparation, limits and device acceptance requirements."
+        },
+        {
+          "path": "daemon/RBXDiagnostics.m",
+          "line": 1,
+          "detail": "Support log predicate includes the RBX_SENTINEL tag without exposing canary contents."
+        },
+        {
+          "path": "docs/release-evidence/0.1.13-sentinel-device.json",
+          "line": 1,
+          "detail": "Bounded real-device settings/delivery evidence; explicitly not an in-clone isolation run."
+        },
+        {
+          "path": "tools/static_check.py",
+          "line": 1,
+          "detail": "Build-source allowlists include exactly the new sentinel runtime and daemon observer modules."
+        },
+        {
+          "path": "docs/release-evidence/0.1.13-final-install.json",
+          "line": 1,
+          "detail": "Published rootless package and installed daemon/tweak/launcher byte identity verified; actual clone probes remain NOT_RUN."
+        },
+        {
+          "path": "shared/RBXLaunchSafety.h",
+          "line": 1,
+          "detail": "Observer stays report-only for active sessions; retained findings are now enforced by subsequent launch admission."
+        },
+        {
+          "path": "daemon/RBXLauncherState.h",
+          "line": 1,
+          "detail": "Observer stays report-only for active sessions; retained findings are now enforced by subsequent launch admission."
+        },
+        {
+          "path": "tools/test_launch_safety.m",
+          "line": 1,
+          "detail": "Observer stays report-only for active sessions; retained findings are now enforced by subsequent launch admission."
+        },
+        {
+          "path": "tools/test_launch_safety.sh",
+          "line": 1,
+          "detail": "Observer stays report-only for active sessions; retained findings are now enforced by subsequent launch admission."
+        },
+        {
+          "path": "docs/setup-and-launch-safety.md",
+          "line": 1,
+          "detail": "Observer stays report-only for active sessions; retained findings are now enforced by subsequent launch admission."
+        },
+        {
+          "path": "tools/test_sentinel_controller.m",
+          "line": 1,
+          "detail": "Daemon-owned process evidence binding and the actual-controller regression build/test integration."
+        },
+        {
+          "path": "tools/test_sentinel_controller.sh",
+          "line": 1,
+          "detail": "Daemon-owned process evidence binding and the actual-controller regression build/test integration."
+        },
+        {
+          "path": "daemon/RBXOperationContext.m",
+          "line": 1,
+          "detail": "Real journal ownership/fallback fence and launcher recovery indication for checked sentinel evidence retention."
+        }
+      ],
+      "verification": "Host probe/registration fixtures and existing readiness tests pass. Attached iPhone rootless 0.1.13 real IPC/configuration round-trip, invalid-input rejection, OFF restoration and profile/gate preservation pass (docs/release-evidence/0.1.13-sentinel-device.json). Actual two-clone runtime acceptance NOT_RUN: managed per-app VPN deferred and only one clone installed. 2026-09-21: a failing-first actual-controller fixture reproduced a previous report accepted after same-PID/path process replacement; 66 corrected assertions cover microsecond birth changes, missing/malformed/foreign daemon authority, closed leases, ARMED/OPEN ordering, pre-birth readiness, path aliases, switch during observation, OFF and retained leaks. Native sentinel, launch safety, process/controller/coordinator, 518 main launch and 177 workspace dispatch assertions pass; arm64/arm64e daemon builds with ldid. This is source-owned SocialBox only; recovered SocialBox helper port and device execution remain NOT_RUN. Follow-up failing-first actual-controller fixture reproduced lost admission blocking after alert-store failure. The expanded 98 assertions execute the real operation journal in a temporary root: disk-write failure, false-success write, exception, concurrent profile removal, failed readback, secondary unsafe.plist failure, prior-boot surviving active journal, unavailable initial journal, normal retirement and alert deduplication. Kernel/clone/store boundaries remain mocked; no device execution is claimed.",
+      "fix": "Retain observer-only semantics and explicit NOT_RUN; future changes reference ACCEPT-005 plus any OS rows whose enforcement changes."
+    }
+  ]
+}

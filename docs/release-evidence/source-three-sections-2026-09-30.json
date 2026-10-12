@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-09-30",
+  "scope": "Independent source launcher three-section navigation; not whole-product acceptance",
+  "sourceSHA256": {
+    "launcher/RBXWorkspaceNavigationController.h": "7bf7365019a0afed7cdc431057b7fd3b5a818a3b63f3607319baea1226274912",
+    "launcher/RBXWorkspaceNavigationController.m": "7ea4eb19cbd064e2df25b59e00744c11a930cc1583db6ed4792d4b5291088156",
+    "launcher/RBXWorkspaceNavigation.h": "8b7889bc1ca6c6201cacedb16b1591718b31e95d313057067614a30087556830",
+    "launcher/RBXLauncherAppDelegate.m": "941aac2ca09b6054cc54e6c8b3bef07fe808a49f63b6b31f94da582b22ec8d70",
+    "launcher/RBXLauncherViewController.m": "1c32943a9be1281fd3c8ac4a0efc1139a55dd988717bde220c89e3fa43de00e2",
+    "launcher/RBXAppearance.h": "ad16ef36f3eb757bc94c7458acab53289ea19b1dc737e795dfbe073ea29305ee",
+    "launcher/RBXProxiesViewController.m": "f8af43318ea7e3c32ce4b0303cbacaffa814942371a5b0d3004ca85d6c19fddd",
+    "launcher/RBXSettingsViewController.m": "adf897bcbbe7839d666fdfbc396b5fa0b28bddd7ccc0f6b7ad5bb286332ada22",
+    "launcher/Makefile": "7df09d3747731ecd4d676ff4d42661a6652cb71da991851aaf09b19cc0c8b3a1",
+    "tools/test_license_gate_fixture.m": "1fe2d1e80d392deed833cf53cef90efe8da2c390c78be8957aa717f3e2bd8be9",
+    "tools/test_workspace_fixture.m": "34f6575906e4c035276b0896fe4f4b93e0449c95da3a760f9012a66ee3e37b76"
+  },
+  "nativeBuild": {
+    "status": "PASS",
+    "architectures": [
+      "arm64",
+      "arm64e"
+    ],
+    "signer": "Procursus ldid 2.1.5-procursus7",
+    "appleTeamRequired": false,
+    "sha256": "b840ab63fc3b551bd3f5e4e42764a4e2e960431e8fe525017995522e25a9a23b",
+    "entitlements": "Unchanged launcher entitlements; read back from both slices",
+    "scope": "Launcher executable only, not a newly released .deb"
+  },
+  "tests": {
+    "workspaceUIKit": {
+      "status": "PASS",
+      "checks": 258,
+      "data": "50 synthetic containers, 40 stable-ID selections; inert IPC"
+    },
+    "licenseUIKit": {
+      "status": "PASS",
+      "checks": 52,
+      "data": "Synthetic publication, inert IPC; whole-root rejection and passcode segment denial"
+    },
+    "architecture": {
+      "status": "PASS",
+      "commands": [
+        "python3 tools/test_launcher_architecture.py",
+        "python3 tools/test_launcher_multiapp.py",
+        "python3 tools/test_workspace_presentation.py",
+        "bash tools/test_app_scope.sh",
+        "bash tools/test_license_presentation.sh",
+        "python3 tools/static_check.py"
+      ]
+    }
+  },
+  "deviceWalkthrough": "NOT_RUN",
+  "deviceInstallation": "NOT_RUN",
+  "customerRelease": false,
+  "limits": [
+    "No iPhone detected over USB.",
+    "Source Facebook remains inactive.",
+    "No-MDM networking and recovered-data migration remain open acceptance gates.",
+    "This unit does not establish cross-container isolation or feature parity.",
+    "Legacy selector-only simulator fixture is not part of this result; actual-workspace and license fixtures listed above were run."
+  ],
+  "simulatorRecording": {
+    "status": "PASS",
+    "sha256": "394d8a18214339851bbc434cc368c5bb80124554b72101c9f8016ec04636378f",
+    "size": 30509954,
+    "description": "Recorded rerun of the same 258-check synthetic UIKit fixture; not a physical device test."
+  }
+}

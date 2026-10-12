@@ -1,0 +1,1684 @@
+{
+  "checkedAt": "2026-09-14",
+  "deviceTypeBundleVersion": "381.1",
+  "scope": "Synthetic catalog templates, not proof of physical API emulation or supported jailbreak hosts.",
+  "provenance": {
+    "productType_regulatory_screen": "Exact values from Apple CoreSimulator device profiles. Source file SHA-256 values below.",
+    "hwModelStr": "Inferred from Apple CoreSimulator productClass + AP; not measured on physical new iPhones.",
+    "ramBytes": "Derived from Apple simulator memoryClass * 2^30; not a physical memory measurement.",
+    "chip_and_fps": "Apple technical specifications; fps is the template maximum, not a promise that an older host can render at that rate.",
+    "private_identifiers": "New entries explicitly use generic-synthetic. Retail SKU, Apple UDID prefix and IMEI TAC are unverified and omitted. UDID gets random hexadecimal format; IMEI and retail SKU remain empty, not a copied physical identifier.",
+    "darwinReleases": "Darwin values remain synthetic version-family templates, not firmware-kernel measurements: 18.6/18.7 -> 24.6.0, 26.5 -> 25.5.0, 26.6 -> 25.6.0. Apple Software Lookup supplies version/build/product support but does not supply Darwin versions. Kernel tuple consistency is tested; full physical equivalence is unverified.",
+    "legacy": "Existing six model identity templates preserved for saved-profile compatibility; their manufacturer identifier pools have not been newly verified.",
+    "minimumIOS": "Apple CoreSimulator minRuntimeVersion provides the template floor. Every offered tuple also meets it; new release applicability uses exact Apple Software Lookup supported product identifiers."
+  },
+  "sources": [
+    "https://developer.apple.com/news/releases/?id=09082026a",
+    "https://support.apple.com/en-us/124925",
+    "https://support.apple.com/en-us/111829",
+    "https://support.apple.com/en-us/111830",
+    "https://support.apple.com/en-us/121030",
+    "https://support.apple.com/en-us/121031",
+    "https://www.apple.com/iphone-17/specs/",
+    "https://www.apple.com/iphone-air/specs/",
+    "https://www.apple.com/iphone-17e/specs/",
+    "https://www.apple.com/sg/iphone-17-pro/specs/",
+    "https://developer.apple.com/forums/tags/testing",
+    "https://support.apple.com/en-us/100100",
+    "https://gdmf.apple.com/v2/pmv",
+    "https://developer.apple.com/documentation/devicemanagement/deploying-software-updates-using-declarative-management",
+    "https://developer.apple.com/news/releases/?id=09092026a",
+    "https://www.apple.com/iphone-18-pro/specs/",
+    "https://www.apple.com/iphone-duo/specs/"
+  ],
+  "models": {
+    "iPhone14,7": {
+      "name": "iPhone 14",
+      "sourceBundle": "iPhone 14.simdevicetype",
+      "sha256": {
+        "profile.plist": "622dfa769b131f1c3a12ff60b31b06f4622cdec770b0a577662a48a7a2a50e13",
+        "capabilities.plist": "17fc2a0b8ad5a11574e879c88e02438d94bfc85d70b919e367a952ea25df49b4"
+      },
+      "productClass": "D27",
+      "memoryClass": 6,
+      "minimumRuntime": "16.0",
+      "screen": {
+        "mainScreenWidth": 1170,
+        "mainScreenHeight": 2532,
+        "mainScreenScale": 3.0
+      },
+      "regulatoryModel": "A2649"
+    },
+    "iPhone15,4": {
+      "name": "iPhone 15",
+      "sourceBundle": "iPhone 15.simdevicetype",
+      "sha256": {
+        "profile.plist": "4851abe769cf162e7747980656aedd06d3dcde74cc6f65320e294893a7a329e5",
+        "capabilities.plist": "fc193621f3887f32b3c2d027b3b71a4b9668ffb8b1b7eb9c8ce62e5dfc38a2cf"
+      },
+      "productClass": "D37",
+      "memoryClass": 6,
+      "minimumRuntime": "17.0",
+      "screen": {
+        "mainScreenWidth": 1179,
+        "mainScreenHeight": 2556,
+        "mainScreenScale": 3.0
+      },
+      "regulatoryModel": "A2846"
+    },
+    "iPhone15,5": {
+      "name": "iPhone 15 Plus",
+      "sourceBundle": "iPhone 15 Plus.simdevicetype",
+      "sha256": {
+        "profile.plist": "01b90cf2108c625d5e3e80bc6e366ac14cb616c7c677269efc6fb9c5a2bc2147",
+        "capabilities.plist": "e2566b620bc3edb74c3e6f3ceb16e447adf5bb7a59b593601053e3d3bf67ff53"
+      },
+      "productClass": "D38",
+      "memoryClass": 6,
+      "minimumRuntime": "17.0",
+      "screen": {
+        "mainScreenWidth": 1290,
+        "mainScreenHeight": 2796,
+        "mainScreenScale": 3.0
+      },
+      "regulatoryModel": "A2847"
+    },
+    "iPhone16,1": {
+      "name": "iPhone 15 Pro",
+      "sourceBundle": "iPhone 15 Pro.simdevicetype",
+      "sha256": {
+        "profile.plist": "95b3bf3c6fd1b98eea3c4fa3e02c0f81574ccd9192c910999ee329b8d6a4a225",
+        "capabilities.plist": "fc6dc3ef33fdd6d3c8f3decd2e6eab654e09a22b137239f427ad440bd305d1ce"
+      },
+      "productClass": "D83",
+      "memoryClass": 8,
+      "minimumRuntime": "17.0",
+      "screen": {
+        "mainScreenWidth": 1179,
+        "mainScreenHeight": 2556,
+        "mainScreenScale": 3.0
+      },
+      "regulatoryModel": "A2848"
+    },
+    "iPhone16,2": {
+      "name": "iPhone 15 Pro Max",
+      "sourceBundle": "iPhone 15 Pro Max.simdevicetype",
+      "sha256": {
+        "profile.plist": "f187533e35a9ab21fb1143214f3ea3ac65601378bad0addda9f570f6702dc394",
+        "capabilities.plist": "d01851ee351c5034c0775e516f4aed47130a26bceb4e40f158916645f2d516f7"
+      },
+      "productClass": "D84",
+      "memoryClass": 8,
+      "minimumRuntime": "17.0",
+      "screen": {
+        "mainScreenWidth": 1290,
+        "mainScreenHeight": 2796,
+        "mainScreenScale": 3.0
+      },
+      "regulatoryModel": "A2849"
+    },
+    "iPhone17,3": {
+      "name": "iPhone 16",
+      "sourceBundle": "iPhone 16.simdevicetype",
+      "sha256": {
+        "profile.plist": "7f577505ea707a33aa4671f2ddbbbedfd4ff02f54c20fc437c8eecdec3944294",
+        "capabilities.plist": "00b4271074b8b4e6c681d7f67a4ed9e2544321b5a13e9424c3dc83d1338e6a27"
+      },
+      "productClass": "D47",
+      "memoryClass": 8,
+      "minimumRuntime": "18.0",
+      "screen": {
+        "mainScreenWidth": 1179,
+        "mainScreenHeight": 2556,
+        "mainScreenScale": 3.0
+      },
+      "regulatoryModel": "A3081"
+    },
+    "iPhone17,4": {
+      "name": "iPhone 16 Plus",
+      "sourceBundle": "iPhone 16 Plus.simdevicetype",
+      "sha256": {
+        "profile.plist": "414cc803cc45a1ec89887cb369822d6c0684c73ad238c1bb0791fa268e1744af",
+        "capabilities.plist": "c4db91cd07bb5c0db361a35f04c0fe5d4b4327bebf9af48ec82cb0f373f78a11"
+      },
+      "productClass": "D48",
+      "memoryClass": 8,
+      "minimumRuntime": "18.0",
+      "screen": {
+        "mainScreenWidth": 1290,
+        "mainScreenHeight": 2796,
+        "mainScreenScale": 3.0
+      },
+      "regulatoryModel": "A3082"
+    },
+    "iPhone17,5": {
+      "name": "iPhone 16e",
+      "sourceBundle": "iPhone 16e.simdevicetype",
+      "sha256": {
+        "profile.plist": "4a74934697a78a4116aca14d47f5774889516071c02e9a0ca90bf6fa1d47952f",
+        "capabilities.plist": "d7cc2753d9ede8151a2d9f6e685441cb2a5bb18ad45dba9bf5a9fd185602eb4c"
+      },
+      "productClass": "V59",
+      "memoryClass": 8,
+      "minimumRuntime": "18.3",
+      "screen": {
+        "mainScreenWidth": 1170,
+        "mainScreenHeight": 2532,
+        "mainScreenScale": 3.0
+      },
+      "regulatoryModel": "A3212"
+    },
+    "iPhone17,1": {
+      "name": "iPhone 16 Pro",
+      "sourceBundle": "iPhone 16 Pro.simdevicetype",
+      "sha256": {
+        "profile.plist": "34890dbe745bb45fe2fa72294573a2cdcb5ec6126d230f71c980f0d77dbb31ff",
+        "capabilities.plist": "14acc40531f4b43d2a75cbaf4565b5b6fe8c07be9bfc502c76198fce2eb8f235"
+      },
+      "productClass": "D93",
+      "memoryClass": 8,
+      "minimumRuntime": "18.0",
+      "screen": {
+        "mainScreenWidth": 1206,
+        "mainScreenHeight": 2622,
+        "mainScreenScale": 3.0
+      },
+      "regulatoryModel": "A3083"
+    },
+    "iPhone17,2": {
+      "name": "iPhone 16 Pro Max",
+      "sourceBundle": "iPhone 16 Pro Max.simdevicetype",
+      "sha256": {
+        "profile.plist": "9384b20bf195c61aa9d6d00321a208dc8c7629100bac69b9b255bd894456297c",
+        "capabilities.plist": "8f1c1b7d31b203c61ea73bcb5a4859d501911738eb1344607c6b8f4c73855dd7"
+      },
+      "productClass": "D94",
+      "memoryClass": 8,
+      "minimumRuntime": "18.0",
+      "screen": {
+        "mainScreenWidth": 1320,
+        "mainScreenHeight": 2868,
+        "mainScreenScale": 3.0
+      },
+      "regulatoryModel": "A3084"
+    },
+    "iPhone18,3": {
+      "name": "iPhone 17",
+      "sourceBundle": "iPhone 17.simdevicetype",
+      "sha256": {
+        "profile.plist": "ee13df99dd3f95bb189b5e9bfeab9b65026e6c2d82c6d0fc58983ce775e71b19",
+        "capabilities.plist": "056a559fc5b46f711d557a28a840dd5e78f479cdf6bbe352bdd23cc45151dfb3"
+      },
+      "productClass": "V57",
+      "memoryClass": 8,
+      "minimumRuntime": "26.0",
+      "screen": {
+        "mainScreenWidth": 1206,
+        "mainScreenHeight": 2622,
+        "mainScreenScale": 3.0
+      },
+      "regulatoryModel": "A3258"
+    },
+    "iPhone18,1": {
+      "name": "iPhone 17 Pro",
+      "sourceBundle": "iPhone 17 Pro.simdevicetype",
+      "sha256": {
+        "profile.plist": "408f140b18143b5d750aa64a8c3ff7b17d9ec65748580c51fb907e5cc3c12ae4",
+        "capabilities.plist": "3557bfba76712916875b44e8981e4ee966e4f13ce1c01cb00ee790e02877fbbe"
+      },
+      "productClass": "V53",
+      "memoryClass": 12,
+      "minimumRuntime": "26.0",
+      "screen": {
+        "mainScreenWidth": 1206,
+        "mainScreenHeight": 2622,
+        "mainScreenScale": 3.0
+      },
+      "regulatoryModel": "A3256"
+    },
+    "iPhone18,2": {
+      "name": "iPhone 17 Pro Max",
+      "sourceBundle": "iPhone 17 Pro Max.simdevicetype",
+      "sha256": {
+        "profile.plist": "df9e8d0ab4a0a90848af869850a61ad3f7d5e66ae5f02a83704fa43a9f79b5db",
+        "capabilities.plist": "e788fcf79511b0cb4549728537b957c2e36162029cd836b449a58cdf84f96631"
+      },
+      "productClass": "V54",
+      "memoryClass": 12,
+      "minimumRuntime": "26.0",
+      "screen": {
+        "mainScreenWidth": 1320,
+        "mainScreenHeight": 2868,
+        "mainScreenScale": 3.0
+      },
+      "regulatoryModel": "A3257"
+    },
+    "iPhone18,4": {
+      "name": "iPhone Air",
+      "sourceBundle": "iPhone Air.simdevicetype",
+      "sha256": {
+        "profile.plist": "4d65466c69f8d7d7c56f7ede3bd47d6fec0cad795d5a06fac746295d3c768300",
+        "capabilities.plist": "747f0fa395ad5ab91f34c39b9e0a149491065786bed2f6b3919ca911de395bd6"
+      },
+      "productClass": "D23",
+      "memoryClass": 12,
+      "minimumRuntime": "26.0",
+      "screen": {
+        "mainScreenWidth": 1260,
+        "mainScreenHeight": 2736,
+        "mainScreenScale": 3.0
+      },
+      "regulatoryModel": "A3260"
+    },
+    "iPhone18,5": {
+      "name": "iPhone 17e",
+      "sourceBundle": "iPhone 17e.simdevicetype",
+      "sha256": {
+        "profile.plist": "d7aca161450fa32d03e60a827eb06d4804c80609f33499c60749b02cc2ef5fd8",
+        "capabilities.plist": "83cddc12246135d84bfe59aa17ffc1fcd65187f7a9c2f81e17a52b46db8c2d35"
+      },
+      "productClass": "V159",
+      "memoryClass": 8,
+      "minimumRuntime": "26.3",
+      "screen": {
+        "mainScreenWidth": 1170,
+        "mainScreenHeight": 2532,
+        "mainScreenScale": 3.0
+      },
+      "regulatoryModel": "A3634"
+    }
+  },
+  "softwareLookup": {
+    "url": "https://gdmf.apple.com/v2/pmv",
+    "documentationURL": "https://developer.apple.com/documentation/devicemanagement/deploying-software-updates-using-declarative-management",
+    "retrievedAt": "2026-09-14",
+    "responseSHA256": "ebc620ab29d4c2f77d5fae9091dd40ec99831ec5b16a2f480e6d010afe36e46d",
+    "selection": "Exact ProductVersion and Build records from AssetSets.iOS, merged SupportedDevices, intersected with the existing catalog; no inferred device membership. PostingDate is feed metadata, not claimed as the original release date.",
+    "newVersions": [
+      "18.7.8",
+      "26.5",
+      "26.5.1",
+      "26.5.2",
+      "26.6",
+      "26.6.1"
+    ],
+    "releases": {
+      "18.7.8": {
+        "build": "22H352",
+        "darwinRelease": "24.6.0",
+        "darwinEvidence": "version-family-inference; not a physical firmware kernel measurement",
+        "sourceSection": "AssetSets.iOS",
+        "supportedDevices": [
+          "iPad11,1",
+          "iPad11,2",
+          "iPad11,3",
+          "iPad11,4",
+          "iPad11,6",
+          "iPad11,7",
+          "iPad12,1",
+          "iPad12,2",
+          "iPad13,1",
+          "iPad13,10",
+          "iPad13,11",
+          "iPad13,16",
+          "iPad13,17",
+          "iPad13,18",
+          "iPad13,19",
+          "iPad13,2",
+          "iPad13,4",
+          "iPad13,5",
+          "iPad13,6",
+          "iPad13,7",
+          "iPad13,8",
+          "iPad13,9",
+          "iPad14,1",
+          "iPad14,10",
+          "iPad14,11",
+          "iPad14,2",
+          "iPad14,3",
+          "iPad14,4",
+          "iPad14,5",
+          "iPad14,6",
+          "iPad14,8",
+          "iPad14,9",
+          "iPad15,3",
+          "iPad15,4",
+          "iPad15,5",
+          "iPad15,6",
+          "iPad15,7",
+          "iPad15,8",
+          "iPad16,1",
+          "iPad16,2",
+          "iPad16,3",
+          "iPad16,4",
+          "iPad16,5",
+          "iPad16,6",
+          "iPad8,1",
+          "iPad8,10",
+          "iPad8,11",
+          "iPad8,12",
+          "iPad8,2",
+          "iPad8,3",
+          "iPad8,4",
+          "iPad8,5",
+          "iPad8,6",
+          "iPad8,7",
+          "iPad8,8",
+          "iPad8,9",
+          "iPhone12,1",
+          "iPhone12,3",
+          "iPhone12,5",
+          "iPhone12,8",
+          "iPhone13,1",
+          "iPhone13,2",
+          "iPhone13,3",
+          "iPhone13,4",
+          "iPhone14,2",
+          "iPhone14,3",
+          "iPhone14,4",
+          "iPhone14,5",
+          "iPhone14,6",
+          "iPhone14,7",
+          "iPhone14,8",
+          "iPhone15,2",
+          "iPhone15,3",
+          "iPhone15,4",
+          "iPhone15,5",
+          "iPhone16,1",
+          "iPhone16,2",
+          "iPhone17,1",
+          "iPhone17,2",
+          "iPhone17,3",
+          "iPhone17,4",
+          "iPhone17,5"
+        ],
+        "supportedCatalogModels": [
+          "iPhone14,2",
+          "iPhone14,3",
+          "iPhone14,5",
+          "iPhone14,7",
+          "iPhone14,8",
+          "iPhone15,2",
+          "iPhone15,3",
+          "iPhone15,4",
+          "iPhone15,5",
+          "iPhone16,1",
+          "iPhone16,2",
+          "iPhone17,1",
+          "iPhone17,2",
+          "iPhone17,3",
+          "iPhone17,4",
+          "iPhone17,5"
+        ],
+        "postingDates": [
+          "2026-06-09"
+        ],
+        "classification": "public-release"
+      },
+      "26.5": {
+        "build": "23F77",
+        "darwinRelease": "25.5.0",
+        "darwinEvidence": "version-family-inference; not a physical firmware kernel measurement",
+        "sourceSection": "AssetSets.iOS",
+        "supportedDevices": [
+          "iPad11,1",
+          "iPad11,2",
+          "iPad11,3",
+          "iPad11,4",
+          "iPad11,6",
+          "iPad11,7",
+          "iPad12,1",
+          "iPad12,2",
+          "iPad13,1",
+          "iPad13,10",
+          "iPad13,11",
+          "iPad13,16",
+          "iPad13,17",
+          "iPad13,18",
+          "iPad13,19",
+          "iPad13,2",
+          "iPad13,4",
+          "iPad13,5",
+          "iPad13,6",
+          "iPad13,7",
+          "iPad13,8",
+          "iPad13,9",
+          "iPad14,1",
+          "iPad14,10",
+          "iPad14,11",
+          "iPad14,2",
+          "iPad14,3",
+          "iPad14,4",
+          "iPad14,5",
+          "iPad14,6",
+          "iPad14,8",
+          "iPad14,9",
+          "iPad15,3",
+          "iPad15,4",
+          "iPad15,5",
+          "iPad15,6",
+          "iPad15,7",
+          "iPad15,8",
+          "iPad16,1",
+          "iPad16,10",
+          "iPad16,11",
+          "iPad16,2",
+          "iPad16,3",
+          "iPad16,4",
+          "iPad16,5",
+          "iPad16,6",
+          "iPad16,8",
+          "iPad16,9",
+          "iPad17,1",
+          "iPad17,2",
+          "iPad17,3",
+          "iPad17,4",
+          "iPad8,1",
+          "iPad8,10",
+          "iPad8,11",
+          "iPad8,12",
+          "iPad8,2",
+          "iPad8,3",
+          "iPad8,4",
+          "iPad8,5",
+          "iPad8,6",
+          "iPad8,7",
+          "iPad8,8",
+          "iPad8,9",
+          "iPhone12,1",
+          "iPhone12,3",
+          "iPhone12,5",
+          "iPhone12,8",
+          "iPhone13,1",
+          "iPhone13,2",
+          "iPhone13,3",
+          "iPhone13,4",
+          "iPhone14,2",
+          "iPhone14,3",
+          "iPhone14,4",
+          "iPhone14,5",
+          "iPhone14,6",
+          "iPhone14,7",
+          "iPhone14,8",
+          "iPhone15,2",
+          "iPhone15,3",
+          "iPhone15,4",
+          "iPhone15,5",
+          "iPhone16,1",
+          "iPhone16,2",
+          "iPhone17,1",
+          "iPhone17,2",
+          "iPhone17,3",
+          "iPhone17,4",
+          "iPhone17,5"
+        ],
+        "supportedCatalogModels": [
+          "iPhone14,2",
+          "iPhone14,3",
+          "iPhone14,5",
+          "iPhone14,7",
+          "iPhone14,8",
+          "iPhone15,2",
+          "iPhone15,3",
+          "iPhone15,4",
+          "iPhone15,5",
+          "iPhone16,1",
+          "iPhone16,2",
+          "iPhone17,1",
+          "iPhone17,2",
+          "iPhone17,3",
+          "iPhone17,4",
+          "iPhone17,5"
+        ],
+        "postingDates": [
+          "2026-06-11"
+        ],
+        "classification": "public-release"
+      },
+      "26.5.1": {
+        "build": "23F81",
+        "darwinRelease": "25.5.0",
+        "darwinEvidence": "version-family-inference; not a physical firmware kernel measurement",
+        "sourceSection": "AssetSets.iOS",
+        "supportedDevices": [
+          "iPhone18,1",
+          "iPhone18,2",
+          "iPhone18,3",
+          "iPhone18,4",
+          "iPhone18,5"
+        ],
+        "supportedCatalogModels": [
+          "iPhone18,1",
+          "iPhone18,2",
+          "iPhone18,3",
+          "iPhone18,4",
+          "iPhone18,5"
+        ],
+        "postingDates": [
+          "2026-06-11"
+        ],
+        "classification": "public-release"
+      },
+      "26.5.2": {
+        "build": "23F84",
+        "darwinRelease": "25.5.0",
+        "darwinEvidence": "version-family-inference; not a physical firmware kernel measurement",
+        "sourceSection": "AssetSets.iOS",
+        "supportedDevices": [
+          "iPad11,1",
+          "iPad11,2",
+          "iPad11,3",
+          "iPad11,4",
+          "iPad11,6",
+          "iPad11,7",
+          "iPad12,1",
+          "iPad12,2",
+          "iPad13,1",
+          "iPad13,10",
+          "iPad13,11",
+          "iPad13,16",
+          "iPad13,17",
+          "iPad13,18",
+          "iPad13,19",
+          "iPad13,2",
+          "iPad13,4",
+          "iPad13,5",
+          "iPad13,6",
+          "iPad13,7",
+          "iPad13,8",
+          "iPad13,9",
+          "iPad14,1",
+          "iPad14,10",
+          "iPad14,11",
+          "iPad14,2",
+          "iPad14,3",
+          "iPad14,4",
+          "iPad14,5",
+          "iPad14,6",
+          "iPad14,8",
+          "iPad14,9",
+          "iPad15,3",
+          "iPad15,4",
+          "iPad15,5",
+          "iPad15,6",
+          "iPad15,7",
+          "iPad15,8",
+          "iPad16,1",
+          "iPad16,10",
+          "iPad16,11",
+          "iPad16,2",
+          "iPad16,3",
+          "iPad16,4",
+          "iPad16,5",
+          "iPad16,6",
+          "iPad16,8",
+          "iPad16,9",
+          "iPad17,1",
+          "iPad17,2",
+          "iPad17,3",
+          "iPad17,4",
+          "iPad8,1",
+          "iPad8,10",
+          "iPad8,11",
+          "iPad8,12",
+          "iPad8,2",
+          "iPad8,3",
+          "iPad8,4",
+          "iPad8,5",
+          "iPad8,6",
+          "iPad8,7",
+          "iPad8,8",
+          "iPad8,9",
+          "iPhone12,1",
+          "iPhone12,3",
+          "iPhone12,5",
+          "iPhone12,8",
+          "iPhone13,1",
+          "iPhone13,2",
+          "iPhone13,3",
+          "iPhone13,4",
+          "iPhone14,2",
+          "iPhone14,3",
+          "iPhone14,4",
+          "iPhone14,5",
+          "iPhone14,6",
+          "iPhone14,7",
+          "iPhone14,8",
+          "iPhone15,2",
+          "iPhone15,3",
+          "iPhone15,4",
+          "iPhone15,5",
+          "iPhone16,1",
+          "iPhone16,2",
+          "iPhone17,1",
+          "iPhone17,2",
+          "iPhone17,3",
+          "iPhone17,4",
+          "iPhone17,5",
+          "iPhone18,1",
+          "iPhone18,2",
+          "iPhone18,3",
+          "iPhone18,4",
+          "iPhone18,5"
+        ],
+        "supportedCatalogModels": [
+          "iPhone14,2",
+          "iPhone14,3",
+          "iPhone14,5",
+          "iPhone14,7",
+          "iPhone14,8",
+          "iPhone15,2",
+          "iPhone15,3",
+          "iPhone15,4",
+          "iPhone15,5",
+          "iPhone16,1",
+          "iPhone16,2",
+          "iPhone17,1",
+          "iPhone17,2",
+          "iPhone17,3",
+          "iPhone17,4",
+          "iPhone17,5",
+          "iPhone18,1",
+          "iPhone18,2",
+          "iPhone18,3",
+          "iPhone18,4",
+          "iPhone18,5"
+        ],
+        "postingDates": [
+          "2026-06-29"
+        ],
+        "classification": "public-release"
+      },
+      "26.6": {
+        "build": "23G71",
+        "darwinRelease": "25.6.0",
+        "darwinEvidence": "version-family-inference; not a physical firmware kernel measurement",
+        "sourceSection": "AssetSets.iOS",
+        "supportedDevices": [
+          "iPad11,1",
+          "iPad11,2",
+          "iPad11,3",
+          "iPad11,4",
+          "iPad11,6",
+          "iPad11,7",
+          "iPad12,1",
+          "iPad12,2",
+          "iPad13,1",
+          "iPad13,10",
+          "iPad13,11",
+          "iPad13,16",
+          "iPad13,17",
+          "iPad13,18",
+          "iPad13,19",
+          "iPad13,2",
+          "iPad13,4",
+          "iPad13,5",
+          "iPad13,6",
+          "iPad13,7",
+          "iPad13,8",
+          "iPad13,9",
+          "iPad14,1",
+          "iPad14,10",
+          "iPad14,11",
+          "iPad14,2",
+          "iPad14,3",
+          "iPad14,4",
+          "iPad14,5",
+          "iPad14,6",
+          "iPad14,8",
+          "iPad14,9",
+          "iPad15,3",
+          "iPad15,4",
+          "iPad15,5",
+          "iPad15,6",
+          "iPad15,7",
+          "iPad15,8",
+          "iPad16,1",
+          "iPad16,10",
+          "iPad16,11",
+          "iPad16,2",
+          "iPad16,3",
+          "iPad16,4",
+          "iPad16,5",
+          "iPad16,6",
+          "iPad16,8",
+          "iPad16,9",
+          "iPad17,1",
+          "iPad17,2",
+          "iPad17,3",
+          "iPad17,4",
+          "iPad8,1",
+          "iPad8,10",
+          "iPad8,11",
+          "iPad8,12",
+          "iPad8,2",
+          "iPad8,3",
+          "iPad8,4",
+          "iPad8,5",
+          "iPad8,6",
+          "iPad8,7",
+          "iPad8,8",
+          "iPad8,9",
+          "iPhone12,1",
+          "iPhone12,3",
+          "iPhone12,5",
+          "iPhone12,8",
+          "iPhone13,1",
+          "iPhone13,2",
+          "iPhone13,3",
+          "iPhone13,4",
+          "iPhone14,2",
+          "iPhone14,3",
+          "iPhone14,4",
+          "iPhone14,5",
+          "iPhone14,6",
+          "iPhone14,7",
+          "iPhone14,8",
+          "iPhone15,2",
+          "iPhone15,3",
+          "iPhone15,4",
+          "iPhone15,5",
+          "iPhone16,1",
+          "iPhone16,2",
+          "iPhone17,1",
+          "iPhone17,2",
+          "iPhone17,3",
+          "iPhone17,4",
+          "iPhone17,5",
+          "iPhone18,1",
+          "iPhone18,2",
+          "iPhone18,3",
+          "iPhone18,4",
+          "iPhone18,5"
+        ],
+        "supportedCatalogModels": [
+          "iPhone14,2",
+          "iPhone14,3",
+          "iPhone14,5",
+          "iPhone14,7",
+          "iPhone14,8",
+          "iPhone15,2",
+          "iPhone15,3",
+          "iPhone15,4",
+          "iPhone15,5",
+          "iPhone16,1",
+          "iPhone16,2",
+          "iPhone17,1",
+          "iPhone17,2",
+          "iPhone17,3",
+          "iPhone17,4",
+          "iPhone17,5",
+          "iPhone18,1",
+          "iPhone18,2",
+          "iPhone18,3",
+          "iPhone18,4",
+          "iPhone18,5"
+        ],
+        "postingDates": [
+          "2026-07-27"
+        ],
+        "classification": "public-release"
+      },
+      "26.6.1": {
+        "build": "23G83",
+        "darwinRelease": "25.6.0",
+        "darwinEvidence": "version-family-inference; not a physical firmware kernel measurement",
+        "sourceSection": "AssetSets.iOS",
+        "supportedDevices": [
+          "iPad11,1",
+          "iPad11,2",
+          "iPad11,3",
+          "iPad11,4",
+          "iPad11,6",
+          "iPad11,7",
+          "iPad12,1",
+          "iPad12,2",
+          "iPad13,1",
+          "iPad13,10",
+          "iPad13,11",
+          "iPad13,16",
+          "iPad13,17",
+          "iPad13,18",
+          "iPad13,19",
+          "iPad13,2",
+          "iPad13,4",
+          "iPad13,5",
+          "iPad13,6",
+          "iPad13,7",
+          "iPad13,8",
+          "iPad13,9",
+          "iPad14,1",
+          "iPad14,10",
+          "iPad14,11",
+          "iPad14,2",
+          "iPad14,3",
+          "iPad14,4",
+          "iPad14,5",
+          "iPad14,6",
+          "iPad14,8",
+          "iPad14,9",
+          "iPad15,3",
+          "iPad15,4",
+          "iPad15,5",
+          "iPad15,6",
+          "iPad15,7",
+          "iPad15,8",
+          "iPad16,1",
+          "iPad16,10",
+          "iPad16,11",
+          "iPad16,2",
+          "iPad16,3",
+          "iPad16,4",
+          "iPad16,5",
+          "iPad16,6",
+          "iPad16,8",
+          "iPad16,9",
+          "iPad17,1",
+          "iPad17,2",
+          "iPad17,3",
+          "iPad17,4",
+          "iPad8,1",
+          "iPad8,10",
+          "iPad8,11",
+          "iPad8,12",
+          "iPad8,2",
+          "iPad8,3",
+          "iPad8,4",
+          "iPad8,5",
+          "iPad8,6",
+          "iPad8,7",
+          "iPad8,8",
+          "iPad8,9",
+          "iPhone12,1",
+          "iPhone12,3",
+          "iPhone12,5",
+          "iPhone12,8",
+          "iPhone13,1",
+          "iPhone13,2",
+          "iPhone13,3",
+          "iPhone13,4",
+          "iPhone14,2",
+          "iPhone14,3",
+          "iPhone14,4",
+          "iPhone14,5",
+          "iPhone14,6",
+          "iPhone14,7",
+          "iPhone14,8",
+          "iPhone15,2",
+          "iPhone15,3",
+          "iPhone15,4",
+          "iPhone15,5",
+          "iPhone16,1",
+          "iPhone16,2",
+          "iPhone17,1",
+          "iPhone17,2",
+          "iPhone17,3",
+          "iPhone17,4",
+          "iPhone17,5",
+          "iPhone18,1",
+          "iPhone18,2",
+          "iPhone18,3",
+          "iPhone18,4",
+          "iPhone18,5"
+        ],
+        "supportedCatalogModels": [
+          "iPhone14,2",
+          "iPhone14,3",
+          "iPhone14,5",
+          "iPhone14,7",
+          "iPhone14,8",
+          "iPhone15,2",
+          "iPhone15,3",
+          "iPhone15,4",
+          "iPhone15,5",
+          "iPhone16,1",
+          "iPhone16,2",
+          "iPhone17,1",
+          "iPhone17,2",
+          "iPhone17,3",
+          "iPhone17,4",
+          "iPhone17,5",
+          "iPhone18,1",
+          "iPhone18,2",
+          "iPhone18,3",
+          "iPhone18,4",
+          "iPhone18,5"
+        ],
+        "postingDates": [
+          "2026-08-17"
+        ],
+        "classification": "public-release"
+      },
+      "26.6.2": {
+        "build": "23G90",
+        "darwinRelease": "25.6.0",
+        "darwinEvidence": "preserved version-family-inference; not a physical firmware kernel measurement",
+        "sourceSection": "AssetSets.iOS",
+        "supportedDevices": [
+          "iPad11,1",
+          "iPad11,2",
+          "iPad11,3",
+          "iPad11,4",
+          "iPad11,6",
+          "iPad11,7",
+          "iPad12,1",
+          "iPad12,2",
+          "iPad13,1",
+          "iPad13,10",
+          "iPad13,11",
+          "iPad13,16",
+          "iPad13,17",
+          "iPad13,18",
+          "iPad13,19",
+          "iPad13,2",
+          "iPad13,4",
+          "iPad13,5",
+          "iPad13,6",
+          "iPad13,7",
+          "iPad13,8",
+          "iPad13,9",
+          "iPad14,1",
+          "iPad14,10",
+          "iPad14,11",
+          "iPad14,2",
+          "iPad14,3",
+          "iPad14,4",
+          "iPad14,5",
+          "iPad14,6",
+          "iPad14,8",
+          "iPad14,9",
+          "iPad15,3",
+          "iPad15,4",
+          "iPad15,5",
+          "iPad15,6",
+          "iPad15,7",
+          "iPad15,8",
+          "iPad16,1",
+          "iPad16,10",
+          "iPad16,11",
+          "iPad16,2",
+          "iPad16,3",
+          "iPad16,4",
+          "iPad16,5",
+          "iPad16,6",
+          "iPad16,8",
+          "iPad16,9",
+          "iPad17,1",
+          "iPad17,2",
+          "iPad17,3",
+          "iPad17,4",
+          "iPad8,1",
+          "iPad8,10",
+          "iPad8,11",
+          "iPad8,12",
+          "iPad8,2",
+          "iPad8,3",
+          "iPad8,4",
+          "iPad8,5",
+          "iPad8,6",
+          "iPad8,7",
+          "iPad8,8",
+          "iPad8,9",
+          "iPhone12,1",
+          "iPhone12,3",
+          "iPhone12,5",
+          "iPhone12,8",
+          "iPhone13,1",
+          "iPhone13,2",
+          "iPhone13,3",
+          "iPhone13,4",
+          "iPhone14,2",
+          "iPhone14,3",
+          "iPhone14,4",
+          "iPhone14,5",
+          "iPhone14,6",
+          "iPhone14,7",
+          "iPhone14,8",
+          "iPhone15,2",
+          "iPhone15,3",
+          "iPhone15,4",
+          "iPhone15,5",
+          "iPhone16,1",
+          "iPhone16,2",
+          "iPhone17,1",
+          "iPhone17,2",
+          "iPhone17,3",
+          "iPhone17,4",
+          "iPhone17,5",
+          "iPhone18,1",
+          "iPhone18,2",
+          "iPhone18,3",
+          "iPhone18,4",
+          "iPhone18,5"
+        ],
+        "supportedCatalogModels": [
+          "iPhone14,2",
+          "iPhone14,3",
+          "iPhone14,5",
+          "iPhone14,7",
+          "iPhone14,8",
+          "iPhone15,2",
+          "iPhone15,3",
+          "iPhone15,4",
+          "iPhone15,5",
+          "iPhone16,1",
+          "iPhone16,2",
+          "iPhone17,1",
+          "iPhone17,2",
+          "iPhone17,3",
+          "iPhone17,4",
+          "iPhone17,5",
+          "iPhone18,1",
+          "iPhone18,2",
+          "iPhone18,3",
+          "iPhone18,4",
+          "iPhone18,5"
+        ],
+        "postingDates": [
+          "2026-09-08"
+        ],
+        "classification": "public-release"
+      }
+    }
+  },
+  "minimumRuntimeEvidence": {
+    "iPhone14,2": {
+      "minimumRuntime": "15.0",
+      "sourceBundle": "iPhone 13 Pro.simdevicetype",
+      "profileSHA256": "7d291071fd553b5bec783bdef181739f1b3053b890088c8ce6d72b914e990a94"
+    },
+    "iPhone14,3": {
+      "minimumRuntime": "15.0",
+      "sourceBundle": "iPhone 13 Pro Max.simdevicetype",
+      "profileSHA256": "141e283444b7ea606c2e5de1ebbf55f65175d5a5cb064a4bd97e00c9a57e33b0"
+    },
+    "iPhone14,5": {
+      "minimumRuntime": "15.0",
+      "sourceBundle": "iPhone 13.simdevicetype",
+      "profileSHA256": "1738150857150605b6cadfa7a4c211a4021246789b2a37c0f22dd1e38b66218a"
+    },
+    "iPhone14,8": {
+      "minimumRuntime": "16.0",
+      "sourceBundle": "iPhone 14 Plus.simdevicetype",
+      "profileSHA256": "9c68324a8a4d48a837b12434ac253b1df8b2fa9327d8bbe17972567545cebeda"
+    },
+    "iPhone15,2": {
+      "minimumRuntime": "16.0",
+      "sourceBundle": "iPhone 14 Pro.simdevicetype",
+      "profileSHA256": "d5c59c141e2365ff76c0434d916fbd7a37768fea5297b9ed889264b44f67151a"
+    },
+    "iPhone15,3": {
+      "minimumRuntime": "16.0",
+      "sourceBundle": "iPhone 14 Pro Max.simdevicetype",
+      "profileSHA256": "7dd8517a7dec848a5e1648a3e62add2373e7c0e0d64eb9a03f5b147a2061d5a8"
+    },
+    "iPhone14,7": {
+      "minimumRuntime": "16.0",
+      "sourceBundle": "iPhone 14.simdevicetype",
+      "profileSHA256": "622dfa769b131f1c3a12ff60b31b06f4622cdec770b0a577662a48a7a2a50e13"
+    },
+    "iPhone15,4": {
+      "minimumRuntime": "17.0",
+      "sourceBundle": "iPhone 15.simdevicetype",
+      "profileSHA256": "4851abe769cf162e7747980656aedd06d3dcde74cc6f65320e294893a7a329e5"
+    },
+    "iPhone15,5": {
+      "minimumRuntime": "17.0",
+      "sourceBundle": "iPhone 15 Plus.simdevicetype",
+      "profileSHA256": "01b90cf2108c625d5e3e80bc6e366ac14cb616c7c677269efc6fb9c5a2bc2147"
+    },
+    "iPhone16,1": {
+      "minimumRuntime": "17.0",
+      "sourceBundle": "iPhone 15 Pro.simdevicetype",
+      "profileSHA256": "95b3bf3c6fd1b98eea3c4fa3e02c0f81574ccd9192c910999ee329b8d6a4a225"
+    },
+    "iPhone16,2": {
+      "minimumRuntime": "17.0",
+      "sourceBundle": "iPhone 15 Pro Max.simdevicetype",
+      "profileSHA256": "f187533e35a9ab21fb1143214f3ea3ac65601378bad0addda9f570f6702dc394"
+    },
+    "iPhone17,3": {
+      "minimumRuntime": "18.0",
+      "sourceBundle": "iPhone 16.simdevicetype",
+      "profileSHA256": "7f577505ea707a33aa4671f2ddbbbedfd4ff02f54c20fc437c8eecdec3944294"
+    },
+    "iPhone17,4": {
+      "minimumRuntime": "18.0",
+      "sourceBundle": "iPhone 16 Plus.simdevicetype",
+      "profileSHA256": "414cc803cc45a1ec89887cb369822d6c0684c73ad238c1bb0791fa268e1744af"
+    },
+    "iPhone17,5": {
+      "minimumRuntime": "18.3",
+      "sourceBundle": "iPhone 16e.simdevicetype",
+      "profileSHA256": "4a74934697a78a4116aca14d47f5774889516071c02e9a0ca90bf6fa1d47952f"
+    },
+    "iPhone17,1": {
+      "minimumRuntime": "18.0",
+      "sourceBundle": "iPhone 16 Pro.simdevicetype",
+      "profileSHA256": "34890dbe745bb45fe2fa72294573a2cdcb5ec6126d230f71c980f0d77dbb31ff"
+    },
+    "iPhone17,2": {
+      "minimumRuntime": "18.0",
+      "sourceBundle": "iPhone 16 Pro Max.simdevicetype",
+      "profileSHA256": "9384b20bf195c61aa9d6d00321a208dc8c7629100bac69b9b255bd894456297c"
+    },
+    "iPhone18,3": {
+      "minimumRuntime": "26.0",
+      "sourceBundle": "iPhone 17.simdevicetype",
+      "profileSHA256": "ee13df99dd3f95bb189b5e9bfeab9b65026e6c2d82c6d0fc58983ce775e71b19"
+    },
+    "iPhone18,1": {
+      "minimumRuntime": "26.0",
+      "sourceBundle": "iPhone 17 Pro.simdevicetype",
+      "profileSHA256": "408f140b18143b5d750aa64a8c3ff7b17d9ec65748580c51fb907e5cc3c12ae4"
+    },
+    "iPhone18,2": {
+      "minimumRuntime": "26.0",
+      "sourceBundle": "iPhone 17 Pro Max.simdevicetype",
+      "profileSHA256": "df9e8d0ab4a0a90848af869850a61ad3f7d5e66ae5f02a83704fa43a9f79b5db"
+    },
+    "iPhone18,4": {
+      "minimumRuntime": "26.0",
+      "sourceBundle": "iPhone Air.simdevicetype",
+      "profileSHA256": "4d65466c69f8d7d7c56f7ede3bd47d6fec0cad795d5a06fac746295d3c768300"
+    },
+    "iPhone18,5": {
+      "minimumRuntime": "26.3",
+      "sourceBundle": "iPhone 17e.simdevicetype",
+      "profileSHA256": "d7aca161450fa32d03e60a827eb06d4804c80609f33499c60749b02cc2ef5fd8"
+    }
+  },
+  "compatibilityBaseline": {
+    "sourceCommit": "1a61bc1",
+    "catalogSHA256": "0019e54daf833d5d49387e2d916f0d1a99a7de392e5acfeb9794287c72157549",
+    "iosBuilds": {
+      "16.7.10": "20H350",
+      "17.4.1": "21E236",
+      "17.5.1": "21F90",
+      "18.6.2": "22G100",
+      "26.6.2": "23G90"
+    },
+    "darwinReleases": {
+      "16.7.10": "22.6.0",
+      "17.4.1": "23.4.0",
+      "17.5.1": "23.5.0",
+      "18.6.2": "24.6.0",
+      "26.6.2": "25.6.0"
+    },
+    "models": {
+      "iPhone14,2": {
+        "fields": [
+          "marketingName",
+          "modelBase",
+          "hwModelStr",
+          "regulatoryModel",
+          "boardUdidPrefix",
+          "chip",
+          "ramBytes",
+          "screen",
+          "tac"
+        ],
+        "fieldSHA256": "e56dbd7fe1c7bb0e4b84e17507ad37f1a0010d81b4d4910731dcb46367c5bf67",
+        "iosVersions": [
+          "26.6.2",
+          "18.6.2",
+          "17.5.1",
+          "17.4.1"
+        ]
+      },
+      "iPhone14,3": {
+        "fields": [
+          "marketingName",
+          "modelBase",
+          "hwModelStr",
+          "regulatoryModel",
+          "boardUdidPrefix",
+          "chip",
+          "ramBytes",
+          "screen",
+          "tac"
+        ],
+        "fieldSHA256": "d503d5677835c49e0331fd144fd307fb8aba1bebc9c4fe70b1c02598bbaba419",
+        "iosVersions": [
+          "26.6.2",
+          "18.6.2",
+          "17.5.1",
+          "17.4.1"
+        ]
+      },
+      "iPhone14,5": {
+        "fields": [
+          "marketingName",
+          "modelBase",
+          "hwModelStr",
+          "regulatoryModel",
+          "boardUdidPrefix",
+          "chip",
+          "ramBytes",
+          "screen",
+          "tac"
+        ],
+        "fieldSHA256": "6bf094b0bb35b9bf98cc038d614861734f98111ab49e3b097ddc7b1e040312e1",
+        "iosVersions": [
+          "26.6.2",
+          "18.6.2",
+          "17.5.1",
+          "17.4.1"
+        ]
+      },
+      "iPhone14,8": {
+        "fields": [
+          "marketingName",
+          "modelBase",
+          "hwModelStr",
+          "regulatoryModel",
+          "boardUdidPrefix",
+          "chip",
+          "ramBytes",
+          "screen",
+          "tac"
+        ],
+        "fieldSHA256": "9f7dff926cdefcf8e6de79d3efcdf4c1e8d9b910fee12f720d5a15e5c9c81492",
+        "iosVersions": [
+          "26.6.2",
+          "18.6.2",
+          "17.5.1",
+          "17.4.1"
+        ]
+      },
+      "iPhone15,2": {
+        "fields": [
+          "marketingName",
+          "modelBase",
+          "hwModelStr",
+          "regulatoryModel",
+          "boardUdidPrefix",
+          "chip",
+          "ramBytes",
+          "screen",
+          "tac"
+        ],
+        "fieldSHA256": "05bdd107e10d82bbe88e36f628b6764c6606e3255055739cbcd9fd23c90f4c82",
+        "iosVersions": [
+          "26.6.2",
+          "18.6.2",
+          "17.5.1",
+          "17.4.1"
+        ]
+      },
+      "iPhone15,3": {
+        "fields": [
+          "marketingName",
+          "modelBase",
+          "hwModelStr",
+          "regulatoryModel",
+          "boardUdidPrefix",
+          "chip",
+          "ramBytes",
+          "screen",
+          "tac"
+        ],
+        "fieldSHA256": "84836f47d607f6b12a2b2f9b8617c5f91e3fe2a8d0cf85504cb38530f1e78495",
+        "iosVersions": [
+          "26.6.2",
+          "18.6.2",
+          "17.5.1",
+          "17.4.1"
+        ]
+      },
+      "iPhone14,7": {
+        "fields": [
+          "marketingName",
+          "modelBase",
+          "hwModelStr",
+          "regulatoryModel",
+          "boardUdidPrefix",
+          "chip",
+          "ramBytes",
+          "screen",
+          "tac",
+          "identifierTemplate",
+          "minimumIOS"
+        ],
+        "fieldSHA256": "18aef928f375e6b30573940db01d5ce86c7f8d654fbc53f55a471dce96c472bc",
+        "iosVersions": [
+          "26.6.2",
+          "18.6.2",
+          "17.5.1",
+          "17.4.1"
+        ]
+      },
+      "iPhone15,4": {
+        "fields": [
+          "marketingName",
+          "modelBase",
+          "hwModelStr",
+          "regulatoryModel",
+          "boardUdidPrefix",
+          "chip",
+          "ramBytes",
+          "screen",
+          "tac",
+          "identifierTemplate",
+          "minimumIOS"
+        ],
+        "fieldSHA256": "ebf1bf86c27e351735a88bd6fd1a79cb256708574af8c8077dcc3e9cf81d6908",
+        "iosVersions": [
+          "26.6.2",
+          "18.6.2",
+          "17.5.1",
+          "17.4.1"
+        ]
+      },
+      "iPhone15,5": {
+        "fields": [
+          "marketingName",
+          "modelBase",
+          "hwModelStr",
+          "regulatoryModel",
+          "boardUdidPrefix",
+          "chip",
+          "ramBytes",
+          "screen",
+          "tac",
+          "identifierTemplate",
+          "minimumIOS"
+        ],
+        "fieldSHA256": "20f0fd8f69b3f6909ff23214b7b22c44f15f35ac460ec0ed790c4842f4d309a5",
+        "iosVersions": [
+          "26.6.2",
+          "18.6.2",
+          "17.5.1",
+          "17.4.1"
+        ]
+      },
+      "iPhone16,1": {
+        "fields": [
+          "marketingName",
+          "modelBase",
+          "hwModelStr",
+          "regulatoryModel",
+          "boardUdidPrefix",
+          "chip",
+          "ramBytes",
+          "screen",
+          "tac",
+          "identifierTemplate",
+          "minimumIOS"
+        ],
+        "fieldSHA256": "3c169816a5d4b0204c632628a640ea92559c8c50a54f06c2588f276621cd6c89",
+        "iosVersions": [
+          "26.6.2",
+          "18.6.2",
+          "17.5.1",
+          "17.4.1"
+        ]
+      },
+      "iPhone16,2": {
+        "fields": [
+          "marketingName",
+          "modelBase",
+          "hwModelStr",
+          "regulatoryModel",
+          "boardUdidPrefix",
+          "chip",
+          "ramBytes",
+          "screen",
+          "tac",
+          "identifierTemplate",
+          "minimumIOS"
+        ],
+        "fieldSHA256": "3ef1ad97b39291665d788558de53f58307b96b53ee1b9cd5ea01aaf7f100e9fc",
+        "iosVersions": [
+          "26.6.2",
+          "18.6.2",
+          "17.5.1",
+          "17.4.1"
+        ]
+      },
+      "iPhone17,3": {
+        "fields": [
+          "marketingName",
+          "modelBase",
+          "hwModelStr",
+          "regulatoryModel",
+          "boardUdidPrefix",
+          "chip",
+          "ramBytes",
+          "screen",
+          "tac",
+          "identifierTemplate",
+          "minimumIOS"
+        ],
+        "fieldSHA256": "ba585ef63264e2c27ffe27f292371183610be15c1b728dbed03fdf529e405be6",
+        "iosVersions": [
+          "26.6.2",
+          "18.6.2"
+        ]
+      },
+      "iPhone17,4": {
+        "fields": [
+          "marketingName",
+          "modelBase",
+          "hwModelStr",
+          "regulatoryModel",
+          "boardUdidPrefix",
+          "chip",
+          "ramBytes",
+          "screen",
+          "tac",
+          "identifierTemplate",
+          "minimumIOS"
+        ],
+        "fieldSHA256": "62128babc758617414ce862ada738213cf4c7a3bb1893fa61bc90e4b477d248e",
+        "iosVersions": [
+          "26.6.2",
+          "18.6.2"
+        ]
+      },
+      "iPhone17,5": {
+        "fields": [
+          "marketingName",
+          "modelBase",
+          "hwModelStr",
+          "regulatoryModel",
+          "boardUdidPrefix",
+          "chip",
+          "ramBytes",
+          "screen",
+          "tac",
+          "identifierTemplate",
+          "minimumIOS"
+        ],
+        "fieldSHA256": "366198db79c5d56339810d150b1688a0ba081b9d227fd9130fbf1243d90b3384",
+        "iosVersions": [
+          "26.6.2",
+          "18.6.2"
+        ]
+      },
+      "iPhone17,1": {
+        "fields": [
+          "marketingName",
+          "modelBase",
+          "hwModelStr",
+          "regulatoryModel",
+          "boardUdidPrefix",
+          "chip",
+          "ramBytes",
+          "screen",
+          "tac",
+          "identifierTemplate",
+          "minimumIOS"
+        ],
+        "fieldSHA256": "14650178c98f2f1ab7698f7470a8970cf94f5ba12ae3f9bb0c4eb9bd811e1e6f",
+        "iosVersions": [
+          "26.6.2",
+          "18.6.2"
+        ]
+      },
+      "iPhone17,2": {
+        "fields": [
+          "marketingName",
+          "modelBase",
+          "hwModelStr",
+          "regulatoryModel",
+          "boardUdidPrefix",
+          "chip",
+          "ramBytes",
+          "screen",
+          "tac",
+          "identifierTemplate",
+          "minimumIOS"
+        ],
+        "fieldSHA256": "0e3173da1f90b2c5cd4fd12c6dae46af528c4cf1fd1b4bef10e258ceed1f5e97",
+        "iosVersions": [
+          "26.6.2",
+          "18.6.2"
+        ]
+      },
+      "iPhone18,3": {
+        "fields": [
+          "marketingName",
+          "modelBase",
+          "hwModelStr",
+          "regulatoryModel",
+          "boardUdidPrefix",
+          "chip",
+          "ramBytes",
+          "screen",
+          "tac",
+          "identifierTemplate",
+          "minimumIOS"
+        ],
+        "fieldSHA256": "d25f7a2372b166591157f71d04baadcb63eec8a307db968340de2094c8883c4a",
+        "iosVersions": [
+          "26.6.2"
+        ]
+      },
+      "iPhone18,1": {
+        "fields": [
+          "marketingName",
+          "modelBase",
+          "hwModelStr",
+          "regulatoryModel",
+          "boardUdidPrefix",
+          "chip",
+          "ramBytes",
+          "screen",
+          "tac",
+          "identifierTemplate",
+          "minimumIOS"
+        ],
+        "fieldSHA256": "9a7a83b3e9a7e39573dd4bb675dda72b46b25b19c17eb2cf6de0f4b414e1369b",
+        "iosVersions": [
+          "26.6.2"
+        ]
+      },
+      "iPhone18,2": {
+        "fields": [
+          "marketingName",
+          "modelBase",
+          "hwModelStr",
+          "regulatoryModel",
+          "boardUdidPrefix",
+          "chip",
+          "ramBytes",
+          "screen",
+          "tac",
+          "identifierTemplate",
+          "minimumIOS"
+        ],
+        "fieldSHA256": "b4a9782fdb1f9e82d2887c2086c437252add87e3e959cb9417561cf1a52bcab8",
+        "iosVersions": [
+          "26.6.2"
+        ]
+      },
+      "iPhone18,4": {
+        "fields": [
+          "marketingName",
+          "modelBase",
+          "hwModelStr",
+          "regulatoryModel",
+          "boardUdidPrefix",
+          "chip",
+          "ramBytes",
+          "screen",
+          "tac",
+          "identifierTemplate",
+          "minimumIOS"
+        ],
+        "fieldSHA256": "6f2ca1d01bddd8bc0e807d9ae55ce707994194fba06f60d3ed3f70688741e3fa",
+        "iosVersions": [
+          "26.6.2"
+        ]
+      },
+      "iPhone18,5": {
+        "fields": [
+          "marketingName",
+          "modelBase",
+          "hwModelStr",
+          "regulatoryModel",
+          "boardUdidPrefix",
+          "chip",
+          "ramBytes",
+          "screen",
+          "tac",
+          "identifierTemplate",
+          "minimumIOS"
+        ],
+        "fieldSHA256": "cdc345b90fc1262ac5c4f4f759f07aa72c2e968be3b2fdb082c8b848675f0592",
+        "iosVersions": [
+          "26.6.2"
+        ]
+      }
+    }
+  },
+  "deferredChoices": [
+    {
+      "name": "iOS 27.0",
+      "build": "24A435",
+      "status": "release-candidate",
+      "source": "https://developer.apple.com/news/releases/?id=09092026a",
+      "reason": "RC is not admitted to the stable synthetic selection catalog."
+    },
+    {
+      "name": "iPhone 18 Pro / iPhone 18 Pro Max",
+      "status": "announced; required template facts incomplete",
+      "source": "https://www.apple.com/iphone-18-pro/specs/",
+      "unknownFields": [
+        "productType",
+        "hwModelStr",
+        "ramBytes",
+        "retail modelBase",
+        "boardUdidPrefix",
+        "tac"
+      ],
+      "reason": "No matching device profile exists in the installed Apple CoreSimulator 381.1 set; do not synthesize missing identifiers or infer RAM from marketing."
+    },
+    {
+      "name": "iPhone Duo",
+      "status": "announced; required template facts incomplete",
+      "source": "https://www.apple.com/iphone-duo/specs/",
+      "unknownFields": [
+        "productType",
+        "hwModelStr",
+        "ramBytes",
+        "stable screen tuple",
+        "retail modelBase",
+        "boardUdidPrefix",
+        "tac"
+      ],
+      "reason": "Foldable display cannot be represented faithfully by an unverified single fixed screen template."
+    }
+  ],
+  "legacyDiscrepancies": [
+    {
+      "productType": "iPhone14,8",
+      "field": "hwModelStr",
+      "preservedCatalogValue": "D27AP",
+      "simulatorProductClass": "D28",
+      "status": "legacy inconsistency retained for saved-profile compatibility; not reverified hardware evidence",
+      "reason": "Changing the existing model template would cause saved-profile consistency validation to fail. A separate versioned migration is required before correcting it."
+    }
+  ]
+}

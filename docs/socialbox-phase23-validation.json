@@ -1,0 +1,149 @@
+{
+  "sourceCommit": "a336fd0",
+  "recordedAtUTC": "2026-09-13T22:25:55.549840+00:00",
+  "originalRegressionCommands": [
+    "python3 tools/test_build_version.py",
+    "python3 tools/test_package_variants.py",
+    "python3 tools/test_apt_release.py",
+    "bash tools/test_app_registry.sh",
+    "bash tools/test_app_process.sh",
+    "python3 tools/test_app_source.py",
+    "bash tools/test_app_mdm.sh",
+    "bash tools/test_app_scope.sh",
+    "python3 tools/test_launcher_multiapp.py",
+    "python3 tools/test_apt_metadata_refresh.py",
+    "python3 tools/test_clone_architecture.py",
+    "python3 tools/test_identity_editor.py",
+    "python3 tools/test_launcher_architecture.py",
+    "python3 tests/test_replacement_architecture.py",
+    "bash tools/test_firewall_policy.sh",
+    "bash tools/test_request_queue.sh",
+    "bash tools/test_secure_config.sh",
+    "bash tools/test_identity_draft_store.sh",
+    "python3 tools/test_preinstall.py",
+    "python3 tools/test_postinstall.py",
+    "python3 tools/test_macho_probe.py",
+    "python3 tools/test_request_budgets.py",
+    "bash tools/test_proxy_library.sh",
+    "python3 tools/test_proxy_configuration.py",
+    "sh tools/test_proxy_region.sh",
+    "python3 tools/test_proxy_region_transport.py",
+    "bash tools/test_rotation_secrets.sh",
+    "bash tools/test_backup_snapshot.sh",
+    "python3 tools/test_backup_identity.py",
+    "python3 tools/test_backup_archive.py",
+    "python3 tools/test_identity_freeze.py",
+    "python3 tools/test_smoke_log_order.py",
+    "python3 tools/test_sign_firewall_app.py",
+    "bash tools/test_keychain_cleaner.sh",
+    "bash tools/test_keychain_sync.sh",
+    "bash tools/test_clone_acceptance.sh",
+    "bash tools/test_isolation_sentinel.sh",
+    "bash tools/test_launch_safety.sh",
+    "python3 tools/test_proxy_route_transport.py",
+    "bash tools/test_acceptance_checks.sh",
+    "bash tools/test_operator_wording.sh",
+    "bash tools/test_wizard_draft.sh",
+    "python3 tools/test_device_acceptance_ssh.py",
+    "python3 tools/test_device_acceptance_canaries.py",
+    "bash tools/test_deletion_journal.sh",
+    "bash tools/test_profile_metadata.sh",
+    "bash tests/test_replacement.sh",
+    "python3 tools/test_profile_metadata.py",
+    "python3 tools/test_account_status_browser.py",
+    "python3 tools/test_license_key.py",
+    "python3 tools/test_license_screen.py",
+    "python3 tools/test_license_presentation.py",
+    "bash tools/test_license_presentation.sh",
+    "bash tests/test_license_token.sh",
+    "python3 tests/test_license_architecture.py",
+    "bash tests/test_data_schema.sh",
+    "python3 tests/test_data_schema_architecture.py",
+    "python3 tools/test_update_startup.py",
+    "bash tools/test_device_catalog.sh",
+    "bash tools/test_fingerprint_registry.sh",
+    "bash tools/test_operation_context.sh",
+    "bash tools/test_memory_budget.sh",
+    "bash tools/test_request_deadlines.sh",
+    "bash tools/test_bounded_process.sh",
+    "bash tools/test_service_lifetime.sh",
+    "bash tools/test_socket_guard.sh",
+    "bash tools/test_hook_readiness.sh",
+    "bash tools/test_http_proxy.sh",
+    "bash tools/test_reddit_payload.sh",
+    "python3 tools/test_leak_audit.py",
+    "python3 tools/test_leak_surface.py",
+    "python3 tools/check_pasteboard_api.py"
+  ],
+  "currentAdditionalCommands": [
+    "python3 tools/test_facebook_binary_audit.py",
+    "bash tools/test_app_bundle_policy.sh",
+    "bash tools/test_app_runtime.sh",
+    "python3 tools/test_app_profile.py",
+    "bash tools/test_app_process_coordinator.sh"
+  ],
+  "unitResults": [
+    {
+      "commit": "429ca81",
+      "entrypointsPassed": 72,
+      "privateLogName": "socialbox-phase23-audit-tests.log",
+      "privateLogSHA256": "8f6651660cc0ff043cc762e3c1b9c8ca58eabf4f5a4e8939fd62da346af561db"
+    },
+    {
+      "commit": "b9d70b1",
+      "entrypointsPassed": 74,
+      "privateLogName": "socialbox-phase23-clone-policy-tests.log",
+      "privateLogSHA256": "591af2c170174709d8e63d1a21f61b3440906fc0b56ab2a7eb6d8537310d47eb"
+    },
+    {
+      "commit": "9ec15d5",
+      "entrypointsPassed": 75,
+      "privateLogName": "socialbox-phase23-tweak-tests.log",
+      "privateLogSHA256": "392ce9cbbe33b3e4659f2febb02daf0afcb24392111db6464cb82ce1a29d446f"
+    },
+    {
+      "commit": "6250821",
+      "entrypointsPassed": 75,
+      "privateLogName": "socialbox-phase23-ui-tests.log",
+      "privateLogSHA256": "4a642c9c5d2b8c4c67d131f5b745dc83caf7d95110f587ef4b2942dc548a0197"
+    },
+    {
+      "commit": "6a8bdde",
+      "entrypointsPassed": 76,
+      "privateLogName": "socialbox-phase23-profile-tests.log",
+      "privateLogSHA256": "6e987f2791c1dac484b62808c040934d0c3336e97a056045e7242ede900c16f2"
+    },
+    {
+      "commit": "5c7c49e",
+      "entrypointsPassed": 77,
+      "privateLogName": "socialbox-phase23-process-tests.log",
+      "privateLogSHA256": "5b4a0d920dd16e6d64caf378b14eba189bf662b934e28c559435613f446d0039"
+    }
+  ],
+  "finalBuild": {
+    "version": "0.1.16",
+    "scheme": "rootless",
+    "entrypointsPassed": 77,
+    "exitCode": 0,
+    "ldidOnly": true,
+    "appleDevelopmentTeamUsed": false,
+    "privateLogSHA256": "8afeb7cf208a8876bd633e9fbeb04a9952784fc5d3087c6c3e9f162615095d82"
+  },
+  "UIKitFixtureStatesPassed": [
+    "inactive",
+    "active (isolated test registry only)"
+  ],
+  "deviceAcceptanceEvidence": "socialbox-phase23-device-evidence.json",
+  "fullFacebookCloneAcceptance": "NOT_RUN: required storage/lifecycle boundary and MDM are unverified",
+  "threadSanitizer": {
+    "passed": true,
+    "privateLogSHA256": "d8591881e92415f570dd69440f71bf29659b4d44521fec8bd604c4a25aa1a469"
+  },
+  "finalDocumentationChecks": {
+    "entrypointsPassed": 77,
+    "staticCheck": "ALL CLEAN",
+    "leakSurfaceRows": 334,
+    "newDocumentationLinksValid": true,
+    "privateLogSHA256": "5a82c0fb03a317cf0ed3a13f84e26980033d26276be072a56293ce690312051c"
+  }
+}

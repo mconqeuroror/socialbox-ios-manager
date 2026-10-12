@@ -1,0 +1,9 @@
+Package: com.redditbox
+Name: SocialBox
+Depends: mobilesubstrate, firmware (>= 15.0), ldid, ai.akemi.appinst (>= 2.1.1), zip, ai.akemi.appsyncunified, uikittools (>= 2.1.6)
+Version: 0.1.0
+Architecture: iphoneos-arm64
+Description: App profiles with signed device licensing and per-app network controls (source implementation)
+Maintainer: PC
+Author: PC
+Section: Tweaks

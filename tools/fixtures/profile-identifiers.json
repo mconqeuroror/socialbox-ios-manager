@@ -1,0 +1,4 @@
+{
+  "accepted": ["a", "a_b", "a-b", "ABC_012-xyz"],
+  "rejected": ["", "a.b", "a/b", "a\\b", " a", "a ", "a%2Db", "é", "Ａ", "a\n", "a\u0000b"]
+}

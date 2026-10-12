@@ -1,0 +1,141 @@
+{
+  "schemaVersion": 1,
+  "kind": "socialbox-pristine-unpaired-installation-preparation",
+  "unit": 18,
+  "recordedAt": "2026-10-01T08:19:08.729801+00:00",
+  "status": "PASS_PREPARATION_WITH_PAIRED_INSTALLATION_AND_RUNTIME_GAPS",
+  "clientDeliveryReady": false,
+  "customerArtifactReleased": false,
+  "customerCodeIssued": false,
+  "contract": {
+    "creation": "Only explicit fixed real/effective0 installer exclusively prepares unpaired source vault/configuration plus separate immutable intent/prepared anchors; every present resource/old marker refuses fresh creation.",
+    "startup": "Existing-only prepared provenance, no raw factory fallback or initializer; checked before dispatch and reply projection. Missing/partial/replaced/mixed state stays unavailable.",
+    "facts": "Descriptor-bound current ancestor/node/file witnesses and fixed image digests, stable source server/identity and namespace locks; immutable root-local observations, not grant or caller Boolean.",
+    "uncertainty": "Failure can follow effects. Preserve exact partial resources; never adopt/delete/reset/remint. Only fully published result can reconcile via read-only existing open.",
+    "finalCheck": "Repeat canonical intent/prepared full-file reads and exact inventory after long policy/namespace observations; same-byte replacement mid-observation is denied.",
+    "pairing": "Genuine activation/validation preserves stable preparation. Signed revocation denies source admission while provenance can remain current. Pending establishment is absent and not implemented."
+  },
+  "host": {
+    "status": "PASS",
+    "prerequisiteAssertions": 195,
+    "establishmentAssertions": 118,
+    "productionBoundaryChecks": 8,
+    "regressions": {
+      "vault": 58,
+      "configurationStore": 494,
+      "licenseOwner": 285,
+      "rootPendingOwner": 581
+    },
+    "totalHostAssertions": 1731,
+    "packageCompositionTests": 8,
+    "hostInstallerThreadRaces": 8,
+    "sourceStable": true,
+    "syntheticSigning": "Host source-owner claims use synthetic signed fixture, not production website licensing",
+    "physicalCrashRebootPowerLoss": "NOT_RUN"
+  },
+  "production": {
+    "status": "PASS",
+    "architectures": [
+      "arm64",
+      "arm64e"
+    ],
+    "sourceStable": true,
+    "testProvidersAbsent": true,
+    "entitlements": {},
+    "sourceFiles": 43,
+    "serviceSHA256": "9849b68f530f0ba0e2f98e1640ab94873c561620a244d7d1bf4fb2cbb560ad55",
+    "installerSHA256": "0e762cde4170b86f0bb5f078a192ad49008d52be0f4bfe238e2785452ce11894",
+    "privateBuildReportSHA256": "67ab9dad0c8e6f5049e24698117264b05a763fc39fb7094236c917a365ef7b29",
+    "wholeCustomerPackage": "NOT_RUN"
+  },
+  "physical": {
+    "status": "PASS",
+    "device": "iPhone X",
+    "iOS": "16.7.16",
+    "checks": 30,
+    "scope": "Fixed root native installer, existing-only root service and independent compiled pinned real501/effective501 native license client at compile-time private endpoint, NEW genuine disposable production website key.",
+    "tested": [
+      "missing provenance has no storage effects",
+      "actual real501 installer entry guard denial",
+      "explicit root exclusive preparation",
+      "duplicate refusal without byte changes",
+      "existing-only reopen",
+      "unpaired activation required",
+      "real0 client denied",
+      "fresh website activation/validation",
+      "service restart/revalidation",
+      "signed revocation",
+      "same-byte prepared replacement closes cached/reopened service",
+      "no paired pending infrastructure"
+    ],
+    "preservation": {
+      "freshQuiescedPrivateBackup": "PASS",
+      "sixOwnerProgramByteIdentities": "PASS",
+      "18StoredSetupFileByteIdentities": "PASS",
+      "ownerOverlayChanged": false,
+      "wholeLegacyDirectoryStaticByteEquality": "NOT_RUN in final scoped acceptance; dynamic config/license/audit files excluded explicitly",
+      "excludedDynamicFiles": [
+        "config.plist",
+        "license.plist",
+        ".daemon-audit.log"
+      ]
+    },
+    "cleanup": {
+      "disposableLicenseRevoked": "PASS",
+      "exactPrivateJobAndDirectoryRemoved": "PASS",
+      "originalManagerRelaunched": "PASS"
+    },
+    "privateReportSHA256": "3cea33695701a3adc146e176746f4c2fc818a4cb350a4aee424ab4118784c67c",
+    "privateDriverSHA256": "ecaa1bf909e55ac7111635431d20ee170c2571dd0768def206fe06d1e4837a89",
+    "privateBuildReportSHA256": "8d2fdc33b9b943961c2e9829bbd212e25054ad811edee9b4a4c1d786b9ab8256",
+    "defaultProductionEndpoint": "NOT_RUN",
+    "actualManagerForm": "NOT_RUN",
+    "freshCustomerInstall": "NOT_RUN"
+  },
+  "retainedFailures": {
+    "firstBuild": "FAIL before deployment; wrong RSA public-key format rejected by OpenSSL",
+    "secondBuild": "FAIL before deployment; nonexistent OpenSSL executable",
+    "host": "FAIL retained: initial Werror/ARC code errors, inherited fixture group mismatch, wrong result-field fixture and cascading test failures corrected; production filesystem/licensing constraints preserved",
+    "physicalAttempts3And4": "FAIL whole legacy-directory static byte equality; all licensing/preparation checks and exact cleanup passed, both test keys revoked. Independent private comparison:18 stable files, changes in existing config/license/audit files. Final scope measures18 stored-setup files and six programs explicitly.",
+    "review": "Initial final-child-observation race found by independent read-only review, corrected and deterministic real filesystem replacement tests added. Final independent source review PASS."
+  },
+  "limits": [
+    "Paired pending establishment NOT_RUN and unimplemented",
+    "Default endpoint/locked first-install page NOT_RUN",
+    "Instantaneous cooperative observation, not cancellation of blocking syscall, lifetime lease or publisher attestation",
+    "Complete deletion of all anchors cannot prove first-install authority; explicit trusted installer invocation required",
+    "No reset/adoption or upgrade/migration policy",
+    "Preparation program included by private package composition, never automatically invoked; package remains upgrade candidate",
+    "Source UUIDs/saved choices are not old numeric CID/runtime authority",
+    "Automatic safe switching/isolation/recovery and running-session licensing NOT_RUN",
+    "Actual two-account acceptance and proxy traffic NOT_RUN",
+    "Earlier Instagram sibling normal/direct read FAIL remains unfixed",
+    "Facebook launch FAIL and Twitter retained runtime NOT_RUN"
+  ],
+  "next": "Bind typed prepared proof to paired pending context under same source owner/original deadline inside existing held-empty callback, using passed namespace facts without nested lock/ordinary recursive observation. Move owner completion off owner queue first. No RPC Boolean/reset/bootstrap/adoption.",
+  "sourceSHA256": {
+    "lucid/Authorization/LBXLicenseEndpoints.h": "cd0287d7b0f443ef9964b3a0679531c82d18d067a8ed03dbe1ca979bf5c7d016",
+    "lucid/Authorization/LBXLicenseVault.h": "a9a0583689fa9ec7f8f9861df9533a4b443670aa88d15b948b7fe58fc224fd2f",
+    "lucid/Authorization/LBXLicenseVault.m": "e2d3d3ce123655913d10ca983db7de7f4aa62aed4138434fc50f9f139c4639d0",
+    "lucid/Authorization/LicenseService.m": "cb208ae201ce8d18ec10cb0be7a17f907a383ea75358fa9fc951b845353060a8",
+    "lucid/Authorization/LBXLicenseInstallationEstablishment.h": "11c90295b3245da5d4f0365bdfd19a758739618b0272742a90da40616408c762",
+    "lucid/Authorization/LBXLicenseInstallationEstablishment.m": "9207cee89f59f9d8b4ba143d84c3985c428f482375075e78f6381204d94c6af6",
+    "lucid/Authorization/InstallPreparation.m": "cde01b687687810d3d08900ac3fa5adddab6544396404a15786ca2e8be47635d",
+    "lucid/Containers/LBXContainerConfigurationStore.h": "79fbfae01c7fc2171895749566594c3aa475439db4427852824ac50d6782d187",
+    "lucid/Containers/LBXContainerConfigurationStore.m": "3ff8472dba97c6c11bf60475797001f8b2fe61a85613e0aae52031d3619c5fcb",
+    "lucid/tests/installation_establishment.m": "aedcdc55602019029e27ff60a700f1a3693876609ccb80e46d229767410e7270",
+    "lucid/tests/installation_producer.m": "92be71683eb819878ca08340b65391c257fbc8be30064d3989eb7e10865ac80c",
+    "lucid/tests/test_installation_establishment.sh": "582ea0f24c166da17ed98260ba13b494850f64d8b615e0abb6244e5cba0a8362",
+    "lucid/tests/test_installation_producer.sh": "f61c2d8389e35df37e392febb712e2b207fb75f93d87c26c003eb1a71c79a666",
+    "scripts/build-socialbox-license-service.py": "205dddde56c23b157d1baef6e36270e0b272eee2563f8f522c1ac2d098e68c2f",
+    "scripts/build-socialbox-helper-safety.py": "731b0a2949a1f17608ad97d280e73eb43d7cf46ea0e83f57e43a911352438d0e",
+    "tools/test_socialbox_helper_package.py": "e9e8425b35347aaad637e0caabb9d60f1bc4bd54d85ac1ac597c2632a413a32b"
+  },
+  "privateEvidenceSHA256": {
+    "producer": "5cf66470f88aeb2cce544fd219fb6e3ab0d61c2fc1e0f0b601abf74a5600aba3",
+    "host": "d6c33c418993d93d743abccdabf418bb59815c0fbfce41367c2d859a0bf61973",
+    "productionHost": "bbb40eef722e63b5836b0d759edd0199fcefb1a287201876a1459d3d5b300fb1",
+    "rootPending": "9499aca8de78f390e7556dc867e86d938480e42e4e1e5e23d41ca1a92d5fdd5f",
+    "package": "1065d6c1869979319fcc8f1366d377adb3e675432bb1e0cbb9d93c228860aa45"
+  }
+}

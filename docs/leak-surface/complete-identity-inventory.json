@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "rows": [
+    {
+      "id": "EDIT-012",
+      "category": "identity editor",
+      "surface": "Complete automatic identity draft round-trip across every generated field",
+      "mechanism": "Carry every non-derived value through private drafts and reviewed manual choices; derive linked hardware values. Reject invalid supplied extras; retain legacy omitted values and frozen policy-only semantics.",
+      "coverage": [
+        "generator"
+      ],
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "shared/RBXIdentityFields.h",
+          "line": 1,
+          "detail": "Full-section equality across all 21 model templates; exact reviewed values, private serialization and validation boundaries."
+        },
+        {
+          "path": "daemon/RBXProfileGenerator.h",
+          "line": 1,
+          "detail": "Full-section equality across all 21 model templates; exact reviewed values, private serialization and validation boundaries."
+        },
+        {
+          "path": "daemon/RBXContainerRegistry.m",
+          "line": 1,
+          "detail": "Full-section equality across all 21 model templates; exact reviewed values, private serialization and validation boundaries."
+        },
+        {
+          "path": "launcher/RBXIdentityViewController.m",
+          "line": 1,
+          "detail": "Full-section equality across all 21 model templates; exact reviewed values, private serialization and validation boundaries."
+        },
+        {
+          "path": "launcher/RBXIdentityHelp.h",
+          "line": 1,
+          "detail": "Full-section equality across all 21 model templates; exact reviewed values, private serialization and validation boundaries."
+        },
+        {
+          "path": "tools/test_automatic_identity.py",
+          "line": 1,
+          "detail": "Full-section equality across all 21 model templates; exact reviewed values, private serialization and validation boundaries."
+        },
+        {
+          "path": "tools/test_identity_manual_inputs.py",
+          "line": 1,
+          "detail": "Full-section equality across all 21 model templates; exact reviewed values, private serialization and validation boundaries."
+        },
+        {
+          "path": "tools/test_identity_editor_fixture.m",
+          "line": 1,
+          "detail": "Full-section equality across all 21 model templates; exact reviewed values, private serialization and validation boundaries."
+        },
+        {
+          "path": "docs/complete-identity-fields-2026-09-14.json",
+          "line": 1,
+          "detail": "Full-section equality across all 21 model templates; exact reviewed values, private serialization and validation boundaries."
+        },
+        {
+          "path": "docs/complete-identity-device-acceptance-0.1.21.json",
+          "line": 1,
+          "detail": "Timestamped actual phone acceptance, installation component checks and explicit limitations."
+        }
+      ],
+      "verification": "Failing-first test observed drift in five generated sections. Corrected 180 native checks cover all 75 generated leaf paths (48 primary fields and 27 aliases), all 21 models and deterministic repeated construction; 497 manual checks; 159 actual UIKit checks with inert IPC. Rootless 0.1.21 on-device Auto/manual Save/readback passed 30 checks including all added fields; 930 observations retained fresh CLOSED and stable SpringBoard, with no safe-mode marker. Original user profile unchanged.",
+      "fix": "Draft completeness does not prove new private-API coverage, Facebook support or network isolation. Blank IMEI/retail model on generic templates and zero denied-ATT IDFA remain intentional."
+    }
+  ]
+}

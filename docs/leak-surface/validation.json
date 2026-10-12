@@ -1,0 +1,160 @@
+{
+  "auditDate": "2026-09-10",
+  "branch": "feat/lifecycle-and-distribution",
+  "baseline": "fdf181f",
+  "nativeCodeCommit": "6c48b232bddbe1fc9de24185d6abc6a186e503e8",
+  "verdictCounts": {
+    "covered-in-code": 118,
+    "gap": 27,
+    "unverified": 150
+  },
+  "rowCount": 295,
+  "xcode": "26.6 (17F113)",
+  "xcodeIPhoneOSSDK": "26.5",
+  "theosBuildTarget": "iphone:clang:16.5:15.0",
+  "pythonNote": "Use Homebrew Python; system Python 3.9 was rejected by existing packaging script Path.write_text(newline=...) before compilation. Environment PATH corrected; no packaging code change needed.",
+  "checks": [
+    {
+      "name": "scripts/build-mac.sh (rootless)",
+      "status": "PASS",
+      "logSHA256": "da22fb30257496f1a9ea56582acdecbadcd45df89c999264c110674eaa5aa8d4",
+      "signing": "Procursus ldid only; Apple code signing disabled; original license public key pin retained",
+      "scope": "All build-script native/Python checks plus Xcode archive, Theos compile/link/sign/package. Local development package, not released or installed."
+    },
+    {
+      "name": "scripts/build-mac.sh (rootful)",
+      "status": "PASS",
+      "logSHA256": "213e2f328d59c6aa546798ca9c5957019d72b397d56cddbd4ecb5e49dc87cc1f",
+      "signing": "Procursus ldid only; Apple code signing disabled; original license public key pin retained",
+      "scope": "All build-script native/Python checks plus Xcode archive, Theos compile/link/sign/package. Local development package, not released or installed."
+    },
+    {
+      "name": "tools/test_reddit_payload.sh",
+      "status": "PASS",
+      "scope": "host and opaque subtree production-function regressions"
+    },
+    {
+      "name": "tools/test_backup_identity.py",
+      "status": "PASS",
+      "scope": "13 cases"
+    },
+    {
+      "name": "tools/test_backup_archive.py",
+      "status": "PASS",
+      "scope": "18 cases"
+    },
+    {
+      "name": "tools/test_identity_freeze.py",
+      "status": "PASS",
+      "scope": "13 native fault cases plus integration ordering"
+    },
+    {
+      "name": "tools/test_leak_audit.py",
+      "status": "PASS",
+      "scope": "12 cases"
+    },
+    {
+      "name": "tools/test_leak_surface.py",
+      "status": "PASS",
+      "scope": "8 final contract cases; final governance-only changes tested separately after native builds"
+    },
+    {
+      "name": "tools/enumerate_leak_binary.py --self-test",
+      "status": "PASS",
+      "scope": "malformed/chained/import provenance cases"
+    },
+    {
+      "name": "tools/static_check.py",
+      "status": "PASS",
+      "scope": "source/static checks"
+    },
+    {
+      "name": "tools/check_leak_surface.py --base fdf181f",
+      "status": "PASS",
+      "scope": "295 rows, file hashes, binary evidence hashes, affected-row declarations"
+    }
+  ],
+  "packages": [
+    {
+      "file": "packages/com.redditbox_0.1.0_iphoneos-arm64.deb",
+      "version": "0.1.0",
+      "architecture": "iphoneos-arm64",
+      "sha256": "f31357d5c47fe2cac98d23705a417d9d3200929bf872397fb91c5d69583b309e",
+      "bytes": 1391754,
+      "status": "LOCAL BUILD ONLY; default development version, not published or installed; production remains 0.1.2"
+    },
+    {
+      "file": "packages/com.redditbox_0.1.0_iphoneos-arm.deb",
+      "version": "0.1.0",
+      "architecture": "iphoneos-arm",
+      "sha256": "a3b19aa914968d3c438921552795b3423fec806c29e524eacc02d501464de382",
+      "bytes": 1387484,
+      "status": "LOCAL BUILD ONLY; default development version, not published or installed; production remains 0.1.2"
+    }
+  ],
+  "binaryIndependentValidation": [
+    "All 8 imported-symbol name sets match xcrun nm -ju, including 582 Lottie imports absent from LC_SYMTAB.",
+    "All 8 selector/class reference counts match xcrun otool -l.",
+    "Independent second scan produced byte-identical summary and deterministic gzip."
+  ],
+  "notRun": [
+    "Fresh clone first-run app/SDK persisted-key inventory",
+    "SDK-specific executed call sites and actual outbound fields",
+    "A/B labelled on-device traffic capture across all transports",
+    "Effective MDM per-app proxy enforcement and broker authentication callbacks",
+    "Device acceptance of audit fixes; connected USB SSH endpoint reset at check",
+    "Production deployment of audit fixes"
+  ],
+  "fixCommits": [
+    {
+      "commit": "aa25953",
+      "rows": [
+        "WIRE-002"
+      ]
+    },
+    {
+      "commit": "c9cafe8",
+      "rows": [
+        "LIFE-014"
+      ]
+    },
+    {
+      "commit": "fa2d835",
+      "rows": [
+        "WIRE-001"
+      ]
+    },
+    {
+      "commit": "de3f654",
+      "rows": [
+        "NET-039"
+      ]
+    },
+    {
+      "commit": "845132d",
+      "rows": [
+        "LIFE-015"
+      ]
+    },
+    {
+      "commit": "98aecc9",
+      "rows": [
+        "AUDIT-001"
+      ]
+    },
+    {
+      "commit": "cd96ddc",
+      "rows": [
+        "LIFE-019",
+        "ID-010"
+      ]
+    },
+    {
+      "commit": "6c48b23",
+      "rows": [
+        "AUDIT-001"
+      ]
+    }
+  ],
+  "result": "INCOMPLETE COVERAGE; no aggregate all-clear verdict. Native builds pass; 27 confirmed gaps and 150 unverified rows remain explicit."
+}

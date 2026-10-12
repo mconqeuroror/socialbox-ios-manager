@@ -1,0 +1,210 @@
+{
+  "formatVersion": 1,
+  "unit": "root-only immutable registered Instagram installation and executable observation",
+  "recordedAtUTC": "2026-10-01T02:31:41.179991+00:00",
+  "status": "PASS",
+  "runtimeAccepted": false,
+  "engineAuthorized": false,
+  "customerReleased": false,
+  "host": {
+    "filesystemBinding": {
+      "status": "PASS",
+      "assertions": 520,
+      "privateLogSHA256": "b084f9eb97e101a29a8584e23536b1dfc62c9ff785c901e5ce36a6364adf9478"
+    },
+    "productionBoundary": {
+      "status": "PASS",
+      "assertions": 4,
+      "privateLogSHA256": "530b5cda91582ed0b4ccf3cd247038e09dd7ab94f9aad1daba409c60ac290818"
+    },
+    "fourFileSourceFreeze": "PASS",
+    "productionFixtureProvidersAbsent": "PASS"
+  },
+  "productionCompilation": {
+    "arm64": "PASS",
+    "arm64e": "PASS",
+    "fixtureProvidersExcluded": true,
+    "callerBackendOrPathAllowed": false,
+    "entitlements": {},
+    "signedPrivateProbeSHA256": "50fd53337da7a5788e3f6b7d10cd8cf366ac152f48db3ec02e3ba9c1bf457256"
+  },
+  "physicalDevice": {
+    "model": "iPhone X",
+    "iOS": "16.7.16",
+    "executedArchitecture": "arm64",
+    "status": "PASS",
+    "rootUID": 0,
+    "rootEUID": 0,
+    "mobileUID": 501,
+    "mobileEUID": 501,
+    "nativeRootObservationAssertions": 21,
+    "nativeResults": {
+      "0001 fixed production root observer captures official Instagram installation": "PASS",
+      "0002 immutable private binding is bounded serializable structural data": "PASS",
+      "0003 snapshot binds exact official application without runtime admission": "PASS",
+      "0004 observed installation records a syntactically valid registered UUID": "PASS",
+      "0005 main or embedded executable records bind byte digest and exact regular file identity": "PASS",
+      "0006 main or embedded executable records bind byte digest and exact regular file identity": "PASS",
+      "0007 main or embedded executable records bind byte digest and exact regular file identity": "PASS",
+      "0008 main or embedded executable records bind byte digest and exact regular file identity": "PASS",
+      "0009 main or embedded executable records bind byte digest and exact regular file identity": "PASS",
+      "0010 main or embedded executable records bind byte digest and exact regular file identity": "PASS",
+      "0011 main or embedded executable records bind byte digest and exact regular file identity": "PASS",
+      "0012 main or embedded executable records bind byte digest and exact regular file identity": "PASS",
+      "0013 private installation snapshot fits acceptance bound": "PASS",
+      "0014 fresh registered installation and executable content match original binding": "PASS",
+      "0015 fresh matching does not mutate original observed snapshot": "PASS",
+      "0016 independent full production observation retains exact file and registration identity": "PASS",
+      "0017 safe status is bounded fixed structural data": "PASS",
+      "0018 public descriptions omit private installation paths": "PASS",
+      "0019 registered storage observations remain unverified and inspect no contents": "PASS",
+      "0020 independent actual raw registration matches the explicit system alias normalization": "PASS",
+      "0021 final trusted executable observation still matches after read-only registration audit": "PASS"
+    },
+    "nativePrivateLogSHA256": "d76ac93fe3757e2c132c85423d9a2e6f1d308d39e2bb0f4734e9def1dc19258c",
+    "productionRootFactoryDenial": "PASS",
+    "independentSpecifiedFileContentComparisons": 16,
+    "embeddedExtensionsInventoried": 7,
+    "accountContentsRead": false,
+    "installedOwnerUIChanged": false,
+    "targetLaunchOrDrainRequested": false,
+    "licenseOrRuntimeGrantRequested": false,
+    "exactPrivateDirectoriesRemoved": "PASS",
+    "sixInstalledOwnerPayloadHashesUnchanged": "PASS",
+    "actualRawRegistration": {
+      "bundleURLPrefix": "/private/var/",
+      "canonicalExecutablePrefix": "/var/",
+      "explicitSystemAliasNormalization": "PASS",
+      "rawPathsRecordedPublicly": false
+    }
+  },
+  "bindingContract": {
+    "fixedIdentifier": "com.burbn.instagram",
+    "formatVersion": 1,
+    "rootOnly": true,
+    "mutableRegistrationProviderInProduction": false,
+    "storedParserOrCallerSuppliedReceipt": false,
+    "capturedFiles": "main/embedded-extension executable bytes and their Info.plist files",
+    "immutablePrivateFields": [
+      "bundleIdentifier",
+      "installationUUID",
+      "bundlePath",
+      "registrationFingerprint",
+      "ancestors",
+      "bundleInfo",
+      "mainExecutable",
+      "pluginDirectory",
+      "extensions",
+      "runtimeAccepted:false"
+    ],
+    "ownerUIDs": [
+      0,
+      33
+    ],
+    "groupOtherWritableNodesAllowed": false,
+    "regularFileLinkCount": 1,
+    "nonemptyACLAllowed": false,
+    "cooperativeObservationSeconds": 30,
+    "descriptorHashedBytesMaximum": 2147483648,
+    "perInfoPlistBytesMaximum": 1048576,
+    "perExecutableBytesMaximum": 536870912,
+    "embeddedExtensionMaximum": 128,
+    "privateSnapshotBytesMaximum": 262144,
+    "publisherSignatureVerified": false,
+    "wholeBundleIntegrityVerified": false,
+    "futureLaunchOrLifetimeGrant": false
+  },
+  "registeredStorageMetadataAudit": {
+    "status": "UNVERIFIED",
+    "mainAppRegisteredDataDirectoryMetadata": "UNVERIFIED",
+    "registeredGroupURLCount": 3,
+    "declaredGroupCount": 3,
+    "directoryContentsRead": false,
+    "extensionRegistrationAndDataGroupsAudited": "NOT_RUN",
+    "otherSharedWritersAndBrokersAudited": "NOT_RUN",
+    "signedEntitlementOrPublisherCrossCheck": "NOT_RUN",
+    "newResourcesRegistered": false,
+    "storageOwnershipOrRuntimeBindingAccepted": false
+  },
+  "preservedFailedAttempts": [
+    {
+      "status": "FAIL",
+      "stage": "first host compile",
+      "hostExecution": "NOT_RUN",
+      "reason": "Strict compiler found misleading-indentation warning; corrected before validation."
+    },
+    {
+      "status": "FAIL",
+      "stage": "host immutability assertion",
+      "assertions": 510,
+      "failures": 1,
+      "reason": "Test inferred mutability from NSString class-cluster membership. Actual attempted mutation threw; regression now checks the operation rather than class membership."
+    },
+    {
+      "status": "FAIL",
+      "stage": "first production-host compile",
+      "reason": "Test-only helper was unused without fixture macros. Scoped it to test builds; final strict shipping builds pass."
+    },
+    {
+      "status": "FAIL",
+      "stage": "first physical strict mobile reply validation",
+      "sourceRootFactoryDenial": "PASS",
+      "rootInstallationObservation": "NOT_RUN",
+      "reason": "Private probe boxed pointer logical negation as JSON integer1. Source factory denied UID501 correctly. A fresh probe emits a Boolean; strict driver was preserved and a separate fresh temporary attempt passes.",
+      "exactPrivateCleanup": "PASS",
+      "sixInstalledOwnerPayloadHashesUnchanged": "PASS"
+    }
+  ],
+  "sourceReviewCorrections": [
+    "Repeat final exact PlugIns membership/absence after external registration observations, with pinned metadata/deadline verification. Deterministic late-child and newly appearing PlugIns regressions pass.",
+    "Start cooperative time accounting before registration queries; check on their return and between final queries. Final root context and deadline are rechecked."
+  ],
+  "notRun": [
+    "standalone host /var alias fixture (separate from actual phone canonical-path alias acceptance)",
+    "Apple/Meta publisher or code-signature verification",
+    "whole bundle/framework/dylib/resource integrity",
+    "official extension data/group registrations and complete shared writers/brokers",
+    "registered data/app-group ownership binding and storage provisioning",
+    "source container UUID/configuration/allocation transaction binding to installed target",
+    "current owner UI or mobile allocation/runtime IPC integration",
+    "launch/write/network fences and runtime identity hook application",
+    "automatic safe switching and ongoing session license expiry/revocation",
+    "retained-descriptor/app-group/keychain/prefs/broker isolation",
+    "actual signed-in Instagram account A/B/A",
+    "runnable Facebook/Twitter and proxy transport acceptance",
+    "reboot/crash/power-loss recovery",
+    "fresh customer installer/download/license acceptance",
+    "physical arm64e execution"
+  ],
+  "scopeNotes": [
+    "This immutable object is produced by the fixed production root observer. It is a current registration/file observation, never a transferable grant or lifetime authority. No pairing/license state is read or changed by this read-only module.",
+    "Raw LaunchServices URL/canonical paths accept only the explicit /var to /private/var system alias. Interior symlinks are rejected through descriptor traversal; the old Darwin resolver is a before/after cross-check, not the only authority.",
+    "Captured main and embedded executable/plist bytes are hashed through held descriptors with stable metadata, path/inode, ownership, mode, ACL and link checks. Final relevant extension membership is repeated. Independent shell SHA comparisons validate specified file contents and do not prove descriptor lifetime or process admission.",
+    "Installation UUIDs are distinct semantic namespaces from legacy numeric CIDs and source configuration UUIDs; none is substituted for another.",
+    "The 30-second deadline is cooperative: blocking LaunchServices/regular-file reads cannot be cancelled by this library. Descriptor byte accounting excludes separate bounded legacy-resolver metadata reads. No hard watchdog or synchronous transaction lifetime claim is made.",
+    "Registration plus file digests does not authenticate Apple/Meta publisher signatures or loaded Frameworks/dylibs/resources. Optional non-executable embedded binaries are inventoried only; no extension launch is accepted.",
+    "Only main-app registered data/group URL metadata and declaration counts were observed. Directory contents, other extensions, shared writers and signed entitlements were not audited. The metadata remains UNVERIFIED and grants no storage authority.",
+    "Owner app/helpers/daemon/engine/presentation were not installed or changed. Private app installation identifiers/paths/digests, group names, raw reports and tooling remain outside Git."
+  ],
+  "sourcesSHA256": {
+    "lucid/Switching/LBXInstalledApplicationBinding.h": "d607bbaef30b392dbaa40a62252873fcca15df1425f377ba968ee963b584713a",
+    "lucid/Switching/LBXInstalledApplicationBinding.m": "b05c2ffcd0b1f756fd3eba2f9fadeff55416316231e433536a47b51ea89e5e5b",
+    "lucid/tests/installed_application_binding.m": "9347ed3ebeab2cd509f01fadf86ec9b8b3f71ad8931ebdf182666f1c5a48f200",
+    "lucid/tests/test_installed_application_binding.sh": "f610602234f71b3d51b9dec33092883f2a3f3e3cd6a672924efdc00e835b6b40"
+  },
+  "productionSourceClosureSHA256": {
+    "lucid/Switching/LBXDarwinDrainBackend.h": "bc30c2a9b426e687c0747fd530d137f7413815f481bfa40be0edb705f4c67b03",
+    "lucid/Switching/LBXDarwinDrainBackend.m": "f38dc41e6f0d6e65ddb6bb4c77f5c1c732abe11c1abc2f1d2b2e1b5214e7e5da",
+    "lucid/Switching/LBXInstalledApplicationBinding.h": "d607bbaef30b392dbaa40a62252873fcca15df1425f377ba968ee963b584713a",
+    "lucid/Switching/LBXInstalledApplicationBinding.m": "b05c2ffcd0b1f756fd3eba2f9fadeff55416316231e433536a47b51ea89e5e5b",
+    "lucid/Switching/LBXManagedApplications.def": "ed091393567df59f5c4bf239dcdebdc35c2dd70d39ceb23045ea435eba3e8f39",
+    "lucid/Switching/LBXManagedApplications.h": "1a143502bb2a3e59bbe88ba22bd46c37faf3ed2a4d1199d84010c8898d932981",
+    "lucid/Switching/LBXManagedApplications.m": "dbd31dbe4266b1c0fcbb336972541ef4b6f76d3e77d4c707008e4f58da4750af",
+    "lucid/Switching/LBXProcessDrain.h": "4d1947fecec1da0ba1725626f19eb6b6b28b1b0844d73dfaa35214533bba49be",
+    "lucid/Switching/LBXProcessDrain.m": "7e99c0c7ecea9063d2953383018b6b453862d112d340bb90a1ab01158b5ae517",
+    "shared/RBXProc.h": "988131ea103712173f484ff1226477c141b5ab21a1d232241210941010fe410e",
+    "shared/RBXProcessIdentity.h": "49867f126d4004dae91ba8f6902dfa4303e09ab90f20763b0bf57430179dcc57",
+    "shared/RBXProcessIdentity.m": "824117806f274f96fb3d5e29c38f60361754dbd10403af96de27b3ab0cca16ab",
+    "shared/RBXStorageGate.h": "95e77751b8b78276d6ef34699176eab2df3243b902f494d5a23cfb257d7fe9ac"
+  }
+}

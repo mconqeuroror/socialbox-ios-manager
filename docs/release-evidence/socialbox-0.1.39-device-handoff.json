@@ -1,0 +1,416 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-09-20",
+  "version": "0.1.39",
+  "sourceCommit": "e26932902ea5ae5bd754919397d0ff02dd2b6e9a",
+  "branch": "feat/socialbox-multiapp",
+  "merged": false,
+  "productionPublished": false,
+  "overallAcceptance": "BLOCKED",
+  "packages": [
+    {
+      "version": "0.1.39",
+      "filename": "debs/com.redditbox_0.1.39_iphoneos-arm64.deb",
+      "sha256": "eb65889e8435116ade435e5f8eb4c7a5a1b40a743faad66d364e4317ae00f93e",
+      "size": 2301392,
+      "control": {
+        "Package": "com.redditbox",
+        "Name": "RedditBox",
+        "Depends": "mobilesubstrate, firmware (>= 15.0), ldid, ai.akemi.appinst (>= 2.1.1), zip, ai.akemi.appsyncunified, uikittools (>= 2.1.6)",
+        "Description": "Multi-account containers + anti-fingerprint system for Reddit (palera1n rootless/rootful and Dopamine rootless)",
+        "Maintainer": "PC",
+        "Author": "PC",
+        "Section": "Tweaks",
+        "Architecture": "iphoneos-arm64",
+        "Version": "0.1.39",
+        "Installed-Size": "6308"
+      },
+      "release": {
+        "version": "0.1.39",
+        "schemaVersion": 2,
+        "signingContractHash": "9cb5239518cd4a98cd6dd98f2b8e86315d399b4c01a789c183b40ac77b54eda0",
+        "requiresMDMReadoption": true,
+        "packageScheme": "rootless",
+        "packageArchitecture": "iphoneos-arm64",
+        "installPrefix": "/var/jb"
+      }
+    },
+    {
+      "version": "0.1.39",
+      "filename": "debs/com.redditbox_0.1.39_iphoneos-arm.deb",
+      "sha256": "b4e99966c7ef48b35a9671c5b2350d1be09fcb008e8251abe9b2bf793d00c66f",
+      "size": 2295484,
+      "control": {
+        "Package": "com.redditbox",
+        "Name": "RedditBox",
+        "Depends": "mobilesubstrate, firmware (>= 15.0), ldid, ai.akemi.appinst (>= 2.1.1), zip, ai.akemi.appsyncunified, uikittools (>= 2.1.6)",
+        "Description": "Multi-account containers + anti-fingerprint system for Reddit (palera1n rootless/rootful and Dopamine rootless)",
+        "Maintainer": "PC",
+        "Author": "PC",
+        "Section": "Tweaks",
+        "Architecture": "iphoneos-arm",
+        "Version": "0.1.39",
+        "Installed-Size": "6308"
+      },
+      "release": {
+        "version": "0.1.39",
+        "schemaVersion": 2,
+        "signingContractHash": "db6f87d376b2d123fc282e5ff3e206665684368ae67156802f5bc3330d6c984e",
+        "requiresMDMReadoption": true,
+        "packageScheme": "rootful",
+        "packageArchitecture": "iphoneos-arm",
+        "installPrefix": ""
+      }
+    }
+  ],
+  "builds": [
+    {
+      "variant": "rootless",
+      "status": "PASS",
+      "exitCode": 0,
+      "logSHA256": "8e28b1da96e8bcd370feaa27fcd836a991f6f0fc67d44c005187cf9f91ac0145",
+      "namedTestEntrypoints": 136,
+      "archive": "PASS",
+      "ldidPackageBuild": "PASS"
+    },
+    {
+      "variant": "rootful",
+      "status": "PASS",
+      "exitCode": 0,
+      "logSHA256": "f965efea9aac99abd28ef24881abe4a6f74c6f62dedcdbbe93f1f5825341f7c9",
+      "namedTestEntrypoints": 136,
+      "archive": "PASS",
+      "ldidPackageBuild": "PASS"
+    }
+  ],
+  "testEntrypoints": [
+    "tools/test_build_version.py",
+    "tools/test_package_variants.py",
+    "tools/test_apt_release.py",
+    "tools/test_facebook_binary_audit.py",
+    "tools/test_app_bundle_policy.sh",
+    "tools/test_app_runtime.sh",
+    "tools/test_facebook_user_agent.py",
+    "tools/test_facebook_user_agent_hooks.py",
+    "tools/test_facebook_storage_policy.sh",
+    "tools/test_facebook_private_group_store.sh",
+    "tools/test_facebook_storage_hooks.py",
+    "tools/test_app_profile.py",
+    "tools/test_clone_profile_ownership.py",
+    "tools/test_app_registry.sh",
+    "tools/test_workspace_selection.sh",
+    "tools/test_workspace_dispatch.py",
+    "tools/test_app_keychain_policy.sh",
+    "tools/test_app_keychain_hooks.sh",
+    "tools/test_app_keychain_entitlements.sh",
+    "tools/test_app_process.sh",
+    "tools/test_app_process_coordinator.sh",
+    "tools/test_app_source.py",
+    "tools/test_app_mdm.sh",
+    "tools/test_app_scope.sh",
+    "tools/test_launcher_multiapp.py",
+    "tools/test_workspace_presentation.py",
+    "tools/test_settings_presentation.py",
+    "tools/test_apt_metadata_refresh.py",
+    "tools/test_clone_architecture.py",
+    "tools/test_identity_editor.py",
+    "tools/test_location_screen.sh",
+    "tools/test_clone_visibility_metadata.py",
+    "tools/test_installer_evidence.py",
+    "tools/test_app_install_recovery.py",
+    "tools/test_app_removal_identity.py",
+    "tools/test_app_deletion_flow.py",
+    "tools/test_app_deletion_targets.py",
+    "tools/test_app_deletion_closure.py",
+    "tools/test_app_launch_flow.py",
+    "tools/test_app_gate_control.py",
+    "tools/test_clone_gate_writer.py",
+    "tools/test_app_gate_readiness.py",
+    "tools/test_app_global_recovery.py",
+    "tools/test_app_maintenance_closure.py",
+    "tools/test_app_replacement_backend.py",
+    "tools/test_identity_manual_inputs.py",
+    "tools/test_automatic_identity.py",
+    "tools/test_creation_prepare.py",
+    "tools/test_creation_dispatch.py",
+    "tools/test_creation_source_binding.py",
+    "tools/test_creation_draft_store.sh",
+    "tools/test_passcode_removal.py",
+    "tools/test_passcode_store.sh",
+    "tools/test_identity_user_agent.py",
+    "tools/test_app_version_settings.py",
+    "tools/test_creation_defaults.py",
+    "tools/test_device_catalog_data.py",
+    "tools/test_device_version_hook.py",
+    "tools/test_sensor_startup.py",
+    "tools/test_clone_support_directory.py",
+    "tools/test_storage_gate.sh",
+    "tools/test_storage_access.sh",
+    "tools/test_staged_executable.sh",
+    "tools/test_identity_choices.py",
+    "tools/test_launcher_architecture.py",
+    "tests/test_replacement_architecture.py",
+    "tools/test_firewall_policy.sh",
+    "tools/test_pf_policy_plan.sh",
+    "tools/test_request_queue.sh",
+    "tools/test_secure_config.sh",
+    "tools/test_identity_draft_store.sh",
+    "tools/test_cloud_vault_store.sh",
+    "tools/test_cloud_vault_bridge.py",
+    "tools/test_cloud_app_admission.py",
+    "tools/test_cloud_assignment_closure.py",
+    "tools/test_preinstall.py",
+    "tools/test_postinstall.py",
+    "tools/test_macho_probe.py",
+    "tools/test_request_budgets.py",
+    "tools/test_proxy_library.sh",
+    "tools/test_proxy_import.sh",
+    "tools/test_proxy_configuration.py",
+    "tools/test_proxy_redirect_policy.py",
+    "tools/test_proxy_region.sh",
+    "tools/test_proxy_region_transport.py",
+    "tools/test_rotation_secrets.sh",
+    "tools/test_backup_snapshot.sh",
+    "tools/test_backup_identity.py",
+    "tools/test_app_backup_flow.py",
+    "tools/test_app_backup_transaction.py",
+    "tools/test_backup_restore_cleanup.py",
+    "tools/test_backup_archive.py",
+    "tools/test_identity_freeze.py",
+    "tools/test_smoke_log_order.py",
+    "tools/test_sign_firewall_app.py",
+    "tools/test_keychain_cleaner.sh",
+    "tools/test_keychain_sync.sh",
+    "tools/test_clone_acceptance.sh",
+    "tools/test_isolation_sentinel.sh",
+    "tools/test_launch_safety.sh",
+    "tools/test_proxy_route_transport.py",
+    "tools/test_acceptance_checks.sh",
+    "tools/test_operator_wording.sh",
+    "tools/test_wizard_draft.sh",
+    "tools/test_device_acceptance_ssh.py",
+    "tools/test_device_acceptance_canaries.py",
+    "tools/test_deletion_journal.sh",
+    "tools/test_profile_metadata.sh",
+    "tools/test_profile_rename.py",
+    "tests/test_replacement.sh",
+    "tools/test_profile_metadata.py",
+    "tools/test_account_status_browser.py",
+    "tools/test_license_key.py",
+    "tools/test_license_screen.py",
+    "tools/test_license_presentation.py",
+    "tools/test_license_presentation.sh",
+    "tests/test_license_token.sh",
+    "tests/test_license_architecture.py",
+    "tests/test_data_schema.sh",
+    "tests/test_data_schema_architecture.py",
+    "tools/test_update_startup.py",
+    "tools/test_device_catalog.sh",
+    "tools/test_fingerprint_registry.sh",
+    "tools/test_operation_context.sh",
+    "tools/test_memory_budget.sh",
+    "tools/test_request_deadlines.sh",
+    "tools/test_bounded_process.sh",
+    "tools/test_service_lifetime.sh",
+    "tools/test_socket_guard.sh",
+    "tools/test_exception_port_guard.sh",
+    "tools/test_hook_readiness.sh",
+    "tools/test_optional_ios_hooks.py",
+    "tools/test_http_proxy.sh",
+    "tools/test_reddit_payload.sh",
+    "tools/test_leak_audit.py",
+    "tools/test_leak_surface.py"
+  ],
+  "staticCheck": {
+    "status": "PASS",
+    "logSHA256": "acccbbcefeea821cab93d8dee6203599f544e2924bf62fb2e3a335379a23f0a6"
+  },
+  "uiFixtures": {
+    "rootLicense": {
+      "status": "PASS",
+      "checks": 49,
+      "resultSHA256": "fd1f1910fb706de1ec931a95f815e75f7647648c8d9f30225236ba01e9efae9f",
+      "scope": "Actual UIKit; synthetic data and inert IPC; no physical-device isolation claim"
+    },
+    "workspace": {
+      "status": "PASS",
+      "checks": 240,
+      "resultSHA256": "7176f0a96706d91b500fe97a5fc5b97c83014a49a726b29bcc5ca7aedab1b679",
+      "scope": "Actual UIKit; synthetic data and inert IPC; no physical-device isolation claim"
+    },
+    "mapWithSoftwareKeyboard": {
+      "status": "PASS",
+      "checks": 240,
+      "resultSHA256": "0cba34b551aaab7dfd9e1735bdbea57d4c21e50e09b27571bea15569d9c63fa3",
+      "scope": "Actual UIKit; synthetic data and inert IPC; no physical-device isolation claim"
+    }
+  },
+  "focusedNativeTests": {
+    "licenseScreen": 33,
+    "locationAndScreenGeometry": 48,
+    "offlinePFModel": 596,
+    "pfSanitizers": "ASan/UBSan PASS; kernel enforcement NOT_RUN"
+  },
+  "regressions": {
+    "licenseRootBaseline": {
+      "commit": "0b4c46f",
+      "checks": 5,
+      "failures": 5,
+      "resultSHA256": "00a441b5d3fd847a429d6661e9e0a199ea3a8b7a10eee897dacd08f6ffe454c0"
+    },
+    "keyboardBaseline": {
+      "checks": 238,
+      "failures": 1,
+      "resultSHA256": "6c52529d328f49bd39c5bcb6b8e58a863ad991d496e5542e85b3eab20e9d26e2"
+    }
+  },
+  "licensePin": {
+    "unchanged": true,
+    "headerSHA256": "d32dd18c5494b51d0f162011c603da97c47a029a199c4600ae1cc29f64b39b4d",
+    "privateSignerChanged": false
+  },
+  "device": {
+    "model": "iPhone10,6",
+    "iOSVersion": "16.7.16",
+    "jailbreak": "palera1n rootless",
+    "installedVersion": "0.1.39",
+    "packageManagerExitCode": 0,
+    "packageStatus": "install ok installed",
+    "installLogSHA256": "01ae6988c70b0275deba114b1656344d8ad6a0b7430a5666c976f482345651fb",
+    "installedPayloadFiles": [
+      {
+        "path": "/var/jb/Applications/RedditBox.app/Info.plist",
+        "sha256": "f44bc1970e335b1f96eebecc1917942b7d213f01cea295fc289ae1ca376e006c",
+        "matchesPackage": true
+      },
+      {
+        "path": "/var/jb/Applications/RedditBox.app/RedditBox",
+        "sha256": "b85ff56ae8c9892b6741c2f7fdce7ec21aa2dbe3a7488fa846b09f74f454961d",
+        "matchesPackage": true
+      },
+      {
+        "path": "/var/jb/Applications/RedditBox.app/SocialBoxIcon29@2x.png",
+        "sha256": "62d63ed2d61bb8d6377ad66eedbe1d74e08cccd9303b318ba739d06f92c4def3",
+        "matchesPackage": true
+      },
+      {
+        "path": "/var/jb/Applications/RedditBox.app/SocialBoxIcon29@3x.png",
+        "sha256": "6fe710ff04b57297c866eaf2c64246d39be366f79ec027a53b3883506e5378f9",
+        "matchesPackage": true
+      },
+      {
+        "path": "/var/jb/Applications/RedditBox.app/SocialBoxIcon40@2x.png",
+        "sha256": "185df7cec98cbf7d08db53b18feae9670f9df8a8dea480596154e85c427d9768",
+        "matchesPackage": true
+      },
+      {
+        "path": "/var/jb/Applications/RedditBox.app/SocialBoxIcon40@3x.png",
+        "sha256": "6a9b550f575921170936b364a6a454558916d43f94bd8969fcf479f5596cd72b",
+        "matchesPackage": true
+      },
+      {
+        "path": "/var/jb/Applications/RedditBox.app/SocialBoxIcon60@2x.png",
+        "sha256": "6a9b550f575921170936b364a6a454558916d43f94bd8969fcf479f5596cd72b",
+        "matchesPackage": true
+      },
+      {
+        "path": "/var/jb/Applications/RedditBox.app/SocialBoxIcon60@3x.png",
+        "sha256": "2bc6b233460e87e3fb9e6bd05e266d239f546e8a8f009b1493b301c1625c8feb",
+        "matchesPackage": true
+      },
+      {
+        "path": "/var/jb/Applications/RedditBoxFirewall.app/PlugIns/PacketTunnel.appex/PacketTunnel",
+        "sha256": "438282b77a2bc0ee6efb60f270d87998ab15927496078f2af248421cc09f5637",
+        "matchesPackage": true
+      },
+      {
+        "path": "/var/jb/Applications/RedditBoxFirewall.app/RedditBoxFirewall",
+        "sha256": "8a225d56313adf225abd05ac7cd526e00e7a030e92d1acc8b4a3b2dd8c540bbd",
+        "matchesPackage": true
+      },
+      {
+        "path": "/var/jb/Library/MobileSubstrate/DynamicLibraries/RedditBox.dylib",
+        "sha256": "ec89d99f85b5350a4055b036e342481356f519f09318a5d1564b1f997bfb4fee",
+        "matchesPackage": true
+      },
+      {
+        "path": "/var/jb/Library/PreferenceBundles/RedditBoxPrefs.bundle/RedditBoxPrefs",
+        "sha256": "f86c2295979055c3003b0390bb451b2f43991cea91e9293ff818ae41bee13399",
+        "matchesPackage": true
+      },
+      {
+        "path": "/var/jb/usr/bin/redditboxd",
+        "sha256": "0192a645848f68bd7542000ebc158946d03267a26cd8707e4489b93d19d7e08d",
+        "matchesPackage": true
+      },
+      {
+        "path": "/var/jb/usr/libexec/redditbox-keychain-cleaner",
+        "sha256": "aceafc1b99d9cdf742ddefbfaa5b66efda0f02cb04d9aa68bd6b9961f2fae9e2",
+        "matchesPackage": true
+      }
+    ],
+    "daemon": {
+      "uid": 0,
+      "pid": 5759,
+      "state": "running"
+    },
+    "startupRecovery": "PASS",
+    "networkState": "closed",
+    "firewallScope": "none",
+    "activeContainer": false,
+    "unfinishedOperation": false,
+    "containerCount": 0,
+    "sourceMainExecutableAndInfoHashesUnchanged": true,
+    "sources": {
+      "facebook": {
+        "found": 1,
+        "decrypted": true,
+        "version": "578.1.0",
+        "location": "private-cache"
+      },
+      "reddit": {
+        "found": 1,
+        "decrypted": true,
+        "version": "2026.36.0",
+        "location": "private-cache"
+      }
+    },
+    "licenseStatus": "activation-required",
+    "serverOrigin": "https://redditspoof.vercel.app",
+    "postinstallLaunch": {
+      "status": "NOT_RUN",
+      "reason": "device_locked",
+      "lockStatusKnown": true
+    },
+    "licenseHostConnectivity": {
+      "status": "FAIL",
+      "curlExitCode": 6,
+      "reason": "Could not resolve host redditspoof.vercel.app; no proxy-credential diagnosis"
+    },
+    "rootfulPhysicalInstall": "NOT_RUN",
+    "temporaryDiagnosticHelpersRemoved": true
+  },
+  "acceptance": {
+    "physicalUI": "NOT_RUN",
+    "activation": "BLOCKED: existing key and phone connectivity required",
+    "facebookIsolation": "BLOCKED: prior in-process acceptance failures remain open",
+    "noMDMNetworkEnforcement": "NOT_IMPLEMENTED: offline model only; production requires managed per-app provider",
+    "physicalFortyContainers": "NOT_RUN",
+    "packetCapture": "NOT_RUN",
+    "proxyFailureAndNetworkChange": "NOT_RUN",
+    "rebootAcceptance": "NOT_RUN",
+    "cloudCrossDeviceRestore": "NOT_RUN"
+  },
+  "leakSurface": {
+    "rows": 382,
+    "shippedSourceFiles": 386,
+    "sourceInventorySHA256": "760e509f84eddb7679abd130911fff5c1bafb4879bef9b7b4aabba52092cd81b",
+    "existingGapsClosed": false
+  },
+  "privateArtifacts": {
+    "licenseRecording": "private-device/license-gate-2026-09-20/license-gate-verified.mp4",
+    "licenseScreens": "private-device/license-gate-2026-09-20/verified/",
+    "mapScreens": "private-device/license-gate-2026-09-20/map-keyboard/",
+    "recordingScope": "Simulator only; no real keys, logins or physical iPhone recording"
+  }
+}

@@ -1,0 +1,169 @@
+{
+  "version": "0.1.17",
+  "filename": "debs/com.redditbox_0.1.17_iphoneos-arm64.deb",
+  "sha256": "5b34a170b96cad9275c4298e62548b5c1f72524890253933e6358d263c80692a",
+  "size": 1768222,
+  "control": {
+    "Package": "com.redditbox",
+    "Name": "RedditBox",
+    "Depends": "mobilesubstrate, firmware (>= 15.0), ldid, ai.akemi.appinst (>= 2.1.1), zip, ai.akemi.appsyncunified, uikittools (>= 2.1.6)",
+    "Description": "Multi-account containers + anti-fingerprint system for Reddit (palera1n rootless/rootful and Dopamine rootless)",
+    "Maintainer": "PC",
+    "Author": "PC",
+    "Section": "Tweaks",
+    "Architecture": "iphoneos-arm64",
+    "Version": "0.1.17",
+    "Installed-Size": "5096"
+  },
+  "release": {
+    "version": "0.1.17",
+    "schemaVersion": 2,
+    "signingContractHash": "6760ccd2f0abbe4e127ee14e759fb91cd6ca80780dacc8383b5517cacc111991",
+    "requiresMDMReadoption": true,
+    "packageScheme": "rootless",
+    "packageArchitecture": "iphoneos-arm64",
+    "installPrefix": "/var/jb"
+  },
+  "sourceCommit": "0b3dfcc",
+  "machOComponents": [
+    {
+      "path": "var/jb/Applications/RedditBox.app/RedditBox",
+      "architectures": [
+        "arm64",
+        "arm64e"
+      ],
+      "sha256": "301ca04b9afa3ddddeaccbbb940a1fce4200e36db083d48fb13d97a4b7815b56",
+      "slices": [
+        {
+          "architecture": "arm64",
+          "entitlementKeys": [
+            "application-identifier",
+            "keychain-access-groups"
+          ]
+        },
+        {
+          "architecture": "arm64e",
+          "entitlementKeys": [
+            "application-identifier",
+            "keychain-access-groups"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "var/jb/Applications/RedditBoxFirewall.app/PlugIns/PacketTunnel.appex/PacketTunnel",
+      "architectures": [
+        "arm64"
+      ],
+      "sha256": "0aa82e30e992403b331e813ce052d50ab8100f3a2c28cba778915be1e7a9c801",
+      "slices": [
+        {
+          "architecture": "arm64",
+          "entitlementKeys": [
+            "application-identifier",
+            "com.apple.developer.networking.networkextension",
+            "com.apple.developer.team-identifier",
+            "com.apple.security.application-groups"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "var/jb/Applications/RedditBoxFirewall.app/RedditBoxFirewall",
+      "architectures": [
+        "arm64"
+      ],
+      "sha256": "85e1bd4b2fc4b458be2afe8ee84ece5fccc5890078553fa0e9c85424444c97d7",
+      "slices": [
+        {
+          "architecture": "arm64",
+          "entitlementKeys": [
+            "application-identifier",
+            "com.apple.developer.networking.networkextension",
+            "com.apple.developer.team-identifier",
+            "com.apple.security.application-groups"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "var/jb/Library/MobileSubstrate/DynamicLibraries/RedditBox.dylib",
+      "architectures": [
+        "arm64",
+        "arm64e"
+      ],
+      "sha256": "3c9e7ce662e10ad68ef6c1e07e4630917620b6314918b8d0016cb0ae7ab9a1c7",
+      "slices": [
+        {
+          "architecture": "arm64",
+          "entitlementKeys": []
+        },
+        {
+          "architecture": "arm64e",
+          "entitlementKeys": []
+        }
+      ]
+    },
+    {
+      "path": "var/jb/usr/bin/redditboxd",
+      "architectures": [
+        "arm64",
+        "arm64e"
+      ],
+      "sha256": "0c7f425674e899571793db6bbc3623e6043b39f7697037e7d54e66a5757af989",
+      "slices": [
+        {
+          "architecture": "arm64",
+          "entitlementKeys": [
+            "application-identifier",
+            "com.apple.private.mobileinstall.allowedSPI",
+            "com.apple.private.uninstall.deletion",
+            "com.apple.security.exception.mach-lookup.global-name",
+            "keychain-access-groups",
+            "platform-application"
+          ]
+        },
+        {
+          "architecture": "arm64e",
+          "entitlementKeys": [
+            "application-identifier",
+            "com.apple.private.mobileinstall.allowedSPI",
+            "com.apple.private.uninstall.deletion",
+            "com.apple.security.exception.mach-lookup.global-name",
+            "keychain-access-groups",
+            "platform-application"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "var/jb/usr/libexec/redditbox-keychain-cleaner",
+      "architectures": [
+        "arm64",
+        "arm64e"
+      ],
+      "sha256": "276e5473285869bd4596928b6e340e92f0824488b5bbb54c7afdb8c7afbcb7af",
+      "slices": [
+        {
+          "architecture": "arm64",
+          "entitlementKeys": []
+        },
+        {
+          "architecture": "arm64e",
+          "entitlementKeys": []
+        }
+      ]
+    }
+  ],
+  "recordedAtUTC": "2026-09-13T23:38:36.179527+00:00",
+  "distribution": "Local rootless test package; not installed or published to production.",
+  "licensePin": {
+    "publicKeyID": "b2c5d4176c727107c9826ad69386d4d65f90920074981bd842127d6b22add6e9",
+    "matchesExistingDeploymentPublicPEM": true,
+    "publicKeyReplaced": false,
+    "embeddedInEveryDaemonSlice": true
+  },
+  "entitlementKeySetsMatch0_1_16": true,
+  "xcode": "26.6 (17F113)",
+  "entitlementValuesMatch0_1_16": true
+}

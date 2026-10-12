@@ -1,0 +1,137 @@
+{
+  "schemaVersion": 1,
+  "unit": 32,
+  "kind": "containers-progress-visual-change",
+  "recordedAt": "2026-10-01T18:16:38.873844+00:00",
+  "status": "PASS_SOURCE_HOST_UI_NOT_INSTALLED",
+  "clientDeliveryReady": false,
+  "customerArtifactReleased": false,
+  "customerCodeIssued": false,
+  "userRequest": "Replace orange Doritos container-switch animation and color.",
+  "scope": {
+    "visual": "Cool blue rgb(.28,.65,1) rotating circular arc and subtle expanding halo; graphite card. Reduce Motion retains a static ring.",
+    "integration": "Hook only inherited doritos_showLoadingWithMessage: on exact _Xc9m; original called once first. Strict current metadata/class/getter IMP/ABI and same-window inert card/spinner/label shape, proposed artwork containment/no label intersection. Mismatch leaves original visuals.",
+    "shared": "Original Containers uses this loader for switch and other operations; change is shared Containers progress artwork, not uniquely a switch-only effect.",
+    "preserved": "Original overlay, spinner animation state/constraints, live label/messages, timer, update and asynchronous hide/completion remain original. No original switch/helper/identity/license/admission or account operation is invoked/replaced.",
+    "limits": "Static retained binary observation and synthetic UIKit, not actual pinned owner rendering/switch execution or physical touch. Instantaneous cooperative UI guards; no runtime/isolation/permission lifetime authority."
+  },
+  "staticBinding": {
+    "originalManagerSHA256": "e230dab07690e30c292962a3c0a3ea8301f9532aaa583a7209fdf33142552dd0",
+    "originalManagerSize": 9490320,
+    "show": {
+      "address": "0x100223568",
+      "encoding": "v24@0:8@16"
+    },
+    "overlayGetter": {
+      "address": "0x100223094",
+      "encoding": "@16@0:8"
+    },
+    "labelGetter": {
+      "address": "0x100223104",
+      "encoding": "@16@0:8"
+    },
+    "update": "0x100223ce4",
+    "hide": "0x100223d78",
+    "switchCaller": "0x100111358 calls show stub0x10034ac80",
+    "originalColor": "_Xth1::primaryColor0x10022415c rgba(1,.584,0,1)",
+    "privateMetadataSHA256": "35af2f1e955dd350a1376759c4e023a699e383f1dc1ef877510548cab45dc95e",
+    "privateDecompilationSHA256": "1b5cb98498c37f04cfa7283b1872d46543e822387935afa97fe0a0225e473c48",
+    "originalProgramExecuted": false
+  },
+  "focused": {
+    "status": "PASS",
+    "assertions": 33,
+    "quotedRepositoryInputs": 60,
+    "sourceStableCurrent": true,
+    "cases": [
+      "Original once-first/inherited show, unchanged update/hide implementations",
+      "Actual synthetic timer/label and asynchronous hide-completion preservation",
+      "Same overlay/glyph/timer/constraints across repeat show; fresh recreated overlay",
+      "New visible ring animations, direct synthetic Reduce Motion stop/resume, detach cleanup",
+      "Foreign getter pre/post installation, unknown metadata/controller/subclass",
+      "Extra control/interactive label/gesture-bearing card/compact clipping refuse without concealment",
+      "320-point viewport containment and zero synthetic licensing/metadata requests"
+    ],
+    "reportSHA256": "584097921d61051086a8a2b54cfb02e42c19fd2c9af1cee279e431bc3dc2f3a8",
+    "limits": "Root-authored inert inherited loader with actual UIKit/source. Direct fixture reduced-motion parameter, not physical accessibility setting; missing/wrong ABI and off-main notification dispatch reviewed in source only. Label-overlap rejection is source-reviewed, with clipping exercised separately."
+  },
+  "regressions": {
+    "presentationAssertions": 242,
+    "quotedRepositoryInputs": 60,
+    "sourceStableCurrent": true,
+    "reportSHA256": "0837b006bf2f626300ede307bc6aba7f5eb9778741c2e7343b00ad9e61ab4b45",
+    "builderMethods": 36,
+    "builderDirectInputsStable": {
+      "tools/test_socialbox_recovered.py": "f80186098c5766f66c59444c386a7e0787105e7ec7d5cc1c7efc564826fe1fb2",
+      "scripts/build-socialbox-recovered.py": "a6cce158644c06d9f2c4bc845c916e9be56c16da163a162a1f854ee7978d252f"
+    },
+    "builderInputScope": "Two directly edited builder/test files stable; not full imported Python graph.",
+    "builderReportSHA256": "4472f7d0ae540e68bf2e3e1cc2139614e79955162637daea135eed98133f3613",
+    "totalAssertionsAndMethods": 311
+  },
+  "production": {
+    "status": "PASS",
+    "architectures": [
+      "arm64",
+      "arm64e"
+    ],
+    "quotedRepositoryInputs": 71,
+    "sourceStableCurrent": true,
+    "overlaySHA256": "9b1055f17ad4ad2cfdded6afd6356f56f4ee92cc14707fb126976f9e1076c447",
+    "strictMacAdHocSignaturePerSlice": "PASS",
+    "emptyEntitlementsPerSlice": "PASS",
+    "progressInstallerPresent": "PASS",
+    "fixtureProvidersAbsent": "PASS",
+    "verificationSHA256": "ca3d422effcd44ce455c61dd3f568d9a5cf498f761beaddd5f0f37f50363c8a0",
+    "buildReportSHA256": "6bf99f75d04ea0f54157c71bc4b67999a9b9f3964413c5d0d675c44c909639be",
+    "publisherDeviceTrust": "NOT_RUN",
+    "ownerInstallation": "NOT_RUN",
+    "limits": "Host ad-hoc integrity only. SDK/Theos/compiler/OS/toolchain excluded from repository snapshot. No original or licensing service/installer rebuilt/installed by Unit32.",
+    "independentReview": "Read-only agent review of current production/build-wrapper/fixture source and exact retained graph/artifact/report hashes PASS. Root invoked the separate verifier inline through the tool; no pre-run persisted verifier source or raw tool journals are retained. Independent agent review does not claim to inspect that inline execution/error handling."
+  },
+  "retainedFailure": {
+    "status": "FAIL_RETAINED",
+    "builderMethods": 36,
+    "failures": 2,
+    "errors": 2,
+    "reason": "Synthetic nm fixture missed new required export; correct production refusal preceded later fixture checks. NEW attempt fixes synthetic symbol inventory and exercises missing installer/new fixture provider. No production check relaxed.",
+    "reportSHA256": "29fd22c478eaf74b9df8611e249699fcbdd177f075b68287457336b9876626b3"
+  },
+  "preview": {
+    "kind": "Synthetic UIKit original-shaped loader preview, not owner screenshot",
+    "sha256": "ad64d2393f06e8ef9693acf333090508ccb1243500bdaeea408d3eadf10b4f51",
+    "accountData": false
+  },
+  "phone": {
+    "ownerInstallation": "NOT_RUN",
+    "actualAnimation": "NOT_RUN",
+    "effects": false,
+    "newLicense": false,
+    "accountsRead": false,
+    "connection": "Prior fresh Unit31 read-only inspection FAIL_AUTHENTICATION255; restoration request pending, not repeated or rerun.",
+    "installedOverlayUnchanged": "a0423c7c92dbbe49b700bce7605fa7a9edb9e1d2cf5d70bb9d658137f78972d8"
+  },
+  "notRun": [
+    "Owner phone normal/shared progress visual acceptance",
+    "Physical reduced motion, gestures and interruption",
+    "Actual switch/runtime/isolation/recovery/accounts/proxy",
+    "Default activation/customer provisioning/package/download"
+  ],
+  "sourceSHA256": {
+    "lucid/Presentation/SBSwitchProgress.h": "39ed2ecae3cbcd8df4cdc1eefff7acb643d69e74526e9cbc7af1a0f92dd0edd7",
+    "lucid/Presentation/SBSwitchProgress.m": "a2caaa4c8b0d55591b31691234528509468b03716611b6ea5ca0b3e5026101de",
+    "lucid/Presentation/LBXPresentation.m": "24ae8e4ac67ce927c3b288371adefb131fa78f78d11e4e7bb1138098894d4837",
+    "lucid/Presentation/Tests/run_simulator.py": "6ff782eb570027ba880ce171ac795ece4c1fb40190558b76d4571652976bfa62",
+    "lucid/Presentation/Tests/switch_progress_fixture.m": "6765fc3c6ba0362120b138c77e1a94d11bfda04cd1eff821b14d6e1255c0f980",
+    "scripts/build-socialbox-recovered.py": "a6cce158644c06d9f2c4bc845c916e9be56c16da163a162a1f854ee7978d252f",
+    "tools/test_socialbox_recovered.py": "f80186098c5766f66c59444c386a7e0787105e7ec7d5cc1c7efc564826fe1fb2"
+  },
+  "governance": "Unit32 must declare ADOPT-001/ADOPT-002 and pass its own later-range gate before export. Unit30 missing trailer/full historical gate FAIL remains unchanged.",
+  "retainedGovernanceFailure": {
+    "status": "FAIL_STALE_ANCHOR_RETAINED",
+    "row": "ADOPT-001",
+    "oldLine": 319,
+    "currentLine": 322,
+    "reason": "New optional visual import/install moved unchanged declaration; checker refused stale documentation anchor. Exact unique anchor refreshed; checker/production unchanged."
+  }
+}

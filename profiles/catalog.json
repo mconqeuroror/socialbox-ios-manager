@@ -1,0 +1,1095 @@
+{
+  "models": {
+    "iPhone14,2": {
+      "marketingName": "iPhone 13 Pro",
+      "modelBase": "MLPF",
+      "hwModelStr": "D63AP",
+      "regulatoryModel": "A2483",
+      "boardUdidPrefix": "00008101",
+      "chip": "A15",
+      "ramBytes": "6442450944",
+      "screen": {
+        "w": "1170",
+        "h": "2532",
+        "scale": "3",
+        "fps": "120"
+      },
+      "tac": "35672811",
+      "iosVersions": [
+        "26.6.2",
+        "26.6.1",
+        "26.6",
+        "26.5.2",
+        "26.5",
+        "18.7.8",
+        "18.6.2",
+        "17.5.1",
+        "17.4.1"
+      ],
+      "minimumIOS": "15.0"
+    },
+    "iPhone14,3": {
+      "marketingName": "iPhone 13 Pro Max",
+      "modelBase": "MLQ",
+      "hwModelStr": "D64AP",
+      "regulatoryModel": "A2484",
+      "boardUdidPrefix": "00008101",
+      "chip": "A15",
+      "ramBytes": "6442450944",
+      "screen": {
+        "w": "1284",
+        "h": "2778",
+        "scale": "3",
+        "fps": "120"
+      },
+      "tac": "35672811",
+      "iosVersions": [
+        "26.6.2",
+        "26.6.1",
+        "26.6",
+        "26.5.2",
+        "26.5",
+        "18.7.8",
+        "18.6.2",
+        "17.5.1",
+        "17.4.1"
+      ],
+      "minimumIOS": "15.0"
+    },
+    "iPhone14,5": {
+      "marketingName": "iPhone 13",
+      "modelBase": "MLM",
+      "hwModelStr": "D17AP",
+      "regulatoryModel": "A2482",
+      "boardUdidPrefix": "00008101",
+      "chip": "A15",
+      "ramBytes": "4294967296",
+      "screen": {
+        "w": "1170",
+        "h": "2532",
+        "scale": "3",
+        "fps": "60"
+      },
+      "tac": "35672811",
+      "iosVersions": [
+        "26.6.2",
+        "26.6.1",
+        "26.6",
+        "26.5.2",
+        "26.5",
+        "18.7.8",
+        "18.6.2",
+        "17.5.1",
+        "17.4.1"
+      ],
+      "minimumIOS": "15.0"
+    },
+    "iPhone14,8": {
+      "marketingName": "iPhone 14 Plus",
+      "modelBase": "MPQ",
+      "hwModelStr": "D27AP",
+      "regulatoryModel": "A2884",
+      "boardUdidPrefix": "00008130",
+      "chip": "A15",
+      "ramBytes": "6442450944",
+      "screen": {
+        "w": "1284",
+        "h": "2778",
+        "scale": "3",
+        "fps": "60"
+      },
+      "tac": "35141711",
+      "iosVersions": [
+        "26.6.2",
+        "26.6.1",
+        "26.6",
+        "26.5.2",
+        "26.5",
+        "18.7.8",
+        "18.6.2",
+        "17.5.1",
+        "17.4.1"
+      ],
+      "minimumIOS": "16.0"
+    },
+    "iPhone15,2": {
+      "marketingName": "iPhone 14 Pro",
+      "modelBase": "MQ0",
+      "hwModelStr": "D73AP",
+      "regulatoryModel": "A2650",
+      "boardUdidPrefix": "00008120",
+      "chip": "A16",
+      "ramBytes": "6442450944",
+      "screen": {
+        "w": "1179",
+        "h": "2556",
+        "scale": "3",
+        "fps": "120"
+      },
+      "tac": "35141711",
+      "iosVersions": [
+        "26.6.2",
+        "26.6.1",
+        "26.6",
+        "26.5.2",
+        "26.5",
+        "18.7.8",
+        "18.6.2",
+        "17.5.1",
+        "17.4.1"
+      ],
+      "minimumIOS": "16.0"
+    },
+    "iPhone15,3": {
+      "marketingName": "iPhone 14 Pro Max",
+      "modelBase": "MQ1",
+      "hwModelStr": "D74AP",
+      "regulatoryModel": "A2651",
+      "boardUdidPrefix": "00008120",
+      "chip": "A16",
+      "ramBytes": "6442450944",
+      "screen": {
+        "w": "1290",
+        "h": "2796",
+        "scale": "3",
+        "fps": "120"
+      },
+      "tac": "35141711",
+      "iosVersions": [
+        "26.6.2",
+        "26.6.1",
+        "26.6",
+        "26.5.2",
+        "26.5",
+        "18.7.8",
+        "18.6.2",
+        "17.5.1",
+        "17.4.1"
+      ],
+      "minimumIOS": "16.0"
+    },
+    "iPhone14,7": {
+      "marketingName": "iPhone 14",
+      "modelBase": "",
+      "hwModelStr": "D27AP",
+      "regulatoryModel": "A2649",
+      "boardUdidPrefix": "",
+      "chip": "A15",
+      "ramBytes": "6442450944",
+      "screen": {
+        "w": "1170",
+        "h": "2532",
+        "scale": "3",
+        "fps": "60"
+      },
+      "tac": "",
+      "identifierTemplate": "generic-synthetic",
+      "minimumIOS": "16.0",
+      "iosVersions": [
+        "26.6.2",
+        "26.6.1",
+        "26.6",
+        "26.5.2",
+        "26.5",
+        "18.7.8",
+        "18.6.2",
+        "17.5.1",
+        "17.4.1"
+      ]
+    },
+    "iPhone15,4": {
+      "marketingName": "iPhone 15",
+      "modelBase": "",
+      "hwModelStr": "D37AP",
+      "regulatoryModel": "A2846",
+      "boardUdidPrefix": "",
+      "chip": "A16",
+      "ramBytes": "6442450944",
+      "screen": {
+        "w": "1179",
+        "h": "2556",
+        "scale": "3",
+        "fps": "60"
+      },
+      "tac": "",
+      "identifierTemplate": "generic-synthetic",
+      "minimumIOS": "17.0",
+      "iosVersions": [
+        "26.6.2",
+        "26.6.1",
+        "26.6",
+        "26.5.2",
+        "26.5",
+        "18.7.8",
+        "18.6.2",
+        "17.5.1",
+        "17.4.1"
+      ]
+    },
+    "iPhone15,5": {
+      "marketingName": "iPhone 15 Plus",
+      "modelBase": "",
+      "hwModelStr": "D38AP",
+      "regulatoryModel": "A2847",
+      "boardUdidPrefix": "",
+      "chip": "A16",
+      "ramBytes": "6442450944",
+      "screen": {
+        "w": "1290",
+        "h": "2796",
+        "scale": "3",
+        "fps": "60"
+      },
+      "tac": "",
+      "identifierTemplate": "generic-synthetic",
+      "minimumIOS": "17.0",
+      "iosVersions": [
+        "26.6.2",
+        "26.6.1",
+        "26.6",
+        "26.5.2",
+        "26.5",
+        "18.7.8",
+        "18.6.2",
+        "17.5.1",
+        "17.4.1"
+      ]
+    },
+    "iPhone16,1": {
+      "marketingName": "iPhone 15 Pro",
+      "modelBase": "",
+      "hwModelStr": "D83AP",
+      "regulatoryModel": "A2848",
+      "boardUdidPrefix": "",
+      "chip": "A17 Pro",
+      "ramBytes": "8589934592",
+      "screen": {
+        "w": "1179",
+        "h": "2556",
+        "scale": "3",
+        "fps": "120"
+      },
+      "tac": "",
+      "identifierTemplate": "generic-synthetic",
+      "minimumIOS": "17.0",
+      "iosVersions": [
+        "26.6.2",
+        "26.6.1",
+        "26.6",
+        "26.5.2",
+        "26.5",
+        "18.7.8",
+        "18.6.2",
+        "17.5.1",
+        "17.4.1"
+      ]
+    },
+    "iPhone16,2": {
+      "marketingName": "iPhone 15 Pro Max",
+      "modelBase": "",
+      "hwModelStr": "D84AP",
+      "regulatoryModel": "A2849",
+      "boardUdidPrefix": "",
+      "chip": "A17 Pro",
+      "ramBytes": "8589934592",
+      "screen": {
+        "w": "1290",
+        "h": "2796",
+        "scale": "3",
+        "fps": "120"
+      },
+      "tac": "",
+      "identifierTemplate": "generic-synthetic",
+      "minimumIOS": "17.0",
+      "iosVersions": [
+        "26.6.2",
+        "26.6.1",
+        "26.6",
+        "26.5.2",
+        "26.5",
+        "18.7.8",
+        "18.6.2",
+        "17.5.1",
+        "17.4.1"
+      ]
+    },
+    "iPhone17,3": {
+      "marketingName": "iPhone 16",
+      "modelBase": "",
+      "hwModelStr": "D47AP",
+      "regulatoryModel": "A3081",
+      "boardUdidPrefix": "",
+      "chip": "A18",
+      "ramBytes": "8589934592",
+      "screen": {
+        "w": "1179",
+        "h": "2556",
+        "scale": "3",
+        "fps": "60"
+      },
+      "tac": "",
+      "identifierTemplate": "generic-synthetic",
+      "minimumIOS": "18.0",
+      "iosVersions": [
+        "26.6.2",
+        "26.6.1",
+        "26.6",
+        "26.5.2",
+        "26.5",
+        "18.7.8",
+        "18.6.2"
+      ]
+    },
+    "iPhone17,4": {
+      "marketingName": "iPhone 16 Plus",
+      "modelBase": "",
+      "hwModelStr": "D48AP",
+      "regulatoryModel": "A3082",
+      "boardUdidPrefix": "",
+      "chip": "A18",
+      "ramBytes": "8589934592",
+      "screen": {
+        "w": "1290",
+        "h": "2796",
+        "scale": "3",
+        "fps": "60"
+      },
+      "tac": "",
+      "identifierTemplate": "generic-synthetic",
+      "minimumIOS": "18.0",
+      "iosVersions": [
+        "26.6.2",
+        "26.6.1",
+        "26.6",
+        "26.5.2",
+        "26.5",
+        "18.7.8",
+        "18.6.2"
+      ]
+    },
+    "iPhone17,5": {
+      "marketingName": "iPhone 16e",
+      "modelBase": "",
+      "hwModelStr": "V59AP",
+      "regulatoryModel": "A3212",
+      "boardUdidPrefix": "",
+      "chip": "A18",
+      "ramBytes": "8589934592",
+      "screen": {
+        "w": "1170",
+        "h": "2532",
+        "scale": "3",
+        "fps": "60"
+      },
+      "tac": "",
+      "identifierTemplate": "generic-synthetic",
+      "minimumIOS": "18.3",
+      "iosVersions": [
+        "26.6.2",
+        "26.6.1",
+        "26.6",
+        "26.5.2",
+        "26.5",
+        "18.7.8",
+        "18.6.2"
+      ]
+    },
+    "iPhone17,1": {
+      "marketingName": "iPhone 16 Pro",
+      "modelBase": "",
+      "hwModelStr": "D93AP",
+      "regulatoryModel": "A3083",
+      "boardUdidPrefix": "",
+      "chip": "A18 Pro",
+      "ramBytes": "8589934592",
+      "screen": {
+        "w": "1206",
+        "h": "2622",
+        "scale": "3",
+        "fps": "120"
+      },
+      "tac": "",
+      "identifierTemplate": "generic-synthetic",
+      "minimumIOS": "18.0",
+      "iosVersions": [
+        "26.6.2",
+        "26.6.1",
+        "26.6",
+        "26.5.2",
+        "26.5",
+        "18.7.8",
+        "18.6.2"
+      ]
+    },
+    "iPhone17,2": {
+      "marketingName": "iPhone 16 Pro Max",
+      "modelBase": "",
+      "hwModelStr": "D94AP",
+      "regulatoryModel": "A3084",
+      "boardUdidPrefix": "",
+      "chip": "A18 Pro",
+      "ramBytes": "8589934592",
+      "screen": {
+        "w": "1320",
+        "h": "2868",
+        "scale": "3",
+        "fps": "120"
+      },
+      "tac": "",
+      "identifierTemplate": "generic-synthetic",
+      "minimumIOS": "18.0",
+      "iosVersions": [
+        "26.6.2",
+        "26.6.1",
+        "26.6",
+        "26.5.2",
+        "26.5",
+        "18.7.8",
+        "18.6.2"
+      ]
+    },
+    "iPhone18,3": {
+      "marketingName": "iPhone 17",
+      "modelBase": "",
+      "hwModelStr": "V57AP",
+      "regulatoryModel": "A3258",
+      "boardUdidPrefix": "",
+      "chip": "A19",
+      "ramBytes": "8589934592",
+      "screen": {
+        "w": "1206",
+        "h": "2622",
+        "scale": "3",
+        "fps": "120"
+      },
+      "tac": "",
+      "identifierTemplate": "generic-synthetic",
+      "minimumIOS": "26.0",
+      "iosVersions": [
+        "26.6.2",
+        "26.6.1",
+        "26.6",
+        "26.5.2",
+        "26.5.1"
+      ]
+    },
+    "iPhone18,1": {
+      "marketingName": "iPhone 17 Pro",
+      "modelBase": "",
+      "hwModelStr": "V53AP",
+      "regulatoryModel": "A3256",
+      "boardUdidPrefix": "",
+      "chip": "A19 Pro",
+      "ramBytes": "12884901888",
+      "screen": {
+        "w": "1206",
+        "h": "2622",
+        "scale": "3",
+        "fps": "120"
+      },
+      "tac": "",
+      "identifierTemplate": "generic-synthetic",
+      "minimumIOS": "26.0",
+      "iosVersions": [
+        "26.6.2",
+        "26.6.1",
+        "26.6",
+        "26.5.2",
+        "26.5.1"
+      ]
+    },
+    "iPhone18,2": {
+      "marketingName": "iPhone 17 Pro Max",
+      "modelBase": "",
+      "hwModelStr": "V54AP",
+      "regulatoryModel": "A3257",
+      "boardUdidPrefix": "",
+      "chip": "A19 Pro",
+      "ramBytes": "12884901888",
+      "screen": {
+        "w": "1320",
+        "h": "2868",
+        "scale": "3",
+        "fps": "120"
+      },
+      "tac": "",
+      "identifierTemplate": "generic-synthetic",
+      "minimumIOS": "26.0",
+      "iosVersions": [
+        "26.6.2",
+        "26.6.1",
+        "26.6",
+        "26.5.2",
+        "26.5.1"
+      ]
+    },
+    "iPhone18,4": {
+      "marketingName": "iPhone Air",
+      "modelBase": "",
+      "hwModelStr": "D23AP",
+      "regulatoryModel": "A3260",
+      "boardUdidPrefix": "",
+      "chip": "A19 Pro",
+      "ramBytes": "12884901888",
+      "screen": {
+        "w": "1260",
+        "h": "2736",
+        "scale": "3",
+        "fps": "120"
+      },
+      "tac": "",
+      "identifierTemplate": "generic-synthetic",
+      "minimumIOS": "26.0",
+      "iosVersions": [
+        "26.6.2",
+        "26.6.1",
+        "26.6",
+        "26.5.2",
+        "26.5.1"
+      ]
+    },
+    "iPhone18,5": {
+      "marketingName": "iPhone 17e",
+      "modelBase": "",
+      "hwModelStr": "V159AP",
+      "regulatoryModel": "A3634",
+      "boardUdidPrefix": "",
+      "chip": "A19",
+      "ramBytes": "8589934592",
+      "screen": {
+        "w": "1170",
+        "h": "2532",
+        "scale": "3",
+        "fps": "60"
+      },
+      "tac": "",
+      "identifierTemplate": "generic-synthetic",
+      "minimumIOS": "26.3",
+      "iosVersions": [
+        "26.6.2",
+        "26.6.1",
+        "26.6",
+        "26.5.2",
+        "26.5.1"
+      ]
+    }
+  },
+  "iosBuilds": {
+    "16.7.10": "20H350",
+    "17.4.1": "21E236",
+    "17.5.1": "21F90",
+    "18.6.2": "22G100",
+    "26.6.2": "23G90",
+    "18.7.8": "22H352",
+    "26.5": "23F77",
+    "26.5.1": "23F81",
+    "26.5.2": "23F84",
+    "26.6": "23G71",
+    "26.6.1": "23G83"
+  },
+  "darwinReleases": {
+    "16.7.10": "22.6.0",
+    "17.4.1": "23.4.0",
+    "17.5.1": "23.5.0",
+    "18.6.2": "24.6.0",
+    "26.6.2": "25.6.0",
+    "18.7.8": "24.6.0",
+    "26.5": "25.5.0",
+    "26.5.1": "25.5.0",
+    "26.5.2": "25.5.0",
+    "26.6": "25.6.0",
+    "26.6.1": "25.6.0"
+  },
+  "regionSuffixes": {
+    "US": "LL/A",
+    "CA": "LL/A",
+    "GB": "B/A",
+    "DE": "DN/A",
+    "FR": "FD/A",
+    "ES": "PO/A",
+    "IT": "TQ/A",
+    "NL": "OL/A",
+    "AU": "X/A",
+    "JP": "J/A"
+  },
+  "appleOUIs": {
+    "A4:83:E7": "Apple, Inc.",
+    "A4:C4:94": "Apple, Inc.",
+    "AC:BC:32": "Apple, Inc.",
+    "B0:CA:68": "Apple, Inc.",
+    "D0:E1:40": "Apple, Inc.",
+    "DC:A4:FF": "Apple, Inc.",
+    "F0:18:98": "Apple, Inc.",
+    "F0:F1:EC": "Apple, Inc.",
+    "3C:07:54": "Apple, Inc.",
+    "44:FB:42": "Apple, Inc.",
+    "70:DE:E2": "Apple, Inc.",
+    "98:9E:63": "Apple, Inc."
+  },
+  "countryTimezones": {
+    "US": "America/New_York",
+    "CA": "America/Toronto",
+    "GB": "Europe/London",
+    "DE": "Europe/Berlin",
+    "FR": "Europe/Paris",
+    "ES": "Europe/Madrid",
+    "IT": "Europe/Rome",
+    "NL": "Europe/Amsterdam",
+    "AU": "Australia/Sydney",
+    "JP": "Asia/Tokyo"
+  },
+  "countryLocales": {
+    "US": "en_US",
+    "CA": "en_CA",
+    "GB": "en_GB",
+    "DE": "de_DE",
+    "FR": "fr_FR",
+    "ES": "es_ES",
+    "IT": "it_IT",
+    "NL": "nl_NL",
+    "AU": "en_AU",
+    "JP": "ja_JP"
+  },
+  "timezoneCountry": {
+    "America/New_York": "US",
+    "America/Toronto": "CA",
+    "Europe/London": "GB",
+    "Europe/Berlin": "DE",
+    "Europe/Paris": "FR",
+    "Europe/Madrid": "ES",
+    "Europe/Rome": "IT",
+    "Europe/Amsterdam": "NL",
+    "Australia/Sydney": "AU",
+    "Asia/Tokyo": "JP",
+    "America/Los_Angeles": "US",
+    "America/Chicago": "US",
+    "America/Vancouver": "CA",
+    "America/Edmonton": "CA",
+    "Australia/Melbourne": "AU",
+    "Australia/Brisbane": "AU",
+    "Australia/Perth": "AU"
+  },
+  "localeCountry": {
+    "en_US": "US",
+    "en_CA": "CA",
+    "en_GB": "GB",
+    "de_DE": "DE",
+    "fr_FR": "FR",
+    "es_ES": "ES",
+    "it_IT": "IT",
+    "nl_NL": "NL",
+    "en_AU": "AU",
+    "ja_JP": "JP"
+  },
+  "carriers": {
+    "US": [
+      {
+        "name": "T-Mobile",
+        "mcc": "310",
+        "mnc": "260"
+      },
+      {
+        "name": "AT&T",
+        "mcc": "310",
+        "mnc": "410"
+      },
+      {
+        "name": "Verizon",
+        "mcc": "311",
+        "mnc": "480"
+      }
+    ],
+    "CA": [
+      {
+        "name": "Rogers",
+        "mcc": "302",
+        "mnc": "720"
+      },
+      {
+        "name": "Bell",
+        "mcc": "302",
+        "mnc": "610"
+      }
+    ],
+    "GB": [
+      {
+        "name": "EE",
+        "mcc": "234",
+        "mnc": "30"
+      },
+      {
+        "name": "O2",
+        "mcc": "234",
+        "mnc": "02"
+      },
+      {
+        "name": "Vodafone",
+        "mcc": "234",
+        "mnc": "15"
+      }
+    ],
+    "DE": [
+      {
+        "name": "Vodafone",
+        "mcc": "262",
+        "mnc": "02"
+      },
+      {
+        "name": "Telekom",
+        "mcc": "262",
+        "mnc": "01"
+      },
+      {
+        "name": "O2",
+        "mcc": "262",
+        "mnc": "03"
+      }
+    ],
+    "FR": [
+      {
+        "name": "Orange",
+        "mcc": "208",
+        "mnc": "01"
+      },
+      {
+        "name": "SFR",
+        "mcc": "208",
+        "mnc": "09"
+      }
+    ],
+    "ES": [
+      {
+        "name": "Movistar",
+        "mcc": "214",
+        "mnc": "07"
+      },
+      {
+        "name": "Vodafone",
+        "mcc": "214",
+        "mnc": "01"
+      }
+    ],
+    "IT": [
+      {
+        "name": "TIM",
+        "mcc": "222",
+        "mnc": "01"
+      },
+      {
+        "name": "Vodafone",
+        "mcc": "222",
+        "mnc": "10"
+      }
+    ],
+    "NL": [
+      {
+        "name": "KPN",
+        "mcc": "204",
+        "mnc": "08"
+      },
+      {
+        "name": "Vodafone",
+        "mcc": "204",
+        "mnc": "04"
+      }
+    ],
+    "AU": [
+      {
+        "name": "Telstra",
+        "mcc": "505",
+        "mnc": "01"
+      },
+      {
+        "name": "Optus",
+        "mcc": "505",
+        "mnc": "02"
+      }
+    ],
+    "JP": [
+      {
+        "name": "NTT Docomo",
+        "mcc": "440",
+        "mnc": "10"
+      },
+      {
+        "name": "SoftBank",
+        "mcc": "440",
+        "mnc": "20"
+      }
+    ]
+  },
+  "countryCities": {
+    "US": [
+      {
+        "city": "New York",
+        "lat": "40.7128",
+        "lon": "-74.0060",
+        "timezone": "America/New_York"
+      },
+      {
+        "city": "Los Angeles",
+        "lat": "34.0522",
+        "lon": "-118.2437",
+        "timezone": "America/Los_Angeles"
+      },
+      {
+        "city": "Chicago",
+        "lat": "41.8781",
+        "lon": "-87.6298",
+        "timezone": "America/Chicago"
+      },
+      {
+        "city": "Houston",
+        "lat": "29.7604",
+        "lon": "-95.3698",
+        "timezone": "America/Chicago"
+      },
+      {
+        "city": "Philadelphia",
+        "lat": "39.9526",
+        "lon": "-75.1652",
+        "timezone": "America/New_York"
+      }
+    ],
+    "CA": [
+      {
+        "city": "Toronto",
+        "lat": "43.6532",
+        "lon": "-79.3832",
+        "timezone": "America/Toronto"
+      },
+      {
+        "city": "Montreal",
+        "lat": "45.5019",
+        "lon": "-73.5674",
+        "timezone": "America/Toronto"
+      },
+      {
+        "city": "Vancouver",
+        "lat": "49.2827",
+        "lon": "-123.1207",
+        "timezone": "America/Vancouver"
+      },
+      {
+        "city": "Calgary",
+        "lat": "51.0447",
+        "lon": "-114.0719",
+        "timezone": "America/Edmonton"
+      }
+    ],
+    "GB": [
+      {
+        "city": "London",
+        "lat": "51.5074",
+        "lon": "-0.1278",
+        "timezone": "Europe/London"
+      },
+      {
+        "city": "Manchester",
+        "lat": "53.4808",
+        "lon": "-2.2426",
+        "timezone": "Europe/London"
+      },
+      {
+        "city": "Birmingham",
+        "lat": "52.4862",
+        "lon": "-1.8904",
+        "timezone": "Europe/London"
+      },
+      {
+        "city": "Leeds",
+        "lat": "53.8008",
+        "lon": "-1.5491",
+        "timezone": "Europe/London"
+      }
+    ],
+    "DE": [
+      {
+        "city": "Berlin",
+        "lat": "52.5200",
+        "lon": "13.4050",
+        "timezone": "Europe/Berlin"
+      },
+      {
+        "city": "Munich",
+        "lat": "48.1351",
+        "lon": "11.5820",
+        "timezone": "Europe/Berlin"
+      },
+      {
+        "city": "Hamburg",
+        "lat": "53.5511",
+        "lon": "9.9937",
+        "timezone": "Europe/Berlin"
+      },
+      {
+        "city": "Cologne",
+        "lat": "50.9375",
+        "lon": "6.9603",
+        "timezone": "Europe/Berlin"
+      },
+      {
+        "city": "Frankfurt",
+        "lat": "50.1109",
+        "lon": "8.6821",
+        "timezone": "Europe/Berlin"
+      }
+    ],
+    "FR": [
+      {
+        "city": "Paris",
+        "lat": "48.8566",
+        "lon": "2.3522",
+        "timezone": "Europe/Paris"
+      },
+      {
+        "city": "Marseille",
+        "lat": "43.2965",
+        "lon": "5.3698",
+        "timezone": "Europe/Paris"
+      },
+      {
+        "city": "Lyon",
+        "lat": "45.7640",
+        "lon": "4.8357",
+        "timezone": "Europe/Paris"
+      },
+      {
+        "city": "Toulouse",
+        "lat": "43.6047",
+        "lon": "1.4442",
+        "timezone": "Europe/Paris"
+      }
+    ],
+    "ES": [
+      {
+        "city": "Madrid",
+        "lat": "40.4168",
+        "lon": "-3.7038",
+        "timezone": "Europe/Madrid"
+      },
+      {
+        "city": "Barcelona",
+        "lat": "41.3874",
+        "lon": "2.1686",
+        "timezone": "Europe/Madrid"
+      },
+      {
+        "city": "Valencia",
+        "lat": "39.4699",
+        "lon": "-0.3763",
+        "timezone": "Europe/Madrid"
+      },
+      {
+        "city": "Seville",
+        "lat": "37.3891",
+        "lon": "-5.9845",
+        "timezone": "Europe/Madrid"
+      }
+    ],
+    "IT": [
+      {
+        "city": "Rome",
+        "lat": "41.9028",
+        "lon": "12.4964",
+        "timezone": "Europe/Rome"
+      },
+      {
+        "city": "Milan",
+        "lat": "45.4642",
+        "lon": "9.1900",
+        "timezone": "Europe/Rome"
+      },
+      {
+        "city": "Naples",
+        "lat": "40.8518",
+        "lon": "14.2681",
+        "timezone": "Europe/Rome"
+      },
+      {
+        "city": "Turin",
+        "lat": "45.0703",
+        "lon": "7.6869",
+        "timezone": "Europe/Rome"
+      }
+    ],
+    "NL": [
+      {
+        "city": "Amsterdam",
+        "lat": "52.3676",
+        "lon": "4.9041",
+        "timezone": "Europe/Amsterdam"
+      },
+      {
+        "city": "Rotterdam",
+        "lat": "51.9244",
+        "lon": "4.4777",
+        "timezone": "Europe/Amsterdam"
+      },
+      {
+        "city": "The Hague",
+        "lat": "52.0705",
+        "lon": "4.3007",
+        "timezone": "Europe/Amsterdam"
+      },
+      {
+        "city": "Utrecht",
+        "lat": "52.0907",
+        "lon": "5.1214",
+        "timezone": "Europe/Amsterdam"
+      }
+    ],
+    "AU": [
+      {
+        "city": "Sydney",
+        "lat": "-33.8688",
+        "lon": "151.2093",
+        "timezone": "Australia/Sydney"
+      },
+      {
+        "city": "Melbourne",
+        "lat": "-37.8136",
+        "lon": "144.9631",
+        "timezone": "Australia/Melbourne"
+      },
+      {
+        "city": "Brisbane",
+        "lat": "-27.4698",
+        "lon": "153.0251",
+        "timezone": "Australia/Brisbane"
+      },
+      {
+        "city": "Perth",
+        "lat": "-31.9505",
+        "lon": "115.8605",
+        "timezone": "Australia/Perth"
+      }
+    ],
+    "JP": [
+      {
+        "city": "Tokyo",
+        "lat": "35.6762",
+        "lon": "139.6503",
+        "timezone": "Asia/Tokyo"
+      },
+      {
+        "city": "Osaka",
+        "lat": "34.6937",
+        "lon": "135.5023",
+        "timezone": "Asia/Tokyo"
+      },
+      {
+        "city": "Yokohama",
+        "lat": "35.4437",
+        "lon": "139.6380",
+        "timezone": "Asia/Tokyo"
+      },
+      {
+        "city": "Nagoya",
+        "lat": "35.1815",
+        "lon": "136.9066",
+        "timezone": "Asia/Tokyo"
+      }
+    ]
+  }
+}

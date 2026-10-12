@@ -1,0 +1,77 @@
+{
+  "formatVersion": 1,
+  "unit": "authored private container creation/edit configuration",
+  "status": "PASS",
+  "runtimeAccepted": false,
+  "customerReleased": false,
+  "host": {
+    "immutableConfigurationAssertions": 703,
+    "privateStoreAssertions": 73,
+    "result": "PASS"
+  },
+  "productionCompilation": {
+    "arm64": "PASS",
+    "arm64e": "PASS",
+    "testSeamsExcluded": true
+  },
+  "physicalDevice": {
+    "model": "iPhone X",
+    "iOS": "16.7.16",
+    "syntheticSignedFixture": true,
+    "productionWebsiteLicenseAcceptance": "NOT_RUN",
+    "assertions": 73,
+    "result": "PASS",
+    "helperSHA256": "b22cd4c65bba9ce1f9a17593215c3f43a597ad537fc2d4a5ab2ed49a42d1268e",
+    "ownerSixPayloadHashesUnchanged": "PASS",
+    "exactTemporaryFixtureRemoval": "PASS"
+  },
+  "results": {
+    "allSevenRequestedAppCombinations": "PASS (host configuration model only)",
+    "manualValuesPreservedOnReload": "PASS",
+    "randomValuesStableOnEditAndReload": "PASS",
+    "proxyReferenceRoundTripAndClear": "PASS (no proxy traffic or ownership resolution)",
+    "completePriorRecordCAS": "PASS",
+    "revokedAndUnvalidatedRestartWritesDenied": "PASS",
+    "expiredContendedLockHasNoPublication": "PASS",
+    "symlinkHardlinkPublicModeAndCorruptRecordRejection": "PASS",
+    "missingLockAndDirectoryReplacementRejection": "PASS"
+  },
+  "preservedFailedAttempts": [
+    {
+      "result": "FAIL",
+      "stage": "initial host integration",
+      "checks": 70,
+      "failures": 25,
+      "reason": "Configuration creation generated uppercase UUIDs while the store required canonical lowercase identity; downstream fixture assertions cascaded. Restricted configuration IDs and proxy references to canonical lowercase UUIDs, preserved case in manual identifier values, reran host and physical tests."
+    }
+  ],
+  "notRun": [
+    "owner UI creation/edit integration",
+    "complete coherent model/software/carrier identity",
+    "cross-configuration identity reservation",
+    "runtime app membership and target hooks",
+    "proxy resolution and traffic enforcement",
+    "automatic switching/storage gate/recovery",
+    "ACL counterexample injection",
+    "power-loss/interrupted-publication recovery",
+    "actual signed-in account A/B/A",
+    "fresh customer installation/license/package/download"
+  ],
+  "scopeNotes": [
+    "configuration records are not recovered app containers",
+    "Twitter selection is requested metadata and has no accepted current retained runtime",
+    "inventory reads bounded to4096; no unlimited capacity claim",
+    "publication may precede failed final assessment; consumer must inspect durable state before retry"
+  ],
+  "sourcesSHA256": {
+    "lucid/Containers/LBXContainerConfiguration.h": "332d11a883ed054f0065ab38534a16354d9f3a6649c1561e746ac83bc815ca55",
+    "lucid/Containers/LBXContainerConfiguration.m": "6e3c20ae17144d5704ea9a4532381c0b1e612e96cd61f14dea4b189c0ccb6605",
+    "lucid/Containers/LBXContainerConfigurationStore.h": "ec141f0fb2a729e1ad7a2212c474dd4a553a99bad56d37e1c6d79b062a11630a",
+    "lucid/Containers/LBXContainerConfigurationStore.m": "a17a7dface80eec54f38ffc2fff861195c783a437ab130badd39a993602506de",
+    "lucid/Containers/README.md": "4352e786de3168ace688701826c2b619971c7729ffa217aa96b707eed6738f9d",
+    "lucid/tests/container_configuration.m": "6ceb5585e1287188ef92e348a72842b64c2a43912ac47f2bf1ed52f3a0c65a42",
+    "lucid/tests/container_configuration_store.m": "d2f8e2d73c715c87b26b2bebd5f23dd2d2e86cabb1383ce378a6a320b56d98bd",
+    "lucid/tests/test_container_configuration.sh": "ef7d1d6fc1ea0bf42449e555f5cd07f1ebd755be04ef1851833f82de6699df32",
+    "lucid/tests/test_container_configuration_store.sh": "e96fb90fa3cfb218e2af20c8b2e949432c229770b99cee9592166053c00bae1a"
+  }
+}

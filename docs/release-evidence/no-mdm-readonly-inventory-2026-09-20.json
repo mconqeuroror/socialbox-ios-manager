@@ -1,0 +1,364 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-09-20",
+  "scope": "Read-only PF inventory and interface/default-route diagnosis; no enforcement or online acceptance",
+  "device": {
+    "model": "iPhone10,6",
+    "ios": "16.7.16",
+    "jailbreak": "palera1n rootless",
+    "kernelRelease": "22.6.0",
+    "kernelBuild": "xnu-8796.142.1.703.8"
+  },
+  "originalStatusProbeReceipt": "docs/release-evidence/no-mdm-pf-capability-2026-09-20.json",
+  "pfInventory": {
+    "source": "tools/pf_readonly_inventory.c",
+    "sourceSHA256": "3b9ac0d6c8064e7346d1a1b639809eccad7c743cfc32c5abb14a4a8e2b75e641",
+    "binarySHA256": "189cd9d753448cfa0ceb2cda329cf2c90f2d8db8ebd2da031bdfa98805b70ef8",
+    "privateOutputSHA256": "27278f79c09a9d0a260741c22149aa1ffe3ba6ed3fc592dc37612093aa635520",
+    "executionPath": "/var/jb/usr/local/libexec/socialbox-diagnostics/pf-readonly-inventory",
+    "euid": 0,
+    "exitCode": 0,
+    "signature": "Procursus ldid 2.1.5-procursus7; explicit empty XML/DER entitlements, code-page and entitlement hashes verified",
+    "summary": {
+      "record": "summary",
+      "enumerationComplete": true,
+      "anchors": 1,
+      "rules": 0,
+      "states": 0,
+      "queries": 19,
+      "errors": 0,
+      "enforcementVerified": false
+    },
+    "statusBefore": {
+      "record": "status",
+      "phase": "before",
+      "running": 0,
+      "states": 0,
+      "sourceNodes": 0,
+      "rulesChecksum": "00000000000000000000000000000000"
+    },
+    "statusAfter": {
+      "record": "status",
+      "phase": "after",
+      "running": 0,
+      "states": 0,
+      "sourceNodes": 0,
+      "rulesChecksum": "00000000000000000000000000000000"
+    },
+    "rulesets": [
+      {
+        "record": "ruleset",
+        "anchor": "",
+        "familyAction": 2,
+        "count": 0,
+        "ticket": 0
+      },
+      {
+        "record": "ruleset",
+        "anchor": "",
+        "familyAction": 0,
+        "count": 0,
+        "ticket": 0
+      },
+      {
+        "record": "ruleset",
+        "anchor": "",
+        "familyAction": 4,
+        "count": 0,
+        "ticket": 0
+      },
+      {
+        "record": "ruleset",
+        "anchor": "",
+        "familyAction": 6,
+        "count": 0,
+        "ticket": 0
+      },
+      {
+        "record": "ruleset",
+        "anchor": "",
+        "familyAction": 8,
+        "count": 0,
+        "ticket": 0
+      },
+      {
+        "record": "ruleset",
+        "anchor": "",
+        "familyAction": 11,
+        "count": 0,
+        "ticket": 0
+      }
+    ],
+    "kernelReadCommandsExercised": [
+      "DIOCGETSTATUS",
+      "DIOCGETRULES",
+      "DIOCGETRULESETS",
+      "DIOCGETSTATES (empty buffer)"
+    ],
+    "hostOnlyPaths": [
+      "DIOCGETRULE record decoding",
+      "DIOCGETRULESET child names",
+      "non-empty IPv4/IPv6 state decoding"
+    ],
+    "atomicSnapshot": false,
+    "semanticExpansionComplete": false,
+    "unexpanded": [
+      "dynamic address-table members",
+      "route/NAT pool members"
+    ],
+    "writeOperations": false
+  },
+  "networkInventory": {
+    "source": "tools/network_readonly_probe.c",
+    "sourceSHA256": "99649316ea709146e767e1942d4a3eabef85944081ca27e6e6f28db74a548cc4",
+    "binarySHA256": "c698e834d2ad162ed1ff7eadcd22378fde8c4fcf49dd8c140e92ac2ca86da670",
+    "privateOutputSHA256": "f0bf713635c7aac38ea72b85b064c4ed83e733214ebe35c9c26f45a691473b9a",
+    "executionPath": "/var/jb/usr/local/libexec/socialbox-diagnostics/network-readonly-probe",
+    "euid": 0,
+    "exitCode": 0,
+    "signature": "Procursus ldid 2.1.5-procursus7; explicit empty XML/DER entitlements, code-page and entitlement hashes verified",
+    "readAPIs": [
+      "getifaddrs",
+      "sysctl NET_RT_DUMP with NULL newp"
+    ],
+    "summary": {
+      "record": "summary",
+      "readOnly": true,
+      "interfaceReadComplete": true,
+      "routeReadComplete": true,
+      "ipv4Addresses": 2,
+      "ipv6Addresses": 11,
+      "upNonLinkLocalIPv4": 0,
+      "upNonLinkLocalIPv6": 0,
+      "upGlobalIPv6": 0,
+      "ipv4DefaultRoutes": 0,
+      "ipv6DefaultRoutes": 5,
+      "upIPv4DefaultWithoutRejectOrBlackhole": 0,
+      "upIPv6DefaultWithoutRejectOrBlackhole": 5,
+      "routesInspected": 61,
+      "internetReachabilityTested": false,
+      "dnsTested": false
+    },
+    "interfaceFlags": [
+      {
+        "record": "interface",
+        "name": "lo0",
+        "flags": 32841,
+        "up": true,
+        "running": true,
+        "loopback": true
+      },
+      {
+        "record": "interface",
+        "name": "pdp_ip1",
+        "flags": 32784,
+        "up": false,
+        "running": false,
+        "loopback": false
+      },
+      {
+        "record": "interface",
+        "name": "pdp_ip0",
+        "flags": 32784,
+        "up": false,
+        "running": false,
+        "loopback": false
+      },
+      {
+        "record": "interface",
+        "name": "pdp_ip2",
+        "flags": 32784,
+        "up": false,
+        "running": false,
+        "loopback": false
+      },
+      {
+        "record": "interface",
+        "name": "pdp_ip3",
+        "flags": 32784,
+        "up": false,
+        "running": false,
+        "loopback": false
+      },
+      {
+        "record": "interface",
+        "name": "pdp_ip4",
+        "flags": 32784,
+        "up": false,
+        "running": false,
+        "loopback": false
+      },
+      {
+        "record": "interface",
+        "name": "anpi0",
+        "flags": 34915,
+        "up": true,
+        "running": true,
+        "loopback": false
+      },
+      {
+        "record": "interface",
+        "name": "en1",
+        "flags": 34850,
+        "up": false,
+        "running": false,
+        "loopback": false
+      },
+      {
+        "record": "interface",
+        "name": "en2",
+        "flags": 34915,
+        "up": true,
+        "running": true,
+        "loopback": false
+      },
+      {
+        "record": "interface",
+        "name": "ap1",
+        "flags": 34850,
+        "up": false,
+        "running": false,
+        "loopback": false
+      },
+      {
+        "record": "interface",
+        "name": "en0",
+        "flags": 34915,
+        "up": true,
+        "running": true,
+        "loopback": false
+      },
+      {
+        "record": "interface",
+        "name": "utun0",
+        "flags": 32849,
+        "up": true,
+        "running": true,
+        "loopback": false
+      },
+      {
+        "record": "interface",
+        "name": "awdl0",
+        "flags": 34850,
+        "up": false,
+        "running": false,
+        "loopback": false
+      },
+      {
+        "record": "interface",
+        "name": "utun1",
+        "flags": 32849,
+        "up": true,
+        "running": true,
+        "loopback": false
+      },
+      {
+        "record": "interface",
+        "name": "llw0",
+        "flags": 34915,
+        "up": true,
+        "running": true,
+        "loopback": false
+      },
+      {
+        "record": "interface",
+        "name": "utun2",
+        "flags": 32849,
+        "up": true,
+        "running": true,
+        "loopback": false
+      },
+      {
+        "record": "interface",
+        "name": "utun3",
+        "flags": 32849,
+        "up": true,
+        "running": true,
+        "loopback": false
+      },
+      {
+        "record": "interface",
+        "name": "utun4",
+        "flags": 32849,
+        "up": true,
+        "running": true,
+        "loopback": false
+      }
+    ],
+    "en0HasIPAddress": false,
+    "defaultRouteInterfaces": [
+      "utun0",
+      "utun1",
+      "utun2",
+      "utun3",
+      "utun4"
+    ],
+    "interpretation": "No normal non-link-local Internet uplink observed. en0 was UP/RUNNING but had no IPv4 or IPv6 address. All pdp_ip interfaces were down. Scoped utun IPv6 defaults alone do not establish Internet reachability.",
+    "doesNotProve": [
+      "proxy credentials invalid",
+      "Wi-Fi radio disabled",
+      "DNS server configuration faulty",
+      "a specific component caused the outage"
+    ],
+    "writeOperations": false,
+    "packetsSent": false,
+    "savedWiFiDataRead": false,
+    "priorSnapshot": {
+      "sourceSHA256": "f6cb8f84db47a0ed5f70c53239bfc5034e851c0e103231c6878814ee74cbc2ed",
+      "binarySHA256": "8d12b7897f83c845d059d6bdd4b811223b31682406754371c54411de6dcdcd2b",
+      "privateOutputSHA256": "3a878e1ff94da92db533ae5e919360da5c3ed4f5d681bab8a5e52b7ad8f8b7ec",
+      "exitCode": 0,
+      "difference": "Initial helper omitted flag-only interface records when no IP address existed; address/route counts agree with final snapshot."
+    }
+  },
+  "validation": {
+    "pfBehavioral": {
+      "command": "python3 tools/test_pf_readonly_inventory.py",
+      "checks": 132,
+      "result": "PASS",
+      "boundary": "host mocked ioctl; ASan/UBSan"
+    },
+    "networkBehavioral": {
+      "command": "bash tools/test_network_readonly_probe.sh",
+      "checks": 176,
+      "result": "PASS",
+      "boundary": "host synthetic routing messages and address classification; ASan/UBSan"
+    },
+    "appleABI": {
+      "command": "python3 tools/test_pf_readonly_abi.py --headers <pinned Apple header directory>",
+      "assertionsPerTarget": 112,
+      "targets": [
+        "host Mac",
+        "arm64-apple-ios15.0"
+      ],
+      "result": "PASS",
+      "publicTag": "xnu-8796.141.3",
+      "exactDeviceKernelTagPublished": false,
+      "headerHashes": {
+        "pfvar.h": "c653221b8ec079028367584944ae4e09dde15f37bec72bdc0476ad2a1f57984a",
+        "route.h": "dcd77dcb77e8468004b3fe667ec490a8bf0849487c2b832dcee8010ffbdea92d",
+        "libkern/tree.h": "7bde9f6ba98f15e326813b82dc0e5e9e2d3013c025a91c946f9cd238e80e4939",
+        "net/radix.h": "6bd5fd9877eb42f21143260d5caa4b169b02e0e50378703506a86191a3f126f4"
+      }
+    }
+  },
+  "verdicts": {
+    "readOnlyPFEnumeration": "PASS",
+    "readOnlyInterfaceAndRouteInspection": "PASS",
+    "PFRuleInstallation": "NOT_RUN",
+    "directTrafficConfinement": "NOT_RUN",
+    "IPv6DNSQUICEnforcement": "NOT_RUN",
+    "providerOrDaemonDeath": "NOT_RUN",
+    "networkHandoff": "NOT_RUN",
+    "reboot": "NOT_RUN",
+    "perAppAttribution": "NOT_PROVIDED",
+    "proxyCredentials": "NOT_VERIFIED"
+  },
+  "limitations": [
+    "No PF rules, states, routes, VPN settings, radio state or network admission gates changed.",
+    "The phone has reference-product hooks; their behavior is not SocialBox evidence.",
+    "PF UID matching cannot distinguish ordinary clone apps sharing mobile UID.",
+    "Read-only interface and route inspection does not send reachability or DNS probes.",
+    "Raw IP-bearing observations and original helper binaries remain outside the repository."
+  ]
+}

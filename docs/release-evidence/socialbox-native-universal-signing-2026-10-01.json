@@ -1,0 +1,212 @@
+{
+  "schemaVersion": 1,
+  "unit": 31,
+  "kind": "source-owned-native-universal-ad-hoc-signing",
+  "recordedAt": "2026-10-01T17:49:42.949568+00:00",
+  "status": "PASS_HOST_SIGNING_WITH_CLIENT_BLOCKERS",
+  "clientDeliveryReady": false,
+  "customerArtifactReleased": false,
+  "customerCodeIssued": false,
+  "scope": {
+    "problem": "Earlier native thin ldid signatures followed by lipo fail strict macOS arm64e verification. Old exact programs and their historical FAIL are retained.",
+    "change": "Sign final universal client/service/installer bytes ad-hoc with fixed per-role identifiers/designated requirements before hashing, sizing, acceptance client pinning or accepted build report.",
+    "verification": "Exactly arm64 and arm64e; strict all-architecture and explicit identifier requirement, plus each extracted slice strict identifier verification and empty entitlements.",
+    "failure": "Any signer/verifier/architecture/entitlement failure throws before an accepted report. Private failed output can contain effects and is preserved, never retried/replaced. No rollback for arbitrary real signer partial failure is claimed.",
+    "authority": "Host code integrity/identifier consistency only. Public ad-hoc identifiers are not Apple/Meta publisher or device trust, licensing grants, first-provisioning authority or runtime admission.",
+    "preservation": "Manager path/hash/size, kernel real/effective UID policy, licensing/pending source owner/deadlines, default paths, one-shot establishment and package guards are unchanged. New image bytes cannot replace established prepared policy; migration remains unsupported."
+  },
+  "focused": {
+    "status": "PASS",
+    "methods": 9,
+    "repositoryInputs": 46,
+    "sourceStableCurrent": true,
+    "reportSHA256": "8ac2a1313cf4708b5c23598f54e34375fd8a5d0960ab1d0cfb1beecdceac4ec9",
+    "cases": [
+      "Actual current ldid-fat arm64e counterexample, then final signing success",
+      "All three fixed roles and cross-role denial",
+      "Valid wrong identifier refused after general strict verification",
+      "Missing arm64e",
+      "Changed signed __text",
+      "Only arm64e entitlements refused after general strict verification",
+      "Synthetic before-sign failure with no fallback",
+      "Unknown role before tool effects",
+      "Actual production client build/sign followed by synthetic final failure: output retained, no report/service/installer/client pin, repeat refuses existing directory"
+    ],
+    "limits": "Fresh inert Mach-O and unexecuted production client builds with actual host tools. Explicitly synthetic before-sign and post-real-sign failures; no rollback claim for arbitrary real signer partial failure. Existing output refuses retry, with no report or pin publication after failure. No iOS execution/live license/device/publisher trust.46 repository inputs; SDK/compiler/OS/tools/public pin excluded."
+  },
+  "production": {
+    "status": "PASS",
+    "programs": {
+      "production-manager-02/service": {
+        "sha256": "248eec54a1b39c5cc5859663f9d455f2a7fa829bf1f353899b30ce9998dace72",
+        "size": 1154816,
+        "identifier": "com.socialbox.licensing.owner",
+        "slices": {
+          "arm64": {
+            "strictIdentifierVerification": "PASS",
+            "adHocFlag": 2,
+            "entitlementsEmpty": "PASS"
+          },
+          "arm64e": {
+            "strictIdentifierVerification": "PASS",
+            "adHocFlag": 2,
+            "entitlementsEmpty": "PASS"
+          }
+        },
+        "namedProvidersAbsent": "PASS"
+      },
+      "production-manager-02/installer": {
+        "sha256": "49530da5fd2dee6dbf0402d182e135aad15f44886444cabbfb774cac19e91386",
+        "size": 1153152,
+        "identifier": "com.socialbox.licensing.preparation",
+        "slices": {
+          "arm64": {
+            "strictIdentifierVerification": "PASS",
+            "adHocFlag": 2,
+            "entitlementsEmpty": "PASS"
+          },
+          "arm64e": {
+            "strictIdentifierVerification": "PASS",
+            "adHocFlag": 2,
+            "entitlementsEmpty": "PASS"
+          }
+        },
+        "namedProvidersAbsent": "PASS"
+      },
+      "production-acceptance-02/client": {
+        "sha256": "7cb760437f06b7ffb3c6ef3bcd64dc628e02fab4757de89fa2891cb183cc4d20",
+        "size": 397040,
+        "identifier": "com.socialbox.licensing.client",
+        "slices": {
+          "arm64": {
+            "strictIdentifierVerification": "PASS",
+            "adHocFlag": 2,
+            "entitlementsEmpty": "PASS"
+          },
+          "arm64e": {
+            "strictIdentifierVerification": "PASS",
+            "adHocFlag": 2,
+            "entitlementsEmpty": "PASS"
+          }
+        },
+        "namedProvidersAbsent": "PASS"
+      },
+      "production-acceptance-02/service": {
+        "sha256": "87bbf9727db1ed77f14e81d0924ee6a5b4a285cacb3396c1c555db08ffd4f735",
+        "size": 1154816,
+        "identifier": "com.socialbox.licensing.owner",
+        "slices": {
+          "arm64": {
+            "strictIdentifierVerification": "PASS",
+            "adHocFlag": 2,
+            "entitlementsEmpty": "PASS"
+          },
+          "arm64e": {
+            "strictIdentifierVerification": "PASS",
+            "adHocFlag": 2,
+            "entitlementsEmpty": "PASS"
+          }
+        },
+        "namedProvidersAbsent": "PASS"
+      },
+      "production-acceptance-02/installer": {
+        "sha256": "57eacbe3c0e61056d6dde6c66966601c5663a404f478f7ba0dc3f9ca4427085b",
+        "size": 1153152,
+        "identifier": "com.socialbox.licensing.preparation",
+        "slices": {
+          "arm64": {
+            "strictIdentifierVerification": "PASS",
+            "adHocFlag": 2,
+            "entitlementsEmpty": "PASS"
+          },
+          "arm64e": {
+            "strictIdentifierVerification": "PASS",
+            "adHocFlag": 2,
+            "entitlementsEmpty": "PASS"
+          }
+        },
+        "namedProvidersAbsent": "PASS"
+      }
+    },
+    "nativePrograms": 5,
+    "signedSlices": 10,
+    "repositoryQuotedInputs": 45,
+    "sourceStableCurrent": true,
+    "clientPin": {
+      "manager": {
+        "status": "PASS_UNCHANGED_REVIEWED_PIN",
+        "sha256": "e230dab07690e30c292962a3c0a3ea8301f9532aaa583a7209fdf33142552dd0",
+        "size": 9490320,
+        "physicalObservation": "NOT_RUN"
+      },
+      "acceptance": {
+        "status": "PASS_FINAL_SIGNED_BYTES",
+        "sha256": "7cb760437f06b7ffb3c6ef3bcd64dc628e02fab4757de89fa2891cb183cc4d20",
+        "size": 397040
+      }
+    },
+    "independentVerificationSHA256": "648e8d698aad9674d8868d4a80f76809a96bdba9cb1f06b1f81428a802241194",
+    "finalSourceArtifactBindingSHA256": "211d5d4cc5fe605df976dfea7a73c3899ee23389c57c39a05d620b5b76c3afbb",
+    "generatedConfigFacts": {
+      "production-manager-02": {
+        "configSHA256": "e1d5e2c1c7f1f024396b7b4760823123801493af72db78d00d001772bdd8be93",
+        "buildReportSHA256": "4cd3c31f87a5c9db0630db9a7d6a88dd6778c4ecb456b8faff9baa08927fcef3"
+      },
+      "production-acceptance-02": {
+        "configSHA256": "dcfeca47dc03a0e6db7cd5f3087a66764cae485c3f1613a89d04df6b1889b5a2",
+        "buildReportSHA256": "f1a9b3badc5dabd50b9bfae3feaa6a3da6191dda2f5c0ac0ac47017456a19e9f"
+      }
+    },
+    "limits": "Host ad-hoc code integrity and fixed identifier only; no independent publisher/OS device trust/launch/licensing/runtime/customer acceptance. SDK/compiler/OS/signing tools and public pin are excluded from the45 quoted repository source inputs. Generated owner-config files are separately hashed/current, not a frozen64-file graph."
+  },
+  "retainedAttempts": [
+    {
+      "attempt": "focused-01",
+      "status": "PASS",
+      "methods": 8,
+      "repositoryInputs": 2,
+      "scope": "Narrower original helper tests. Final focused02 adds main post-sign failure and46 repository inputs; earlier result unchanged."
+    },
+    {
+      "attempt": "production-manager-01 and production-acceptance-01",
+      "status": "FAIL_BEFORE_COMPILATION",
+      "scope": "Caller selected RSA PUBLIC KEY PEM; unchanged pin conversion expects PUBLIC KEY encoding. OpenSSL refusal before compile/sign/report. Correct public-only encoding supplied in NEW attempts, with no production check relaxed."
+    },
+    {
+      "attempt": "verification-01",
+      "status": "PASS",
+      "nativePrograms": 5,
+      "signedSlices": 10,
+      "scope": "Actual independent codesign/lipo/ldid checks and final pin comparison. Final fixture expansion only changes test source; verification02 binds identical native bytes/source and final focused result without rerunning completed helper."
+    }
+  ],
+  "phone": {
+    "connection": "FAIL_AUTHENTICATION",
+    "exitCode": 255,
+    "readOnlyInspectionSHA256": "df771e7c4229db7da1354d984064743a2f5b28976295185198a25416599d97b3",
+    "rootRoleFixedPathInspection": "NOT_RUN",
+    "physicalRetirement": "NOT_RUN",
+    "newLicense": "NOT_RUN",
+    "mutations": false,
+    "accountsRead": false,
+    "ownerOverlayUpdated": false,
+    "requiredAction": "Existing trusted phone SSH session re-authentication requested once; pending. Do not send passwords in chat."
+  },
+  "notRun": [
+    "Apple/Meta publisher and OS/device trust",
+    "Native device launch/exchange",
+    "Actual owner saved-settings removal",
+    "Default endpoint/locked-page flow",
+    "Fresh customer provisioning/installer",
+    "Image-policy migration",
+    "Physical crash/kill/reboot/power loss",
+    "App runtime/isolation/switch/accounts/proxy",
+    "Customer package/download"
+  ],
+  "sourceSHA256": {
+    "scripts/build-socialbox-license-service.py": "6998eb7767f254422f1b26ca6821611128dd51310c00d712a3612cd5c0aa0558",
+    "tools/test_license_service_signing.py": "120a1d2d1e455b9534b3f62f98ee420494dbdf85bae624b4fa15b2f3defa15dc"
+  },
+  "priorGovernance": "Unit30 missing trailer/historical gate FAIL remains unchanged; its docs supplement is no waiver. Unit31 must include its own ADOPT-004/ADOPT-014 trailer and later-range gate before export.",
+  "releaseBlockers": "Legitimate fresh-install issuer/history/clean target, default installation/activation, actual isolation/switch/recovery/runtime licensing/accounts/proxy remain open. Instagram sibling read FAIL and Facebook launch FAIL remain; Twitter runtime unaccepted."
+}

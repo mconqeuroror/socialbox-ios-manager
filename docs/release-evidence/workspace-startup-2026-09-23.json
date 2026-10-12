@@ -1,0 +1,65 @@
+{
+  "date": "2026-09-23",
+  "version": "3.1.0-1+socialbox.12",
+  "packageSHA256": "4967002e30b9133dad0fd383927f0d161bbdc5b2dd4367d71b7ead34e2fe3fec",
+  "status": "PASS_BUILD_TESTS_AND_INSTALL_FOREGROUND_BLOCKED_BY_DEVICE_LOCK",
+  "package": {
+    "installed": true,
+    "payloadFilesVerified": 59,
+    "metadataByteIdentical": true,
+    "originalProgramsByteIdentical": 15,
+    "originalSlicesByteIdentical": 25,
+    "priorVersion": "3.1.0-1+socialbox.11",
+    "priorSHA256": "31b7f02f1c5f485d70effd1977a2523def9adc261bdb7a2977e038f06004e77b",
+    "sourceSnapshotMatches": true,
+    "publishedToAPT": false
+  },
+  "validation": {
+    "failingFirstStartupAssertions": 5,
+    "uiFixtures": [
+      {
+        "assertions": 112,
+        "status": "PASS",
+        "scope": "Actual source-owned UI with a synthetic backend; no device/backend/isolation acceptance",
+        "resultSHA256": "e4320511080cb3f23a0b114b34afe942c55e12f64f5bbdd37d17a8a6f943a3f2"
+      },
+      {
+        "assertions": 202,
+        "status": "PASS",
+        "scope": "Synthetic UIKit presentation fixture; not original backend/device/isolation acceptance",
+        "resultSHA256": "82cd62816b0a8c6a8187509897e7bf105d62f6e388093224e4f754a9c6f8515b"
+      }
+    ],
+    "packageGroups": 35,
+    "packageCompositionGroups": 7,
+    "architecturesBuilt": [
+      "arm64",
+      "arm64e"
+    ],
+    "signer": "ldid; no Apple Development Team",
+    "staticCheck": "ALL CLEAN",
+    "leakContractTests": 8
+  },
+  "observedScope": [
+    "Startup class _Xd2z was absent from the old registry and constructed the old icon/title before licensing.",
+    "Source-owned startup and welcome preserve original validation, delegate and completion handlers; startup retains the actual live status label and spinner.",
+    "Ink/blue palette, source-drawn S mark, compact device profile and collapsible identifier/tool/maintenance sections.",
+    "Actual presentation installer exercises startup and welcome original-first, without a render-side backend action.",
+    "All 59 installed payload files match and global container metadata is byte-identical."
+  ],
+  "foreground": {
+    "status": "BLOCKED",
+    "launchRequestExit": 0,
+    "systemDomain": "FBSOpenApplicationErrorDomain",
+    "systemCode": 7,
+    "systemReason": "Locked",
+    "message": "Unable to launch the manager foreground because the device is locked.",
+    "physicalStartupSeen": false,
+    "videoRecorded": false
+  },
+  "notRun": [
+    "Physical cold launch, cached system launch snapshot and original backend screen navigation acceptance.",
+    "Data/network isolation, app switching, forty physical containers and SocialBox signer interoperability.",
+    "Exhaustive observation of server/embedded-web prose; unsupported runtime shapes retain original screens."
+  ]
+}

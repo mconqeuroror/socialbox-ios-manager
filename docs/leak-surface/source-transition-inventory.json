@@ -1,0 +1,37 @@
+{
+  "formatVersion": 1,
+  "rows": [
+    {
+      "id": "MIG-001",
+      "category": "lifecycle",
+      "surface": "Recovered-to-source transition preserves container records, identity and account recovery",
+      "mechanism": "Offline read-only inventory verifies the private runtime archive against its saved manifest, compares global and per-app metadata by stable ID, counts records rather than directories, and flags unsupported memberships, unreviewed fields, conflicting namespaces and pre-existing source state. It neither converts data nor authorizes an installation.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "gap",
+      "evidence": [
+        {
+          "path": "tools/source_transition_inventory.py",
+          "line": 1,
+          "anchor": "#!/usr/bin/env python3",
+          "detail": "Bounded no-extraction archive verification and aggregate metadata report. Names, credentials and identity values are not emitted. Installation/account/Keychain/identity-conversion flags remain false."
+        },
+        {
+          "path": "tools/test_source_transition_inventory.py",
+          "line": 1,
+          "anchor": "#!/usr/bin/env python3",
+          "detail": "Python behavior tests cover 107 records, reordered per-app indexes, mismatches, foreign app membership, malformed/unsafe/oversized/truncated inputs, metadata links, manifest integrity, multiple namespaces, original-byte retention and secret-free reporting."
+        },
+        {
+          "path": "docs/source-socialbox-candidate-checklist.md",
+          "line": 1,
+          "anchor": "# Independent source candidate",
+          "detail": "Source candidate migration and installation acceptance requirements remain separate from a component license test or package build."
+        }
+      ],
+      "verification": "17 host test methods pass; static checks pass. Saved .17 manager-state backup verifies 17,472 archive entries and 107 global records plus 107 matching index records, all with unsupported app membership. This is a saved archive, not a fresh phone snapshot or evidence of 107 logged-in accounts. Phone is not visible on USB during this turn.",
+      "fix": "Capture fresh quiescent state, reconcile existing source data, map supported app/account/identity data without regeneration, establish Keychain recovery, implement a journaled transition and verify device migration plus rollback before removing the mixed-engine installation guard."
+    }
+  ]
+}

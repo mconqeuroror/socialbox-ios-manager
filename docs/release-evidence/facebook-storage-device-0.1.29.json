@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "recordedAtUTC": "2026-09-18T12:08:10.015089+00:00",
+  "sourceBaseCommit": "ee287ee",
+  "device": {
+    "model": "iPhone10,4",
+    "iOS": "16.7.16",
+    "packageAtProbe": "0.1.28"
+  },
+  "scope": "Synthetic mobile CLI helper, real Substrate interception; NOT a sandboxed Facebook clone or network acceptance",
+  "result": "PASS",
+  "seedChecks": 22,
+  "verificationChecks": 97,
+  "cleanupChecks": 13,
+  "fixtureRegistry": "temporary enabled Facebook descriptor; production unchanged",
+  "actualFacebookCloneLaunch": "NOT_RUN",
+  "actualFacebookAccountLogin": "NOT_RUN",
+  "networkEnforcement": "NOT_RUN",
+  "files": {
+    "probeSource": {
+      "sha256": "80372ae0c70250e44a4aaf5a04ba0e15aaffe50eb2132e06e6b814d002058088",
+      "size": 27060
+    },
+    "signedProbe": {
+      "sha256": "ffd600c67df118b2d6abc684fd5f5852dee94af47cf495b23a1783741464fe4a",
+      "size": 119712
+    },
+    "seedLog": {
+      "sha256": "09da9bb6f4f43eaffa5001fc94acd885dc6667aadb65c4357375373d3463f402",
+      "size": 36
+    },
+    "verifyLog": {
+      "sha256": "c1c0b92708d24a6da4341bee1fe600726150bd765d3d72e79213b2a484164353",
+      "size": 59
+    },
+    "cleanupLog": {
+      "sha256": "587a3c863bc979c37559a7a3563ddc8d0208e627985a0a55e57a104f411f42de",
+      "size": 39
+    },
+    "shared/RBXFacebookStoragePolicy.h": {
+      "sha256": "ff0ec826aa8cf3677da83db16e488abf1b28c56df6c72190acf1b1610f3c962e"
+    },
+    "shared/RBXFacebookPrivateGroupStore.h": {
+      "sha256": "63fb42e0f084878f9f01d6aa962ae065c53b51e4a9e07890a152e765488dbb3d"
+    },
+    "tweak/Container/RBXFacebookStorageHooks.xm": {
+      "sha256": "2e06d2fc2ac0de6afcbae9b37528756a81c012e26c980b525ad32186dde47f6e"
+    },
+    "tools/build_facebook_storage_device_probe.py": {
+      "sha256": "37a51d3b0fab44df176c64e416d9975e93ae6ccdf274a63b4faec6e6a5425546"
+    },
+    "tools/facebook_storage_device_probe_main.inc": {
+      "sha256": "f69245b7c5039c6fd131a0a92b83ae7d8959631f773c22f051a3be13f58372c7"
+    }
+  }
+}

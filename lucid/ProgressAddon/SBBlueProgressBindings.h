@@ -1,0 +1,10 @@
+// Compile-time namespace isolation for the reused visual implementation.
+// This addon never links the full presentation/backend/coordinator sources.
+#define SBSwitchProgressGlyph SBBlueProgressGlyph
+#define SBSwitchProgressInstall SBBlueProgressInstallCore
+#define SBSwitchProgressFixtureReduceMotion SBBlueProgressFixtureReduceMotion
+#define SBBackendAppMetadata SBBlueProgressAppMetadata
+#define SBBackendMetadataSupported SBBlueProgressMetadataSupported
+#define SBBackendScreen SBBlueProgressScreen
+#define SBPanel SBBlueProgressPanel
+#define LBXVerifyCallerFile SBBlueProgressVerifyFile

@@ -1,0 +1,339 @@
+{
+  "schemaVersion": 1,
+  "rows": [
+    {
+      "id": "EXCP-001",
+      "category": "Clone startup compatibility",
+      "surface": "Facebook crash reporter replacing the ElleKit breakpoint dispatcher",
+      "mechanism": "Facebook-only registration adapter reserves the existing ElleKit EXC_MASK_BREAKPOINT handler while forwarding other crash masks, arguments and swap outputs. Readiness checks the dispatcher is still installed; no entitlement or network permission is granted.",
+      "coverage": "hook",
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "tweak/Common/RBXExceptionPortGuard.mm",
+          "line": 1,
+          "detail": "Actual task set/swap adapters and retained dispatcher check."
+        },
+        {
+          "path": "tweak/RedditBox.xm",
+          "line": 1,
+          "detail": "Facebook-only installation; socket readiness depends on compatibility evidence."
+        },
+        {
+          "path": "tweak/Makefile",
+          "line": 1,
+          "detail": "Ships the adapter in the tweak."
+        },
+        {
+          "path": "tools/test_exception_port_guard.mm",
+          "line": 1,
+          "detail": "Eight mocked-kernel wrapper assertions; device baseline crashes at CFPreferences BRK after reporter replaces mask."
+        },
+        {
+          "path": "tools/test_exception_port_guard.sh",
+          "line": 1,
+          "detail": "Native fixture entrypoint."
+        },
+        {
+          "path": "tweak/Common/RBXExceptionPortGuard.h",
+          "line": 1,
+          "detail": "Runtime fix declaration and mandatory executable regression integration."
+        },
+        {
+          "path": "scripts/build-mac.sh",
+          "line": 1,
+          "detail": "Runtime fix declaration and mandatory executable regression integration."
+        },
+        {
+          "path": "docs/storage-lifecycle-0.1.35.md",
+          "line": 1,
+          "detail": "Final installed candidate, specific repairs, real acceptance and unresolved boundaries."
+        },
+        {
+          "path": "docs/release-evidence/storage-lifecycle-0.1.35.json",
+          "line": 1,
+          "detail": "Complete passing host test list, per-unit commits, sanitized paired-clone failures and private artifact hashes."
+        }
+      ],
+      "verification": "Private device baseline: reporter registers mask 0x4e replacing ElleKit mask 0x40; clone terminates EXC_GUARD while forwarding intercepted breakpoint. Preserving 0x40 allowed a 72-second offline run and diagnostic completion. Final production-equivalent A/B retest in progress; other backends and real crashes are unverified. Final offline A/B clones retain the dispatcher and remain alive beyond 102/131 seconds, respectively; numeric MobileGestalt fallback was also required for rendering. No online/account or crash-report forwarding acceptance claimed.",
+      "fix": "Keep Facebook inactive pending complete identity, storage and managed-network acceptance. Do not infer full crash-reporter compatibility from startup."
+    },
+    {
+      "id": "DEVISO-001",
+      "category": "Actual cross-container enforcement",
+      "surface": "Sibling data-home file read/stat in two real Facebook clones on palera1n",
+      "mechanism": "OS home separation and restricted app entitlements were assumed to supply the filesystem boundary. Runtime public APIs disproved enforcement: both clones read the sibling canary. Production Facebook remains inactive and defaults-wire false.",
+      "coverage": [
+        "blocked"
+      ],
+      "verdict": "gap",
+      "verification": "132 primary offline clone checks: 126 pass, six repeated foreign-file read/stat failures across B seed, A verify and B verify. System sandbox policy query denies the sibling path while actual read succeeds. Three source Keychain aliases and four defaults suites passed same-key canary isolation. Facebook later terminates in its framework. No full account, transport, cloud restore or MDM acceptance. The follow-up direct-syscall experiment reproduced foreign marker reads, then denied foreign content in both directions with a root-owned single-active permission gate. Foreign home metadata remains visible and closed-home sync fails; the candidate is not production-integrated (SGATE-001). Follow-up SGATE-002 integrates durable lifecycle enforcement: fresh A/B creation/sync, sealed export/deletion and both direct-syscall foreign-content denials passed. Foreign home root metadata remains visible; this verdict stays a gap.",
+      "fix": "Do not enable Facebook or advertise complete isolation. Require effective syscall-level boundary evidence on the supported device or a separately tested storage architecture; path hiding is insufficient.",
+      "evidence": [
+        {
+          "path": "docs/facebook-clone-device-acceptance.md",
+          "line": 3,
+          "anchor": "**FAIL: cross-container filesystem isolation",
+          "detail": "Scope, actual defects, limited results and release blocker."
+        },
+        {
+          "path": "docs/release-evidence/facebook-clone-acceptance-0.1.32.json",
+          "line": 1,
+          "detail": "Sanitized real clone output plus raw evidence hashes."
+        },
+        {
+          "path": "tools/fixtures/facebook_offline_acceptance/FBOfflineProbe.m",
+          "line": 1,
+          "detail": "Observer using ordinary Keychain, defaults, CFPreferences, NSFileManager and sockets in the clone."
+        },
+        {
+          "path": "tools/fixtures/facebook_offline_acceptance/FBOfflineAcceptance.m",
+          "line": 1,
+          "detail": "Offline-only disposable clone provisioning/deletion via real operation and lifecycle methods."
+        },
+        {
+          "path": "docs/facebook-storage-gate-experiment.md",
+          "line": 3,
+          "anchor": "**Not a production fix.",
+          "detail": "Actual direct-syscall result, narrow experimental boundary and lifecycle blockers."
+        },
+        {
+          "path": "docs/release-evidence/facebook-storage-gate-experiment-0.1.34.json",
+          "line": 1,
+          "detail": "Sanitized baseline and final paired-clone reports; failures retained."
+        },
+        {
+          "path": "docs/storage-lifecycle-0.1.35.md",
+          "line": 1,
+          "detail": "Final installed candidate, specific repairs, real acceptance and unresolved boundaries."
+        },
+        {
+          "path": "docs/release-evidence/storage-lifecycle-0.1.35.json",
+          "line": 1,
+          "detail": "Complete passing host test list, per-unit commits, sanitized paired-clone failures and private artifact hashes."
+        }
+      ]
+    },
+    {
+      "id": "SGATE-001",
+      "category": "Experimental storage boundary",
+      "surface": "Single-active root-owned home/bundle/executable permission transition",
+      "mechanism": "The original descriptor-pinned permission experiment is now used by the durable SGATE-002 authority. The experiment alone is not a complete sandbox boundary; directory metadata and broader runtime acceptance remain unresolved.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "gap",
+      "verification": "Host: 40 targets, 120 selections, four authority revocations, 246 chmod fault positions, alias/hardlink/stale-inode cases. Actual A/B clones: own raw reads succeed; foreign Foundation/POSIX/raw reads denied in both directions; each run retains a FAIL for observable sibling root metadata. Closed-home sync fails. Main execute-bit removal blocked the tested launch, while bundle-directory-only closure did not. 2026-09-30 directory-only logical-profile primitive: 41,574 host filesystem assertions including 40 profiles/120 selections, revocation and 82 chmod faults PASS; existing 50,386 clone primitive assertions PASS. A private manual Instagram trial denied the previously witnessed A canary through both normal open and libc syscall as UID 501. Exact inode/ownership/mode were restored. This does not fix the automatic recovered switch, invalidate retained descriptors or prove shared/broker isolation.",
+      "fix": "Do not integrate into existing user profiles until durable ownership, global process closure, startup/cancellation, sync/delete and backup/export/rollback are covered by actual lifecycle tests. Repeat device content, metadata and alternative-launch probes. Do not mark DEVISO-001 covered.",
+      "evidence": [
+        {
+          "path": "shared/RBXStorageGate.h",
+          "line": 8,
+          "anchor": "// SGATE-002:",
+          "detail": "Primitive promoted behind the durable authority; the original experiment remains historical evidence."
+        },
+        {
+          "path": "tools/test_storage_gate.c",
+          "line": 1,
+          "detail": "Native real-filesystem mode and fault tests; current host UID is used for all roles."
+        },
+        {
+          "path": "tools/test_storage_gate.sh",
+          "line": 1,
+          "detail": "Standalone host native test entrypoint; not a production gate."
+        },
+        {
+          "path": "tools/fixtures/facebook_offline_acceptance/FBOfflineProbe.m",
+          "line": 17,
+          "anchor": "// Device-only acceptance:",
+          "detail": "Actual clone direct syscall with an own-canary positive control."
+        },
+        {
+          "path": "docs/facebook-storage-gate-experiment.md",
+          "line": 3,
+          "anchor": "**Not a production fix.",
+          "detail": "Evidence, unimplemented lifecycle work, explicit scope and reproduction."
+        },
+        {
+          "path": "docs/release-evidence/facebook-storage-gate-experiment-0.1.34.json",
+          "line": 1,
+          "detail": "Per-probe outcomes and hashes of private physical driver/logs."
+        },
+        {
+          "path": "tools/test_storage_directory_gate.c",
+          "line": 1,
+          "detail": "41,574 actual-filesystem directory-only checks, 40 profiles, 120 selections and 82 chmod fault positions; host UID unchanged."
+        },
+        {
+          "path": "tools/test_storage_directory_gate.sh",
+          "line": 1,
+          "detail": "Native directory-only regression runner; no recovered switch integration."
+        },
+        {
+          "path": "docs/release-evidence/socialbox-instagram-directory-gate-2026-09-30.json",
+          "line": 1,
+          "detail": "Physical Instagram manual directory seal denial and exact permission rollback; integration/recovery NOT_RUN."
+        }
+      ]
+    },
+    {
+      "id": "SGATE-002",
+      "category": "Cross-container storage lifecycle",
+      "surface": "Durable storage ownership, single-active admission, closed sync/delete and private IPA staging",
+      "mechanism": "Root-only receipts bind exact registered clone code/home inodes. Process coordinator seals all app families before drain, authorizes one selected clone only under its current reservation, and reseals on failure. Closed-home sync/deletion require a matching receipt and OS identity. Code-only staged copies regain executable modes beneath private transaction roots.",
+      "coverage": [
+        "blocked"
+      ],
+      "verdict": "unverified",
+      "verification": "Host authority: 10,354 assertions; staged executable 23; primitive 50,386 including 40 entries and 120 selections. Physical: two fresh actual Facebook clones created/synced, both final verify runs 38 PASS/1 FAIL (observable sibling root metadata), own direct syscall markers retained, foreign Foundation/POSIX/raw reads denied. Prior pair closed export and scoped installer deletion passed. Final rootless upgrade and a second daemon restart complete startup recovery with both existing Reddit containers preserved, empty operation fence and CLOSED network. No online, account or 40-real-clone acceptance claimed. First production upgrade exposed the old three-second startup budget failing the second registered family drain. The actual dispatcher-budget regression failed first; shared aggregate stop budget now includes all registered families and remains capped by operation deadline. Final physical retest passes startup recovery after upgrade and another daemon restart.",
+      "fix": "Complete actual closed sync, export, deletion, relaunch and sibling direct-syscall tests on the supported device before enabling Facebook. Directory metadata, system-service backing stores, launch races and wider acceptance remain separate.",
+      "evidence": [
+        {
+          "path": "daemon/RBXStorageAccess.h",
+          "line": 1,
+          "detail": "Storage lifecycle implementation or executable regression."
+        },
+        {
+          "path": "daemon/RBXStorageAccess.m",
+          "line": 1,
+          "detail": "Storage lifecycle implementation or executable regression."
+        },
+        {
+          "path": "shared/RBXStorageGate.h",
+          "line": 1,
+          "detail": "Storage lifecycle implementation or executable regression."
+        },
+        {
+          "path": "shared/RBXStagedExecutable.h",
+          "line": 1,
+          "detail": "Storage lifecycle implementation or executable regression."
+        },
+        {
+          "path": "shared/RBXCloneSupportDirectory.h",
+          "line": 1,
+          "detail": "Storage lifecycle implementation or executable regression."
+        },
+        {
+          "path": "daemon/RBXCloneManager.h",
+          "line": 1,
+          "detail": "Storage lifecycle implementation or executable regression."
+        },
+        {
+          "path": "daemon/RBXCloneManager.m",
+          "line": 1,
+          "detail": "Storage lifecycle implementation or executable regression."
+        },
+        {
+          "path": "daemon/RBXAppProcessCoordinator.m",
+          "line": 1,
+          "detail": "Storage lifecycle implementation or executable regression."
+        },
+        {
+          "path": "daemon/main.m",
+          "line": 1,
+          "detail": "Storage lifecycle implementation or executable regression."
+        },
+        {
+          "path": "daemon/Makefile",
+          "line": 1,
+          "detail": "Storage lifecycle implementation or executable regression."
+        },
+        {
+          "path": "scripts/build-mac.sh",
+          "line": 1,
+          "detail": "Storage lifecycle implementation or executable regression."
+        },
+        {
+          "path": "tools/static_check.py",
+          "line": 1,
+          "detail": "Storage lifecycle implementation or executable regression."
+        },
+        {
+          "path": "tools/test_storage_access.m",
+          "line": 1,
+          "detail": "Storage lifecycle implementation or executable regression."
+        },
+        {
+          "path": "tools/test_storage_access.sh",
+          "line": 1,
+          "detail": "Storage lifecycle implementation or executable regression."
+        },
+        {
+          "path": "tools/test_staged_executable.m",
+          "line": 1,
+          "detail": "Storage lifecycle implementation or executable regression."
+        },
+        {
+          "path": "tools/test_staged_executable.sh",
+          "line": 1,
+          "detail": "Storage lifecycle implementation or executable regression."
+        },
+        {
+          "path": "tools/test_app_process_coordinator.m",
+          "line": 1,
+          "detail": "Storage lifecycle implementation or executable regression."
+        },
+        {
+          "path": "tools/test_app_launch_flow.py",
+          "line": 1,
+          "detail": "Storage lifecycle implementation or executable regression."
+        },
+        {
+          "path": "tools/test_app_global_recovery.py",
+          "line": 1,
+          "detail": "Storage lifecycle implementation or executable regression."
+        },
+        {
+          "path": "tools/test_app_removal_identity.py",
+          "line": 1,
+          "detail": "Storage lifecycle implementation or executable regression."
+        },
+        {
+          "path": "scripts/build-version.py",
+          "line": 1,
+          "detail": "Code normalization helper participates in authenticated signing contract."
+        },
+        {
+          "path": "tools/test_build_version.py",
+          "line": 1,
+          "detail": "Changing stage normalization invalidates old signing contract."
+        },
+        {
+          "path": "daemon/RBXAppProcessCoordinator.h",
+          "line": 1,
+          "detail": "All registered family stop budget and actual startup timeout regression."
+        },
+        {
+          "path": "daemon/RBXContainerRegistry.m",
+          "line": 1,
+          "detail": "All registered family stop budget and actual startup timeout regression."
+        },
+        {
+          "path": "tools/test_app_process_coordinator.sh",
+          "line": 1,
+          "detail": "All registered family stop budget and actual startup timeout regression."
+        },
+        {
+          "path": "docs/storage-lifecycle-0.1.35.md",
+          "line": 1,
+          "detail": "Final installed candidate, specific repairs, real acceptance and unresolved boundaries."
+        },
+        {
+          "path": "docs/release-evidence/storage-lifecycle-0.1.35.json",
+          "line": 1,
+          "detail": "Complete passing host test list, per-unit commits, sanitized paired-clone failures and private artifact hashes."
+        },
+        {
+          "path": "tools/fixtures/facebook_offline_acceptance/FBOfflineAcceptance.m",
+          "line": 1,
+          "detail": "Production-excluded bounded open/close/export through actual lifecycle and offline authority."
+        },
+        {
+          "path": "tools/fixtures/facebook_offline_acceptance/FBOfflineProbe.m",
+          "line": 1,
+          "detail": "Actual clone public API/raw syscall canaries and runtime WebKit selector enumeration."
+        }
+      ]
+    }
+  ]
+}

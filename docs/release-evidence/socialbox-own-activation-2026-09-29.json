@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-09-29",
+  "scope": "Own activation form -> authenticated IPC -> separately packaged root licensing owner. No original engine grant integration.",
+  "customerReleaseReady": false,
+  "package": {
+    "version": "3.1.0-1+socialbox.18",
+    "sha256": "ecf1ed8cd1a3a7df6d24b66839ba7aace7282e2f6c00b295327c6e3098387e1c",
+    "predecessorVersion": "3.1.0-1+socialbox.17",
+    "predecessorSHA256": "5a095ad0c05a6eabfb335ae9be03c15a6be9d443c77f0fc33bdd9ff3bf92bba7",
+    "architectures": [
+      "arm64",
+      "arm64e"
+    ],
+    "signing": "Procursus ldid, no Apple Development Team",
+    "ownerServiceSHA256": "416669a910d8825bb9b589dbaced3b1369e7ed145cdffc38c9831512a7da7c3a",
+    "keyId": "b2c5d4176c727107c9826ad69386d4d65f90920074981bd842127d6b22add6e9",
+    "installed": false,
+    "published": false
+  },
+  "archiveReadback": {
+    "payloadFiles": 61,
+    "preservedPrograms": 15,
+    "serviceAndClientArchitectures": [
+      "arm64",
+      "arm64e"
+    ],
+    "noNewEntitlements": true,
+    "originalExecutableBytesUnchanged": true,
+    "pairingNotPackagedOrRemoved": true,
+    "managerCallerPinMatches": true,
+    "allPayloadHashesMatch": true,
+    "sourceInputsUnchanged": true,
+    "testSeamsAbsent": true,
+    "installed": false
+  },
+  "tests": {
+    "workspace": {
+      "status": "PASS",
+      "assertions": 237,
+      "failures": [],
+      "backend": "synthetic; actual UIKit source and own IPC schema; mocked client transport"
+    },
+    "nativeOwnerIPC": {
+      "status": "PASS",
+      "assertions": 79,
+      "signatures": "real temporary RSA",
+      "HTTP": "mocked",
+      "storage": "real filesystem"
+    },
+    "interfaceCopy": {
+      "status": "PASS",
+      "entries": 299,
+      "nativeChecks": 911,
+      "references": 341
+    },
+    "recoveredPackage": {
+      "status": "PASS",
+      "groups": 36
+    },
+    "helperPackage": {
+      "status": "PASS",
+      "groups": 8,
+      "failingFirst": "Missing add_license_service composition observed before implementation"
+    },
+    "branding": {
+      "status": "PASS",
+      "groups": 9,
+      "nativeDisplayChecks": 31
+    },
+    "launcherArchitecture": "PASS",
+    "staticCheck": "PASS",
+    "backendAdapter": {
+      "status": "PASS",
+      "checks": 119,
+      "scope": "actual adapter with synthetic ABI/actions"
+    },
+    "basePresentation": {
+      "status": "PASS",
+      "assertions": 234,
+      "scope": "actual UI with synthetic backend"
+    }
+  },
+  "device": {
+    "SSHReadOnlyConnection": "PASS",
+    "reviewedManagerModeOwnerAndSize": "PASS: 06755, root:root, 9490320 bytes",
+    "packageUpgrade": "NOT_RUN",
+    "UIKitToManagerOwnerActivation": "NOT_RUN",
+    "retainedEngineAdmission": "NOT_IMPLEMENTED",
+    "secondPhysicalPhone": "NOT_RUN",
+    "ownerDataChanged": false
+  },
+  "behavior": [
+    "Only our independent field and IPC receive a newly entered SocialBox key; the original key field/delegate/activation action are not used.",
+    "One explicit submit at a time. Rendering makes no request. Signed denials, unavailable service and unknown results cannot unlock anything.",
+    "A successful verification clears the entered key and accurately reports a blocked preview. It does not invoke an original success callback or write original token storage.",
+    "The integrated builder includes the source-owned service and exact launchd job, matching the unchanged manager executable pin. Pairing is outside package payload and is preserved on removal/upgrade."
+  ],
+  "blockers": [
+    "Original app startup and periodic authorization are not replaced.",
+    "Original daemon authenticated hosted-session contract is not replaced.",
+    "Injected-engine authorization/config initialization still requires reconstruction and device tests; our signed cloud assessment does not grant it.",
+    "ADOPT-003 retains unresolved global/batch switch failure propagation, launch fencing and unmeasured network containment; this change does not prove isolation."
+  ],
+  "phonePreserved": true
+}

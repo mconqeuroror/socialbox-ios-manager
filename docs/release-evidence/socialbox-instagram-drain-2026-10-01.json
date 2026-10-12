@@ -1,0 +1,144 @@
+{
+  "schemaVersion": 1,
+  "device": "iPhone X",
+  "iOS": "16.7.16",
+  "InstagramVersion": "448.0.0",
+  "helperSHA256": "b593a5af40da66bb7f0dc2c6edf481fbaa02ff756fa39efe812b1a19c90ce2ee",
+  "results": {
+    "priorPrivateAppStateBackupHash": "PASS",
+    "Instagram running while manager foreground": {
+      "status": "PASS",
+      "operation": "inspect",
+      "exitCode": 3,
+      "receiptStatus": "observed_running",
+      "reason": "processes_present",
+      "initialProcessCount": 1,
+      "terminationRequests": 0,
+      "absentObservations": 0,
+      "elapsedSeconds": null
+    },
+    "actual Instagram exit observed twice": {
+      "status": "PASS",
+      "operation": "drain",
+      "exitCode": 0,
+      "receiptStatus": "observed_absent",
+      "reason": "two_complete_absent_snapshots",
+      "initialProcessCount": 1,
+      "terminationRequests": 1,
+      "absentObservations": 2,
+      "elapsedSeconds": 0.11331899999640882
+    },
+    "independent stopped Instagram inspection": {
+      "status": "PASS",
+      "operation": "inspect",
+      "exitCode": 0,
+      "receiptStatus": "observed_absent",
+      "reason": "two_complete_absent_snapshots",
+      "initialProcessCount": 0,
+      "terminationRequests": 0,
+      "absentObservations": 2,
+      "elapsedSeconds": 0.06750999996438622
+    },
+    "owner Instagram reopened and observed running": {
+      "status": "PASS",
+      "operation": "inspect",
+      "exitCode": 3,
+      "receiptStatus": "observed_running",
+      "reason": "processes_present",
+      "initialProcessCount": 1,
+      "terminationRequests": 0,
+      "absentObservations": 0,
+      "elapsedSeconds": null
+    },
+    "ownerPayloadUnchanged": "PASS",
+    "signedInFeedAfterReopen": "PASS"
+  },
+  "status": "PASS",
+  "test": "Private standalone exact-application process drain; owner runtime unchanged",
+  "build": {
+    "sourceCommit": "30fbde3bfaa63b8e4ed1c20b6487a86604b7e78f",
+    "architectures": {
+      "arm64": {
+        "compile": "PASS",
+        "entitlementReadback": "PASS",
+        "entitlements": {
+          "com.apple.runningboard.terminateprocess": true,
+          "platform-application": true
+        }
+      },
+      "arm64e": {
+        "compile": "PASS",
+        "entitlementReadback": "PASS",
+        "entitlements": {
+          "com.apple.runningboard.terminateprocess": true,
+          "platform-application": true
+        }
+      }
+    },
+    "sourcesSHA256": {
+      "lucid/Switching/main.m": "8d7bf2ed1f792fb5b031947a8919e65cdfcedb8e9d6b0c3508d3a5accc93b30b",
+      "lucid/Switching/LBXDarwinDrainBackend.m": "f38dc41e6f0d6e65ddb6bb4c77f5c1c732abe11c1abc2f1d2b2e1b5214e7e5da",
+      "lucid/Switching/LBXProcessDrain.m": "7e99c0c7ecea9063d2953383018b6b453862d112d340bb90a1ab01158b5ae517",
+      "lucid/Switching/LBXManagedApplications.m": "dbd31dbe4266b1c0fcbb336972541ef4b6f76d3e77d4c707008e4f58da4750af",
+      "shared/RBXProcessIdentity.m": "824117806f274f96fb3d5e29c38f60361754dbd10403af96de27b3ab0cca16ab"
+    },
+    "signatureVerification": "PASS",
+    "sha256": "b593a5af40da66bb7f0dc2c6edf481fbaa02ff756fa39efe812b1a19c90ce2ee"
+  },
+  "cleanup": {
+    "ownerPayloadUnchanged": "PASS",
+    "privateToolRemoved": "PASS"
+  },
+  "beforeFix": {
+    "physicalRegistration": "FAIL",
+    "terminationRequestsBeforeFix": 0,
+    "reproduced": "Foundation resolves and standardizes the private var installation path to the var alias; an installed embedded extension executable has mode 0644",
+    "orchestrationRegressionOnOldCode": {
+      "status": "FAIL_EXPECTED",
+      "checks": 3
+    },
+    "adapterRegressionOnOldCode": {
+      "status": "FAIL_EXPECTED",
+      "checks": 4
+    }
+  },
+  "hostTests": {
+    "orchestration": {
+      "status": "PASS",
+      "assertions": 54,
+      "boundaries": "mocked"
+    },
+    "DarwinAdapter": {
+      "status": "PASS",
+      "assertions": 334,
+      "boundaries": "mocked"
+    },
+    "processIdentity": {
+      "status": "PASS",
+      "assertions": 402,
+      "boundaries": "mocked"
+    }
+  },
+  "notRun": [
+    "actual extension launch or independently running extension termination",
+    "arm64e physical execution",
+    "original helper/service upgrade with this build",
+    "original async global/batch/create/import/CLI worker integration",
+    "launch/write/network fencing",
+    "automatic directory gate switch and interruption/reboot recovery",
+    "retained descriptors and shared system brokers",
+    "two Instagram account sign-ins",
+    "Facebook or Twitter launch/account acceptance",
+    "fresh customer installation and website licensing in the full app",
+    "account backup restoration"
+  ],
+  "claims": {
+    "clientReady": false,
+    "installedOwnerUpdate": false,
+    "originalSwitchIntegrated": false,
+    "containerIsolationEstablished": false,
+    "networkFenced": false,
+    "launchesFenced": false,
+    "reusableAdmission": false
+  }
+}

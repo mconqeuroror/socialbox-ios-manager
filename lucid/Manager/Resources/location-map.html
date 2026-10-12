@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<style>
+  html,body,#map{margin:0;height:100%;background:#11161a;overflow:hidden;touch-action:none;font-family:-apple-system,sans-serif}
+  #map{position:relative}
+  img.tile{position:absolute;width:256px;height:256px;pointer-events:none}
+  #pin{position:absolute;left:50%;top:50%;width:16px;height:16px;margin:-20px 0 0 -8px;
+    background:#007aff;border:2px solid #fff;border-radius:50% 50% 50% 0;transform:rotate(-45deg);
+    box-shadow:0 1px 4px rgba(0,0,0,.6);z-index:4;display:none}
+  #hint{position:absolute;left:10px;right:10px;bottom:10px;color:#c5d0d2;font-size:12px;z-index:5;text-align:center}
+</style>
+</head>
+<body>
+<div id="map"></div>
+<div id="pin"></div>
+<div id="hint">Hold and drag. Tap to drop a pin.</div>
+<script>
+var TILE=256, z=5, lat=48.1486, lon=17.1077, pin=null, mode="dark";
+var dragging=false, lastX=0, lastY=0, startX=0, startY=0;
+function clamp(v,a,b){return Math.max(a,Math.min(b,v));}
+function project(la,lo,zoom){
+  var n=Math.pow(2,zoom);
+  var x=(lo+180)/360*n;
+  var s=Math.sin(la*Math.PI/180);
+  var y=(0.5-Math.log((1+s)/(1-s))/(4*Math.PI))*n;
+  return [x,y];
+}
+function unproject(x,y,zoom){
+  var n=Math.pow(2,zoom);
+  var lo=x/n*360-180;
+  var r=Math.PI*(1-2*y/n);
+  var la=180/Math.PI*Math.atan(Math.sinh(r));
+  return [clamp(la,-85.05,85.05), ((lo+540)%360)-180];
+}
+function tileUrl(x,y,zoom){
+  var n=Math.pow(2,zoom);
+  x=((x%n)+n)%n;
+  if(y<0||y>=n) return "";
+  if(mode==="sat")
+    return "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/"+zoom+"/"+y+"/"+x;
+  return "https://basemaps.cartocdn.com/dark_all/"+zoom+"/"+x+"/"+y+"@2x.png";
+}
+function render(){
+  var map=document.getElementById("map");
+  var w=map.clientWidth||window.innerWidth, h=map.clientHeight||window.innerHeight;
+  var p=project(lat,lon,z);
+  var originX=p[0]*TILE-w/2, originY=p[1]*TILE-h/2;
+  var x0=Math.floor(originX/TILE), y0=Math.floor(originY/TILE);
+  var cols=Math.ceil(w/TILE)+2, rows=Math.ceil(h/TILE)+2;
+  var used={};
+  [].slice.call(map.querySelectorAll("img.tile")).forEach(function(img){img._keep=false;});
+  for(var iy=0;iy<rows;iy++){
+    for(var ix=0;ix<cols;ix++){
+      var tx=x0+ix, ty=y0+iy, key=z+"/"+tx+"/"+ty;
+      used[key]=true;
+      var img=document.getElementById("t"+key.replace(/\//g,"_"));
+      var url=tileUrl(tx,ty,z);
+      if(!url) continue;
+      if(!img){
+        img=document.createElement("img");
+        img.className="tile";
+        img.id="t"+key.replace(/\//g,"_");
+        img.decoding="async";
+        map.appendChild(img);
+      }
+      if(img.src.indexOf(url)<0) img.src=url;
+      img.style.left=(tx*TILE-originX)+"px";
+      img.style.top=(ty*TILE-originY)+"px";
+      img._keep=true;
+    }
+  }
+  [].slice.call(map.querySelectorAll("img.tile")).forEach(function(img){if(!img._keep) img.remove();});
+  var el=document.getElementById("pin");
+  if(pin){
+    var q=project(pin[0],pin[1],z);
+    el.style.display="block";
+    el.style.left=(q[0]*TILE-originX)+"px";
+    el.style.top=(q[1]*TILE-originY)+"px";
+  } else el.style.display="none";
+}
+function notify(){
+  if(window.webkit&&webkit.messageHandlers.place)
+    webkit.messageHandlers.place.postMessage({lat:pin?pin[0]:lat,lon:pin?pin[1]:lon,hasPin:!!pin});
+}
+function setView(la,lo,zoom,drop){
+  lat=clamp(la,-85.05,85.05); lon=lo; if(zoom) z=clamp(zoom,2,18);
+  if(drop) pin=[lat,lon];
+  render();
+  if(drop) notify();
+}
+function setMode(m){mode=m;render();}
+window.setView=setView;
+window.setMode=setMode;
+var map=document.getElementById("map");
+map.addEventListener("touchstart",function(e){
+  if(!e.touches.length) return;
+  dragging=true; lastX=startX=e.touches[0].clientX; lastY=startY=e.touches[0].clientY;
+}, {passive:true});
+map.addEventListener("touchmove",function(e){
+  if(!dragging||!e.touches.length) return;
+  var x=e.touches[0].clientX, y=e.touches[0].clientY;
+  var p=project(lat,lon,z);
+  p[0]-=(x-lastX)/TILE; p[1]-=(y-lastY)/TILE;
+  var u=unproject(p[0],p[1],z); lat=u[0]; lon=u[1];
+  lastX=x; lastY=y; render();
+}, {passive:true});
+map.addEventListener("touchend",function(e){
+  dragging=false;
+  if(Math.abs(lastX-startX)<8 && Math.abs(lastY-startY)<8){
+    var r=map.getBoundingClientRect();
+    var p=project(lat,lon,z);
+    p[0]+=(startX-r.left-r.width/2)/TILE;
+    p[1]+=(startY-r.top-r.height/2)/TILE;
+    var u=unproject(p[0],p[1],z);
+    pin=u; render(); notify();
+    document.getElementById("hint").style.display="none";
+  }
+});
+window.addEventListener("resize",render);
+render();
+</script>
+</body>
+</html>

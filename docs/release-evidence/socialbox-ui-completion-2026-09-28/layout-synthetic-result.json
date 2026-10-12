@@ -1,0 +1,105 @@
+{
+  "backendOperations": 0,
+  "scope": "Actual source-owned UIKit at synthetic viewport sizes and content-size traits; 216-point synthetic input view exercises the native keyboard layout guide. No recovered-core or device acceptance.",
+  "failures": [],
+  "ok": 1,
+  "assertions": 559,
+  "cases": [
+    {
+      "height": 436,
+      "keyboardGuideY": 436,
+      "keyboardGuideHeight": 167,
+      "category": "UICTContentSizeCategoryL",
+      "width": 320,
+      "headerHeight": 333,
+      "tableHeight": 358,
+      "dockHeight": 68,
+      "createY": 370,
+      "name": "320-portrait"
+    },
+    {
+      "height": 535,
+      "keyboardGuideY": 535,
+      "keyboardGuideHeight": 68,
+      "category": "UICTContentSizeCategoryL",
+      "width": 375,
+      "headerHeight": 236,
+      "tableHeight": 457,
+      "dockHeight": 68,
+      "createY": 469,
+      "name": "375-portrait"
+    },
+    {
+      "height": 712,
+      "keyboardGuideY": 603,
+      "keyboardGuideHeight": 0,
+      "category": "UICTContentSizeCategoryL",
+      "width": 390,
+      "headerHeight": 236,
+      "tableHeight": 525,
+      "dockHeight": 68,
+      "createY": 537,
+      "name": "390-portrait"
+    },
+    {
+      "height": 678,
+      "keyboardGuideY": 603,
+      "keyboardGuideHeight": 0,
+      "category": "UICTContentSizeCategoryL",
+      "width": 390,
+      "headerHeight": 236,
+      "tableHeight": 525,
+      "dockHeight": 102,
+      "createY": 537,
+      "name": "390-bottom-inset"
+    },
+    {
+      "height": 243,
+      "keyboardGuideY": 243,
+      "keyboardGuideHeight": 360,
+      "category": "UICTContentSizeCategoryL",
+      "width": 667,
+      "headerHeight": 236,
+      "tableHeight": 165,
+      "dockHeight": 68,
+      "createY": 177,
+      "name": "667-landscape"
+    },
+    {
+      "height": 434,
+      "keyboardGuideY": 434,
+      "keyboardGuideHeight": 169,
+      "category": "UICTContentSizeCategoryAccessibilityXXXL",
+      "width": 320,
+      "headerHeight": 641,
+      "tableHeight": 350.5,
+      "dockHeight": 70,
+      "createY": 362.5,
+      "name": "320-accessibility"
+    },
+    {
+      "height": 710,
+      "keyboardGuideY": 603,
+      "keyboardGuideHeight": 0,
+      "category": "UICTContentSizeCategoryAccessibilityXXXL",
+      "width": 390,
+      "headerHeight": 595,
+      "tableHeight": 519.5,
+      "dockHeight": 70,
+      "createY": 531.5,
+      "name": "390-accessibility"
+    },
+    {
+      "height": 535,
+      "keyboardGuideY": 387,
+      "keyboardGuideHeight": 216,
+      "category": "UICTContentSizeCategoryL",
+      "width": 375,
+      "headerHeight": 236,
+      "tableHeight": 309,
+      "dockHeight": 68,
+      "createY": 321,
+      "name": "375-keyboard"
+    }
+  ]
+}

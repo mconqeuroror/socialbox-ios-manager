@@ -1,0 +1,3511 @@
+{
+  "bundle_and_filter_declarations": {
+    "compiled/var/jb/Applications/SocialBox.app/Info.plist": {
+      "CFBundleDevelopmentRegion": "en",
+      "CFBundleDisplayName": "SocialBox",
+      "CFBundleDocumentTypes": [
+        {
+          "CFBundleTypeName": "SocialBox Container",
+          "CFBundleTypeRole": "Viewer",
+          "LSHandlerRank": "Owner",
+          "LSItemContentTypes": [
+            "com.socialbox",
+            "com.socialbox-container"
+          ]
+        }
+      ],
+      "CFBundleExecutable": "SocialBox",
+      "CFBundleIconFile": "AppIcon",
+      "CFBundleIconFiles": [
+        "AppIcon"
+      ],
+      "CFBundleIcons": {
+        "CFBundlePrimaryIcon": {
+          "CFBundleIconFiles": [
+            "AppIcon"
+          ],
+          "UIPrerenderedIcon": false
+        }
+      },
+      "CFBundleIdentifier": "com.socialbox.app",
+      "CFBundleInfoDictionaryVersion": "6.0",
+      "CFBundleName": "SocialBox",
+      "CFBundlePackageType": "APPL",
+      "CFBundleShortVersionString": "3.1.0",
+      "CFBundleURLTypes": [
+        {
+          "CFBundleURLName": "com.socialbox.app",
+          "CFBundleURLSchemes": [
+            "socialbox"
+          ]
+        }
+      ],
+      "CFBundleVersion": "1",
+      "LSRequiresIPhoneOS": true,
+      "LSSupportsOpeningDocumentsInPlace": true,
+      "NSAppTransportSecurity": {
+        "NSAllowsArbitraryLoads": true
+      },
+      "NSBonjourServices": [
+        "_socialbox._tcp",
+        "_socialbox._udp"
+      ],
+      "NSCameraUsageDescription": "SocialBox needs camera access to scan proxy QR codes.",
+      "NSLocalNetworkUsageDescription": "SocialBox needs Local Network access to reach the license server, sync containers across the app, and route proxy traffic on your Wi-Fi.",
+      "NSLocationAlwaysAndWhenInUseUsageDescription": "SocialBox needs location access to simulate device location.",
+      "NSLocationWhenInUseUsageDescription": "SocialBox needs location access to show your current position on the map.",
+      "NSPhotoLibraryUsageDescription": "SocialBox needs Photos access so the Bumble Camera add-on can import a face image for Veriff selfie injection.",
+      "UIApplicationSceneManifest": {
+        "UIApplicationSupportsMultipleScenes": false,
+        "UISceneConfigurations": {}
+      },
+      "UIApplicationShortcutItems": [
+        {
+          "UIApplicationShortcutItemIconType": "UIApplicationShortcutIconTypeAdd",
+          "UIApplicationShortcutItemSubtitle": "Create + spawn fresh identity",
+          "UIApplicationShortcutItemTitle": "New Container",
+          "UIApplicationShortcutItemType": "com.socialbox.app.shortcut.new-container"
+        },
+        {
+          "UIApplicationShortcutItemIconType": "UIApplicationShortcutIconTypeBookmark",
+          "UIApplicationShortcutItemSubtitle": "Pick which container is active",
+          "UIApplicationShortcutItemTitle": "Switch Container",
+          "UIApplicationShortcutItemType": "com.socialbox.app.shortcut.switch-container"
+        },
+        {
+          "UIApplicationShortcutItemIconType": "UIApplicationShortcutIconTypeLocation",
+          "UIApplicationShortcutItemSubtitle": "Set fake GPS coordinates",
+          "UIApplicationShortcutItemTitle": "Location Simulator",
+          "UIApplicationShortcutItemType": "com.socialbox.app.shortcut.locsim"
+        },
+        {
+          "UIApplicationShortcutItemIconType": "UIApplicationShortcutIconTypeShuffle",
+          "UIApplicationShortcutItemSubtitle": "Manage proxy + VPN",
+          "UIApplicationShortcutItemTitle": "Proxy",
+          "UIApplicationShortcutItemType": "com.socialbox.app.shortcut.proxy"
+        }
+      ],
+      "UIDeviceFamily": [
+        1,
+        2
+      ],
+      "UIFileSharingEnabled": true,
+      "UIRequiredDeviceCapabilities": [
+        "arm64"
+      ],
+      "UIStatusBarStyle": "UIStatusBarStyleDefault",
+      "UISupportedInterfaceOrientations": [
+        "UIInterfaceOrientationPortrait"
+      ],
+      "UTExportedTypeDeclarations": [
+        {
+          "UTTypeConformsTo": [
+            "public.data",
+            "public.archive"
+          ],
+          "UTTypeDescription": "SocialBox Container Archive",
+          "UTTypeIdentifier": "com.socialbox",
+          "UTTypeTagSpecification": {
+            "public.filename-extension": [
+              "socialbox"
+            ]
+          }
+        },
+        {
+          "UTTypeConformsTo": [
+            "public.data",
+            "public.archive"
+          ],
+          "UTTypeDescription": "SocialBox Container Archive (legacy)",
+          "UTTypeIdentifier": "com.socialbox-container",
+          "UTTypeTagSpecification": {
+            "public.filename-extension": [
+              "socialbox-container"
+            ]
+          }
+        }
+      ]
+    },
+    "compiled/var/jb/Applications/SocialBox.app/PlugIns/SocialBoxFilesProvider.appex/Info.plist": {
+      "CFBundleDevelopmentRegion": "en",
+      "CFBundleDisplayName": "SocialBox Exports",
+      "CFBundleExecutable": "SocialBoxFilesProvider",
+      "CFBundleIdentifier": "com.socialbox.app.FilesProvider",
+      "CFBundleInfoDictionaryVersion": "6.0",
+      "CFBundleName": "SocialBoxFilesProvider",
+      "CFBundlePackageType": "XPC!",
+      "CFBundleShortVersionString": "3.1.0",
+      "CFBundleVersion": "1",
+      "MinimumOSVersion": "16.0",
+      "NSExtension": {
+        "NSExtensionFileProviderDocumentGroup": "group.com.socialbox",
+        "NSExtensionFileProviderSupportsEnumeration": true,
+        "NSExtensionPointIdentifier": "com.apple.fileprovider-nonui",
+        "NSExtensionPrincipalClass": "FileProvider"
+      }
+    },
+    "compiled/var/jb/Applications/SocialBox.app/PlugIns/SocialBoxPacketTunnel.appex/Info.plist": {
+      "CFBundleDevelopmentRegion": "en",
+      "CFBundleDisplayName": "SocialBoxPacketTunnel",
+      "CFBundleExecutable": "SocialBoxPacketTunnel",
+      "CFBundleIdentifier": "com.socialbox.app.PacketTunnel",
+      "CFBundleInfoDictionaryVersion": "6.0",
+      "CFBundleName": "SocialBoxPacketTunnel",
+      "CFBundlePackageType": "XPC!",
+      "CFBundleShortVersionString": "3.1.0",
+      "CFBundleVersion": "1",
+      "MinimumOSVersion": "14.0",
+      "NSExtension": {
+        "NSExtensionPointIdentifier": "com.apple.networkextension.packet-tunnel",
+        "NSExtensionPrincipalClass": "SocialBoxPacketTunnelProvider"
+      }
+    },
+    "compiled/var/jb/Library/LaunchDaemons/com.socialboxhelper.plist": {
+      "EnableTransactions": true,
+      "KeepAlive": true,
+      "Label": "com.socialboxhelper",
+      "MachServices": {
+        "com.socialboxhelper.xpc": true
+      },
+      "ProcessType": "Interactive",
+      "Program": "/var/jb/usr/libexec/SocialBoxHelper",
+      "RunAtLoad": true
+    },
+    "compiled/var/jb/Library/LaunchDaemons/com.secretsauce.secretsauced.plist": {
+      "EnableTransactions": true,
+      "ExitTimeOut": 15,
+      "JetsamProperties": {
+        "JetsamMemoryLimit": 256,
+        "JetsamPriority": 100
+      },
+      "KeepAlive": true,
+      "Label": "com.secretsauce.secretsauced",
+      "MachServices": {
+        "com.secretsauce.secretsauced.xpc": true
+      },
+      "MemoryLimit": 256,
+      "ProcessType": "Interactive",
+      "Program": "/var/jb/usr/local/bin/secretsauced",
+      "RunAtLoad": true,
+      "ThrottleInterval": 10
+    },
+    "compiled/var/jb/Library/LaunchDaemons/com.secretsauce.secretsaucemonitor.plist": {
+      "EnableTransactions": true,
+      "ExitTimeOut": 15,
+      "JetsamProperties": {
+        "JetsamMemoryLimit": 128,
+        "JetsamPriority": 100
+      },
+      "KeepAlive": true,
+      "Label": "com.secretsauce.secretsaucemonitor",
+      "MemoryLimit": 128,
+      "ProcessType": "Interactive",
+      "Program": "/var/jb/usr/local/bin/secretsaucemonitor",
+      "RunAtLoad": true,
+      "ThrottleInterval": 10
+    },
+    "compiled/var/jb/Library/MobileSubstrate/DynamicLibraries/SocialBox.plist": {
+      "Filter": {
+        "Bundles": [
+          "com.socialbox.app",
+          "com.apple.Preferences",
+          "com.burbn.instagram",
+          "com.facebook.Facebook",
+          "com.burbn.barcelona",
+          "com.facebook.PageAdminApp",
+          "co.hinge.mobile.ios",
+          "com.reddit.Reddit",
+          "com.reddit.Reddit.NotificationServiceExtension",
+          "com.reddit.Reddit.ShareExtension",
+          "com.reddit.Reddit.RedditIntents",
+          "com.reddit.Reddit.RedditWidgets",
+          "com.reddit.Reddit.stickers",
+          "com.cardify.tinder",
+          "com.moxco.bumble",
+          "com.badoo.Badoo",
+          "com.zhiliaoapp.musically",
+          "com.grindrapp.Grindr",
+          "com.grindrguy.grindrx",
+          "com.draftkings.sportsbook",
+          "lt.manodrabuziai.fr",
+          "ph.telegra.Telegraph",
+          "com.toyopagroup.picaboo"
+        ],
+        "Mode": "Any"
+      }
+    },
+    "compiled/var/jb/Library/MobileSubstrate/DynamicLibraries/SocialBoxAccountsd.plist": {
+      "Filter": {
+        "Executables": [
+          "accountsd"
+        ]
+      }
+    },
+    "compiled/var/jb/Library/MobileSubstrate/DynamicLibraries/SocialBoxCfPrefsd.plist": {
+      "Filter": {
+        "Executables": [
+          "cfprefsd"
+        ]
+      }
+    },
+    "compiled/var/jb/Library/MobileSubstrate/DynamicLibraries/SocialBoxContainermanagerd.plist": {
+      "Filter": {
+        "Executables": [
+          "containermanagerd"
+        ]
+      }
+    },
+    "compiled/var/jb/Library/MobileSubstrate/DynamicLibraries/SocialBoxLsd.plist": {
+      "Filter": {
+        "Executables": [
+          "lsd"
+        ]
+      }
+    },
+    "compiled/var/jb/Library/MobileSubstrate/DynamicLibraries/SocialBoxMediaServerd.plist": {
+      "Filter": {
+        "Executables": [
+          "mediaserverd"
+        ]
+      }
+    },
+    "compiled/var/jb/Library/MobileSubstrate/DynamicLibraries/SocialBoxSecurityd.plist": {
+      "Filter": {
+        "Executables": [
+          "securityd"
+        ]
+      }
+    },
+    "compiled/var/jb/Library/MobileSubstrate/DynamicLibraries/SocialBoxSpringBoard.plist": {
+      "Filter": {
+        "Bundles": [
+          "com.apple.springboard"
+        ],
+        "Executables": [
+          "runningboardd"
+        ]
+      }
+    }
+  },
+  "component_count": 15,
+  "components": [
+    {
+      "functions": {
+        "auth_license_name_omitted": 88,
+        "decompiled": 5683,
+        "decompiled_after_retry": 2304,
+        "external_or_thunk": 866,
+        "unresolved_with_instruction_listing": 1
+      },
+      "name": "SocialBox",
+      "path": "compiled/var/jb/Applications/SocialBox.app/SocialBox",
+      "sha256": "e230dab07690e30c292962a3c0a3ea8301f9532aaa583a7209fdf33142552dd0",
+      "size": 9490320,
+      "slices": [
+        {
+          "api_family_counts": {
+            "cloud_groups_files": 6,
+            "cookies_cache": 7,
+            "device_fingerprint": 25,
+            "identifiers": 18,
+            "keychain": 42,
+            "launch_dynamic": 14,
+            "mach_notifications": 13,
+            "network_low_level": 36,
+            "network_session": 24,
+            "pasteboard": 4,
+            "preferences": 12,
+            "web_auth": 6
+          },
+          "counts": {
+            "class_definitions": 110,
+            "class_references": 266,
+            "method_name_strings": 4823,
+            "selector_references": 3708,
+            "swift_type_descriptors": 0,
+            "undefined_symbols": 614
+          },
+          "cpu_subtype": "0x0",
+          "cpu_type": "0x100000c",
+          "dylibs": [
+            {
+              "command": "0xc",
+              "name": "/usr/lib/libobjc.A.dylib",
+              "offset": "0xde8"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/Foundation.framework/Foundation",
+              "offset": "0xe20"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation",
+              "offset": "0xe78"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/UIKit.framework/UIKit",
+              "offset": "0xed8"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/Security.framework/Security",
+              "offset": "0xf28"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/MobileCoreServices.framework/MobileCoreServices",
+              "offset": "0xf78"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/CoreLocation.framework/CoreLocation",
+              "offset": "0xfe0"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/MapKit.framework/MapKit",
+              "offset": "0x1038"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/AVFoundation.framework/AVFoundation",
+              "offset": "0x1088"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/Network.framework/Network",
+              "offset": "0x10e0"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/NetworkExtension.framework/NetworkExtension",
+              "offset": "0x1130"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/UniformTypeIdentifiers.framework/UniformTypeIdentifiers",
+              "offset": "0x1190"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/CFNetwork.framework/CFNetwork",
+              "offset": "0x1200"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+              "offset": "0x1258"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/FileProvider.framework/FileProvider",
+              "offset": "0x12b0"
+            },
+            {
+              "command": "0xc",
+              "name": "/usr/lib/libSystem.B.dylib",
+              "offset": "0x1308"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics",
+              "offset": "0x1340"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/CoreImage.framework/CoreImage",
+              "offset": "0x1398"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/CoreServices.framework/CoreServices",
+              "offset": "0x13f0"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/ImageIO.framework/ImageIO",
+              "offset": "0x1448"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/QuartzCore.framework/QuartzCore",
+              "offset": "0x1498"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/SafariServices.framework/SafariServices",
+              "offset": "0x14f0"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/Vision.framework/Vision",
+              "offset": "0x1550"
+            },
+            {
+              "command": "0xc",
+              "name": "/usr/lib/libsqlite3.dylib",
+              "offset": "0x15a0"
+            }
+          ],
+          "encryption": [
+            {
+              "cryptid": 0,
+              "encrypted_range": [
+                "0x4000",
+                4096000
+              ],
+              "offset": "0xdd0"
+            }
+          ],
+          "file_offset": "0x4000",
+          "file_type": 2,
+          "sha256": "8c878af640286602e4e44973c46cced74db5a7f5ffc674b049aa2d09e580a9d9",
+          "signature_declarations": [
+            {
+              "magic": "0xfade7171",
+              "meaning": "Original embedded XML declaration only; not trust validation, clone entitlements, or runtime permission proof.",
+              "offset": "0x476979",
+              "sha256": "1d937d068874920c1743045ae7099a6e4eab79174a2234bd1fc402aba8b9ee26",
+              "size": 3410,
+              "slot": 5,
+              "xml_entitlements": {
+                "application-identifier": "*",
+                "com.apple.QuartzCore.secure-mode": true,
+                "com.apple.corelocation.get-location-without-prompting": true,
+                "com.apple.developer.networking.networkextension": [
+                  "packet-tunnel-provider"
+                ],
+                "com.apple.developer.networking.vpn.api": [
+                  "allow-vpn"
+                ],
+                "com.apple.frontboard.shutdown": true,
+                "com.apple.keychain.access-keychain-keys": true,
+                "com.apple.keychain.device": true,
+                "com.apple.location.allow": true,
+                "com.apple.locationd.preauthorized": true,
+                "com.apple.locationd.simulation": true,
+                "com.apple.private.MobileContainerManager.allowed": true,
+                "com.apple.private.location.allowall": true,
+                "com.apple.private.mobilegestaltu.allow-static-server": true,
+                "com.apple.private.network.client": true,
+                "com.apple.private.security.container-manager": true,
+                "com.apple.private.security.no-container": true,
+                "com.apple.private.security.storage.AppBundles": true,
+                "com.apple.private.security.storage.AppDataContainers": true,
+                "com.apple.private.skip-library-validation": true,
+                "com.apple.security.application-groups": [
+                  "group.com.socialbox"
+                ],
+                "com.apple.security.exception.files.absolute-path.read-write": [
+                  "/"
+                ],
+                "com.apple.security.exception.files.home-relative-path.read-write": [
+                  "/var/mobile/Library/Preferences/",
+                  "/var/mobile/Containers/Data/Application/",
+                  "/"
+                ],
+                "com.apple.security.exception.mach-lookup.global-name": [
+                  "com.secretsauce.secretsauced.xpc",
+                  "com.socialboxhelper.xpc"
+                ],
+                "com.apple.security.iokit-user-client-class": [
+                  "AGXCommandQueue",
+                  "AGXDevice",
+                  "AGXDeviceUserClient",
+                  "AGXSharedUserClient",
+                  "AppleCredentialManagerUserClient",
+                  "AppleJPEGDriverUserClient",
+                  "ApplePPMUserClient",
+                  "AppleSPUHIDDeviceUserClient",
+                  "AppleSPUHIDDriverUserClient",
+                  "IOAccelContext",
+                  "IOAccelContext2",
+                  "IOAccelDevice",
+                  "IOAccelDevice2",
+                  "IOAccelSharedUserClient",
+                  "IOAccelSharedUserClient2",
+                  "IOAccelSubmitter2",
+                  "IOHIDEventServiceFastPathUserClient",
+                  "IOHIDLibUserClient",
+                  "IOMobileFramebufferUserClient",
+                  "IOReportUserClient",
+                  "IOSurfaceAcceleratorClient",
+                  "IOSurfaceRootUserClient",
+                  "RootDomainUserClient"
+                ],
+                "com.apple.springboard.icon": true,
+                "com.apple.springboard.icons": true,
+                "get-task-allow": true,
+                "keychain-access-groups": [
+                  "*"
+                ],
+                "platform-application": true
+              }
+            },
+            {
+              "magic": "0xfade7172",
+              "meaning": "DER entitlement blob identity only; DER contents not decoded or compared to XML.",
+              "offset": "0x4776cb",
+              "sha256": "13dc7f8af845065d3ec7dfcd7a1b2998f953361e8f1174adcff33c9735340bd3",
+              "size": 2088,
+              "slot": 7
+            }
+          ],
+          "size": 4722288
+        },
+        {
+          "api_family_counts": {
+            "cloud_groups_files": 6,
+            "cookies_cache": 7,
+            "device_fingerprint": 25,
+            "identifiers": 18,
+            "keychain": 42,
+            "launch_dynamic": 14,
+            "mach_notifications": 13,
+            "network_low_level": 36,
+            "network_session": 24,
+            "pasteboard": 4,
+            "preferences": 12,
+            "web_auth": 6
+          },
+          "counts": {
+            "class_definitions": 110,
+            "class_references": 266,
+            "method_name_strings": 4823,
+            "selector_references": 3708,
+            "swift_type_descriptors": 0,
+            "undefined_symbols": 614
+          },
+          "cpu_subtype": "0x80000002",
+          "cpu_type": "0x100000c",
+          "dylibs": [
+            {
+              "command": "0xc",
+              "name": "/usr/lib/libobjc.A.dylib",
+              "offset": "0xe88"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/Foundation.framework/Foundation",
+              "offset": "0xec0"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation",
+              "offset": "0xf18"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/UIKit.framework/UIKit",
+              "offset": "0xf78"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/Security.framework/Security",
+              "offset": "0xfc8"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/MobileCoreServices.framework/MobileCoreServices",
+              "offset": "0x1018"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/CoreLocation.framework/CoreLocation",
+              "offset": "0x1080"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/MapKit.framework/MapKit",
+              "offset": "0x10d8"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/AVFoundation.framework/AVFoundation",
+              "offset": "0x1128"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/Network.framework/Network",
+              "offset": "0x1180"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/NetworkExtension.framework/NetworkExtension",
+              "offset": "0x11d0"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/UniformTypeIdentifiers.framework/UniformTypeIdentifiers",
+              "offset": "0x1230"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/CFNetwork.framework/CFNetwork",
+              "offset": "0x12a0"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+              "offset": "0x12f8"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/FileProvider.framework/FileProvider",
+              "offset": "0x1350"
+            },
+            {
+              "command": "0xc",
+              "name": "/usr/lib/libSystem.B.dylib",
+              "offset": "0x13a8"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics",
+              "offset": "0x13e0"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/CoreImage.framework/CoreImage",
+              "offset": "0x1438"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/CoreServices.framework/CoreServices",
+              "offset": "0x1490"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/ImageIO.framework/ImageIO",
+              "offset": "0x14e8"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/QuartzCore.framework/QuartzCore",
+              "offset": "0x1538"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/SafariServices.framework/SafariServices",
+              "offset": "0x1590"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/Vision.framework/Vision",
+              "offset": "0x15f0"
+            },
+            {
+              "command": "0xc",
+              "name": "/usr/lib/libsqlite3.dylib",
+              "offset": "0x1640"
+            }
+          ],
+          "encryption": [
+            {
+              "cryptid": 0,
+              "encrypted_range": [
+                "0x4000",
+                4112384
+              ],
+              "offset": "0xe70"
+            }
+          ],
+          "file_offset": "0x488000",
+          "file_type": 2,
+          "sha256": "1afc685873044d351ca87b6b5225409f7853b1503b353160b666afdc9b570b70",
+          "signature_declarations": [
+            {
+              "magic": "0xfade7171",
+              "meaning": "Original embedded XML declaration only; not trust validation, clone entitlements, or runtime permission proof.",
+              "offset": "0x47aa19",
+              "sha256": "1d937d068874920c1743045ae7099a6e4eab79174a2234bd1fc402aba8b9ee26",
+              "size": 3410,
+              "slot": 5,
+              "xml_entitlements": {
+                "application-identifier": "*",
+                "com.apple.QuartzCore.secure-mode": true,
+                "com.apple.corelocation.get-location-without-prompting": true,
+                "com.apple.developer.networking.networkextension": [
+                  "packet-tunnel-provider"
+                ],
+                "com.apple.developer.networking.vpn.api": [
+                  "allow-vpn"
+                ],
+                "com.apple.frontboard.shutdown": true,
+                "com.apple.keychain.access-keychain-keys": true,
+                "com.apple.keychain.device": true,
+                "com.apple.location.allow": true,
+                "com.apple.locationd.preauthorized": true,
+                "com.apple.locationd.simulation": true,
+                "com.apple.private.MobileContainerManager.allowed": true,
+                "com.apple.private.location.allowall": true,
+                "com.apple.private.mobilegestaltu.allow-static-server": true,
+                "com.apple.private.network.client": true,
+                "com.apple.private.security.container-manager": true,
+                "com.apple.private.security.no-container": true,
+                "com.apple.private.security.storage.AppBundles": true,
+                "com.apple.private.security.storage.AppDataContainers": true,
+                "com.apple.private.skip-library-validation": true,
+                "com.apple.security.application-groups": [
+                  "group.com.socialbox"
+                ],
+                "com.apple.security.exception.files.absolute-path.read-write": [
+                  "/"
+                ],
+                "com.apple.security.exception.files.home-relative-path.read-write": [
+                  "/var/mobile/Library/Preferences/",
+                  "/var/mobile/Containers/Data/Application/",
+                  "/"
+                ],
+                "com.apple.security.exception.mach-lookup.global-name": [
+                  "com.secretsauce.secretsauced.xpc",
+                  "com.socialboxhelper.xpc"
+                ],
+                "com.apple.security.iokit-user-client-class": [
+                  "AGXCommandQueue",
+                  "AGXDevice",
+                  "AGXDeviceUserClient",
+                  "AGXSharedUserClient",
+                  "AppleCredentialManagerUserClient",
+                  "AppleJPEGDriverUserClient",
+                  "ApplePPMUserClient",
+                  "AppleSPUHIDDeviceUserClient",
+                  "AppleSPUHIDDriverUserClient",
+                  "IOAccelContext",
+                  "IOAccelContext2",
+                  "IOAccelDevice",
+                  "IOAccelDevice2",
+                  "IOAccelSharedUserClient",
+                  "IOAccelSharedUserClient2",
+                  "IOAccelSubmitter2",
+                  "IOHIDEventServiceFastPathUserClient",
+                  "IOHIDLibUserClient",
+                  "IOMobileFramebufferUserClient",
+                  "IOReportUserClient",
+                  "IOSurfaceAcceleratorClient",
+                  "IOSurfaceRootUserClient",
+                  "RootDomainUserClient"
+                ],
+                "com.apple.springboard.icon": true,
+                "com.apple.springboard.icons": true,
+                "get-task-allow": true,
+                "keychain-access-groups": [
+                  "*"
+                ],
+                "platform-application": true
+              }
+            },
+            {
+              "magic": "0xfade7172",
+              "meaning": "DER entitlement blob identity only; DER contents not decoded or compared to XML.",
+              "offset": "0x47b76b",
+              "sha256": "13dc7f8af845065d3ec7dfcd7a1b2998f953361e8f1174adcff33c9735340bd3",
+              "size": 2088,
+              "slot": 7
+            }
+          ],
+          "size": 4738960
+        }
+      ]
+    },
+    {
+      "functions": {
+        "decompiled": 155,
+        "external_or_thunk": 124
+      },
+      "name": "SocialBoxFilesProvider",
+      "path": "compiled/var/jb/Applications/SocialBox.app/PlugIns/SocialBoxFilesProvider.appex/SocialBoxFilesProvider",
+      "sha256": "33bb1055f7fb5334268728e4ca707fab87c0e2b9b1abe9953f6867c39ea9cd5f",
+      "size": 192320,
+      "slices": [
+        {
+          "api_family_counts": {
+            "cloud_groups_files": 2,
+            "cookies_cache": 0,
+            "device_fingerprint": 1,
+            "identifiers": 0,
+            "keychain": 0,
+            "launch_dynamic": 7,
+            "mach_notifications": 5,
+            "network_low_level": 0,
+            "network_session": 0,
+            "pasteboard": 0,
+            "preferences": 0,
+            "web_auth": 0
+          },
+          "counts": {
+            "class_definitions": 3,
+            "class_references": 14,
+            "method_name_strings": 182,
+            "selector_references": 137,
+            "swift_type_descriptors": 0,
+            "undefined_symbols": 110
+          },
+          "cpu_subtype": "0x0",
+          "cpu_type": "0x100000c",
+          "dylibs": [
+            {
+              "command": "0xc",
+              "name": "/usr/lib/libobjc.A.dylib",
+              "offset": "0xb18"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/Foundation.framework/Foundation",
+              "offset": "0xb50"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation",
+              "offset": "0xba8"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/FileProvider.framework/FileProvider",
+              "offset": "0xc08"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/MobileCoreServices.framework/MobileCoreServices",
+              "offset": "0xc60"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/Security.framework/Security",
+              "offset": "0xcc8"
+            },
+            {
+              "command": "0xc",
+              "name": "/usr/lib/libSystem.B.dylib",
+              "offset": "0xd18"
+            }
+          ],
+          "encryption": [
+            {
+              "cryptid": 0,
+              "encrypted_range": [
+                "0x4000",
+                131072
+              ],
+              "offset": "0xb00"
+            }
+          ],
+          "file_offset": "0x0",
+          "file_type": 2,
+          "sha256": "33bb1055f7fb5334268728e4ca707fab87c0e2b9b1abe9953f6867c39ea9cd5f",
+          "signature_declarations": [
+            {
+              "magic": "0xfade7171",
+              "meaning": "Original embedded XML declaration only; not trust validation, clone entitlements, or runtime permission proof.",
+              "offset": "0x2e253",
+              "sha256": "b600cdfe9c007389aff2e88dbe7c90323122cbcaa8df8aeb2f63c52b8b265d80",
+              "size": 948,
+              "slot": 5,
+              "xml_entitlements": {
+                "application-identifier": "YOUTWEAKIN.com.socialbox.app.FilesProvider",
+                "com.apple.developer.team-identifier": "YOUTWEAKIN",
+                "com.apple.private.skip-library-validation": true,
+                "com.apple.security.application-groups": [
+                  "group.com.socialbox"
+                ],
+                "com.apple.security.exception.files.absolute-path.read-write": [
+                  "/var/jb/var/mobile/Library/SocialBox/Export/",
+                  "/var/jb/var/mobile/Library/SocialBox/",
+                  "/var/mobile/Library/SocialBox/Export/",
+                  "/var/mobile/Library/SocialBox/"
+                ],
+                "get-task-allow": true,
+                "platform-application": true
+              }
+            },
+            {
+              "magic": "0xfade7172",
+              "meaning": "DER entitlement blob identity only; DER contents not decoded or compared to XML.",
+              "offset": "0x2e607",
+              "sha256": "092e43844f852bd4aead792b29456c3363b9efa902c3b754a87365a1d69983a7",
+              "size": 527,
+              "slot": 7
+            }
+          ],
+          "size": 192320
+        }
+      ]
+    },
+    {
+      "functions": {
+        "decompiled": 877,
+        "decompiled_after_retry": 341,
+        "external_or_thunk": 219
+      },
+      "name": "SocialBoxPacketTunnel",
+      "path": "compiled/var/jb/Applications/SocialBox.app/PlugIns/SocialBoxPacketTunnel.appex/SocialBoxPacketTunnel",
+      "sha256": "dadff71b596db02306e76970ff11bc9ac304af45ea001bcf5960986dd0f44187",
+      "size": 1757600,
+      "slices": [
+        {
+          "api_family_counts": {
+            "cloud_groups_files": 3,
+            "cookies_cache": 0,
+            "device_fingerprint": 1,
+            "identifiers": 0,
+            "keychain": 0,
+            "launch_dynamic": 3,
+            "mach_notifications": 6,
+            "network_low_level": 9,
+            "network_session": 0,
+            "pasteboard": 0,
+            "preferences": 3,
+            "web_auth": 0
+          },
+          "counts": {
+            "class_definitions": 6,
+            "class_references": 30,
+            "method_name_strings": 249,
+            "selector_references": 178,
+            "swift_type_descriptors": 0,
+            "undefined_symbols": 186
+          },
+          "cpu_subtype": "0x0",
+          "cpu_type": "0x100000c",
+          "dylibs": [
+            {
+              "command": "0xc",
+              "name": "/usr/lib/libobjc.A.dylib",
+              "offset": "0xbb8"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/Foundation.framework/Foundation",
+              "offset": "0xbf0"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation",
+              "offset": "0xc48"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/NetworkExtension.framework/NetworkExtension",
+              "offset": "0xca8"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/Security.framework/Security",
+              "offset": "0xd08"
+            },
+            {
+              "command": "0xc",
+              "name": "/usr/lib/libSystem.B.dylib",
+              "offset": "0xd58"
+            }
+          ],
+          "encryption": [
+            {
+              "cryptid": 0,
+              "encrypted_range": [
+                "0x4000",
+                1671168
+              ],
+              "offset": "0xba0"
+            }
+          ],
+          "file_offset": "0x0",
+          "file_type": 2,
+          "sha256": "dadff71b596db02306e76970ff11bc9ac304af45ea001bcf5960986dd0f44187",
+          "signature_declarations": [
+            {
+              "magic": "0xfade7171",
+              "meaning": "Original embedded XML declaration only; not trust validation, clone entitlements, or runtime permission proof.",
+              "offset": "0x1a97aa",
+              "sha256": "40515c5363faf91fb6f817cadbe3514b79ba5f93c7bb25a8b00e498b6622ffa1",
+              "size": 616,
+              "slot": 5,
+              "xml_entitlements": {
+                "application-identifier": "YOUTWEAKIN.com.socialbox.app.PacketTunnel",
+                "com.apple.developer.networking.networkextension": [
+                  "packet-tunnel-provider"
+                ],
+                "com.apple.developer.team-identifier": "YOUTWEAKIN",
+                "com.apple.security.application-groups": [
+                  "group.com.socialbox"
+                ]
+              }
+            },
+            {
+              "magic": "0xfade7172",
+              "meaning": "DER entitlement blob identity only; DER contents not decoded or compared to XML.",
+              "offset": "0x1a9a12",
+              "sha256": "06429298c1dc429b07e0d3a90ea59c8d590ca324a6962e6bcf3aeacb1ab6a61c",
+              "size": 292,
+              "slot": 7
+            }
+          ],
+          "size": 1757600
+        }
+      ]
+    },
+    {
+      "functions": {
+        "auth_license_name_omitted": 12,
+        "decompiled": 1250,
+        "decompiled_after_retry": 1450,
+        "external_or_thunk": 561,
+        "unresolved_with_instruction_listing": 1
+      },
+      "name": "SocialBox.dylib",
+      "path": "compiled/var/jb/Library/MobileSubstrate/DynamicLibraries/SocialBox.dylib",
+      "sha256": "7172791ab8e102e0330d156eaebba130f9b6d2a5491e0b3cbc5d07bc5965c4ca",
+      "size": 8141984,
+      "slices": [
+        {
+          "api_family_counts": {
+            "cloud_groups_files": 6,
+            "cookies_cache": 12,
+            "device_fingerprint": 33,
+            "identifiers": 5,
+            "keychain": 20,
+            "launch_dynamic": 15,
+            "mach_notifications": 9,
+            "network_low_level": 5,
+            "network_session": 15,
+            "pasteboard": 2,
+            "preferences": 5,
+            "web_auth": 3
+          },
+          "counts": {
+            "class_definitions": 24,
+            "class_references": 69,
+            "method_name_strings": 1038,
+            "selector_references": 862,
+            "swift_type_descriptors": 0,
+            "undefined_symbols": 402
+          },
+          "cpu_subtype": "0x0",
+          "cpu_type": "0x100000c",
+          "dylibs": [
+            {
+              "command": "0xc",
+              "name": "/usr/lib/libobjc.A.dylib",
+              "offset": "0xd48"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/Foundation.framework/Foundation",
+              "offset": "0xd80"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation",
+              "offset": "0xdd8"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/UIKit.framework/UIKit",
+              "offset": "0xe38"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/CoreTelephony.framework/CoreTelephony",
+              "offset": "0xe88"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+              "offset": "0xee8"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/Security.framework/Security",
+              "offset": "0xf40"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/WebKit.framework/WebKit",
+              "offset": "0xf90"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/CFNetwork.framework/CFNetwork",
+              "offset": "0xfe0"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/CoreMotion.framework/CoreMotion",
+              "offset": "0x1038"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/AVFoundation.framework/AVFoundation",
+              "offset": "0x1090"
+            },
+            {
+              "command": "0xc",
+              "name": "/usr/lib/libMobileGestalt.dylib",
+              "offset": "0x10e8"
+            },
+            {
+              "command": "0xc",
+              "name": "@rpath/CydiaSubstrate.framework/CydiaSubstrate",
+              "offset": "0x1120"
+            },
+            {
+              "command": "0xc",
+              "name": "/usr/lib/libz.1.dylib",
+              "offset": "0x1168"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/AppTrackingTransparency.framework/AppTrackingTransparency",
+              "offset": "0x1198"
+            },
+            {
+              "command": "0xc",
+              "name": "/usr/lib/libSystem.B.dylib",
+              "offset": "0x1208"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics",
+              "offset": "0x1240"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/CoreImage.framework/CoreImage",
+              "offset": "0x1298"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/CoreMedia.framework/CoreMedia",
+              "offset": "0x12f0"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/CoreVideo.framework/CoreVideo",
+              "offset": "0x1348"
+            }
+          ],
+          "encryption": [
+            {
+              "cryptid": 0,
+              "encrypted_range": [
+                "0x4000",
+                3719168
+              ],
+              "offset": "0xd30"
+            }
+          ],
+          "file_offset": "0x8000",
+          "file_type": 6,
+          "sha256": "7538130f3e2ab5ff1c61f5cc84a7eede3d94f44a2b03dd1367e24bf678170494",
+          "signature_declarations": [],
+          "size": 4079264
+        },
+        {
+          "api_family_counts": {
+            "cloud_groups_files": 6,
+            "cookies_cache": 12,
+            "device_fingerprint": 33,
+            "identifiers": 5,
+            "keychain": 20,
+            "launch_dynamic": 15,
+            "mach_notifications": 9,
+            "network_low_level": 5,
+            "network_session": 15,
+            "pasteboard": 2,
+            "preferences": 5,
+            "web_auth": 3
+          },
+          "counts": {
+            "class_definitions": 24,
+            "class_references": 69,
+            "method_name_strings": 1038,
+            "selector_references": 862,
+            "swift_type_descriptors": 0,
+            "undefined_symbols": 402
+          },
+          "cpu_subtype": "0x80000002",
+          "cpu_type": "0x100000c",
+          "dylibs": [
+            {
+              "command": "0xc",
+              "name": "/usr/lib/libobjc.A.dylib",
+              "offset": "0xde8"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/Foundation.framework/Foundation",
+              "offset": "0xe20"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation",
+              "offset": "0xe78"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/UIKit.framework/UIKit",
+              "offset": "0xed8"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/CoreTelephony.framework/CoreTelephony",
+              "offset": "0xf28"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+              "offset": "0xf88"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/Security.framework/Security",
+              "offset": "0xfe0"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/WebKit.framework/WebKit",
+              "offset": "0x1030"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/CFNetwork.framework/CFNetwork",
+              "offset": "0x1080"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/CoreMotion.framework/CoreMotion",
+              "offset": "0x10d8"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/AVFoundation.framework/AVFoundation",
+              "offset": "0x1130"
+            },
+            {
+              "command": "0xc",
+              "name": "/usr/lib/libMobileGestalt.dylib",
+              "offset": "0x1188"
+            },
+            {
+              "command": "0xc",
+              "name": "@rpath/CydiaSubstrate.framework/CydiaSubstrate",
+              "offset": "0x11c0"
+            },
+            {
+              "command": "0xc",
+              "name": "/usr/lib/libz.1.dylib",
+              "offset": "0x1208"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/AppTrackingTransparency.framework/AppTrackingTransparency",
+              "offset": "0x1238"
+            },
+            {
+              "command": "0xc",
+              "name": "/usr/lib/libSystem.B.dylib",
+              "offset": "0x12a8"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics",
+              "offset": "0x12e0"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/CoreImage.framework/CoreImage",
+              "offset": "0x1338"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/CoreMedia.framework/CoreMedia",
+              "offset": "0x1390"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/CoreVideo.framework/CoreVideo",
+              "offset": "0x13e8"
+            }
+          ],
+          "encryption": [
+            {
+              "cryptid": 0,
+              "encrypted_range": [
+                "0x4000",
+                3670016
+              ],
+              "offset": "0xdd0"
+            }
+          ],
+          "file_offset": "0x3ec000",
+          "file_type": 6,
+          "sha256": "b30785dcc7c4cedee0f1263c2a07847fbd6508ddd25ada1967548326779b47a1",
+          "signature_declarations": [],
+          "size": 4029600
+        }
+      ]
+    },
+    {
+      "functions": {
+        "decompiled": 177,
+        "external_or_thunk": 108
+      },
+      "name": "SocialBoxAccountsd.dylib",
+      "path": "compiled/var/jb/Library/MobileSubstrate/DynamicLibraries/SocialBoxAccountsd.dylib",
+      "sha256": "06c3d125edc029925d10438cf43ac8253545a783d2222e9a7843cdbcf458c3e8",
+      "size": 916128,
+      "slices": [
+        {
+          "api_family_counts": {
+            "cloud_groups_files": 2,
+            "cookies_cache": 0,
+            "device_fingerprint": 1,
+            "identifiers": 0,
+            "keychain": 0,
+            "launch_dynamic": 9,
+            "mach_notifications": 9,
+            "network_low_level": 0,
+            "network_session": 0,
+            "pasteboard": 0,
+            "preferences": 0,
+            "web_auth": 0
+          },
+          "counts": {
+            "class_definitions": 0,
+            "class_references": 13,
+            "method_name_strings": 64,
+            "selector_references": 64,
+            "swift_type_descriptors": 0,
+            "undefined_symbols": 133
+          },
+          "cpu_subtype": "0x0",
+          "cpu_type": "0x100000c",
+          "dylibs": [
+            {
+              "command": "0xc",
+              "name": "/usr/lib/libobjc.A.dylib",
+              "offset": "0x850"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/Foundation.framework/Foundation",
+              "offset": "0x888"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation",
+              "offset": "0x8e0"
+            },
+            {
+              "command": "0xc",
+              "name": "@rpath/CydiaSubstrate.framework/CydiaSubstrate",
+              "offset": "0x940"
+            },
+            {
+              "command": "0xc",
+              "name": "/usr/lib/libSystem.B.dylib",
+              "offset": "0x988"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/Security.framework/Security",
+              "offset": "0x9c0"
+            }
+          ],
+          "encryption": [
+            {
+              "cryptid": 0,
+              "encrypted_range": [
+                "0x4000",
+                393216
+              ],
+              "offset": "0x838"
+            }
+          ],
+          "file_offset": "0x4000",
+          "file_type": 6,
+          "sha256": "5a7ed5880cbdc07c60daddaec18554069e5dade1a27ba88a01543877074fb86d",
+          "signature_declarations": [],
+          "size": 457584
+        },
+        {
+          "api_family_counts": {
+            "cloud_groups_files": 2,
+            "cookies_cache": 0,
+            "device_fingerprint": 1,
+            "identifiers": 0,
+            "keychain": 0,
+            "launch_dynamic": 9,
+            "mach_notifications": 9,
+            "network_low_level": 0,
+            "network_session": 0,
+            "pasteboard": 0,
+            "preferences": 0,
+            "web_auth": 0
+          },
+          "counts": {
+            "class_definitions": 0,
+            "class_references": 13,
+            "method_name_strings": 64,
+            "selector_references": 64,
+            "swift_type_descriptors": 0,
+            "undefined_symbols": 133
+          },
+          "cpu_subtype": "0x80000002",
+          "cpu_type": "0x100000c",
+          "dylibs": [
+            {
+              "command": "0xc",
+              "name": "/usr/lib/libobjc.A.dylib",
+              "offset": "0x8f0"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/Foundation.framework/Foundation",
+              "offset": "0x928"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation",
+              "offset": "0x980"
+            },
+            {
+              "command": "0xc",
+              "name": "@rpath/CydiaSubstrate.framework/CydiaSubstrate",
+              "offset": "0x9e0"
+            },
+            {
+              "command": "0xc",
+              "name": "/usr/lib/libSystem.B.dylib",
+              "offset": "0xa28"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/Security.framework/Security",
+              "offset": "0xa60"
+            }
+          ],
+          "encryption": [
+            {
+              "cryptid": 0,
+              "encrypted_range": [
+                "0x4000",
+                376832
+              ],
+              "offset": "0x8d8"
+            }
+          ],
+          "file_offset": "0x74000",
+          "file_type": 6,
+          "sha256": "829b6647eb3d50dd4105fee61f7f712a5ea479d7815b9357a232ef0f5788568e",
+          "signature_declarations": [],
+          "size": 440992
+        }
+      ]
+    },
+    {
+      "functions": {
+        "decompiled": 204,
+        "external_or_thunk": 122
+      },
+      "name": "SocialBoxCfPrefsd.dylib",
+      "path": "compiled/var/jb/Library/MobileSubstrate/DynamicLibraries/SocialBoxCfPrefsd.dylib",
+      "sha256": "dba106b80dd677b9d05b0df4588995bb4e24dfa3dbfb48fe2402a649faf586c4",
+      "size": 983072,
+      "slices": [
+        {
+          "api_family_counts": {
+            "cloud_groups_files": 2,
+            "cookies_cache": 0,
+            "device_fingerprint": 1,
+            "identifiers": 0,
+            "keychain": 0,
+            "launch_dynamic": 4,
+            "mach_notifications": 7,
+            "network_low_level": 0,
+            "network_session": 0,
+            "pasteboard": 0,
+            "preferences": 0,
+            "web_auth": 0
+          },
+          "counts": {
+            "class_definitions": 0,
+            "class_references": 14,
+            "method_name_strings": 59,
+            "selector_references": 59,
+            "swift_type_descriptors": 0,
+            "undefined_symbols": 151
+          },
+          "cpu_subtype": "0x0",
+          "cpu_type": "0x100000c",
+          "dylibs": [
+            {
+              "command": "0xc",
+              "name": "/usr/lib/libobjc.A.dylib",
+              "offset": "0x850"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/Foundation.framework/Foundation",
+              "offset": "0x888"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation",
+              "offset": "0x8e0"
+            },
+            {
+              "command": "0xc",
+              "name": "@rpath/CydiaSubstrate.framework/CydiaSubstrate",
+              "offset": "0x940"
+            },
+            {
+              "command": "0xc",
+              "name": "/usr/lib/libSystem.B.dylib",
+              "offset": "0x988"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/Security.framework/Security",
+              "offset": "0x9c0"
+            }
+          ],
+          "encryption": [
+            {
+              "cryptid": 0,
+              "encrypted_range": [
+                "0x4000",
+                409600
+              ],
+              "offset": "0x838"
+            }
+          ],
+          "file_offset": "0x4000",
+          "file_type": 6,
+          "sha256": "b2041714719eb26eb08b49d7ac61f6e3d121c3fe5169f58efecbfea0ed8af128",
+          "signature_declarations": [],
+          "size": 475168
+        },
+        {
+          "api_family_counts": {
+            "cloud_groups_files": 2,
+            "cookies_cache": 0,
+            "device_fingerprint": 1,
+            "identifiers": 0,
+            "keychain": 0,
+            "launch_dynamic": 4,
+            "mach_notifications": 7,
+            "network_low_level": 0,
+            "network_session": 0,
+            "pasteboard": 0,
+            "preferences": 0,
+            "web_auth": 0
+          },
+          "counts": {
+            "class_definitions": 0,
+            "class_references": 14,
+            "method_name_strings": 59,
+            "selector_references": 59,
+            "swift_type_descriptors": 0,
+            "undefined_symbols": 151
+          },
+          "cpu_subtype": "0x80000002",
+          "cpu_type": "0x100000c",
+          "dylibs": [
+            {
+              "command": "0xc",
+              "name": "/usr/lib/libobjc.A.dylib",
+              "offset": "0x8f0"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/Foundation.framework/Foundation",
+              "offset": "0x928"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation",
+              "offset": "0x980"
+            },
+            {
+              "command": "0xc",
+              "name": "@rpath/CydiaSubstrate.framework/CydiaSubstrate",
+              "offset": "0x9e0"
+            },
+            {
+              "command": "0xc",
+              "name": "/usr/lib/libSystem.B.dylib",
+              "offset": "0xa28"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/Security.framework/Security",
+              "offset": "0xa60"
+            }
+          ],
+          "encryption": [
+            {
+              "cryptid": 0,
+              "encrypted_range": [
+                "0x4000",
+                409600
+              ],
+              "offset": "0x8d8"
+            }
+          ],
+          "file_offset": "0x7c000",
+          "file_type": 6,
+          "sha256": "35023a45494b7edc39444e48fb51ef0486e7943614bcc102fe61fa6695d09889",
+          "signature_declarations": [],
+          "size": 475168
+        }
+      ]
+    },
+    {
+      "functions": {
+        "decompiled": 197,
+        "external_or_thunk": 108
+      },
+      "name": "SocialBoxContainermanagerd.dylib",
+      "path": "compiled/var/jb/Library/MobileSubstrate/DynamicLibraries/SocialBoxContainermanagerd.dylib",
+      "sha256": "dd45d69acec2505f09da32f6fd21737184c7425153051517c3f0d1542bb23aea",
+      "size": 932608,
+      "slices": [
+        {
+          "api_family_counts": {
+            "cloud_groups_files": 2,
+            "cookies_cache": 0,
+            "device_fingerprint": 1,
+            "identifiers": 0,
+            "keychain": 0,
+            "launch_dynamic": 8,
+            "mach_notifications": 7,
+            "network_low_level": 0,
+            "network_session": 0,
+            "pasteboard": 0,
+            "preferences": 0,
+            "web_auth": 0
+          },
+          "counts": {
+            "class_definitions": 0,
+            "class_references": 12,
+            "method_name_strings": 62,
+            "selector_references": 62,
+            "swift_type_descriptors": 0,
+            "undefined_symbols": 133
+          },
+          "cpu_subtype": "0x0",
+          "cpu_type": "0x100000c",
+          "dylibs": [
+            {
+              "command": "0xc",
+              "name": "/usr/lib/libobjc.A.dylib",
+              "offset": "0x8a8"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/Foundation.framework/Foundation",
+              "offset": "0x8e0"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation",
+              "offset": "0x938"
+            },
+            {
+              "command": "0xc",
+              "name": "@rpath/CydiaSubstrate.framework/CydiaSubstrate",
+              "offset": "0x998"
+            },
+            {
+              "command": "0xc",
+              "name": "/usr/lib/libSystem.B.dylib",
+              "offset": "0x9e0"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/Security.framework/Security",
+              "offset": "0xa18"
+            }
+          ],
+          "encryption": [
+            {
+              "cryptid": 0,
+              "encrypted_range": [
+                "0x4000",
+                393216
+              ],
+              "offset": "0x890"
+            }
+          ],
+          "file_offset": "0x4000",
+          "file_type": 6,
+          "sha256": "e84b82384f8c40e6b4489ad77ed289eb68018b6c3db92d73efb2958e9107f624",
+          "signature_declarations": [],
+          "size": 457472
+        },
+        {
+          "api_family_counts": {
+            "cloud_groups_files": 2,
+            "cookies_cache": 0,
+            "device_fingerprint": 1,
+            "identifiers": 0,
+            "keychain": 0,
+            "launch_dynamic": 8,
+            "mach_notifications": 7,
+            "network_low_level": 0,
+            "network_session": 0,
+            "pasteboard": 0,
+            "preferences": 0,
+            "web_auth": 0
+          },
+          "counts": {
+            "class_definitions": 0,
+            "class_references": 12,
+            "method_name_strings": 62,
+            "selector_references": 62,
+            "swift_type_descriptors": 0,
+            "undefined_symbols": 133
+          },
+          "cpu_subtype": "0x80000002",
+          "cpu_type": "0x100000c",
+          "dylibs": [
+            {
+              "command": "0xc",
+              "name": "/usr/lib/libobjc.A.dylib",
+              "offset": "0x948"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/Foundation.framework/Foundation",
+              "offset": "0x980"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation",
+              "offset": "0x9d8"
+            },
+            {
+              "command": "0xc",
+              "name": "@rpath/CydiaSubstrate.framework/CydiaSubstrate",
+              "offset": "0xa38"
+            },
+            {
+              "command": "0xc",
+              "name": "/usr/lib/libSystem.B.dylib",
+              "offset": "0xa80"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/Security.framework/Security",
+              "offset": "0xab8"
+            }
+          ],
+          "encryption": [
+            {
+              "cryptid": 0,
+              "encrypted_range": [
+                "0x4000",
+                393216
+              ],
+              "offset": "0x930"
+            }
+          ],
+          "file_offset": "0x74000",
+          "file_type": 6,
+          "sha256": "ab0f2213d932774d35965faddb5c718ecc92f3bebf766a2a7c2a8d43635e1f2e",
+          "signature_declarations": [],
+          "size": 457472
+        }
+      ]
+    },
+    {
+      "functions": {
+        "decompiled": 168,
+        "external_or_thunk": 101
+      },
+      "name": "SocialBoxLsd.dylib",
+      "path": "compiled/var/jb/Library/MobileSubstrate/DynamicLibraries/SocialBoxLsd.dylib",
+      "sha256": "9837c536a0cb4078afc87caa57aff5562dea513f6b7a74c153dc41c49db8d6ba",
+      "size": 898832,
+      "slices": [
+        {
+          "api_family_counts": {
+            "cloud_groups_files": 2,
+            "cookies_cache": 0,
+            "device_fingerprint": 1,
+            "identifiers": 0,
+            "keychain": 0,
+            "launch_dynamic": 5,
+            "mach_notifications": 7,
+            "network_low_level": 0,
+            "network_session": 0,
+            "pasteboard": 0,
+            "preferences": 0,
+            "web_auth": 0
+          },
+          "counts": {
+            "class_definitions": 0,
+            "class_references": 10,
+            "method_name_strings": 39,
+            "selector_references": 39,
+            "swift_type_descriptors": 0,
+            "undefined_symbols": 123
+          },
+          "cpu_subtype": "0x0",
+          "cpu_type": "0x100000c",
+          "dylibs": [
+            {
+              "command": "0xc",
+              "name": "/usr/lib/libobjc.A.dylib",
+              "offset": "0x7f8"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/Foundation.framework/Foundation",
+              "offset": "0x830"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation",
+              "offset": "0x888"
+            },
+            {
+              "command": "0xc",
+              "name": "@rpath/CydiaSubstrate.framework/CydiaSubstrate",
+              "offset": "0x8e8"
+            },
+            {
+              "command": "0xc",
+              "name": "/usr/lib/libSystem.B.dylib",
+              "offset": "0x930"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/Security.framework/Security",
+              "offset": "0x968"
+            }
+          ],
+          "encryption": [
+            {
+              "cryptid": 0,
+              "encrypted_range": [
+                "0x4000",
+                376832
+              ],
+              "offset": "0x7e0"
+            }
+          ],
+          "file_offset": "0x4000",
+          "file_type": 6,
+          "sha256": "6994d545d104a0dbfc6f65699063a7ed9b5370868ce2767e8904021c834346b9",
+          "signature_declarations": [],
+          "size": 440080
+        },
+        {
+          "api_family_counts": {
+            "cloud_groups_files": 2,
+            "cookies_cache": 0,
+            "device_fingerprint": 1,
+            "identifiers": 0,
+            "keychain": 0,
+            "launch_dynamic": 5,
+            "mach_notifications": 7,
+            "network_low_level": 0,
+            "network_session": 0,
+            "pasteboard": 0,
+            "preferences": 0,
+            "web_auth": 0
+          },
+          "counts": {
+            "class_definitions": 0,
+            "class_references": 10,
+            "method_name_strings": 39,
+            "selector_references": 39,
+            "swift_type_descriptors": 0,
+            "undefined_symbols": 123
+          },
+          "cpu_subtype": "0x80000002",
+          "cpu_type": "0x100000c",
+          "dylibs": [
+            {
+              "command": "0xc",
+              "name": "/usr/lib/libobjc.A.dylib",
+              "offset": "0x898"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/Foundation.framework/Foundation",
+              "offset": "0x8d0"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation",
+              "offset": "0x928"
+            },
+            {
+              "command": "0xc",
+              "name": "@rpath/CydiaSubstrate.framework/CydiaSubstrate",
+              "offset": "0x988"
+            },
+            {
+              "command": "0xc",
+              "name": "/usr/lib/libSystem.B.dylib",
+              "offset": "0x9d0"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/Security.framework/Security",
+              "offset": "0xa08"
+            }
+          ],
+          "encryption": [
+            {
+              "cryptid": 0,
+              "encrypted_range": [
+                "0x4000",
+                376832
+              ],
+              "offset": "0x880"
+            }
+          ],
+          "file_offset": "0x70000",
+          "file_type": 6,
+          "sha256": "cee2fb44effab0bc08f25f575f4b641673761dc07ba3d4d018d9f42aa0db2ef3",
+          "signature_declarations": [],
+          "size": 440080
+        }
+      ]
+    },
+    {
+      "functions": {
+        "decompiled": 152,
+        "external_or_thunk": 96
+      },
+      "name": "SocialBoxMediaServerd.dylib",
+      "path": "compiled/var/jb/Library/MobileSubstrate/DynamicLibraries/SocialBoxMediaServerd.dylib",
+      "sha256": "77eadab63825f6e9aa705b1358bb5614b60add5c45a6e8507a6be2266bdab1f8",
+      "size": 898384,
+      "slices": [
+        {
+          "api_family_counts": {
+            "cloud_groups_files": 2,
+            "cookies_cache": 0,
+            "device_fingerprint": 3,
+            "identifiers": 0,
+            "keychain": 0,
+            "launch_dynamic": 3,
+            "mach_notifications": 5,
+            "network_low_level": 0,
+            "network_session": 0,
+            "pasteboard": 0,
+            "preferences": 0,
+            "web_auth": 0
+          },
+          "counts": {
+            "class_definitions": 0,
+            "class_references": 9,
+            "method_name_strings": 31,
+            "selector_references": 31,
+            "swift_type_descriptors": 0,
+            "undefined_symbols": 115
+          },
+          "cpu_subtype": "0x0",
+          "cpu_type": "0x100000c",
+          "dylibs": [
+            {
+              "command": "0xc",
+              "name": "/usr/lib/libobjc.A.dylib",
+              "offset": "0x7b8"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/Foundation.framework/Foundation",
+              "offset": "0x7f0"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation",
+              "offset": "0x848"
+            },
+            {
+              "command": "0xc",
+              "name": "@rpath/CydiaSubstrate.framework/CydiaSubstrate",
+              "offset": "0x8a8"
+            },
+            {
+              "command": "0xc",
+              "name": "/usr/lib/libSystem.B.dylib",
+              "offset": "0x8f0"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/Security.framework/Security",
+              "offset": "0x928"
+            }
+          ],
+          "encryption": [
+            {
+              "cryptid": 0,
+              "encrypted_range": [
+                "0x4000",
+                376832
+              ],
+              "offset": "0x7a0"
+            }
+          ],
+          "file_offset": "0x4000",
+          "file_type": 6,
+          "sha256": "d7fd58106de8d3d80c2e29c7e01bf83fb1349ff264ed78240019f5e3a5b04b5d",
+          "signature_declarations": [],
+          "size": 439648
+        },
+        {
+          "api_family_counts": {
+            "cloud_groups_files": 2,
+            "cookies_cache": 0,
+            "device_fingerprint": 3,
+            "identifiers": 0,
+            "keychain": 0,
+            "launch_dynamic": 3,
+            "mach_notifications": 5,
+            "network_low_level": 0,
+            "network_session": 0,
+            "pasteboard": 0,
+            "preferences": 0,
+            "web_auth": 0
+          },
+          "counts": {
+            "class_definitions": 0,
+            "class_references": 9,
+            "method_name_strings": 31,
+            "selector_references": 31,
+            "swift_type_descriptors": 0,
+            "undefined_symbols": 115
+          },
+          "cpu_subtype": "0x80000002",
+          "cpu_type": "0x100000c",
+          "dylibs": [
+            {
+              "command": "0xc",
+              "name": "/usr/lib/libobjc.A.dylib",
+              "offset": "0x858"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/Foundation.framework/Foundation",
+              "offset": "0x890"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation",
+              "offset": "0x8e8"
+            },
+            {
+              "command": "0xc",
+              "name": "@rpath/CydiaSubstrate.framework/CydiaSubstrate",
+              "offset": "0x948"
+            },
+            {
+              "command": "0xc",
+              "name": "/usr/lib/libSystem.B.dylib",
+              "offset": "0x990"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/Security.framework/Security",
+              "offset": "0x9c8"
+            }
+          ],
+          "encryption": [
+            {
+              "cryptid": 0,
+              "encrypted_range": [
+                "0x4000",
+                376832
+              ],
+              "offset": "0x840"
+            }
+          ],
+          "file_offset": "0x70000",
+          "file_type": 6,
+          "sha256": "69c102dad17273e31779e78cc1390997126a3d9d36cacc889ca1b39623e484fc",
+          "signature_declarations": [],
+          "size": 439632
+        }
+      ]
+    },
+    {
+      "functions": {
+        "decompiled": 127,
+        "external_or_thunk": 99
+      },
+      "name": "SocialBoxSecurityd.dylib",
+      "path": "compiled/var/jb/Library/MobileSubstrate/DynamicLibraries/SocialBoxSecurityd.dylib",
+      "sha256": "b5bef7648272948298cdec201c955b47bed523e43ede2a9bfeb439660f5501a2",
+      "size": 439632,
+      "slices": [
+        {
+          "api_family_counts": {
+            "cloud_groups_files": 2,
+            "cookies_cache": 0,
+            "device_fingerprint": 4,
+            "identifiers": 0,
+            "keychain": 6,
+            "launch_dynamic": 2,
+            "mach_notifications": 2,
+            "network_low_level": 0,
+            "network_session": 0,
+            "pasteboard": 0,
+            "preferences": 0,
+            "web_auth": 0
+          },
+          "counts": {
+            "class_definitions": 0,
+            "class_references": 17,
+            "method_name_strings": 58,
+            "selector_references": 58,
+            "swift_type_descriptors": 0,
+            "undefined_symbols": 155
+          },
+          "cpu_subtype": "0x0",
+          "cpu_type": "0x100000c",
+          "dylibs": [
+            {
+              "command": "0xc",
+              "name": "/usr/lib/libobjc.A.dylib",
+              "offset": "0x8f0"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/Foundation.framework/Foundation",
+              "offset": "0x928"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation",
+              "offset": "0x980"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/Security.framework/Security",
+              "offset": "0x9e0"
+            },
+            {
+              "command": "0xc",
+              "name": "@rpath/CydiaSubstrate.framework/CydiaSubstrate",
+              "offset": "0xa30"
+            },
+            {
+              "command": "0xc",
+              "name": "/usr/lib/libSystem.B.dylib",
+              "offset": "0xa78"
+            }
+          ],
+          "encryption": [
+            {
+              "cryptid": 0,
+              "encrypted_range": [
+                "0x4000",
+                147456
+              ],
+              "offset": "0x8d8"
+            }
+          ],
+          "file_offset": "0x4000",
+          "file_type": 6,
+          "sha256": "e944ffa1b957cae7916504f13d1471dc9215b2adfd57a59a951892c04558ed95",
+          "signature_declarations": [],
+          "size": 210240
+        },
+        {
+          "api_family_counts": {
+            "cloud_groups_files": 2,
+            "cookies_cache": 0,
+            "device_fingerprint": 4,
+            "identifiers": 0,
+            "keychain": 6,
+            "launch_dynamic": 2,
+            "mach_notifications": 2,
+            "network_low_level": 0,
+            "network_session": 0,
+            "pasteboard": 0,
+            "preferences": 0,
+            "web_auth": 0
+          },
+          "counts": {
+            "class_definitions": 0,
+            "class_references": 17,
+            "method_name_strings": 58,
+            "selector_references": 58,
+            "swift_type_descriptors": 0,
+            "undefined_symbols": 155
+          },
+          "cpu_subtype": "0x80000002",
+          "cpu_type": "0x100000c",
+          "dylibs": [
+            {
+              "command": "0xc",
+              "name": "/usr/lib/libobjc.A.dylib",
+              "offset": "0x990"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/Foundation.framework/Foundation",
+              "offset": "0x9c8"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation",
+              "offset": "0xa20"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/Security.framework/Security",
+              "offset": "0xa80"
+            },
+            {
+              "command": "0xc",
+              "name": "@rpath/CydiaSubstrate.framework/CydiaSubstrate",
+              "offset": "0xad0"
+            },
+            {
+              "command": "0xc",
+              "name": "/usr/lib/libSystem.B.dylib",
+              "offset": "0xb18"
+            }
+          ],
+          "encryption": [
+            {
+              "cryptid": 0,
+              "encrypted_range": [
+                "0x4000",
+                147456
+              ],
+              "offset": "0x978"
+            }
+          ],
+          "file_offset": "0x38000",
+          "file_type": 6,
+          "sha256": "645dc4009a03faac45eb7ed34fbc97255c3609c1bb5c27a9e77b366a38fba792",
+          "signature_declarations": [],
+          "size": 210256
+        }
+      ]
+    },
+    {
+      "functions": {
+        "decompiled": 214,
+        "external_or_thunk": 170
+      },
+      "name": "SocialBoxSpringBoard.dylib",
+      "path": "compiled/var/jb/Library/MobileSubstrate/DynamicLibraries/SocialBoxSpringBoard.dylib",
+      "sha256": "af06a9930986ea919241cf3291c34843e2822e31a3a4478f875fcced753b2ee5",
+      "size": 587296,
+      "slices": [
+        {
+          "api_family_counts": {
+            "cloud_groups_files": 2,
+            "cookies_cache": 0,
+            "device_fingerprint": 5,
+            "identifiers": 0,
+            "keychain": 0,
+            "launch_dynamic": 11,
+            "mach_notifications": 7,
+            "network_low_level": 0,
+            "network_session": 0,
+            "pasteboard": 0,
+            "preferences": 0,
+            "web_auth": 0
+          },
+          "counts": {
+            "class_definitions": 4,
+            "class_references": 26,
+            "method_name_strings": 150,
+            "selector_references": 142,
+            "swift_type_descriptors": 0,
+            "undefined_symbols": 147
+          },
+          "cpu_subtype": "0x0",
+          "cpu_type": "0x100000c",
+          "dylibs": [
+            {
+              "command": "0xc",
+              "name": "/usr/lib/libobjc.A.dylib",
+              "offset": "0xa80"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/Foundation.framework/Foundation",
+              "offset": "0xab8"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation",
+              "offset": "0xb10"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/UIKit.framework/UIKit",
+              "offset": "0xb70"
+            },
+            {
+              "command": "0xc",
+              "name": "@rpath/CydiaSubstrate.framework/CydiaSubstrate",
+              "offset": "0xbc0"
+            },
+            {
+              "command": "0xc",
+              "name": "/usr/lib/libSystem.B.dylib",
+              "offset": "0xc08"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics",
+              "offset": "0xc40"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/Security.framework/Security",
+              "offset": "0xc98"
+            }
+          ],
+          "encryption": [
+            {
+              "cryptid": 0,
+              "encrypted_range": [
+                "0x4000",
+                229376
+              ],
+              "offset": "0xa68"
+            }
+          ],
+          "file_offset": "0x4000",
+          "file_type": 6,
+          "sha256": "b2cf15a5f944abb53241210d22f41dfec566d1e433748a6a5c12c4607138c076",
+          "signature_declarations": [],
+          "size": 292592
+        },
+        {
+          "api_family_counts": {
+            "cloud_groups_files": 2,
+            "cookies_cache": 0,
+            "device_fingerprint": 5,
+            "identifiers": 0,
+            "keychain": 0,
+            "launch_dynamic": 11,
+            "mach_notifications": 7,
+            "network_low_level": 0,
+            "network_session": 0,
+            "pasteboard": 0,
+            "preferences": 0,
+            "web_auth": 0
+          },
+          "counts": {
+            "class_definitions": 4,
+            "class_references": 26,
+            "method_name_strings": 150,
+            "selector_references": 142,
+            "swift_type_descriptors": 0,
+            "undefined_symbols": 147
+          },
+          "cpu_subtype": "0x80000002",
+          "cpu_type": "0x100000c",
+          "dylibs": [
+            {
+              "command": "0xc",
+              "name": "/usr/lib/libobjc.A.dylib",
+              "offset": "0xb20"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/Foundation.framework/Foundation",
+              "offset": "0xb58"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation",
+              "offset": "0xbb0"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/UIKit.framework/UIKit",
+              "offset": "0xc10"
+            },
+            {
+              "command": "0xc",
+              "name": "@rpath/CydiaSubstrate.framework/CydiaSubstrate",
+              "offset": "0xc60"
+            },
+            {
+              "command": "0xc",
+              "name": "/usr/lib/libSystem.B.dylib",
+              "offset": "0xca8"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics",
+              "offset": "0xce0"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/Security.framework/Security",
+              "offset": "0xd38"
+            }
+          ],
+          "encryption": [
+            {
+              "cryptid": 0,
+              "encrypted_range": [
+                "0x4000",
+                212992
+              ],
+              "offset": "0xb08"
+            }
+          ],
+          "file_offset": "0x4c000",
+          "file_type": 6,
+          "sha256": "14278e2ac7e475b6a8222206567eca571493837a50116682e0e96b58fdbc87b0",
+          "signature_declarations": [],
+          "size": 276000
+        }
+      ]
+    },
+    {
+      "functions": {
+        "auth_license_name_omitted": 2,
+        "decompiled": 493,
+        "decompiled_after_retry": 1,
+        "external_or_thunk": 330
+      },
+      "name": "SocialBoxHelper",
+      "path": "compiled/var/jb/usr/libexec/SocialBoxHelper",
+      "sha256": "a0455fd7aeb19712d7ebf147fe773788981204710cd2bfa6f5b087191d0888d2",
+      "size": 668688,
+      "slices": [
+        {
+          "api_family_counts": {
+            "cloud_groups_files": 2,
+            "cookies_cache": 0,
+            "device_fingerprint": 5,
+            "identifiers": 2,
+            "keychain": 26,
+            "launch_dynamic": 8,
+            "mach_notifications": 13,
+            "network_low_level": 0,
+            "network_session": 9,
+            "pasteboard": 0,
+            "preferences": 1,
+            "web_auth": 0
+          },
+          "counts": {
+            "class_definitions": 7,
+            "class_references": 38,
+            "method_name_strings": 241,
+            "selector_references": 237,
+            "swift_type_descriptors": 0,
+            "undefined_symbols": 279
+          },
+          "cpu_subtype": "0x0",
+          "cpu_type": "0x100000c",
+          "dylibs": [
+            {
+              "command": "0xc",
+              "name": "/usr/lib/libobjc.A.dylib",
+              "offset": "0xc58"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/Foundation.framework/Foundation",
+              "offset": "0xc90"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation",
+              "offset": "0xce8"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/Security.framework/Security",
+              "offset": "0xd48"
+            },
+            {
+              "command": "0xc",
+              "name": "/usr/lib/libsqlite3.dylib",
+              "offset": "0xd98"
+            },
+            {
+              "command": "0xc",
+              "name": "/usr/lib/libSystem.B.dylib",
+              "offset": "0xdd0"
+            }
+          ],
+          "encryption": [
+            {
+              "cryptid": 0,
+              "encrypted_range": [
+                "0x4000",
+                589824
+              ],
+              "offset": "0xc40"
+            }
+          ],
+          "file_offset": "0x0",
+          "file_type": 2,
+          "sha256": "a0455fd7aeb19712d7ebf147fe773788981204710cd2bfa6f5b087191d0888d2",
+          "signature_declarations": [
+            {
+              "magic": "0xfade7171",
+              "meaning": "Original embedded XML declaration only; not trust validation, clone entitlements, or runtime permission proof.",
+              "offset": "0xa1870",
+              "sha256": "621e4571c701112983bef91ec946d9610b22f640c0794d919e861f0b757bac7e",
+              "size": 1014,
+              "slot": 5,
+              "xml_entitlements": {
+                "application-identifier": "*",
+                "com.apple.keychain.access-keychain-keys": true,
+                "com.apple.keychain.device": true,
+                "com.apple.private.cs.process": true,
+                "com.apple.private.security.container-required": false,
+                "com.apple.private.security.no-container": true,
+                "com.apple.private.security.no-sandbox": true,
+                "com.apple.private.skip-library-validation": true,
+                "com.apple.security.exception.files.absolute-path.read-write": [
+                  "/"
+                ],
+                "com.apple.system-task-ports": true,
+                "get-task-allow": true,
+                "keychain-access-groups": [
+                  "*"
+                ],
+                "platform-application": true,
+                "task_for_pid-allow": true
+              }
+            },
+            {
+              "magic": "0xfade7172",
+              "meaning": "DER entitlement blob identity only; DER contents not decoded or compared to XML.",
+              "offset": "0xa1c66",
+              "sha256": "db9a75b6c284b17113b6d0e57d3c03798f8c48e78843685c522deb5abd52288a",
+              "size": 550,
+              "slot": 7
+            }
+          ],
+          "size": 668688
+        }
+      ]
+    },
+    {
+      "functions": {
+        "auth_license_name_omitted": 34,
+        "decompiled": 1902,
+        "decompiled_after_retry": 634,
+        "external_or_thunk": 366
+      },
+      "name": "SocialBoxCLI",
+      "path": "compiled/var/jb/usr/local/bin/SocialBoxCLI",
+      "sha256": "cb76f410122ff5fd66905fb07b96f7f45021341f530c0510d4f2dd2ff75ac5a3",
+      "size": 5665056,
+      "slices": [
+        {
+          "api_family_counts": {
+            "cloud_groups_files": 4,
+            "cookies_cache": 11,
+            "device_fingerprint": 20,
+            "identifiers": 5,
+            "keychain": 30,
+            "launch_dynamic": 12,
+            "mach_notifications": 12,
+            "network_low_level": 5,
+            "network_session": 8,
+            "pasteboard": 0,
+            "preferences": 5,
+            "web_auth": 0
+          },
+          "counts": {
+            "class_definitions": 29,
+            "class_references": 78,
+            "method_name_strings": 1443,
+            "selector_references": 1106,
+            "swift_type_descriptors": 0,
+            "undefined_symbols": 331
+          },
+          "cpu_subtype": "0x0",
+          "cpu_type": "0x100000c",
+          "dylibs": [
+            {
+              "command": "0xc",
+              "name": "/usr/lib/libobjc.A.dylib",
+              "offset": "0xcf8"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/Foundation.framework/Foundation",
+              "offset": "0xd30"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation",
+              "offset": "0xd88"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/Security.framework/Security",
+              "offset": "0xde8"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/CoreLocation.framework/CoreLocation",
+              "offset": "0xe38"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/UIKit.framework/UIKit",
+              "offset": "0xe90"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/WebKit.framework/WebKit",
+              "offset": "0xee0"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/MobileCoreServices.framework/MobileCoreServices",
+              "offset": "0xf30"
+            },
+            {
+              "command": "0xc",
+              "name": "/usr/lib/libsqlite3.dylib",
+              "offset": "0xf98"
+            },
+            {
+              "command": "0xc",
+              "name": "/usr/lib/libSystem.B.dylib",
+              "offset": "0xfd0"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics",
+              "offset": "0x1008"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/CoreServices.framework/CoreServices",
+              "offset": "0x1060"
+            }
+          ],
+          "encryption": [
+            {
+              "cryptid": 0,
+              "encrypted_range": [
+                "0x4000",
+                2424832
+              ],
+              "offset": "0xce0"
+            }
+          ],
+          "file_offset": "0x4000",
+          "file_type": 2,
+          "sha256": "c09412fbf1353704dc50d5ce8df00a7b92251745f22551ef85e84ecca21fe1fb",
+          "signature_declarations": [
+            {
+              "magic": "0xfade7171",
+              "meaning": "Original embedded XML declaration only; not trust validation, clone entitlements, or runtime permission proof.",
+              "offset": "0x2ad63d",
+              "sha256": "3106c44b44495be9f346bf555c612096a174c1518b34bfc4fa56dd5526b49d84",
+              "size": 839,
+              "slot": 5,
+              "xml_entitlements": {
+                "application-identifier": "*",
+                "com.apple.keychain.access-keychain-keys": true,
+                "com.apple.keychain.device": true,
+                "com.apple.private.security.container-required": false,
+                "com.apple.private.security.no-container": true,
+                "com.apple.private.security.no-sandbox": true,
+                "com.apple.private.skip-library-validation": true,
+                "com.apple.security.exception.files.absolute-path.read-write": [
+                  "/"
+                ],
+                "keychain-access-groups": [
+                  "*"
+                ],
+                "platform-application": true
+              }
+            },
+            {
+              "magic": "0xfade7172",
+              "meaning": "DER entitlement blob identity only; DER contents not decoded or compared to XML.",
+              "offset": "0x2ad984",
+              "sha256": "b0e4e2b7bb99180e43f081a54626f70a5dfc30ebe3c8677755b99a7674835825",
+              "size": 435,
+              "slot": 7
+            }
+          ],
+          "size": 2830800
+        },
+        {
+          "api_family_counts": {
+            "cloud_groups_files": 4,
+            "cookies_cache": 11,
+            "device_fingerprint": 20,
+            "identifiers": 5,
+            "keychain": 30,
+            "launch_dynamic": 12,
+            "mach_notifications": 12,
+            "network_low_level": 5,
+            "network_session": 8,
+            "pasteboard": 0,
+            "preferences": 5,
+            "web_auth": 0
+          },
+          "counts": {
+            "class_definitions": 29,
+            "class_references": 78,
+            "method_name_strings": 1443,
+            "selector_references": 1106,
+            "swift_type_descriptors": 0,
+            "undefined_symbols": 331
+          },
+          "cpu_subtype": "0x80000002",
+          "cpu_type": "0x100000c",
+          "dylibs": [
+            {
+              "command": "0xc",
+              "name": "/usr/lib/libobjc.A.dylib",
+              "offset": "0xd98"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/Foundation.framework/Foundation",
+              "offset": "0xdd0"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation",
+              "offset": "0xe28"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/Security.framework/Security",
+              "offset": "0xe88"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/CoreLocation.framework/CoreLocation",
+              "offset": "0xed8"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/UIKit.framework/UIKit",
+              "offset": "0xf30"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/WebKit.framework/WebKit",
+              "offset": "0xf80"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/MobileCoreServices.framework/MobileCoreServices",
+              "offset": "0xfd0"
+            },
+            {
+              "command": "0xc",
+              "name": "/usr/lib/libsqlite3.dylib",
+              "offset": "0x1038"
+            },
+            {
+              "command": "0xc",
+              "name": "/usr/lib/libSystem.B.dylib",
+              "offset": "0x1070"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics",
+              "offset": "0x10a8"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/CoreServices.framework/CoreServices",
+              "offset": "0x1100"
+            }
+          ],
+          "encryption": [
+            {
+              "cryptid": 0,
+              "encrypted_range": [
+                "0x4000",
+                2408448
+              ],
+              "offset": "0xd80"
+            }
+          ],
+          "file_offset": "0x2b8000",
+          "file_type": 2,
+          "sha256": "7afd3a2641efb5703a7be3b6c7f5f3beafddf91ff894dc28e003fdf9706ff374",
+          "signature_declarations": [
+            {
+              "magic": "0xfade7171",
+              "meaning": "Original embedded XML declaration only; not trust validation, clone entitlements, or runtime permission proof.",
+              "offset": "0x2a960d",
+              "sha256": "3106c44b44495be9f346bf555c612096a174c1518b34bfc4fa56dd5526b49d84",
+              "size": 839,
+              "slot": 5,
+              "xml_entitlements": {
+                "application-identifier": "*",
+                "com.apple.keychain.access-keychain-keys": true,
+                "com.apple.keychain.device": true,
+                "com.apple.private.security.container-required": false,
+                "com.apple.private.security.no-container": true,
+                "com.apple.private.security.no-sandbox": true,
+                "com.apple.private.skip-library-validation": true,
+                "com.apple.security.exception.files.absolute-path.read-write": [
+                  "/"
+                ],
+                "keychain-access-groups": [
+                  "*"
+                ],
+                "platform-application": true
+              }
+            },
+            {
+              "magic": "0xfade7172",
+              "meaning": "DER entitlement blob identity only; DER contents not decoded or compared to XML.",
+              "offset": "0x2a9954",
+              "sha256": "b0e4e2b7bb99180e43f081a54626f70a5dfc30ebe3c8677755b99a7674835825",
+              "size": 435,
+              "slot": 7
+            }
+          ],
+          "size": 2814240
+        }
+      ]
+    },
+    {
+      "functions": {
+        "auth_license_name_omitted": 17,
+        "decompiled": 871,
+        "decompiled_after_retry": 716,
+        "external_or_thunk": 531,
+        "unresolved_with_instruction_listing": 1
+      },
+      "name": "secretsauced",
+      "path": "compiled/var/jb/usr/local/bin/secretsauced",
+      "sha256": "e21659cbacd5e74399cfcd0d3e370dbbb8dca395a23266577dff25c85d033a25",
+      "size": 2501536,
+      "slices": [
+        {
+          "api_family_counts": {
+            "cloud_groups_files": 3,
+            "cookies_cache": 0,
+            "device_fingerprint": 23,
+            "identifiers": 3,
+            "keychain": 0,
+            "launch_dynamic": 11,
+            "mach_notifications": 14,
+            "network_low_level": 25,
+            "network_session": 23,
+            "pasteboard": 0,
+            "preferences": 0,
+            "web_auth": 0
+          },
+          "counts": {
+            "class_definitions": 7,
+            "class_references": 60,
+            "method_name_strings": 727,
+            "selector_references": 584,
+            "swift_type_descriptors": 0,
+            "undefined_symbols": 356
+          },
+          "cpu_subtype": "0x0",
+          "cpu_type": "0x100000c",
+          "dylibs": [
+            {
+              "command": "0xc",
+              "name": "/usr/lib/libobjc.A.dylib",
+              "offset": "0xd98"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/Foundation.framework/Foundation",
+              "offset": "0xdd0"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation",
+              "offset": "0xe28"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/Security.framework/Security",
+              "offset": "0xe88"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/Network.framework/Network",
+              "offset": "0xed8"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+              "offset": "0xf28"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/CFNetwork.framework/CFNetwork",
+              "offset": "0xf80"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/Photos.framework/Photos",
+              "offset": "0xfd8"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/UIKit.framework/UIKit",
+              "offset": "0x1028"
+            },
+            {
+              "command": "0xc",
+              "name": "/usr/lib/libSystem.B.dylib",
+              "offset": "0x1078"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/CoreData.framework/CoreData",
+              "offset": "0x10b0"
+            }
+          ],
+          "encryption": [
+            {
+              "cryptid": 0,
+              "encrypted_range": [
+                "0x4000",
+                2359296
+              ],
+              "offset": "0xd80"
+            }
+          ],
+          "file_offset": "0x0",
+          "file_type": 2,
+          "sha256": "e21659cbacd5e74399cfcd0d3e370dbbb8dca395a23266577dff25c85d033a25",
+          "signature_declarations": [
+            {
+              "magic": "0xfade7171",
+              "meaning": "Original embedded XML declaration only; not trust validation, clone entitlements, or runtime permission proof.",
+              "offset": "0x25d7a7",
+              "sha256": "d94a73cb6cdd20513b9810df1379ab5bd12558d91befe0a73cb6ac2dc0e7ccb9",
+              "size": 1178,
+              "slot": 5,
+              "xml_entitlements": {
+                "com.apple.photos.service": true,
+                "com.apple.private.cs.process": true,
+                "com.apple.private.memorystatus": true,
+                "com.apple.private.photos.delete": true,
+                "com.apple.private.security.container-required": false,
+                "com.apple.private.security.no-container": true,
+                "com.apple.private.security.no-sandbox": true,
+                "com.apple.private.skip-library-validation": true,
+                "com.apple.private.tcc.allow": [
+                  "kTCCServicePhotos",
+                  "kTCCServicePhotosAdd",
+                  "kTCCServiceMediaLibrary"
+                ],
+                "com.apple.private.tcc.manager.check-by-audit-token": true,
+                "com.apple.security.exception.files.absolute-path.read-write": [
+                  "/"
+                ],
+                "com.apple.system-task-ports": true,
+                "get-task-allow": true,
+                "platform-application": true,
+                "task_for_pid-allow": true
+              }
+            },
+            {
+              "magic": "0xfade7172",
+              "meaning": "DER entitlement blob identity only; DER contents not decoded or compared to XML.",
+              "offset": "0x25dc41",
+              "sha256": "db5afc71aabcedc12d24189a5253050bbc59c3965ad501621352f28c04af8c91",
+              "size": 674,
+              "slot": 7
+            }
+          ],
+          "size": 2501536
+        }
+      ]
+    },
+    {
+      "functions": {
+        "decompiled": 108,
+        "decompiled_after_retry": 1,
+        "external_or_thunk": 82
+      },
+      "name": "secretsaucemonitor",
+      "path": "compiled/var/jb/usr/local/bin/secretsaucemonitor",
+      "sha256": "1aaf600ea991a13b20bbadb785abbd6988709f9d9194d1e4c2796beaa03d0b23",
+      "size": 390144,
+      "slices": [
+        {
+          "api_family_counts": {
+            "cloud_groups_files": 2,
+            "cookies_cache": 0,
+            "device_fingerprint": 1,
+            "identifiers": 0,
+            "keychain": 0,
+            "launch_dynamic": 3,
+            "mach_notifications": 6,
+            "network_low_level": 0,
+            "network_session": 0,
+            "pasteboard": 0,
+            "preferences": 0,
+            "web_auth": 0
+          },
+          "counts": {
+            "class_definitions": 0,
+            "class_references": 10,
+            "method_name_strings": 31,
+            "selector_references": 31,
+            "swift_type_descriptors": 0,
+            "undefined_symbols": 100
+          },
+          "cpu_subtype": "0x0",
+          "cpu_type": "0x100000c",
+          "dylibs": [
+            {
+              "command": "0xc",
+              "name": "/usr/lib/libobjc.A.dylib",
+              "offset": "0x7f8"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/Foundation.framework/Foundation",
+              "offset": "0x830"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation",
+              "offset": "0x888"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/Security.framework/Security",
+              "offset": "0x8e8"
+            },
+            {
+              "command": "0xc",
+              "name": "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+              "offset": "0x938"
+            },
+            {
+              "command": "0xc",
+              "name": "/usr/lib/libSystem.B.dylib",
+              "offset": "0x990"
+            }
+          ],
+          "encryption": [
+            {
+              "cryptid": 0,
+              "encrypted_range": [
+                "0x4000",
+                327680
+              ],
+              "offset": "0x7e0"
+            }
+          ],
+          "file_offset": "0x0",
+          "file_type": 2,
+          "sha256": "1aaf600ea991a13b20bbadb785abbd6988709f9d9194d1e4c2796beaa03d0b23",
+          "signature_declarations": [
+            {
+              "magic": "0xfade7171",
+              "meaning": "Original embedded XML declaration only; not trust validation, clone entitlements, or runtime permission proof.",
+              "offset": "0x5e1cd",
+              "sha256": "8b6d3af493e70b27054127bb3676f38e89122eefc50e5b74cd01fdef4d8d86d1",
+              "size": 828,
+              "slot": 5,
+              "xml_entitlements": {
+                "com.apple.private.cs.process": true,
+                "com.apple.private.memorystatus": true,
+                "com.apple.private.security.container-required": false,
+                "com.apple.private.security.no-container": true,
+                "com.apple.private.security.no-sandbox": true,
+                "com.apple.private.skip-library-validation": true,
+                "com.apple.security.exception.files.absolute-path.read-write": [
+                  "/"
+                ],
+                "com.apple.system-task-ports": true,
+                "get-task-allow": true,
+                "platform-application": true,
+                "task_for_pid-allow": true
+              }
+            },
+            {
+              "magic": "0xfade7172",
+              "meaning": "DER entitlement blob identity only; DER contents not decoded or compared to XML.",
+              "offset": "0x5e509",
+              "sha256": "030f6c3aea526891ffa42a5ad8b942ef8b186a33b535b47544af413343757129",
+              "size": 449,
+              "slot": 7
+            }
+          ],
+          "size": 390144
+        }
+      ]
+    }
+  ],
+  "handoff_crc": "PASS",
+  "handoff_sha256": "8730c17abbfb8cf12fbbbe19669120e5266b1782dd2a34f814ef0fab557187a2",
+  "ipa_comparison": {
+    "all_byte_identical": true,
+    "files": 25,
+    "new_components": 0,
+    "sha256": "91f011992565e9f38a41a74abafc0864e664608ee0d9a2e0e47aefb47f77adeb"
+  },
+  "limits": [
+    "Recovered pseudocode is not buildable source.",
+    "All slices structurally scanned; handoff pseudocode covers only arm64.",
+    "References and entitlements are static declarations, not observed calls, effective permission or isolation evidence.",
+    "Binary-recovery package preserves original postinst/prerm, which contain privileged system changes; it has not been approved by device acceptance.",
+    "No runtime config, personal data, original build project, or server implementation supplied.",
+    "No hooks, licensing, cloud endpoints, brand resources or live device state changed."
+  ],
+  "manifest": {
+    "excluded": [
+      {
+        "path": "/var/jb/Library/Application Support/SocialBox",
+        "reason": "runtime configuration excluded"
+      },
+      {
+        "path": "/var/jb/Library/Application Support/SocialBox/socialbox-proxy.conf",
+        "reason": "runtime configuration excluded"
+      },
+      {
+        "path": "/var/jb/Applications/SocialBox.app/PlugIns/SocialBoxFilesProviderLegacy.appex",
+        "reason": "dpkg-listed legacy component: absent"
+      },
+      {
+        "path": "/var/jb/Applications/SocialBox.app/PlugIns/SocialBoxFilesProviderLegacy.appex/SocialBoxFilesProviderLegacy",
+        "reason": "dpkg-listed legacy component: absent"
+      },
+      {
+        "path": "/var/jb/Applications/SocialBox.app/PlugIns/SocialBoxFilesProviderLegacy.appex/Info.plist",
+        "reason": "dpkg-listed legacy component: absent"
+      }
+    ],
+    "files": [
+      {
+        "path": "compiled/var/jb/Applications/SocialBox.app/AppIcon.png",
+        "sha256": "cff18ae5261a6dcbb3d7a2c62b3239b832e39a345e218a25dee321875c222f6c",
+        "size": 4999
+      },
+      {
+        "path": "compiled/var/jb/Applications/SocialBox.app/AppIcon@2x.png",
+        "sha256": "ca0b2f73416c50165fc208042953c49e42afe3d6a78e588e7345af28826c85f8",
+        "size": 15357
+      },
+      {
+        "path": "compiled/var/jb/Applications/SocialBox.app/AppIcon@3x.png",
+        "sha256": "2b29b8eeca3515d375bb98faca51e0692cf6b839b6f3c17b5306d84d045e4e28",
+        "size": 30657
+      },
+      {
+        "path": "compiled/var/jb/Applications/SocialBox.app/CryptoIcons/chain-base.png",
+        "sha256": "5a47cf1cb030398a2ba05f578573f3f3ed6b9d9f9a776a772049f05a57d60c6e",
+        "size": 3367
+      },
+      {
+        "path": "compiled/var/jb/Applications/SocialBox.app/CryptoIcons/chain-eth.png",
+        "sha256": "c253d7c5d4203783e31bde1d33e143f6a9ce1defac24ab5e06948847696b80a1",
+        "size": 2984
+      },
+      {
+        "path": "compiled/var/jb/Applications/SocialBox.app/CryptoIcons/chain-hyperevm.png",
+        "sha256": "48db53ceea7bb056cc377ac03699c16c542967337e3499116588c379f9b6c3b2",
+        "size": 11629
+      },
+      {
+        "path": "compiled/var/jb/Applications/SocialBox.app/CryptoIcons/chain-monad.png",
+        "sha256": "eb4c3a7c42a23d483ebce40e79067563404b3bcfa0bae8a2577b9f63f14a4d9e",
+        "size": 26990
+      },
+      {
+        "path": "compiled/var/jb/Applications/SocialBox.app/CryptoIcons/chain-polygon.png",
+        "sha256": "ba495a374776ab6cfaecc15b3e3d0f9b04743cd0309f99575b8599fc0112e030",
+        "size": 10248
+      },
+      {
+        "path": "compiled/var/jb/Applications/SocialBox.app/CryptoIcons/chain-sol.png",
+        "sha256": "b0fb83e48d1b455333436ae158cd9e547b7493ef4f5b2d5de3d678e93a994d4c",
+        "size": 54309
+      },
+      {
+        "path": "compiled/var/jb/Applications/SocialBox.app/CryptoIcons/chain-sui.png",
+        "sha256": "4f8bdce8c8effcc5fb8402578051f3800eab3ac590b100de4e0f4da35dd0dc93",
+        "size": 6535
+      },
+      {
+        "path": "compiled/var/jb/Applications/SocialBox.app/CryptoIcons/chain-tron.png",
+        "sha256": "53830c1f0b3c7654c7caa55df858d2967b7e55194d207162bf7cf9371323a1c6",
+        "size": 25773
+      },
+      {
+        "path": "compiled/var/jb/Applications/SocialBox.app/CryptoIcons/token-dai.png",
+        "sha256": "1891aa6964b441a4a84a63c97550aba96fd06ac9a455cf3943203518e4495354",
+        "size": 11815
+      },
+      {
+        "path": "compiled/var/jb/Applications/SocialBox.app/CryptoIcons/token-usdc.png",
+        "sha256": "6d14601d0b1109046e366592b8c0f256ffb075f69180b65dddd97ae665d49f9e",
+        "size": 9276
+      },
+      {
+        "path": "compiled/var/jb/Applications/SocialBox.app/CryptoIcons/token-usdt.png",
+        "sha256": "7a5f09d9475f7b5d1df3f0ca0dd257da56496dd16bc20b6e464dedf0199aaf33",
+        "size": 2670
+      },
+      {
+        "path": "compiled/var/jb/Applications/SocialBox.app/SocialBox",
+        "sha256": "e230dab07690e30c292962a3c0a3ea8301f9532aaa583a7209fdf33142552dd0",
+        "size": 9490320
+      },
+      {
+        "path": "compiled/var/jb/Applications/SocialBox.app/Info.plist",
+        "sha256": "eb61d45b39c08c55703e7e764c0b1797c77473b110982b974958fb677e73d4e6",
+        "size": 3146
+      },
+      {
+        "path": "compiled/var/jb/Applications/SocialBox.app/PlugIns/SocialBoxFilesProvider.appex/SocialBoxFilesProvider",
+        "sha256": "33bb1055f7fb5334268728e4ca707fab87c0e2b9b1abe9953f6867c39ea9cd5f",
+        "size": 192320
+      },
+      {
+        "path": "compiled/var/jb/Applications/SocialBox.app/PlugIns/SocialBoxFilesProvider.appex/Info.plist",
+        "sha256": "5da543d62d8a87e9cb19a3b643ed710d211cc6956cc18cd1dc5a6bfd35cfcb1f",
+        "size": 696
+      },
+      {
+        "path": "compiled/var/jb/Applications/SocialBox.app/PlugIns/SocialBoxPacketTunnel.appex/SocialBoxPacketTunnel",
+        "sha256": "dadff71b596db02306e76970ff11bc9ac304af45ea001bcf5960986dd0f44187",
+        "size": 1757600
+      },
+      {
+        "path": "compiled/var/jb/Applications/SocialBox.app/PlugIns/SocialBoxPacketTunnel.appex/Info.plist",
+        "sha256": "2e7088d04c0c9b4a4d15299838cf89f0e344e600449c0fa95bbcd1ca1e4b4885",
+        "size": 574
+      },
+      {
+        "path": "compiled/var/jb/Applications/SocialBox.app/socialbox_logo.png",
+        "sha256": "3740b893f8c708543f5dfcd6e958b62dbe133ce917a143604aa290b2f963e41a",
+        "size": 41998
+      },
+      {
+        "path": "compiled/var/jb/Applications/SocialBox.app/hjb.jpg",
+        "sha256": "eae97912157072d5094f5a3050acef4aa000ae2e8bab8ee742a620f1d572e069",
+        "size": 10840
+      },
+      {
+        "path": "compiled/var/jb/Applications/SocialBox.app/pofjb.jpg",
+        "sha256": "2b980013077b8f2e334ce7dc36c279d976cb41174ccb63dbb0ae86509ac9fdd3",
+        "size": 10737
+      },
+      {
+        "path": "compiled/var/jb/Applications/SocialBox.app/thjb.jpg",
+        "sha256": "bf095d699698265ec4cb6fbc1645f2970652e7923bec5739b8a9d9a451603c06",
+        "size": 14659
+      },
+      {
+        "path": "compiled/var/jb/Applications/SocialBox.app/tjb.jpg",
+        "sha256": "d74b7d039a55b9bdfc5ffb991ec62168c03366cb8bf90be7bf9d634763dd940b",
+        "size": 12404
+      },
+      {
+        "path": "compiled/var/jb/Library/LaunchDaemons/com.socialboxhelper.plist",
+        "sha256": "bcac990509b91b2c021530101047ca42c1176a7cdc714a8e20514468ae8178c0",
+        "size": 275
+      },
+      {
+        "path": "compiled/var/jb/Library/LaunchDaemons/com.secretsauce.secretsauced.plist",
+        "sha256": "162f16a9ab0f270d4a6007ecf542f117a28980d7b0206d0dd4c392253b27c18c",
+        "size": 432
+      },
+      {
+        "path": "compiled/var/jb/Library/LaunchDaemons/com.secretsauce.secretsaucemonitor.plist",
+        "sha256": "a951ed4d2b963301f7c04d1a30e1de1e6d889de792a0fd059791baf965106afb",
+        "size": 381
+      },
+      {
+        "path": "compiled/var/jb/Library/MobileSubstrate/DynamicLibraries/SocialBox.dylib",
+        "sha256": "7172791ab8e102e0330d156eaebba130f9b6d2a5491e0b3cbc5d07bc5965c4ca",
+        "size": 8141984
+      },
+      {
+        "path": "compiled/var/jb/Library/MobileSubstrate/DynamicLibraries/SocialBox.plist",
+        "sha256": "cda884d58f9e72573abd684dd193b4f7074736187596c0603178e19f6cc54969",
+        "size": 761
+      },
+      {
+        "path": "compiled/var/jb/Library/MobileSubstrate/DynamicLibraries/SocialBoxAccountsd.dylib",
+        "sha256": "06c3d125edc029925d10438cf43ac8253545a783d2222e9a7843cdbcf458c3e8",
+        "size": 916128
+      },
+      {
+        "path": "compiled/var/jb/Library/MobileSubstrate/DynamicLibraries/SocialBoxAccountsd.plist",
+        "sha256": "a591dccba3684df09b1d6514dea03d4dec2d688fe5febf61f918f0e0a74d179a",
+        "size": 83
+      },
+      {
+        "path": "compiled/var/jb/Library/MobileSubstrate/DynamicLibraries/SocialBoxCfPrefsd.dylib",
+        "sha256": "dba106b80dd677b9d05b0df4588995bb4e24dfa3dbfb48fe2402a649faf586c4",
+        "size": 983072
+      },
+      {
+        "path": "compiled/var/jb/Library/MobileSubstrate/DynamicLibraries/SocialBoxCfPrefsd.plist",
+        "sha256": "73bb2765ea9408212b3f7207f43b505eb2405b1f24598078ec3b66b22d7f6192",
+        "size": 82
+      },
+      {
+        "path": "compiled/var/jb/Library/MobileSubstrate/DynamicLibraries/SocialBoxContainermanagerd.dylib",
+        "sha256": "dd45d69acec2505f09da32f6fd21737184c7425153051517c3f0d1542bb23aea",
+        "size": 932608
+      },
+      {
+        "path": "compiled/var/jb/Library/MobileSubstrate/DynamicLibraries/SocialBoxContainermanagerd.plist",
+        "sha256": "5be285d195517d17ab013d1dc46b59bdf74c676fa66a789212c8c3f405c50349",
+        "size": 93
+      },
+      {
+        "path": "compiled/var/jb/Library/MobileSubstrate/DynamicLibraries/SocialBoxLsd.dylib",
+        "sha256": "9837c536a0cb4078afc87caa57aff5562dea513f6b7a74c153dc41c49db8d6ba",
+        "size": 898832
+      },
+      {
+        "path": "compiled/var/jb/Library/MobileSubstrate/DynamicLibraries/SocialBoxLsd.plist",
+        "sha256": "bf76c33942d7440a280ee1c4d1bc59fda7cd7eb4e5937836db0726040a0ef09f",
+        "size": 77
+      },
+      {
+        "path": "compiled/var/jb/Library/MobileSubstrate/DynamicLibraries/SocialBoxMediaServerd.dylib",
+        "sha256": "77eadab63825f6e9aa705b1358bb5614b60add5c45a6e8507a6be2266bdab1f8",
+        "size": 898384
+      },
+      {
+        "path": "compiled/var/jb/Library/MobileSubstrate/DynamicLibraries/SocialBoxMediaServerd.plist",
+        "sha256": "a4e9e95e43b1b1f1306214f5c8c1e1c0ee8f76a9f52bb748715573b243902d34",
+        "size": 86
+      },
+      {
+        "path": "compiled/var/jb/Library/MobileSubstrate/DynamicLibraries/SocialBoxSecurityd.dylib",
+        "sha256": "b5bef7648272948298cdec201c955b47bed523e43ede2a9bfeb439660f5501a2",
+        "size": 439632
+      },
+      {
+        "path": "compiled/var/jb/Library/MobileSubstrate/DynamicLibraries/SocialBoxSecurityd.plist",
+        "sha256": "e958bf7210b9276b2c668517869969517cf0cf343c9e73db6bfe16a7121cb251",
+        "size": 83
+      },
+      {
+        "path": "compiled/var/jb/Library/MobileSubstrate/DynamicLibraries/SocialBoxSpringBoard.dylib",
+        "sha256": "af06a9930986ea919241cf3291c34843e2822e31a3a4478f875fcced753b2ee5",
+        "size": 587296
+      },
+      {
+        "path": "compiled/var/jb/Library/MobileSubstrate/DynamicLibraries/SocialBoxSpringBoard.plist",
+        "sha256": "08ec9b7f9611758284cf719366ff0dca8af96552d7c1a5dc597f6ae8c4784966",
+        "size": 126
+      },
+      {
+        "path": "compiled/var/jb/etc/socialbox/build_mode",
+        "sha256": "3933e3274b63dc01fd286d6d939a626867c83a4603fc4347e0f8b8856f1b98fd",
+        "size": 8
+      },
+      {
+        "path": "compiled/var/jb/usr/libexec/SocialBoxHelper",
+        "sha256": "a0455fd7aeb19712d7ebf147fe773788981204710cd2bfa6f5b087191d0888d2",
+        "size": 668688
+      },
+      {
+        "path": "compiled/var/jb/usr/local/bin/SocialBoxCLI",
+        "sha256": "cb76f410122ff5fd66905fb07b96f7f45021341f530c0510d4f2dd2ff75ac5a3",
+        "size": 5665056
+      },
+      {
+        "path": "compiled/var/jb/usr/local/bin/secretsauced",
+        "sha256": "e21659cbacd5e74399cfcd0d3e370dbbb8dca395a23266577dff25c85d033a25",
+        "size": 2501536
+      },
+      {
+        "path": "compiled/var/jb/usr/local/bin/secretsaucemonitor",
+        "sha256": "1aaf600ea991a13b20bbadb785abbd6988709f9d9194d1e4c2796beaa03d0b23",
+        "size": 390144
+      },
+      {
+        "path": "package-control/md5sums",
+        "role": "package-maintainer-control",
+        "sha256": "0baa8daee30ea2db54e78aa240485b88af21310810ce2c638cdf70e4e626c5ab",
+        "size": 5011,
+        "source_path": "/var/jb/Library/dpkg/info/com.socialbox.md5sums"
+      },
+      {
+        "path": "package-control/prerm",
+        "role": "package-maintainer-control",
+        "sha256": "7ae80d82fb56ac374a56743ca19c2dca11122b9c248d9b461d6c9d47b02e6fc8",
+        "size": 1528,
+        "source_path": "/var/jb/Library/dpkg/info/com.socialbox.prerm"
+      },
+      {
+        "path": "package-control/postinst",
+        "role": "package-maintainer-control",
+        "sha256": "9112d70b1d2b6d239332eaea8585ac75969b1878ed72379a6e06077abea8c050",
+        "size": 70268,
+        "source_path": "/var/jb/Library/dpkg/info/com.socialbox.postinst"
+      }
+    ],
+    "package": "com.socialbox",
+    "verification": {
+      "compiled_binaries_patched": false,
+      "device_sha256_matches": 52,
+      "personal_runtime_data_copied": false
+    },
+    "version": "3.1.0-1"
+  },
+  "manifest_file_count": 52,
+  "payload_file_count": 49,
+  "private_inventory_sha256": "17597f5c76218255901b2878961f9a5cf006b222fc010cc4bc56149217305d38",
+  "recovery_package": {
+    "controls_note": "These are absent from handoff, not proven absent from the original release; postinst references a preinst.",
+    "executables_modified": false,
+    "file": "socialbox-original-binary-recovery-unvalidated.deb",
+    "generated_control_changes": [
+      "recovery version/name/description",
+      "iOS >=16 because legacy FileProvider is missing",
+      "recomputed md5sums for available payload"
+    ],
+    "installed": false,
+    "license_removed": false,
+    "missing_original_controls": [
+      "preinst",
+      "postrm",
+      "triggers",
+      "conffiles"
+    ],
+    "rebuilt_from_source": false,
+    "scripts_executed": false,
+    "sha256": "9f042a879149b1fbfd40c842a52fceb45ca9d49dc9d3a77950fd60139dcb3bc7",
+    "size": 10785358
+  },
+  "scanner_sha256": "9eaf4c33c63431dff420076a888fa013778bf4e3a56dfd29a79656f9f9c3a8c7",
+  "schema_version": 1,
+  "signature_parser_sha256": "70491fa91632ffe07c2add57288a71bb2d6990283e1336bd15da52fdf8c745d8",
+  "slice_count": 25,
+  "structure_counts_across_all_slices": {
+    "class_definitions": 357,
+    "class_references": 1180,
+    "method_name_strings": 16964,
+    "selector_references": 13429,
+    "swift_type_descriptors": 0,
+    "undefined_symbols": 5639
+  },
+  "tool_sha256": "60e7551861e150ec8aae274329a9713b92cb579c5db1da8fa272b9863f7a5d3e"
+}

@@ -1,0 +1,58 @@
+{
+  "comparisonReceiptSHA256": "6d836acf1ccdd2704179b25e7d10b04577225a1884e55f03a8dc4f95ef096c21",
+  "excludedComparisonFields": [
+    "entry atime/ctime/mtime",
+    "PAX atime/ctime/mtime"
+  ],
+  "installResultSHA256": "fbb3e18718a61176554b19c24c2797618096d9eac7532621a023d446605c2313",
+  "packageSHA256": "6d47c2006eea87142714973cae5b23eff1cd7b322f511951e79b40fdd3f890ec",
+  "retainedLegacyManagerState": {
+    "beforeToFirstPost": {
+      "added": 0,
+      "modified": 0,
+      "removed": 0
+    },
+    "beforeToSecondPost": {
+      "added": 0,
+      "modified": 0,
+      "removed": 0
+    },
+    "entryCounts": [
+      17378,
+      17378,
+      17378
+    ],
+    "firstToSecondPost": {
+      "added": 0,
+      "modified": 0,
+      "removed": 0
+    },
+    "normalizedSHA256": [
+      "dc6888eebdab95f143247a0d2639efc36e3887f7a0f7136fdede102fd82cc228",
+      "dc6888eebdab95f143247a0d2639efc36e3887f7a0f7136fdede102fd82cc228",
+      "dc6888eebdab95f143247a0d2639efc36e3887f7a0f7136fdede102fd82cc228"
+    ],
+    "postSnapshotsEqual": true,
+    "regularOrHardlinkCounts": [
+      13900,
+      13900,
+      13900
+    ],
+    "status": "same",
+    "threeEqual": true
+  },
+  "rootCounts": [
+    18,
+    18,
+    18
+  ],
+  "rootListsEqual": true,
+  "schemaVersion": 1,
+  "scope": "Retained legacy manager namespace only; separate from current container/app-group scope and changing operational runtime files",
+  "sourceManifestSHA256": [
+    "fc245d7e3334a4a907c92c4858aea8f37b7dd617f5e3aa32b1ba2d82400b22d4",
+    "365d4d2c8eb22df8b0c39499c40d77eba8263543f76e2ccee5dac3feec0630f3",
+    "5464065a778214762fe97d977cb06d1de85bb29433930b8eed7c403b8fd23181"
+  ],
+  "version": "3.1.0-1+socialbox.14"
+}

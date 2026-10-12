@@ -1,0 +1,3569 @@
+{
+  "baselineCommit": "72899ee23f92cfe6d93a6c0f4b54bbf7232467ff",
+  "meaning": "Every existing SocialBox row is retained. A linked reference finding is only a static comparison lead. No SocialBox runtime coverage or completed port is inferred; unmapped rows remain NOT_REVIEWED.",
+  "rows": [
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "ACCEPT-001",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Shared read-only launcher and SSH readiness presentation"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "ACCEPT-002",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "Bounded SSH acceptance battery and row-scoped observations"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "ACCEPT-003",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "H02 budget, installed daemon and ordered device acceptance"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "ACCEPT-004",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "Opt-in A/B/A in-clone nonce challenge preparation and evidence chain"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "ACCEPT-005",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "Per-clone sentinel probes through ordinary public API paths, without network admission changes"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "APP-001",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Registry identities, app scope and backward-compatible clone derivation"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "APP-002",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Per-app exact registered process selection and stop verification"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "APP-003",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Per-app source import, clone signing inputs, request/restore ownership and MDM export"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "APP-004",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Launcher app selector, scoped state and import request binding"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "APP-005",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Cloud profile app identity, migration, filtering and scoped mutations"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "AUDIT-001",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Cross-container capture comparison and missing observations"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "AUDIT-002",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Inventory drift, evidence completeness and stable row contract"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "BIN-001",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "BIN-002",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Payload/RedditApp.app/Frameworks/Lottie.framework/Lottie"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "BIN-003",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Payload/RedditApp.app/PlugIns/NotificationServiceExtension.appex/NotificationServiceExtension"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "BIN-004",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Payload/RedditApp.app/PlugIns/RedditIntents.appex/RedditIntents"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "BIN-005",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Payload/RedditApp.app/PlugIns/RedditWidgetsExtension.appex/RedditWidgetsExtension"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "BIN-006",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Payload/RedditApp.app/PlugIns/ShareExtension.appex/ShareExtension"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "BIN-007",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Payload/RedditApp.app/PlugIns/stickers.appex/stickers"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "BIN-008",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Payload/RedditApp.app/RedditApp"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "BOOT-001",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Sensor/display behavior checks and constructor readiness scheduling"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "CLOUD-001",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Account/license provenance and private backup authorization"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "CLOUD-002",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Native private cloud key and selected-app restore boundary"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "CLOUD-003",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Chunked encrypted transfer and incomplete publication"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "STATIC_COMPARISON_ONLY",
+      "id": "DEVISO-001",
+      "referenceFindings": [
+        "DS-15",
+        "DS-18",
+        "DS-23"
+      ],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "gap",
+      "surface": "Sibling data-home file read/stat in two real Facebook clones on palera1n"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "EDIT-001",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Identity editing preserves operator settings and validates numeric input"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "EDIT-002",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Selected two-component iOS versions must not fall through to physical OS"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "EDIT-003",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Current model/iOS choices use compatible catalog tuples"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "EDIT-004",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Identity picker selection and durable request completion remain reviewable"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "EDIT-005",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Saved launcher defaults and monitor settings take effect without false success"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "EDIT-006",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Identity edits keep derived Reddit headers and unchanged location coherent"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "EDIT-007",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Launcher passcode must survive storage failures and report removal errors"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "EDIT-008",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Automatic proxy-bound identity draft and explicit manual identifier validation"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "EDIT-009",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Visible automatic/manual identity preparation, complete identifiers and exact reviewed Save"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "EDIT-010",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Identity-save installer failure diagnostics and private transaction evidence"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "EDIT-011",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Clone icon visibility metadata during first creation and identity replacement"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "EDIT-012",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Complete automatic identity draft round-trip across every generated field"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "EXCP-001",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Facebook crash reporter replacing the ElleKit breakpoint dispatcher"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "FB-001",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Input identity and bounded structural enumeration"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "STATIC_COMPARISON_ONLY",
+      "id": "FB-002",
+      "referenceFindings": [
+        "DS-01",
+        "DS-02",
+        "DS-20"
+      ],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "IDFV, IDFA and platform identifier callers"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "FB-003",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "Local app/device/analytics identifier storage candidates"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "FB-004",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "Family-device identity and cross-app backup candidates"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "FB-005",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "Machine ID and authentication/session ownership"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "FB-006",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "Original shared keychain and effective clone entitlement boundary"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "FB-007",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "Defaults suites, four app groups, files and cloud stores"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "FB-008",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "Meta frameworks and SDK caller attribution"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "FB-009",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "Facebook HTTP headers, bodies and hostname policy candidates"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "FB-010",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "MQTT, Tigon, Proxygen/Liger, sockets and QUIC candidates"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "FB-011",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "Background modes, APNs, VoIP and nine extensions"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "FB-012",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "App integrity, DeviceCheck, App Attest and reinstallation state"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "STATIC_COMPARISON_ONLY",
+      "id": "FB-013",
+      "referenceFindings": [
+        "DS-21"
+      ],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "Facebook user agent and device fingerprint consistency"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "FB-014",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "WebView, cookies, authentication brokers and pasteboard"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "FB-015",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "Fresh Facebook profiles, identity restore and cross-app lifecycle"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "FB-016",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "Dynamic discovery and end-to-end acceptance residual"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "FBAPP-001",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Audited keychain group hint in copied Facebook bundle metadata"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "FBBUILD-001",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Byte-identical registry derivation in Objective-C and Objective-C++ consumers"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "FBDEVICE-001",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Actual source separation, inactive create rejection and Reddit preservation on iPhone8"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "FBDEVICE-002",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "App-owned lifecycle candidate installation and preservation, with managed routing still unconfigured"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "STATIC_COMPARISON_ONLY",
+      "id": "FBKEY-001",
+      "referenceFindings": [
+        "DS-11",
+        "DS-12"
+      ],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Compiled ordered multi-group identity policy and immutable registry data"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "STATIC_COMPARISON_ONLY",
+      "id": "FBKEY-002",
+      "referenceFindings": [
+        "DS-12",
+        "DS-13"
+      ],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "SecItem and SecKey entry points composed with optional sync policy"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "FBKEY-003",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Synthetic A/B physical-device authorization, persistent references and isolated cleanup"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "STATIC_COMPARISON_ONLY",
+      "id": "FBKEY-004",
+      "referenceFindings": [
+        "DS-11",
+        "DS-14"
+      ],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Signing, bootstrap, marker and runtime readiness bound to complete per-app group policy"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "STATIC_COMPARISON_ONLY",
+      "id": "FBKEY-005",
+      "referenceFindings": [
+        "DS-13"
+      ],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Complete multi-group cleanup and nonce-bound aggregate authorization receipt"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "FBLIFE-001",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Installation journal identity, private installer evidence and per-app rollback/removal ownership"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "FBLIFE-002",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "App-bound deletion journal, retry ownership, cleanup target and streamed ZIP export authority"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "FBLIFE-003",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Global app transition dispatch, clone-local network control and current-lease readiness consumption"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "FBLIFE-004",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Complete installation-recovery dispatch and global cloud maintenance closure"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "FBLIFE-005",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "App-bound original/candidate replacement, immutable checkpoints and durable deletion ownership"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "FBLIFE-006",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Authenticated backup app ownership, worker reconstruction and failed-candidate recovery"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "FBPROC-001",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "gap",
+      "surface": "All-app stop/drain epochs and original controller observation quiescence"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "FBPROF-001",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Create preflight, shared profile generator ownership, clone sync and durable receipts"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "FBRUN-001",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "gap",
+      "surface": "Observed original-app Keychain/defaults/attestation calls; live clone SDK state remains unverified"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "FBRUN-002",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "gap",
+      "surface": "Actual Facebook User-Agent producer fields and Mozilla-prefix hardware/OS consistency"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "STATIC_COMPARISON_ONLY",
+      "id": "FBSTORE-001",
+      "referenceFindings": [
+        "DS-15",
+        "DS-16",
+        "DS-17"
+      ],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "NSUserDefaults suites/domains and CFPreferences app/group access"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "STATIC_COMPARISON_ONLY",
+      "id": "FBSTORE-002",
+      "referenceFindings": [
+        "DS-23"
+      ],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "gap",
+      "surface": "Four declared App Group filesystem containers"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "FBTWEAK-001",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Exact app bootstrap, gated hook registration and honest app-specific readiness"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "FBUA-001",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Audited FBUserAgent producer model, OS/build, scale and locale"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "FBUI-001",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "App-owned views, durable request ownership, source staging and MDM export namespace"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "FSOWN-001",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Profile control-directory parents created by root daemon"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "STATIC_COMPARISON_ONLY",
+      "id": "ID-001",
+      "referenceFindings": [
+        "DS-01",
+        "DS-02",
+        "DS-20"
+      ],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "IDFV and IDFA generation/posture"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "ID-002",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Reddit install and external installation IDs"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "ID-003",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Synthetic hardware identifiers and model tuple"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "ID-004",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Installation timestamps, synthetic boot epoch and battery offset"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "ID-005",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Canonical local container, bundle and access-group mapping"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "ID-006",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Identity history reservation"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "ID-007",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Cross-clone control boot epoch"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "ID-008",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "Same-account restore across devices and concurrent owner"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "ID-009",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Keychain and device-bound identity after restore"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "ID-010",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "Persisted app/SDK identity keys copied on backup restore"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "ISONET-001",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Redirects and application delegate rewrites must retain destination policy"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "ISOOWN-001",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Profile metadata must not redirect A-owned controls into B sandbox"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "ISOSEN-001",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Sentinel evidence must not manufacture PASS or discard positive foreign reads"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "LIFE-001",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Source IPA selection and inbox ownership"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "LIFE-002",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Source archive traversal and executable encryption"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "LIFE-003",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Source replacement publication"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "LIFE-004",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Fresh clone code versus original Reddit account data"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "LIFE-005",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Clone App Groups, iCloud/KVS, push and associated domains"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "LIFE-006",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Extensions, Watch targets and App Clips"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "LIFE-007",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "gap",
+      "surface": "Original shared OAuth callback URL scheme"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "LIFE-008",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Signed bootstrap and live profile copy"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "LIFE-009",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Rebuild after source or signed-identity drift"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "LIFE-010",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Install failure rollback and data ownership"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "LIFE-011",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Clone IPA export for MDM"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "LIFE-012",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Cloud backup quiescence and snapshot consistency"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "LIFE-013",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Cloud backup scope and credential disclosure"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "LIFE-014",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Selected backup identity versus decrypted manifest identity"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "LIFE-015",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Cloud archive extraction before link validation"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "LIFE-016",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Restore to new local clone with same logical account identity"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "LIFE-017",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "Restored app preference-domain relocation"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "LIFE-018",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Restore old control lease, heartbeat and hook receipt"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "LIFE-019",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "First launch identity freeze durability"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "LIFE-020",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Switch/open ordering and old connection ownership"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "LIFE-021",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Managed installation, hooks and OPEN admission"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "LIFE-022",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Exit/close stale generation handling"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "LIFE-023",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Identity edit and regeneration before first use"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "LIFE-024",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Replace profile creates fresh identity and app state"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "LIFE-025",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Replacement transaction ownership and retry"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "LIFE-026",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Delete Keychain group before uninstall"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "LIFE-027",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Delete app files, exports, proxy and rotation secrets"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "LIFE-028",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Permanent tombstones and identity no-reuse after delete"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "LIFE-029",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Package upgrade/removal retains user data"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "LIFE-030",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Startup recovery and future-schema guard"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "LIFE-031",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Cloud ownership binding and retirement"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "NET-001",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "NSURLSession default configuration"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "NET-002",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "NSURLSession ephemeral configuration"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "NET-003",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "NSURLSession background configuration and nsurlsessiond delegation"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "NET-004",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "NSURLSession.sharedSession and custom delegate sessions"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "NET-005",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "NSURLSession configuration proxy override and late task resume"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "NET-006",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "NSURLSession data/upload/download/WebSocket/stream tasks and redirects"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "NET-007",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "CFNetworkCopySystemProxySettings and CFStream/NSURLConnection"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "NET-008",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "BSD socket creation: AF_INET/AF_INET6 SOCK_STREAM TCP"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "NET-009",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "BSD connect/connectx destination admission"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "NET-010",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "BSD send/sendto/sendmsg connected/unconnected egress"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "NET-011",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "BSD write/writev socket egress including retained descriptors"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "NET-012",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "BSD bind/listen loopback/listeners"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "NET-013",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "AF_UNIX sockets and XPC/brokered egress"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "NET-014",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "Direct syscall traps, unhooked libc aliases and Network.framework internals"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "NET-015",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "UDP transports, QUIC/HTTP3, STUN and WebRTC packets"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "NET-016",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "IPv4 TCP"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "NET-017",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "IPv6 TCP, IPv4-mapped forms and scoped addresses"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "NET-018",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "Raw ICMP and non-TCP/UDP IP protocols"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "NET-019",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "getaddrinfo including proxy hostname and numeric service handling"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "NET-020",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "gethostbyname/gethostbyname2"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "NET-021",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "DNSServiceGetAddrInfo"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "NET-022",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "res_query/res_search and versioned resolver exports"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "NET-023",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "CFHostCreateWithName"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "NET-024",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "Other DNS APIs, Network.framework DNS, DNSServiceQueryRecord, resolver IPC"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "NET-025",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Managed-provider synthetic DNS UDP endpoint"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "NET-026",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "gap",
+      "surface": "DNS-over-HTTPS through allowed proxy"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "NET-027",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "DNS-over-TLS/custom encrypted DNS direct or proxy tunneled"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "NET-028",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "Network.framework NWConnection TCP/TLS/QUIC/UDP"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "NET-029",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "WKWebView loadRequest"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "NET-030",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "WKWebView HTML/data/file loads, navigation, subresources and service workers"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "NET-031",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "WebRTC peer/media capabilities and external browser WebRTC"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "NET-032",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "ASWebAuthenticationSession OAuth/Safari broker"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "NET-033",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "gap",
+      "surface": "SFSafariViewController, UIApplication.openURL and external auth brokers"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "NET-034",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "NEAppProxyProvider managed app assignment and source attribution"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "NET-035",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Proxy provider physical upstream connection"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "NET-036",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Lease expiry/switch/provider stop and retained asynchronous relays"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "NET-037",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Startup before hooks ready and daemon watchdog fail-closed state"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "NET-038",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "Daemon and launcher control-plane egress: license/cloud/proxy health and map tiles"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "NET-039",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Critical-host admission gate in NSURLSessionTask.resume"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "STATIC_COMPARISON_ONLY",
+      "id": "NET-040",
+      "referenceFindings": [
+        "DRT-NET-003",
+        "DRT-NET-005",
+        "DRT-NET-010",
+        "DRT-NET-021",
+        "DRT-NET-024"
+      ],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "gap",
+      "surface": "No-MDM device-wide proxy-only enforcement alternative and its attribution boundary"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "STATIC_COMPARISON_ONLY",
+      "id": "OS-001",
+      "referenceFindings": [
+        "DS-15"
+      ],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "NSUserDefaults.standardUserDefaults and app persistent domain"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "STATIC_COMPARISON_ONLY",
+      "id": "OS-002",
+      "referenceFindings": [
+        "DS-15",
+        "DS-17"
+      ],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "NSUserDefaults initWithSuiteName/addSuiteNamed/removeSuiteNamed"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "STATIC_COMPARISON_ONLY",
+      "id": "OS-003",
+      "referenceFindings": [
+        "DS-15"
+      ],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "NSUserDefaults persistentDomainForName/setPersistentDomain/removePersistentDomain"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "OS-004",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "NSUserDefaults volatile/registration/argument domains and dictionaryRepresentation"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "STATIC_COMPARISON_ONLY",
+      "id": "OS-005",
+      "referenceFindings": [
+        "DS-17"
+      ],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "gap",
+      "surface": "NSUserDefaults NSGlobalDomain and com.apple.* domains"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "STATIC_COMPARISON_ONLY",
+      "id": "OS-006",
+      "referenceFindings": [
+        "DS-15",
+        "DS-16"
+      ],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "CFPreferencesCopyAppValue/SetAppValue"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "STATIC_COMPARISON_ONLY",
+      "id": "OS-007",
+      "referenceFindings": [
+        "DS-15",
+        "DS-16"
+      ],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "CFPreferencesCopyValue/SetValue user and host domains"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "STATIC_COMPARISON_ONLY",
+      "id": "OS-008",
+      "referenceFindings": [
+        "DS-11",
+        "DS-12",
+        "DS-14"
+      ],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "Keychain SecItem* with explicit original or foreign access group"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "STATIC_COMPARISON_ONLY",
+      "id": "OS-009",
+      "referenceFindings": [
+        "DS-11",
+        "DS-12",
+        "DS-14"
+      ],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "Keychain SecItem* without kSecAttrAccessGroup"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "STATIC_COMPARISON_ONLY",
+      "id": "OS-010",
+      "referenceFindings": [
+        "DS-12",
+        "DS-13"
+      ],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "Keychain generic/internet password, keys, certificates and identities"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "OS-011",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "gap",
+      "surface": "Keychain kSecAttrSynchronizable / iCloud keychain"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "OS-012",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "SecAddSharedWebCredential/SecRequestSharedWebCredential and autofill associations"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "STATIC_COMPARISON_ONLY",
+      "id": "OS-013",
+      "referenceFindings": [
+        "DS-10"
+      ],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "UIPasteboard general/named/unique acquisition"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "STATIC_COMPARISON_ONLY",
+      "id": "OS-014",
+      "referenceFindings": [
+        "DS-10"
+      ],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "UIPasteboard scalar string/image/URL/color reads and writes"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "STATIC_COMPARISON_ONLY",
+      "id": "OS-015",
+      "referenceFindings": [
+        "DS-10"
+      ],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "UIPasteboard arrays/items/options and addItems"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "STATIC_COMPARISON_ONLY",
+      "id": "OS-016",
+      "referenceFindings": [
+        "DS-10"
+      ],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "UIPasteboard typed item-set and type membership APIs"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "STATIC_COMPARISON_ONLY",
+      "id": "OS-017",
+      "referenceFindings": [
+        "DS-10"
+      ],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "UIPasteboard NSItemProvider and setObjects APIs"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "STATIC_COMPARISON_ONLY",
+      "id": "OS-018",
+      "referenceFindings": [
+        "DS-10"
+      ],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "UIPasteboard detection patterns and values completion APIs"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "STATIC_COMPARISON_ONLY",
+      "id": "OS-019",
+      "referenceFindings": [
+        "DS-10"
+      ],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "UIPasteboard metadata, change count, persistence and class-cluster overrides"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "STATIC_COMPARISON_ONLY",
+      "id": "OS-020",
+      "referenceFindings": [
+        "DS-22"
+      ],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "NSHTTPCookieStorage shared and custom cookie stores"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "OS-021",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "NSURLSessionConfiguration HTTPCookieStorage/HTTPShouldSetCookies"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "OS-022",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "NSURLCredentialStorage shared/default/session credentials"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "OS-023",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "NSURLCache shared/custom disk paths and cached responses"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "OS-024",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "WKWebsiteDataStore default/nonPersistent/named data stores"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "OS-025",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "UIWebView and legacy WebKit storage"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "STATIC_COMPARISON_ONLY",
+      "id": "OS-026",
+      "referenceFindings": [
+        "DS-14",
+        "DS-23"
+      ],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "App Group entitlement and containerURLForSecurityApplicationGroupIdentifier"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "OS-027",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "CloudKit private/shared/public databases and CKContainer identity"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "OS-028",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "NSUbiquitousKeyValueStore typed reads/writes/enumeration/sync"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "OS-029",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "NSFileManager ubiquity container/token and iCloud documents"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "OS-030",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "NSHomeDirectory/NSTemporaryDirectory/HOME/TMPDIR"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "OS-031",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "Documents/Library/Preferences/Application Support/SQLite"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "OS-032",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "Library/Caches, tmp and cache restoration"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "OS-033",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "Filesystem absolute /var/mobile/Containers/Data/Application foreign paths"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "OS-034",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "Filesystem /var/mobile/Containers/Shared and Library/Group Containers"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "OS-035",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "Filesystem symlink/hardlink/dirfd/inherited file descriptors"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "OS-036",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "gap",
+      "surface": "Shared device filesystem metadata: statfs/statvfs/NSURL volume capacities"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "OS-037",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "Mach bootstrap lookup/XPC service access and shared memory"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "OS-038",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "gap",
+      "surface": "Darwin notifications notify_* and CF Darwin center observation"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "OS-039",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "gap",
+      "surface": "NSNotificationCenter battery/orientation/timezone/thermal events"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "STATIC_COMPARISON_ONLY",
+      "id": "OS-040",
+      "referenceFindings": [
+        "DS-01"
+      ],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "UIDevice identifierForVendor"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "STATIC_COMPARISON_ONLY",
+      "id": "OS-041",
+      "referenceFindings": [
+        "DS-02"
+      ],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "ASIdentifierManager advertisingIdentifier/isAdvertisingTrackingEnabled"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "OS-042",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "ATTrackingManager status and request authorization"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "STATIC_COMPARISON_ONLY",
+      "id": "OS-043",
+      "referenceFindings": [
+        "DS-03"
+      ],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "UIDevice name/model/localizedModel/systemVersion"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "STATIC_COMPARISON_ONLY",
+      "id": "OS-044",
+      "referenceFindings": [
+        "DS-03"
+      ],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "UIDevice private identifier selectors and late dynamic lookup"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "STATIC_COMPARISON_ONLY",
+      "id": "OS-045",
+      "referenceFindings": [
+        "DS-06"
+      ],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "MobileGestalt MGCopyAnswer mapped device/serial/carrier/ID fields"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "STATIC_COMPARISON_ONLY",
+      "id": "OS-046",
+      "referenceFindings": [
+        "DS-06"
+      ],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "MobileGestalt typed wrappers and hashed/private keys"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "STATIC_COMPARISON_ONLY",
+      "id": "OS-047",
+      "referenceFindings": [
+        "DS-05"
+      ],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "sysctlbyname model/RAM/OS/boot/UUID/hostname and kern.proc"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "STATIC_COMPARISON_ONLY",
+      "id": "OS-048",
+      "referenceFindings": [
+        "DS-05"
+      ],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "sysctl numeric MIB forms"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "STATIC_COMPARISON_ONLY",
+      "id": "OS-049",
+      "referenceFindings": [
+        "DS-05"
+      ],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "gap",
+      "surface": "sysctl unlisted hardware/kernel keys and syscall bypass"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "OS-050",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "uname machine/release/nodename/version"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "STATIC_COMPARISON_ONLY",
+      "id": "OS-051",
+      "referenceFindings": [
+        "DS-07"
+      ],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "IOKit scalar/search/bulk registry properties"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "STATIC_COMPARISON_ONLY",
+      "id": "OS-052",
+      "referenceFindings": [
+        "DS-07"
+      ],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "gap",
+      "surface": "IOKit raw/user-client calls and unknown properties"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "STATIC_COMPARISON_ONLY",
+      "id": "OS-053",
+      "referenceFindings": [
+        "DS-04"
+      ],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "NSProcessInfo operatingSystemVersion/String"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "STATIC_COMPARISON_ONLY",
+      "id": "OS-054",
+      "referenceFindings": [
+        "DS-04"
+      ],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "gap",
+      "surface": "NSProcessInfo physicalMemory/processorCount/activeProcessorCount/hostName"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "OS-055",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "mach_absolute_time/mach_continuous_time/clock_gettime monotonic variants"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "OS-056",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "NSProcessInfo.systemUptime"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "OS-057",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "gap",
+      "surface": "Wall clock, mach timebase, CPU/timer frequency and timing side channels"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "OS-058",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "CoreMotion accelerometer/gyro/magnetometer/deviceMotion polling and updates"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "OS-059",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "CoreMotion altimeter relative/absolute"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "OS-060",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "CoreMotion pedometer live/history"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "OS-061",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "CoreMotion activity live/history"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "OS-062",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "CMSensorRecorder and headphone motion"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "OS-063",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "UIDevice proximity/orientation"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "STATIC_COMPARISON_ONLY",
+      "id": "OS-064",
+      "referenceFindings": [
+        "DS-03"
+      ],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "UIScreen nativeBounds/bounds/scale/nativeScale/maximumFramesPerSecond"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "OS-065",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "UIScreen brightness/capture and CADisplayLink duration"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "OS-066",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "gap",
+      "surface": "UIScreen modes/traits/display gamut, UIWindowScene geometry and CADisplayLink timestamps"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "OS-067",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Metal MTLDevice.name/registryID"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "OS-068",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "gap",
+      "surface": "Metal feature families/limits, OpenGL renderer and WebGL fingerprint"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "OS-069",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "UIDevice batteryLevel/batteryState"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "STATIC_COMPARISON_ONLY",
+      "id": "OS-070",
+      "referenceFindings": [
+        "DS-04"
+      ],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "NSProcessInfo thermalState/isLowPowerModeEnabled"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "STATIC_COMPARISON_ONLY",
+      "id": "OS-071",
+      "referenceFindings": [
+        "DS-09"
+      ],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "NSLocale currentLocale/systemLocale/preferredLanguages"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "STATIC_COMPARISON_ONLY",
+      "id": "OS-072",
+      "referenceFindings": [
+        "DS-09"
+      ],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "gap",
+      "surface": "NSLocale autoupdatingCurrentLocale and CFLocale APIs"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "OS-073",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "NSTimeZone system/local/default and timeZoneWithName"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "OS-074",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "gap",
+      "surface": "CFTimeZone, POSIX TZ/localtime/tzname, calendars and date formatting"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "OS-075",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "CLLocationManager one-shot/location updates/location getter"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "OS-076",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "CLLocation heading/significant-change/visit/region/beacon legacy APIs"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "OS-077",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "gap",
+      "surface": "CLLocation modern beacon constraints, delegate modes and authorization metadata"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "STATIC_COMPARISON_ONLY",
+      "id": "OS-078",
+      "referenceFindings": [
+        "DS-08"
+      ],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "CoreTelephony carrier name/MCC/MNC/country/radio/service identifiers"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "OS-079",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Wi-Fi SSID/BSSID/interfaces via CaptiveNetwork/getifaddrs/NEHotspotNetwork"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "OS-080",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Network.framework nw_path status/interface/expensive/constrained"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "OS-081",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "gap",
+      "surface": "Network interface names/indexes, ioctl, route/sysctl and unlisted nw_path getters"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "OS-082",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "App Attest key/attestation/assertion"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "OS-083",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "DeviceCheck device token"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "OS-084",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "APNs registration/token and PushKit"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "OS-085",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Local and delivered/pending notification store"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "OS-086",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "BackgroundTasks registration/submission/background fetch"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "OS-087",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "gap",
+      "surface": "Launch environment getenv/NSProcessInfo.environment"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "OS-088",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "gap",
+      "surface": "Process/dyld/image and installed URL-scheme probes"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "OS-089",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "Photos/PHPhotoLibrary/PHPicker and media metadata"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "OS-090",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "Contacts/CNContactsUserDefaults and contact identifiers"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "OS-091",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "Calendar/EKEventStore/EKEvent and reminder identifiers"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "OS-092",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "Microphone/audio session route, port IDs and AVAudioRecorder"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "OS-093",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "Camera/AVCaptureDevice and capture metadata"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "OS-094",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "CoreBluetooth central/peripheral identifiers and advertisements"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "OS-095",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "CoreNFC sessions/tags and Nearby Interaction"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "OS-096",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "HealthKit stores and activity history outside CoreMotion"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "OS-097",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "LocalAuthentication biometric type/domain-state and credential broker"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "OS-098",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "UIFont/font descriptors/font availability and dynamic type"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "OS-099",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "UIAccessibility shared settings and notification APIs"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "OS-100",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "Keychain external token access group kSecAttrAccessGroupToken"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "OS-101",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "CFPreferencesCopyKeyList/SetMultiple/RemoveSuitePreferencesFromApp/AppSynchronize"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "REL-001",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Release recovery preserves requested version and exclusive publisher ownership"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "SDK-001",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "AppsFlyer attribution identifiers"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "SDK-002",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "AppsFlyer Keychain persistence"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "SDK-003",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "AppsFlyer UserDefaults persistence"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "SDK-004",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "AppsFlyer App Group storage/migration"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "SDK-005",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "AppsFlyer HTTP/event transport"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "SDK-006",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "AppsFlyer deep links and referrals"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "SDK-007",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "AppsFlyer SKAdNetwork attribution"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "SDK-008",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "AppsFlyer on-device measurement"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "SDK-009",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "Firebase Analytics / Google App Measurement"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "SDK-010",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "Firebase Crashlytics identifiers and reports"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "SDK-011",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "Firebase Installations FID/IID/auth token store"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "SDK-012",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "Firebase Sessions cache/settings"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "SDK-013",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "Firebase Core heartbeat and environment"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "SDK-014",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "Firebase Crashlytics Remote Config interop"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "SDK-015",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "GoogleUtilities UserDefaults"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "SDK-016",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "GoogleUtilities Keychain"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "SDK-017",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "GoogleUtilities networking/reachability"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "SDK-018",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "GoogleDataTransport persisted event upload"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "SDK-019",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "AFNetworking session and serialization"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "SDK-020",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "Apollo GraphQL networking"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "SDK-021",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "Apollo SQLite normalized cache"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "SDK-022",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "AppAuth OAuth and token state"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "SDK-023",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "AppAuth external authentication browser"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "SDK-024",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "reCAPTCHA Enterprise"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "SDK-025",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "PINCache memory/disk cache"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "SDK-026",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "Reddit Accounts.AccountIdentifiers"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "SDK-027",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "Reddit AnalyticsSessionTracker"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "SDK-028",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "Reddit attestation provider"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "SDK-029",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "Reddit device-attestation token service"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "SDK-030",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "Reddit URLSession wrapper"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "SDK-031",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "Reddit NetworkingKit"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "SDK-032",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "Reddit SocketKit"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "SDK-033",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "Reddit StorageKit"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "SDK-034",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "Reddit RemoteLogger"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "SDK-035",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "Reddit MetricLogger"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "SDK-036",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "Reddit SequenceLogger"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "SDK-037",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "Reddit WebView wrapper"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "SDK-038",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "Reddit advertising outbound-session tracking"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "SDK-039",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "Reddit ads IPv4 probe"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "SDK-040",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "Reddit app-session manager"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "SDK-041",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "swift-nio_NIOPosix"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "SDK-042",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "AppAuth_AppAuthCore"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "SDK-043",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "GoogleUtilities_GoogleUtilities_Environment"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "SGATE-001",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "gap",
+      "surface": "Single-active root-owned home/bundle/executable permission transition"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "STATIC_COMPARISON_ONLY",
+      "id": "SGATE-002",
+      "referenceFindings": [
+        "DS-18"
+      ],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "Durable storage ownership, single-active admission, closed sync/delete and private IPA staging"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "STORE-001",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "liveActivitiesEnabledInLastSession"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "STORE-002",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "AppRating-SessionKey"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "STORE-003",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "kSessionCountForNotificationPermissionPrompt"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "STORE-004",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "firebase-sessions-cache-key"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "STORE-005",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "firebase-sessions-settings"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "STORE-006",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "AppsFlyerInstallDate"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "STORE-007",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "AppSessionIdKey"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "STORE-008",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "AppsFlyerReInstallCounter"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "STORE-009",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "gLoidCreatedTimeKey"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "STORE-010",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "kPushNotificationsSettingsKey2"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "STORE-011",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "analytics-install-ts-key"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "STORE-012",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "analytics-loid-key"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "STORE-013",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "reddit-ios-client-vendor-id"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "STORE-014",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "reddit-device-id"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "STORE-015",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "AppsFlyerUserId"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "STORE-016",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "AppsFlyerInstallTimestamp"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "STORE-017",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "AppsFlyerFirstLaunchDate"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "STORE-018",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "AppsFlyerConversiondataKey"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "STORE-019",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "AppsFlyerDeviceToken"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "STORE-020",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "AppsFlyerTimePassedSincePrevLaunch"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "STORE-021",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "AppsFlyerLastSessionDuration"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "STORE-022",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "AppsFlyerBackupInfo"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "STORE-023",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "AppsFlyerPreviousTrackingAuthorizationStatus"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "STORE-024",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "AppsFlyerCurrentLastInstallDate"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "STORE-025",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "AppsFlyerAppGroupName"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "STORE-026",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "AppsFlyerMigrateToAppGroups"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "STORE-027",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "AppsFlyerResetReinstallDetectionOnce"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "STORE-028",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "AppsFlyerConfigurationData"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "STORE-029",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "AppsFlyerLastFetchTimeInterval"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "STORE-030",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "appsflyer.keychain"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "STORE-031",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "appsflyer_id"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "STORE-032",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "custom_install_id"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "STORE-033",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "vendorId"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "STORE-034",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "com.crashlytics.install.iid"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "STORE-035",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "com.crashlytics.install.adid"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "STORE-036",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "com.crashlytics.user-id"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "STORE-038",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "installation_id"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "STORE-039",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "ga_session_id"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "STORE-040",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "app_quality_session_id"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "STORE-041",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "install_id"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "STORE-042",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "odf_app_installation_id"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "STORE-043",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "platform_device_id"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "STORE-044",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "mweb_user_id"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "STORE-045",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "com.reddit.ad_events_manager.user_agent_key"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "STORE-046",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "in_app_time_session_id"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "STORE-047",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "x-reddit-eventkit-healthcheck-last-tracked-session-id"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "UI-001",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Default overview and per-container status without a new launch authorization path"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "UI-002",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Private prepare/review/commit authority before simple container provisioning"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "UI-003",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Simple identity review, catalog choices and exact consistency-preview matching"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "UI-004",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "One-tap diagnostics uses the same readiness evaluator as SSH"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "UI-005",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Centralized plain-language statuses and failure actions"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "UI-007",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Five-page app-scoped workspace and reference workflow navigation"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "UI-008",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Durable serialized selection and launcher entry admission"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "UI-009",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Reviewed HTTP proxy-list import and searchable device library"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "UI-010",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Settings readiness, scoped Cloud console and transfer explanations"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "UI-011",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Searchable compatible model/iOS/region/city/carrier catalog selection"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "UI-012",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Organizational container rename with revisioned cloud synchronization"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "STATIC_COMPARISON_ONLY",
+      "id": "WIRE-001",
+      "referenceFindings": [
+        "DS-22"
+      ],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Reddit header host classification"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "WIRE-002",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Opaque server session/loid/auth trees"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "WIRE-003",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Global JSON serialization including local state and unrelated SDKs"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "WIRE-004",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "HTTP body and upload destination scope"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "WIRE-005",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "gap",
+      "surface": "Request authentication and HMAC after mutation"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "WIRE-006",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "gap",
+      "surface": "Protobuf/opaque binary request bodies"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "WIRE-007",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "gap",
+      "surface": "Push-like identifiers inside protobuf"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "WIRE-008",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "Streamed, resumed and deferred body production"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "WIRE-009",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "gap",
+      "surface": "Compressed, multipart and encrypted payload encodings"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "WIRE-010",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "Actual current iOS GraphQL and analytics schema"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "WIRE-011",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "gap",
+      "surface": "Install timestamp and UTC offset units"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "WIRE-012",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "Analytics geometry, font and locale representation"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "WIRE-013",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "covered-in-code",
+      "surface": "Forced Reddit request header values"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "STATIC_COMPARISON_ONLY",
+      "id": "WIRE-014",
+      "referenceFindings": [
+        "DS-21"
+      ],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "User-Agent actual app version vs configured override"
+    },
+    {
+      "adoptionStatus": "NOT_PORTED",
+      "comparisonStatus": "NOT_REVIEWED",
+      "id": "WIRE-015",
+      "referenceFindings": [],
+      "runtimeVerification": "NOT_RUN",
+      "socialBoxVerdict": "unverified",
+      "surface": "Future SDKs, dynamically generated selectors and server configuration"
+    }
+  ],
+  "schemaVersion": 1
+}

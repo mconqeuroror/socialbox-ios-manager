@@ -1,0 +1,173 @@
+{
+  "schemaVersion": 1,
+  "rows": [
+    {
+      "id": "FBSTORE-001",
+      "category": "Facebook per-clone storage",
+      "surface": "NSUserDefaults suites/domains and CFPreferences app/group access",
+      "mechanism": "Exact four source-group aliases and source app map to distinct clone domains; foreign/unknown domains rejected; keys and opaque values unchanged; no writable platform suite objects.",
+      "coverage": [
+        "hook",
+        "sandbox"
+      ],
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "shared/RBXFacebookStoragePolicy.h",
+          "line": 25,
+          "anchor": "static inline BOOL RBXFacebookMapStorageDomain",
+          "detail": "Exact per-clone source/private-domain policy."
+        },
+        {
+          "path": "tools/test_facebook_storage_hooks.py",
+          "line": 2,
+          "anchor": "Compile actual Logos storage hooks",
+          "detail": "Actual wrappers, native Foundation/CF and installer negative cases."
+        },
+        {
+          "path": "tools/test_facebook_storage_policy.m",
+          "line": 5,
+          "anchor": "int main(void)",
+          "detail": "Deterministic policy and foreign-owner regression."
+        },
+        {
+          "path": "tweak/Container/RBXFacebookStorageHooks.xm",
+          "line": 172,
+          "anchor": "BOOL RBXInstallFacebookStorageHooks",
+          "detail": "Checked app/profile/version-bound installation; Facebook readiness is not granted."
+        },
+        {
+          "path": "tweak/RedditBox.xm",
+          "line": 80,
+          "anchor": "installed[@\"facebook-storage\"]",
+          "detail": "Only Facebook registers this observer; other readiness stays separate."
+        },
+        {
+          "path": "tweak/Makefile",
+          "line": 14,
+          "anchor": "Container/RBXFacebookStorageHooks.xm",
+          "detail": "Hook translation unit included in both package architectures."
+        },
+        {
+          "path": "scripts/build-mac.sh",
+          "line": 43,
+          "anchor": "test_facebook_storage_hooks.py",
+          "detail": "Native regression entrypoint runs in complete build."
+        },
+        {
+          "path": "tools/static_check.py",
+          "line": 39,
+          "anchor": "\"tweak/Makefile\":",
+          "detail": "Expected compilation unit manifest updated."
+        },
+        {
+          "path": "docs/facebook-storage-isolation.md",
+          "line": 27,
+          "anchor": "## Remaining acceptance boundaries",
+          "detail": "Explicit acceptance and restore limitations."
+        },
+        {
+          "path": "docs/release-evidence/facebook-storage-device-0.1.29.json",
+          "line": 13,
+          "anchor": "\"verificationChecks\": 97",
+          "detail": "Physical synthetic helper used actual C and Foundation interception."
+        },
+        {
+          "path": "tweak/Container/RBXFacebookStorageHooks.h",
+          "line": 3,
+          "anchor": "BOOL RBXInstallFacebookStorageHooks",
+          "detail": "Facebook storage installer declaration; no change to Reddit installer API."
+        },
+        {
+          "path": "docs/facebook-clone-device-acceptance.md",
+          "anchor": "**FAIL: cross-container filesystem isolation",
+          "line": 3,
+          "detail": "Actual clone results supersede helper-only isolation assumptions."
+        }
+      ],
+      "verification": "50 policy checks; 238 host hook/installer checks; 22 seed/97 real-Substrate iOS verification/13 cleanup checks. Device helper is not an actual sandboxed FB clone. Actual offline A/B Facebook clones now pass own/foreign standard and four-suite CFPreferences canary probes, including relaunch. This does not prove unreadability of the backing files; DEVISO-001 is an open filesystem release blocker.",
+      "fix": "Actual SDK first-use ordering, private API bypass paths and new-bundle preference restore remain unverified. Keep Facebook inactive and defaults-wire false."
+    },
+    {
+      "id": "FBSTORE-002",
+      "category": "Facebook per-clone storage",
+      "surface": "Four declared App Group filesystem containers",
+      "mechanism": "Group URL API resolves exact source aliases to private directories beneath OS clone home; no original entitlements or fallback; component-by-component no-symlink traversal.",
+      "coverage": [
+        "hook",
+        "sandbox"
+      ],
+      "verdict": "gap",
+      "evidence": [
+        {
+          "path": "shared/RBXFacebookPrivateGroupStore.h",
+          "line": 9,
+          "anchor": "static inline NSURL *RBXFacebookPrivateGroupURL",
+          "detail": "Private home anchored storage with O_NOFOLLOW directory traversal."
+        },
+        {
+          "path": "tools/test_facebook_private_group_store.m",
+          "line": 4,
+          "anchor": "int main(void)",
+          "detail": "A/B real temporary filesystem canaries, distinct roles, symlink and file rejection."
+        },
+        {
+          "path": "tweak/Container/RBXFacebookStorageHooks.xm",
+          "line": 172,
+          "anchor": "BOOL RBXInstallFacebookStorageHooks",
+          "detail": "Checked app/profile/version-bound installation; Facebook readiness is not granted."
+        },
+        {
+          "path": "tweak/RedditBox.xm",
+          "line": 80,
+          "anchor": "installed[@\"facebook-storage\"]",
+          "detail": "Only Facebook registers this observer; other readiness stays separate."
+        },
+        {
+          "path": "tweak/Makefile",
+          "line": 14,
+          "anchor": "Container/RBXFacebookStorageHooks.xm",
+          "detail": "Hook translation unit included in both package architectures."
+        },
+        {
+          "path": "scripts/build-mac.sh",
+          "line": 43,
+          "anchor": "test_facebook_storage_hooks.py",
+          "detail": "Native regression entrypoint runs in complete build."
+        },
+        {
+          "path": "tools/static_check.py",
+          "line": 39,
+          "anchor": "\"tweak/Makefile\":",
+          "detail": "Expected compilation unit manifest updated."
+        },
+        {
+          "path": "docs/facebook-storage-isolation.md",
+          "line": 27,
+          "anchor": "## Remaining acceptance boundaries",
+          "detail": "Explicit acceptance and restore limitations."
+        },
+        {
+          "path": "docs/release-evidence/facebook-storage-device-0.1.29.json",
+          "line": 13,
+          "anchor": "\"verificationChecks\": 97",
+          "detail": "Physical synthetic helper used actual C and Foundation interception."
+        },
+        {
+          "path": "tweak/Container/RBXFacebookStorageHooks.h",
+          "line": 3,
+          "anchor": "BOOL RBXInstallFacebookStorageHooks",
+          "detail": "Facebook storage installer declaration; no change to Reddit installer API."
+        },
+        {
+          "path": "docs/facebook-clone-device-acceptance.md",
+          "anchor": "**FAIL: cross-container filesystem isolation",
+          "line": 3,
+          "detail": "Actual clone results supersede helper-only isolation assumptions."
+        }
+      ],
+      "verification": "42 real filesystem checks on Mac and iPhone; actual group URL interception included in 97-check device probe. Separate OS clone homes still need actual paired-app acceptance. Actual A/B clones resolve and read their own four private groups after FSOWN-001. However public file reads and stat reach the sibling OS home (DEVISO-001), invalidating reliance on that home as an enforced boundary on this device.",
+      "fix": "Release blocker: establish an effective cross-container filesystem boundary and repeat actual A/B reads. Keep Facebook inactive; own-path resolution is insufficient."
+    }
+  ]
+}

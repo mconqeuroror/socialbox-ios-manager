@@ -1,0 +1,58 @@
+{
+  "status" : {
+    "module" : "presentation",
+    "schemaVersion" : 1,
+    "issues" : [
+      "Unsupported app version",
+      "UserGuideViewController: unsupported screen ABI; presentation unchanged"
+    ],
+    "scope" : "source-owned workspace with original backend actions",
+    "baseMetadataSupported" : true,
+    "baseCompatibilityReason" : "supported",
+    "workspace" : {
+      "implementation" : "source-owned-workspace",
+      "screens" : [
+        "containers",
+        "home",
+        "license",
+        "location",
+        "proxies",
+        "settings",
+        "startup",
+        "welcome"
+      ],
+      "backendAdmissionUnchanged" : true,
+      "isolationVerified" : false
+    },
+    "isolationVerified" : false,
+    "styledScreenClasses" : [
+      "AppListViewController",
+      "BackupsViewController",
+      "BulkProxyImportViewController",
+      "CarrierPickerViewController",
+      "CloudPushViewController",
+      "CloudViewController",
+      "CountryPickerViewController",
+      "DRTAllowedModelsViewController",
+      "DoritosOnboardingViewController",
+      "FakeInfoViewController",
+      "HomeViewController",
+      "LocSimViewController",
+      "ModelPickerViewController",
+      "ProxyViewController",
+      "SettingsViewController",
+      "TokensDetailViewController",
+      "VersionPickerViewController",
+      "_Xc9m",
+      "_Xd2z",
+      "_Xm8u"
+    ],
+    "installed" : true
+  },
+  "scope" : "Synthetic UIKit presentation fixture; not original backend\/device\/isolation acceptance",
+  "failures" : [
+
+  ],
+  "ok" : 1,
+  "assertions" : 228
+}

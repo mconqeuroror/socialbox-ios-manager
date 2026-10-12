@@ -1,0 +1,176 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-09-22",
+  "device": {
+    "model": "iPhone10,6",
+    "system": "16.7.16",
+    "jailbreak": "rootless"
+  },
+  "scope": "Process-stop primitive only; no app upgrade, account mutation, container switching or gate change.",
+  "previousImplementation": {
+    "result": "FAIL",
+    "platformApplicationOnlyTaskAcquire": 5,
+    "withTaskForPidAllow": {
+      "taskAcquire": 0,
+      "pidForTask": 0,
+      "taskTerminate": 5
+    },
+    "rootCause": "XNU task_terminate rejects BSD-backed tasks; mocked Mach success was not device acceptance. No task-control grant was installed into live services."
+  },
+  "replacement": {
+    "mechanism": "RunningBoard identity+PID handle predicate after birth/path and token-bound kernel path checks",
+    "entitlements": [
+      "platform-application",
+      "com.apple.runningboard.terminateprocess"
+    ],
+    "unentitledControl": "DENIED by RunningBoard",
+    "atomicPIDVersionTermination": "NOT_PROVEN"
+  },
+  "ownedChildRuns": [
+    {
+      "acceptanceCleanupNeeded": false,
+      "atomicPIDVersionTermination": "NOT_PROVEN",
+      "bothChildrenReady": 1,
+      "completeProcessSnapshot": 1,
+      "crossContainerIsolation": "NOT_RUN",
+      "identityScopedStopPassed": 1,
+      "networkIsolation": "NOT_RUN",
+      "observation": "observed",
+      "observedExitWithinTwoSeconds": 1,
+      "ownChildReaped": true,
+      "ownControlReaped": 1,
+      "processCount": 372,
+      "sameExecutableControlStillRunning": true,
+      "schemaVersion": 2,
+      "scope": "two_own_mobile_uid_multithread_children",
+      "staleObservationRefused": true,
+      "stopElapsedMilliseconds": 29,
+      "targetApplicationPermission": "NOT_RUN",
+      "targetExitedBySIGKILL": true,
+      "termination": "termination_requested"
+    },
+    {
+      "acceptanceCleanupNeeded": false,
+      "atomicPIDVersionTermination": "NOT_PROVEN",
+      "bothChildrenReady": 1,
+      "completeProcessSnapshot": 1,
+      "crossContainerIsolation": "NOT_RUN",
+      "identityScopedStopPassed": 1,
+      "networkIsolation": "NOT_RUN",
+      "observation": "observed",
+      "observedExitWithinTwoSeconds": 1,
+      "ownChildReaped": true,
+      "ownControlReaped": 1,
+      "processCount": 372,
+      "sameExecutableControlStillRunning": true,
+      "schemaVersion": 2,
+      "scope": "two_own_mobile_uid_multithread_children",
+      "staleObservationRefused": true,
+      "stopElapsedMilliseconds": 29,
+      "targetApplicationPermission": "NOT_RUN",
+      "targetExitedBySIGKILL": true,
+      "termination": "termination_requested"
+    },
+    {
+      "acceptanceCleanupNeeded": false,
+      "atomicPIDVersionTermination": "NOT_PROVEN",
+      "bothChildrenReady": 1,
+      "completeProcessSnapshot": 1,
+      "crossContainerIsolation": "NOT_RUN",
+      "identityScopedStopPassed": 1,
+      "networkIsolation": "NOT_RUN",
+      "observation": "observed",
+      "observedExitWithinTwoSeconds": 1,
+      "ownChildReaped": true,
+      "ownControlReaped": 1,
+      "processCount": 372,
+      "sameExecutableControlStillRunning": true,
+      "schemaVersion": 2,
+      "scope": "two_own_mobile_uid_multithread_children",
+      "staleObservationRefused": true,
+      "stopElapsedMilliseconds": 29,
+      "targetApplicationPermission": "NOT_RUN",
+      "targetExitedBySIGKILL": true,
+      "termination": "termination_requested"
+    }
+  ],
+  "builds": {
+    "acceptanceArm64SHA256": "d25e16e5b6d36c6009fe9d7129f1f9fc6b77347befbbd764d25dc46bec331eb1",
+    "drainArm64Arm64eSHA256": "241b9b1b4e988e3378e2b80e0045ead5c56556c19fc51e40a6172ae6eba87fd9"
+  },
+  "sourceSHA256": {
+    "shared/RBXProcessIdentity.h": "49867f126d4004dae91ba8f6902dfa4303e09ab90f20763b0bf57430179dcc57",
+    "shared/RBXProcessIdentity.m": "824117806f274f96fb3d5e29c38f60361754dbd10403af96de27b3ab0cca16ab",
+    "tools/test_process_identity.m": "6ccdab92a94de974ad7ec6e4c8d5abd644dd39997b9cd4d177a34cc8e19ae29d",
+    "tools/device_process_identity_probe.m": "cc3e9f1500526915973ae20e5d421705d91c9fae4efda461f4bd4d4f3018ad6f",
+    "daemon/redditboxd.entitlements": "de10d459b085ebf79822c538496868521be0d5c479cf37537e7f6b16fe0a3e80",
+    "lucid/Switching/ProcessDrain.entitlements": "52c5e6e55e09b154c9e3d214e036c1eb0f92e164c80a1d8b2d1b079a8e55a2b4"
+  },
+  "tests": {
+    "processIdentityHostAssertions": 402,
+    "drainHostAssertions": 46,
+    "darwinAdapterAssertions": 235,
+    "recoveredPackagingGroups": 31,
+    "processController": "PASS",
+    "processCoordinator": "PASS",
+    "cloneArchitecture": "PASS",
+    "replacementArchitecture": "PASS",
+    "sentinelSecurityMocks": 44,
+    "sentinelControllerAssertions": 98,
+    "httpProxy": "PASS"
+  },
+  "notRun": [
+    "Facebook/Reddit actual-app and extension stop (neither installed)",
+    "Recovered switch/write/launch transaction integration",
+    "Service-stall watchdog on phone",
+    "Cross-container data isolation",
+    "Direct-egress and network-failure capture",
+    "App migration and installation"
+  ],
+  "sourceReferences": [
+    "https://raw.githubusercontent.com/apple-oss-distributions/xnu/xnu-8796.141.3/osfmk/kern/task.c",
+    "https://raw.githubusercontent.com/apple-oss-distributions/xnu/xnu-8796.141.3/bsd/kern/proc_info.c"
+  ],
+  "fullSourceBuild": {
+    "artifact": "source-owned-rootless-unvalidated.deb",
+    "version": "0.1.0",
+    "sha256": "6634ff8cba59e21e8560bb9c91740346b3a1003722b86c27ab41f0ccf9ef2e23",
+    "bytes": 2315442,
+    "buildScript": "scripts/build-mac.sh",
+    "buildExitCode": 0,
+    "ldidOnly": true,
+    "installed": false,
+    "productionPublished": false,
+    "containsRecoveredRuntime": false,
+    "daemonSlices": [
+      {
+        "architecture": "arm64",
+        "terminationServiceEntitlement": true,
+        "taskControlEntitlements": false
+      },
+      {
+        "architecture": "arm64e",
+        "terminationServiceEntitlement": true,
+        "taskControlEntitlements": false
+      }
+    ],
+    "note": "Source-owned build validation only. This 0.1.0 test version is not an upgrade of the installed 0.1.39 package and is not the recovered Doritos candidate.",
+    "logSHA256": "e915ac286b4a05ff3aa89c96adec235131247475a93563c5091c6b91c2703804"
+  },
+  "recoveredUpgradePreflight": {
+    "exitCode": 1,
+    "stdout": "",
+    "stderr": "SocialBox upgrade refused: Separate com.redditbox exists; reviewed migration is required (nothing was removed)\n",
+    "mutations": false
+  },
+  "installedOriginalControls": {
+    "prerm": {
+      "sha256": "7ae80d82fb56ac374a56743ca19c2dca11122b9c248d9b461d6c9d47b02e6fc8",
+      "bytes": 1528
+    },
+    "postinst": {
+      "sha256": "9112d70b1d2b6d239332eaea8585ac75969b1878ed72379a6e06077abea8c050",
+      "bytes": 70268
+    }
+  }
+}

@@ -1,0 +1,431 @@
+{
+  "schemaVersion": 1,
+  "version": "0.1.25",
+  "recordedAtUTC": "2026-09-17T19:02:10.640634+00:00",
+  "branch": "feat/socialbox-multiapp",
+  "merged": false,
+  "featureCommits": [
+    "ecf7103",
+    "1c259da"
+  ],
+  "releaseRecoveryCommit": "c8d5961",
+  "signedMetadataCommits": [
+    "7478063",
+    "31a341e"
+  ],
+  "installURL": "https://redditspoof.vercel.app/install",
+  "consoleURL": "https://redditspoof.vercel.app/apps/reddit#cloud-backups",
+  "signing": "Procursus ldid only, no Apple Development Team; existing APT and license signing keys retained",
+  "aptSigningFingerprint": "B020EEB51600D74C02D6FE57448FA877778E0D1F",
+  "production": {
+    "checkedAtUTC": "2026-09-17T18:59:34.240429+00:00",
+    "origin": "https://redditspoof.vercel.app",
+    "repositories": [
+      {
+        "source": "https://redditspoof.vercel.app/apt/redditbox/",
+        "files": [
+          {
+            "name": "InRelease",
+            "sha256": "7d07445fc76ef47fad835b9634fe8872cf51b9fc8f94af110e94ad92ff0f5175",
+            "matchesCommittedBytes": true
+          },
+          {
+            "name": "Release",
+            "sha256": "d1383769143456159f4e380634e0aba54b702bf86b80948a449a0959c6a39516",
+            "matchesCommittedBytes": true
+          },
+          {
+            "name": "Release.gpg",
+            "sha256": "de0fb7ac7a9b082f1859913900ee2acaff6655b78c1ce0f12e1786e01382ccbf",
+            "matchesCommittedBytes": true
+          },
+          {
+            "name": "Packages",
+            "sha256": "fd473c17525db5e0d6efe0663d89c2ea53adb85446a97c17ab480dbf5fd8fdc8",
+            "matchesCommittedBytes": true
+          },
+          {
+            "name": "Packages.gz",
+            "sha256": "a51fddb5413cc87e03be67b5239416f2d15419fa8ada9e68394d87009723c59e",
+            "matchesCommittedBytes": true
+          },
+          {
+            "name": "repository.json",
+            "sha256": "a69c862cbafdfc1b7854443dffd2b462970243227f915fd96122c4e1e36cf8e9",
+            "matchesCommittedBytes": true
+          }
+        ]
+      },
+      {
+        "source": "https://redditspoof.vercel.app/apt/redditbox-rootful/",
+        "files": [
+          {
+            "name": "InRelease",
+            "sha256": "771f77501fdb8ac8c6af5ebd68a362bc2a8edee71e4020ea47566a73df3497c0",
+            "matchesCommittedBytes": true
+          },
+          {
+            "name": "Release",
+            "sha256": "775089b5bb4c7f1f9839d405ecfd53eecb3dae584c906b43e5ad97de3c5d8137",
+            "matchesCommittedBytes": true
+          },
+          {
+            "name": "Release.gpg",
+            "sha256": "498d1ad29e731d39d6068a0e2b6558db465d2d673a2fc0816215311bd8fd8623",
+            "matchesCommittedBytes": true
+          },
+          {
+            "name": "Packages",
+            "sha256": "752b45bd1b31a928b766e4723731e2be0c2513b611cf9bfd628ebad2df8f62c4",
+            "matchesCommittedBytes": true
+          },
+          {
+            "name": "Packages.gz",
+            "sha256": "81e3b6c9b4313db61b05e60f65c7e56fd51e29e2d0f05721cdef91acd5dc03d5",
+            "matchesCommittedBytes": true
+          },
+          {
+            "name": "repository.json",
+            "sha256": "78718111a692acac6349dc1656fa64444d345cc890df33c1668ff629e15fc206",
+            "matchesCommittedBytes": true
+          }
+        ]
+      }
+    ],
+    "licenseHealth": {
+      "httpStatus": 200,
+      "ready": true,
+      "keyId": "b2c5d4176c727107c9826ad69386d4d65f90920074981bd842127d6b22add6e9",
+      "issuer": "https://redditspoof.vercel.app"
+    },
+    "installPage": {
+      "httpStatus": 200,
+      "bothCanonicalSources": true
+    }
+  },
+  "packages": [
+    {
+      "scheme": "rootless",
+      "version": "0.1.25",
+      "filename": "com.redditbox_0.1.25_iphoneos-arm64.deb",
+      "size": 1975792,
+      "sha256": "c3628eafb8a5a1ee4f0c25c23bc22ee616903f25d77d2d167a2fb7427c98ac86",
+      "sourceURL": "https://redditspoof.vercel.app/apt/redditbox/",
+      "releasePhase": "complete",
+      "stagingAndProductionSignedIndexesAndRetainedDownloads": "PASS via scripts/release.sh",
+      "prePromotionRuntimeGate": {
+        "version": "0.1.25",
+        "variant": "rootless",
+        "deploymentURL": "https://redditspoof-k8ogb2g2p-modelclone.vercel.app",
+        "beforeRealPromotion": true,
+        "checkedAtUTC": "2026-09-17T18:46:27.670470+00:00",
+        "checks": [
+          {
+            "check": "existing cloud signer and private storage ready",
+            "status": 200,
+            "keyId": "b2c5d4176c727107c9826ad69386d4d65f90920074981bd842127d6b22add6e9"
+          },
+          {
+            "check": "unauthenticated GET /api/backups",
+            "status": 401
+          },
+          {
+            "check": "unauthenticated POST /api/backups/transfer",
+            "status": 401
+          },
+          {
+            "check": "unauthenticated PUT /api/backups/transfer?id=invalid&part=0",
+            "status": 401
+          },
+          {
+            "check": "console requires sign-in",
+            "status": 307
+          },
+          {
+            "check": "installation page retains both production sources",
+            "status": 200
+          }
+        ],
+        "claim": "Read-only staged runtime readiness; no authenticated backup or iPhone acceptance claimed."
+      },
+      "releaseMetadata": {
+        "installPrefix": "/var/jb",
+        "packageArchitecture": "iphoneos-arm64",
+        "packageScheme": "rootless",
+        "requiresMDMReadoption": false,
+        "schemaVersion": 2,
+        "signingContractHash": "33f04fef9446cb9c093d287415a6e7b3757b0265367dd8212363a96e7e46f325",
+        "version": "0.1.25"
+      },
+      "licensePin": {
+        "publicKeyID": "b2c5d4176c727107c9826ad69386d4d65f90920074981bd842127d6b22add6e9",
+        "matchesExistingDeploymentPublicPEM": true,
+        "publicKeyReplaced": false,
+        "embeddedInEveryDaemonSlice": true
+      },
+      "machOInspection": {
+        "componentCount": 7,
+        "sliceCount": 12,
+        "allExpectedPathsAndArchitecturesChecked": true
+      },
+      "entitlementValuesMatchBothVariants": true,
+      "entitlementValuesMatch0_1_18Rootless": true,
+      "catalog": {
+        "models": 21,
+        "modelIOSChoices": 159,
+        "payloadMatchesCommittedCatalog": true
+      },
+      "codeDirectoryVerification": {
+        "codePagesVerified": 1342,
+        "allNonzeroAvailableSpecialSlotsVerified": true,
+        "scope": "CodeDirectory code pages and every nonzero available special slot; no OS trust, Apple certificate, MDM adoption or full resource-tree claim."
+      }
+    },
+    {
+      "scheme": "rootful",
+      "version": "0.1.25",
+      "filename": "com.redditbox_0.1.25_iphoneos-arm.deb",
+      "size": 1970342,
+      "sha256": "fbf8c5d5ee88f17c3e7883a558e99692ab61c914d98b3dd3168ae679a1011e8f",
+      "sourceURL": "https://redditspoof.vercel.app/apt/redditbox-rootful/",
+      "releasePhase": "complete",
+      "stagingAndProductionSignedIndexesAndRetainedDownloads": "PASS via scripts/release.sh",
+      "prePromotionRuntimeGate": {
+        "version": "0.1.25",
+        "variant": "rootful",
+        "deploymentURL": "https://redditspoof-q9chv2r1c-modelclone.vercel.app",
+        "beforeRealPromotion": true,
+        "checkedAtUTC": "2026-09-17T18:55:02.148838+00:00",
+        "checks": [
+          {
+            "check": "existing cloud signer and private storage ready",
+            "status": 200,
+            "keyId": "b2c5d4176c727107c9826ad69386d4d65f90920074981bd842127d6b22add6e9"
+          },
+          {
+            "check": "unauthenticated GET /api/backups",
+            "status": 401
+          },
+          {
+            "check": "unauthenticated POST /api/backups/transfer",
+            "status": 401
+          },
+          {
+            "check": "unauthenticated PUT /api/backups/transfer?id=invalid&part=0",
+            "status": 401
+          },
+          {
+            "check": "console requires sign-in",
+            "status": 307
+          },
+          {
+            "check": "installation page retains both production sources",
+            "status": 200
+          }
+        ],
+        "claim": "Read-only staged runtime readiness; no authenticated backup or iPhone acceptance claimed."
+      },
+      "releaseMetadata": {
+        "installPrefix": "",
+        "packageArchitecture": "iphoneos-arm",
+        "packageScheme": "rootful",
+        "requiresMDMReadoption": true,
+        "schemaVersion": 2,
+        "signingContractHash": "9a5ef7c3b56c49e8b7ff8fe5bbd793c0f66c5ca6be7b0f8a606dd0e397769bbe",
+        "version": "0.1.25"
+      },
+      "licensePin": {
+        "publicKeyID": "b2c5d4176c727107c9826ad69386d4d65f90920074981bd842127d6b22add6e9",
+        "matchesExistingDeploymentPublicPEM": true,
+        "publicKeyReplaced": false,
+        "embeddedInEveryDaemonSlice": true
+      },
+      "machOInspection": {
+        "componentCount": 7,
+        "sliceCount": 12,
+        "allExpectedPathsAndArchitecturesChecked": true
+      },
+      "entitlementValuesMatchBothVariants": true,
+      "entitlementValuesMatch0_1_18Rootless": true,
+      "catalog": {
+        "models": 21,
+        "modelIOSChoices": 159,
+        "payloadMatchesCommittedCatalog": true
+      },
+      "codeDirectoryVerification": {
+        "codePagesVerified": 1342,
+        "allNonzeroAvailableSpecialSlotsVerified": true,
+        "scope": "CodeDirectory code pages and every nonzero available special slot; no OS trust, Apple certificate, MDM adoption or full resource-tree claim."
+      }
+    }
+  ],
+  "physicalDevice": {
+    "upgradeFrom": "0.1.22",
+    "upgradeTo": "0.1.25",
+    "containerCountBefore": 2,
+    "containerCountAfter": 2,
+    "allProfileIDsPreserved": true,
+    "licenseUnlocked": true,
+    "networkState": "closed",
+    "firewallReady": false,
+    "readOnlyCloudProbe": {
+      "receiptPresent": 1,
+      "receiptOK": true,
+      "privatePayloadReadable": 1,
+      "privatePayloadConsumed": 1,
+      "productionOriginMatches": true,
+      "appMatches": true,
+      "backupCount": 0,
+      "ok": 1
+    },
+    "probeScope": "Shipped request queue and SecureConfig in a temporary ldid-signed observer; installed daemon calling production; empty list. Observer removed. No user backup/profile mutation or clone OPEN.",
+    "initialObserverFailure": "Same signed binary was killed from Documents; succeeded from existing rootless bootstrap temporary executable location. No installed entitlements, sandbox or trust policy change."
+  },
+  "tests": {
+    "rootlessFullNativeBuildAndChecks": "PASS",
+    "rootfulFullNativeBuildAndChecks": "PASS",
+    "nativeTestInvocations": [
+      "python3 \"$ROOT/tools/test_build_version.py\"",
+      "python3 \"$ROOT/tools/test_package_variants.py\"",
+      "python3 \"$ROOT/tools/test_apt_release.py\"",
+      "python3 \"$ROOT/tools/test_facebook_binary_audit.py\"",
+      "bash \"$ROOT/tools/test_app_bundle_policy.sh\"",
+      "bash \"$ROOT/tools/test_app_runtime.sh\"",
+      "python3 \"$ROOT/tools/test_facebook_user_agent.py\"",
+      "python3 \"$ROOT/tools/test_facebook_user_agent_hooks.py\"",
+      "python3 \"$ROOT/tools/test_app_profile.py\"",
+      "python3 \"$ROOT/tools/test_clone_profile_ownership.py\"",
+      "bash \"$ROOT/tools/test_app_registry.sh\"",
+      "bash \"$ROOT/tools/test_app_keychain_policy.sh\"",
+      "bash \"$ROOT/tools/test_app_keychain_hooks.sh\"",
+      "bash \"$ROOT/tools/test_app_keychain_entitlements.sh\"",
+      "bash \"$ROOT/tools/test_app_process.sh\"",
+      "bash \"$ROOT/tools/test_app_process_coordinator.sh\"",
+      "python3 \"$ROOT/tools/test_app_source.py\"",
+      "bash \"$ROOT/tools/test_app_mdm.sh\"",
+      "bash \"$ROOT/tools/test_app_scope.sh\"",
+      "python3 \"$ROOT/tools/test_launcher_multiapp.py\"",
+      "python3 \"$ROOT/tools/test_workspace_presentation.py\"",
+      "python3 \"$ROOT/tools/test_apt_metadata_refresh.py\"",
+      "python3 \"$ROOT/tools/test_clone_architecture.py\"",
+      "python3 \"$ROOT/tools/test_identity_editor.py\"",
+      "python3 \"$ROOT/tools/test_clone_visibility_metadata.py\"",
+      "python3 \"$ROOT/tools/test_installer_evidence.py\"",
+      "python3 \"$ROOT/tools/test_app_install_recovery.py\"",
+      "python3 \"$ROOT/tools/test_app_removal_identity.py\"",
+      "python3 \"$ROOT/tools/test_app_deletion_flow.py\"",
+      "python3 \"$ROOT/tools/test_app_deletion_targets.py\"",
+      "python3 \"$ROOT/tools/test_app_deletion_closure.py\"",
+      "python3 \"$ROOT/tools/test_app_launch_flow.py\"",
+      "python3 \"$ROOT/tools/test_app_gate_control.py\"",
+      "python3 \"$ROOT/tools/test_app_gate_readiness.py\"",
+      "python3 \"$ROOT/tools/test_app_global_recovery.py\"",
+      "python3 \"$ROOT/tools/test_app_maintenance_closure.py\"",
+      "python3 \"$ROOT/tools/test_app_replacement_backend.py\"",
+      "python3 \"$ROOT/tools/test_identity_manual_inputs.py\"",
+      "python3 \"$ROOT/tools/test_automatic_identity.py\"",
+      "python3 \"$ROOT/tools/test_passcode_removal.py\"",
+      "sh \"$ROOT/tools/test_passcode_store.sh\"",
+      "python3 \"$ROOT/tools/test_identity_user_agent.py\"",
+      "python3 \"$ROOT/tools/test_app_version_settings.py\"",
+      "python3 \"$ROOT/tools/test_creation_defaults.py\"",
+      "python3 \"$ROOT/tools/test_device_catalog_data.py\"",
+      "python3 \"$ROOT/tools/test_device_version_hook.py\"",
+      "python3 \"$ROOT/tools/test_identity_choices.py\"",
+      "python3 \"$ROOT/tools/test_launcher_architecture.py\"",
+      "python3 \"$ROOT/tests/test_replacement_architecture.py\"",
+      "bash \"$ROOT/tools/test_firewall_policy.sh\"",
+      "bash \"$ROOT/tools/test_request_queue.sh\"",
+      "bash \"$ROOT/tools/test_secure_config.sh\"",
+      "bash \"$ROOT/tools/test_identity_draft_store.sh\"",
+      "bash \"$ROOT/tools/test_cloud_vault_store.sh\"",
+      "python3 \"$ROOT/tools/test_cloud_vault_bridge.py\"",
+      "python3 \"$ROOT/tools/test_cloud_app_admission.py\"",
+      "python3 \"$ROOT/tools/test_preinstall.py\"",
+      "python3 \"$ROOT/tools/test_postinstall.py\"",
+      "python3 \"$ROOT/tools/test_macho_probe.py\"",
+      "python3 \"$ROOT/tools/test_request_budgets.py\"",
+      "bash \"$ROOT/tools/test_proxy_library.sh\"",
+      "python3 \"$ROOT/tools/test_proxy_configuration.py\"",
+      "python3 \"$ROOT/tools/test_proxy_redirect_policy.py\"",
+      "sh \"$ROOT/tools/test_proxy_region.sh\"",
+      "python3 \"$ROOT/tools/test_proxy_region_transport.py\"",
+      "bash \"$ROOT/tools/test_rotation_secrets.sh\"",
+      "bash \"$ROOT/tools/test_backup_snapshot.sh\"",
+      "python3 \"$ROOT/tools/test_backup_identity.py\"",
+      "python3 \"$ROOT/tools/test_app_backup_flow.py\"",
+      "python3 \"$ROOT/tools/test_app_backup_transaction.py\"",
+      "python3 \"$ROOT/tools/test_backup_restore_cleanup.py\"",
+      "python3 \"$ROOT/tools/test_backup_archive.py\"",
+      "python3 \"$ROOT/tools/test_identity_freeze.py\"",
+      "python3 \"$ROOT/tools/test_smoke_log_order.py\"",
+      "python3 \"$ROOT/tools/test_sign_firewall_app.py\"",
+      "bash \"$ROOT/tools/test_keychain_cleaner.sh\"",
+      "bash \"$ROOT/tools/test_keychain_sync.sh\"",
+      "bash \"$ROOT/tools/test_clone_acceptance.sh\"",
+      "bash \"$ROOT/tools/test_isolation_sentinel.sh\"",
+      "bash \"$ROOT/tools/test_launch_safety.sh\"",
+      "python3 \"$ROOT/tools/test_proxy_route_transport.py\"",
+      "bash \"$ROOT/tools/test_acceptance_checks.sh\"",
+      "bash \"$ROOT/tools/test_operator_wording.sh\"",
+      "bash \"$ROOT/tools/test_wizard_draft.sh\"",
+      "python3 \"$ROOT/tools/test_device_acceptance_ssh.py\"",
+      "python3 \"$ROOT/tools/test_device_acceptance_canaries.py\"",
+      "bash \"$ROOT/tools/test_deletion_journal.sh\"",
+      "bash \"$ROOT/tools/test_profile_metadata.sh\"",
+      "bash \"$ROOT/tests/test_replacement.sh\"",
+      "python3 \"$ROOT/tools/test_profile_metadata.py\"",
+      "python3 \"$ROOT/tools/test_account_status_browser.py\"",
+      "python3 \"$ROOT/tools/test_license_key.py\"",
+      "python3 \"$ROOT/tools/test_license_screen.py\"",
+      "python3 \"$ROOT/tools/test_license_presentation.py\"",
+      "bash \"$ROOT/tools/test_license_presentation.sh\"",
+      "bash \"$ROOT/tests/test_license_token.sh\"",
+      "python3 \"$ROOT/tests/test_license_architecture.py\"",
+      "bash \"$ROOT/tests/test_data_schema.sh\"",
+      "python3 \"$ROOT/tests/test_data_schema_architecture.py\"",
+      "python3 \"$ROOT/tools/test_update_startup.py\"",
+      "bash \"$ROOT/tools/test_device_catalog.sh\"",
+      "bash \"$ROOT/tools/test_fingerprint_registry.sh\"",
+      "bash \"$ROOT/tools/test_operation_context.sh\"",
+      "bash \"$ROOT/tools/test_memory_budget.sh\"",
+      "bash \"$ROOT/tools/test_request_deadlines.sh\"",
+      "bash \"$ROOT/tools/test_bounded_process.sh\"",
+      "bash \"$ROOT/tools/test_service_lifetime.sh\"",
+      "bash \"$ROOT/tools/test_socket_guard.sh\"",
+      "bash \"$ROOT/tools/test_hook_readiness.sh\"",
+      "bash \"$ROOT/tools/test_http_proxy.sh\"",
+      "bash \"$ROOT/tools/test_reddit_payload.sh\"",
+      "python3 \"$ROOT/tools/test_leak_audit.py\"",
+      "python3 \"$ROOT/tools/test_leak_surface.py\""
+    ],
+    "staticCheck": "ALL CLEAN",
+    "leakSurfaceContract": "368 rows; current source snapshot; not device acceptance",
+    "cloudNpmTest": "PASS",
+    "cloudProductionBuild": "PASS",
+    "nativeCloudBridgeAssertions": 93,
+    "exportRestoreTransactionAssertions": 192,
+    "backupProfileFlowAssertions": 73,
+    "releaseResumeRegressionTests": 16,
+    "uikitFixture": {
+      "evidence": "Shipped UIKit, inert IPC and synthetic data. No device isolation or cloud transfer claim.",
+      "failures": [],
+      "ok": 1,
+      "checks": 28
+    },
+    "webFixture": {
+      "checks": 9,
+      "ok": true,
+      "evidence": "Built Next.js UI with all API requests intercepted; synthetic user and 50 backups; no real cloud mutations."
+    }
+  },
+  "notVerified": [
+    "Two physical phones restoring a real signed-in app",
+    "Persisted app login after restore; app Keychain/hardware credentials are excluded",
+    "Large-archive real-device throughput and memory",
+    "MDM readiness/readoption and packet-level A/B isolation on this phone",
+    "Facebook physical acceptance; app remains inactive",
+    "30-50 real clone launch/isolation acceptance",
+    "Universal or 100% isolation"
+  ]
+}

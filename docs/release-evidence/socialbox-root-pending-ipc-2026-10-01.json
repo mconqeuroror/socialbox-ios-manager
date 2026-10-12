@@ -1,0 +1,224 @@
+{
+  "clientDeliveryReady": false,
+  "contract": {
+    "authority": "Same genuine source owner, exact synchronous fence and original deadline; context never exported or a grant.",
+    "clear": "Exact current full configuration under pinned held configuration.lock is proof during pending completion publication. Checksum alone is not proof.",
+    "edit": "Reserved or legacy UNKNOWN expected records conflict before stage; a later independent reservation can still preserve unresolved work. No discard/thaw/migration policy.",
+    "establishment": "Explicit trusted already-paired setup only under held empty configuration namespace; absent state does not prove pristine ownership. Ordinary startup never creates/adopts/resets.",
+    "marker": "Full immutable marker file witness persisted and checked during cached use and reopening; invalid/missing state is not projected as empty.",
+    "routes": "Old prepare/create/update globally denied; old read/list share root context.",
+    "scope": "Metadata only; proxy reference empty, requested app membership is not runtime support, all replies runtimeAccepted:false.",
+    "stage": "Expected-empty epoch CAS and stable stage-request UUID precede generated/manual candidate publication. Root execution references only retained exact slot.",
+    "uncertainty": "Every failed mutation may follow durable effects. Retain exact full candidate/request/slot; revalidate and reconcile, never regenerate silently."
+  },
+  "customerArtifactReleased": false,
+  "customerCodeIssued": false,
+  "host": {
+    "assertions": 2186,
+    "failures": 0,
+    "logSHA256": {
+      "foundations/final/owner.log": "afa68bd5c49428c485e97a4c2b96a5264c2591716483138231b37e40d5bc83bf",
+      "foundations/final/vault.log": "5a0756bdf664ac20714f42394bf4c8f5a79b4fbb8fd785bb0d97dd30913064bf",
+      "foundations/proof-first/store.log": "c88cbf76bb29de5a1affe69e86e5aa53818894dc4a39e5f0621ac5faf8b81cc3",
+      "owner-host/sixth-final/host.log": "0a56cadaa709351218b60e0d58a8452e944403f728de50e7b0df18c392dc9f39"
+    },
+    "nativeProtocolBoundaryChecks": 12,
+    "perSuite": {
+      "auditPeer": 80,
+      "configurationStore": 494,
+      "licenseOwner": 285,
+      "protocol": 560,
+      "rootPendingOwner": 581,
+      "syntheticClient": 128,
+      "vault": 58
+    },
+    "sourceStable": true,
+    "status": "PASS"
+  },
+  "kind": "socialbox-root-owned-saved-setup-metadata",
+  "notRun": [
+    "current installed manager-message and asynchronous saved-setup frontend integration",
+    "first-unpaired owner installation/provenance and customer fresh-install licensing",
+    "physical simultaneous processes, crash/reboot/power-loss recovery",
+    "source metadata removal, reset, discard, migration or successor policy",
+    "source UUID/allocation/official target transaction and complete registered storage/writer audit",
+    "automatic safe switching/isolation/recovery and ongoing running-session licensing",
+    "actual account A/B/A, proxy traffic and Facebook/Twitter runtime",
+    "accepted client installer, website download and customer delivery"
+  ],
+  "physical": {
+    "assertions": 43,
+    "build": "20H392",
+    "callerReal501Effective0": "PASS",
+    "callerReal501Effective501": "PASS",
+    "exactCreateEditRetryRestartRecovery": "PASS",
+    "executedArchitecture": "arm64",
+    "freshGenuineWebsiteLicense": "PASS",
+    "hardware": "iPhone10,6",
+    "iOS": "16.7.16",
+    "installedOwnerFrontend": "NOT_RUN",
+    "installedOwnerManagerMessage": "NOT_RUN",
+    "model": "iPhone X",
+    "nativeClientCalls": 34,
+    "oldRawWritersGloballyClosed": "PASS",
+    "privateBuildReportSHA256": "5e036ea1699799364294901be0a7751960384989c918256cd9c75cfa15e5bc2e",
+    "privateDeviceReportSHA256": "6c0da576e9704b5846876fcdb6dcc0c261393f73064f7ba6d0b78cda605a56a6",
+    "privateDriverSHA256": "de3131ccd5061ec033bb125605c35699ce36569bfa84e05242d162afcf3d2cac",
+    "real0AndWrongPathRequests": "PASS: unconfirmed non-saved replies with null state, not authenticated denials",
+    "runtimeAccepted": false,
+    "signedRevocation": "PASS",
+    "sixOwnerPayloadHashesUnchanged": "PASS",
+    "status": "PASS",
+    "twoDisposableLicensesRevoked": "PASS",
+    "twoPrivateJobsAndDirectoriesRemoved": "PASS"
+  },
+  "preservedAttempts": [
+    {
+      "privateLogSHA256": "ce12b43d382400b82198c3089800a38f98de7489aa2db08ecf35efd83d768045",
+      "reason": "Strict indentation compilation failures; corrected before runtime.",
+      "stage": "owner-host first"
+    },
+    {
+      "privateLogSHA256": "055d567128ee4cb89f826e4e211df1069e5d3324eeb657567d1d672edf20df55",
+      "reason": "Initial marker replacement denial failures retained; this attempt was not separately frozen.",
+      "stage": "owner-host third-marker-counterexample"
+    },
+    {
+      "privateLogSHA256": "5d8901e666f3ecf80d20b38bbb86fb919e229bf97e6edd6624b13140e7075eef",
+      "reason": "Two test expectations required a single non-saved error classification; marker denial returns authorization_required or unconfirmed.",
+      "stage": "owner-host fifth-proof"
+    },
+    {
+      "observedExitCode": 133,
+      "privateSystemCrashSHA256": "99986597cfae550472f6f545c629851782dda16f9ebb856c3af2b8fc648ecf25",
+      "rawToolLogPreservation": "NOT_AVAILABLE; system crash report preserved privately instead",
+      "reason": "Inactive native XPC connection release trapped before the private collector existed. The system crash records XPC API misuse/cancel/dispose frames. Fixture-only opaque stand-in replaced it; production unchanged.",
+      "stage": "initial synthetic client fixture",
+      "status": "FAIL"
+    },
+    {
+      "cleaned": true,
+      "privateResultSHA256": "187c2951728b3974d3b67505e6454c3404fdeb5aa007b19af0b79bfa3ce3e5fb",
+      "reason": "Real0 request returned unconfirmed with null state; the test expected service_unavailable. Fresh attempt2 accepts only the documented non-saved uncertainty classes. Production source/client unchanged.",
+      "revoked": true,
+      "stage": "physical attempt1",
+      "status": "FAIL"
+    }
+  ],
+  "privacy": {
+    "ownerAccountsInspectedOrChanged": false,
+    "privateCredentialsConfigurationsIdentifiersPathsScreenshotsAndArchivesExported": false,
+    "rawEvidenceOutsideGit": true
+  },
+  "production": {
+    "architectures": [
+      "arm64",
+      "arm64e"
+    ],
+    "entitlements": {},
+    "nativeArtifacts": {
+      "client": {
+        "sha256": "ffd3a93b0b627e668a7f6bef73345279045f07652496e40f6da285827d729a76",
+        "size": 431232
+      },
+      "initialize": {
+        "sha256": "a4abb657ea230efd38e8c12ca0bfcba203b674329c7fa126a9d22ddb5b23ebb7",
+        "size": 893424
+      },
+      "service": {
+        "sha256": "6001f11c50a225af63dcfe155aabfbc255f58f5e977c4fee3234a472431aef37",
+        "size": 894064
+      }
+    },
+    "ownerInstallation": "NOT_RUN",
+    "sharedBuilders": {
+      "acceptance": {
+        "architectures": [
+          "arm64",
+          "arm64e"
+        ],
+        "deviceExecution": "NOT_RUN",
+        "freshInstallReady": false,
+        "serviceSHA256": "482173ce6fcca0f2de98e163a1709f9ad0efd29706ccea55c6455cf232fa0c9c",
+        "status": "PASS"
+      },
+      "manager": {
+        "architectures": [
+          "arm64",
+          "arm64e"
+        ],
+        "deviceExecution": "NOT_RUN",
+        "freshInstallReady": false,
+        "serviceSHA256": "b9fa10d2d8506fb93a5e356f89f1692b5121f2b9ea27cfa820dc37ad0ada0489",
+        "status": "PASS"
+      }
+    },
+    "sourceStable": true,
+    "status": "PASS",
+    "testProvidersAbsent": true
+  },
+  "recordedAt": "2026-10-01T05:42:05.801532+00:00",
+  "schemaVersion": 1,
+  "sourceDependencySHA256": {
+    "daemon/RBXLicenseToken.h": "a21d1072b10136c4ecc809ad1855bebd368849a2bc0628db63202399fcb52979",
+    "daemon/RBXLicenseToken.m": "e3f00d563c99a47400d22b31b152ec4d2ab6123505b9aaa0f2d2d787f13d55da",
+    "lucid/Authorization/ClientProbe.m": "213eccac64ec7fe6b2e4105ae0f4712afcf7c746b35262ea154c3c2ad20d3826",
+    "lucid/Authorization/LBXLicenseClient.h": "63267ad770a9f373edadc18b700b8c1909a25784ff054b2e43c6011bd7ec9686",
+    "lucid/Authorization/LBXLicenseClient.m": "34f06ce5d479543172b9dddecba5d3b847dc499f432c57a78b3181f2bfb1fd94",
+    "lucid/Authorization/LBXLicenseEndpoints.h": "a9b98b6c2269b7ce9a50bcd76e243c8d9d12733368cf8cd7ebf699c0fdbc07e1",
+    "lucid/Authorization/LBXLicenseExchange.h": "ab24d7e92934dce040add199712c0bce2cdd29e581b7e0c1a6246708c90f9b29",
+    "lucid/Authorization/LBXLicenseExchange.m": "5a7ed4ef11dcf87ec32876ce34f75463077215734525929f9750f4afc02e7c93",
+    "lucid/Authorization/LBXLicenseIPC.h": "8ff579acaa3b3113e6480f472022df893095d633de08b362a42de3b63df839ea",
+    "lucid/Authorization/LBXLicenseIPC.m": "7c3aec2a53d8c666b4cfd6ba8deb323f172b5c962de82c809834876b9396ffbc",
+    "lucid/Authorization/LBXLicenseOwner.h": "ec2b0a3bc4354ae0f2ed942c8f45e54767e97e0a6ff35e8d79c0c67e4e159736",
+    "lucid/Authorization/LBXLicenseOwner.m": "b61bc078a29087947608963f0d0f3963889238dbe098bfb98676a0b2ea3e3154",
+    "lucid/Authorization/LBXLicensePeer.h": "bcd2c336db43e00c5f549f0db2a12d54c1945f4ec8d51916640df9ff6c36f208",
+    "lucid/Authorization/LBXLicensePeer.m": "92e2207673a79030442664a66a46a2610bace3875a77ab99f4943f0f6bc50787",
+    "lucid/Authorization/LBXLicenseTransport.h": "bbf31e9e89f19ad7edca17ceb4bfec5e66ff6566d7daff1c125e44af0682e54a",
+    "lucid/Authorization/LBXLicenseTransport.m": "40999576d5d20030ecb50631e4ba69d333de79c2119867923975691147acf35a",
+    "lucid/Authorization/LBXLicenseVault.h": "5fddd744f393257aa13002bd7197d354749ce800f6450af08c6c811e1602204e",
+    "lucid/Authorization/LBXLicenseVault.m": "9c70ecd738cb0e1d50d36eb71602001c1160826d1eae859a6ddac0d56598d592",
+    "lucid/Authorization/LicenseService.m": "a89d55e5f76c38f742c1e4d754d5621f0968846bbc4ae4c58c14e3aecafb88fe",
+    "lucid/Containers/LBXContainerClient.h": "8d4fe00c232cdc7af831b5b1bc86bf6549f18d99ee1903b0ad1e1fe260f3d6bf",
+    "lucid/Containers/LBXContainerClient.m": "a004ec1ad77b1e1baed1a35b7c678e3204586a366abdd02e5dbf9c597815319b",
+    "lucid/Containers/LBXContainerConfiguration.h": "bf178269d63bccf8ee2651113ba43401784aff79724b25062026f74e465828fe",
+    "lucid/Containers/LBXContainerConfiguration.m": "0475f4c7443d6a74bca17e47bd19c4c736af8faa319b2bd18d4e2a9c405b58a8",
+    "lucid/Containers/LBXContainerConfigurationStore.h": "ce0d1d3a5c6467894f96cbb8f38a9a34621dca33550ee6283733e4ed882db777",
+    "lucid/Containers/LBXContainerConfigurationStore.m": "d22594a155b4e656e722ff14ae2f3051502d08aac9b7cc155419444e44af5e88",
+    "lucid/Containers/LBXContainerEndpoints.h": "f2a247fad88f4c33a7f724639b9721f5888597c034dd57e00cbe8e79714d4f14",
+    "lucid/Containers/LBXContainerIPC.h": "b1cadb446b6f2b9e420bea05b7def048e2dbb17a3b621b523f596f5695a8ea93",
+    "lucid/Containers/LBXContainerIPC.m": "a997795f418a5fb498008c15e159e23e9e499b88ca2f14f4dfe3206297e6e68c",
+    "lucid/Containers/LBXContainerMutationClient.h": "c20e7f98ddd5624e44017ba930d12ded38b0e7fed6a19e84ba4d93bb33d721eb",
+    "lucid/Containers/LBXContainerMutationClient.m": "4d0464df8a6b06a81528c76aaf5a2b6b1fea9e2fed220ac3b29c7fe4b13c8e00",
+    "lucid/Containers/LBXContainerMutationIPC.h": "f0414be35c330cd41b5022a07a9e095a744f12ffd30395746cde0c9ff9fe2ab1",
+    "lucid/Containers/LBXContainerMutationIPC.m": "82722d7a4c5edea1c6e6da0a756f7b4e703167e63ed806938036dbaa7d879554",
+    "lucid/Containers/LBXContainerRootMutationOwner.h": "b3ecd9a3bd4e917aa2caa5afcd9225b94ac296ba13d4e9aba193b4be045ee87e",
+    "lucid/Containers/LBXContainerRootMutationOwner.m": "078d4ab16694b9bee1ae9cb5b317ed796fbe094a90d10c66d6bd5585226f4aa7",
+    "lucid/Containers/LBXContainerRootPendingStore.h": "e3db75c0994ff037c1c4931ecedbf69395377f8612683b7621967d0055d505ab",
+    "lucid/Containers/LBXContainerRootPendingStore.m": "5d385d41e9265cdbb27e8ea2d0ecff90ae41b2322720fcf483bfeea895718709",
+    "lucid/HelperSafety/LBXCallerFile.h": "d538e65c56b235190971dee04aa9ae57606d22ff176519e006079bef05853888",
+    "lucid/HelperSafety/LBXCallerFile.m": "8eaece9470b8024f514f35c52fb35fdeb24d9bb8b139eb18be9a9a42b67a75b0",
+    "lucid/HelperSafety/LBXXPC.h": "dd03df90efb001c332e622a2a1f1292d1f3ceaca02916a8a7dc3d86f1c4d474d",
+    "lucid/tests/container_configuration_store.m": "e2fce70627247390ae69d9659299bcab43e3ea85e8c52e8aabd44624fde2565a",
+    "lucid/tests/container_mutation_client.m": "5e13942156702d65cf114ee8e00cad2dd21faafbbfd95d8210732d787940ea81",
+    "lucid/tests/container_mutation_ipc.m": "907d1fc6dd00c81c0efed8f374be2539f79d8d0dc67c061efa3ec01d53306f78",
+    "lucid/tests/license_manager_peer.m": "e868111661fba8ea70afe77db0005eb3b28f74506d584d27bf03c793d894ef82",
+    "lucid/tests/license_owner.m": "316938511e81c5d80056c821b7cf17e94f3b8e3a356659f7d09a5a8481cb43b0",
+    "lucid/tests/root_pending_mutation.m": "aa761d85c2e444d30aaed02195d69db71ed4a12ec1fe1a84443cf68c72c337bc",
+    "lucid/tests/test_container_configuration_store.sh": "e96fb90fa3cfb218e2af20c8b2e949432c229770b99cee9592166053c00bae1a",
+    "lucid/tests/test_container_mutation_client.sh": "9132269e38ff4cdae5094889557583ca770778ac74dbf51c66dc2f23110d9998",
+    "lucid/tests/test_container_mutation_ipc.sh": "bf19b0ce23d758369b4179a5d63b245f88e25e2c41f110f38bf03ac70f87204b",
+    "lucid/tests/test_container_mutation_production_boundary.sh": "fd53af987b5c6049e37d24e57c19cd3ca58d6b8a393785818274fb9174fa8175",
+    "lucid/tests/test_license_manager_peer.sh": "86fc3ccd51bb465857a7ca691730f6e4a6ea8aacbd1dca5f857951d97af5adde",
+    "lucid/tests/test_license_owner.sh": "f2801787d4da4b918c138e80858f0fb3f84b97da27a955d6e15e4f6c364081ca",
+    "lucid/tests/test_license_vault.sh": "16c813b5fb424143af61d311acab0fae8b146019cbf3a5bb3d83ac5460e61ec9",
+    "lucid/tests/test_root_pending_mutation.sh": "39938c7260c0f6722a61c25581b2237c4225413cd5b333f2979a5c3042b21f15",
+    "scripts/build-socialbox-license-service.py": "82e2521a898fa2c56f1ab85cf4e1b0a16c0aaf2e8219c28e146ad49bd7c01582",
+    "scripts/license-key.py": "25b7a73e6e14dca7cfe690a76279810e558aefe1dd6d0c266d95f08c1644e465",
+    "shared/RBXLicensePin.h": "e81b82da4597828a48c3dbfa76055a06c3e4a4323a165ed3e7d70b7e97ee9f3f",
+    "shared/RBXProc.h": "988131ea103712173f484ff1226477c141b5ab21a1d232241210941010fe410e",
+    "shared/RBXStorageGate.h": "95e77751b8b78276d6ef34699176eab2df3243b902f494d5a23cfb257d7fe9ac"
+  },
+  "status": "PASS_WITH_CUSTOMER_AND_RUNTIME_GAPS",
+  "unit": 15
+}

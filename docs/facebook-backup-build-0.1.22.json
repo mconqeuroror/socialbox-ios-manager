@@ -1,0 +1,230 @@
+{
+  "schemaVersion": 1,
+  "packages": [
+    {
+      "version": "0.1.22",
+      "filename": "debs/com.redditbox_0.1.22_iphoneos-arm64.deb",
+      "sha256": "baaa5711c9b29d255f5dd357729f76cd5dec78bed353d769fdf28bcdb38d1785",
+      "size": 1888584,
+      "control": {
+        "Package": "com.redditbox",
+        "Name": "RedditBox",
+        "Depends": "mobilesubstrate, firmware (>= 15.0), ldid, ai.akemi.appinst (>= 2.1.1), zip, ai.akemi.appsyncunified, uikittools (>= 2.1.6)",
+        "Description": "Multi-account containers + anti-fingerprint system for Reddit (palera1n rootless/rootful and Dopamine rootless)",
+        "Maintainer": "PC",
+        "Author": "PC",
+        "Section": "Tweaks",
+        "Architecture": "iphoneos-arm64",
+        "Version": "0.1.22",
+        "Installed-Size": "5400"
+      },
+      "release": {
+        "version": "0.1.22",
+        "schemaVersion": 2,
+        "signingContractHash": "33f04fef9446cb9c093d287415a6e7b3757b0265367dd8212363a96e7e46f325",
+        "requiresMDMReadoption": true,
+        "packageScheme": "rootless",
+        "packageArchitecture": "iphoneos-arm64",
+        "installPrefix": "/var/jb"
+      },
+      "sourceBaseCommit": "6aa43b2f3ba4988e0e6d77f4c483abc8b0677cf0",
+      "workingTreeModified": true,
+      "sourceInventorySHA256": "9b25332c7efeb10f42db77370c17f644a6bcb0ede3b8d8541118309087191c67",
+      "recordedAtUTC": "2026-09-14T22:18:25.819982+00:00",
+      "distribution": "Private local test package; not installed or published",
+      "machOComponents": [
+        {
+          "path": "var/jb/Applications/RedditBox.app/RedditBox",
+          "sha256": "8c9e7f7c83f10b2c3f0b6fe614164ad42dc047a721144eed694fc4c31492d82c",
+          "architectures": [
+            "arm64",
+            "arm64e"
+          ],
+          "slices": [
+            {
+              "architecture": "arm64",
+              "entitlementKeys": [
+                "application-identifier",
+                "keychain-access-groups"
+              ],
+              "entitlementPayloadSHA256": "29a9e60cf871c275f97c9d06dd9f9694c03fc032ea58497212e7d2c06e308d96"
+            },
+            {
+              "architecture": "arm64e",
+              "entitlementKeys": [
+                "application-identifier",
+                "keychain-access-groups"
+              ],
+              "entitlementPayloadSHA256": "29a9e60cf871c275f97c9d06dd9f9694c03fc032ea58497212e7d2c06e308d96"
+            }
+          ]
+        },
+        {
+          "path": "var/jb/Applications/RedditBoxFirewall.app/PlugIns/PacketTunnel.appex/PacketTunnel",
+          "sha256": "5a40d89a2ec3be8d98862d162f16bfce12427548c795482b7cac7cdc821a2ca3",
+          "architectures": [
+            "arm64"
+          ],
+          "slices": [
+            {
+              "architecture": "arm64",
+              "entitlementKeys": [
+                "application-identifier",
+                "com.apple.developer.networking.networkextension",
+                "com.apple.developer.team-identifier",
+                "com.apple.security.application-groups"
+              ],
+              "entitlementPayloadSHA256": "4555b49667e11192cde4384d788e9acc17435d158d5c61e280b71f131d5655d3"
+            }
+          ]
+        },
+        {
+          "path": "var/jb/Applications/RedditBoxFirewall.app/RedditBoxFirewall",
+          "sha256": "4fc63b598fb74649a179331fed35c529a166e009382b26f43845ecd54f316f6a",
+          "architectures": [
+            "arm64"
+          ],
+          "slices": [
+            {
+              "architecture": "arm64",
+              "entitlementKeys": [
+                "application-identifier",
+                "com.apple.developer.networking.networkextension",
+                "com.apple.developer.team-identifier",
+                "com.apple.security.application-groups"
+              ],
+              "entitlementPayloadSHA256": "ed190db6fed36895054468d44eb3ad05f685f249e5ecb2369dfcaf605bbbb943"
+            }
+          ]
+        },
+        {
+          "path": "var/jb/Library/MobileSubstrate/DynamicLibraries/RedditBox.dylib",
+          "sha256": "77d7edde8fe5c88c4b2a74400c3fd306e1d965fe3b2d9438dc5439b25604daea",
+          "architectures": [
+            "arm64",
+            "arm64e"
+          ],
+          "slices": [
+            {
+              "architecture": "arm64",
+              "entitlementKeys": [],
+              "entitlementPayloadSHA256": "9261ecceda608ef174256e5fdc774c1e6e3dcf533409c1bc393d490d01c713f1"
+            },
+            {
+              "architecture": "arm64e",
+              "entitlementKeys": [],
+              "entitlementPayloadSHA256": "9261ecceda608ef174256e5fdc774c1e6e3dcf533409c1bc393d490d01c713f1"
+            }
+          ]
+        },
+        {
+          "path": "var/jb/Library/PreferenceBundles/RedditBoxPrefs.bundle/RedditBoxPrefs",
+          "sha256": "6099c748989018b36f0ef20b2504f44fd08a87747650986f3881079dbd988145",
+          "architectures": [
+            "arm64",
+            "arm64e"
+          ],
+          "slices": [
+            {
+              "architecture": "arm64",
+              "entitlementKeys": [],
+              "entitlementPayloadSHA256": "9261ecceda608ef174256e5fdc774c1e6e3dcf533409c1bc393d490d01c713f1"
+            },
+            {
+              "architecture": "arm64e",
+              "entitlementKeys": [],
+              "entitlementPayloadSHA256": "9261ecceda608ef174256e5fdc774c1e6e3dcf533409c1bc393d490d01c713f1"
+            }
+          ]
+        },
+        {
+          "path": "var/jb/usr/bin/redditboxd",
+          "sha256": "e9fa154dc250c4b3e47d85307cb72c640e5232ce534da0422683ad2cc3096a0b",
+          "architectures": [
+            "arm64",
+            "arm64e"
+          ],
+          "slices": [
+            {
+              "architecture": "arm64",
+              "entitlementKeys": [
+                "application-identifier",
+                "com.apple.private.mobileinstall.allowedSPI",
+                "com.apple.private.uninstall.deletion",
+                "com.apple.security.exception.mach-lookup.global-name",
+                "keychain-access-groups",
+                "platform-application"
+              ],
+              "entitlementPayloadSHA256": "d2fea7c7a4c4ed94a58edf2d737235ca35165f29baa65124ebffd903fa368d75"
+            },
+            {
+              "architecture": "arm64e",
+              "entitlementKeys": [
+                "application-identifier",
+                "com.apple.private.mobileinstall.allowedSPI",
+                "com.apple.private.uninstall.deletion",
+                "com.apple.security.exception.mach-lookup.global-name",
+                "keychain-access-groups",
+                "platform-application"
+              ],
+              "entitlementPayloadSHA256": "d2fea7c7a4c4ed94a58edf2d737235ca35165f29baa65124ebffd903fa368d75"
+            }
+          ]
+        },
+        {
+          "path": "var/jb/usr/libexec/redditbox-keychain-cleaner",
+          "sha256": "9c7955605d305fddf858662cb045936451960258feaadc8bff614279b44d3fce",
+          "architectures": [
+            "arm64",
+            "arm64e"
+          ],
+          "slices": [
+            {
+              "architecture": "arm64",
+              "entitlementKeys": [],
+              "entitlementPayloadSHA256": "9261ecceda608ef174256e5fdc774c1e6e3dcf533409c1bc393d490d01c713f1"
+            },
+            {
+              "architecture": "arm64e",
+              "entitlementKeys": [],
+              "entitlementPayloadSHA256": "9261ecceda608ef174256e5fdc774c1e6e3dcf533409c1bc393d490d01c713f1"
+            }
+          ]
+        }
+      ],
+      "machOInspection": {
+        "componentCount": 7,
+        "sliceCount": 12,
+        "allExpectedPathsAndArchitecturesChecked": true
+      },
+      "licensePin": {
+        "publicKeyID": "b2c5d4176c727107c9826ad69386d4d65f90920074981bd842127d6b22add6e9",
+        "matchesExistingDeploymentPublicPEM": true,
+        "publicKeyReplaced": false,
+        "embeddedInEveryDaemonSlice": true
+      },
+      "catalog": {
+        "models": 21,
+        "modelIOSChoices": 159,
+        "payloadMatchesCommittedCatalog": true
+      },
+      "entitlementValuesMatch0_1_18Rootless": true,
+      "rootfulInspectedInThisRecord": false
+    }
+  ],
+  "stage": "Intermediate app-bound backup and restore integration; Facebook remains inactive",
+  "validation": {
+    "buildScript": "scripts/build-mac.sh",
+    "packageScheme": "rootless",
+    "signing": "ldid-only; no Apple development team",
+    "hostNativeEntrypointCount": 107,
+    "actualAppBackupWorkerAssertions": 73,
+    "actualExportRestoreTransactionAssertions": 190,
+    "existingManifestAssertions": 50,
+    "existingRestoreCleanupAssertions": 42,
+    "buildLogSHA256": "f4322126579e95993da6a64e9bb452afea29bdeab7b9df5b6cca5b3bf21f970e",
+    "staticCheck": "ALL CLEAN",
+    "installed": false,
+    "published": false
+  }
+}

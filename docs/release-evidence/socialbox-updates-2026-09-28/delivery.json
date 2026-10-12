@@ -1,0 +1,245 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-09-28",
+  "scope": "Owner test upgrade and update distribution; not a public release or isolation acceptance",
+  "candidate": {
+    "version": "3.1.0-1+socialbox.16",
+    "packageSHA256": "7963bd73c7e2be86f48f99e2a351551b37ec4f2ca61dc2dacece60fef3c5f24a",
+    "status": "INSTALLED_PAYLOAD_VERIFIED",
+    "payloadFiles": 59,
+    "metadataByteIdentical": true
+  },
+  "sourceCommit": "d2bb08bbaa4a0a71e9b153234bc1f4aee2605ee1",
+  "backup": {
+    "archiveSHA256": "41c1398d36a2b9e81b85c14b832e648263d349bacd10333d7fee3fc0b1f9c2fd",
+    "rawArchiveSHA256": "f06c773400aed1562e87d0292989a33a08c05905134270b7bdb17b28e1416cc3",
+    "storage": "Mac-only private gzip archive",
+    "deviceArchiveCreated": false,
+    "manifestSHA256": "b65e47f7e6d34402c547fb1bd1e609ab424d8fa190baf0d0173a9cb1a62dfb04",
+    "archiveBytes": 359910555,
+    "rawArchiveBytes": 854712320,
+    "uncompressedKiB": 848460,
+    "entryCount": 17906,
+    "rootCount": 18,
+    "twoMatchingManifests": true,
+    "persistedGzipDigestAndManifestVerified": true,
+    "scope": "owned runtime state; global system Keychain and foreign target-account recovery not covered"
+  },
+  "dataComparison": {
+    "allOwnedRuntime": {
+      "beforeToFirstPost": {
+        "added": 0,
+        "modified": 3,
+        "removed": 0
+      },
+      "beforeToSecondPost": {
+        "added": 0,
+        "modified": 3,
+        "removed": 0
+      },
+      "entryCounts": [
+        17906,
+        17906,
+        17906
+      ],
+      "firstToSecondPost": {
+        "added": 0,
+        "modified": 2,
+        "removed": 0
+      },
+      "normalizedSHA256": [
+        "67ab7953073153ee85deb7e4142093be79c02cd9289f3fa1764e52a3c9987346",
+        "fa380048a70444a77004bf5444d7a8c5e54a17cfe0caa58a43ec284612156b1c",
+        "ea1c094835e85ba17600e6723a338a9cc848b96260ae5716fb2ec611888166b4"
+      ],
+      "postSnapshotsEqual": false,
+      "regularOrHardlinkCounts": [
+        14374,
+        14374,
+        14374
+      ],
+      "status": "inconclusive",
+      "threeEqual": false
+    },
+    "comparisonReceiptSHA256": "c2d246c033be8d1c9a0c50523f81f56058619f635f7cc13f31175f67d4c9f546",
+    "excludedComparisonFields": [
+      "entry atime/ctime/mtime",
+      "PAX atime/ctime/mtime"
+    ],
+    "installResultSHA256": "2e9bca58ce55fe060000da68556b56c54f2fa0b80c9694fa93fb3cbae1f81e84",
+    "packageSHA256": "7963bd73c7e2be86f48f99e2a351551b37ec4f2ca61dc2dacece60fef3c5f24a",
+    "rootCounts": [
+      18,
+      18,
+      18
+    ],
+    "rootListsEqual": true,
+    "schemaVersion": 1,
+    "scope": "Container trees and metadata-resolved owned app/group roots; no global Keychain or foreign-account recovery claim",
+    "scopedContainerData": {
+      "beforeToFirstPost": {
+        "added": 0,
+        "modified": 0,
+        "removed": 0
+      },
+      "beforeToSecondPost": {
+        "added": 0,
+        "modified": 0,
+        "removed": 0
+      },
+      "entryCounts": [
+        63,
+        63,
+        63
+      ],
+      "firstToSecondPost": {
+        "added": 0,
+        "modified": 0,
+        "removed": 0
+      },
+      "normalizedSHA256": [
+        "f34fa671b8ba94229c4c98f4b8603b1762d2f677144a6c4e154c1526777db346",
+        "f34fa671b8ba94229c4c98f4b8603b1762d2f677144a6c4e154c1526777db346",
+        "f34fa671b8ba94229c4c98f4b8603b1762d2f677144a6c4e154c1526777db346"
+      ],
+      "postSnapshotsEqual": true,
+      "regularOrHardlinkCounts": [
+        14,
+        14,
+        14
+      ],
+      "status": "same",
+      "threeEqual": true
+    },
+    "scopedSubsetNonempty": true,
+    "sourceManifestSHA256": [
+      "b65e47f7e6d34402c547fb1bd1e609ab424d8fa190baf0d0173a9cb1a62dfb04",
+      "01d2fe42b82fe0212349f991e585b6b6033342b3ef84f9f907da488a71665496",
+      "019f1e8e5af42221b101fd6ffe86161efcc361e0d1cd4b5b5e341901c89ac117"
+    ],
+    "version": "3.1.0-1+socialbox.16"
+  },
+  "foregroundAcceptance": "NOT_RUN: phone remained locked at final USB preview",
+  "customerAccountRecovery": "NOT_RUN: global Keychain and foreign account recovery not covered",
+  "website": {
+    "production": "https://redditspoof.vercel.app",
+    "staging": "https://redditspoof-en5dz4vic-modelclone.vercel.app",
+    "deploymentId": "dpl_35XjXnLcRbBqW9LhCK5KJ3qcnSsw",
+    "stagingChecks": {
+      "status": "PASS",
+      "routes": [
+        {
+          "route": "/login",
+          "status": 200
+        },
+        {
+          "route": "/admin/releases",
+          "status": 307
+        },
+        {
+          "route": "/api/admin/releases",
+          "status": 403
+        },
+        {
+          "route": "/api/admin/licenses",
+          "status": 403
+        },
+        {
+          "route": "/updates",
+          "status": 200
+        },
+        {
+          "route": "/api/releases/socialbox/latest",
+          "status": 200
+        },
+        {
+          "route": "/apt/socialbox/Release",
+          "status": 404
+        }
+      ],
+      "unchangedAPTFiles": 16,
+      "existingAdminReadOnly": "NOT_RUN: existing password unavailable; authentication routes/middleware unchanged and host regressions passed"
+    },
+    "productionChecks": {
+      "status": "PASS",
+      "routes": [
+        {
+          "route": "/login",
+          "status": 200
+        },
+        {
+          "route": "/admin/releases",
+          "status": 307
+        },
+        {
+          "route": "/api/admin/releases",
+          "status": 403
+        },
+        {
+          "route": "/api/admin/licenses",
+          "status": 403
+        },
+        {
+          "route": "/updates",
+          "status": 200
+        },
+        {
+          "route": "/api/releases/socialbox/latest",
+          "status": 200
+        },
+        {
+          "route": "/apt/socialbox/Release",
+          "status": 404
+        }
+      ],
+      "unchangedAPTFiles": 16,
+      "existingAdminReadOnly": "NOT_RUN: existing password unavailable; authentication routes/middleware unchanged and host regressions passed"
+    },
+    "publicationLockReleased": true,
+    "productionBrowserObservation": "PASS: App updates / No public update yet; no installation control; configured support contact"
+  },
+  "stableManifest": {
+    "schemaVersion": 1,
+    "channel": "stable",
+    "available": false
+  },
+  "productionMutations": {
+    "websiteDeployment": true,
+    "appRelease": false,
+    "acceptanceReceipts": false,
+    "licenses": false
+  },
+  "checks": {
+    "nativeUpdates": 69,
+    "syntheticWorkspace": 174,
+    "browserWithMockAdminAPIs": 18,
+    "releasePolicyRoutesStorage": 27,
+    "aptMockPublicationGroups": 17,
+    "gpgPreparation": 8,
+    "packageTests": 36,
+    "helperTests": 7,
+    "leakContractTests": 8,
+    "englishCatalogEntries": 287,
+    "englishCatalogChecks": 875,
+    "englishCatalogReferences": 328,
+    "brandingPython": 9,
+    "brandingNative": 31,
+    "brandingFiles": 24,
+    "staticCheck": "PASS",
+    "strictUIKitCompile": "PASS",
+    "cloudBuild": "PASS",
+    "existingCloudSuites": "PASS"
+  },
+  "limitations": [
+    "Exact predecessor .15 only; rootless only",
+    "Private SSH backup/quiescence is not supplied by the public package alone",
+    "Global/deactivation/batch checked storage transitions unfinished",
+    "No completed launch fence or measured network isolation",
+    "New web-license activation with retained core not established",
+    "No physical UI recording, account switching, packet failure or restore rehearsal"
+  ],
+  "evidenceFiles": {
+    "browser-tests.json": "8ebef8e80c84a61e403b94101e6f5191a5605b40ca2512aa0c8e437b5aa892f4",
+    "workspace-tests.json": "c16e98b2f0de2f92603573a64f6028f4cce8c8877a0eb91c7223d0a6c424fd12"
+  }
+}

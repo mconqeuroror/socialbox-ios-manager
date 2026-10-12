@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "test": "Simplified owner UI; actual layout/navigation only",
+  "device": "iPhone X",
+  "iOS": "16.7.16",
+  "installedOwnerBase": "com.secretsauce.doritos 3.1.0-1+socialbox.17",
+  "build": {
+    "architectures": [
+      "arm64",
+      "arm64e"
+    ],
+    "build": "PASS",
+    "strictSignature": "PASS",
+    "sha256": "a0423c7c92dbbe49b700bce7605fa7a9edb9e1d2cf5d70bb9d658137f78972d8",
+    "sourceCommit": "b992b0cb39b32088a2bc34ae84460ac187e1e1a1",
+    "arm64Entitlements": "none",
+    "arm64eEntitlements": "none",
+    "changedSourcesSHA256": {
+      "lucid/Presentation/LBXWorkspace.m": "4a791f62179da15332cd324f8190ac860406888343644dc0e888d176aebde19c",
+      "lucid/Presentation/SBContainersView.m": "528270826168fe6ae8a86b9fecff4be3af13b2cc2404ff2f64c39a5e52469fab",
+      "lucid/Presentation/SBInterfaceCopy.m": "b47fdaae7dca96ea096e1e175c7f8503877544000324510bf660eeaa8d8417f6"
+    }
+  },
+  "hostTests": {
+    "UIKitWorkspace": {
+      "status": "PASS",
+      "checks": 239,
+      "boundary": "actual production UI with synthetic backend"
+    },
+    "backendAdapter": {
+      "status": "PASS",
+      "checks": 119,
+      "boundary": "synthetic ABI and routing"
+    },
+    "interfaceCopy": {
+      "status": "PASS",
+      "checks": 809,
+      "semanticReferences": 298
+    }
+  },
+  "physical": {
+    "backendActionsInvoked": false,
+    "results": {
+      "connectionVisible": 1,
+      "detailKeepsAppsAndProxy": 1,
+      "detailKeepsSwitchAndRemove": 1,
+      "detailOmitsFolder": 1,
+      "folderFilterRemoved": 1,
+      "newContainerVisible": 1,
+      "selectionAndCountUnchanged": 1,
+      "settingsSimplified": 1,
+      "threeSections": 1
+    },
+    "status": "PASS",
+    "testNavigationOnly": true,
+    "uid": 501
+  },
+  "cleanup": {
+    "privateProbeRemoved": "PASS",
+    "ownerProgramsUnchanged": "PASS",
+    "installedOverlaySHA256": "a0423c7c92dbbe49b700bce7605fa7a9edb9e1d2cf5d70bb9d658137f78972d8"
+  },
+  "postCleanupOwnerContainersVisible": "PASS",
+  "ownerMetadataBackupSHA256": "3068b235703dd0b213881644267f504fad9ff8a67bc6cd300ea5fa95e4b83c21",
+  "previousOverlaySHA256": "911606412d389f98849baf3e76c3e3c0b0813acf3d9a24ab873fe3ccb9928fbb",
+  "scope": {
+    "threeVisibleSections": [
+      "Containers",
+      "Connection",
+      "Settings"
+    ],
+    "removedSettingsControls": [
+      "cloud",
+      "seed copy/import",
+      "unreviewed preferences",
+      "maintenance/restarts/recovery/reset",
+      "sign-out",
+      "update and guide shortcuts"
+    ],
+    "retainedSettings": [
+      "device and jailbreak information",
+      "installed runtime license plan/status",
+      "support contact",
+      "read-only diagnostics navigation"
+    ],
+    "removedContainerControls": [
+      "import/export/session/cloud/backup shortcuts",
+      "folder filters and operations",
+      "global actions and diagnostics from container details"
+    ],
+    "retainedContainerControls": [
+      "create",
+      "identifier rules for new containers",
+      "app selection",
+      "proxy assignment",
+      "rename",
+      "switch",
+      "confirmed deletion",
+      "original/default session",
+      "search/filter/sort"
+    ],
+    "originalConnectionCodeChanged": false,
+    "originalProgramsAndEngineUnchanged": true
+  },
+  "notRun": [
+    "new unified creation wizard with persisted manual/random identifiers",
+    "editing every saved container identifier",
+    "Instagram/Facebook/Twitter selection individually and together at creation",
+    "whole-app website licensing and original runtime consumers",
+    "automatic storage gate switching and interruption recovery",
+    "two-account Instagram acceptance",
+    "Facebook and Twitter lifecycle/account acceptance",
+    "customer clean install and installer flow",
+    "metadata archive restoration",
+    "rollback script execution"
+  ],
+  "claims": {
+    "clientReady": false,
+    "publishedCustomerArtifact": false,
+    "backendAdmissionChanged": false,
+    "isolationVerified": false
+  }
+}

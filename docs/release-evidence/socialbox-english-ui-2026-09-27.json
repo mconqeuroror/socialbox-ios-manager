@@ -1,0 +1,144 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-09-27",
+  "version": "3.1.0-1+socialbox.14",
+  "previousVersion": "3.1.0-1+socialbox.13",
+  "status": "PASS_ENGLISH_BUILD_AND_INSTALL_PHYSICAL_UI_NOT_RUN",
+  "scope": "English-only authored UI. User data, original compatibility inputs, device locale, identity values, licensing and core behavior are preserved.",
+  "packageSHA256": "6d47c2006eea87142714973cae5b23eff1cd7b322f511951e79b40fdd3f890ec",
+  "package": {
+    "installed": true,
+    "files": 59,
+    "originalProgramsByteIdentical": 15,
+    "sourceSnapshotMatches": true,
+    "architectures": [
+      "arm64",
+      "arm64e"
+    ],
+    "signer": "ldid; no Apple Development Team",
+    "publishedToAPT": false
+  },
+  "validation": {
+    "fixtures": [
+      {
+        "name": "base",
+        "status": "PASS",
+        "assertions": 228,
+        "resultPath": "docs/release-evidence/socialbox-english-ui-2026-09-27/base-synthetic-result.json",
+        "resultSHA256": "4f20c844794a85a1794951077217575790c87f2b6072fa48bc6b7df6d37a57d7"
+      },
+      {
+        "name": "workspace",
+        "status": "PASS",
+        "assertions": 141,
+        "resultPath": "docs/release-evidence/socialbox-english-ui-2026-09-27/workspace-synthetic-result.json",
+        "resultSHA256": "c09bef50c196332df63b79f78739cc8561b5930940f197f0180b3cf9f83b280c"
+      },
+      {
+        "name": "identity",
+        "status": "PASS",
+        "assertions": 41,
+        "resultPath": "docs/release-evidence/socialbox-english-ui-2026-09-27/identity-synthetic-result.json",
+        "resultSHA256": "cc45d002baf1155259a4347f62bad1fb0e256a65f8bf63911e714b3b8053a70e"
+      },
+      {
+        "name": "secondary",
+        "status": "PASS",
+        "assertions": 27,
+        "resultPath": "docs/release-evidence/socialbox-english-ui-2026-09-27/secondary-synthetic-result.json",
+        "resultSHA256": "0ba987435d9cb62634ced0987ddd20f6bc9820e4950ea3beba412f99bbb91dde"
+      },
+      {
+        "name": "backend",
+        "status": "PASS",
+        "assertions": 90,
+        "resultPath": "docs/release-evidence/socialbox-english-ui-2026-09-27/backend-synthetic-result.json",
+        "resultSHA256": "da55f5ea4756cf90adce4a6fb18c11065d1ed78704138a1451ead71f2660cff4"
+      }
+    ],
+    "catalogEntries": 249,
+    "catalogRuntimeChecks": 761,
+    "catalogReferences": 284,
+    "copyNativeAssertions": 31,
+    "copyAndGuardTestGroups": 9,
+    "helperPackageTestGroups": 7,
+    "staticCheck": "ALL CLEAN",
+    "sourceBrandingGuard": "PASS: 22 files, no unapproved legacy reference",
+    "EnglishRegression": {
+      "oldCatalog": "FAIL as expected: 63 known Slovak literals",
+      "currentCatalog": "PASS: 0 known Slovak literals",
+      "compatibilityInputsPreserved": 50
+    },
+    "catalogKeysAndFormatSignaturesPreserved": true
+  },
+  "syntheticPreview": {
+    "path": "docs/release-evidence/socialbox-english-ui-2026-09-27/containers-synthetic.png",
+    "sha256": "05a82f41d3d5c52eca2ad9d887e9a814cc0ec76be71ae8dd093f459d1152c096",
+    "scope": "English production UI with 40 synthetic records; not physical phone acceptance"
+  },
+  "physical": {
+    "uiAcceptance": "NOT_RUN",
+    "recordingAvailable": false,
+    "reason": "USB preview remained black after the update; SSH version/payload verification and launch request succeeded. Visible phone screens are not inferred from installation or simulator checks."
+  },
+  "installation": {
+    "status": "INSTALLED_PAYLOAD_VERIFIED",
+    "payloadFiles": 59,
+    "metadataByteIdentical": true,
+    "runtimeBackup": {
+      "archiveSHA256": "b1879e8c2f8aa6271e89e4712e2063d39a8319c6bd9a2fe881fa77915b09f6c7",
+      "rawArchiveSHA256": "dfe0e627ae3dde7468b21ff8744a5a13a228819e88ffff1fef5945479845c13b",
+      "storage": "Mac-only private gzip archive",
+      "deviceArchiveCreated": false,
+      "manifestSHA256": "fc245d7e3334a4a907c92c4858aea8f37b7dd617f5e3aa32b1ba2d82400b22d4",
+      "archiveBytes": 359859826,
+      "rawArchiveBytes": 853975040,
+      "uncompressedKiB": 847616,
+      "entryCount": 17763,
+      "rootCount": 18,
+      "twoMatchingManifests": true,
+      "persistedGzipDigestAndManifestVerified": true,
+      "scope": "owned runtime state; global system Keychain and foreign target-account recovery not covered"
+    },
+    "runtimeComparison": {
+      "status": "inconclusive",
+      "twoMatchingPostManifests": false,
+      "containerData": {
+        "status": "inconclusive"
+      },
+      "configurationAndOtherOwnedRuntime": {
+        "status": "inconclusive"
+      },
+      "reasonCode": "POST_INSTALL_STATE_NOT_STABLE",
+      "observedPostChanges": {
+        "added": 0,
+        "removed": 0,
+        "modified": 2,
+        "total": 2
+      },
+      "privateComparisonSHA256": "6d836acf1ccdd2704179b25e7d10b04577225a1884e55f03a8dc4f95ef096c21"
+    },
+    "recoverySHA256": "aa4297a7df8e67b36b43e5bead4210c11ee5c487cdcf288b6ec88902504836cb",
+    "versionReadback": "3.1.0-1+socialbox.14|installed",
+    "foregroundLaunchRequestExit": 0,
+    "device": "iPhone X / iOS 16.7.16",
+    "scopedContainerDataVerification": {
+      "status": "PASS",
+      "scopedEntries": 63,
+      "regularOrHardlinkedFiles": 14,
+      "threeSnapshotsEqual": true,
+      "evidencePath": "docs/release-evidence/socialbox-english-ui-2026-09-27/installation-scoped-state.json",
+      "evidenceSHA256": "4a75a9f84ed81b1967f20e660624483977e44a34ed2560de643e41c60a828b21",
+      "scope": "Container trees and metadata-resolved owned app/group roots; no global Keychain or foreign-account recovery claim"
+    },
+    "retainedLegacyDataVerification": {
+      "status": "PASS",
+      "scope": "Retained older RedditBox owned runtime namespace; separate from current container/app-group scope",
+      "entries": 17378,
+      "regularOrHardlinkedFiles": 13900,
+      "threeSnapshotsEqual": true,
+      "evidencePath": "docs/release-evidence/socialbox-english-ui-2026-09-27/installation-retained-legacy-state.json",
+      "evidenceSHA256": "62cbcdcda1f9feaf62b9fdc6dc2eed34c1dff5bc404e6ab8fd583c99ff49e33a"
+    }
+  }
+}

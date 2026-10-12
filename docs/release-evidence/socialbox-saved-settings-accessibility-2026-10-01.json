@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "unit": 34,
+  "kind": "saved-settings-semantic-accessibility-labels",
+  "recordedAt": "2026-10-01T19:33:40.848968+00:00",
+  "status": "PASS_LOCAL_NOT_INSTALLED",
+  "clientDeliveryReady": false,
+  "customerArtifactReleased": false,
+  "problem": "Manual identifier fields used the format example as their accessibility name. Advertising/vendor/platform fields each announced UUID; Wi-Fi/Bluetooth shared the same address example.",
+  "change": "Each of the ten existing fields now uses its visible field name as accessibilityLabel and the original format as accessibilityHint. Placeholders, IDs, text, save/edit/keep/random/recovery and all source licensing/schema paths are unchanged.",
+  "scope": "One presentation line only. Existing saved-setup regression used; no new mirror tests. Exact semantic mapping is source-reviewed, not actual VoiceOver acceptance. No new installer/runtime/identity/proxy or first-customer authority.",
+  "regression": {
+    "status": "PASS",
+    "assertions": 126,
+    "quotedUIKitInputs": 60,
+    "sourceStableCurrent": true,
+    "runnerObservations": 2,
+    "runnerObservationsOverlapUIKitGraph": true,
+    "reportSHA256": "9242d7400512c854aeba11bea8a6a370d5fa8ecb0fde6f24d242a9feb8bf8c4a",
+    "fixtureReportSHA256": "f36d29ae66bb30d86cd1c068314569342fb1f907635b54a8488275aad1d758a1",
+    "limits": "Actual UIKit with synthetic typed coordinator/transport replies; no live root/website/device or actual VoiceOver focus/audio. Existing manual creation/edit/retained identifiers/retry flow only."
+  },
+  "native": {
+    "status": "PASS_OFFLINE_ARTIFACT_ONLY",
+    "overlaySHA256": "f592fa20e7146ca85c9e20fdc48ea7a02e1e6e297c64d361dbdbc54944ac0009",
+    "productionInputs": 71,
+    "sourceStableCurrent": true,
+    "producerPythonInputsIncludingPrivateWrapper": 5,
+    "verifierContractInputs": 5,
+    "retainedVerifierToolSteps": 10,
+    "strictHostAdHocAndEmptyEntitlements": "PASS",
+    "namedTestProvidersAbsent": "PASS",
+    "compileReportSHA256": "4a9b00e989289bec4ea775cbacf6244d7744ca01acb58cbc0aef738141a556c5",
+    "compatibleReportSHA256": "2dabae44930f4a6c9f1e4aca3257b33e54bdce381c42a1f4665c96e0253c5f10",
+    "verifierReportSHA256": "decc23d55a20c418de1ab5fe25f37ffbfa175404419a56a4acb4ee8bc6415df5",
+    "limits": "Producer compile-only report is retained unchanged. Separately pinned compatible schema states compile-only PASS; committed verifier freshly assesses raw artifact. Later materializer is outside both frozen Python graphs; builderSHA identifies source contract, not execution of the canonical package builder. New full overlay stays private and must not replace the owner UI for an animation-only update. SDK/Theos/compiler/macOS/tool execution trust/publisher/device excluded."
+  },
+  "independentReview": {
+    "status": "PASS_SCOPED",
+    "scope": "Read-only exact production diff, pre-run orchestration, current graph/report/artifact hashes and ten retained raw verifier journals. Private assert gates were replaced by explicit errors before execution; no relaxed production check. Existing regression does not dynamically assert new accessibility labels; actual VoiceOver remains NOT_RUN."
+  },
+  "phone": {
+    "status": "NOT_RUN",
+    "newSSHAttempts": 0,
+    "effects": false,
+    "licenseCreated": false,
+    "ownerInstalled": false,
+    "actualVoiceOver": "NOT_RUN_AUTH_RESTORATION_PENDING"
+  },
+  "unchanged": "Owner programs/accounts/default source state, old overlay/filter, Unit33 isolated blue addon, website and customer release gate unchanged. Pending SSH and clean-device questions are not repeated. Historical Unit30 audit FAIL remains.",
+  "next": "After prerequisites return, accept the saved-settings component in a new private backed-up phone attempt. Blue presentation acceptance continues to use only the isolated Unit33 addon pair. No full-overlay owner replacement or blocked runtime/identity task.",
+  "governance": "ADOPT-001/ADOPT-010 own gate/trailer required; full historical Unit30 gate failure stays visible."
+}

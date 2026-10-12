@@ -1,0 +1,15 @@
+#!/bin/sh
+set -e
+case "${1:-}" in
+  remove|purge)
+    LAUNCHCTL=$(command -v launchctl || true)
+    if [ -n "$LAUNCHCTL" ] && "$LAUNCHCTL" print system/com.redditbox.daemon >/dev/null 2>&1; then
+      "$LAUNCHCTL" bootout system/com.redditbox.daemon
+    fi
+    if command -v uicache >/dev/null 2>&1; then
+      uicache -u /var/jb/Applications/RedditBox.app || true
+      uicache -u /var/jb/Applications/RedditBoxFirewall.app || true
+    fi
+    ;;
+esac
+exit 0

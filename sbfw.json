@@ -1,0 +1,18 @@
+[
+  {
+    "name": "SpringBoard.tbd",
+    "path": "iPhoneOS16.5.sdk/System/Library/PrivateFrameworks/SpringBoard.framework/SpringBoard.tbd",
+    "sha": "23a0bb1ec18dc25dd1523acf5d158419382c78e8",
+    "size": 1149435,
+    "url": "https://api.github.com/repos/theos/sdks/contents/iPhoneOS16.5.sdk/System/Library/PrivateFrameworks/SpringBoard.framework/SpringBoard.tbd?ref=master",
+    "html_url": "https://github.com/theos/sdks/blob/master/iPhoneOS16.5.sdk/System/Library/PrivateFrameworks/SpringBoard.framework/SpringBoard.tbd",
+    "git_url": "https://api.github.com/repos/theos/sdks/git/blobs/23a0bb1ec18dc25dd1523acf5d158419382c78e8",
+    "download_url": "https://raw.githubusercontent.com/theos/sdks/master/iPhoneOS16.5.sdk/System/Library/PrivateFrameworks/SpringBoard.framework/SpringBoard.tbd",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/theos/sdks/contents/iPhoneOS16.5.sdk/System/Library/PrivateFrameworks/SpringBoard.framework/SpringBoard.tbd?ref=master",
+      "git": "https://api.github.com/repos/theos/sdks/git/blobs/23a0bb1ec18dc25dd1523acf5d158419382c78e8",
+      "html": "https://github.com/theos/sdks/blob/master/iPhoneOS16.5.sdk/System/Library/PrivateFrameworks/SpringBoard.framework/SpringBoard.tbd"
+    }
+  }
+]

@@ -1,0 +1,499 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-09-21",
+  "branch": "feat/lucid-base",
+  "scope": "Private eighteen-screen presentation and proxy-input integration candidate; original runtime/backend acceptance and stronger isolation integration incomplete",
+  "sourceCommit": "5dc5dc8f750a093d4759910aea5041d0801ee8ac",
+  "artifact": {
+    "filename": "socialbox-owner-base-unvalidated.deb",
+    "privateArtifact": true,
+    "publishedToAPT": false,
+    "bytes": 10904820,
+    "workspaceRelativeDirectory": "work/private-doritos-adoption-2026-09-20/socialbox-candidate-2"
+  },
+  "build": {
+    "added_paths": [
+      "var/jb/Applications/DoritosApp.app/SocialBoxIcon60@2x.png",
+      "var/jb/Applications/DoritosApp.app/SocialBoxIcon60@3x.png",
+      "var/jb/Library/MobileSubstrate/DynamicLibraries/LBXPresentation.dylib",
+      "var/jb/Library/MobileSubstrate/DynamicLibraries/LBXPresentation.plist"
+    ],
+    "base_version": "3.1.0-1",
+    "builder_sha256": "eb1f75ed6f174cac63b036b6aca46eac490d3cba28d756cbcf4af7b822c9b919",
+    "changed_original_paths": [
+      "var/jb/Applications/DoritosApp.app/Info.plist"
+    ],
+    "deployment_requirements": [
+      "DEPLOYMENT BLOCKED until emitted narrow rollback-postinst.sh is separately reviewed/applied as the old package postinst with the exact original backed up privately. No preparation was applied by this builder.",
+      "The original postinst has no action guard: direct dpkg can execute its broad system/data actions on abort-upgrade. Merely checking its original hash is insufficient.",
+      "Run emitted read-only preflight BEFORE dpkg; original prerm runs before incoming preinst.",
+      "Original preinst/postrm absent from handoff: any installed instance blocks pending review.",
+      "Existing com.redditbox is preserved and blocks installation pending an explicit tested migration.",
+      "Close original app and review active tunnel/account state before any upgrade; no automatic reset.",
+      "Acceptance must verify injection, signing trust, original services, licensing and rollback.",
+      "Preflight checks the linked CydiaSubstrate framework is present/readable/root-owned at an exact rootless rpath; runtime ABI, symbol resolution and actual injection remain NOT_RUN.",
+      "No MDM/per-app/kernel network enforcement or fail-closed guarantee added by this candidate."
+    ],
+    "device_acceptance": "NOT_RUN",
+    "handoff_sha256": "8730c17abbfb8cf12fbbbe19669120e5266b1782dd2a34f814ef0fab557187a2",
+    "installed": false,
+    "ldid_sha256": "932cfe6d92f07dca3e85a8288a43271aa8e9c0881f026fdcdecaecfbf1a7dea4",
+    "maintainer_scripts_sha256": {
+      "postinst": "f62ff92ae5c1e6e68711e6c3812b22f861885583fef5ef22b64fc56f646f5987",
+      "preinst": "7c5defba050702d0a2a5bbcb1b46f93487317bfcd8240a03f876d7403fed4642",
+      "prerm": "8fdb7352a093a8b819b5c0553d5e2ca878afe60ed1e14c2318eb6f0c60e00b43"
+    },
+    "original_controls_executed": false,
+    "original_manifest_files": 52,
+    "original_programs": [
+      {
+        "byte_identical_including_signature": true,
+        "path": "var/jb/Applications/DoritosApp.app/DoritosApp",
+        "sha256": "e230dab07690e30c292962a3c0a3ea8301f9532aaa583a7209fdf33142552dd0",
+        "slices": 2
+      },
+      {
+        "byte_identical_including_signature": true,
+        "path": "var/jb/Applications/DoritosApp.app/PlugIns/DoritosFilesProvider.appex/DoritosFilesProvider",
+        "sha256": "33bb1055f7fb5334268728e4ca707fab87c0e2b9b1abe9953f6867c39ea9cd5f",
+        "slices": 1
+      },
+      {
+        "byte_identical_including_signature": true,
+        "path": "var/jb/Applications/DoritosApp.app/PlugIns/DoritosPacketTunnel.appex/DoritosPacketTunnel",
+        "sha256": "dadff71b596db02306e76970ff11bc9ac304af45ea001bcf5960986dd0f44187",
+        "slices": 1
+      },
+      {
+        "byte_identical_including_signature": true,
+        "path": "var/jb/Library/MobileSubstrate/DynamicLibraries/Doritos.dylib",
+        "sha256": "7172791ab8e102e0330d156eaebba130f9b6d2a5491e0b3cbc5d07bc5965c4ca",
+        "slices": 2
+      },
+      {
+        "byte_identical_including_signature": true,
+        "path": "var/jb/Library/MobileSubstrate/DynamicLibraries/DoritosAccountsd.dylib",
+        "sha256": "06c3d125edc029925d10438cf43ac8253545a783d2222e9a7843cdbcf458c3e8",
+        "slices": 2
+      },
+      {
+        "byte_identical_including_signature": true,
+        "path": "var/jb/Library/MobileSubstrate/DynamicLibraries/DoritosCfPrefsd.dylib",
+        "sha256": "dba106b80dd677b9d05b0df4588995bb4e24dfa3dbfb48fe2402a649faf586c4",
+        "slices": 2
+      },
+      {
+        "byte_identical_including_signature": true,
+        "path": "var/jb/Library/MobileSubstrate/DynamicLibraries/DoritosContainermanagerd.dylib",
+        "sha256": "dd45d69acec2505f09da32f6fd21737184c7425153051517c3f0d1542bb23aea",
+        "slices": 2
+      },
+      {
+        "byte_identical_including_signature": true,
+        "path": "var/jb/Library/MobileSubstrate/DynamicLibraries/DoritosLsd.dylib",
+        "sha256": "9837c536a0cb4078afc87caa57aff5562dea513f6b7a74c153dc41c49db8d6ba",
+        "slices": 2
+      },
+      {
+        "byte_identical_including_signature": true,
+        "path": "var/jb/Library/MobileSubstrate/DynamicLibraries/DoritosMediaServerd.dylib",
+        "sha256": "77eadab63825f6e9aa705b1358bb5614b60add5c45a6e8507a6be2266bdab1f8",
+        "slices": 2
+      },
+      {
+        "byte_identical_including_signature": true,
+        "path": "var/jb/Library/MobileSubstrate/DynamicLibraries/DoritosSecurityd.dylib",
+        "sha256": "b5bef7648272948298cdec201c955b47bed523e43ede2a9bfeb439660f5501a2",
+        "slices": 2
+      },
+      {
+        "byte_identical_including_signature": true,
+        "path": "var/jb/Library/MobileSubstrate/DynamicLibraries/DoritosSpringBoard.dylib",
+        "sha256": "af06a9930986ea919241cf3291c34843e2822e31a3a4478f875fcced753b2ee5",
+        "slices": 2
+      },
+      {
+        "byte_identical_including_signature": true,
+        "path": "var/jb/usr/libexec/DoritosHelper",
+        "sha256": "a0455fd7aeb19712d7ebf147fe773788981204710cd2bfa6f5b087191d0888d2",
+        "slices": 1
+      },
+      {
+        "byte_identical_including_signature": true,
+        "path": "var/jb/usr/local/bin/DoritosCLI",
+        "sha256": "cb76f410122ff5fd66905fb07b96f7f45021341f530c0510d4f2dd2ff75ac5a3",
+        "slices": 2
+      },
+      {
+        "byte_identical_including_signature": true,
+        "path": "var/jb/usr/local/bin/secretsauced",
+        "sha256": "e21659cbacd5e74399cfcd0d3e370dbbb8dca395a23266577dff25c85d033a25",
+        "slices": 1
+      },
+      {
+        "byte_identical_including_signature": true,
+        "path": "var/jb/usr/local/bin/secretsaucemonitor",
+        "sha256": "1aaf600ea991a13b20bbadb785abbd6988709f9d9194d1e4c2796beaa03d0b23",
+        "slices": 1
+      }
+    ],
+    "original_programs_resigned": false,
+    "original_resource_binding": [
+      {
+        "code_directories": [
+          {
+            "hash_type": 1,
+            "info_and_resources_unbound": true,
+            "slot": 0
+          },
+          {
+            "hash_type": 2,
+            "info_and_resources_unbound": true,
+            "slot": 4096
+          }
+        ],
+        "cpu": 16777228,
+        "signature_sha256": "aaf2fb37bb8b7e9ef865be8db2a5212ebc97e13fd8e7653d466c1753094dfc66",
+        "slice_offset": 16384,
+        "subtype": 0
+      },
+      {
+        "code_directories": [
+          {
+            "hash_type": 1,
+            "info_and_resources_unbound": true,
+            "slot": 0
+          },
+          {
+            "hash_type": 2,
+            "info_and_resources_unbound": true,
+            "slot": 4096
+          }
+        ],
+        "cpu": 16777228,
+        "signature_sha256": "2000fd6767c63b73f876fdca3504bb5070beb5d93a1c608ddcb1f0b6419ebf19",
+        "slice_offset": 4751360,
+        "subtype": 2147483650
+      }
+    ],
+    "overlay_sha256": "a8a8e16654b3505978ac8d86f70a08a0a3c42f2e76a3e06fc7d286c8b5477298",
+    "overlay_slices": [
+      {
+        "cpu": 16777228,
+        "sha256": "9990bdbd885cdf99fb692a91c67ca12fb99d938e6e60246e41c8cd10b1046be5",
+        "subtype": 0
+      },
+      {
+        "cpu": 16777228,
+        "sha256": "b7385c8e52f04ea682e6c8bdd9e46d857365a160fc6fe793e6ccb8bdef8ccd7e",
+        "subtype": 2147483650
+      }
+    ],
+    "package": "com.secretsauce.doritos",
+    "package_sha256": "69da66e052aeace0afc8512f2e20c8df78736a1f4460837b73460362a7dd53f6",
+    "payload_files": 53,
+    "presentation_sources": {
+      "lucid/Authorization/LBXLicenseExchange.h": "ab24d7e92934dce040add199712c0bce2cdd29e581b7e0c1a6246708c90f9b29",
+      "lucid/Authorization/LBXLicenseExchange.m": "18800c7b454e0ef69e38b02b44853addd46e694327cc012db34020fbb6491b19",
+      "lucid/Diagnostics/LBXIsolationAssessment.h": "bf14c6febf68b555e90a2374299ec82fc34021b735c284d1262355e9e55d82b9",
+      "lucid/Diagnostics/LBXIsolationAssessment.m": "001acf0e5725bfd8f57a7fc4976ddacd47b895d408534300cdce6ba850ddae13",
+      "lucid/Diagnostics/LBXIsolationViewController.h": "3a6e909eac3c7a04641f29559f563e48c268ba11c350e2f3b261f651fea27275",
+      "lucid/Diagnostics/LBXIsolationViewController.m": "9d697faca9c172cc67560060aa3dc48e1397659e56c5f2a8ee998b1a208b0e80",
+      "lucid/Diagnostics/LBXRecoveredContextAdapter.h": "ffa6aa40adada3e04058638c799e3214c8f946aca7122b6a58a776b48d0f32a7",
+      "lucid/Diagnostics/LBXRecoveredContextAdapter.m": "6398569e9c05f6e65a46120c180571d90e8d2a5bf432e581268941d3eb9b36e7",
+      "lucid/LBXPresentation.plist": "0e8a081a5b34a863af91c1cf30cffe29c203a3cd7f8323588e96e09f6128b4af",
+      "lucid/Makefile": "369e6fefc798a5c10299e7774bacd987255b8d44b57c1074e69c66b2dec98f8a",
+      "lucid/Presentation/LBXPresentation.h": "f7b4065942e1c31ea344f3e0a49cba18fae80f75345b4bdecb2a6f5f4b241346",
+      "lucid/Presentation/LBXPresentation.m": "3ff37658ad540291c029145ea16a12ce57335756efed38c867407ed98bf45505",
+      "lucid/Presentation/Tests/fixture.m": "0988480b89bdf983f67e1c5d1459f9c5ae406b2a7d000a9d00092422ba42f9c4",
+      "lucid/ProxyInput/LBXProxyInput.h": "631bff921855d5107b824535ec89b6d361a36a317474598d58acc3104b3e4375",
+      "lucid/ProxyInput/LBXProxyInput.m": "3ec8244632d6f0a979dafcc459d2f66b7f9eb9853eb4a1b7fb77749a75474495",
+      "lucid/ProxyInput/LBXProxyInputHook.m": "e416b13f0611e52a9cb20a7f2a45f9b2de3c56ca5138b56b983827257cb92625",
+      "lucid/tests/license_exchange.m": "d70064406be4fc0a1111a25fa4e93c4acb590fa1ff8a61c53a30d0a24f89126f",
+      "lucid/tests/proxy_input.m": "e88266daa9a50c9836188f173414a89bd9e1f2bb330555f2917d11fb4d7b352b",
+      "lucid/tests/recovered_context_adapter.m": "9ebdcb59671b7ace15b0e4158fa37f11e5e3aea2a37f852fbae39af10872c269"
+    },
+    "presentation_sources_scope": "Historical all-lucid source snapshot including tests and unlinked research; not a linkage manifest. See production_build_inputs for compiled source provenance.",
+    "preserved_installed_setuid_paths": [
+      "var/jb/Applications/DoritosApp.app/DoritosApp",
+      "var/jb/usr/local/bin/DoritosCLI"
+    ],
+    "production_build_inputs": {
+      "captured_before_make": true,
+      "linked_output": [
+        {
+          "architecture": "arm64",
+          "exported_symbols": [
+            "_LBXDispatchProxyInput",
+            "_LBXIsolationAssessment",
+            "_LBXIsolationPublicReport",
+            "_LBXPlanProxyInput",
+            "_LBXPresentationInstall",
+            "_LBXPresentationMetadataSupported",
+            "_LBXPresentationMethodMatches",
+            "_LBXPresentationStatus",
+            "_LBXRecoveredContextSnapshot",
+            "_OBJC_CLASS_$_LBXIsolationAction",
+            "_OBJC_CLASS_$_LBXIsolationViewController",
+            "_OBJC_CLASS_$_LBXProxyInputPlan",
+            "_OBJC_CLASS_$_RBXHTTPProxyDelegate",
+            "_OBJC_METACLASS_$_LBXIsolationAction",
+            "_OBJC_METACLASS_$_LBXIsolationViewController",
+            "_OBJC_METACLASS_$_LBXProxyInputPlan",
+            "_OBJC_METACLASS_$_RBXHTTPProxyDelegate",
+            "_RBXHTTPProxySettings",
+            "_RBXParseHTTPProxyURL"
+          ],
+          "forbidden_test_and_authorization_seams_present": false,
+          "proxy_hook_marker_present": true,
+          "required_exports": [
+            "LBXDispatchProxyInput",
+            "LBXIsolationAssessment",
+            "LBXIsolationPublicReport",
+            "LBXPlanProxyInput",
+            "LBXPresentationInstall",
+            "LBXPresentationMetadataSupported",
+            "LBXPresentationStatus",
+            "LBXRecoveredContextSnapshot",
+            "RBXParseHTTPProxyURL"
+          ],
+          "slice_sha256": "9990bdbd885cdf99fb692a91c67ca12fb99d938e6e60246e41c8cd10b1046be5"
+        },
+        {
+          "architecture": "arm64e",
+          "exported_symbols": [
+            "_LBXDispatchProxyInput",
+            "_LBXIsolationAssessment",
+            "_LBXIsolationPublicReport",
+            "_LBXPlanProxyInput",
+            "_LBXPresentationInstall",
+            "_LBXPresentationMetadataSupported",
+            "_LBXPresentationMethodMatches",
+            "_LBXPresentationStatus",
+            "_LBXRecoveredContextSnapshot",
+            "_OBJC_CLASS_$_LBXIsolationAction",
+            "_OBJC_CLASS_$_LBXIsolationViewController",
+            "_OBJC_CLASS_$_LBXProxyInputPlan",
+            "_OBJC_CLASS_$_RBXHTTPProxyDelegate",
+            "_OBJC_METACLASS_$_LBXIsolationAction",
+            "_OBJC_METACLASS_$_LBXIsolationViewController",
+            "_OBJC_METACLASS_$_LBXProxyInputPlan",
+            "_OBJC_METACLASS_$_RBXHTTPProxyDelegate",
+            "_RBXHTTPProxySettings",
+            "_RBXParseHTTPProxyURL"
+          ],
+          "forbidden_test_and_authorization_seams_present": false,
+          "proxy_hook_marker_present": true,
+          "required_exports": [
+            "LBXDispatchProxyInput",
+            "LBXIsolationAssessment",
+            "LBXIsolationPublicReport",
+            "LBXPlanProxyInput",
+            "LBXPresentationInstall",
+            "LBXPresentationMetadataSupported",
+            "LBXPresentationStatus",
+            "LBXRecoveredContextSnapshot",
+            "RBXParseHTTPProxyURL"
+          ],
+          "slice_sha256": "b7385c8e52f04ea682e6c8bdd9e46d857365a160fc6fe793e6ccb8bdef8ccd7e"
+        }
+      ],
+      "project_headers": [
+        "lucid/Diagnostics/LBXIsolationAssessment.h",
+        "lucid/Diagnostics/LBXIsolationViewController.h",
+        "lucid/Diagnostics/LBXRecoveredContextAdapter.h",
+        "lucid/Presentation/LBXPresentation.h",
+        "lucid/ProxyInput/LBXProxyInput.h",
+        "shared/RBXHTTPProxy.h"
+      ],
+      "scope": "Exact source-owned translation units, quoted project headers, Makefile and filter; SDK/Theos inputs are outside this snapshot.",
+      "sha256": {
+        "lucid/Diagnostics/LBXIsolationAssessment.h": "bf14c6febf68b555e90a2374299ec82fc34021b735c284d1262355e9e55d82b9",
+        "lucid/Diagnostics/LBXIsolationAssessment.m": "001acf0e5725bfd8f57a7fc4976ddacd47b895d408534300cdce6ba850ddae13",
+        "lucid/Diagnostics/LBXIsolationViewController.h": "3a6e909eac3c7a04641f29559f563e48c268ba11c350e2f3b261f651fea27275",
+        "lucid/Diagnostics/LBXIsolationViewController.m": "9d697faca9c172cc67560060aa3dc48e1397659e56c5f2a8ee998b1a208b0e80",
+        "lucid/Diagnostics/LBXRecoveredContextAdapter.h": "ffa6aa40adada3e04058638c799e3214c8f946aca7122b6a58a776b48d0f32a7",
+        "lucid/Diagnostics/LBXRecoveredContextAdapter.m": "6398569e9c05f6e65a46120c180571d90e8d2a5bf432e581268941d3eb9b36e7",
+        "lucid/LBXPresentation.plist": "0e8a081a5b34a863af91c1cf30cffe29c203a3cd7f8323588e96e09f6128b4af",
+        "lucid/Makefile": "369e6fefc798a5c10299e7774bacd987255b8d44b57c1074e69c66b2dec98f8a",
+        "lucid/Presentation/LBXPresentation.h": "f7b4065942e1c31ea344f3e0a49cba18fae80f75345b4bdecb2a6f5f4b241346",
+        "lucid/Presentation/LBXPresentation.m": "3ff37658ad540291c029145ea16a12ce57335756efed38c867407ed98bf45505",
+        "lucid/ProxyInput/LBXProxyInput.h": "631bff921855d5107b824535ec89b6d361a36a317474598d58acc3104b3e4375",
+        "lucid/ProxyInput/LBXProxyInput.m": "3ec8244632d6f0a979dafcc459d2f66b7f9eb9853eb4a1b7fb77749a75474495",
+        "lucid/ProxyInput/LBXProxyInputHook.m": "e416b13f0611e52a9cb20a7f2a45f9b2de3c56ca5138b56b983827257cb92625",
+        "shared/RBXHTTPProxy.h": "e3ef54cfb9c8c908bcd5d87983169664644c11d79c0d43b856965d6b0ab79ce8",
+        "shared/RBXHTTPProxy.m": "12274640c86a415627390b7c68b0232b16247abf65b61ca39f0923047007c9ce"
+      },
+      "translation_units": [
+        "lucid/Diagnostics/LBXIsolationAssessment.m",
+        "lucid/Diagnostics/LBXIsolationViewController.m",
+        "lucid/Diagnostics/LBXRecoveredContextAdapter.m",
+        "lucid/Presentation/LBXPresentation.m",
+        "lucid/ProxyInput/LBXProxyInput.m",
+        "lucid/ProxyInput/LBXProxyInputHook.m",
+        "shared/RBXHTTPProxy.m"
+      ],
+      "unchanged_after_build": true
+    },
+    "schema_version": 1,
+    "shared_sources": {
+      "shared/RBXHTTPProxy.h": "e3ef54cfb9c8c908bcd5d87983169664644c11d79c0d43b856965d6b0ab79ce8",
+      "shared/RBXHTTPProxy.m": "12274640c86a415627390b7c68b0232b16247abf65b61ca39f0923047007c9ce"
+    },
+    "status": "UNVALIDATED_UPGRADE_ONLY",
+    "version": "3.1.0-1+socialbox.2"
+  },
+  "independentVerification": {
+    "status": "PASS",
+    "artifact_bytes": 10904820,
+    "package_sha256": "69da66e052aeace0afc8512f2e20c8df78736a1f4460837b73460362a7dd53f6",
+    "payload_files": 53,
+    "original_programs_unchanged": 15,
+    "original_slices_unchanged": 25,
+    "only_changed_original": "var/jb/Applications/DoritosApp.app/Info.plist",
+    "added_paths": [
+      "var/jb/Applications/DoritosApp.app/SocialBoxIcon60@2x.png",
+      "var/jb/Applications/DoritosApp.app/SocialBoxIcon60@3x.png",
+      "var/jb/Library/MobileSubstrate/DynamicLibraries/LBXPresentation.dylib",
+      "var/jb/Library/MobileSubstrate/DynamicLibraries/LBXPresentation.plist"
+    ],
+    "md5_and_root_ownership": "PASS",
+    "source_hashes_current": "PASS",
+    "production_symbols": {
+      "arm64": "PASS",
+      "arm64e": "PASS"
+    },
+    "installed": false,
+    "runtime_acceptance": "NOT_RUN"
+  },
+  "packagingTests": {
+    "status": "PASS",
+    "command": "python3 tools/test_socialbox_recovered.py",
+    "behavioral_test_groups": 31,
+    "elapsed_seconds": 89.603,
+    "test_sha256": "d36a41ddb48dea00e4c9ff690b41e62c6e7e56752684a92cc38bd009eb4e4451",
+    "test_groups": [
+      "BuildProvenance.test_exact_production_inputs_exclude_unlinked_and_capture_transitive_headers",
+      "BuildProvenance.test_modified_added_removed_inputs_and_makefile_changes_reject_build",
+      "BuildProvenance.test_unreviewed_source_assignment_or_escaping_header_rejected",
+      "BuildProvenance.test_linked_output_checks_both_architectures_without_executing_overlay",
+      "BuildProvenance.test_each_architecture_rejects_missing_symbols_or_test_and_authorization_exports",
+      "BuildProvenance.test_each_slice_requires_hook_marker_and_rejects_hidden_test_or_auth_seams",
+      "BuildProvenance.test_build_wires_exact_inputs_and_discards_output_after_concurrent_source_edit",
+      "BuildProvenance.test_output_replaced_during_symbol_inspection_rejected",
+      "Packaging.test_reject_unpinned_zip_before_parsing",
+      "Packaging.test_resource_bindings_all_slices_and_directories",
+      "Packaging.test_signature_bounds_and_missing_directory_rejected",
+      "Packaging.test_exact_original_bytes_and_abi_preserved",
+      "Packaging.test_payload_mutations_and_abi_changes_are_rejected",
+      "Packaging.test_signed_resources_and_wrong_filter_or_arch_rejected",
+      "Packaging.test_package_contents_and_no_installer_side_effects",
+      "ScriptBehavior.test_exact_base_preflight_is_read_only",
+      "ScriptBehavior.test_fresh_wrong_version_rootful_old_os_coexistence_and_controls_block",
+      "ScriptBehavior.test_baseline_and_old_control_tampering_blocked",
+      "ScriptBehavior.test_foreign_parent_symlink_is_rejected_before_upgrade",
+      "ScriptBehavior.test_writable_or_nonroot_parent_rejected",
+      "ScriptBehavior.test_rootless_bootstrap_link_allowed",
+      "ScriptBehavior.test_only_exact_injection_alias_allowed",
+      "ScriptBehavior.test_original_unsafe_postinst_without_reviewed_replacement_is_blocked",
+      "ScriptBehavior.test_nonexecutable_controls_are_rejected",
+      "ScriptBehavior.test_linked_shim_presence_at_exact_rootless_rpaths",
+      "ScriptBehavior.test_rollback_backup_required_private_original_bytes",
+      "ScriptBehavior.test_foreign_cli_alias_and_added_destinations_block_in_external_preflight",
+      "ScriptBehavior.test_postinst_only_owned_services_and_app",
+      "ScriptBehavior.test_foreign_cli_alias_and_service_failure_not_ignored",
+      "ScriptBehavior.test_prerm_preserves_storage_stops_monitor_first_and_ignores_abort",
+      "ScriptBehavior.test_abort_upgrade_recovers_only_owned_services"
+    ]
+  },
+  "sourceChecks": {
+    "proxy_input": {
+      "status": "PASS",
+      "assertions": 139,
+      "command": "bash lucid/tests/test_proxy_input.sh",
+      "test_sha256": "e88266daa9a50c9836188f173414a89bd9e1f2bb330555f2917d11fb4d7b352b"
+    },
+    "synthetic_uikit": {
+      "status": "PASS",
+      "assertions": 196,
+      "scope": "Synthetic UIKit presentation fixture; not original backend/device/isolation acceptance",
+      "report_sha256": "d988fe7c436ba4e5a4979d5a06dfd1050b05301d40e4c029abf139ddb35727ca",
+      "fixture_sha256": "0988480b89bdf983f67e1c5d1459f9c5ae406b2a7d000a9d00092422ba42f9c4",
+      "runner_sha256": "f3175cc3f7d6c8d73922c9e8d171315cb8475f02ef2be31828acfd6cf0e49653",
+      "styled_exact_classes": [
+        "AppListViewController",
+        "BackupsViewController",
+        "BulkProxyImportViewController",
+        "CarrierPickerViewController",
+        "CloudPushViewController",
+        "CloudViewController",
+        "CountryPickerViewController",
+        "DRTAllowedModelsViewController",
+        "FakeInfoViewController",
+        "HomeViewController",
+        "LocSimViewController",
+        "ModelPickerViewController",
+        "ProxyViewController",
+        "SettingsViewController",
+        "TokensDetailViewController",
+        "VersionPickerViewController",
+        "_Xc9m",
+        "_Xm8u"
+      ],
+      "isolationVerified": false,
+      "captures": {
+        "fixture-carrier.png": "97e72766426de5f79967c01740c7930a99efc702db68299e347c04d5ac709ee9",
+        "fixture-configuration.png": "cc353c1f9eac5d1cb20e9511a42e38ee236a191e1a3e4df4a7471905fed63a8d",
+        "fixture-containers.png": "57f9a075a269eca2c37e19648ca823f1691aa55b1893944fd3adc276376af938",
+        "fixture-diagnostics.png": "c1263f6af4e1f2d6c1fbf0ab7d3005a6be503bec7bf7e935d981254c676d8b0a",
+        "fixture-home.png": "b78f1287079115ed3310f50a37410a404391235063a39bb09fc2a82a64d3a7a4",
+        "fixture-licence.png": "a001c62c590357d4cf4de8a9c36addc6cf095277c84ceae0d431af64962d5d7d",
+        "fixture-location.png": "50674eadc37b1e44d6976c12cef6d26fc16e1cb08fe3b7f2e7d6aadf968b2dcd",
+        "fixture-model.png": "fa26f3a61463019e96674e5b0757dc6219ca8454025dd15b9ea2cda11ee58e54",
+        "fixture-proxy.png": "a512a5e0db58f404d37a1318929a179e64dbd2bd5ecea75698d655b7e3c0460f",
+        "fixture-settings.png": "731f86c96a5c3a6dbd2d6e52b7204c5884aac90c960e311112b4954c36431846",
+        "fixture-version.png": "503b83b43f40b1ff29146795a7c6b43e826a2e492c49edd5759ee383f1a821dc"
+      }
+    },
+    "http_proxy": {
+      "status": "PASS",
+      "command": "bash tools/test_http_proxy.sh"
+    },
+    "proxy_import": {
+      "status": "PASS",
+      "assertions": 45,
+      "command": "bash tools/test_proxy_import.sh"
+    },
+    "static_check": "PASS",
+    "leak_contract_regressions": {
+      "status": "PASS",
+      "test_groups": 8
+    },
+    "previous_138_host_entrypoints": "Historical PASS in 2026-09-20 receipt; not rerun or represented as original backend acceptance by this unit"
+  },
+  "failingFirstFixes": [
+    "Malformed recognized URL reaching original subscription fallback",
+    "Trailing whitespace removed from raw provider credential",
+    "Proxy error lost while input alert dismisses",
+    "Off-screen import alert appearing after a later tab selection"
+  ],
+  "device": {
+    "usbQuery": "idevice_id -l",
+    "detectedDevices": 0,
+    "deviceCommandsExecuted": false,
+    "installed": false
+  },
+  "remaining": {
+    "originalConsumerSocialBoxLicenseIntegration": "NOT_IMPLEMENTED",
+    "acknowledgedSwitchTransaction": "NOT_IMPLEMENTED",
+    "strongerTargetRuntimeSentinel": "NOT_PORTED",
+    "networkFailClosedPort": "NOT_PORTED",
+    "deviceMigrationPreparation": "NOT_APPLIED",
+    "originalRuntimeInjection": "NOT_RUN",
+    "originalProxyConnectionAndPersistence": "NOT_RUN",
+    "runtimeIsolationCanaries": "NOT_RUN",
+    "independentNetworkCapture": "NOT_RUN",
+    "fortyRealContexts": "NOT_RUN",
+    "crossDeviceCloudRestore": "NOT_RUN"
+  }
+}

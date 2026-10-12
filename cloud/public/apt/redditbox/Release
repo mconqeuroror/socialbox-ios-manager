@@ -1,0 +1,13 @@
+Origin: RedditBox
+Label: RedditBox
+Suite: stable
+Codename: redditbox
+Architectures: iphoneos-arm64
+Components: main
+Description: RedditBox packages
+Date: Thu, 17 Sep 2026 18:45:35 GMT
+Acquire-By-Hash: yes
+SHA256:
+ fd473c17525db5e0d6efe0663d89c2ea53adb85446a97c17ab480dbf5fd8fdc8 3939 Packages
+ a51fddb5413cc87e03be67b5239416f2d15419fa8ada9e68394d87009723c59e 1301 Packages.gz
+ a69c862cbafdfc1b7854443dffd2b462970243227f915fd96122c4e1e36cf8e9 9047 repository.json

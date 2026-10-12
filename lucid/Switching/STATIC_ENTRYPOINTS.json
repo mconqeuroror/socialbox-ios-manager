@@ -1,0 +1,2244 @@
+{
+  "schema": 1,
+  "date": "2026-09-21",
+  "status": "STATIC_ONLY_NO_RUNTIME_GUARD",
+  "binary": "compiled/var/jb/Applications/SocialBox.app/SocialBox",
+  "binary_sha256": "e230dab07690e30c292962a3c0a3ea8301f9532aaa583a7209fdf33142552dd0",
+  "architecture": "arm64",
+  "method_scope": "All registered _Xr4s methods in verified class IMP range matching switch/deactivate/metadata/killApp/groupContainer/globalActive/helperProxy; inventory includes read helpers to expose guard bypasses.",
+  "reference_scope": "All decoded direct b/bl destinations to these IMPs or associated objc selector stubs in SocialBox.arm64.asm. Selector-stub destination does not identify receiver; containing function is nearest preceding index entry and can be an adjacent thunk. Runtime selector construction, objc_msgSend with computed selectors, other binaries and direct filesystem writers are NOT exhaustively represented.",
+  "disassembly_sha256": "34e9376b3a7e5c7d6c2f17ea67a0695f58b8d299493601acc62fe346b1a60521",
+  "methods": [
+    {
+      "selector": "helperProxy",
+      "implementation": "0x100227fd0",
+      "objc_encoding": "@16@0:8",
+      "selector_stub": "0x10034ca40"
+    },
+    {
+      "selector": "metadataPathForBundleID:",
+      "implementation": "0x1002289b8",
+      "objc_encoding": "@24@0:8@16"
+    },
+    {
+      "selector": "readMetadataForBundleID:",
+      "implementation": "0x100228c68",
+      "objc_encoding": "@24@0:8@16",
+      "selector_stub": "0x100351700"
+    },
+    {
+      "selector": "writeMetadata:forBundleID:",
+      "implementation": "0x100228ce0",
+      "objc_encoding": "B32@0:8@16@24",
+      "selector_stub": "0x10035b4a0"
+    },
+    {
+      "selector": "_sD5:inMetadata:",
+      "implementation": "0x1002293f0",
+      "objc_encoding": "@32@0:8q16@24",
+      "selector_stub": "0x100346540"
+    },
+    {
+      "selector": "updateContainerInMetadata:containerInfo:",
+      "implementation": "0x100229564",
+      "objc_encoding": "@32@0:8@16@24",
+      "selector_stub": "0x10035a9c0"
+    },
+    {
+      "selector": "switchApp:toContainer:progress:completion:",
+      "implementation": "0x1002296ec",
+      "objc_encoding": "v48@0:8@16q24@?32@?40"
+    },
+    {
+      "selector": "deactivateApp:progress:completion:",
+      "implementation": "0x10022af90",
+      "objc_encoding": "v40@0:8@16@?24@?32"
+    },
+    {
+      "selector": "killApp:reply:",
+      "implementation": "0x10022d654",
+      "objc_encoding": "v32@0:8@16@?24",
+      "selector_stub": "0x10034e2c0"
+    },
+    {
+      "selector": "globalMetadataPath",
+      "implementation": "0x10022ff3c",
+      "objc_encoding": "@16@0:8"
+    },
+    {
+      "selector": "readGlobalMetadata",
+      "implementation": "0x1002301c4",
+      "objc_encoding": "@16@0:8",
+      "selector_stub": "0x1003516a0"
+    },
+    {
+      "selector": "writeGlobalMetadata:",
+      "implementation": "0x10023023c",
+      "objc_encoding": "B24@0:8@16",
+      "selector_stub": "0x10035b460"
+    },
+    {
+      "selector": "mutateGlobalMetadataLocked:",
+      "implementation": "0x10023037c",
+      "objc_encoding": "B24@0:8@?16",
+      "selector_stub": "0x10034f940"
+    },
+    {
+      "selector": "globalActiveContainerID",
+      "implementation": "0x10023075c",
+      "objc_encoding": "q16@0:8"
+    },
+    {
+      "selector": "syncPerAppMetadataForBundleID:fromGlobal:",
+      "implementation": "0x1002307c0",
+      "objc_encoding": "v32@0:8@16@24"
+    },
+    {
+      "selector": "syncAllPerAppMetadataFromGlobal:",
+      "implementation": "0x1002313b8",
+      "objc_encoding": "v24@0:8@16",
+      "selector_stub": "0x100359f00"
+    },
+    {
+      "selector": "_performPerAppSwitchForBundleID:fromContainer:toContainer:processedGroupIDs:skipKill:skipCacheFlush:skipKeychain:skipChown:",
+      "implementation": "0x100232630",
+      "objc_encoding": "v64@0:8@16q24q32@40B48B52B56B60",
+      "selector_stub": "0x100345fc0"
+    },
+    {
+      "selector": "swapGroupContainersForApps:fromContainer:toContainer:",
+      "implementation": "0x100233ac8",
+      "objc_encoding": "v40@0:8@16q24q32"
+    },
+    {
+      "selector": "performPerAppSwitchForBundleID:fromContainer:toContainer:",
+      "implementation": "0x100233acc",
+      "objc_encoding": "v40@0:8@16q24q32"
+    },
+    {
+      "selector": "performBatchPerAppSwitchForBundleIDs:fromContainer:toContainer:",
+      "implementation": "0x100233b60",
+      "objc_encoding": "v40@0:8@16q24q32",
+      "selector_stub": "0x100350620"
+    },
+    {
+      "selector": "_swapSharedGroupContainersForApps:fromContainer:toContainer:",
+      "implementation": "0x1002366e8",
+      "objc_encoding": "v40@0:8@16q24q32",
+      "selector_stub": "0x100346880"
+    },
+    {
+      "selector": "switchToGlobalContainer:progress:completion:",
+      "implementation": "0x1002366ec",
+      "objc_encoding": "v40@0:8q16@?24@?32",
+      "selector_stub": "0x100359ec0"
+    },
+    {
+      "selector": "deactivateGlobalContainerWithProgress:completion:",
+      "implementation": "0x10024307c",
+      "objc_encoding": "v32@0:8@?16@?24"
+    }
+  ],
+  "direct_references": [
+    {
+      "instruction": "0x1000603e8",
+      "branch": "bl",
+      "destination": "0x1003516a0",
+      "targets": [
+        {
+          "selector": "readGlobalMetadata",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x10006037c",
+        "name": "FUN_10006037c"
+      },
+      "disassembly_line": 94461
+    },
+    {
+      "instruction": "0x100061028",
+      "branch": "bl",
+      "destination": "0x100350620",
+      "targets": [
+        {
+          "selector": "performBatchPerAppSwitchForBundleIDs:fromContainer:toContainer:",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x10006037c",
+        "name": "FUN_10006037c"
+      },
+      "disassembly_line": 95245
+    },
+    {
+      "instruction": "0x100061560",
+      "branch": "bl",
+      "destination": "0x10035b460",
+      "targets": [
+        {
+          "selector": "writeGlobalMetadata:",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x10006037c",
+        "name": "FUN_10006037c"
+      },
+      "disassembly_line": 95579
+    },
+    {
+      "instruction": "0x10006156c",
+      "branch": "bl",
+      "destination": "0x100359f00",
+      "targets": [
+        {
+          "selector": "syncAllPerAppMetadataFromGlobal:",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x10006037c",
+        "name": "FUN_10006037c"
+      },
+      "disassembly_line": 95582
+    },
+    {
+      "instruction": "0x1000620a4",
+      "branch": "bl",
+      "destination": "0x1003516a0",
+      "targets": [
+        {
+          "selector": "readGlobalMetadata",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x100062038",
+        "name": "FUN_100062038"
+      },
+      "disassembly_line": 96300
+    },
+    {
+      "instruction": "0x1000631e8",
+      "branch": "bl",
+      "destination": "0x100350620",
+      "targets": [
+        {
+          "selector": "performBatchPerAppSwitchForBundleIDs:fromContainer:toContainer:",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x100062038",
+        "name": "FUN_100062038"
+      },
+      "disassembly_line": 97405
+    },
+    {
+      "instruction": "0x1000632ac",
+      "branch": "bl",
+      "destination": "0x10035b460",
+      "targets": [
+        {
+          "selector": "writeGlobalMetadata:",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x100062038",
+        "name": "FUN_100062038"
+      },
+      "disassembly_line": 97454
+    },
+    {
+      "instruction": "0x1000632b8",
+      "branch": "bl",
+      "destination": "0x100359f00",
+      "targets": [
+        {
+          "selector": "syncAllPerAppMetadataFromGlobal:",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x100062038",
+        "name": "FUN_100062038"
+      },
+      "disassembly_line": 97457
+    },
+    {
+      "instruction": "0x10008a9b0",
+      "branch": "bl",
+      "destination": "0x1003516a0",
+      "targets": [
+        {
+          "selector": "readGlobalMetadata",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x10008a850",
+        "name": "CloudPushViewController::showContainerPicker"
+      },
+      "disassembly_line": 137839
+    },
+    {
+      "instruction": "0x1000f6cf0",
+      "branch": "bl",
+      "destination": "0x1003516a0",
+      "targets": [
+        {
+          "selector": "readGlobalMetadata",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x1000f6cb0",
+        "name": "AppListViewController::buildBundleToContainerMap"
+      },
+      "disassembly_line": 248639
+    },
+    {
+      "instruction": "0x100101a20",
+      "branch": "bl",
+      "destination": "0x1003516a0",
+      "targets": [
+        {
+          "selector": "readGlobalMetadata",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x10010199c",
+        "name": "_Xc9m::loadData"
+      },
+      "disassembly_line": 259723
+    },
+    {
+      "instruction": "0x100101c1c",
+      "branch": "bl",
+      "destination": "0x10034f940",
+      "targets": [
+        {
+          "selector": "mutateGlobalMetadataLocked:",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x10010199c",
+        "name": "_Xc9m::loadData"
+      },
+      "disassembly_line": 259850
+    },
+    {
+      "instruction": "0x100105bfc",
+      "branch": "bl",
+      "destination": "0x1003516a0",
+      "targets": [
+        {
+          "selector": "readGlobalMetadata",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x100105bd0",
+        "name": "_Xc9m::saveFoldersToMetadata"
+      },
+      "disassembly_line": 263938
+    },
+    {
+      "instruction": "0x100105c54",
+      "branch": "bl",
+      "destination": "0x10035b460",
+      "targets": [
+        {
+          "selector": "writeGlobalMetadata:",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x100105bd0",
+        "name": "_Xc9m::saveFoldersToMetadata"
+      },
+      "disassembly_line": 263960
+    },
+    {
+      "instruction": "0x10011020c",
+      "branch": "bl",
+      "destination": "0x1003516a0",
+      "targets": [
+        {
+          "selector": "readGlobalMetadata",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x1001101a4",
+        "name": "_Xc9m::linkProxy:toContainer:"
+      },
+      "disassembly_line": 274566
+    },
+    {
+      "instruction": "0x100110380",
+      "branch": "bl",
+      "destination": "0x10035b460",
+      "targets": [
+        {
+          "selector": "writeGlobalMetadata:",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x1001101a4",
+        "name": "_Xc9m::linkProxy:toContainer:"
+      },
+      "disassembly_line": 274659
+    },
+    {
+      "instruction": "0x10011297c",
+      "branch": "bl",
+      "destination": "0x1003516a0",
+      "targets": [
+        {
+          "selector": "readGlobalMetadata",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x100111610",
+        "name": "FUN_100111610"
+      },
+      "disassembly_line": 277090
+    },
+    {
+      "instruction": "0x100112ae4",
+      "branch": "bl",
+      "destination": "0x10035b460",
+      "targets": [
+        {
+          "selector": "writeGlobalMetadata:",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x100111610",
+        "name": "FUN_100111610"
+      },
+      "disassembly_line": 277180
+    },
+    {
+      "instruction": "0x100112bec",
+      "branch": "bl",
+      "destination": "0x100359ec0",
+      "targets": [
+        {
+          "selector": "switchToGlobalContainer:progress:completion:",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x100111610",
+        "name": "FUN_100111610"
+      },
+      "disassembly_line": 277246
+    },
+    {
+      "instruction": "0x10011630c",
+      "branch": "bl",
+      "destination": "0x1003516a0",
+      "targets": [
+        {
+          "selector": "readGlobalMetadata",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x100116210",
+        "name": "_Xc9m::saveApps:forContainer:"
+      },
+      "disassembly_line": 280774
+    },
+    {
+      "instruction": "0x100116470",
+      "branch": "bl",
+      "destination": "0x10035b460",
+      "targets": [
+        {
+          "selector": "writeGlobalMetadata:",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x100116210",
+        "name": "_Xc9m::saveApps:forContainer:"
+      },
+      "disassembly_line": 280863
+    },
+    {
+      "instruction": "0x10011647c",
+      "branch": "bl",
+      "destination": "0x100359f00",
+      "targets": [
+        {
+          "selector": "syncAllPerAppMetadataFromGlobal:",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x100116210",
+        "name": "_Xc9m::saveApps:forContainer:"
+      },
+      "disassembly_line": 280866
+    },
+    {
+      "instruction": "0x10011698c",
+      "branch": "bl",
+      "destination": "0x1003516a0",
+      "targets": [
+        {
+          "selector": "readGlobalMetadata",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x100116930",
+        "name": "_Xc9m::doDeleteContainer:"
+      },
+      "disassembly_line": 281190
+    },
+    {
+      "instruction": "0x100116d04",
+      "branch": "bl",
+      "destination": "0x10035b460",
+      "targets": [
+        {
+          "selector": "writeGlobalMetadata:",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x100116930",
+        "name": "_Xc9m::doDeleteContainer:"
+      },
+      "disassembly_line": 281412
+    },
+    {
+      "instruction": "0x100116d10",
+      "branch": "bl",
+      "destination": "0x100359f00",
+      "targets": [
+        {
+          "selector": "syncAllPerAppMetadataFromGlobal:",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x100116930",
+        "name": "_Xc9m::doDeleteContainer:"
+      },
+      "disassembly_line": 281415
+    },
+    {
+      "instruction": "0x10011a328",
+      "branch": "bl",
+      "destination": "0x1003516a0",
+      "targets": [
+        {
+          "selector": "readGlobalMetadata",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x10011a298",
+        "name": "FUN_10011a298"
+      },
+      "disassembly_line": 284877
+    },
+    {
+      "instruction": "0x10011a494",
+      "branch": "bl",
+      "destination": "0x10035b460",
+      "targets": [
+        {
+          "selector": "writeGlobalMetadata:",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x10011a298",
+        "name": "FUN_10011a298"
+      },
+      "disassembly_line": 284968
+    },
+    {
+      "instruction": "0x10011a4a0",
+      "branch": "bl",
+      "destination": "0x100359f00",
+      "targets": [
+        {
+          "selector": "syncAllPerAppMetadataFromGlobal:",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x10011a298",
+        "name": "FUN_10011a298"
+      },
+      "disassembly_line": 284971
+    },
+    {
+      "instruction": "0x100124928",
+      "branch": "bl",
+      "destination": "0x10034f940",
+      "targets": [
+        {
+          "selector": "mutateGlobalMetadataLocked:",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x1001246f0",
+        "name": "FUN_1001246f0"
+      },
+      "disassembly_line": 295501
+    },
+    {
+      "instruction": "0x100124f34",
+      "branch": "bl",
+      "destination": "0x10034f940",
+      "targets": [
+        {
+          "selector": "mutateGlobalMetadataLocked:",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x1001246f0",
+        "name": "FUN_1001246f0"
+      },
+      "disassembly_line": 295888
+    },
+    {
+      "instruction": "0x100126834",
+      "branch": "bl",
+      "destination": "0x1003516a0",
+      "targets": [
+        {
+          "selector": "readGlobalMetadata",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x1001246f0",
+        "name": "FUN_1001246f0"
+      },
+      "disassembly_line": 297488
+    },
+    {
+      "instruction": "0x10012684c",
+      "branch": "bl",
+      "destination": "0x100359f00",
+      "targets": [
+        {
+          "selector": "syncAllPerAppMetadataFromGlobal:",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x1001246f0",
+        "name": "FUN_1001246f0"
+      },
+      "disassembly_line": 297494
+    },
+    {
+      "instruction": "0x100126c04",
+      "branch": "bl",
+      "destination": "0x10034f940",
+      "targets": [
+        {
+          "selector": "mutateGlobalMetadataLocked:",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x1001246f0",
+        "name": "FUN_1001246f0"
+      },
+      "disassembly_line": 297732
+    },
+    {
+      "instruction": "0x1001eaf1c",
+      "branch": "bl",
+      "destination": "0x1003516a0",
+      "targets": [
+        {
+          "selector": "readGlobalMetadata",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x1001eac84",
+        "name": "SocialBoxAutomationRouter::verbContainerCreate:tabBarController:"
+      },
+      "disassembly_line": 498634
+    },
+    {
+      "instruction": "0x1001ecc38",
+      "branch": "bl",
+      "destination": "0x10034f940",
+      "targets": [
+        {
+          "selector": "mutateGlobalMetadataLocked:",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x1001ecb14",
+        "name": "SocialBoxAutomationRouter::verbContainerRename:tabBarController:"
+      },
+      "disassembly_line": 500497
+    },
+    {
+      "instruction": "0x1001ecc4c",
+      "branch": "bl",
+      "destination": "0x1003516a0",
+      "targets": [
+        {
+          "selector": "readGlobalMetadata",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x1001ecb14",
+        "name": "SocialBoxAutomationRouter::verbContainerRename:tabBarController:"
+      },
+      "disassembly_line": 500502
+    },
+    {
+      "instruction": "0x1001ecc64",
+      "branch": "bl",
+      "destination": "0x100359f00",
+      "targets": [
+        {
+          "selector": "syncAllPerAppMetadataFromGlobal:",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x1001ecb14",
+        "name": "SocialBoxAutomationRouter::verbContainerRename:tabBarController:"
+      },
+      "disassembly_line": 500508
+    },
+    {
+      "instruction": "0x1001f1954",
+      "branch": "bl",
+      "destination": "0x1003516a0",
+      "targets": [
+        {
+          "selector": "readGlobalMetadata",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x1001f1904",
+        "name": "FUN_1001f1904"
+      },
+      "disassembly_line": 505432
+    },
+    {
+      "instruction": "0x1001f1ad8",
+      "branch": "bl",
+      "destination": "0x10034f940",
+      "targets": [
+        {
+          "selector": "mutateGlobalMetadataLocked:",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x1001f1904",
+        "name": "FUN_1001f1904"
+      },
+      "disassembly_line": 505529
+    },
+    {
+      "instruction": "0x1001f1ae0",
+      "branch": "bl",
+      "destination": "0x1003516a0",
+      "targets": [
+        {
+          "selector": "readGlobalMetadata",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x1001f1904",
+        "name": "FUN_1001f1904"
+      },
+      "disassembly_line": 505531
+    },
+    {
+      "instruction": "0x1001f1af8",
+      "branch": "bl",
+      "destination": "0x100359f00",
+      "targets": [
+        {
+          "selector": "syncAllPerAppMetadataFromGlobal:",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x1001f1904",
+        "name": "FUN_1001f1904"
+      },
+      "disassembly_line": 505537
+    },
+    {
+      "instruction": "0x1001f32fc",
+      "branch": "bl",
+      "destination": "0x1003516a0",
+      "targets": [
+        {
+          "selector": "readGlobalMetadata",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x1001f2d18",
+        "name": "_Xy2p::deleteProxy:error:"
+      },
+      "disassembly_line": 507074
+    },
+    {
+      "instruction": "0x1001f3494",
+      "branch": "bl",
+      "destination": "0x10035b460",
+      "targets": [
+        {
+          "selector": "writeGlobalMetadata:",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x1001f2d18",
+        "name": "_Xy2p::deleteProxy:error:"
+      },
+      "disassembly_line": 507176
+    },
+    {
+      "instruction": "0x100209d94",
+      "branch": "bl",
+      "destination": "0x1003516a0",
+      "targets": [
+        {
+          "selector": "readGlobalMetadata",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x100209d38",
+        "name": "ProxyViewController::linkProxy:toContainerID:name:"
+      },
+      "disassembly_line": 530280
+    },
+    {
+      "instruction": "0x100209f94",
+      "branch": "bl",
+      "destination": "0x10035b460",
+      "targets": [
+        {
+          "selector": "writeGlobalMetadata:",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x100209d38",
+        "name": "ProxyViewController::linkProxy:toContainerID:name:"
+      },
+      "disassembly_line": 530408
+    },
+    {
+      "instruction": "0x10020a1d4",
+      "branch": "bl",
+      "destination": "0x1003516a0",
+      "targets": [
+        {
+          "selector": "readGlobalMetadata",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x100209d38",
+        "name": "ProxyViewController::linkProxy:toContainerID:name:"
+      },
+      "disassembly_line": 530552
+    },
+    {
+      "instruction": "0x10020a348",
+      "branch": "bl",
+      "destination": "0x10035b460",
+      "targets": [
+        {
+          "selector": "writeGlobalMetadata:",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x100209d38",
+        "name": "ProxyViewController::linkProxy:toContainerID:name:"
+      },
+      "disassembly_line": 530645
+    },
+    {
+      "instruction": "0x10020c524",
+      "branch": "bl",
+      "destination": "0x1003516a0",
+      "targets": [
+        {
+          "selector": "readGlobalMetadata",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x10020c078",
+        "name": "ProxyViewController::disconnectProxy"
+      },
+      "disassembly_line": 532812
+    },
+    {
+      "instruction": "0x10020c678",
+      "branch": "bl",
+      "destination": "0x10035b460",
+      "targets": [
+        {
+          "selector": "writeGlobalMetadata:",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x10020c078",
+        "name": "ProxyViewController::disconnectProxy"
+      },
+      "disassembly_line": 532897
+    },
+    {
+      "instruction": "0x1002286d8",
+      "branch": "bl",
+      "destination": "0x10034ca40",
+      "targets": [
+        {
+          "selector": "helperProxy",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x1002283ec",
+        "name": "_Xr4s::bootstrapRedirectTreeForBundleID:containerID:"
+      },
+      "disassembly_line": 561593
+    },
+    {
+      "instruction": "0x10022888c",
+      "branch": "bl",
+      "destination": "0x10034ca40",
+      "targets": [
+        {
+          "selector": "helperProxy",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x100228814",
+        "name": "_Xr4s::teardownRedirectTreeForBundleID:containerID:"
+      },
+      "disassembly_line": 561702
+    },
+    {
+      "instruction": "0x100229234",
+      "branch": "bl",
+      "destination": "0x100351700",
+      "targets": [
+        {
+          "selector": "readMetadataForBundleID:",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x100229204",
+        "name": "_Xr4s::containersForBundleID:"
+      },
+      "disassembly_line": 562320
+    },
+    {
+      "instruction": "0x10022939c",
+      "branch": "bl",
+      "destination": "0x100351700",
+      "targets": [
+        {
+          "selector": "readMetadataForBundleID:",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x10022938c",
+        "name": "_Xr4s::activeContainerIDForBundleID:"
+      },
+      "disassembly_line": 562410
+    },
+    {
+      "instruction": "0x10022999c",
+      "branch": "bl",
+      "destination": "0x100351700",
+      "targets": [
+        {
+          "selector": "readMetadataForBundleID:",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x100229834",
+        "name": "FUN_100229834"
+      },
+      "disassembly_line": 562794
+    },
+    {
+      "instruction": "0x1002299b8",
+      "branch": "bl",
+      "destination": "0x100346540",
+      "targets": [
+        {
+          "selector": "_sD5:inMetadata:",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x100229834",
+        "name": "FUN_100229834"
+      },
+      "disassembly_line": 562801
+    },
+    {
+      "instruction": "0x100229b04",
+      "branch": "bl",
+      "destination": "0x100346540",
+      "targets": [
+        {
+          "selector": "_sD5:inMetadata:",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x100229834",
+        "name": "FUN_100229834"
+      },
+      "disassembly_line": 562884
+    },
+    {
+      "instruction": "0x100229ba4",
+      "branch": "bl",
+      "destination": "0x10035a9c0",
+      "targets": [
+        {
+          "selector": "updateContainerInMetadata:containerInfo:",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x100229834",
+        "name": "FUN_100229834"
+      },
+      "disassembly_line": 562924
+    },
+    {
+      "instruction": "0x100229c40",
+      "branch": "bl",
+      "destination": "0x10034ca40",
+      "targets": [
+        {
+          "selector": "helperProxy",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x100229834",
+        "name": "FUN_100229834"
+      },
+      "disassembly_line": 562963
+    },
+    {
+      "instruction": "0x100229c98",
+      "branch": "bl",
+      "destination": "0x10034e2c0",
+      "targets": [
+        {
+          "selector": "killApp:reply:",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x100229834",
+        "name": "FUN_100229834"
+      },
+      "disassembly_line": 562985
+    },
+    {
+      "instruction": "0x100229d78",
+      "branch": "bl",
+      "destination": "0x10034ca40",
+      "targets": [
+        {
+          "selector": "helperProxy",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x100229834",
+        "name": "FUN_100229834"
+      },
+      "disassembly_line": 563041
+    },
+    {
+      "instruction": "0x100229e4c",
+      "branch": "bl",
+      "destination": "0x100346880",
+      "targets": [
+        {
+          "selector": "_swapSharedGroupContainersForApps:fromContainer:toContainer:",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x100229834",
+        "name": "FUN_100229834"
+      },
+      "disassembly_line": 563094
+    },
+    {
+      "instruction": "0x100229ef4",
+      "branch": "bl",
+      "destination": "0x10035b4a0",
+      "targets": [
+        {
+          "selector": "writeMetadata:forBundleID:",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x100229834",
+        "name": "FUN_100229834"
+      },
+      "disassembly_line": 563136
+    },
+    {
+      "instruction": "0x10022a348",
+      "branch": "bl",
+      "destination": "0x10034ca40",
+      "targets": [
+        {
+          "selector": "helperProxy",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x100229834",
+        "name": "FUN_100229834"
+      },
+      "disassembly_line": 563413
+    },
+    {
+      "instruction": "0x10022aacc",
+      "branch": "bl",
+      "destination": "0x10035a9c0",
+      "targets": [
+        {
+          "selector": "updateContainerInMetadata:containerInfo:",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x10022aa38",
+        "name": "FUN_10022aa38"
+      },
+      "disassembly_line": 563894
+    },
+    {
+      "instruction": "0x10022aae8",
+      "branch": "bl",
+      "destination": "0x10035b4a0",
+      "targets": [
+        {
+          "selector": "writeMetadata:forBundleID:",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x10022aa38",
+        "name": "FUN_10022aa38"
+      },
+      "disassembly_line": 563901
+    },
+    {
+      "instruction": "0x10022b1f0",
+      "branch": "bl",
+      "destination": "0x100351700",
+      "targets": [
+        {
+          "selector": "readMetadataForBundleID:",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x10022b0d0",
+        "name": "FUN_10022b0d0"
+      },
+      "disassembly_line": 564351
+    },
+    {
+      "instruction": "0x10022b264",
+      "branch": "bl",
+      "destination": "0x10034ca40",
+      "targets": [
+        {
+          "selector": "helperProxy",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x10022b0d0",
+        "name": "FUN_10022b0d0"
+      },
+      "disassembly_line": 564380
+    },
+    {
+      "instruction": "0x10022b2c0",
+      "branch": "bl",
+      "destination": "0x10034e2c0",
+      "targets": [
+        {
+          "selector": "killApp:reply:",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x10022b0d0",
+        "name": "FUN_10022b0d0"
+      },
+      "disassembly_line": 564403
+    },
+    {
+      "instruction": "0x10022b6b8",
+      "branch": "bl",
+      "destination": "0x10034ca40",
+      "targets": [
+        {
+          "selector": "helperProxy",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x10022b0d0",
+        "name": "FUN_10022b0d0"
+      },
+      "disassembly_line": 564657
+    },
+    {
+      "instruction": "0x10022b8bc",
+      "branch": "bl",
+      "destination": "0x10034ca40",
+      "targets": [
+        {
+          "selector": "helperProxy",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x10022b0d0",
+        "name": "FUN_10022b0d0"
+      },
+      "disassembly_line": 564786
+    },
+    {
+      "instruction": "0x10022ba10",
+      "branch": "bl",
+      "destination": "0x10034ca40",
+      "targets": [
+        {
+          "selector": "helperProxy",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x10022b0d0",
+        "name": "FUN_10022b0d0"
+      },
+      "disassembly_line": 564871
+    },
+    {
+      "instruction": "0x10022bb04",
+      "branch": "bl",
+      "destination": "0x10034ca40",
+      "targets": [
+        {
+          "selector": "helperProxy",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x10022b0d0",
+        "name": "FUN_10022b0d0"
+      },
+      "disassembly_line": 564932
+    },
+    {
+      "instruction": "0x10022bcd4",
+      "branch": "bl",
+      "destination": "0x10034ca40",
+      "targets": [
+        {
+          "selector": "helperProxy",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x10022b0d0",
+        "name": "FUN_10022b0d0"
+      },
+      "disassembly_line": 565048
+    },
+    {
+      "instruction": "0x10022bedc",
+      "branch": "bl",
+      "destination": "0x10034ca40",
+      "targets": [
+        {
+          "selector": "helperProxy",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x10022b0d0",
+        "name": "FUN_10022b0d0"
+      },
+      "disassembly_line": 565178
+    },
+    {
+      "instruction": "0x10022c02c",
+      "branch": "bl",
+      "destination": "0x10034ca40",
+      "targets": [
+        {
+          "selector": "helperProxy",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x10022b0d0",
+        "name": "FUN_10022b0d0"
+      },
+      "disassembly_line": 565262
+    },
+    {
+      "instruction": "0x10022c118",
+      "branch": "bl",
+      "destination": "0x10034ca40",
+      "targets": [
+        {
+          "selector": "helperProxy",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x10022b0d0",
+        "name": "FUN_10022b0d0"
+      },
+      "disassembly_line": 565321
+    },
+    {
+      "instruction": "0x10022c244",
+      "branch": "bl",
+      "destination": "0x10034ca40",
+      "targets": [
+        {
+          "selector": "helperProxy",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x10022b0d0",
+        "name": "FUN_10022b0d0"
+      },
+      "disassembly_line": 565396
+    },
+    {
+      "instruction": "0x10022c3cc",
+      "branch": "bl",
+      "destination": "0x100346880",
+      "targets": [
+        {
+          "selector": "_swapSharedGroupContainersForApps:fromContainer:toContainer:",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x10022b0d0",
+        "name": "FUN_10022b0d0"
+      },
+      "disassembly_line": 565494
+    },
+    {
+      "instruction": "0x10022c970",
+      "branch": "bl",
+      "destination": "0x100346540",
+      "targets": [
+        {
+          "selector": "_sD5:inMetadata:",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x10022b0d0",
+        "name": "FUN_10022b0d0"
+      },
+      "disassembly_line": 565855
+    },
+    {
+      "instruction": "0x10022c994",
+      "branch": "bl",
+      "destination": "0x10035a9c0",
+      "targets": [
+        {
+          "selector": "updateContainerInMetadata:containerInfo:",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x10022b0d0",
+        "name": "FUN_10022b0d0"
+      },
+      "disassembly_line": 565864
+    },
+    {
+      "instruction": "0x10022c9e4",
+      "branch": "bl",
+      "destination": "0x10035b4a0",
+      "targets": [
+        {
+          "selector": "writeMetadata:forBundleID:",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x10022b0d0",
+        "name": "FUN_10022b0d0"
+      },
+      "disassembly_line": 565884
+    },
+    {
+      "instruction": "0x10022ca44",
+      "branch": "bl",
+      "destination": "0x10034ca40",
+      "targets": [
+        {
+          "selector": "helperProxy",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x10022b0d0",
+        "name": "FUN_10022b0d0"
+      },
+      "disassembly_line": 565908
+    },
+    {
+      "instruction": "0x10022d38c",
+      "branch": "bl",
+      "destination": "0x100351700",
+      "targets": [
+        {
+          "selector": "readMetadataForBundleID:",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x10022d360",
+        "name": "_Xr4s::saveCurrentStateForApp:"
+      },
+      "disassembly_line": 566502
+    },
+    {
+      "instruction": "0x10022d3d4",
+      "branch": "bl",
+      "destination": "0x100346540",
+      "targets": [
+        {
+          "selector": "_sD5:inMetadata:",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x10022d360",
+        "name": "_Xr4s::saveCurrentStateForApp:"
+      },
+      "disassembly_line": 566520
+    },
+    {
+      "instruction": "0x10022d474",
+      "branch": "bl",
+      "destination": "0x10035a9c0",
+      "targets": [
+        {
+          "selector": "updateContainerInMetadata:containerInfo:",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x10022d360",
+        "name": "_Xr4s::saveCurrentStateForApp:"
+      },
+      "disassembly_line": 566560
+    },
+    {
+      "instruction": "0x10022d490",
+      "branch": "bl",
+      "destination": "0x10035b4a0",
+      "targets": [
+        {
+          "selector": "writeMetadata:forBundleID:",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x10022d360",
+        "name": "_Xr4s::saveCurrentStateForApp:"
+      },
+      "disassembly_line": 566567
+    },
+    {
+      "instruction": "0x10022d500",
+      "branch": "bl",
+      "destination": "0x10034ca40",
+      "targets": [
+        {
+          "selector": "helperProxy",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x10022d4cc",
+        "name": "_Xr4s::pingHelperWithReply:"
+      },
+      "disassembly_line": 566595
+    },
+    {
+      "instruction": "0x10022d688",
+      "branch": "bl",
+      "destination": "0x10034ca40",
+      "targets": [
+        {
+          "selector": "helperProxy",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x10022d654",
+        "name": "_Xr4s::killApp:reply:"
+      },
+      "disassembly_line": 566693
+    },
+    {
+      "instruction": "0x10022d6a0",
+      "branch": "bl",
+      "destination": "0x10034e2c0",
+      "targets": [
+        {
+          "selector": "killApp:reply:",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x10022d654",
+        "name": "_Xr4s::killApp:reply:"
+      },
+      "disassembly_line": 566699
+    },
+    {
+      "instruction": "0x10022d6fc",
+      "branch": "bl",
+      "destination": "0x10034ca40",
+      "targets": [
+        {
+          "selector": "helperProxy",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x10022d6c8",
+        "name": "_Xr4s::wipeLegacyPlistsForBundleID:reply:"
+      },
+      "disassembly_line": 566722
+    },
+    {
+      "instruction": "0x10022d778",
+      "branch": "bl",
+      "destination": "0x10034ca40",
+      "targets": [
+        {
+          "selector": "helperProxy",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x10022d73c",
+        "name": "_Xr4s::sweepOrphanSegmentsForContainerID:reply:"
+      },
+      "disassembly_line": 566753
+    },
+    {
+      "instruction": "0x10022d85c",
+      "branch": "bl",
+      "destination": "0x10034ca40",
+      "targets": [
+        {
+          "selector": "helperProxy",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x10022d828",
+        "name": "_Xr4s::flushCacheDaemons"
+      },
+      "disassembly_line": 566810
+    },
+    {
+      "instruction": "0x10022d980",
+      "branch": "bl",
+      "destination": "0x10034ca40",
+      "targets": [
+        {
+          "selector": "helperProxy",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x10022d920",
+        "name": "_Xr4s::ensureCfPrefsdHookedBlocking"
+      },
+      "disassembly_line": 566883
+    },
+    {
+      "instruction": "0x10022db14",
+      "branch": "bl",
+      "destination": "0x10034ca40",
+      "targets": [
+        {
+          "selector": "helperProxy",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x10022dad0",
+        "name": "_Xr4s::copyRootPath:toPath:reply:"
+      },
+      "disassembly_line": 566984
+    },
+    {
+      "instruction": "0x10022ec08",
+      "branch": "bl",
+      "destination": "0x10034ca40",
+      "targets": [
+        {
+          "selector": "helperProxy",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x10022ebd4",
+        "name": "_Xr4s::removeRootPaths:reply:"
+      },
+      "disassembly_line": 568069
+    },
+    {
+      "instruction": "0x10022ecc4",
+      "branch": "bl",
+      "destination": "0x10034ca40",
+      "targets": [
+        {
+          "selector": "helperProxy",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x10022ec48",
+        "name": "_Xr4s::synchronouslyDumpKeychainForBundleID:"
+      },
+      "disassembly_line": 568116
+    },
+    {
+      "instruction": "0x10022eed0",
+      "branch": "bl",
+      "destination": "0x10034ca40",
+      "targets": [
+        {
+          "selector": "helperProxy",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x10022ee4c",
+        "name": "_Xr4s::synchronouslyRestoreKeychainItems:forBundleID:"
+      },
+      "disassembly_line": 568247
+    },
+    {
+      "instruction": "0x10022f070",
+      "branch": "bl",
+      "destination": "0x10034ca40",
+      "targets": [
+        {
+          "selector": "helperProxy",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x10022f008",
+        "name": "_Xr4s::deleteKeychainForContainer:forBundleID:reply:"
+      },
+      "disassembly_line": 568351
+    },
+    {
+      "instruction": "0x100230600",
+      "branch": "bl",
+      "destination": "0x1003516a0",
+      "targets": [
+        {
+          "selector": "readGlobalMetadata",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x1002305d0",
+        "name": "_Xr4s::allGlobalContainers"
+      },
+      "disassembly_line": 569731
+    },
+    {
+      "instruction": "0x10023076c",
+      "branch": "bl",
+      "destination": "0x1003516a0",
+      "targets": [
+        {
+          "selector": "readGlobalMetadata",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x10023075c",
+        "name": "_Xr4s::globalActiveContainerID"
+      },
+      "disassembly_line": 569822
+    },
+    {
+      "instruction": "0x100230b94",
+      "branch": "bl",
+      "destination": "0x10035b4a0",
+      "targets": [
+        {
+          "selector": "writeMetadata:forBundleID:",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x1002307c0",
+        "name": "_Xr4s::syncPerAppMetadataForBundleID:fromGlobal:"
+      },
+      "disassembly_line": 570088
+    },
+    {
+      "instruction": "0x100232834",
+      "branch": "bl",
+      "destination": "0x10034ca40",
+      "targets": [
+        {
+          "selector": "helperProxy",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x100232630",
+        "name": "_Xr4s::_performPerAppSwitchForBundleID:fromContainer:toContainer:processedGroupIDs:skipKill:skipCacheFlush:skipKeychain:skipChown:"
+      },
+      "disassembly_line": 571920
+    },
+    {
+      "instruction": "0x100232880",
+      "branch": "bl",
+      "destination": "0x10034e2c0",
+      "targets": [
+        {
+          "selector": "killApp:reply:",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x100232630",
+        "name": "_Xr4s::_performPerAppSwitchForBundleID:fromContainer:toContainer:processedGroupIDs:skipKill:skipCacheFlush:skipKeychain:skipChown:"
+      },
+      "disassembly_line": 571939
+    },
+    {
+      "instruction": "0x100232ba4",
+      "branch": "bl",
+      "destination": "0x10034ca40",
+      "targets": [
+        {
+          "selector": "helperProxy",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x100232630",
+        "name": "_Xr4s::_performPerAppSwitchForBundleID:fromContainer:toContainer:processedGroupIDs:skipKill:skipCacheFlush:skipKeychain:skipChown:"
+      },
+      "disassembly_line": 572140
+    },
+    {
+      "instruction": "0x100232ca4",
+      "branch": "bl",
+      "destination": "0x10034ca40",
+      "targets": [
+        {
+          "selector": "helperProxy",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x100232630",
+        "name": "_Xr4s::_performPerAppSwitchForBundleID:fromContainer:toContainer:processedGroupIDs:skipKill:skipCacheFlush:skipKeychain:skipChown:"
+      },
+      "disassembly_line": 572204
+    },
+    {
+      "instruction": "0x1002331ac",
+      "branch": "bl",
+      "destination": "0x10034ca40",
+      "targets": [
+        {
+          "selector": "helperProxy",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x100232630",
+        "name": "_Xr4s::_performPerAppSwitchForBundleID:fromContainer:toContainer:processedGroupIDs:skipKill:skipCacheFlush:skipKeychain:skipChown:"
+      },
+      "disassembly_line": 572526
+    },
+    {
+      "instruction": "0x100233ac8",
+      "branch": "b",
+      "destination": "0x100346880",
+      "targets": [
+        {
+          "selector": "_swapSharedGroupContainersForApps:fromContainer:toContainer:",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x100233ac8",
+        "name": "_Xr4s::swapGroupContainersForApps:fromContainer:toContainer:"
+      },
+      "disassembly_line": 573109
+    },
+    {
+      "instruction": "0x100233b38",
+      "branch": "bl",
+      "destination": "0x100345fc0",
+      "targets": [
+        {
+          "selector": "_performPerAppSwitchForBundleID:fromContainer:toContainer:processedGroupIDs:skipKill:skipCacheFlush:skipKeychain:skipChown:",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x100233acc",
+        "name": "_Xr4s::performPerAppSwitchForBundleID:fromContainer:toContainer:"
+      },
+      "disassembly_line": 573137
+    },
+    {
+      "instruction": "0x100233c84",
+      "branch": "bl",
+      "destination": "0x10034ca40",
+      "targets": [
+        {
+          "selector": "helperProxy",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x100233b60",
+        "name": "_Xr4s::performBatchPerAppSwitchForBundleIDs:fromContainer:toContainer:"
+      },
+      "disassembly_line": 573220
+    },
+    {
+      "instruction": "0x100233cc8",
+      "branch": "bl",
+      "destination": "0x10034e2c0",
+      "targets": [
+        {
+          "selector": "killApp:reply:",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x100233b60",
+        "name": "_Xr4s::performBatchPerAppSwitchForBundleIDs:fromContainer:toContainer:"
+      },
+      "disassembly_line": 573237
+    },
+    {
+      "instruction": "0x100233d88",
+      "branch": "bl",
+      "destination": "0x10034ca40",
+      "targets": [
+        {
+          "selector": "helperProxy",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x100233b60",
+        "name": "_Xr4s::performBatchPerAppSwitchForBundleIDs:fromContainer:toContainer:"
+      },
+      "disassembly_line": 573285
+    },
+    {
+      "instruction": "0x100235818",
+      "branch": "bl",
+      "destination": "0x10034ca40",
+      "targets": [
+        {
+          "selector": "helperProxy",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x100233b60",
+        "name": "_Xr4s::performBatchPerAppSwitchForBundleIDs:fromContainer:toContainer:"
+      },
+      "disassembly_line": 574985
+    },
+    {
+      "instruction": "0x1002358d8",
+      "branch": "bl",
+      "destination": "0x10034ca40",
+      "targets": [
+        {
+          "selector": "helperProxy",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x100233b60",
+        "name": "_Xr4s::performBatchPerAppSwitchForBundleIDs:fromContainer:toContainer:"
+      },
+      "disassembly_line": 575033
+    },
+    {
+      "instruction": "0x100235980",
+      "branch": "bl",
+      "destination": "0x10034ca40",
+      "targets": [
+        {
+          "selector": "helperProxy",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x100233b60",
+        "name": "_Xr4s::performBatchPerAppSwitchForBundleIDs:fromContainer:toContainer:"
+      },
+      "disassembly_line": 575075
+    },
+    {
+      "instruction": "0x10023693c",
+      "branch": "bl",
+      "destination": "0x1003516a0",
+      "targets": [
+        {
+          "selector": "readGlobalMetadata",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x100236804",
+        "name": "FUN_100236804"
+      },
+      "disassembly_line": 576082
+    },
+    {
+      "instruction": "0x100237120",
+      "branch": "bl",
+      "destination": "0x10034ca40",
+      "targets": [
+        {
+          "selector": "helperProxy",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x100236804",
+        "name": "FUN_100236804"
+      },
+      "disassembly_line": 576587
+    },
+    {
+      "instruction": "0x100237160",
+      "branch": "bl",
+      "destination": "0x10034e2c0",
+      "targets": [
+        {
+          "selector": "killApp:reply:",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x100236804",
+        "name": "FUN_100236804"
+      },
+      "disassembly_line": 576603
+    },
+    {
+      "instruction": "0x100237230",
+      "branch": "bl",
+      "destination": "0x10034ca40",
+      "targets": [
+        {
+          "selector": "helperProxy",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x100236804",
+        "name": "FUN_100236804"
+      },
+      "disassembly_line": 576655
+    },
+    {
+      "instruction": "0x1002379bc",
+      "branch": "bl",
+      "destination": "0x10034ca40",
+      "targets": [
+        {
+          "selector": "helperProxy",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x100236804",
+        "name": "FUN_100236804"
+      },
+      "disassembly_line": 577138
+    },
+    {
+      "instruction": "0x100237bb8",
+      "branch": "bl",
+      "destination": "0x100345fc0",
+      "targets": [
+        {
+          "selector": "_performPerAppSwitchForBundleID:fromContainer:toContainer:processedGroupIDs:skipKill:skipCacheFlush:skipKeychain:skipChown:",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x100236804",
+        "name": "FUN_100236804"
+      },
+      "disassembly_line": 577265
+    },
+    {
+      "instruction": "0x100237c48",
+      "branch": "bl",
+      "destination": "0x10034f940",
+      "targets": [
+        {
+          "selector": "mutateGlobalMetadataLocked:",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x100236804",
+        "name": "FUN_100236804"
+      },
+      "disassembly_line": 577301
+    },
+    {
+      "instruction": "0x100237c50",
+      "branch": "bl",
+      "destination": "0x1003516a0",
+      "targets": [
+        {
+          "selector": "readGlobalMetadata",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x100236804",
+        "name": "FUN_100236804"
+      },
+      "disassembly_line": 577303
+    },
+    {
+      "instruction": "0x100237c68",
+      "branch": "bl",
+      "destination": "0x100359f00",
+      "targets": [
+        {
+          "selector": "syncAllPerAppMetadataFromGlobal:",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x100236804",
+        "name": "FUN_100236804"
+      },
+      "disassembly_line": 577309
+    },
+    {
+      "instruction": "0x1002432ac",
+      "branch": "bl",
+      "destination": "0x1003516a0",
+      "targets": [
+        {
+          "selector": "readGlobalMetadata",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x100243188",
+        "name": "FUN_100243188"
+      },
+      "disassembly_line": 588974
+    },
+    {
+      "instruction": "0x10024364c",
+      "branch": "bl",
+      "destination": "0x10034ca40",
+      "targets": [
+        {
+          "selector": "helperProxy",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x100243188",
+        "name": "FUN_100243188"
+      },
+      "disassembly_line": 589206
+    },
+    {
+      "instruction": "0x100243688",
+      "branch": "bl",
+      "destination": "0x10034e2c0",
+      "targets": [
+        {
+          "selector": "killApp:reply:",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x100243188",
+        "name": "FUN_100243188"
+      },
+      "disassembly_line": 589221
+    },
+    {
+      "instruction": "0x1002438dc",
+      "branch": "bl",
+      "destination": "0x10034ca40",
+      "targets": [
+        {
+          "selector": "helperProxy",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x100243188",
+        "name": "FUN_100243188"
+      },
+      "disassembly_line": 589370
+    },
+    {
+      "instruction": "0x100243a64",
+      "branch": "bl",
+      "destination": "0x100345fc0",
+      "targets": [
+        {
+          "selector": "_performPerAppSwitchForBundleID:fromContainer:toContainer:processedGroupIDs:skipKill:skipCacheFlush:skipKeychain:skipChown:",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x100243188",
+        "name": "FUN_100243188"
+      },
+      "disassembly_line": 589468
+    },
+    {
+      "instruction": "0x100243ab4",
+      "branch": "bl",
+      "destination": "0x10034f940",
+      "targets": [
+        {
+          "selector": "mutateGlobalMetadataLocked:",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x100243188",
+        "name": "FUN_100243188"
+      },
+      "disassembly_line": 589488
+    },
+    {
+      "instruction": "0x100243abc",
+      "branch": "bl",
+      "destination": "0x1003516a0",
+      "targets": [
+        {
+          "selector": "readGlobalMetadata",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x100243188",
+        "name": "FUN_100243188"
+      },
+      "disassembly_line": 589490
+    },
+    {
+      "instruction": "0x100243ad4",
+      "branch": "bl",
+      "destination": "0x100359f00",
+      "targets": [
+        {
+          "selector": "syncAllPerAppMetadataFromGlobal:",
+          "kind": "selector_stub"
+        }
+      ],
+      "containing_index_entry": {
+        "address": "0x100243188",
+        "name": "FUN_100243188"
+      },
+      "disassembly_line": 589496
+    }
+  ],
+  "counts": {
+    "methods": 23,
+    "direct_references": 131
+  }
+}

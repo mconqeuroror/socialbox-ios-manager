@@ -1,0 +1,90 @@
+# Stage the SocialBox rootless payload: manager, helper, CLI and drain service.
+# App-keychain inject ships (IG/FB process only). No securityd/cfprefsd/
+# containermanagerd injects ship. Switching moves Instagram, Facebook and
+# shared Meta folders as one phone (Helper/LBXHelperStorage.m).
+#
+# Pins: the helper embeds the manager/CLI digests and the drain service embeds
+# the helper/manager digests (Switching/LBXSocialBoxProduct.h). After changing
+# the manager or CLI, rebuild them, update the header, then rebuild the helper,
+# update the header again, then rebuild the drain service.
+#
+# Usage:
+#   export THEOS=…
+#   make -f lucid/Makefile.stage stage FINALPACKAGE=1
+
+ARCHS ?= arm64 arm64e
+TARGET ?= iphone:clang:latest:15.0
+THEOS_PACKAGE_SCHEME ?= rootless
+LUCID := $(abspath $(dir $(lastword $(MAKEFILE_LIST))))
+STAGE ?= $(LUCID)/.stage/socialbox-rootless
+# Bracketed so this file itself does not contain the legacy names.
+LEGACY_BRAND_RE := dor[i]tos|secret[s]auce
+
+.PHONY: all build-manager build-cli build-helper build-drain build-app-keychain build-location stage stage-copy clean-stage brand-scan
+
+all: build-manager build-cli build-helper build-drain build-app-keychain build-location
+
+build-manager:
+	$(MAKE) -C "$(LUCID)/Manager" THEOS=$(THEOS) TARGET=$(TARGET) FINALPACKAGE=$(FINALPACKAGE)
+
+build-cli:
+	$(MAKE) -C "$(LUCID)/CLI" THEOS=$(THEOS) TARGET=$(TARGET) FINALPACKAGE=$(FINALPACKAGE)
+
+build-helper:
+	$(MAKE) -C "$(LUCID)/Helper" THEOS=$(THEOS) TARGET=$(TARGET) FINALPACKAGE=$(FINALPACKAGE)
+
+build-drain:
+	$(MAKE) -C "$(LUCID)/HelperSafety" socialbox-drain-service \
+	  THEOS=$(THEOS) TARGET=$(TARGET) FINALPACKAGE=$(FINALPACKAGE)
+
+build-app-keychain:
+	$(MAKE) -C "$(LUCID)/Inject" SocialBoxAppKeychain \
+	  THEOS=$(THEOS) TARGET=$(TARGET) FINALPACKAGE=$(FINALPACKAGE)
+
+build-location:
+	$(MAKE) -C "$(LUCID)/Inject" SocialBoxLocation \
+	  THEOS=$(THEOS) TARGET=$(TARGET) FINALPACKAGE=$(FINALPACKAGE)
+
+clean-stage:
+	rm -rf "$(STAGE)"
+
+stage: all stage-copy
+
+# Copy already-built artifacts into the stage without recompiling.
+stage-copy: clean-stage
+	mkdir -p \
+	  "$(STAGE)/Applications" \
+	  "$(STAGE)/usr/libexec" \
+	  "$(STAGE)/usr/local/bin" \
+	  "$(STAGE)/Library/LaunchDaemons" \
+	  "$(STAGE)/Library/MobileSubstrate/DynamicLibraries"
+	cp -R "$(LUCID)/Manager/.theos/obj/SocialBox.app" "$(STAGE)/Applications/SocialBox.app"
+	cp "$(LUCID)/Helper/.theos/obj/SocialBoxHelper" "$(STAGE)/usr/libexec/SocialBoxHelper"
+	cp "$(LUCID)/Helper/com.socialbox.helper.plist" "$(STAGE)/Library/LaunchDaemons/com.socialbox.helper.plist"
+	cp "$(LUCID)/CLI/.theos/obj/SocialBoxCLI" "$(STAGE)/usr/local/bin/SocialBoxCLI"
+	cp "$(LUCID)/HelperSafety/.theos/obj/socialbox-drain-service" "$(STAGE)/usr/libexec/socialbox-drain-service"
+	cp "$(LUCID)/Inject/.theos/obj/SocialBoxAppKeychain.dylib" \
+	  "$(STAGE)/Library/MobileSubstrate/DynamicLibraries/SocialBoxAppKeychain.dylib"
+	cp "$(LUCID)/Inject/SocialBoxAppKeychain.plist" \
+	  "$(STAGE)/Library/MobileSubstrate/DynamicLibraries/SocialBoxAppKeychain.plist"
+	cp "$(LUCID)/Inject/.theos/obj/SocialBoxLocation.dylib" \
+	  "$(STAGE)/Library/MobileSubstrate/DynamicLibraries/SocialBoxLocation.dylib"
+	cp "$(LUCID)/Inject/SocialBoxLocation.plist" \
+	  "$(STAGE)/Library/MobileSubstrate/DynamicLibraries/SocialBoxLocation.plist"
+	cp -f "$(LUCID)/Manager/Resources/"AppIcon*.png "$(STAGE)/Applications/SocialBox.app/"
+	cp -f "$(LUCID)/Manager/Resources/iTunesArtwork@2x.png" "$(STAGE)/Applications/SocialBox.app/" 2>/dev/null || true
+	@echo "STAGED=$(STAGE)"
+	@$(MAKE) -f "$(LUCID)/Makefile.stage" brand-scan STAGE="$(STAGE)"
+
+# Every staged file, binary or text, must be free of the legacy product names.
+brand-scan:
+	@echo "== legacy brand scan on staged artifacts =="
+	@fail=0; \
+	for f in $$(find "$(STAGE)" -type f); do \
+	  if LC_ALL=C grep -a -i -E -q '$(LEGACY_BRAND_RE)' "$$f"; then \
+	    echo "FAIL $$f"; fail=1; \
+	  else \
+	    echo "PASS $$f"; \
+	  fi; \
+	done; \
+	if [ "$$fail" != 0 ]; then exit 1; fi

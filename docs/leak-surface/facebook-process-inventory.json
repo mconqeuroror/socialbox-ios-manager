@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "rows": [
+    {
+      "id": "FBPROC-001",
+      "category": "Multi-app process lifecycle",
+      "surface": "All-app stop/drain epochs and original controller observation quiescence",
+      "mechanism": "Unwired coordinator fans out stop before bounded per-app drain and tracks epochs/in-flight launch/stop/observer effects. Original controller synchronizes identity/token state and accounts for executing observation handlers. No daemon main wiring or Facebook activation is claimed.",
+      "coverage": [
+        "blocked"
+      ],
+      "verdict": "gap",
+      "evidence": [
+        {
+          "path": "daemon/RBXAppProcessCoordinator.h",
+          "line": 1,
+          "detail": "Coordinator/observer implementation, deterministic concurrency regression or integration-limit documentation."
+        },
+        {
+          "path": "daemon/RBXAppProcessCoordinator.m",
+          "line": 1,
+          "detail": "Coordinator/observer implementation, deterministic concurrency regression or integration-limit documentation."
+        },
+        {
+          "path": "daemon/RBXProcessController.h",
+          "line": 1,
+          "detail": "Coordinator/observer implementation, deterministic concurrency regression or integration-limit documentation."
+        },
+        {
+          "path": "daemon/RBXProcessController.m",
+          "line": 1,
+          "detail": "Coordinator/observer implementation, deterministic concurrency regression or integration-limit documentation."
+        },
+        {
+          "path": "tools/test_app_process_coordinator.m",
+          "line": 1,
+          "detail": "Coordinator/observer implementation, deterministic concurrency regression or integration-limit documentation."
+        },
+        {
+          "path": "tools/test_app_process_coordinator.sh",
+          "line": 1,
+          "detail": "Coordinator/observer implementation, deterministic concurrency regression or integration-limit documentation."
+        },
+        {
+          "path": "docs/multiapp-process-coordinator.md",
+          "line": 1,
+          "detail": "Coordinator/observer implementation, deterministic concurrency regression or integration-limit documentation."
+        },
+        {
+          "path": "scripts/build-mac.sh",
+          "line": 1,
+          "detail": "Coordinator/observer implementation, deterministic concurrency regression or integration-limit documentation."
+        }
+      ],
+      "verification": "Failing-first blocked-launch and old-observer overlap fixtures reproduced false stop success. Corrected host fixtures exercise actual dispatch handler barriers and both app orders; Thread Sanitizer and original per-app tests pass. Actual global daemon/LaunchServices/recovery integration is not accepted.",
+      "fix": "Integrate all main/startup/recovery/sentinel process construction under one coordinated owner with actual daemon overlap tests before enabling Facebook, then perform both cross-app orders on device with the shared lease."
+    }
+  ]
+}

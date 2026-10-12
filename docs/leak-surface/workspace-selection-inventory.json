@@ -1,0 +1,170 @@
+{
+  "formatVersion": 1,
+  "rows": [
+    {
+      "id": "UI-008",
+      "category": "Workspace selection and common entry",
+      "surface": "Durable serialized selection and launcher entry admission",
+      "mechanism": "The daemon persists switching before global CLOSED/process/socket closure and commits selected only after revalidation. The launcher exact deep link carries no profile ID; passcode/license and normal daemon admission remain authoritative. Hidden clone sandboxes remain separate. Since 0.1.27 the manager is labelled SocialBox and the separate 0.1.26 Facebook shortcut is not built or registered. Exact-path upgrade retirement preserves original applications; their icons do not route selected containers.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "shared/RBXWorkspaceSelection.h",
+          "line": 1,
+          "detail": "Shipped implementation or executable selection regression; physical SpringBoard and Facebook networking are separate acceptance items."
+        },
+        {
+          "path": "daemon/main.m",
+          "line": 1,
+          "detail": "Shipped implementation or executable selection regression; physical SpringBoard and Facebook networking are separate acceptance items."
+        },
+        {
+          "path": "daemon/RBXLauncherState.m",
+          "line": 1,
+          "detail": "Shipped implementation or executable selection regression; physical SpringBoard and Facebook networking are separate acceptance items."
+        },
+        {
+          "path": "launcher/RBXLauncherViewController.h",
+          "line": 1,
+          "detail": "Shipped implementation or executable selection regression; physical SpringBoard and Facebook networking are separate acceptance items."
+        },
+        {
+          "path": "launcher/RBXLauncherViewController.m",
+          "line": 1,
+          "detail": "Shipped implementation or executable selection regression; physical SpringBoard and Facebook networking are separate acceptance items."
+        },
+        {
+          "path": "launcher/RBXLauncherAppDelegate.m",
+          "line": 1,
+          "detail": "Shipped implementation or executable selection regression; physical SpringBoard and Facebook networking are separate acceptance items."
+        },
+        {
+          "path": "launcher/RBXPhoneArtwork.h",
+          "line": 1,
+          "detail": "Shipped implementation or executable selection regression; physical SpringBoard and Facebook networking are separate acceptance items."
+        },
+        {
+          "path": "launcher/Resources/Info.plist",
+          "line": 1,
+          "detail": "Shipped implementation or executable selection regression; physical SpringBoard and Facebook networking are separate acceptance items."
+        },
+        {
+          "path": "entry/main.m",
+          "line": 1,
+          "detail": "Historical 0.1.26 helper source, retired from package builds in 0.1.27; not evidence of current original-app icon routing."
+        },
+        {
+          "path": "entry/Entry.entitlements",
+          "line": 1,
+          "detail": "Historical 0.1.26 helper source, retired from package builds in 0.1.27; not evidence of current original-app icon routing."
+        },
+        {
+          "path": "entry/Resources/Info.plist",
+          "line": 1,
+          "detail": "Historical 0.1.26 helper source, retired from package builds in 0.1.27; not evidence of current original-app icon routing."
+        },
+        {
+          "path": "entry/Makefile",
+          "line": 1,
+          "detail": "Historical 0.1.26 helper source, retired from package builds in 0.1.27; not evidence of current original-app icon routing."
+        },
+        {
+          "path": "Makefile",
+          "line": 1,
+          "detail": "Shipped implementation or executable selection regression; physical SpringBoard and Facebook networking are separate acceptance items."
+        },
+        {
+          "path": "layout/DEBIAN/postinst",
+          "line": 1,
+          "detail": "Shipped implementation or executable selection regression; physical SpringBoard and Facebook networking are separate acceptance items."
+        },
+        {
+          "path": "scripts/apt_repository.py",
+          "line": 1,
+          "detail": "Shipped implementation or executable selection regression; physical SpringBoard and Facebook networking are separate acceptance items."
+        },
+        {
+          "path": "scripts/build-version.py",
+          "line": 1,
+          "detail": "Shipped implementation or executable selection regression; physical SpringBoard and Facebook networking are separate acceptance items."
+        },
+        {
+          "path": "scripts/build-mac.sh",
+          "line": 1,
+          "detail": "Shipped implementation or executable selection regression; physical SpringBoard and Facebook networking are separate acceptance items."
+        },
+        {
+          "path": "tools/test_workspace_selection.m",
+          "line": 1,
+          "detail": "Shipped implementation or executable selection regression; physical SpringBoard and Facebook networking are separate acceptance items."
+        },
+        {
+          "path": "tools/test_workspace_dispatch.py",
+          "line": 1,
+          "detail": "Shipped implementation or executable selection regression; physical SpringBoard and Facebook networking are separate acceptance items."
+        },
+        {
+          "path": "tools/enumerate_leak_source.py",
+          "line": 7,
+          "anchor": "PREFIXES =",
+          "detail": "Mechanical enumeration conservatively retains the historical entry source; a source reference does not imply a shipped component or runtime isolation."
+        },
+        {
+          "path": "tools/test_workspace_fixture.m",
+          "line": 1,
+          "detail": "Actual UIKit selection and shared entry tests, inert IPC and synthetic profiles; not physical clone acceptance."
+        },
+        {
+          "path": "tools/device_workspace_selection_probe.m",
+          "line": 1,
+          "detail": "Reproducible offline selection probe or scoped build/device acceptance evidence; incomplete plan items explicitly retained."
+        },
+        {
+          "path": "docs/workspace-single-entry-0.1.26.md",
+          "line": 1,
+          "detail": "Reproducible offline selection probe or scoped build/device acceptance evidence; incomplete plan items explicitly retained."
+        },
+        {
+          "path": "docs/release-evidence/workspace-0.1.26.json",
+          "line": 1,
+          "detail": "Reproducible offline selection probe or scoped build/device acceptance evidence; incomplete plan items explicitly retained."
+        },
+        {
+          "path": "entry/README.md",
+          "line": 1,
+          "detail": "Manager branding and exact retired-shortcut upgrade migration; original app routing remains unimplemented."
+        },
+        {
+          "path": "layout/DEBIAN/preinst",
+          "line": 1,
+          "detail": "Manager branding and exact retired-shortcut upgrade migration; original app routing remains unimplemented."
+        },
+        {
+          "path": "tools/test_preinstall.py",
+          "line": 1,
+          "detail": "Manager branding and exact retired-shortcut upgrade migration; original app routing remains unimplemented."
+        },
+        {
+          "path": "tools/test_build_version.py",
+          "line": 1,
+          "detail": "Manager branding and exact retired-shortcut upgrade migration; original app routing remains unimplemented."
+        },
+        {
+          "path": "docs/socialbox-icons-0.1.27.md",
+          "line": 1,
+          "detail": "Manager branding and exact retired-shortcut upgrade migration; original app routing remains unimplemented."
+        },
+        {
+          "path": "docs/release-evidence/socialbox-icons-0.1.27.json",
+          "line": 1,
+          "detail": "Local candidate package hashes and inspection/test results; no physical upgrade or original-icon routing claim."
+        }
+      ],
+      "verification": "210 pure transition assertions, 177 actual daemon handler assertions including forty selections and closure failures; existing 492 multi-app launch assertions. Actual UIKit: 155 assertions with fifty synthetic rows, forty exact target selections, no previous-target fallback while switching, and an exact shared Facebook URL that retains inactive-app/network blocks. Full build and physical results are recorded separately. Physical iPhone 0.1.26: forty request-bound offline selections alternating two existing Reddit containers, all CLOSED; six profile-directory files byte-identical. No Facebook network launch or forty-clone/canary claim. 0.1.27 targeted package-input and maintainer-script tests pass, including both prefixes, exact helper process/icon selection, unregister failure propagation and absent-helper no-op. Physical 0.1.27 upgrade now passes: retired helper absent from disk and LaunchServices, SocialBox registered with stable bundle ID, two original apps retained, two container IDs and six profile files/ownership unchanged, license unlocked and traffic CLOSED. Visual SpringBoard confirmation remains separate. Both 0.1.27 full ldid builds pass 116 test entrypoints, seven components/twelve slices and 1,346 independently verified code-page hashes each; helper absent, deployment key and remaining entitlements preserved.",
+      "fix": "Implement and physically verify ordinary-app-icon routing as a separate change without sharing sandboxes or bypassing daemon admission. Verify retired icon removal on SpringBoard after 0.1.27 upgrade. Do not enable inactive Facebook or equate selection with a lease."
+    }
+  ]
+}

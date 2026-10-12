@@ -1,0 +1,28 @@
+{
+  "ok": true,
+  "checks": 18,
+  "completed": [
+    "initial rendering performs reads but zero mutations",
+    "engineering and missing-acceptance blockers disable Release",
+    "opening acceptance form performs no mutation",
+    "incomplete acceptance form cannot submit",
+    "saving observed checks binds exact package hash and fields",
+    "passing another candidate does not clear engineering blocker",
+    "review exposes immutable package hash before release",
+    "375px review layout has no horizontal overflow",
+    "cancelled release confirmation performs no POST",
+    "stale revision stays an error and does not appear published",
+    "confirmed release publishes the exact reviewed artifact once",
+    "read failure retains an explicit error instead of false success",
+    "refresh recovers the last confirmed release without a mutation",
+    "anonymous admin release navigation requires login",
+    "public empty release has no misleading installation controls",
+    "375px public unavailable page has no horizontal overflow",
+    "public support links to the configured owner",
+    "no runtime errors or unexpected API requests"
+  ],
+  "mockPOSTs": 3,
+  "mockAttests": 1,
+  "mockReleaseAttempts": 2,
+  "scope": "Real built Next.js UI. Admin release APIs intercepted with synthetic candidates. Public /updates is the real unavailable server page. No production mutations or device acceptance."
+}

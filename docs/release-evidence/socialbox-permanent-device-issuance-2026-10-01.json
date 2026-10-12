@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "unit": 35,
+  "kind": "permanent-single-installation-device-key-issuance",
+  "recordedAt": "2026-10-01T20:34:17.145018+00:00",
+  "status": "PASS_LOCAL_NOT_DEPLOYED",
+  "clientDeliveryReady": false,
+  "customerArtifactReleased": false,
+  "customerCodeIssued": false,
+  "contract": {
+    "ownerRequest": "Generate a website code, enter once, permanent customer term, one device. Instagram isolation/switching first; IG and FB immediate targets, Twitter deferred. Final installation/package/download follows accepted runtime.",
+    "after": "New owner-console device keys always have expiresAt:null and maxActivations:1. Duration or expanded/non-numeric limit requests return400 before key generation/publication or issuance audit. Simplified form removes duration/device-limit inputs, retaining label and collapsed advanced options. Unique current canonical owner guard remains inside the auth-state transaction.",
+    "binding": "One installation slot with retained secret bearer; not physical anti-cloning/hardware attestation. Key entry is once after genuine pairing; subsequent validation uses saved credentials. Lost/failed pairing does not silently remint an installation.",
+    "unchanged": "Existing licenses, bindings/history, signer, revocation, native signed-token freshness and source owner/original deadlines, first-preparation/provenance/package guards, engine/session admission and customer release gate. No migration of existing expiring/multi-slot rows. Existing legacy auth-read initialization/migration contracts are unchanged; no general no-write read claim."
+  },
+  "backend": {
+    "status": "PASS",
+    "focusedGroups": 37,
+    "regressionGroupsOrChecks": 124,
+    "suiteCount": 7,
+    "typecheck": "PASS",
+    "frozenCloudInputs": 152,
+    "sourceStable": true,
+    "copiedSourceStable": true,
+    "privateReportSHA256": "5d7223abbd464a9d12f0107cd9a17987d1c74064c0cecb46b1446fc4776e3aac",
+    "scope": "Actual handlers/local temporary storage and synthetic RSA/auth/claims. Literal allowlisted child environment, no parent credentials or environment files. Dependencies/Node/toolchain/OS/private runner excluded from cloud graph.",
+    "currentScope": "Only the existing UI fixture changed after this run; all other151 accepted cloud hashes still match. The new UI/build run freezes all152 final inputs."
+  },
+  "counterfactual": {
+    "status": "FAIL_EXPECTED",
+    "passed": 26,
+    "failed": 11,
+    "groups": 37,
+    "privateReportSHA256": "010cfc97313a98bd89f3a5e97babba814d25af103dd7abece32153b9ee7c3c8c",
+    "scope": "Exact current new focused fixture against previous committed cloud source; expected old duration/multi-slot acceptance. Initial launcher failure before assertions is invalid evidence, separately retained/classified."
+  },
+  "browserAndBuild": {
+    "status": "PASS",
+    "browserChecks": 11,
+    "build": "Next14.2.35 optimized production build, synthetic private RSA/auth environment",
+    "frozenCloudInputs": 152,
+    "privateRunnerInputs": 3,
+    "sourceStableCurrent": true,
+    "copiedSourceStableCurrent": true,
+    "privateRunnerStable": true,
+    "privateReportSHA256": "b07e01f904aa9141f73e0626e6b955dc2ed264c546e643ac2b7b9f939cb389d2",
+    "sourceGraphSHA256": "14f8e32833fe7190f998db9b6a775397a1a14626bff729ac3b68841390f95c35",
+    "scope": "Fresh copied build and real browser/handler on localhost only, disposable owner/40 existing synthetic rows. Actual submit persists one null-expiry/max1 row and its displayed key authenticates against the stored hash; copy/ack,41 rows,375px overflow and owner/public gates pass. Page-request boundary is not an OS-wide network sandbox. No prior .next/state/environment copied."
+  },
+  "phoneContext": {
+    "access": "PASS_RESTORED_TRUSTED_MOBILE_SSH_AND_ADMINISTRATOR",
+    "freshInspection": "PASS_READ_ONLY_OLD_MANAGER_AND_OVERLAY_PINNED_NEW_SOURCE_ADDON_NODES_ABSENT",
+    "backup": "PASS_PRIVATE_QUIESCED_MANAGER_STATE_PROGRAM_CONTROL_SNAPSHOT",
+    "restoration": "PASS_THREE_ORIGINAL_USER501_SERVICES_AND_MANAGER_REOPENED",
+    "archiveValidation": "PASS_28_MANAGER_FILES_AND10_EXACT_PROGRAM_CONTROL_COPIES_NO_LINK_OR_SPECIAL_NODE",
+    "scope": "Root access, stopped manager snapshot and original service restoration only. No target account contents interpreted, IG/FB account-storage backup, whole-engine quiescence, archive restore, source/default pairing/installation, loader visual or isolation acceptance. New source/addon nodes stay absent; absence is no authority. Initial backup namespace refusal occurred before effects. All credentials, archives and phone metadata remain private."
+  },
+  "reviews": {
+    "status": "PASS_SCOPED_ROOT_REVIEW",
+    "scope": "Root read-only production/test diffs, complete fresh browser orchestration before execution, final152-file hashes, stored result/count/log checks and synthetic form screenshot. Feature/test author executed the fixtures; no independent review of their own tests claimed. New policy uses unchanged current-owner callback/PATCH allowlist and established device binding."
+  },
+  "notRun": [
+    "Production deployment/owner signing or real license issuance",
+    "Actual default endpoint/locked original owner-page/runtime enforcement",
+    "Fresh customer installation, trusted external issuer/history transaction, package acceptance",
+    "IG sibling leak repair, safe full switching/isolation/recovery, FB launch, real accounts/proxy traffic",
+    "Physical saved-settings retirement or blue loader acceptance"
+  ],
+  "retainedFailures": [
+    "Initial counterfactual launcher Unix socket path failure before assertions and its invalid expected-policy classification; separate correction retained",
+    "Private read-only summary suffix-glob failure, corrected without production edits",
+    "First phone backup rejected observed user501 job namespace before effects; new backup02 accepted exact domain",
+    "Historical Unit30 Leak-Surface trailer failure remains unchanged"
+  ],
+  "next": "Publish only accepted website policy through a NEW reviewed cloud-only deployment preserving APT/client gate/environment. Core isolation is still first owner priority; prior automatic runtime/identity risk rejection must not be retried/routed around. Phone reinstallation cannot erase unknown/default history or imply clean-customer authority."
+}

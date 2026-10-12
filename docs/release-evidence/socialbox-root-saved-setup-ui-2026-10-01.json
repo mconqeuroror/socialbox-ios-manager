@@ -1,0 +1,275 @@
+{
+  "clientDeliveryReady": false,
+  "contract": {
+    "authority": "Production frontend uses only fixed authenticated source clients. Cache and getter flags render; fresh signed validation and authenticated root state/read precede mutations. No local role/files/journal/bootstrap grant.",
+    "callbacks": "Serial one-shot main completion, per-step cooperative timeout/generation guard ignore duplicate or delayed callbacks. Each root operation retains its own original authenticated deadline.",
+    "restart": "App-process singleton retains unpublished stage intent across dismissal only while alive. New process observes root durable pending; no automatic startup mutation or resend. Durable unpublished input across process loss is not provided.",
+    "scope": "Saved choices only; requested memberships are metadata, proxy unavailable, no new source runtime switch/removal, no numeric-CID or engine authorization substitution.",
+    "supersession": "Different/newer root slots can update rendering but cannot be executed as an old retained request; retry conflicts. Authenticated same empty epoch cannot discard unresolved local input.",
+    "uncertainty": "Exact stable stage input/request ID is kept before send; root acknowledgement supplies the immutable candidate/token. Every unsuccessful mutation may have effects; explicit retry/reconcile retains identical input or exact slot."
+  },
+  "customerArtifactReleased": false,
+  "customerCodeIssued": false,
+  "host": {
+    "assertions": 722,
+    "failures": 0,
+    "privateReportSHA256": "987e3694f3491adce65fdb6172a4dcbf967c720d8b1b14846b617d89f500902d",
+    "scope": "Actual source license/root owner, protected vault/configuration/pending files; synthetic RSA-signed admission and host context.",
+    "sourceStable": true,
+    "status": "PASS"
+  },
+  "kind": "socialbox-authenticated-root-saved-setup-ui",
+  "notRun": [
+    "normal production endpoint/service and activation-form acceptance",
+    "trusted first-unpaired customer installer/establishment and download flow",
+    "durable unpublished first-stage recovery after process loss",
+    "source metadata removal, discard, thaw, migration, successor and identity-retirement policy",
+    "physical source crash/reboot/power-loss or simultaneous-process recovery",
+    "official registered homes/groups and complete-writer authority, source UUID/allocation/target transaction",
+    "automatic safe account storage switching/isolation/recovery and running-session expiry/revocation",
+    "actual two-account Instagram acceptance and proxy traffic",
+    "Facebook/Twitter runtime and platform-side device recognition",
+    "customer package/license delivery"
+  ],
+  "physical": {
+    "acceptanceEndpoint": "Compile-time fixed private endpoint in temporary exact production-source overlay/service; explicit externally established already-paired private namespace.",
+    "actualSavedSetupCreateFullReadEditManualReopen": "PASS",
+    "actualUnchangedManagerReal501Effective0": "PASS",
+    "artifacts": {
+      "LBXPresentation.dylib": {
+        "sha256": "e5489acc1585354b64a093d8a3c31e084d50b53c073f6ecd1f3a3d7eb004a0d6"
+      },
+      "OwnerUIProbe.dylib": {
+        "sha256": "b4fbf52061c635ae2156348bddb127921b179f20db467f46758e8aa40ec1176b"
+      },
+      "OwnerUIProbe.plist": {
+        "sha256": "a521e2edf4b0a69a54b5421d41c98cf17eff488b397d9f8dd26956d5ad96bc02"
+      },
+      "initialize": {
+        "sha256": "7347e69bc36fbb76263d014ef64005c4df7e6ef2a7930b84046195f7ce635a4a"
+      },
+      "service": {
+        "sha256": "358881694d5b98684e5fa707f012b166fc9d2b11a23d9d407b7f0810d4f06114"
+      },
+      "service.plist": {
+        "sha256": "de69bcf6e5d2748a2f4636724254b80d84b19e52e3f0aab953d44ff117ad322a"
+      }
+    },
+    "build": "20H392",
+    "driverAssertions": 18,
+    "executedArchitecture": "arm64",
+    "firstClientInstall": "NOT_RUN",
+    "freshGenuineWebsiteLicenseViaActualManagerClient": "PASS",
+    "freshQuiescedPrivateBackup": "PASS",
+    "hardware": "iPhone10,6",
+    "iOS": "16.7.16",
+    "independentOfflineEvidenceReview": "PASS",
+    "model": "iPhone X",
+    "nativeAssertions": 75,
+    "normalDefaultEndpointInstall": "NOT_RUN",
+    "originalOwnerManagerRelaunched": "PASS",
+    "ownerOverlayExactRestore": "PASS",
+    "ownerRenderedContainerCountAndSelectionEquality": "PASS",
+    "phases": {
+      "activate": {
+        "assertions": 5,
+        "privateReportSHA256": "5ff906452d07dcaa25c22f6cd242187825feacf26a36cbd8b413f10aaf13e1a6",
+        "status": "PASS"
+      },
+      "revoked": {
+        "assertions": 9,
+        "privateReportSHA256": "caaba49baa73c149521d2aec96fd975335103f779973349f1ca10c1254633754",
+        "status": "PASS"
+      },
+      "ui": {
+        "assertions": 61,
+        "privateReportSHA256": "4617a6cdb8904d415390076c1cfc12972c35baed9a70b44ce23c1ecdb462e8e5",
+        "status": "PASS"
+      }
+    },
+    "privateBuildReportSHA256": "86528769db7abb688ba650324ebe1bd5f3c06e05e8ac71d32362982b952572eb",
+    "privateDeviceReportSHA256": "bc2d3b300d653ae2a3a36aa7d3a17f9212dfc7198c1c66e29fcf2d8802dd5f50",
+    "privateDriverSHA256": "b07fe0dc436091b9e358036be2e449093b4288d09ce94b442c566fa883707431",
+    "privateIndependentReviewSHA256": "24ccf3696f5e4f44852c308c12379e6bb5c108042ee6301712a2249f33c67ce8",
+    "privateLicenseRevoked": "PASS",
+    "privateLoaderServiceAndDirectoriesRemoved": "PASS",
+    "runtimeAccepted": false,
+    "signedRevocationVerifyAndReload": "PASS",
+    "sixOwnerPayloadByteIdentities": "PASS",
+    "status": "PASS",
+    "websiteActivationForm": "NOT_RUN"
+  },
+  "preservedAttempts": [
+    {
+      "privateLogSHA256": "fb8896772de407939ee416c82cef214eff8ef84512497be430a18f305ae0c798",
+      "reason": "Virtual symbol/source fixture lacked new mutation exports, coordinator class and translation units. Strict production requirements stayed intact; corrected fixture passes all36 tests.",
+      "stage": "initial recovered builder virtual fixture",
+      "status": "FAIL"
+    },
+    {
+      "privateCompileLogSHA256": [
+        "f23cab2e70bab84f03f08edfe7709091e650d4fd522d2436b2f6cc6688a5115c",
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "3e3ce529acc966844219839b0010180719ed374a50e254d7e71115e729317be9",
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      ],
+      "reason": "Strict private probe compilation failures were corrected. Invalid serial and UDID fixture lengths were found before deployment and corrected; exact current manual dictionary passes the production validator. No production validation was weakened.",
+      "stage": "private UIKit probe before deployment",
+      "status": "FAIL"
+    }
+  ],
+  "privacy": {
+    "credentialsIdentityValuesAccountDataScreenshotsArchivesAndPrivateDevicePathsExported": false,
+    "ownerAccountsInspected": false,
+    "rawEvidenceOutsideGit": true,
+    "socialAppRuntimeInvoked": false
+  },
+  "production": {
+    "architectures": [
+      "arm64",
+      "arm64e"
+    ],
+    "builderRegressionTests": 36,
+    "entitlements": {},
+    "installedNormalEndpoint": "NOT_RUN",
+    "overlaySHA256": "973684653a87388d745f17bf6e897f04b10d4f725dbdddc676c33febba7ffc57",
+    "privateBuildReportSHA256": "85745f9e6914ca497970d4c912526f0b492d146d9e8c65b26077f23972067cdf",
+    "shippingSourceStable": true,
+    "status": "PASS",
+    "testProvidersAbsent": true
+  },
+  "recordedAt": "2026-10-01T06:39:45.698096+00:00",
+  "schemaVersion": 1,
+  "sourceDependencySHA256": {
+    "daemon/RBXLicenseToken.h": "a21d1072b10136c4ecc809ad1855bebd368849a2bc0628db63202399fcb52979",
+    "daemon/RBXLicenseToken.m": "e3f00d563c99a47400d22b31b152ec4d2ab6123505b9aaa0f2d2d787f13d55da",
+    "lucid/Authorization/LBXLicenseClient.h": "63267ad770a9f373edadc18b700b8c1909a25784ff054b2e43c6011bd7ec9686",
+    "lucid/Authorization/LBXLicenseClient.m": "34f06ce5d479543172b9dddecba5d3b847dc499f432c57a78b3181f2bfb1fd94",
+    "lucid/Authorization/LBXLicenseEndpoints.h": "a9b98b6c2269b7ce9a50bcd76e243c8d9d12733368cf8cd7ebf699c0fdbc07e1",
+    "lucid/Authorization/LBXLicenseExchange.h": "ab24d7e92934dce040add199712c0bce2cdd29e581b7e0c1a6246708c90f9b29",
+    "lucid/Authorization/LBXLicenseExchange.m": "5a7ed4ef11dcf87ec32876ce34f75463077215734525929f9750f4afc02e7c93",
+    "lucid/Authorization/LBXLicenseIPC.h": "8ff579acaa3b3113e6480f472022df893095d633de08b362a42de3b63df839ea",
+    "lucid/Authorization/LBXLicenseIPC.m": "7c3aec2a53d8c666b4cfd6ba8deb323f172b5c962de82c809834876b9396ffbc",
+    "lucid/Authorization/LBXLicenseOwner.h": "ec2b0a3bc4354ae0f2ed942c8f45e54767e97e0a6ff35e8d79c0c67e4e159736",
+    "lucid/Authorization/LBXLicenseOwner.m": "b61bc078a29087947608963f0d0f3963889238dbe098bfb98676a0b2ea3e3154",
+    "lucid/Authorization/LBXLicensePeer.h": "bcd2c336db43e00c5f549f0db2a12d54c1945f4ec8d51916640df9ff6c36f208",
+    "lucid/Authorization/LBXLicensePeer.m": "92e2207673a79030442664a66a46a2610bace3875a77ab99f4943f0f6bc50787",
+    "lucid/Authorization/LBXLicenseTransport.h": "bbf31e9e89f19ad7edca17ceb4bfec5e66ff6566d7daff1c125e44af0682e54a",
+    "lucid/Authorization/LBXLicenseTransport.m": "40999576d5d20030ecb50631e4ba69d333de79c2119867923975691147acf35a",
+    "lucid/Authorization/LBXLicenseVault.h": "5fddd744f393257aa13002bd7197d354749ce800f6450af08c6c811e1602204e",
+    "lucid/Authorization/LBXLicenseVault.m": "9c70ecd738cb0e1d50d36eb71602001c1160826d1eae859a6ddac0d56598d592",
+    "lucid/Authorization/LicenseService.m": "a89d55e5f76c38f742c1e4d754d5621f0968846bbc4ae4c58c14e3aecafb88fe",
+    "lucid/Containers/LBXContainerClient.h": "8d4fe00c232cdc7af831b5b1bc86bf6549f18d99ee1903b0ad1e1fe260f3d6bf",
+    "lucid/Containers/LBXContainerClient.m": "a004ec1ad77b1e1baed1a35b7c678e3204586a366abdd02e5dbf9c597815319b",
+    "lucid/Containers/LBXContainerConfiguration.h": "bf178269d63bccf8ee2651113ba43401784aff79724b25062026f74e465828fe",
+    "lucid/Containers/LBXContainerConfiguration.m": "0475f4c7443d6a74bca17e47bd19c4c736af8faa319b2bd18d4e2a9c405b58a8",
+    "lucid/Containers/LBXContainerConfigurationStore.h": "ce0d1d3a5c6467894f96cbb8f38a9a34621dca33550ee6283733e4ed882db777",
+    "lucid/Containers/LBXContainerConfigurationStore.m": "d22594a155b4e656e722ff14ae2f3051502d08aac9b7cc155419444e44af5e88",
+    "lucid/Containers/LBXContainerEndpoints.h": "f2a247fad88f4c33a7f724639b9721f5888597c034dd57e00cbe8e79714d4f14",
+    "lucid/Containers/LBXContainerIPC.h": "b1cadb446b6f2b9e420bea05b7def048e2dbb17a3b621b523f596f5695a8ea93",
+    "lucid/Containers/LBXContainerIPC.m": "a997795f418a5fb498008c15e159e23e9e499b88ca2f14f4dfe3206297e6e68c",
+    "lucid/Containers/LBXContainerMutationClient.h": "c20e7f98ddd5624e44017ba930d12ded38b0e7fed6a19e84ba4d93bb33d721eb",
+    "lucid/Containers/LBXContainerMutationClient.m": "4d0464df8a6b06a81528c76aaf5a2b6b1fea9e2fed220ac3b29c7fe4b13c8e00",
+    "lucid/Containers/LBXContainerMutationCoordinator.h": "4e41d2480adcd334251e9eccf5e8759850c3feb9c5553c0dce479cd8d32fc8af",
+    "lucid/Containers/LBXContainerMutationCoordinator.m": "eea2925841099aa3b63e261264651f358f4a9f5469ec4260f6e3181ff37f5d35",
+    "lucid/Containers/LBXContainerMutationIPC.h": "f0414be35c330cd41b5022a07a9e095a744f12ffd30395746cde0c9ff9fe2ab1",
+    "lucid/Containers/LBXContainerMutationIPC.m": "82722d7a4c5edea1c6e6da0a756f7b4e703167e63ed806938036dbaa7d879554",
+    "lucid/Containers/LBXContainerPendingMutation.h": "ba4e0fbc3c1662c6a82bd21eb165b1a7b0d7524c8b5b50f40c805348ae52c5dc",
+    "lucid/Containers/LBXContainerPendingMutation.m": "b86a58da28378609b7f67c1d848819e6dfebc5b26ac2f2c433dd8da1ce967d77",
+    "lucid/Containers/LBXContainerRootMutationCoordinator.h": "40e8be9a5bf15c476d99e50624e1a38f75f22c3763dae2552d94867a0f340ca3",
+    "lucid/Containers/LBXContainerRootMutationCoordinator.m": "b4b86297dc3e52e7d5473c6656f66238b90b62dd66a65c59b1df6180504f050f",
+    "lucid/Containers/LBXContainerRootMutationOwner.h": "b3ecd9a3bd4e917aa2caa5afcd9225b94ac296ba13d4e9aba193b4be045ee87e",
+    "lucid/Containers/LBXContainerRootMutationOwner.m": "078d4ab16694b9bee1ae9cb5b317ed796fbe094a90d10c66d6bd5585226f4aa7",
+    "lucid/Containers/LBXContainerRootPendingStore.h": "e3db75c0994ff037c1c4931ecedbf69395377f8612683b7621967d0055d505ab",
+    "lucid/Containers/LBXContainerRootPendingStore.m": "5d385d41e9265cdbb27e8ea2d0ecff90ae41b2322720fcf483bfeea895718709",
+    "lucid/Diagnostics/LBXIsolationAssessment.h": "bf14c6febf68b555e90a2374299ec82fc34021b735c284d1262355e9e55d82b9",
+    "lucid/Diagnostics/LBXIsolationAssessment.m": "001acf0e5725bfd8f57a7fc4976ddacd47b895d408534300cdce6ba850ddae13",
+    "lucid/Diagnostics/LBXIsolationViewController.h": "3a6e909eac3c7a04641f29559f563e48c268ba11c350e2f3b261f651fea27275",
+    "lucid/Diagnostics/LBXIsolationViewController.m": "9d697faca9c172cc67560060aa3dc48e1397659e56c5f2a8ee998b1a208b0e80",
+    "lucid/Diagnostics/LBXRecoveredContextAdapter.h": "ffa6aa40adada3e04058638c799e3214c8f946aca7122b6a58a776b48d0f32a7",
+    "lucid/Diagnostics/LBXRecoveredContextAdapter.m": "6398569e9c05f6e65a46120c180571d90e8d2a5bf432e581268941d3eb9b36e7",
+    "lucid/HelperSafety/LBXCallerFile.h": "d538e65c56b235190971dee04aa9ae57606d22ff176519e006079bef05853888",
+    "lucid/HelperSafety/LBXCallerFile.m": "8eaece9470b8024f514f35c52fb35fdeb24d9bb8b139eb18be9a9a42b67a75b0",
+    "lucid/HelperSafety/LBXXPC.h": "dd03df90efb001c332e622a2a1f1292d1f3ceaca02916a8a7dc3d86f1c4d474d",
+    "lucid/LBXPresentation.plist": "0e8a081a5b34a863af91c1cf30cffe29c203a3cd7f8323588e96e09f6128b4af",
+    "lucid/Makefile": "c8859216e6c67815a9670d8fb03c36eb23b0657fbbbbb2ff6620eb84c8f398b6",
+    "lucid/Presentation/LBXDisplayCopy.h": "018d93c42f5b88b1baff53018eb9eed3558601329b7b41a902a8875c6d7c11fe",
+    "lucid/Presentation/LBXDisplayCopy.m": "2b9ce764cc446d934963cbf7a26e20c4f3a6a8a758f958dffc0f027c0f72caef",
+    "lucid/Presentation/LBXPresentation.h": "f7b4065942e1c31ea344f3e0a49cba18fae80f75345b4bdecb2a6f5f4b241346",
+    "lucid/Presentation/LBXPresentation.m": "0e1afb88795a7095077cb86aab61771bc52850952d0d5217a95b559c1d7ce0ac",
+    "lucid/Presentation/LBXWorkspace.h": "3c84013be4125157a208e7f010e455ed318f0e907ecdae91d5eae9d7200d0511",
+    "lucid/Presentation/LBXWorkspace.m": "4a791f62179da15332cd324f8190ac860406888343644dc0e888d176aebde19c",
+    "lucid/Presentation/SBActivationView.h": "84638a628f537cb4fbb974c72ee3aa0cb4ad3e70c5d0ce47dbbf2f921c28e52d",
+    "lucid/Presentation/SBActivationView.m": "ff280283818acaec5e2ed15e2142b86336b6425be8c9f37497b244f0a6271d17",
+    "lucid/Presentation/SBBackendAdapter.h": "47684ebd58d9ef02bd90d019fa1b8313bc797a82aebe8843893b82f1f086d56f",
+    "lucid/Presentation/SBBackendAdapter.m": "e897774f96ec8a87e01de8c63dc14e5a7454eb6e9436464cae6ccd5b8e68821b",
+    "lucid/Presentation/SBContainersView.h": "b9013a9e90dd9b88a68946820c2431d1817ea40b7ffae44daf7ecf2c23dc77eb",
+    "lucid/Presentation/SBContainersView.m": "29ffa005a7c55ea514139e0041dace3423d75a6b33086577d3178db88bafe9d9",
+    "lucid/Presentation/SBDesign.h": "8fc781b1eade10e55a828cf96096383011b3dc7869ee5b336578f57afb8859d3",
+    "lucid/Presentation/SBDesign.m": "ad569c0321ea05b194651837dcf5ef1240efce3c8ad3714d5f23f05c3e83e777",
+    "lucid/Presentation/SBIdentityForm.h": "db834a513aeae3725eff4cb0c3178d6fbccee6165a5304e657c5f9c2a974a4b5",
+    "lucid/Presentation/SBIdentityForm.m": "fb2f0c0bb6300717a5050878c94da459c26ed97a69a7ba6a4eed2b73cd3901b3",
+    "lucid/Presentation/SBInterfaceCopy.h": "b86a065a3e465f9c716b9989a943237f5660344d43f94c119e68d2adc55ec031",
+    "lucid/Presentation/SBInterfaceCopy.m": "b47fdaae7dca96ea096e1e175c7f8503877544000324510bf660eeaa8d8417f6",
+    "lucid/Presentation/SBLegacyDisplayCatalog.h": "4195e2a45e58ea7338c79a94bc50c1a9a47f9a72d8b5d8f30dda2b9816aea8b3",
+    "lucid/Presentation/SBLegacyDisplayCatalog.m": "3d4a94a33963fd214183c64ba3988f4e2ad36d305551058b28c3740775cf3903",
+    "lucid/Presentation/SBSavedContainerSetup.h": "dd5edfacaa8ecb91162e357f0de419032664f695bcb48ad3234f6200a11cf5f2",
+    "lucid/Presentation/SBSavedContainerSetup.m": "26075dfccdd80a914d4a5117a8d41db422c34d1a45b9816b7a474ee28bb0f891",
+    "lucid/Presentation/SBSecondaryScreens.h": "05be0a7547a36fa2d7a8c1cad631d68e29d9fc72878b701bdb4d0faed199f8ec",
+    "lucid/Presentation/SBSecondaryScreens.m": "724dc4dd3dc2e11f8e41461664eb69242d9a3f675531f3135c60eb59f55d4275",
+    "lucid/Presentation/SBUpdateService.h": "e3d0117a1649cd6de5f58e3671ad2e553ce1599cf16813a3b6677f849bceb85d",
+    "lucid/Presentation/SBUpdateService.m": "d18715aae46b980f8f5273feda440a5ccf38dae342c9a9eba8686f391d8bbbfc",
+    "lucid/Presentation/SBWorkspaceCoordinator.h": "5f0ac3d3530e6c74b759eb71f97becc9961c812face9aad38ba7a3f7009bdc7d",
+    "lucid/Presentation/SBWorkspaceCoordinator.m": "7078e2c61aa446f7fb578e096257d283106c7176c6882ef2bb3200f3e9084948",
+    "lucid/Presentation/Tests/activation_transport_fixture.h": "965ec618f397be8c48fb0ac99cfdf6ff8dacc236deb9b94ba3f16f88289c9022",
+    "lucid/Presentation/Tests/activation_transport_fixture.m": "147bae7c8e22e9e6a6b19b2845ffaadcd0eff23eb467fcbc9f011c0a8a170d99",
+    "lucid/Presentation/Tests/layout_fixture.m": "c8f7df3507e66d22d9946c10fc985086ef3ff922352a5a47c93a761c7ac50b0e",
+    "lucid/Presentation/Tests/run_layout_fixture.py": "0d432f6a3d623d632e80561aed87aba7ea113cad085cafe24bd3c0a6449d06f5",
+    "lucid/Presentation/Tests/run_simulator.py": "af4fb4d0951d5458bdfcbc16d1023df672cb95627bc81fba2dc7855c3d09334d",
+    "lucid/Presentation/Tests/saved_setup_fixture.m": "5c62b383066f12c5bc0363d8c0478929118b9f09221c5db3434891708d68771a",
+    "lucid/Presentation/Tests/saved_setup_transport_fixture.h": "1defbb0380be12458fed73c58a430a90f676f6263ac1348f98f04c2bc2510ff3",
+    "lucid/Presentation/Tests/saved_setup_transport_fixture.m": "63892a53b5cf3b04101152b3a15361e145e30558185bce117f35dddb0f2c1322",
+    "lucid/Presentation/Tests/workspace_fixture.m": "13b666f214f3edd755b78dcf35b0dd5d794e00952a7b3788e544a23216c1cd1c",
+    "lucid/ProxyInput/LBXProxyInput.h": "631bff921855d5107b824535ec89b6d361a36a317474598d58acc3104b3e4375",
+    "lucid/ProxyInput/LBXProxyInput.m": "3ec8244632d6f0a979dafcc459d2f66b7f9eb9853eb4a1b7fb77749a75474495",
+    "lucid/ProxyInput/LBXProxyInputHook.m": "e416b13f0611e52a9cb20a7f2a45f9b2de3c56ca5138b56b983827257cb92625",
+    "lucid/tests/root_mutation_coordinator.m": "74089f212e090dfbaf6297c2bc00b083e64dfa176d5e6db9c7846b5868b1ed11",
+    "lucid/tests/test_root_mutation_coordinator.sh": "17454607e7419d876d2c16071e6668f62e4d6405e4a7f8e5b9f3f07cde85c372",
+    "scripts/build-socialbox-recovered.py": "58422fd63f5cc5e9142dc0d4a456e198d5b778e0dacffc802b01945c2e956931",
+    "shared/RBXHTTPProxy.h": "e3ef54cfb9c8c908bcd5d87983169664644c11d79c0d43b856965d6b0ab79ce8",
+    "shared/RBXHTTPProxy.m": "12274640c86a415627390b7c68b0232b16247abf65b61ca39f0923047007c9ce",
+    "shared/RBXLicensePin.h": "e81b82da4597828a48c3dbfa76055a06c3e4a4323a165ed3e7d70b7e97ee9f3f",
+    "shared/RBXProc.h": "988131ea103712173f484ff1226477c141b5ab21a1d232241210941010fe410e",
+    "shared/RBXStorageGate.h": "95e77751b8b78276d6ef34699176eab2df3243b902f494d5a23cfb257d7fe9ac",
+    "tests/RBXLicenseTestSupport.h": "39f0f79eb2b0f44f30bf5473aa109db285f399684b9eb087ab7e714da2fec5bb",
+    "tools/test_socialbox_recovered.py": "d37448404264194fef7e1ec49a07aa3c0da5b84806f1c3f0d36012f98e300a0e"
+  },
+  "status": "PASS_WITH_RUNTIME_AND_CUSTOMER_GAPS",
+  "syntheticUIKit": {
+    "scope": "Typed synthetic root-service replies and UIKit; no live website/device authority.",
+    "suites": {
+      "layout": {
+        "assertions": 552,
+        "privateReportSHA256": "14f9211751900fc1cf2fe997fcfcea48961c87a6a070cc9ff7f99b082e42d578",
+        "sourceFiles": 32,
+        "sourceStable": true,
+        "status": "PASS"
+      },
+      "savedSetups": {
+        "assertions": 127,
+        "privateReportSHA256": "1142e1084918c6ef528ce3d931b28e3cfcb81beab18915bcfe66c47f0b605cea",
+        "sourceFiles": 58,
+        "sourceStable": true,
+        "status": "PASS"
+      },
+      "workspace": {
+        "assertions": 239,
+        "privateReportSHA256": "87487c0111623065fdf7230eb3b8eca789b274bc5ecb0502cce8b1be7ab45284",
+        "sourceFiles": 58,
+        "sourceStable": true,
+        "status": "PASS"
+      }
+    }
+  },
+  "unit": 16
+}

@@ -1,0 +1,274 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-01",
+  "kind": "bounded-source-license-admission",
+  "scope": "Private source-owned root consumer; not a SocialBox app activation or isolation acceptance.",
+  "device": {
+    "model": "iPhone X",
+    "iOS": "16.7.16",
+    "jailbreak": "rootless palera1n",
+    "architectureExecuted": "arm64"
+  },
+  "sourceSHA256": {
+    "lucid/Authorization/LBXLicenseOwner.h": "906ec4349ba383344b316c02b089e4a838a5d33989a8698da9c2267cab272c71",
+    "lucid/Authorization/LBXLicenseOwner.m": "08e75c8829ca724dc315cf030fe58a3d142ecafa83accce949664b099cc8253b",
+    "lucid/Authorization/LBXLicenseVault.h": "c799b5249fc7421f35e79d1bcae858e0c0e92680e87ab527f3d87dc51187bc5a",
+    "lucid/Authorization/LBXLicenseVault.m": "e57ccd311379fbdfd02e1dcdd000b8a339c9683997492ce038be8b075e095dd8",
+    "tools/license_owner_admission_probe.m": "9b61393de072549d3b5211f6b92ed632d566b888fd03d5d6dd0e7fb7ac877588",
+    "lucid/tests/license_owner.m": "d54349127a21f63e2f70a19764803538630a7e7eec302868f7b81271e3aed7bf",
+    "lucid/tests/license_vault.m": "fae078b5c6e10845d628e7fa0bb06f5bc441b765b6be2681c34caa385eae5fb9"
+  },
+  "artifacts": {
+    "probe": {
+      "architectures": [
+        "arm64",
+        "arm64e"
+      ],
+      "probeSHA256": "6078090fa83e47fbaf3ae8a2430d48066ed3fc805f5d533b78a647fbd551e13e",
+      "probeSize": 405424,
+      "productionTestSeamsAbsent": "PASS",
+      "strictSignature": "PASS",
+      "entitlements": {},
+      "signer": "native ad-hoc"
+    },
+    "rootService": {
+      "sha256": "1242013bb2837b4c5c16a87b835f8e0a0314fec1e75119e58d0e81961373e313",
+      "size": 406688
+    },
+    "mobileClient": {
+      "sha256": "54f756507c8d7c58cac76dceb4772cc0a84f7cc4f407bc30d00b23dad3744342",
+      "size": 241040
+    },
+    "signaturePinSHA256": "b2c5d4176c727107c9826ad69386d4d65f90920074981bd842127d6b22add6e9",
+    "strictNativeAdHocSignature": "PASS",
+    "additionalEntitlements": {}
+  },
+  "host": {
+    "ownerIPC": {
+      "status": "PASS",
+      "assertions": 171,
+      "transport": "mock HTTP, actual RSA and filesystem"
+    },
+    "vault": {
+      "status": "PASS",
+      "assertions": 58,
+      "boundary": "actual RSA and filesystem, independent processes"
+    },
+    "exchange": {
+      "status": "PASS",
+      "assertions": 109
+    },
+    "transport": {
+      "status": "PASS",
+      "assertions": 110
+    }
+  },
+  "physicalChecks": {
+    "fresh owner starts closed": {
+      "status": "PASS",
+      "projection": {
+        "operation": "query",
+        "paired": false,
+        "protectedWrite": false,
+        "result": "internal_check",
+        "retainedEngineAuthorized": false,
+        "sourceAuthorized": false
+      }
+    },
+    "production fresh one-device activation and protected write": {
+      "status": "PASS",
+      "projection": {
+        "operation": "activate",
+        "paired": true,
+        "protectedWrite": true,
+        "result": "active",
+        "retainedEngineAuthorized": false,
+        "sourceAuthorized": true
+      }
+    },
+    "current committed source admission": {
+      "status": "PASS",
+      "projection": {
+        "operation": "query",
+        "paired": true,
+        "protectedWrite": true,
+        "result": "internal_check",
+        "retainedEngineAuthorized": false,
+        "sourceAuthorized": true
+      }
+    },
+    "new nonce revalidates same saved installation": {
+      "status": "PASS",
+      "projection": {
+        "operation": "validate",
+        "paired": true,
+        "protectedWrite": true,
+        "result": "active",
+        "retainedEngineAuthorized": false,
+        "sourceAuthorized": true
+      }
+    },
+    "real elapsed admission deadline denies protected write": {
+      "status": "PASS",
+      "projection": {
+        "operation": "query",
+        "paired": true,
+        "protectedWrite": false,
+        "result": "internal_check",
+        "retainedEngineAuthorized": false,
+        "sourceAuthorized": false
+      }
+    },
+    "online validation recovers after timeout": {
+      "status": "PASS",
+      "projection": {
+        "operation": "validate",
+        "paired": true,
+        "protectedWrite": true,
+        "result": "active",
+        "retainedEngineAuthorized": false,
+        "sourceAuthorized": true
+      }
+    },
+    "process restart preserves pairing and starts closed": {
+      "status": "PASS",
+      "projection": {
+        "operation": "query",
+        "paired": true,
+        "protectedWrite": false,
+        "result": "internal_check",
+        "retainedEngineAuthorized": false,
+        "sourceAuthorized": false
+      }
+    },
+    "restarted process revalidates saved pair": {
+      "status": "PASS",
+      "projection": {
+        "operation": "validate",
+        "paired": true,
+        "protectedWrite": true,
+        "result": "active",
+        "retainedEngineAuthorized": false,
+        "sourceAuthorized": true
+      }
+    },
+    "missing record closes live admission": {
+      "status": "PASS",
+      "projection": {
+        "operation": "query",
+        "paired": false,
+        "protectedWrite": false,
+        "result": "internal_check",
+        "retainedEngineAuthorized": false,
+        "sourceAuthorized": false
+      }
+    },
+    "restored pairing alone cannot reopen source admission": {
+      "status": "PASS",
+      "projection": {
+        "operation": "query",
+        "paired": true,
+        "protectedWrite": false,
+        "result": "internal_check",
+        "retainedEngineAuthorized": false,
+        "sourceAuthorized": false
+      }
+    },
+    "fresh online validation recovers restored pairing": {
+      "status": "PASS",
+      "projection": {
+        "operation": "validate",
+        "paired": true,
+        "protectedWrite": true,
+        "result": "active",
+        "retainedEngineAuthorized": false,
+        "sourceAuthorized": true
+      }
+    },
+    "production signed revocation denies source write": {
+      "status": "PASS",
+      "projection": {
+        "operation": "validate",
+        "paired": true,
+        "protectedWrite": false,
+        "result": "revoked",
+        "retainedEngineAuthorized": false,
+        "sourceAuthorized": false
+      }
+    },
+    "revocation stays closed on internal query": {
+      "status": "PASS",
+      "projection": {
+        "operation": "query",
+        "paired": true,
+        "protectedWrite": false,
+        "result": "internal_check",
+        "retainedEngineAuthorized": false,
+        "sourceAuthorized": false
+      }
+    }
+  },
+  "preservation": {
+    "ownerAppDaemonEngineAndPresentationHashesUnchanged": "PASS",
+    "accountsAndContainersTouched": false,
+    "bothDisposableTestLicensesRevoked": "PASS",
+    "privateAcceptanceExecutablesRemoved": "PASS",
+    "privateVaultsPreservedOutsideGit": true
+  },
+  "counterexamples": [
+    {
+      "status": "FAIL",
+      "stage": "first acceptance harness restart assertion",
+      "reason": "Probe paired projection used numeric 1 instead of Boolean true; harness rejected its schema. Runtime pairing recovery was not classified by that failed attempt.",
+      "fix": "Probe explicitly projects a Boolean. A fresh dedicated license, vault and rebuilt exact artifact passed the entire run.",
+      "originalPrivateAttemptPreserved": true
+    },
+    {
+      "status": "FAIL",
+      "stage": "initial pseudo-signature strict host verification",
+      "reason": "Generated designated requirement demanded an Apple certificate on an ad-hoc test binary.",
+      "fix": "The final private artifacts use native ad-hoc signing with an explicit identifier requirement and no new entitlements; strict verification passes."
+    }
+  ],
+  "notRun": [
+    "Original app startup and periodic admission",
+    "Original daemon and injected-engine admission",
+    "Fresh customer package installation and website-to-Sileo flow",
+    "New service/mobile IPC artifacts on physical device (root probe calls owner in-process)",
+    "arm64e execution",
+    "Second physical iPhone",
+    "iPhone sleep and reboot",
+    "Live device clock changes (host fixtures only)",
+    "Automatic process/storage/network closure",
+    "Two real Instagram accounts and platform-side new-device recognition"
+  ],
+  "verdict": "PASS for the scoped source-owned admission unit; client-delivery acceptance remains NOT_RUN and the app is not ready for release.",
+  "productionSourceSHA256": {
+    "daemon/RBXLicenseToken.h": "a21d1072b10136c4ecc809ad1855bebd368849a2bc0628db63202399fcb52979",
+    "daemon/RBXLicenseToken.m": "e3f00d563c99a47400d22b31b152ec4d2ab6123505b9aaa0f2d2d787f13d55da",
+    "lucid/Authorization/ClientProbe.m": "213eccac64ec7fe6b2e4105ae0f4712afcf7c746b35262ea154c3c2ad20d3826",
+    "lucid/Authorization/LBXLicenseClient.h": "63267ad770a9f373edadc18b700b8c1909a25784ff054b2e43c6011bd7ec9686",
+    "lucid/Authorization/LBXLicenseClient.m": "34f06ce5d479543172b9dddecba5d3b847dc499f432c57a78b3181f2bfb1fd94",
+    "lucid/Authorization/LBXLicenseEndpoints.h": "a9b98b6c2269b7ce9a50bcd76e243c8d9d12733368cf8cd7ebf699c0fdbc07e1",
+    "lucid/Authorization/LBXLicenseExchange.h": "ab24d7e92934dce040add199712c0bce2cdd29e581b7e0c1a6246708c90f9b29",
+    "lucid/Authorization/LBXLicenseExchange.m": "5a7ed4ef11dcf87ec32876ce34f75463077215734525929f9750f4afc02e7c93",
+    "lucid/Authorization/LBXLicenseIPC.h": "8ff579acaa3b3113e6480f472022df893095d633de08b362a42de3b63df839ea",
+    "lucid/Authorization/LBXLicenseIPC.m": "7c3aec2a53d8c666b4cfd6ba8deb323f172b5c962de82c809834876b9396ffbc",
+    "lucid/Authorization/LBXLicenseOwner.h": "906ec4349ba383344b316c02b089e4a838a5d33989a8698da9c2267cab272c71",
+    "lucid/Authorization/LBXLicenseOwner.m": "08e75c8829ca724dc315cf030fe58a3d142ecafa83accce949664b099cc8253b",
+    "lucid/Authorization/LBXLicensePeer.h": "72bcd832201fba2394ad3fc04a30d6d4f5e46e43456dbb8cc2491cc233f96a3b",
+    "lucid/Authorization/LBXLicensePeer.m": "340972f74cc51572fe6ad2619dd54f6275c5cf824b67a33d36cd01b92d69cd1b",
+    "lucid/Authorization/LBXLicenseTransport.h": "bbf31e9e89f19ad7edca17ceb4bfec5e66ff6566d7daff1c125e44af0682e54a",
+    "lucid/Authorization/LBXLicenseTransport.m": "40999576d5d20030ecb50631e4ba69d333de79c2119867923975691147acf35a",
+    "lucid/Authorization/LBXLicenseVault.h": "c799b5249fc7421f35e79d1bcae858e0c0e92680e87ab527f3d87dc51187bc5a",
+    "lucid/Authorization/LBXLicenseVault.m": "e57ccd311379fbdfd02e1dcdd000b8a339c9683997492ce038be8b075e095dd8",
+    "lucid/Authorization/LicenseService.m": "be88a9da3d85357b2f76489f104a34478a56d0309928ab149cd0d9f56e438d1b",
+    "lucid/HelperSafety/LBXCallerFile.h": "d538e65c56b235190971dee04aa9ae57606d22ff176519e006079bef05853888",
+    "lucid/HelperSafety/LBXCallerFile.m": "8eaece9470b8024f514f35c52fb35fdeb24d9bb8b139eb18be9a9a42b67a75b0",
+    "lucid/HelperSafety/LBXXPC.h": "dd03df90efb001c332e622a2a1f1292d1f3ceaca02916a8a7dc3d86f1c4d474d",
+    "scripts/build-socialbox-license-service.py": "8aaff0c193adf81cd04d6c1523e44b2d5b3ecc6d709d5b6ffd4c61f8e74a90da",
+    "scripts/license-key.py": "25b7a73e6e14dca7cfe690a76279810e558aefe1dd6d0c266d95f08c1644e465",
+    "shared/RBXLicensePin.h": "e81b82da4597828a48c3dbfa76055a06c3e4a4323a165ed3e7d70b7e97ee9f3f",
+    "shared/RBXProc.h": "988131ea103712173f484ff1226477c141b5ab21a1d232241210941010fe410e"
+  }
+}

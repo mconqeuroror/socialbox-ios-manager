@@ -1,0 +1,8 @@
+{
+  "evidence" : "synthetic adapter ABI and UI actions only",
+  "failures" : [
+
+  ],
+  "ok" : 1,
+  "checks" : 90
+}

@@ -1,0 +1,53 @@
+{
+  "accountDataRecoveryProven": false,
+  "additionalChecks": {
+    "backupSnapshotNative": "PASS",
+    "leakSurfaceContract": "PASS",
+    "static": "PASS",
+    "updateStartup": "PASS"
+  },
+  "archiveEntries": 17472,
+  "archivePayloadBytes": 822778904,
+  "archiveSHA256": "2154fb9ae3091d458c2cb17650299c7c98ec463479e386539f9c6dfe18972c01",
+  "archiveVerifiedAgainstManifest": true,
+  "containerRecords": 107,
+  "deviceOrArchiveModified": false,
+  "distinctIdentityReferencesWithinNamespaces": 107,
+  "existingSourceProfileEntries": 0,
+  "existingSourceStoreEntries": 1,
+  "freshDeviceSnapshot": false,
+  "globalKeychainRecoveryProven": false,
+  "hostTestMethodsPassed": 17,
+  "identityConversionProven": false,
+  "implementationCommit": "873b0d7b26966357fb8d5d53cf574fa0f6d03723",
+  "issues": {
+    "EXISTING_SOURCE_STATE_REQUIRES_RECONCILIATION": 1,
+    "UNSUPPORTED_APP_MEMBERSHIP": 107
+  },
+  "knownAppMemberships": {
+    "facebook": 0,
+    "instagram": 0,
+    "reddit": 0,
+    "twitter": 0
+  },
+  "manifestSHA256": "3f7feb4c9cfbc45bf3d587c6e91e89faeb56740fcf0a9548f888becf6f336e11",
+  "metadataConsistent": true,
+  "namespaceCount": 1,
+  "operation": "read-only-source-transition-inventory",
+  "perAppIndexRecords": 107,
+  "readyForInstallation": false,
+  "remainingGates": [
+    "fresh-quiescent-device-backup",
+    "existing-source-data-reconciliation",
+    "supported-app-data-mapping",
+    "identity-conversion-without-regeneration",
+    "account-and-keychain-recovery",
+    "transactional-migration-and-rollback",
+    "installed-source-runtime-acceptance"
+  ],
+  "schemaVersion": 1,
+  "scope": "Saved manager-owned runtime backup; no fresh device snapshot, global Keychain archive, target-account recovery or installation.",
+  "testSHA256": "2458f5365578f6b19d55833a1bea93a09c8d41c7094d9a4d6bcf24d91172943d",
+  "toolSHA256": "d7f20c030e5056e99768df8c0fc15cf61101bd6c5ff5873949bd77890de99bb6",
+  "unknownAppMemberships": 107
+}

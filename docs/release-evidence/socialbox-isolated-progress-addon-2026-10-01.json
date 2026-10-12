@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 1,
+  "unit": 33,
+  "kind": "isolated-owner-progress-addon-and-offline-artifact-verifier",
+  "recordedAt": "2026-10-01T19:02:36Z",
+  "status": "PASS_LOCAL_NOT_INSTALLED",
+  "clientDeliveryReady": false,
+  "customerArtifactReleased": false,
+  "customerCodeIssued": false,
+  "problem": "The full Unit32 overlay also carries later unaccepted activation/saved-settings changes. Its replacement is not an animation-only owner update.",
+  "scope": {
+    "addon": "Separate uniquely namespaced reuse of unchanged SBSwitchProgress.m, narrow metadata/screen/panel bindings and renamed read-only caller-file observer. Exactly three linked translation units; no full backend, activation, root coordinator or full presentation constructor.",
+    "pins": "Exact historical owner manager path/9490320 bytes/e230dab SHA and accepted old overlay path/1145968 bytes/a0423c SHA; real501/effective0; own install/glyph class images; old loaded overlay image path; full newer progress installer presence refuses.",
+    "effects": "Constructor attempts only one visual show hook after injection. Original show once first and original loader label/timer/update/hide remain. No preview/navigation/controller creation/activation/metadata operation is started.",
+    "namespace": "Unique SBBlueProgress glyph and seven C exports plus two class exports. Old installed overlay/filter are not rebuilt/replaced by this artifact.",
+    "limits": "Disk fingerprint and dladdr/class-image path observations are instantaneous/cooperative, not mapped-byte/publisher/lifetime proof. Fresh quiescent witnessed relaunch required. Source pins are not fresh phone observation or first-provisioning/runtime authority."
+  },
+  "native": {
+    "status": "PASS",
+    "overlaySHA256": "b1d8a2fd5257667fa7e33cd3f5a37a05510238dd69b4661763ad78f531f291aa",
+    "overlaySize": 245056,
+    "filterSHA256": "a521e2edf4b0a69a54b5421d41c98cf17eff488b397d9f8dd26956d5ad96bc02",
+    "identifier": "com.socialbox.progress.blue",
+    "repositoryInputs": 12,
+    "sourceStableCurrent": true,
+    "linkedTranslationUnits": [
+      "lucid/ProgressAddon/SBBlueProgressAddon.m",
+      "lucid/Presentation/SBSwitchProgress.m",
+      "lucid/HelperSafety/LBXCallerFile.m"
+    ],
+    "architectures": [
+      "arm64",
+      "arm64e"
+    ],
+    "isolatedExportsPerSlice": 9,
+    "retainedToolInvocations": 14,
+    "strictMacAdHocSignatureAndIdentifier": "PASS",
+    "emptyEntitlementsPerSlice": "PASS",
+    "namedProvidersAbsent": "PASS",
+    "reportSHA256": "7dc24c2fb625f16b5a6e783c3ebc89c35ad7c4715d008f9e8d2e0341d4cf50dc",
+    "publisherDeviceTrust": "NOT_RUN",
+    "ownerInstallation": "NOT_RUN",
+    "scope": "12 inputs include9 source/header files plus3 repository Python inputs. SDK/compiler/macOS/Xcode/ldid execution trust and environment excluded; ldid bytes recorded only."
+  },
+  "syntheticUI": {
+    "status": "PASS",
+    "assertions": 42,
+    "repositoryInputs": 11,
+    "sourceStableCurrent": true,
+    "reportSHA256": "ecfb74e3a0b89ba1a1acc76a5a5913f8f51df70b1e69eb3ae6864141bba40b28",
+    "previewSHA256": "791580968e6b18752e9ce06d8a739301b4d59058e3d33a36ed7ad7e192199f1f",
+    "cases": "Namespace, missing pin/bad metadata/foreign getter refusal, original once-first, blue ring, exact label/timer/update/async hide completion, repeat/recreate, direct fixture Reduce Motion/detach, late pin/metadata loss, gestures/unknown controls/clipping/unrelated/subclass refusal.",
+    "limits": "Actual UIKit with explicit synthetic disk/role/loaded-profile and metadata substitutions. Root separately reviewed/ran agent-authored fixtures; agent does not independently review its own tests. No original operation, phone touch, real kernel peer or installation."
+  },
+  "offlineVerifier": {
+    "methods": 25,
+    "status": "PASS",
+    "frozenPythonInputs": 6,
+    "sourceStableCurrent": true,
+    "testsReportSHA256": "19b2cc9448c58700562e427febc1b5bdf675992a387f78ac20011186e9f6733a",
+    "actualInertChildren": "Separate stdout/stderr/argv/returncode retention, stdin EOF, explicit minimal environment, nonzero/spawn/timeout/output-limit refusal, exited-leader pipe-child group cleanup and closed-stdio wait timeout.",
+    "syntheticPipeline": "Explicit pin/JSON/source graph/copy/tool-path/signature-detail/entitlement/export and final drift counterexamples; synthetic success is not a host signature proof.",
+    "actualFullArtifact": "Exact prior Unit32 artifact9b1055.../report6bf99f... independently reobserved using new persisted code.5 verifier Python+71 quoted production inputs current/stable,10 retained tool rows including filter conversion, strict fat/thin signatures, empty per-slice entitlements and exports.",
+    "actualReportSHA256": "4ae54c7474a2090d92d489507632d510f1c32a8bbd5194fd9c15ba57a375ed26",
+    "limits": "Never signs, loads, connects, deploys or authorizes. Full overlay verification does not make it suitable for animation-only owner replacement."
+  },
+  "independentReview": {
+    "status": "PASS_SCOPED",
+    "source": "Read-only review of production wrapper/bindings/build/error-journal implementation and root-authored verifier tests.",
+    "data": "Current12+5+71+6 graphs, artifact/filter/slices and all24 native tool rows independently reconciled with retained raw hashes/counts/argv/exit0; no reruns.",
+    "excluded": "Reviewer-authored UIKit fixture source; wrong actual UID/image/duplicate-class/full-installer-present branches and physical Reduce Motion are source-reviewed only."
+  },
+  "retainedFailures": [
+    {
+      "attempt": "production-addon-01",
+      "status": "FAIL_RETAINED",
+      "reason": "Missing CoreGraphics link; native compilation refused before a final artifact. Explicit framework added without relaxing checks."
+    },
+    {
+      "attempt": "production-addon-02",
+      "status": "FAIL_RETAINED",
+      "reason": "Uppercase fixed filter filename refused by overly narrow private journal name grammar after signature/export observations. ASCII basename grammar corrected, still no slash/control/overwrite."
+    },
+    {
+      "attempt": "production-addon-03",
+      "status": "PASS_NARROWER_RETAINED",
+      "reason": "Before final glyph class-image ownership and builder timeout-catch additions; final source accepted separately by04."
+    },
+    {
+      "attempt": "full-overlay-verification-01",
+      "status": "FAIL_RETAINED",
+      "reason": "Native OpenStep filter cannot be parsed by plistlib directly; added retained checked plutil conversion before complete structure validation."
+    },
+    {
+      "attempt": "full-overlay-verification-02",
+      "status": "PASS_NARROWER_RETAINED",
+      "reason": "Before final journal ASCII basename update; final current code accepted by03."
+    },
+    {
+      "attempt": "ui-addon-01",
+      "status": "FAIL_RETAINED",
+      "reason": "42 native assertions had no failures, but fixture emitted integer1 instead of Boolean true. Strict runner correctly refused. Fixture changed to explicit @YES/@NO only; original source retained."
+    },
+    {
+      "attempt": "verifier-tests-01",
+      "status": "PASS_NARROWER_RETAINED",
+      "reason": "23 methods, source observation scope not frozen; final25-method six-input attempt separate."
+    }
+  ],
+  "phone": {
+    "inspection": "NOT_RUN",
+    "trustedAuthentication": "PENDING_EXTERNAL_RESTORATION",
+    "newSSHAttempts": 0,
+    "effects": false,
+    "newLicense": false,
+    "accountContentsRead": false,
+    "historicalInstalledOverlaySHA256": "a0423c7c92dbbe49b700bce7605fa7a9edb9e1d2cf5d70bb9d658137f78972d8"
+  },
+  "next": "After trusted SSH restoration, NEW fixed-path read-only inspection/quiescence/private backups. Accept only the allowlisted addon pair against exact unchanged owner baseline, with fresh witnessed relaunch and original loader component preview only. Preserve old overlay/filter/programs/default source state. No switch/runtime task or first-customer pairing.",
+  "notRun": [
+    "Actual owner addon load/ABI/visual/Reduce Motion/interruption/rollback",
+    "Fresh kernel roles/current fixed files/loaded bytes",
+    "Saved-settings physical retirement",
+    "Default activation/customer provisioning/package/runtime/accounts/proxy"
+  ],
+  "governance": "Declare ADOPT-001/ADOPT-002; own pre/postcommit gate before export. Unit30 historical full-range FAIL remains unchanged."
+}

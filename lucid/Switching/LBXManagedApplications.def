@@ -1,0 +1,19 @@
+// Main application IDs from the pinned 3.1.0-1 injection filter. This is stop
+// authority, not an assertion that any application's isolation has been tested.
+// Keep control-plane/system apps and standalone extension IDs OUT of this list.
+LBX_APPLICATION("com.reddit.Reddit", "Reddit")
+LBX_APPLICATION("com.facebook.Facebook", "Facebook")
+LBX_APPLICATION("com.burbn.instagram", "Instagram")
+LBX_APPLICATION("com.burbn.barcelona", "Threads")
+LBX_APPLICATION("com.facebook.PageAdminApp", "Meta Business Suite")
+LBX_APPLICATION("co.hinge.mobile.ios", "Hinge")
+LBX_APPLICATION("com.cardify.tinder", "Tinder")
+LBX_APPLICATION("com.moxco.bumble", "Bumble")
+LBX_APPLICATION("com.badoo.Badoo", "Badoo")
+LBX_APPLICATION("com.zhiliaoapp.musically", "TikTok")
+LBX_APPLICATION("com.grindrapp.Grindr", "Grindr")
+LBX_APPLICATION("com.grindrguy.grindrx", "Grindr XTRA")
+LBX_APPLICATION("com.draftkings.sportsbook", "DraftKings")
+LBX_APPLICATION("lt.manodrabuziai.fr", "Vinted")
+LBX_APPLICATION("ph.telegra.Telegraph", "Telegram")
+LBX_APPLICATION("com.toyopagroup.picaboo", "Snapchat")

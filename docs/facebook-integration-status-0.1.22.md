@@ -1,0 +1,17 @@
+# Integration candidate 0.1.22
+
+The rootless candidate is installed on the connected iPhone8. The rootful candidate is built and inspected, but has not been installed. Neither candidate has been published to APT. The branch remains `feat/socialbox-multiapp`, unmerged. [Package hashes, signatures and build evidence](facebook-integration-packages-0.1.22.json) bind the artifacts to implementation commit `e819acb`.
+
+Both complete builds passed `tools/static_check.py` and all 107 native/test entrypoints in `scripts/build-mac.sh`. Every expected Mach-O component and architecture slice was inspected: seven components, twelve slices per package. Both package variants retain the prior global entitlement values and the existing deployment license public-key pin. Their distinct signing-contract hashes are recorded; existing managed installations require the established re-adoption procedure when the contract changes.
+
+[Actual device evidence](facebook-integration-device-0.1.22.json) confirms version 0.1.22, all seven installed component hashes, active license, unchanged two profiles and both source Info.plist/executable hashes, stable SpringBoard, no new crash or Safe Mode, and CLOSED traffic. Read-only daemon draft requests passed for the original profile and the dedicated unused test profile. This is not clone-launch, account, routing or full-isolation acceptance.
+
+The device has two listed containers, zero freshly verified managed installations, zero armed VPN rows and `firewallSetupReady=false`. Both private sources are decrypted and available. Facebook remains inactive because app-specific SDK/state and network acceptance are incomplete. A working MDM service and verified per-app adoption/routing are external prerequisites for the remaining network acceptance; merely installing this package does not satisfy them.
+
+Implementation units in this turn: distinct Facebook Keychain policy/wrappers (`d547359`), synthetic device boundary (`b1687fa`), signing/runtime group integration (`1360e5f`), production cleanup (`1bb4461`), installation recovery (`39437cb`, anchor follow-up `705f328`), deletion (`0854d50`), global launch/gate (`12b2566`), global recovery/maintenance (`7b469f3`), replacement (`6aa43b2`) and app-bound backup reconstruction (`e819acb`). Their linked ledger rows distinguish synthetic services, actual filesystem tests and physical-device evidence.
+
+## Newly resolved User-Agent producer
+
+A bounded original Facebook observation found `_FBUserAgent` in the audited `FBSharedFramework`. The disassembled return sequence resolves to exact Objective-C retain/autorelease stubs. Ten observed returns contain coherent physical model/OS/scale/locale fields and a Mozilla system prefix; the standard setters still did not establish wire-level coverage. The original producer reports the five-part app version `578.1.0.71.72` and build `1063022819`. Its minimal variant omits app version/build. Replacing these with the short Info.plist version would discard real app metadata.
+
+[Selected producer records](facebook-user-agent-producer-evidence.json) retain only bounded, allowlisted model/OS/app-version/locale fields, module-relative caller offsets and capture/source hashes. Unknown values and complete UA strings are omitted. The source needs both Mozilla-prefix and Facebook-block consistency, not just a replacement of `FBDV`. This observation supplies a basis for a focused producer policy; it does not authorize marking Facebook's broader wire/defaults policy audited.

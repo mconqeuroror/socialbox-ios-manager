@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "sourceCommit": "8379bc0",
+  "version": "0.1.28",
+  "scope": "Read-only readiness UI correction, not Facebook activation",
+  "rootlessBuild": "PASS",
+  "rootfulBuild": "NOT_RUN",
+  "testEntrypoints": 116,
+  "selectorUIInactive": "PASS",
+  "selectorUISyntheticActive": "PASS",
+  "workspaceUIChecks": 155,
+  "staticCheck": "PASS",
+  "package": {
+    "filename": "debs/com.redditbox_0.1.28_iphoneos-arm64.deb",
+    "sha256": "84fc42ac2943d5e8ea2ae902e99f51094e76caa007b1afa6d7ee9f63595c186b",
+    "size": 1998716,
+    "machOComponents": 7,
+    "architectureSlices": 12,
+    "codeDirectoryPageHashesVerified": 1354,
+    "entitlementsMatch0_1_27": true,
+    "licensePinUnchanged": true
+  },
+  "device": {
+    "recordedAtUTC": "2026-09-18T11:37:50.512124+00:00",
+    "version": "0.1.28",
+    "profileFileCount": 6,
+    "profilesByteIdentical": true,
+    "permissionsOwnersUnchanged": true,
+    "containerIDsUnchanged": true,
+    "containerCount": 2,
+    "licenseUnlocked": true,
+    "networkState": "closed",
+    "startupRecoveryOK": true,
+    "facebookSourceVersion": "578.1.0",
+    "firewallSetupReady": false,
+    "firewallScope": "none",
+    "facebookContainerLaunch": "BLOCKED: inactive implementation and missing managed network setup"
+  },
+  "publishedToAPT": false,
+  "merged": false
+}

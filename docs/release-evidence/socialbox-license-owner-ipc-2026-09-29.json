@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-09-29",
+  "scope": "Source-owned launchd root license owner and authenticated mobile IPC client; not original engine admission",
+  "build": {
+    "kind": "private-license-owner-ipc-acceptance",
+    "keyId": "b2c5d4176c727107c9826ad69386d4d65f90920074981bd842127d6b22add6e9",
+    "architectures": [
+      "arm64",
+      "arm64e"
+    ],
+    "minimumIOS": "15.0",
+    "client": {
+      "sha256": "e9ca1ceb3c32ab8c70a323b7fd1c196178aeaee024822f538e9a612637249059",
+      "size": 207232
+    },
+    "service": {
+      "sha256": "8e334c2e0736d4ae45594058874b3c030d22bb72a1e16c1dded06dbb2e751d3b",
+      "size": 370816
+    },
+    "entitlements": {}
+  },
+  "native": {
+    "ownerIPC": {
+      "status": "PASS",
+      "assertions": 79,
+      "http": "mocked",
+      "signatures": "actual temporary RSA",
+      "storage": "actual filesystem"
+    },
+    "failingFirstRegression": "Active IPC response with paired=false rejected; observed failing before fix"
+  },
+  "device": {
+    "architecture": "arm64",
+    "clientUID": 501,
+    "testLicense": "one disposable production key, maxActivations=1; revoked after test",
+    "verified": {
+      "installedByteHashes": "PASS",
+      "mobileClientToRootOwner": "PASS",
+      "initialClaimAndDurableCommit": "PASS",
+      "rootServiceRestartAndRevalidation": "PASS",
+      "copiedClientAtDifferentPathRejected": "PASS",
+      "signedRevocation": "PASS",
+      "credentialReadByMobileDenied": "PASS",
+      "ownerRestartPreservesPairingFile": "PASS",
+      "revocationAfterOwnerRestart": "PASS",
+      "missingPairingRecordDoesNotReinitialize": "PASS",
+      "faultRestoreByteIdentical": "PASS",
+      "originalAppExecutableUnchanged": "PASS"
+    },
+    "cleanup": {
+      "disposableKeyRevoked": "PASS",
+      "otherLicensesUsersDeviceRecordsUnchangedByFixtureCleanup": "PASS",
+      "acceptanceServiceUnloaded": "PASS",
+      "privateVaultPreserved": "PASS"
+    },
+    "notRun": [
+      "arm64e execution",
+      "physical phone reboot",
+      "second physical phone",
+      "UIKit activation action",
+      "original app/daemon/engine admission",
+      "hardware anti-copy binding",
+      "offline admission",
+      "application package upgrade"
+    ]
+  },
+  "retainedEngineIntegrated": false,
+  "applicationUpdated": false,
+  "limits": [
+    "Online active is a cloud assessment after pairing commit; never an engine admission grant.",
+    "Status never replays active from cache or starts HTTPS.",
+    "Kernel audit token and pinned executable file are process/path authentication, not proof against root/in-process compromise.",
+    "Changing a paired key requires a separate recovery workflow; rejected requests retain the old key and bearer.",
+    "The new root service preserves an owned claim after UI disconnection so the server-consumed installation is not silently abandoned."
+  ]
+}

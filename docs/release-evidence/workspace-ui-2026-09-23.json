@@ -1,0 +1,55 @@
+{
+  "date": "2026-09-23",
+  "version": "3.1.0-1+socialbox.10",
+  "packageSHA256": "308b5592701b1ca170e46b527202079d757373527dcb3a2b4bc7b8ecc7055182",
+  "status": "PASS_BUILD_AND_HOST_UI_TESTS_NOT_INSTALLED",
+  "package": {
+    "installed": false,
+    "payloadFilesVerified": 59,
+    "originalProgramsByteIdentical": 15,
+    "originalSlicesByteIdentical": 25,
+    "priorVersion": "3.1.0-1+socialbox.9",
+    "priorSHA256": "2ba17031ac74c22a41019cba51a3f3fe8b9531c6151d2eb37ec6704f66eeef04",
+    "displayMetadata": "PASS",
+    "extensionResourceBindings": "Info/resources unbound in every CodeDirectory; original signatures unchanged",
+    "sourceSnapshotMatches": true
+  },
+  "validation": {
+    "uiFixtures": [
+      {
+        "assertions": 196,
+        "status": "PASS",
+        "scope": "Synthetic UIKit presentation fixture; not original backend/device/isolation acceptance",
+        "resultSHA256": "90772c34278c58718315c46e5b333489eb9232b7c5d3f40d65cb8693d550d911"
+      },
+      {
+        "assertions": 94,
+        "status": "PASS",
+        "scope": "Actual source-owned UI with a synthetic backend; no device/backend/isolation acceptance",
+        "resultSHA256": "792e3060f202d075dbf3fdddf377eacd7534c4468f035ee1571a95071d2cff10"
+      }
+    ],
+    "nativeHelperAssertions": 636,
+    "packageGroups": 35,
+    "packageCompositionGroups": 7,
+    "staticCheck": "ALL CLEAN",
+    "architecturesBuilt": [
+      "arm64",
+      "arm64e"
+    ],
+    "signer": "ldid; no Apple Development Team",
+    "leakContractTests": 8
+  },
+  "observedScope": [
+    "Seven source-owned workspace presentations bridge to existing host actions and UIKit controls.",
+    "Original table/delegates, conditional controls, card interactions and backend state remain.",
+    "Reviewed static display copy, permission prompts, extension names and document labels use SocialBox; internal routing and archive UTIs remain original.",
+    "Extension-name regression failed before the fix; tests reject changed extension routing and sealed Info/resources."
+  ],
+  "notRun": [
+    "Physical installation: USB enumeration returned no attached iPhone.",
+    "Original binary keyboard, gesture, async update and sheet navigation acceptance on iPhone.",
+    "Data/network isolation, app switching and forty physical containers.",
+    "Complete observation of remote/server-generated prose; unsupported runtime shapes retain original screens."
+  ]
+}

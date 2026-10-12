@@ -1,0 +1,231 @@
+{
+  "schemaVersion": 1,
+  "unit": 36,
+  "kind": "website-permanent-single-installation-license-policy-deployment",
+  "recordedAt": "2026-10-01T21:21:07.268026+00:00",
+  "status": "PASS_WEBSITE_ONLY_WITH_CLIENT_GAPS",
+  "clientDeliveryReady": false,
+  "freshInstallReady": false,
+  "customerArtifactReleased": false,
+  "customerCodeIssued": false,
+  "deployment": {
+    "status": "PASS",
+    "provider": "Vercel",
+    "existingProject": "redditspoof",
+    "projectID": "prj_ePNbkHomNxrP0Iyob0zLWOOK6aEW",
+    "sourceCommit": "a42799d5ca0f951fcd40244ee304b541bef13a9d",
+    "previousDeploymentID": "dpl_8gVkfngk8PvzQun2UhY2JzppNCfz",
+    "deploymentID": "dpl_CFFipX7NRt8S3QkFTn3TGL5if1Jr",
+    "deploymentURL": "https://redditspoof-h4q5d0z9f-modelclone.vercel.app",
+    "productionOrigin": "https://redditspoof.vercel.app",
+    "productionDeploymentID": "dpl_CFFipX7NRt8S3QkFTn3TGL5if1Jr",
+    "environment": "Existing production environment inherited. No environment-file upload, secret export/rotation or real license issuance.",
+    "build": {
+      "status": "PASS",
+      "observedChecks": {
+        "next14_2_35": true,
+        "compile": true,
+        "types": true,
+        "staticPages30": true,
+        "traces": true,
+        "completed": true
+      },
+      "privateLogSHA256": "ed8d7caf899693e8484a119ad4307ec1e65beedb2081a8daaeae1f90c3e8ea7b"
+    },
+    "order": "Fresh local20 suites/typecheck; exact152 dry upload; prior project/alias; owned lock and public/APT prior gates; retained predeployment missing-lock refusal; separate same-owned-operation reconciliation without reissue; single unaliased production build; exact CLI/API reconciliation; stage/prior guards; promotion/final guards; conditional owned unlock."
+  },
+  "policy": {
+    "newOwnerKeys": "Permanent customer term, expiresAt:null, maxActivations:1. Simplified form removes duration/device-limit choices.",
+    "binding": "One installation slot and retained bearer, not physical hardware anti-cloning attestation.",
+    "nativeScope": "Saved-credential checks, signed response freshness, revocation and source deadlines stay unchanged. No installed engine/session bridge or customer activation acceptance."
+  },
+  "host": {
+    "status": "PASS",
+    "suiteCount": 20,
+    "typecheck": "PASS",
+    "frozenRepositoryInputs": 153,
+    "cloudInputs": 152,
+    "outsideProfileFixtureInputs": 1,
+    "privateRunnerInputs": 3,
+    "sourceStable": true,
+    "copiedSourceStable": true,
+    "privateRunnerStable": true,
+    "repositoryGraphSHA256": "6a77fe770b52177eb2a89ab4487b8ecf596fceb9981717624282e3325c259704",
+    "resultSHA256": "a32b187d08855a01502e8508c2eba0468b08fe50cc6305b3135dab3432663135",
+    "scope": "All package.json suites in a new local synthetic copy, literal child environment with empty Blob token. Dependencies, Node/SDK/toolchain/OS excluded; no production owner/license/device test."
+  },
+  "upload": {
+    "status": "PASS",
+    "trackedCloudInputs": 152,
+    "uploadedFiles": 152,
+    "composition": "151 exact tracked cloud files excluding cloud/.gitignore plus one explicit root .vercelignore. Private project link excluded.",
+    "sizeBytes": 1639089,
+    "dryManifestSHA256": "cc025e136155cf1cc017acd8b98f750ca4c44af5406ebe6535962a98b36ef09c",
+    "cloudSourceManifestSHA256": "f2aedde4204758d910a645db96832d3ade48a31a1643a8e186cb74d6c084b3d0",
+    "scope": "Exact dry file paths/SHA1/size/modes plus current SHA256 source manifest. No .env/state/node_modules/.next/.deb/.ipa upload."
+  },
+  "provenance": {
+    "status": "PASS",
+    "sourceCommitMetadata": "a42799d5ca0f951fcd40244ee304b541bef13a9d",
+    "cloudManifestMetadata": "f2aedde4204758d910a645db96832d3ade48a31a1643a8e186cb74d6c084b3d0",
+    "deploymentID": "dpl_CFFipX7NRt8S3QkFTn3TGL5if1Jr",
+    "observedAPIResponseSHA256": "973a0155df3010784d62036846c804ee5f84affdf43030787726ae1657fd9baf",
+    "retainedSanitizedSummarySHA256": "016401dee484848d82a754b32a593482643e3ed50603071c9f716d24b41d4ba2",
+    "cliDeploymentResultSHA256": "d7d28d6f1030bcc82f0bc66f0929e814a3d637a3ea8352e02eda6cad1adf0709",
+    "scope": "Fixed project/immutable ID/URL/READY/production and supplied source metadata. Observed API digest is distinct from retained sanitized summary; no raw API or independently verified compiled-bundle bytes."
+  },
+  "repositories": {
+    "status": "PASS",
+    "metadataFiles": 16,
+    "comparisonPhases": [
+      "public-before",
+      "public-prior-continuation-01",
+      "public-stage",
+      "public-prior-after-stage",
+      "public-prior-before-promote",
+      "public-final"
+    ],
+    "metadataSHA256": {
+      "/apt/redditbox/Packages": "fd473c17525db5e0d6efe0663d89c2ea53adb85446a97c17ab480dbf5fd8fdc8",
+      "/apt/redditbox/Packages.gz": "a51fddb5413cc87e03be67b5239416f2d15419fa8ada9e68394d87009723c59e",
+      "/apt/redditbox/Release": "d1383769143456159f4e380634e0aba54b702bf86b80948a449a0959c6a39516",
+      "/apt/redditbox/InRelease": "7d07445fc76ef47fad835b9634fe8872cf51b9fc8f94af110e94ad92ff0f5175",
+      "/apt/redditbox/Release.gpg": "de0fb7ac7a9b082f1859913900ee2acaff6655b78c1ce0f12e1786e01382ccbf",
+      "/apt/redditbox/repository.json": "a69c862cbafdfc1b7854443dffd2b462970243227f915fd96122c4e1e36cf8e9",
+      "/apt/redditbox/public-key.asc": "3cf802738b810e31347a7544d143db43fba3975a5480dc159cdddee991bd0f01",
+      "/apt/redditbox/redditbox-archive-keyring.gpg": "dd4ca3fe3b31923c22090d3d308244c79dc3a1317e3e402917a12a4591fb500b",
+      "/apt/redditbox-rootful/Packages": "752b45bd1b31a928b766e4723731e2be0c2513b611cf9bfd628ebad2df8f62c4",
+      "/apt/redditbox-rootful/Packages.gz": "81e3b6c9b4313db61b05e60f65c7e56fd51e29e2d0f05721cdef91acd5dc03d5",
+      "/apt/redditbox-rootful/Release": "775089b5bb4c7f1f9839d405ecfd53eecb3dae584c906b43e5ad97de3c5d8137",
+      "/apt/redditbox-rootful/InRelease": "771f77501fdb8ac8c6af5ebd68a362bc2a8edee71e4020ea47566a73df3497c0",
+      "/apt/redditbox-rootful/Release.gpg": "498d1ad29e731d39d6068a0e2b6558db465d2d673a2fc0816215311bd8fd8623",
+      "/apt/redditbox-rootful/repository.json": "78718111a692acac6349dc1656fa64444d345cc890df33c1668ff629e15fc206",
+      "/apt/redditbox-rootful/public-key.asc": "3cf802738b810e31347a7544d143db43fba3975a5480dc159cdddee991bd0f01",
+      "/apt/redditbox-rootful/redditbox-archive-keyring.gpg": "dd4ca3fe3b31923c22090d3d308244c79dc3a1317e3e402917a12a4591fb500b"
+    },
+    "publisherLock": "Exact owned conditional lock released after final guards; cooperative observations, no lock/lifetime authority across arbitrary actors."
+  },
+  "live": {
+    "status": "PASS",
+    "stageGates": {
+      "/login": {
+        "status": 200,
+        "sha256": "c6cd01db8691a9c04852b06cb63143c68fb00033563616d4c2cf15502b45c321",
+        "size": 6517,
+        "bodyFile": "16.body"
+      },
+      "/install": {
+        "status": 200,
+        "sha256": "8939e1e536c00dde15a3931bd2ff88cc48e38a6e8fa8518e62f49758f653ccda",
+        "size": 8440,
+        "bodyFile": "17.body"
+      },
+      "/api/admin/licenses": {
+        "status": 403,
+        "sha256": "3baf776a54b2814ba590c79324cc5da66e586efe56550a28e8230bb8eb5fa619",
+        "size": 33,
+        "bodyFile": "18.body"
+      },
+      "/api/releases/socialbox/latest": {
+        "status": 200,
+        "sha256": "d3980e2d7750e6e8aaa198aa92f7a6d581fc39ed2d476bbbaab74f84c4944844",
+        "size": 56,
+        "bodyFile": "19.body"
+      },
+      "/apt/socialbox/Release": {
+        "status": 404,
+        "sha256": "ec23e0099ee669be3d4b33641ff1b122cf9cd5e6a3dd1b093e6a00c8d28bad2f",
+        "size": 17,
+        "bodyFile": "20.body"
+      }
+    },
+    "finalGates": {
+      "/login": {
+        "status": 200,
+        "sha256": "c6cd01db8691a9c04852b06cb63143c68fb00033563616d4c2cf15502b45c321",
+        "size": 6517,
+        "bodyFile": "16.body"
+      },
+      "/install": {
+        "status": 200,
+        "sha256": "8939e1e536c00dde15a3931bd2ff88cc48e38a6e8fa8518e62f49758f653ccda",
+        "size": 8440,
+        "bodyFile": "17.body"
+      },
+      "/api/admin/licenses": {
+        "status": 403,
+        "sha256": "3baf776a54b2814ba590c79324cc5da66e586efe56550a28e8230bb8eb5fa619",
+        "size": 33,
+        "bodyFile": "18.body"
+      },
+      "/api/releases/socialbox/latest": {
+        "status": 200,
+        "sha256": "d3980e2d7750e6e8aaa198aa92f7a6d581fc39ed2d476bbbaab74f84c4944844",
+        "size": 56,
+        "bodyFile": "19.body"
+      },
+      "/apt/socialbox/Release": {
+        "status": 404,
+        "sha256": "ec23e0099ee669be3d4b33641ff1b122cf9cd5e6a3dd1b093e6a00c8d28bad2f",
+        "size": 17,
+        "bodyFile": "20.body"
+      }
+    },
+    "accepted": "Login/install200, anonymous licenses403, latest200/available:false, SocialBox Release404. Client download remains closed and support unchanged.",
+    "scope": "Anonymous public metadata/gates only; no real owner login/issuance/signing/native activation/runtime acceptance."
+  },
+  "retainedFailure": {
+    "status": "FAIL_PREDEPLOYMENT_MISSING_LOCK_RECONCILED_WITHOUT_REISSUE",
+    "detail": "Initial ordinary publisher check refused missing lock before any Vercel deploy. Local SDK2.8 public reads ignore useCache:false; separate same owner/ETag cached public witnesses and authenticated metadata checks are required by new explicit continuation. Missing/conflicting later ordinary checks still refuse. Cache cause is inferred, not proven; no authority from a cached response or disappearance.",
+    "originalCheckSHA256": "3a822b813fdb0122154c7b2f25d52d62613b87d1f0ad0f8d20a28f1d8bb27f4a",
+    "originalErrorSHA256": "bc6667c195c6a3425dd2faba111646b390a10589a035ff0ec41c60070fb64195",
+    "witnessSHA256": "88a8a16f85a4fee21ac8d50e01caf25e33bf523f643256198cfcae89bdabe0d0"
+  },
+  "activeContinuation": {
+    "status": "PASS_SCOPED_SAME_EXISTING_OPERATION",
+    "resultSHA256": "e61902151481498202fc9e723fbe869a9bd261b24a88732dfe872b88c5b4b44e",
+    "additionalRunnerInputs": 2,
+    "additionalRunnerSHA256": {
+      "continuation-01.py": "fa601a76f2dd99ee25a054321deec77905af103db7650c83bbdd81429fd1e7a2",
+      "lock-head-01.mjs": "117d8c0888cc61756c0049b65e456ca84e2be2f53f68be5c0c38ac41df2c6b51"
+    },
+    "additionalRunnerStableCurrent": true,
+    "full153SourceStableCurrent": true,
+    "headCheckHead": "Two exact single read-only control-plane metadata acknowledgements with unchanged ordinary current owner/ETag check between.",
+    "scope": "Additional2 private runners separately bound; original3 host runners unchanged. No consistent public-body/origin/lease/lifetime proof, lock reissue or duplicate deployment."
+  },
+  "resultShapeReconciliation": {
+    "status": "PASS_EXISTING_DEPLOYMENT_ONLY",
+    "resultSHA256": "a713e56b70b72a87745fe350068083ef019abe6427070095cea80a1cf14f5628",
+    "additionalRunnerInputs": 1,
+    "runnerSHA256": "2a129a87817c6d43a46fe858cd7152c6c7387cde0b85c2d9fe370cd60bb0a1bc",
+    "runnerStableCurrent": true,
+    "full153SourceStableCurrent": true,
+    "retainedFailure": "Original nested-status parser refused actual six top-level string fields before API effects. NEW strict exact actual shape, source/result/journal hashes and independent API/CLI reconcile that same deployment only.",
+    "scope": "No broad alternate-shape fallback, new deployment or promotion by reconciliation; original failure/source remain intact."
+  },
+  "effects": {
+    "websitePromoted": true,
+    "existingAPTMetadataUnchanged": true,
+    "phoneOrOwnerProgramChanged": false,
+    "realLicenseIssued": false,
+    "customerArtifactPublished": false,
+    "customerCodeIssued": false
+  },
+  "notRun": [
+    "Actual production owner/permanent-key issuance and second physical device acceptance",
+    "Native default endpoint/original locked-page, installed running sessions and fresh customer installer",
+    "Instagram sibling leak repair/full safe switching/isolation/recovery, Facebook launch/accounts/proxy traffic",
+    "Blue loader/saved-settings removal physical acceptance and final Sileo/download workflow"
+  ],
+  "review": {
+    "status": "PASS_SCOPED_ROOT_REVIEW",
+    "scope": "Root source/orchestration/current hashes and generated acceptance/public/API/lock/evidence reviewed; author executed fixtures and drafted runner. No independent own-fixture claim."
+  },
+  "limits": [
+    "Metadata/public gate verification is not compiled-byte, production authorization lifetime, Blob-contention or hardware proof.",
+    "Client NOT_READY; Instagram leak and Facebook launch failures retained. Twitter deferred. Prior automatic runtime/identity risk rejection is not retried or routed around.",
+    "No trusted external first-preparation issuer/history transaction or clean-customer acceptance. Reinstallation permission cannot erase unknown default history.",
+    "Historical Unit30 full-history audit FAIL remains unchanged."
+  ]
+}

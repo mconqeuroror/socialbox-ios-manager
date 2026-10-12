@@ -1,0 +1,18 @@
+#!/bin/sh
+set -e
+case "${1:-}" in
+  remove|upgrade|deconfigure)
+    LAUNCHCTL=$(command -v launchctl || true)
+    if [ -z "$LAUNCHCTL" ]; then
+      echo "RedditBox: cannot stop daemon because launchctl is unavailable." >&2
+      exit 1
+    fi
+    if "$LAUNCHCTL" print system/com.redditbox.daemon >/dev/null 2>&1; then
+      "$LAUNCHCTL" bootout system/com.redditbox.daemon || {
+        echo "RedditBox: daemon could not be stopped; removal/upgrade aborted." >&2
+        exit 1
+      }
+    fi
+    ;;
+esac
+exit 0

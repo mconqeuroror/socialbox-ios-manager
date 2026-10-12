@@ -1,0 +1,52 @@
+{
+  "date": "2026-09-22",
+  "status": "PRIVATE_BACKEND_ACCEPTANCE_ONLY",
+  "device_acceptance": "NOT_RUN",
+  "installed": false,
+  "in_original_helper": false,
+  "consumed_by_original_switch_workers": false,
+  "included_in_recovered_dot_2_package": false,
+  "network_fence": false,
+  "launch_fence": false,
+  "binary_sha256": "0e6f43266994d4ea36a21e3a6dbf9868a20319e7f4216237b8708ddbe4cad4f3",
+  "bytes": 204720,
+  "source_sha256": {
+    "lucid/Switching/LBXDarwinDrainBackend.h": "bc30c2a9b426e687c0747fd530d137f7413815f481bfa40be0edb705f4c67b03",
+    "lucid/Switching/LBXDarwinDrainBackend.m": "ce44648d82c1fd9699d73f4b05e5a3c7ea54c6556c3372d0ed6473275042ad1c",
+    "lucid/Switching/LBXProcessDrain.h": "5137b78f34d57294f3b5ffe4771c0384540a3f87b08eaa271924fb27698cc4ac",
+    "lucid/Switching/LBXProcessDrain.m": "07015ab8ce588d3eb616b96c00f35ad6a096523bd4b93acae81e08dbc7a9866e",
+    "lucid/Switching/main.m": "759de733de47dbd5374bb5826f21600cee7bf8732f63e6277ec59146dbbe2c07",
+    "lucid/Switching/Makefile": "297f4cfd0f43ffa8b6abbf848ed751063dd963a0ab47784f7b74f530743bb2ec",
+    "lucid/Switching/ProcessDrain.entitlements": "ef8e39215b6232ae5f3aa89300955b8e9b0bd8d0fb5a524e2ad9c2e225491996",
+    "shared/RBXProcessIdentity.h": "5faa9a11142ecc36785e44be203fb4f763eee19f643055f140181b443fe97728",
+    "shared/RBXProcessIdentity.m": "35abc7add6b5305caf74501738661739ba98be057a9b89934d7deb81a350c07c",
+    "shared/RBXProc.h": "988131ea103712173f484ff1226477c141b5ab21a1d232241210941010fe410e"
+  },
+  "slices": [
+    {
+      "architecture": "arm64",
+      "sha256": "dfefa0bc62206cda1024136820f5d8bdbd242f62d6d9524156e36d2053e7895a",
+      "entitlements": {
+        "platform-application": true
+      },
+      "held_task_termination_linked": true,
+      "pid_name_or_subprocess_fallback_linked": false
+    },
+    {
+      "architecture": "arm64e",
+      "sha256": "c71151c44e28e4051aac1ddb5e404a17284fc7c33af0e2f5dd57df9fe608ae91",
+      "entitlements": {
+        "platform-application": true
+      },
+      "held_task_termination_linked": true,
+      "pid_name_or_subprocess_fallback_linked": false
+    }
+  ],
+  "ldid_sha256": "932cfe6d92f07dca3e85a8288a43271aa8e9c0881f026fdcdecaecfbf1a7dea4",
+  "host_checks": {
+    "drain_orchestrator": 46,
+    "darwin_adapter": 235,
+    "shared_process_identity": 221
+  },
+  "scope": "OS/Mach/LaunchServices boundaries mocked in host tests; no original binary executed; new executable statically inspected only."
+}

@@ -1,0 +1,29 @@
+#define main NativeCaptureProbeUnusedMain
+#import "../lucid/Switching/NativeStorageFenceProbe.m"
+#undef main
+static NSUInteger Checks;
+static void Check(BOOL good,NSString *message){Checks++;if(!good){fprintf(stderr,"FAIL: %s\n",message.UTF8String);exit(1);}}
+static NSDictionary *Original(NSString *path){struct stat s;Check(!lstat(path.fileSystemRepresentation,&s),@"fixture stat");return @{@"executables":@[@{@"path":path,@"metadata":@{@"device":@(s.st_dev),@"inode":@(s.st_ino),@"owner":@(s.st_uid),@"group":@(s.st_gid),@"mode":@(s.st_mode&07777),@"flags":@(s.st_flags),@"size":@(s.st_size),@"linkCount":@(s.st_nlink),@"mtimeSeconds":@(s.st_mtimespec.tv_sec),@"mtimeNanoseconds":@(s.st_mtimespec.tv_nsec),@"ctimeSeconds":@(s.st_ctimespec.tv_sec),@"ctimeNanoseconds":@(s.st_ctimespec.tv_nsec)}}]};}
+static void File(NSString *path){int fd=open(path.fileSystemRepresentation,O_CREAT|O_EXCL|O_WRONLY,0700);Check(fd>=0,@"owned fixture created");Check(write(fd,"fixture",7)==7,@"owned fixture bytes written");Check(!close(fd),@"fixture closed");}
+int main(void){@autoreleasepool{
+    NSString *uuid=@"aabbccdd-1234-4567-89ab-0123456789ab",*valid=[CaptureScope stringByAppendingPathComponent:uuid];Check(DirectoryArgument(valid),@"exact lowercase UUID accepted");
+    for(id path in @[[valid uppercaseString],[valid stringByAppendingString:@"/"],[valid stringByAppendingPathComponent:@"child"],[CaptureScope stringByAppendingPathComponent:@"../aabbccdd-1234-4567-89ab-0123456789ab"],[@"/var/root/socialbox-native-storage-capture-probes" stringByAppendingPathComponent:uuid],[@"/private/var/root/foreign" stringByAppendingPathComponent:uuid],[CaptureScope stringByAppendingPathComponent:@"not-a-uuid"],@7])Check(!DirectoryArgument(path),@"alias, escaping, malformed or foreign capture scope refused");
+    Check(!DirectoryArgument(nil),@"missing scope refused");
+    NSMutableDictionary *result=[Base() mutableCopy];NSError *privateError=[NSError errorWithDomain:@"/private/account-secret" code:77 userInfo:@{NSLocalizedDescriptionKey:@"account filename and private data",@"stage":@"/private/account-name"}];
+    Refuse(result,@"CODE_CAPTURE",privateError);NSString *json=[[NSString alloc] initWithData:[NSJSONSerialization dataWithJSONObject:result options:0 error:nil] encoding:NSUTF8StringEncoding];
+    Check([result[@"errorComponent"] isEqual:@"other"]&&[result[@"errorCode"] isEqual:@77]&&![json containsString:@"account-secret"]&&![json containsString:@"account-name"]&&![json containsString:@"private data"],@"exception metadata cannot export private names");
+    Check(![result[@"runtimeAccepted"] boolValue]&&![result[@"safeToGate"] boolValue]&&![result[@"storagePermissionsChanged"] boolValue]&&![result[@"codePermissionsChanged"] boolValue]&&![result[@"isolationVerified"] boolValue]&&![result[@"facebookInventoryCaptured"] boolValue]&&![result[@"facebookCodeCaptured"] boolValue]&&![result[@"facebookStorageFenceCaptured"] boolValue]&&![result[@"familyLayoutAttached"] boolValue]&&[result[@"familyAllowedContainerCount"] isEqual:@0],@"capture output carries no effect, family admission or isolation claim");
+    NSError *familyError=[NSError errorWithDomain:@"com.socialbox.native-family-storage-layout" code:3 userInfo:@{NSLocalizedDescriptionKey:@"Instagram and Facebook do not share an admissible container"}];
+    NSMutableDictionary *familyRefuse=[Base() mutableCopy];Refuse(familyRefuse,@"FAMILY_LAYOUT_CAPTURE",familyError);
+    Check([familyRefuse[@"errorComponent"] isEqual:@"family-layout"]&&[familyRefuse[@"errorCode"] isEqual:@3]&&![familyRefuse[@"isolationVerified"] boolValue],@"missing shared family CID is a layout refusal, not isolation");
+    char pattern[]="/tmp/socialbox-capture-probe-test-XXXXXX";Check(mkdtemp(pattern)!=NULL,@"private fixture directory created");NSString *base=@(pattern),*path=[base stringByAppendingPathComponent:@"code"],*other=[base stringByAppendingPathComponent:@"other"];
+    File(path);NSDictionary *record=Original(path);Check(OriginalCode(record),@"exact original code metadata verified");Check([record isEqual:Original(path)],@"read-only verification preserves file metadata");
+    Check(!chmod(path.fileSystemRepresentation,0600),@"fixture mode changed");Check(!OriginalCode(record),@"changed execute bits refused");Check(!chmod(path.fileSystemRepresentation,0700),@"fixture mode restored");Check(!OriginalCode(record),@"changed status timestamp is not hidden by mode restoration");record=Original(path);
+    Check(!link(path.fileSystemRepresentation,other.fileSystemRepresentation),@"fixture hardlink made");Check(!OriginalCode(record),@"hardlinked code refused");Check(!unlink(other.fileSystemRepresentation),@"fixture hardlink removed");record=Original(path);
+    Check(!rename(path.fileSystemRepresentation,other.fileSystemRepresentation),@"fixture original moved");File(path);Check(!OriginalCode(record),@"same path replacement inode refused");Check(!unlink(path.fileSystemRepresentation),@"fixture replacement removed");
+    Check(!symlink(other.fileSystemRepresentation,path.fileSystemRepresentation),@"fixture alias made");Check(!OriginalCode(record),@"symlink never verifies as original code");Check(!unlink(path.fileSystemRepresentation),@"fixture alias removed");
+    Check(!OriginalCode(@{@"executables":@[]}),@"empty code inventory refused");Check(!OriginalCode(@{@"executables":@[@{}]}),@"incomplete code metadata refused");
+    Check([NSFileManager.defaultManager removeItemAtPath:base error:nil],@"owned fixture removed");
+    if(getuid()!=0){const char *args[]={"capture-test",valid.UTF8String};Check(NativeCaptureProbeUnusedMain(2,args)==77,@"production entry refuses non-root before creating journal");}
+    printf("PASS: %lu capture-probe scope, redaction, original-code and role assertions\n",(unsigned long)Checks);return 0;
+}}

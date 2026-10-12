@@ -1,0 +1,38 @@
+# Local test sandboxes
+.tmp-isolation-tests/
+
+# Theos build artifacts
+.theos/
+**/.theos/
+packages/
+obj/
+build/
+lucid/HelperSafety/shared/.stamp
+lucid/Helper/shared/.stamp
+lucid/.stage/socialbox-rootless/
+license-private.pem
+*.deb
+
+# macOS
+.DS_Store
+
+# Editor
+*.swp
+*~
+
+# Secrets and local env
+.env
+.env.local
+.env.*
+!.env.example
+
+# Node
+node_modules/
+.next/
+
+# Vercel CLI link (project id / org id; not secrets, but local-only)
+.vercel
+
+# Python
+__pycache__/
+*.py[cod]

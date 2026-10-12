@@ -1,0 +1,1275 @@
+{
+  "schemaVersion": 1,
+  "device": "iPhone10,4",
+  "osVersion": "16.7.16",
+  "osBuild": "20H392",
+  "scope": "Synthetic mobile-uid helper Security API boundary; not sandbox, actual Facebook startup, app account, hook ordering, MDM or network acceptance.",
+  "helperSourceSHA256": "c1a913ef75355deb4066ec6506281b877d8934528bf1a2fe7488f64b7ae0dbbc",
+  "policySHA256": "e5c95b0944e51b2c28f817e43dcb3c03915ef4a628cd96c038bf0ef8062fd70f",
+  "runs": [
+    {
+      "passed": 1,
+      "phase": "seed",
+      "results": [
+        {
+          "pass": true,
+          "probe": "seed.genp.0",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-ref.genp.0",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-value.genp.0",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "seed.inet.0",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-ref.inet.0",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-value.inet.0",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "seed.cert.0",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-ref.cert.0",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "seed.keys.0",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-ref.keys.0",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "seed.genp.1",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-ref.genp.1",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-value.genp.1",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "seed.inet.1",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-ref.inet.1",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-value.inet.1",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "seed.cert.1",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-ref.cert.1",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "seed.keys.1",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-ref.keys.1",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "seed.genp.2",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-ref.genp.2",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-value.genp.2",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "seed.inet.2",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-ref.inet.2",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-value.inet.2",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "seed.cert.2",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-ref.cert.2",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "seed.keys.2",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-ref.keys.2",
+          "status": 0
+        }
+      ],
+      "role": "A",
+      "evidenceSHA256": "31f6f03e50342ab0034210c0d664619cacc8bdc58b487978bb1b75224a849563"
+    },
+    {
+      "passed": 1,
+      "phase": "verify",
+      "results": [
+        {
+          "pass": true,
+          "probe": "own-ref.genp.0",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-value.genp.0",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-ref.inet.0",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-value.inet.0",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-ref.cert.0",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-ref.keys.0",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-ref.genp.1",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-value.genp.1",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-ref.inet.1",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-value.inet.1",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-ref.cert.1",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-ref.keys.1",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-ref.genp.2",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-value.genp.2",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-ref.inet.2",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-value.inet.2",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-ref.cert.2",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-ref.keys.2",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "foreign-reference.genp.0",
+          "status": -25300
+        },
+        {
+          "pass": true,
+          "probe": "foreign-reference.inet.0",
+          "status": -25300
+        },
+        {
+          "pass": true,
+          "probe": "foreign-reference.cert.0",
+          "status": -25300
+        },
+        {
+          "pass": true,
+          "probe": "foreign-reference.keys.0",
+          "status": -25300
+        },
+        {
+          "pass": true,
+          "probe": "foreign-reference.genp.1",
+          "status": -25300
+        },
+        {
+          "pass": true,
+          "probe": "foreign-reference.inet.1",
+          "status": -25300
+        },
+        {
+          "pass": true,
+          "probe": "foreign-reference.cert.1",
+          "status": -25300
+        },
+        {
+          "pass": true,
+          "probe": "foreign-reference.keys.1",
+          "status": -25300
+        },
+        {
+          "pass": true,
+          "probe": "foreign-reference.genp.2",
+          "status": -25300
+        },
+        {
+          "pass": true,
+          "probe": "foreign-reference.inet.2",
+          "status": -25300
+        },
+        {
+          "pass": true,
+          "probe": "foreign-reference.cert.2",
+          "status": -25300
+        },
+        {
+          "pass": true,
+          "probe": "foreign-reference.keys.2",
+          "status": -25300
+        },
+        {
+          "pass": true,
+          "probe": "foreign-group.genp.0",
+          "status": -34018
+        },
+        {
+          "pass": true,
+          "probe": "foreign-group.inet.0",
+          "status": -34018
+        },
+        {
+          "pass": true,
+          "probe": "foreign-group.cert.0",
+          "status": -34018
+        },
+        {
+          "pass": true,
+          "probe": "foreign-group.keys.0",
+          "status": -34018
+        },
+        {
+          "pass": true,
+          "probe": "foreign-group.genp.1",
+          "status": -34018
+        },
+        {
+          "pass": true,
+          "probe": "foreign-group.inet.1",
+          "status": -34018
+        },
+        {
+          "pass": true,
+          "probe": "foreign-group.cert.1",
+          "status": -34018
+        },
+        {
+          "pass": true,
+          "probe": "foreign-group.keys.1",
+          "status": -34018
+        },
+        {
+          "pass": true,
+          "probe": "foreign-group.genp.2",
+          "status": -34018
+        },
+        {
+          "pass": true,
+          "probe": "foreign-group.inet.2",
+          "status": -34018
+        },
+        {
+          "pass": true,
+          "probe": "foreign-group.cert.2",
+          "status": -34018
+        },
+        {
+          "pass": true,
+          "probe": "foreign-group.keys.2",
+          "status": -34018
+        },
+        {
+          "pass": true,
+          "probe": "omitted-group-search",
+          "status": 0
+        }
+      ],
+      "role": "A",
+      "evidenceSHA256": "849677201d6564f1e94b29a7bdc018e69fe1e887c07feb71a9732bf18fe7e6e0"
+    },
+    {
+      "passed": 1,
+      "phase": "verify",
+      "results": [
+        {
+          "pass": true,
+          "probe": "own-ref.genp.0",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-value.genp.0",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-ref.inet.0",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-value.inet.0",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-ref.cert.0",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-ref.keys.0",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-ref.genp.1",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-value.genp.1",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-ref.inet.1",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-value.inet.1",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-ref.cert.1",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-ref.keys.1",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-ref.genp.2",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-value.genp.2",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-ref.inet.2",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-value.inet.2",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-ref.cert.2",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-ref.keys.2",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "foreign-reference.genp.0",
+          "status": -25300
+        },
+        {
+          "pass": true,
+          "probe": "foreign-reference.inet.0",
+          "status": -25300
+        },
+        {
+          "pass": true,
+          "probe": "foreign-reference.cert.0",
+          "status": -25300
+        },
+        {
+          "pass": true,
+          "probe": "foreign-reference.keys.0",
+          "status": -25300
+        },
+        {
+          "pass": true,
+          "probe": "foreign-reference.genp.1",
+          "status": -25300
+        },
+        {
+          "pass": true,
+          "probe": "foreign-reference.inet.1",
+          "status": -25300
+        },
+        {
+          "pass": true,
+          "probe": "foreign-reference.cert.1",
+          "status": -25300
+        },
+        {
+          "pass": true,
+          "probe": "foreign-reference.keys.1",
+          "status": -25300
+        },
+        {
+          "pass": true,
+          "probe": "foreign-reference.genp.2",
+          "status": -25300
+        },
+        {
+          "pass": true,
+          "probe": "foreign-reference.inet.2",
+          "status": -25300
+        },
+        {
+          "pass": true,
+          "probe": "foreign-reference.cert.2",
+          "status": -25300
+        },
+        {
+          "pass": true,
+          "probe": "foreign-reference.keys.2",
+          "status": -25300
+        },
+        {
+          "pass": true,
+          "probe": "foreign-group.genp.0",
+          "status": -34018
+        },
+        {
+          "pass": true,
+          "probe": "foreign-group.inet.0",
+          "status": -34018
+        },
+        {
+          "pass": true,
+          "probe": "foreign-group.cert.0",
+          "status": -34018
+        },
+        {
+          "pass": true,
+          "probe": "foreign-group.keys.0",
+          "status": -34018
+        },
+        {
+          "pass": true,
+          "probe": "foreign-group.genp.1",
+          "status": -34018
+        },
+        {
+          "pass": true,
+          "probe": "foreign-group.inet.1",
+          "status": -34018
+        },
+        {
+          "pass": true,
+          "probe": "foreign-group.cert.1",
+          "status": -34018
+        },
+        {
+          "pass": true,
+          "probe": "foreign-group.keys.1",
+          "status": -34018
+        },
+        {
+          "pass": true,
+          "probe": "foreign-group.genp.2",
+          "status": -34018
+        },
+        {
+          "pass": true,
+          "probe": "foreign-group.inet.2",
+          "status": -34018
+        },
+        {
+          "pass": true,
+          "probe": "foreign-group.cert.2",
+          "status": -34018
+        },
+        {
+          "pass": true,
+          "probe": "foreign-group.keys.2",
+          "status": -34018
+        },
+        {
+          "pass": true,
+          "probe": "omitted-group-search",
+          "status": 0
+        }
+      ],
+      "role": "A",
+      "evidenceSHA256": "849677201d6564f1e94b29a7bdc018e69fe1e887c07feb71a9732bf18fe7e6e0"
+    },
+    {
+      "passed": 1,
+      "phase": "clean",
+      "results": [
+        {
+          "pass": true,
+          "probe": "delete.genp.0",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "empty.genp.0",
+          "status": -25300
+        },
+        {
+          "pass": true,
+          "probe": "delete.inet.0",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "empty.inet.0",
+          "status": -25300
+        },
+        {
+          "pass": true,
+          "probe": "delete.cert.0",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "empty.cert.0",
+          "status": -25300
+        },
+        {
+          "pass": true,
+          "probe": "delete.keys.0",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "empty.keys.0",
+          "status": -25300
+        },
+        {
+          "pass": true,
+          "probe": "delete.genp.1",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "empty.genp.1",
+          "status": -25300
+        },
+        {
+          "pass": true,
+          "probe": "delete.inet.1",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "empty.inet.1",
+          "status": -25300
+        },
+        {
+          "pass": true,
+          "probe": "delete.cert.1",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "empty.cert.1",
+          "status": -25300
+        },
+        {
+          "pass": true,
+          "probe": "delete.keys.1",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "empty.keys.1",
+          "status": -25300
+        },
+        {
+          "pass": true,
+          "probe": "delete.genp.2",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "empty.genp.2",
+          "status": -25300
+        },
+        {
+          "pass": true,
+          "probe": "delete.inet.2",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "empty.inet.2",
+          "status": -25300
+        },
+        {
+          "pass": true,
+          "probe": "delete.cert.2",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "empty.cert.2",
+          "status": -25300
+        },
+        {
+          "pass": true,
+          "probe": "delete.keys.2",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "empty.keys.2",
+          "status": -25300
+        }
+      ],
+      "role": "A",
+      "evidenceSHA256": "bbdabe48b599698f9e9830ea69af6d4257d11f8dba1459a4774defaf06a21ee7"
+    },
+    {
+      "passed": 1,
+      "phase": "seed",
+      "results": [
+        {
+          "pass": true,
+          "probe": "seed.genp.0",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-ref.genp.0",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-value.genp.0",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "seed.inet.0",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-ref.inet.0",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-value.inet.0",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "seed.cert.0",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-ref.cert.0",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "seed.keys.0",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-ref.keys.0",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "seed.genp.1",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-ref.genp.1",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-value.genp.1",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "seed.inet.1",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-ref.inet.1",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-value.inet.1",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "seed.cert.1",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-ref.cert.1",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "seed.keys.1",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-ref.keys.1",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "seed.genp.2",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-ref.genp.2",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-value.genp.2",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "seed.inet.2",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-ref.inet.2",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-value.inet.2",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "seed.cert.2",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-ref.cert.2",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "seed.keys.2",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-ref.keys.2",
+          "status": 0
+        }
+      ],
+      "role": "B",
+      "evidenceSHA256": "cf047931f56625e607b3469d71678c9c3ebeb9d694ea375ca89a8bcc028e8e1e"
+    },
+    {
+      "passed": 1,
+      "phase": "verify",
+      "results": [
+        {
+          "pass": true,
+          "probe": "own-ref.genp.0",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-value.genp.0",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-ref.inet.0",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-value.inet.0",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-ref.cert.0",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-ref.keys.0",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-ref.genp.1",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-value.genp.1",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-ref.inet.1",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-value.inet.1",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-ref.cert.1",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-ref.keys.1",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-ref.genp.2",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-value.genp.2",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-ref.inet.2",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-value.inet.2",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-ref.cert.2",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "own-ref.keys.2",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "foreign-reference.genp.0",
+          "status": -25300
+        },
+        {
+          "pass": true,
+          "probe": "foreign-reference.inet.0",
+          "status": -25300
+        },
+        {
+          "pass": true,
+          "probe": "foreign-reference.cert.0",
+          "status": -25300
+        },
+        {
+          "pass": true,
+          "probe": "foreign-reference.keys.0",
+          "status": -25300
+        },
+        {
+          "pass": true,
+          "probe": "foreign-reference.genp.1",
+          "status": -25300
+        },
+        {
+          "pass": true,
+          "probe": "foreign-reference.inet.1",
+          "status": -25300
+        },
+        {
+          "pass": true,
+          "probe": "foreign-reference.cert.1",
+          "status": -25300
+        },
+        {
+          "pass": true,
+          "probe": "foreign-reference.keys.1",
+          "status": -25300
+        },
+        {
+          "pass": true,
+          "probe": "foreign-reference.genp.2",
+          "status": -25300
+        },
+        {
+          "pass": true,
+          "probe": "foreign-reference.inet.2",
+          "status": -25300
+        },
+        {
+          "pass": true,
+          "probe": "foreign-reference.cert.2",
+          "status": -25300
+        },
+        {
+          "pass": true,
+          "probe": "foreign-reference.keys.2",
+          "status": -25300
+        },
+        {
+          "pass": true,
+          "probe": "foreign-group.genp.0",
+          "status": -34018
+        },
+        {
+          "pass": true,
+          "probe": "foreign-group.inet.0",
+          "status": -34018
+        },
+        {
+          "pass": true,
+          "probe": "foreign-group.cert.0",
+          "status": -34018
+        },
+        {
+          "pass": true,
+          "probe": "foreign-group.keys.0",
+          "status": -34018
+        },
+        {
+          "pass": true,
+          "probe": "foreign-group.genp.1",
+          "status": -34018
+        },
+        {
+          "pass": true,
+          "probe": "foreign-group.inet.1",
+          "status": -34018
+        },
+        {
+          "pass": true,
+          "probe": "foreign-group.cert.1",
+          "status": -34018
+        },
+        {
+          "pass": true,
+          "probe": "foreign-group.keys.1",
+          "status": -34018
+        },
+        {
+          "pass": true,
+          "probe": "foreign-group.genp.2",
+          "status": -34018
+        },
+        {
+          "pass": true,
+          "probe": "foreign-group.inet.2",
+          "status": -34018
+        },
+        {
+          "pass": true,
+          "probe": "foreign-group.cert.2",
+          "status": -34018
+        },
+        {
+          "pass": true,
+          "probe": "foreign-group.keys.2",
+          "status": -34018
+        },
+        {
+          "pass": true,
+          "probe": "omitted-group-search",
+          "status": 0
+        }
+      ],
+      "role": "B",
+      "evidenceSHA256": "65968b188b272c97fda69de7165fe5b52a280519f60524723fab75a70c5fae5d"
+    },
+    {
+      "passed": 1,
+      "phase": "clean",
+      "results": [
+        {
+          "pass": true,
+          "probe": "delete.genp.0",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "empty.genp.0",
+          "status": -25300
+        },
+        {
+          "pass": true,
+          "probe": "delete.inet.0",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "empty.inet.0",
+          "status": -25300
+        },
+        {
+          "pass": true,
+          "probe": "delete.cert.0",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "empty.cert.0",
+          "status": -25300
+        },
+        {
+          "pass": true,
+          "probe": "delete.keys.0",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "empty.keys.0",
+          "status": -25300
+        },
+        {
+          "pass": true,
+          "probe": "delete.genp.1",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "empty.genp.1",
+          "status": -25300
+        },
+        {
+          "pass": true,
+          "probe": "delete.inet.1",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "empty.inet.1",
+          "status": -25300
+        },
+        {
+          "pass": true,
+          "probe": "delete.cert.1",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "empty.cert.1",
+          "status": -25300
+        },
+        {
+          "pass": true,
+          "probe": "delete.keys.1",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "empty.keys.1",
+          "status": -25300
+        },
+        {
+          "pass": true,
+          "probe": "delete.genp.2",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "empty.genp.2",
+          "status": -25300
+        },
+        {
+          "pass": true,
+          "probe": "delete.inet.2",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "empty.inet.2",
+          "status": -25300
+        },
+        {
+          "pass": true,
+          "probe": "delete.cert.2",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "empty.cert.2",
+          "status": -25300
+        },
+        {
+          "pass": true,
+          "probe": "delete.keys.2",
+          "status": 0
+        },
+        {
+          "pass": true,
+          "probe": "empty.keys.2",
+          "status": -25300
+        }
+      ],
+      "role": "B",
+      "evidenceSHA256": "0b4c1d29861dc30b5d77606d28aca90b75fd7c49cade421d89ded0710c925385"
+    }
+  ],
+  "startupObservation": "Identical signed diagnostic executables were SIGKILL from mobile Caches; execution succeeded from root-owned /var/jb/tmp. Only the latter was used for these results.",
+  "helperSHA256": {
+    "A": "3dec4075cf1aa041598b261b560d4050093bf311d14ae8e9823e985f81b1146f",
+    "B": "fab9ed7aee712c0980116a3c6f4b7526db3b87cdfad479464fb7993c0eb7cba5"
+  },
+  "allPassed": true,
+  "assertionCount": 237,
+  "policyCommit": "d547359",
+  "helperSourceCommit": "b1687fa",
+  "postTestStability": {
+    "capturedAt": 1789415089.6734,
+    "safeModeMarkerAbsent": true,
+    "springBoard": {
+      "path": "/System/Library/CoreServices/SpringBoard.app/SpringBoard",
+      "pid": 86004,
+      "startMicroseconds": 278578,
+      "startSeconds": 1789384877
+    },
+    "springBoardUnchangedFromPreTask": true,
+    "allSyntheticItemsCleaned": true,
+    "temporaryExecutablesRemoved": true,
+    "privateCaptureSHA256": "16c7532d77330e4f024efac4a67f9f0e7a56f813d75a380f7c7a222645aa9cbb"
+  }
+}

@@ -1,0 +1,497 @@
+{
+  "schemaVersion": 1,
+  "rows": [
+    {
+      "id": "APP-001",
+      "category": "app abstraction",
+      "surface": "Registry identities, app scope and backward-compatible clone derivation",
+      "mechanism": "Canonical additive app descriptors; absent appType selects the unchanged legacy Reddit descriptor; unknown app types rejected. Facebook reserved and inactive.",
+      "coverage": [
+        "generator",
+        "blocked"
+      ],
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "cloud/src/config/app-registry.json",
+          "line": 1,
+          "detail": "Canonical descriptor data, generated native mirror, byte-exact legacy identity regressions or build/static integration."
+        },
+        {
+          "path": "shared/RBXAppRegistry.h",
+          "line": 1,
+          "detail": "Canonical descriptor data, generated native mirror, byte-exact legacy identity regressions or build/static integration."
+        },
+        {
+          "path": "shared/RBXAppRegistryData.h",
+          "line": 1,
+          "detail": "Canonical descriptor data, generated native mirror, byte-exact legacy identity regressions or build/static integration."
+        },
+        {
+          "path": "tools/generate_app_registry.py",
+          "line": 1,
+          "detail": "Canonical descriptor data, generated native mirror, byte-exact legacy identity regressions or build/static integration."
+        },
+        {
+          "path": "tools/test_app_registry.m",
+          "line": 1,
+          "detail": "Canonical descriptor data, generated native mirror, byte-exact legacy identity regressions or build/static integration."
+        },
+        {
+          "path": "tools/test_app_registry.sh",
+          "line": 1,
+          "detail": "Canonical descriptor data, generated native mirror, byte-exact legacy identity regressions or build/static integration."
+        },
+        {
+          "path": "scripts/build-mac.sh",
+          "line": 1,
+          "detail": "Canonical descriptor data, generated native mirror, byte-exact legacy identity regressions or build/static integration."
+        },
+        {
+          "path": "tools/static_check.py",
+          "line": 1,
+          "detail": "Canonical descriptor data, generated native mirror, byte-exact legacy identity regressions or build/static integration."
+        },
+        {
+          "path": "scripts/build-version.py",
+          "line": 1,
+          "detail": "Generated signing contract includes canonical registry, native mirror and derivation helper. Three initially failing input-drift cases prove invalidation."
+        },
+        {
+          "path": "tools/test_build_version.py",
+          "line": 1,
+          "detail": "Generated signing contract includes canonical registry, native mirror and derivation helper. Three initially failing input-drift cases prove invalidation."
+        }
+      ],
+      "verification": "Native golden vectors retain the shipped nonstandard FNV offset basis, exact source/clone/keychain/cache/export values, and reject unknown or malformed descriptors. No Facebook runtime coverage implied. Signing-contract drift tests cover each new descriptor input; three failed before the dependency fix and pass afterward.",
+      "fix": "Keep existing Reddit identities byte-identical; Facebook activation requires a separate binary and identifier audit."
+    },
+    {
+      "id": "APP-003",
+      "category": "app abstraction",
+      "surface": "Per-app source import, clone signing inputs, request/restore ownership and MDM export",
+      "mechanism": "Immutable descriptor supplies source cache, validation identity, clone family, naming and signing inputs. Legacy Reddit wrappers retain values. Requests bind persisted appType even for corrupt profiles; legacy backup restore rejects explicit foreign ownership. MDM mapping requires exact generated clone identity.",
+      "coverage": [
+        "generator",
+        "blocked"
+      ],
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "daemon/RBXCloneManager.h",
+          "line": 1,
+          "detail": "Shipped app parameterization/admission, exact mapping or native regression fixture."
+        },
+        {
+          "path": "daemon/RBXCloneManager.m",
+          "line": 1,
+          "detail": "Shipped app parameterization/admission, exact mapping or native regression fixture."
+        },
+        {
+          "path": "daemon/RBXProfileIO.h",
+          "line": 1,
+          "detail": "Shipped app parameterization/admission, exact mapping or native regression fixture."
+        },
+        {
+          "path": "daemon/RBXProfileIO.m",
+          "line": 1,
+          "detail": "Shipped app parameterization/admission, exact mapping or native regression fixture."
+        },
+        {
+          "path": "daemon/RBXContainerRegistry.m",
+          "line": 1,
+          "detail": "Shipped app parameterization/admission, exact mapping or native regression fixture."
+        },
+        {
+          "path": "daemon/RBXCloudSync.m",
+          "line": 1,
+          "detail": "Shipped app parameterization/admission, exact mapping or native regression fixture."
+        },
+        {
+          "path": "daemon/RBXAppVersionMonitor.m",
+          "line": 1,
+          "detail": "Shipped app parameterization/admission, exact mapping or native regression fixture."
+        },
+        {
+          "path": "daemon/RBXLauncherState.m",
+          "line": 1,
+          "detail": "Shipped app parameterization/admission, exact mapping or native regression fixture."
+        },
+        {
+          "path": "daemon/main.m",
+          "line": 1,
+          "detail": "Shipped app parameterization/admission, exact mapping or native regression fixture."
+        },
+        {
+          "path": "launcher/RBXMDMExporter.h",
+          "line": 1,
+          "detail": "Shipped app parameterization/admission, exact mapping or native regression fixture."
+        },
+        {
+          "path": "launcher/RBXMDMExporter.m",
+          "line": 1,
+          "detail": "Shipped app parameterization/admission, exact mapping or native regression fixture."
+        },
+        {
+          "path": "shared/RBXAppAdmission.h",
+          "line": 1,
+          "detail": "Shipped app parameterization/admission, exact mapping or native regression fixture."
+        },
+        {
+          "path": "tools/test_app_source.py",
+          "line": 1,
+          "detail": "Shipped app parameterization/admission, exact mapping or native regression fixture."
+        },
+        {
+          "path": "tools/test_backup_identity.py",
+          "line": 1,
+          "detail": "Shipped app parameterization/admission, exact mapping or native regression fixture."
+        },
+        {
+          "path": "tools/test_app_mdm.m",
+          "line": 1,
+          "detail": "Shipped app parameterization/admission, exact mapping or native regression fixture."
+        },
+        {
+          "path": "tools/test_app_mdm.sh",
+          "line": 1,
+          "detail": "Shipped app parameterization/admission, exact mapping or native regression fixture."
+        },
+        {
+          "path": "tools/test_launcher_architecture.py",
+          "line": 1,
+          "detail": "Shipped app parameterization/admission, exact mapping or native regression fixture."
+        },
+        {
+          "path": "scripts/build-mac.sh",
+          "line": 1,
+          "detail": "Shipped app parameterization/admission, exact mapping or native regression fixture."
+        },
+        {
+          "path": "docs/socialbox-phase23-device-evidence.json",
+          "line": 1,
+          "detail": "Actual app-bound Facebook source import and inactive-create refusal; preserves Reddit source and identity."
+        }
+      ],
+      "verification": "Actual metadata/cryptid/nested validator, signing allowlist, backup ownership and MDM output tests pass. Facebook 578.1.0/1063022819 IPA was audited (FB-001), and the installed 0.1.16 daemon completed its app-scoped private source import (FBDEVICE-001). Facebook remains inactive; clone execution and full lifecycle still need acceptance.",
+      "fix": "Facebook may be privately imported but clone install, removal/recovery, MDM and launch stay inactive pending Phase2 binary/identifier and full lifecycle coverage. Existing global lease and Reddit runtime controls are unchanged."
+    },
+    {
+      "id": "APP-004",
+      "category": "app abstraction",
+      "surface": "Launcher app selector, scoped state and import request binding",
+      "mechanism": "Registry-backed selector wraps and preserves original Reddit tabs/controllers; inactive Facebook is a read-only placeholder. Shared safety state stays visible; profiles/results and staged import requests bind to selected app.",
+      "coverage": [
+        "blocked"
+      ],
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "launcher/RBXAppScope.h",
+          "line": 1,
+          "detail": "Shipped selector/scoping/import or Foundation/UIKit/architecture fixture."
+        },
+        {
+          "path": "launcher/RBXLauncherAppDelegate.m",
+          "line": 1,
+          "detail": "Shipped selector/scoping/import or Foundation/UIKit/architecture fixture."
+        },
+        {
+          "path": "launcher/RBXSettingsViewController.h",
+          "line": 1,
+          "detail": "Shipped selector/scoping/import or Foundation/UIKit/architecture fixture."
+        },
+        {
+          "path": "launcher/RBXSettingsViewController.m",
+          "line": 1,
+          "detail": "Shipped selector/scoping/import or Foundation/UIKit/architecture fixture."
+        },
+        {
+          "path": "launcher/RBXLauncherViewController.m",
+          "line": 1,
+          "detail": "Shipped selector/scoping/import or Foundation/UIKit/architecture fixture."
+        },
+        {
+          "path": "launcher/RBXSimpleWizardViewController.m",
+          "line": 1,
+          "detail": "Shipped selector/scoping/import or Foundation/UIKit/architecture fixture."
+        },
+        {
+          "path": "launcher/RBXProxiesViewController.m",
+          "line": 1,
+          "detail": "Shipped selector/scoping/import or Foundation/UIKit/architecture fixture."
+        },
+        {
+          "path": "launcher/RBXIsolationViewController.m",
+          "line": 1,
+          "detail": "Shipped selector/scoping/import or Foundation/UIKit/architecture fixture."
+        },
+        {
+          "path": "launcher/RBXDiagnosticsViewController.m",
+          "line": 1,
+          "detail": "Shipped selector/scoping/import or Foundation/UIKit/architecture fixture."
+        },
+        {
+          "path": "tools/test_app_scope.m",
+          "line": 1,
+          "detail": "Shipped selector/scoping/import or Foundation/UIKit/architecture fixture."
+        },
+        {
+          "path": "tools/test_app_scope.sh",
+          "line": 1,
+          "detail": "Shipped selector/scoping/import or Foundation/UIKit/architecture fixture."
+        },
+        {
+          "path": "tools/test_launcher_multiapp.py",
+          "line": 1,
+          "detail": "Shipped selector/scoping/import or Foundation/UIKit/architecture fixture."
+        },
+        {
+          "path": "tools/test_launcher_selector_fixture.m",
+          "line": 1,
+          "detail": "Shipped selector/scoping/import or Foundation/UIKit/architecture fixture."
+        },
+        {
+          "path": "tools/test_launcher_selector_simulator.py",
+          "line": 1,
+          "detail": "Shipped selector/scoping/import or Foundation/UIKit/architecture fixture."
+        },
+        {
+          "path": "scripts/build-mac.sh",
+          "line": 1,
+          "detail": "Shipped selector/scoping/import or Foundation/UIKit/architecture fixture."
+        },
+        {
+          "path": "launcher/RBXAppSetupStatus.h",
+          "line": 1,
+          "detail": "Read-only imported-source, implementation and managed-network states are shown independently; no runtime admission changes."
+        },
+        {
+          "path": "docs/facebook-launch-blockers-0.1.28.md",
+          "line": 1,
+          "detail": "Read-only imported-source, implementation and managed-network states are shown independently; no runtime admission changes."
+        },
+        {
+          "path": "docs/release-evidence/facebook-setup-0.1.28.json",
+          "line": 1,
+          "detail": "Rootless build/UI fixture and physical upgrade evidence; Facebook launch remains blocked."
+        }
+      ],
+      "verification": "Native scope regressions preserve equal legacy rows and shared fences, separate foreign rows/results/receipts, enforce passcode and modal guards. Actual shipped UIKit selector fixture with inert workspace bodies checks tab/nav/editor preservation, window detachment and nonoverlap; no jailbreak/Reddit runtime proof. 0.1.28 regression: imported Facebook IPA is displayed with its version while execution remains separately blocked; missing/malformed and Reddit-only source publications cannot mark Facebook ready. UIKit cached workspace refresh and passcode/modal guards pass in inactive and active fixture registries. Network setup needs fresh publication and per-app scope; import cannot grant launch.",
+      "fix": "Facebook has no runnable/profile actions; finish Phase2 and device acceptance before expanding this read-only section."
+    },
+    {
+      "id": "APP-005",
+      "category": "app abstraction",
+      "surface": "Cloud profile app identity, migration, filtering and scoped mutations",
+      "mechanism": "Canonical descriptor identity defaults absent legacy fields to Reddit; lazy additive CAS migration, immutable app type, explicit filters/assertions, owner/device checks and global ID/tombstone uniqueness remain enforced.",
+      "coverage": [
+        "blocked"
+      ],
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "cloud/docs/app-types.md",
+          "line": 1,
+          "detail": "Cloud schema/migration, app query or mutation assertion, console filtering or native TypeScript regression."
+        },
+        {
+          "path": "cloud/scripts/app-registry-test.ts",
+          "line": 1,
+          "detail": "Cloud schema/migration, app query or mutation assertion, console filtering or native TypeScript regression."
+        },
+        {
+          "path": "cloud/src/lib/app-registry.ts",
+          "line": 1,
+          "detail": "Cloud schema/migration, app query or mutation assertion, console filtering or native TypeScript regression."
+        },
+        {
+          "path": "cloud/package.json",
+          "line": 1,
+          "detail": "Cloud schema/migration, app query or mutation assertion, console filtering or native TypeScript regression."
+        },
+        {
+          "path": "cloud/scripts/device-scope-test.ts",
+          "line": 1,
+          "detail": "Cloud schema/migration, app query or mutation assertion, console filtering or native TypeScript regression."
+        },
+        {
+          "path": "cloud/scripts/profile-metadata-test.ts",
+          "line": 1,
+          "detail": "Cloud schema/migration, app query or mutation assertion, console filtering or native TypeScript regression."
+        },
+        {
+          "path": "cloud/src/app/api/profile-proxies/[profileId]/route.ts",
+          "line": 1,
+          "detail": "Cloud schema/migration, app query or mutation assertion, console filtering or native TypeScript regression."
+        },
+        {
+          "path": "cloud/src/app/api/profile-proxies/route.ts",
+          "line": 1,
+          "detail": "Cloud schema/migration, app query or mutation assertion, console filtering or native TypeScript regression."
+        },
+        {
+          "path": "cloud/src/app/api/profile-rotation-auth/[profileId]/route.ts",
+          "line": 1,
+          "detail": "Cloud schema/migration, app query or mutation assertion, console filtering or native TypeScript regression."
+        },
+        {
+          "path": "cloud/src/app/api/profiles/reconcile/route.ts",
+          "line": 1,
+          "detail": "Cloud schema/migration, app query or mutation assertion, console filtering or native TypeScript regression."
+        },
+        {
+          "path": "cloud/src/app/api/profiles/route.ts",
+          "line": 1,
+          "detail": "Cloud schema/migration, app query or mutation assertion, console filtering or native TypeScript regression."
+        },
+        {
+          "path": "cloud/src/app/apps/reddit/page.tsx",
+          "line": 1,
+          "detail": "Former app workspace now redirects to the private admin console; app-aware API/schema contracts remain preserved and tested separately."
+        },
+        {
+          "path": "cloud/src/app/apps/reddit/profile-metadata-editor.tsx",
+          "line": 1,
+          "detail": "Cloud schema/migration, app query or mutation assertion, console filtering or native TypeScript regression."
+        },
+        {
+          "path": "cloud/src/lib/profile-inventory.ts",
+          "line": 1,
+          "detail": "Cloud schema/migration, app query or mutation assertion, console filtering or native TypeScript regression."
+        },
+        {
+          "path": "cloud/src/lib/storage.ts",
+          "line": 1,
+          "detail": "Cloud schema/migration, app query or mutation assertion, console filtering or native TypeScript regression."
+        }
+      ],
+      "verification": "Actual synthetic storage and authenticated-route tests cover byte-preserving reads/additive writes, unknown types, immutable type, legacy device Reddit defaults, explicit FB queries and cross-app mutation rejection. Full existing npm test, tsc and Next production build required; no production data migration or deployment performed.",
+      "fix": "Facebook inventory metadata is permitted; executable/runtime support and backup activation remain blocked pending Phase2. License/signing infrastructure unchanged."
+    },
+    {
+      "id": "APP-002",
+      "category": "app abstraction",
+      "surface": "Per-app exact registered process selection and stop verification",
+      "mechanism": "Immutable registered descriptors control exact LS bundle/executable/plugin selection, with infrastructure exclusions. Stop captures PID/birth/path, validates a RunningBoard handle audit token against the kernel executable, rechecks birth/path and submits an identity+PID handle predicate. Failed evidence or service denial has no direct PID/name signal fallback. The prior held-task termination was disproved on iOS 16.7.16 (task_terminate rejects BSD-backed tasks). The replacement is not a proof of atomic PID-version-bound final system dispatch; independent exit/socket observation and a launch fence remain necessary. Launch/observer admission retains process birth and executable under its lease.",
+      "coverage": [
+        "blocked"
+      ],
+      "verdict": "gap",
+      "evidence": [
+        {
+          "path": "daemon/RBXProcessController.h",
+          "line": 1,
+          "detail": "Shipped scoped classifier/controller or native captured-signal regression."
+        },
+        {
+          "path": "daemon/RBXProcessController.m",
+          "line": 1,
+          "detail": "Shipped scoped classifier/controller or native captured-signal regression."
+        },
+        {
+          "path": "shared/RBXAppProcess.h",
+          "line": 1,
+          "detail": "Shipped scoped classifier/controller or native captured-signal regression."
+        },
+        {
+          "path": "tools/test_app_process.m",
+          "line": 1,
+          "detail": "Shipped scoped classifier/controller or native captured-signal regression."
+        },
+        {
+          "path": "tools/test_app_process.sh",
+          "line": 1,
+          "detail": "Shipped scoped classifier/controller or native captured-signal regression."
+        },
+        {
+          "path": "scripts/build-mac.sh",
+          "line": 1,
+          "detail": "Shipped scoped classifier/controller or native captured-signal regression."
+        },
+        {
+          "path": "tests/test_replacement_architecture.py",
+          "line": 1,
+          "detail": "Original inactivity architecture assertion follows renamed appPids boundary; no check removed."
+        },
+        {
+          "path": "shared/RBXProcessIdentity.h",
+          "line": 1,
+          "detail": "Explicit observation/result contract; no launch or network authority."
+        },
+        {
+          "path": "shared/RBXProcessIdentity.m",
+          "line": 1,
+          "detail": "Birth/path capture, token-bound kernel path check, identity+PID RunningBoard request; no direct PID/name signal fallback. Final service dispatch atomicity remains unproven."
+        },
+        {
+          "path": "tools/test_process_identity.m",
+          "line": 1,
+          "detail": "402 assertions using actual source with mocked kernel/RunningBoard boundaries; device failing-first evidence is separate."
+        },
+        {
+          "path": "tools/test_process_identity.sh",
+          "line": 1,
+          "detail": "Native primitive regression build."
+        },
+        {
+          "path": "daemon/Makefile",
+          "line": 1,
+          "detail": "Both daemon architectures link the new implementation."
+        },
+        {
+          "path": "tools/static_check.py",
+          "line": 1,
+          "detail": "Daemon build source contract includes process identity implementation."
+        },
+        {
+          "path": "tools/test_app_process_coordinator.sh",
+          "line": 1,
+          "detail": "Native coordinator links actual implementation while overriding mutations."
+        },
+        {
+          "path": "docs/process-identity-stop-2026-09-21.md",
+          "line": 1,
+          "detail": "Scope, passing host regressions and explicit device/adoption residuals."
+        },
+        {
+          "path": "daemon/RBXAppProcessCoordinator.m",
+          "line": 1,
+          "detail": "Process birth retained in launch/coordinator authority and exact callback matching; native regression."
+        },
+        {
+          "path": "tools/test_app_process_coordinator.m",
+          "line": 1,
+          "detail": "Process birth retained in launch/coordinator authority and exact callback matching; native regression."
+        },
+        {
+          "path": "tools/test_app_launch_flow.py",
+          "line": 1,
+          "detail": "Process birth retained in launch/coordinator authority and exact callback matching; native regression."
+        },
+        {
+          "path": "tools/device_process_identity_probe.m",
+          "line": 1,
+          "detail": "Owned mobile-UID multithread children only; stale observation refused and same-executable control survives; no arbitrary app target."
+        },
+        {
+          "path": "docs/release-evidence/process-stop-device-2026-09-22.json",
+          "line": 1,
+          "detail": "Sanitized failing-first and corrected physical results, build/source hashes and explicit limits."
+        },
+        {
+          "path": "daemon/redditboxd.entitlements",
+          "line": 1,
+          "detail": "System termination service entitlement only; no debugger/all-task grants."
+        },
+        {
+          "path": "lucid/Switching/ProcessDrain.entitlements",
+          "line": 1,
+          "detail": "Same narrowly scoped termination service entitlement for standalone root acceptance tool."
+        }
+      ],
+      "verification": "PASS: 402 host assertions, process-controller/coordinator regressions; three own-child device runs under mobile UID, same-executable sibling survives, stale birth refused, target exits in 29 ms. NOT_RUN: actual Facebook/Reddit and extensions, blocked-service watchdog, launch-fence acceptance, final system dispatch race. See physical receipt; no cross-container or network proof is claimed.",
+      "fix": "Complete actual-app/extension, launch-fence and full transaction acceptance. No process-stop result independently authorizes network OPEN or storage changes. Do not carry over the invalid task-right atomicity claim."
+    }
+  ]
+}

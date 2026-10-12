@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 1,
+  "rows": [
+    {
+      "id": "FBTWEAK-001",
+      "category": "Facebook runtime admission",
+      "surface": "Exact app bootstrap, gated hook registration and honest app-specific readiness",
+      "mechanism": "Registered container hash/bundle/keychain binding selects the app. Facebook executable and constructors are inert while its descriptor is inactive. Generic OS policy is app-aware; only audited Reddit wire adapter can satisfy defaults-wire readiness. Facebook readiness stays false.",
+      "coverage": [
+        "hook",
+        "blocked"
+      ],
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "tweak/AppAttest/RBXAppAttestHooks.xm",
+          "line": 1,
+          "detail": "Exact bootstrap/runtime admission, per-app destination policy, original Reddit adapter preservation or native regression/build integration."
+        },
+        {
+          "path": "tweak/Container/RBXContainerManager.xm",
+          "line": 1,
+          "detail": "Exact bootstrap/runtime admission, per-app destination policy, original Reddit adapter preservation or native regression/build integration."
+        },
+        {
+          "path": "tweak/Identity/RBXAppleIdentifierHooks.xm",
+          "line": 1,
+          "detail": "Exact bootstrap/runtime admission, per-app destination policy, original Reddit adapter preservation or native regression/build integration."
+        },
+        {
+          "path": "tweak/Identity/RBXBatteryHooks.xm",
+          "line": 1,
+          "detail": "Exact bootstrap/runtime admission, per-app destination policy, original Reddit adapter preservation or native regression/build integration."
+        },
+        {
+          "path": "tweak/Identity/RBXDeviceHooks.xm",
+          "line": 1,
+          "detail": "Exact bootstrap/runtime admission, per-app destination policy, original Reddit adapter preservation or native regression/build integration."
+        },
+        {
+          "path": "tweak/Identity/RBXLocaleHooks.xm",
+          "line": 1,
+          "detail": "Exact bootstrap/runtime admission, per-app destination policy, original Reddit adapter preservation or native regression/build integration."
+        },
+        {
+          "path": "tweak/Identity/RBXLocationHooks.xm",
+          "line": 1,
+          "detail": "Exact bootstrap/runtime admission, per-app destination policy, original Reddit adapter preservation or native regression/build integration."
+        },
+        {
+          "path": "tweak/Identity/RBXTimezoneHooks.xm",
+          "line": 1,
+          "detail": "Exact bootstrap/runtime admission, per-app destination policy, original Reddit adapter preservation or native regression/build integration."
+        },
+        {
+          "path": "tweak/LeakDetection/RBXPushHooks.xm",
+          "line": 1,
+          "detail": "Exact bootstrap/runtime admission, per-app destination policy, original Reddit adapter preservation or native regression/build integration."
+        },
+        {
+          "path": "tweak/Network/RBXProxyHooks.xm",
+          "line": 1,
+          "detail": "Exact bootstrap/runtime admission, per-app destination policy, original Reddit adapter preservation or native regression/build integration."
+        },
+        {
+          "path": "tweak/Network/RBXRedditAPIHooks.xm",
+          "line": 1,
+          "detail": "Exact bootstrap/runtime admission, per-app destination policy, original Reddit adapter preservation or native regression/build integration."
+        },
+        {
+          "path": "tweak/RedditBox.plist",
+          "line": 1,
+          "detail": "Exact bootstrap/runtime admission, per-app destination policy, original Reddit adapter preservation or native regression/build integration."
+        },
+        {
+          "path": "tweak/RedditBox.xm",
+          "line": 1,
+          "detail": "Exact bootstrap/runtime admission, per-app destination policy, original Reddit adapter preservation or native regression/build integration."
+        },
+        {
+          "path": "shared/RBXAppRuntime.h",
+          "line": 1,
+          "detail": "Exact bootstrap/runtime admission, per-app destination policy, original Reddit adapter preservation or native regression/build integration."
+        },
+        {
+          "path": "tools/test_app_runtime.m",
+          "line": 1,
+          "detail": "Exact bootstrap/runtime admission, per-app destination policy, original Reddit adapter preservation or native regression/build integration."
+        },
+        {
+          "path": "tools/test_app_runtime.sh",
+          "line": 1,
+          "detail": "Exact bootstrap/runtime admission, per-app destination policy, original Reddit adapter preservation or native regression/build integration."
+        },
+        {
+          "path": "tools/test_reddit_payload.m",
+          "line": 1,
+          "detail": "Exact bootstrap/runtime admission, per-app destination policy, original Reddit adapter preservation or native regression/build integration."
+        },
+        {
+          "path": "tools/static_check.py",
+          "line": 1,
+          "detail": "Exact bootstrap/runtime admission, per-app destination policy, original Reddit adapter preservation or native regression/build integration."
+        },
+        {
+          "path": "scripts/build-mac.sh",
+          "line": 1,
+          "detail": "Exact bootstrap/runtime admission, per-app destination policy, original Reddit adapter preservation or native regression/build integration."
+        }
+      ],
+      "verification": "172 native runtime/attestation/policy assertions plus original Reddit payload and architecture/schema tests passed. Active Facebook SDK isolation, login, AppAttest success and transport acceptance are not established by these host checks.",
+      "fix": "Resolve FB-003\u2013FB-007 and FB-009\u2013FB-014 with runtime/lifecycle evidence before changing app-specific readiness or enabling Facebook; keep required network gate unchanged."
+    }
+  ]
+}

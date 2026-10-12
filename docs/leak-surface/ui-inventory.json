@@ -1,0 +1,834 @@
+{
+  "schemaVersion": 1,
+  "scope": "UI presentation coverage only; no new isolation enforcement or on-device acceptance closure.",
+  "rows": [
+    {
+      "id": "UI-001",
+      "category": "Simple launcher presentation",
+      "surface": "Default overview and per-container status without a new launch authorization path",
+      "mechanism": "Simple mode is the existing launcher controller default, retaining passcode/license gating. Device cards use the shared read-only evaluator. Container labels require fresh state; recovery/deletion/replacement remain locked and reachable through Advanced. A tap uses the existing confirmed launch request. Ready describes a currently published open container, not proof of all isolation surfaces. A native bottom tab bar separates Home, Containers, Location, Proxies and Settings; each retains its navigation stack. Tab selection and interaction require the existing launcher passcode unlock. The proxy screen shows its URL visibly at the user's request, offers an optional rotation link and keeps custom headers/method under Advanced options. Open refreshes launcher state and explains missing managed VPN setup before enqueuing launch. It offers the Settings tab; no admission gate is removed. Settings presents actionable red/green setup steps; freshness/configuration binding prevents stale success. MDM installation is distinct from effective VPN routing, which remains explicitly unverified. Retained isolation alerts block the next Open in the daemon. No-MDM setup is explicitly unavailable for online launch in this build; iOS MDM enrollment/app assignment is distinguished from supervision. Presentation does not relax admission.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "launcher/RBXLauncherViewController.m",
+          "line": 162,
+          "anchor": "- (instancetype)init {",
+          "detail": "Default Simple mode; existing controller continues to own auth and requests."
+        },
+        {
+          "path": "launcher/RBXLauncherViewController.m",
+          "line": 1330,
+          "anchor": "- (void)showAdvancedOverview",
+          "detail": "Gear fallback retains the detailed profile actions and native Back navigation."
+        },
+        {
+          "path": "launcher/RBXOperatorWording.h",
+          "line": 71,
+          "anchor": "static inline NSDictionary *RBXSimpleContainerPresentation",
+          "detail": "Freshness and explicit recovery reasons are presentation only."
+        },
+        {
+          "path": "launcher/Makefile",
+          "line": 1,
+          "detail": "Simple UI integration declarations, build inputs and navigation remain in the launcher layer; daemon/IPC requests are unchanged."
+        },
+        {
+          "path": "launcher/RBXLauncherViewController.h",
+          "line": 1,
+          "detail": "Simple UI integration declarations, build inputs and navigation remain in the launcher layer; daemon/IPC requests are unchanged."
+        },
+        {
+          "path": "launcher/RBXSettingsViewController.m",
+          "line": 1,
+          "detail": "Simple UI integration declarations, build inputs and navigation remain in the launcher layer; daemon/IPC requests are unchanged."
+        },
+        {
+          "path": "launcher/RBXLauncherAppDelegate.m",
+          "line": 1,
+          "detail": "Five-tab native navigation and presentation; existing passcode and daemon authorization remain required."
+        },
+        {
+          "path": "launcher/RBXAppearance.h",
+          "line": 1,
+          "detail": "Five-tab native navigation and presentation; existing passcode and daemon authorization remain required."
+        },
+        {
+          "path": "launcher/RBXSettingsViewController.h",
+          "line": 1,
+          "detail": "Five-tab native navigation and presentation; existing passcode and daemon authorization remain required."
+        },
+        {
+          "path": "launcher/RBXProxiesViewController.h",
+          "line": 1,
+          "detail": "Native saved-proxy list and editor; active selection is explicit, URLs are visible, advanced provider settings remain optional. The existing passcode tab gate and daemon operation queue remain in force."
+        },
+        {
+          "path": "launcher/RBXProxiesViewController.m",
+          "line": 1,
+          "detail": "Native saved-proxy list and editor; active selection is explicit, URLs are visible, advanced provider settings remain optional. The existing passcode tab gate and daemon operation queue remain in force."
+        },
+        {
+          "path": "tools/static_check.py",
+          "line": 1,
+          "detail": "Native saved-proxy list and editor; active selection is explicit, URLs are visible, advanced provider settings remain optional. The existing passcode tab gate and daemon operation queue remain in force."
+        },
+        {
+          "path": "launcher/RBXOperatorWording.h",
+          "line": 64,
+          "anchor": "static inline NSString *RBXContainerSetupMessage",
+          "detail": "Conservative setup guidance; readiness is only a UI hint."
+        },
+        {
+          "path": "launcher/RBXSettingsViewController.m",
+          "line": 462,
+          "anchor": "stack = RBXFormSection(page, @\"Network protection\"",
+          "detail": "Current explanation explicitly retains MDM and distinguishes a saved proxy from effective protected routing."
+        },
+        {
+          "path": "tools/test_operator_wording.m",
+          "line": 26,
+          "anchor": "unfinished setup explains blocked Open",
+          "detail": "Native false/missing/malformed/ready setup regression."
+        },
+        {
+          "path": "launcher/RBXLauncherViewController.m",
+          "line": 1110,
+          "anchor": "- (void)createContainer {",
+          "detail": "New container defaults to a fresh selected-proxy lookup when country is empty; an explicit supported country remains possible. Failure stops before creation, with no US fallback for auto mode."
+        },
+        {
+          "path": "shared/RBXSetupChecklist.h",
+          "line": 1,
+          "detail": "Red/green scoped setup checklist, direct actions, stale-test invalidation and isolation-alert launch presentation."
+        },
+        {
+          "path": "tools/test_launch_safety.m",
+          "line": 1,
+          "detail": "Red/green scoped setup checklist, direct actions, stale-test invalidation and isolation-alert launch presentation."
+        },
+        {
+          "path": "docs/setup-and-launch-safety.md",
+          "line": 1,
+          "detail": "Red/green scoped setup checklist, direct actions, stale-test invalidation and isolation-alert launch presentation."
+        },
+        {
+          "path": "daemon/RBXDiagnostics.m",
+          "line": 160,
+          "anchor": "RBXCheck(@\"vpn-scope\", @\"Managed per-app VPN\"",
+          "detail": "Corrected diagnostic label only; readiness predicate unchanged."
+        },
+        {
+          "path": "network-extension/FirewallHost/AppDelegate.swift",
+          "line": 49,
+          "anchor": "completion(\"Managed per-app VPN is not configured.",
+          "detail": "Missing configuration explains MDM/app assignment and offline setup; no manager creation or gate bypass."
+        },
+        {
+          "path": "docs/firewall-transport.md",
+          "line": 88,
+          "anchor": "## Without an MDM service",
+          "detail": "Primary-source constraints, no-MDM investigation limitations and unavailable physical target."
+        }
+      ],
+      "verification": "Native arm64/arm64e launcher compile and ldid signing; native wording status fixtures; existing launcher architecture and license privacy contracts. No UIKit rendering or on-phone taps were run. Proxy editor saves only proxy configuration and never clears an absent license field; per-screen request owners and visible-only receipt handling prevent background tabs from consuming each other's operations. Native guidance predicates reject absent, false and malformed readiness and allow a true snapshot to continue to daemon admission. Phone 0.1.10 launch receipt explicitly rejected missing firewall CLOSED acknowledgement; no independent Reddit crash was established from that receipt. Proxy-region update: New container defaults to a fresh selected-proxy lookup when country is empty; an explicit supported country remains possible. Failure stops before creation, with no US fallback for auto mode. Native parser/transport and generator checks pass; on-device acceptance is recorded separately when completed. 2026-09-19 delta: shipped UIKit workspace fixture now passes 200 assertions against synthetic rows and inert IPC; Settings presentation has 32 host assertions. This supersedes only the earlier no-UIKit-test note, not any physical-device acceptance requirement.",
+      "fix": "On iPhone 8, verify cards at normal/large text, stale-state transition, locked license/passcode, tap open/switch, and gear/back access. Retain daemon-side authorization."
+    },
+    {
+      "id": "UI-002",
+      "category": "Simple launcher presentation",
+      "surface": "Private prepare/review/commit authority before simple container provisioning",
+      "mechanism": "Name and existing device proxy selection lead to prepareContainer, not provisioning. The daemon performs a selected-proxy region lookup with no direct fallback, generates a complete validated candidate and retains at most eight immutable private drafts for five minutes. An opaque token, exact revision, app/container scope, source directory/Info.plist/executable identity, full secure proxy configuration and cloud account/origin bind each review. Public receipts contain only safe summaries; identifiers and credentials remain private. Explicit Create consumes the token before clone effects and uses daemon-held metadata/profile, ignoring client replacements. Discard/review cannot create; expired/restarted/stale authority is rejected. Interrupted or partially failed Create requires its durable receipt and inventory reconciliation; no automatic retry. Legacy no-token creation retains its existing path. Device proxy selection remains distinct from cloud per-container assignment and does not permit Open or bypass MDM.",
+      "coverage": [
+        "generator"
+      ],
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "launcher/RBXSimpleWizardViewController.m",
+          "line": 265,
+          "anchor": "- (void)generate {",
+          "detail": "Queues prepareContainer with metadata only and durable request ownership; no clone yet."
+        },
+        {
+          "path": "launcher/RBXSimpleWizardViewController.m",
+          "line": 303,
+          "anchor": "- (void)commitCreation {",
+          "detail": "Only reviewed, unexpired drafts enable explicit creation; ambiguous commits cannot be discarded."
+        },
+        {
+          "path": "launcher/RBXSimpleWizardViewController.m",
+          "line": 333,
+          "anchor": "- (void)refresh {",
+          "detail": "Resumes receipts, reloads latest revision after editor return and distinguishes preview from created row."
+        },
+        {
+          "path": "daemon/main.m",
+          "line": 769,
+          "anchor": "static NSDictionary *creationDraftBinding(",
+          "detail": "Binds exact source, secure proxy configuration and account in daemon memory; encrypted/disabled/missing source or configuration denies preparation."
+        },
+        {
+          "path": "daemon/main.m",
+          "line": 791,
+          "anchor": "static void handleCreationDraftAction(",
+          "detail": "Read-only prepare/review and candidate-only editor dispatch; rechecks binding after asynchronous region lookup."
+        },
+        {
+          "path": "daemon/main.m",
+          "line": 941,
+          "anchor": "// Consume before side effects.",
+          "detail": "Reviewed creation consumes authority before registry mutation; failed or partial creation cannot replay it."
+        },
+        {
+          "path": "daemon/RBXCreationDraftStore.h",
+          "line": 23,
+          "anchor": "static inline NSDictionary *RBXCreationStoreDraft(",
+          "detail": "Bounded immutable authority store, finite clock/expiry, exact scope/revision/binding and public projection."
+        },
+        {
+          "path": "daemon/RBXContainerRegistry.m",
+          "line": 1963,
+          "anchor": "- (NSDictionary *)prepareCreationForContainer:",
+          "detail": "Actual generator/validator prepares complete coherent identity before clone provisioning."
+        },
+        {
+          "path": "daemon/RBXContainerRegistry.m",
+          "line": 1942,
+          "anchor": "- (NSDictionary *)_validatedCreationEnvelope:",
+          "detail": "Prepared identity revalidates ownership, geography and lifetime at commit."
+        },
+        {
+          "path": "daemon/RBXContainerRegistry.h",
+          "line": 76,
+          "anchor": "- (nullable NSDictionary *)prepareCreationForContainer:",
+          "detail": "Explicit prepared-profile and preparation API contracts."
+        },
+        {
+          "path": "daemon/RBXCloneManager.m",
+          "line": 1914,
+          "anchor": "- (NSDictionary *)creationSourceBinding {",
+          "detail": "Directory/regular-file/no-link source shape, inode and nanosecond change metadata detect replacement/in-place primary metadata/executable changes; not a whole-bundle content attestation."
+        },
+        {
+          "path": "daemon/RBXCloneManager.h",
+          "line": 39,
+          "anchor": "- (nullable NSDictionary *)creationSourceBinding;",
+          "detail": "Private source-binding API; no source identity is supplied by the launcher."
+        },
+        {
+          "path": "launcher/RBXWizardDraft.h",
+          "line": 8,
+          "anchor": "static inline BOOL RBXWizardDraftCanReset",
+          "detail": "Exact failed receipt and fresh inventory still required before resetting an ambiguous create."
+        },
+        {
+          "path": "launcher/RBXSimpleWizardViewController.h",
+          "line": 1,
+          "detail": "Wizard entry interface, scoped by registered app."
+        },
+        {
+          "path": "scripts/build-mac.sh",
+          "line": 1,
+          "detail": "Build includes preparation, draft-store, shipped dispatch and source-binding tests."
+        },
+        {
+          "path": "tools/test_creation_prepare.py",
+          "line": 1,
+          "detail": "57 assertions execute shipped registry preparation/commit methods with real generator/validator and controlled IO."
+        },
+        {
+          "path": "tools/test_creation_draft_store.m",
+          "line": 1,
+          "detail": "45 assertions: immutable private values, binding/scope/revision, five-minute expiry, finite clocks, replay and eight-slot limit."
+        },
+        {
+          "path": "tools/test_creation_dispatch.py",
+          "line": 1,
+          "detail": "234 assertions extract actual draft and container action handlers; candidate-only effects, exact commit authority, token consumption before failed writes, partial failures and legacy flow."
+        },
+        {
+          "path": "tools/test_creation_source_binding.py",
+          "line": 1,
+          "detail": "62 temporary-filesystem assertions including missing/link/nonregular sources, same-version replacement and in-place primary file changes."
+        },
+        {
+          "path": "tools/test_creation_wizard_fixture.m",
+          "line": 1,
+          "detail": "26 UIKit assertions with inert IPC: prepare/review/Create/discard and unavailable/expired/failed authority."
+        },
+        {
+          "path": "tools/test_creation_wizard_simulator.py",
+          "line": 1,
+          "detail": "Explicit simulator runner; no physical jailbreak or live daemon roundtrip."
+        },
+        {
+          "path": "tools/test_wizard_draft.m",
+          "line": 1,
+          "detail": "Existing conservative uncertain-create reset predicate tests retained."
+        },
+        {
+          "path": "launcher/RBXLauncherViewController.m",
+          "line": 1110,
+          "anchor": "- (void)createContainer {",
+          "detail": "Both ordinary Reddit Home and Containers New enter the actual prepare/review wizard, without immediate create IPC. Advanced legacy entry remains separate."
+        },
+        {
+          "path": "tools/test_creation_defaults.py",
+          "line": 166,
+          "anchor": "normal Reddit create routes to the prepare/review wizard",
+          "detail": "16 extracted-production assertions prove Reddit wizard route/no IPC and retained advanced defaults/Auto/inactive Facebook handling."
+        },
+        {
+          "path": "tools/test_workspace_fixture.m",
+          "line": 385,
+          "anchor": "Reddit Overview and Containers New both open the actual prepare/review wizard",
+          "detail": "Four route assertions in the216-check actual UIKit workspace suite prove both New entries push the real wizard with no provisioning IPC."
+        },
+        {
+          "path": "launcher/RBXProxiesViewController.h",
+          "line": 1,
+          "detail": "Only an explicit successful proxy selection notifies the creation wizard; unrelated library edits do not select a proxy."
+        },
+        {
+          "path": "tools/test_creation_dispatch.py",
+          "line": 1,
+          "detail": "251 real dispatch assertions include queued proxy revision changes denied before geolocation."
+        },
+        {
+          "path": "launcher/RBXProxiesViewController.m",
+          "line": 1,
+          "detail": "Explicit selection callback only after secure configuration selection succeeds."
+        }
+      ],
+      "verification": "PASS: registry preparation57, private store45, shipped daemon dispatch234, source binding62 and actual UIKit wizard53 assertions. Tests exposed invalid source executable shape and nonfinite clock acceptance before hardening. Service-backed dispatch providers are inert; source shape tests use temporary files rather than a real IPA. No physical clone creation, MDM routing, account login or isolation proof is implied. The integrated default Reddit entry initially still bypassed the wizard; the production exclusion was removed. Actual UIKit workspace216 assertions and creation-defaults16 host checks now prove both Home and Containers New enter the real scoped wizard without immediate create IPC; advanced legacy creation remains unchanged. Follow-up actual UIKit wizard53, proxy23 and dispatcher251 assertions pass including interrupted preparation and queued proxy revision mismatch before any geo request.",
+      "fix": "Keep preparation and explicit commit separate, preserve durable ambiguous-create recovery, test actual daemon/device suspension and restart. Source metadata binding is not a whole-source Merkle hash. Per-container proxy assignment and network admission remain separate acceptance requirements."
+    },
+    {
+      "id": "UI-003",
+      "category": "Simple launcher presentation",
+      "surface": "Simple identity review, catalog choices and exact consistency-preview matching",
+      "mechanism": "Existing profile editing loads request/container-bound private Keychain drafts with five-minute lifetime; exact consistency-preview matching, first-use freeze and daemon validation remain authoritative. Unsaved creation mode instead addresses the daemon creation token/revision. Random fill and Save change that private candidate only, increment revision and preserve its original expiry and verified region; they do not provision, modify an existing container or configure a nonexistent sentinel. Candidate data displayed through Keychain never becomes authoritative client-provided creation input. Model changes retain coherent compatible iOS choices; field explanations distinguish synthetic values from real hardware. Searchable local catalog choices are tracked in UI-011. A native map edits only the displayed draft. Local catalog city search, coordinates and pin selection retain the daemon city-coordinate bounds, derive the matching city/timezone, block configured/observed proxy-country mismatch and require explicit Use in draft then existing Check/Save. Cancel makes no change; stale callbacks recheck the complete displayed choices, pending operation and first-use lock. Used identities show a read-only map. Tile failures never become proxy/readiness success.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "launcher/RBXIdentityViewController.m",
+          "line": 78,
+          "anchor": "- (instancetype)initWithContainerRow:(NSDictionary *)row simpleMode:",
+          "detail": "Manual fields prefill after private draft readback. Random fill changes only the visible draft; locked identities remain read-only. Load errors are explicit and Reload retries."
+        },
+        {
+          "path": "launcher/RBXIdentityReview.h",
+          "line": 6,
+          "anchor": "static inline BOOL RBXIdentityReviewCanApply",
+          "detail": "Exact choice match and pending/mismatch checks prevent applying a stale preview."
+        },
+        {
+          "path": "launcher/RBXIdentityViewController.m",
+          "line": 592,
+          "anchor": "- (void)chooseModel",
+          "detail": "Catalog-backed top-level pickers; daemon validation remains authoritative."
+        },
+        {
+          "path": "tools/test_operator_wording.m",
+          "line": 21,
+          "anchor": "unvalidated review cannot apply",
+          "detail": "Native regressions cover unchecked, edited, pending and mismatching choices."
+        },
+        {
+          "path": "shared/RBXSecureConfig.m",
+          "line": 109,
+          "anchor": "+ (NSMutableDictionary *)identityDraftQuery {",
+          "detail": "Separate device-only Keychain item holds only latest bounded draft, expires after five minutes, and must match request and container. Raw IDs never enter public launcher state or terminal receipts."
+        },
+        {
+          "path": "daemon/RBXContainerRegistry.m",
+          "line": 1511,
+          "anchor": "- (NSDictionary *)privateIdentityEditorDraftForContainer:(NSString *)containerId randomize:(BOOL)randomize selection:(NSDictionary *)selection error:(NSError **)error {",
+          "detail": "Read saved values or prepare existing validated generator output; frozen identities cannot be randomized. Does not persist/apply candidate profile."
+        },
+        {
+          "path": "daemon/main.m",
+          "line": 1440,
+          "anchor": "if ([@[@\"loadIdentityEditor\", @\"randomizeIdentityEditor\"] containsObject:action])",
+          "detail": "Existing operation/data admission guards apply. Only draftReady and container ID enter public completion; values go to private Keychain."
+        },
+        {
+          "path": "tools/test_identity_draft_store.m",
+          "line": 1,
+          "anchor": "// Execute the actual private editor channel with synthetic Security calls.",
+          "detail": "Production channel tests request/container binding, stale/future/locked/corrupt/oversized data, bounded single item and license/proxy separation."
+        },
+        {
+          "path": "daemon/RBXContainerRegistry.h",
+          "line": 37,
+          "anchor": "- (nullable NSDictionary *)privateIdentityEditorDraftForContainer:",
+          "detail": "Private editor draft API returns saved or randomized draft values; callers must use the private channel."
+        },
+        {
+          "path": "shared/RBXSecureConfig.h",
+          "line": 20,
+          "anchor": "// One bounded, request-bound editor draft in a separate private Keychain item.",
+          "detail": "Private editor channel contract, separate from license/proxy configuration."
+        },
+        {
+          "path": "scripts/build-mac.sh",
+          "line": 105,
+          "anchor": "bash \"$ROOT/tools/test_identity_draft_store.sh\"",
+          "detail": "Build gates run private draft and preinstall regression fixtures."
+        },
+        {
+          "path": "launcher/RBXIdentityHelp.h",
+          "line": 5,
+          "anchor": "static inline NSString *RBXIdentityFieldHelp",
+          "detail": "Inline descriptions for identity fields and compatibility policies; no claim of complete physical emulation."
+        },
+        {
+          "path": "daemon/RBXDeviceCatalog.m",
+          "line": 33,
+          "anchor": "static NSDictionary *RBXValidateCatalog",
+          "detail": "Minimum-OS and explicit generic-template validation; malformed catalog remains unavailable."
+        },
+        {
+          "path": "daemon/RBXProfileGenerator.h",
+          "line": 14,
+          "anchor": "// Optional explicit model/OS",
+          "detail": "Selected model/OS draft API; invalid explicit choices do not silently fall back."
+        },
+        {
+          "path": "daemon/RBXProfileGenerator.m",
+          "line": 118,
+          "anchor": "NSDictionary *descriptor = [appType isKindOfClass:NSString.class] ? RBXAppDescriptorForType(appType) : nil;",
+          "detail": "Generates selected tuples and generic UDID format when manufacturer prefix is unverified."
+        },
+        {
+          "path": "daemon/RBXConsistencyValidator.m",
+          "line": 164,
+          "anchor": "BOOL omittedGenericIMEI",
+          "detail": "Generic templates may omit unverified IMEI; nonempty values still require Luhn and legacy model prefixes remain checked."
+        },
+        {
+          "path": "shared/RBXMGOverrides.m",
+          "line": 69,
+          "anchor": "// Explicitly unavailable catalog fields",
+          "detail": "Canonical empty IMEI/SKU overwrite stale explicit answers and remain present to prevent physical fallback."
+        },
+        {
+          "path": "profiles/catalog.json",
+          "line": 2,
+          "anchor": "\"models\":",
+          "detail": "21 model templates and 59 OS tuples. New models derive facts from Apple simulator profiles; unknown manufacturer ID pools remain omitted."
+        },
+        {
+          "path": "tools/test_device_catalog.m",
+          "line": 231,
+          "anchor": "static void TestModernModelTuples",
+          "detail": "Executes every model/OS tuple against production generator and validator; selected tuple and unknown model/OS checks."
+        },
+        {
+          "path": "docs/device-catalog-evidence.json",
+          "line": 2,
+          "anchor": "\"checkedAt\":",
+          "detail": "Apple source excerpts/hashes; exact values distinguished from inferred board/RAM/kernel templates and unverified manufacturer identifiers."
+        },
+        {
+          "path": "docs/release-evidence/0.1.11-identity-editor.json",
+          "line": 1,
+          "detail": "Redacted connected-device production daemon/Keychain tests. Nine nonempty identifiers reload exactly; generic IMEI remains intentionally empty. No UI-rendering or launch claim."
+        },
+        {
+          "path": "launcher/RBXIdentityViewController.m",
+          "line": 440,
+          "anchor": "- (void)detectProxyRegion {",
+          "detail": "Set from proxy updates only geographic draft controls. Observed IP geolocation, suggested locale/carrier/city and network owner are distinguished. Check/Save and post-use identity freeze remain enforced; city selection fills its catalog timezone."
+        },
+        {
+          "path": "launcher/RBXIdentityHelp.h",
+          "line": 5,
+          "anchor": "static inline NSString *RBXIdentityFieldHelp",
+          "detail": "Set from proxy updates only geographic draft controls. Observed IP geolocation, suggested locale/carrier/city and network owner are distinguished. Check/Save and post-use identity freeze remain enforced; city selection fills its catalog timezone."
+        },
+        {
+          "path": "docs/release-evidence/0.1.12-proxy-region.json",
+          "line": 1,
+          "detail": "Connected rootless phone: live lookup, unchanged saved profile before Save, exact geographic Save retaining IDs/model/OS, normal automatic creation and cleanup. UI taps and managed launch not run."
+        },
+        {
+          "path": "launcher/RBXIdentityViewController.m",
+          "line": 711,
+          "anchor": "- (NSDictionary *)creationScopedValues:",
+          "detail": "Creation token/revision is added to every candidate editor request; existing profiles retain their path."
+        },
+        {
+          "path": "daemon/RBXContainerRegistry.m",
+          "line": 2047,
+          "anchor": "- (NSDictionary *)creationProfileByApplyingChoices:",
+          "detail": "Validates candidate edits against prepared envelope without writing an installed profile."
+        },
+        {
+          "path": "daemon/RBXContainerRegistry.m",
+          "line": 2028,
+          "anchor": "- (NSDictionary *)creationIdentityEditorDraftForProfile:",
+          "detail": "Uses the existing private editor representation for a daemon-held candidate."
+        },
+        {
+          "path": "daemon/RBXCreationDraftStore.h",
+          "line": 1,
+          "detail": "Candidate writes increment private revisions; public summaries exclude profile and binding."
+        },
+        {
+          "path": "tools/test_identity_editor_fixture.m",
+          "line": 1,
+          "detail": "198 actual UIKit assertions, including searchable local catalog and creation-editor behavior."
+        },
+        {
+          "path": "tools/test_creation_dispatch.py",
+          "line": 1,
+          "detail": "Real daemon action bodies, inert providers; private editor failures cannot report ready."
+        },
+        {
+          "path": "tools/test_creation_prepare.py",
+          "line": 1,
+          "detail": "Actual candidate generation/validation tests, no physical clone claims."
+        },
+        {
+          "path": "launcher/RBXIdentityViewController.h",
+          "line": 6,
+          "anchor": "creationDraftToken",
+          "detail": "Explicit optional candidate token/revision interface; existing profile editor remains supported."
+        },
+        {
+          "path": "launcher/RBXLocationDraft.h",
+          "line": 19,
+          "anchor": "static inline NSDictionary *RBXLocationDraft(",
+          "detail": "Validates the exact returned six-decimal coordinates against the existing city radius and proxy-country evidence; malformed/nonfinite values fail."
+        },
+        {
+          "path": "launcher/RBXLocationPickerViewController.h",
+          "line": 6,
+          "anchor": "@interface RBXLocationPickerViewController",
+          "detail": "UI-only draft picker contract; no GPS/geocoder/proxy request, profile write or gate change."
+        },
+        {
+          "path": "launcher/RBXLocationPickerViewController.m",
+          "line": 184,
+          "anchor": "- (void)applyLocation {",
+          "detail": "Explicit single-use draft callback follows validation; cancel never applies or writes."
+        },
+        {
+          "path": "launcher/RBXIdentityViewController.m",
+          "line": 612,
+          "anchor": "- (void)chooseLocationMap {",
+          "detail": "Caller rechecks current draft, pending operation and immutable first-use identity before applying location fields."
+        },
+        {
+          "path": "tools/test_location_screen.m",
+          "line": 6,
+          "anchor": "int main(void)",
+          "detail": "48 native assertions on serialized coordinates, consistency/proxy/lock boundaries and screen geometry; no device hooks tested."
+        },
+        {
+          "path": "tools/test_identity_editor_fixture.m",
+          "line": 30,
+          "anchor": "- (void)chooseLocationMap;",
+          "detail": "Actual UIKit233 fixture retains earlier editor behavior and tests map callbacks; IPC/private records and service failures are synthetic."
+        },
+        {
+          "path": "docs/location-map-screen-recommendations-2026-09-20.md",
+          "line": 1,
+          "anchor": "# Location map and screen recommendations",
+          "detail": "Workflow, normal launcher tile route,48/233 checks, visual inspection and separate physical acceptance limits."
+        },
+        {
+          "path": "scripts/build-mac.sh",
+          "line": 64,
+          "anchor": "bash \"$ROOT/tools/test_location_screen.sh\"",
+          "detail": "Native coordinate/model recommendation test is included in build gates; host success is not clone acceptance."
+        },
+        {
+          "path": "launcher/RBXLocationPickerViewController.m",
+          "line": 50,
+          "anchor": "self.contentScroll=[UIScrollView new]",
+          "detail": "Keyboard-constrained scroll viewport preserves map and full proxy-route explanation; explicit action remains reachable without changing save semantics."
+        },
+        {
+          "path": "tools/test_identity_editor_simulator.py",
+          "line": 33,
+          "anchor": "parser.add_argument(\"--keyboard\"",
+          "detail": "Opt-in requires an actual software keyboard and captures the whole simulator screen; does not change host keyboard preferences. Final240 includes normal233 plus7 keyboard assertions."
+        }
+      ],
+      "verification": "PASS: actual UIKit editor233 assertions cover existing profile behavior and creation-mode token/revision, picker state, exact-choice confirmation, missing private drafts and first-use locks. Actual creation dispatch251 and registry preparation57 cover daemon-side candidate-only effects separately. Private draft-channel native regressions remain in the build. These are host/simulator results, not on-device hook, account or network acceptance. Native48 location/screen checks include malformed inputs and a failing-first coordinate serialization-boundary regression. UIKit233 retains the prior198 cases and exercises map cancel/apply, stale lock, local search, region mismatch and tile-state UI. Service failure/readiness callbacks are explicitly mocked; natural MapKit tiles were visually inspected separately in the simulator. An opt-in actual software-keyboard run passes240 total assertions (the same233 plus7 keyboard cases); a failing-first238 run reproduced truncation before the scroll-layout fix. Normal headless233 does not claim keyboard coverage. System-keyboard screenshot and map geometry/scroll reachability were inspected on375x667 points; physical-device acceptance remains separate.",
+      "fix": "Retain existing identity freeze and validation. Verify physical daemon/editor roundtrip and lifecycle recovery; keep creation values unsaved until explicit Create in the wizard."
+    },
+    {
+      "id": "UI-004",
+      "category": "Simple launcher presentation",
+      "surface": "One-tap diagnostics uses the same readiness evaluator as SSH",
+      "mechanism": "Run checks sends existing runDiagnostics IPC and evaluates the resulting report plus current launcher snapshot with RBXAcceptanceChecks. UI maps NOT_RUN to NOT VERIFIED and displays row references. Advanced preserves original report details. A read-only timer expires stale labels. No reported VPN scope or hook receipt is promoted to actual routing, A/B denial, login, or post verification.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "launcher/RBXDiagnosticsViewController.m",
+          "line": 83,
+          "anchor": "- (void)runDiagnostics",
+          "detail": "Existing durable diagnostic action is retained."
+        },
+        {
+          "path": "launcher/RBXDiagnosticsViewController.m",
+          "line": 177,
+          "anchor": "RBXAcceptanceChecks(evaluatedState",
+          "detail": "Simple and SSH share the identical evaluator."
+        },
+        {
+          "path": "launcher/RBXDiagnosticsViewController.m",
+          "line": 118,
+          "anchor": "self.displayTimer = [NSTimer scheduledTimerWithTimeInterval:",
+          "detail": "Displayed evidence ages out even if daemon notifications stop."
+        },
+        {
+          "path": "shared/RBXAcceptanceChecks.m",
+          "line": 19,
+          "anchor": "NSArray<NSDictionary *> *RBXAcceptanceChecks",
+          "detail": "ACCEPT-001 evaluator scopes current publication, recorded reports and manual evidence separately."
+        },
+        {
+          "path": "launcher/RBXIsolationViewController.h",
+          "line": 1,
+          "detail": "Live read-only isolation observations use RBXAcceptanceChecks with stale results becoming NOT_RUN, explicit external-evidence gaps and a bounded local history of statuses only. No percentage or overall isolation PASS is asserted."
+        },
+        {
+          "path": "launcher/RBXIsolationViewController.m",
+          "line": 1,
+          "detail": "Live read-only isolation observations use RBXAcceptanceChecks with stale results becoming NOT_RUN, explicit external-evidence gaps and a bounded local history of statuses only. No percentage or overall isolation PASS is asserted."
+        },
+        {
+          "path": "shared/RBXSetupChecklist.h",
+          "line": 1,
+          "detail": "Diagnostic setup status is scoped; missing device routing/A-B acceptance remains unverified."
+        },
+        {
+          "path": "docs/setup-and-launch-safety.md",
+          "line": 1,
+          "detail": "Diagnostic setup status is scoped; missing device routing/A-B acceptance remains unverified."
+        }
+      ],
+      "verification": "Shared evaluator fresh/stale/malformed/privacy/manual native fixtures pass; launcher links the same implementation for arm64/arm64e. Not a phone readiness result.",
+      "fix": "Run on installed phone after each switch; preserve separate manual evidence for actual VPN assignment, packet routing, OAuth ownership, login/post/vote and A/B state."
+    },
+    {
+      "id": "UI-005",
+      "category": "Simple launcher presentation",
+      "surface": "Centralized plain-language statuses and failure actions",
+      "mechanism": "Foundation-only wording maps UI status/error families to short actions. Main overview, wizard, Settings alerts, identity feedback and diagnostics alerts share it. Technical raw errors are redirected to Advanced, where existing detailed reports remain accessible. Shared evaluator details are already plain text and are preserved so successful evidence is not remapped into an error instruction.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "launcher/RBXOperatorWording.h",
+          "line": 6,
+          "anchor": "static inline NSString *RBXOperatorText",
+          "detail": "Single status/action vocabulary; NOT_RUN is never presented as PASS."
+        },
+        {
+          "path": "launcher/RBXOperatorWording.h",
+          "line": 21,
+          "anchor": "static inline NSString *RBXOperatorMessage",
+          "detail": "Known failure families and raw code markers map to operator actions."
+        },
+        {
+          "path": "launcher/RBXLauncherViewController.m",
+          "line": 1436,
+          "anchor": "message:RBXOperatorMessage(detail)",
+          "detail": "Failure alert exposes an Advanced fallback."
+        },
+        {
+          "path": "tools/test_operator_wording.m",
+          "line": 6,
+          "anchor": "raw error codes stay advanced",
+          "detail": "Native vocabulary and redirection fixtures."
+        }
+      ],
+      "verification": "Native wording fixtures and launcher compile pass. Existing detailed Advanced screens intentionally retain technical evidence; presentation is not a leak-surface enforcement mechanism.",
+      "fix": "Verify plain language and long text on iPhone 8 and VoiceOver. Add new failure families to this mapping and retain their detailed Advanced evidence."
+    },
+    {
+      "id": "UI-007",
+      "category": "Simple launcher presentation",
+      "surface": "Three-section app-scoped source workspace with guarded detail navigation",
+      "mechanism": "Home, Containers and Location reuse the existing launcher authorization with distinct app-scoped request owners. Projections only read published data; selection/filter/sort never mutate identity. Tag-based links honor the passcode delegate. Inactive Facebook remains source-only. Graphite/teal native appearance does not change enforcement. Reference-driven Home renders only the selected row’s existing nonsecret model/iOS/region summary. Selected, running, blocked and verified are separate labels. Compact graphite/teal cards and local drawing do not add raw IDs to public state. Default creation enters the private prepare/review/Create wizard (UI-002), not the former immediate-create form. Original App Store icons are not intercepted; current no-MDM transport and inactive Facebook restrictions remain. An AppDelegate-level key-only license root now precedes all three sections and both app sections; rejected or stale entitlement removes the entire tree rather than hiding one tab. The independent passcode still gates the granted workspace. Location Edit opens the private-draft map only after loading current identity; map selection does not start a clone. The independent source launcher now uses Containers, Connection and Settings. Overview is a Containers detail; Connection retains cached Proxy/Location roots. Internal segment taps use the same license/passcode delegate as tab taps. Navigation refuses to discard editors, Cloud stacks or pending modals. Local geometric tab artwork and navigation-only titles keep section labels stable. The primary Containers page owns startup refresh/share cleanup, preserving request arguments and data formats.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "launcher/RBXAppearance.h",
+          "line": 1,
+          "detail": "Native presentation integration and executable regression evidence; no new isolation admission mechanism."
+        },
+        {
+          "path": "launcher/RBXIdentityViewController.h",
+          "line": 1,
+          "detail": "Native presentation integration and executable regression evidence; no new isolation admission mechanism."
+        },
+        {
+          "path": "launcher/RBXIdentityViewController.m",
+          "line": 1,
+          "detail": "Native presentation integration and executable regression evidence; no new isolation admission mechanism."
+        },
+        {
+          "path": "launcher/RBXLauncherAppDelegate.m",
+          "line": 1,
+          "detail": "Native presentation integration and executable regression evidence; no new isolation admission mechanism."
+        },
+        {
+          "path": "launcher/RBXLauncherViewController.h",
+          "line": 1,
+          "detail": "Native presentation integration and executable regression evidence; no new isolation admission mechanism."
+        },
+        {
+          "path": "launcher/RBXLauncherViewController.m",
+          "line": 1,
+          "detail": "Native presentation integration and executable regression evidence; no new isolation admission mechanism."
+        },
+        {
+          "path": "launcher/RBXProxiesViewController.m",
+          "line": 1,
+          "detail": "Native presentation integration and executable regression evidence; no new isolation admission mechanism."
+        },
+        {
+          "path": "launcher/RBXSettingsViewController.m",
+          "line": 1,
+          "detail": "Native presentation integration and executable regression evidence; no new isolation admission mechanism."
+        },
+        {
+          "path": "scripts/build-mac.sh",
+          "line": 1,
+          "detail": "Native presentation integration and executable regression evidence; no new isolation admission mechanism."
+        },
+        {
+          "path": "tools/test_launcher_multiapp.py",
+          "line": 1,
+          "detail": "Native presentation integration and executable regression evidence; no new isolation admission mechanism."
+        },
+        {
+          "path": "tools/test_launcher_selector_fixture.m",
+          "line": 1,
+          "detail": "Native presentation integration and executable regression evidence; no new isolation admission mechanism."
+        },
+        {
+          "path": "launcher/RBXWorkspaceNavigation.h",
+          "line": 1,
+          "detail": "Native presentation integration and executable regression evidence; no new isolation admission mechanism."
+        },
+        {
+          "path": "launcher/RBXWorkspacePresentation.h",
+          "line": 1,
+          "detail": "Native presentation integration and executable regression evidence; no new isolation admission mechanism."
+        },
+        {
+          "path": "tools/test_workspace_presentation.py",
+          "line": 1,
+          "detail": "Native presentation integration and executable regression evidence; no new isolation admission mechanism."
+        },
+        {
+          "path": "tools/test_workspace_simulator.py",
+          "line": 1,
+          "detail": "Native presentation integration and executable regression evidence; no new isolation admission mechanism."
+        },
+        {
+          "path": "tools/test_workspace_fixture.m",
+          "line": 1,
+          "detail": "Native presentation integration and executable regression evidence; no new isolation admission mechanism."
+        },
+        {
+          "path": "docs/reference-workflows-2026-09.md",
+          "line": 1,
+          "detail": "Native presentation integration and executable regression evidence; no new isolation admission mechanism."
+        },
+        {
+          "path": "launcher/RBXLauncherViewController.m",
+          "line": 383,
+          "anchor": "- (void)buildIdentityOverview:",
+          "detail": "Read-only nonsecret selected-profile display, not real device-wide spoofing."
+        },
+        {
+          "path": "launcher/RBXLauncherViewController.m",
+          "line": 1110,
+          "anchor": "- (void)createContainer {",
+          "detail": "Default path opens review-first wizard; advanced/manual compatibility remains separate."
+        },
+        {
+          "path": "docs/socialbox-reference-redesign.md",
+          "line": 1,
+          "detail": "All13 supplied screenshots mapped to shipped, adapted or deferred controls; no false parity."
+        },
+        {
+          "path": "docs/socialbox-reference-preview.html",
+          "line": 1,
+          "detail": "Offline synthetic design sketch is explicitly not an enforcement result."
+        },
+        {
+          "path": "launcher/Resources/Info.plist",
+          "line": 1,
+          "detail": "Original amber/navy SocialBox icon resources; stable bundle ID/executable and one launcher registration retained."
+        },
+        {
+          "path": "tools/test_workspace_role_filter.py",
+          "line": 1,
+          "detail": "Failing-first shipped-predicate regression: pending replacement and isolation alerts remain visible under every role filter."
+        },
+        {
+          "path": "launcher/RBXLauncherAppDelegate.m",
+          "line": 408,
+          "anchor": "- (BOOL)application:(UIApplication *)application openURL:",
+          "detail": "Both URL delivery and queued dispatch recheck the window gate; no stale deep-link shortcut."
+        },
+        {
+          "path": "launcher/RBXIdentityViewController.m",
+          "line": 640,
+          "anchor": "- (void)showRequestedLocationMap {",
+          "detail": "Existing Location destination waits for the authoritative private draft and then opens the map once."
+        },
+        {
+          "path": "launcher/RBXWorkspaceNavigationController.h",
+          "line": 1,
+          "detail": "Three-section source integration; retains existing scope, license/passcode gates and editor state."
+        },
+        {
+          "path": "launcher/RBXWorkspaceNavigationController.m",
+          "line": 1,
+          "detail": "Three-section source integration; retains existing scope, license/passcode gates and editor state."
+        },
+        {
+          "path": "launcher/Makefile",
+          "line": 1,
+          "detail": "Three-section source integration; retains existing scope, license/passcode gates and editor state."
+        },
+        {
+          "path": "tools/test_license_gate_fixture.m",
+          "line": 1,
+          "detail": "Three-section source integration; retains existing scope, license/passcode gates and editor state."
+        },
+        {
+          "path": "docs/release-evidence/source-three-sections-2026-09-30.json",
+          "line": 1,
+          "detail": "Source hashes, launcher binary digest and explicit PASS/NOT_RUN boundaries."
+        }
+      ],
+      "verification": "Three-section failing-first license fixture rejected the old five-tab layout. Final actual source UIKit fixtures pass 258 workspace checks and 52 license/passcode checks using synthetic data and inert IPC; 50 rows, 40 stable-ID selections, pending-editor/modal preservation, segment routing and fresh grant/revocation covered. arm64/arm64e launcher builds with Procursus ldid; existing entitlement groups unchanged. Static checks and scope/presentation suites pass. Physical walkthrough and network enforcement NOT_RUN; inactive Facebook and no-MDM admission remain blocked.",
+      "fix": "Retain daemon gates; validate final navigation and backup integration on physical phones before claiming transfer or complete isolation."
+    }
+  ]
+}

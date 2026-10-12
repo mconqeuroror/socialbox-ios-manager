@@ -1,0 +1,181 @@
+{
+  "architecture": "iphoneos-arm",
+  "blobHost": "iyitgqxbaggwqtn3.public.blob.vercel-storage.com",
+  "dependencies": [
+    {
+      "blobURL": "https://iyitgqxbaggwqtn3.public.blob.vercel-storage.com/apt/redditbox-rootful/debs/2fe5e0f1fc007c3a0126764c8ba45ae191c13296918b9382edc375267ccae0c0/ai.akemi.appinst_2.1.1-redditbox2_iphoneos-arm.deb",
+      "control": {
+        "Architecture": "iphoneos-arm",
+        "Author": "Karen/\u3042\u3051\u307f, Linus Yang <karen@akemi.ai>",
+        "Conflicts": "com.sull.appinstaller",
+        "Depends": "ai.akemi.appsyncunified (>= 5.1)",
+        "Depiction": "https://cydia.akemi.ai/?page/ai.akemi.appinst",
+        "Description": "A command-line IPA app installer.",
+        "Homepage": "https://github.com/akemin-dayo/AppSync",
+        "Installed-Size": "124",
+        "Maintainer": "Karen/\u3042\u3051\u307f <karen@akemi.ai>",
+        "Name": "appinst (App Installer)",
+        "Package": "ai.akemi.appinst",
+        "Pre-Depends": "firmware (>= 15.0)",
+        "Priority": "standard",
+        "Provides": "com.linusyang.appinst",
+        "Replaces": "com.linusyang.appinst",
+        "Section": "Utilities",
+        "Tag": "role::enduser, purpose::console",
+        "Version": "2.1.1-redditbox2"
+      },
+      "filename": "debs/ai.akemi.appinst_2.1.1-redditbox2_iphoneos-arm.deb",
+      "sha256": "2fe5e0f1fc007c3a0126764c8ba45ae191c13296918b9382edc375267ccae0c0",
+      "size": 24696,
+      "version": "2.1.1-redditbox2"
+    },
+    {
+      "blobURL": "https://iyitgqxbaggwqtn3.public.blob.vercel-storage.com/apt/redditbox-rootful/debs/0036f28fcbdb165d4f58968a237ca9fe7b6ed33fea25b9a5eb1fc141f6bf5a09/ai.akemi.appsyncunified_116.0_iphoneos-arm.deb",
+      "control": {
+        "Architecture": "iphoneos-arm",
+        "Author": "Karen/\u3042\u3051\u307f, Linus Yang <karen@akemi.ai>",
+        "Conflicts": "us.hackulo.appsync50, us.hackulo.appsync50plus, com.hackyouriphone.appsync7, com.teiron.ppsync, appsync50plus2.25pp, com.linusyang.appsync, com.sull.appsyncunified, com.sull.appsyncunifiedbeta, com.xsellize.appsync50, com.xsellize.appsync50plus, appsync50plus.178, appsync50plus2.178, cydia.net.angelxwind.appsyncunified, com.ifucker.appsync, com.sexyphonetech.appsyncunified, appsyncunifiedofficial, org.digbick.asufixed, cn.mingmei.asu623517234615234813, technology.goated.appsync, technology.goated.appsyncunified, vaginalfisting.appsynctool, science.xnu.substitute, akemi.appsink, akemi.appsyncunifed, akemi.appsyncunifed2, akemi.appsyncunifedpatched, appsyncpatched, appsyncrootless, weaponized.autism.technology.appsyncunified, ellekit (< 1.1)",
+        "Depends": "firmware (>= 5.0), mobilesubstrate (>= 0.9.5100), firmware (<= 18.2)",
+        "Depiction": "https://cydia.akemi.ai/?page/ai.akemi.appsyncunified",
+        "Description": "Enables the ability to install unsigned/fakesigned iOS applications.",
+        "Homepage": "https://cydia.akemi.ai/",
+        "Installed-Size": "636",
+        "Maintainer": "Karen/\u3042\u3051\u307f <karen@akemi.ai>",
+        "Name": "AppSync Unified",
+        "Package": "ai.akemi.appsyncunified",
+        "Provides": "appsync, net.angelxwind.appsyncunified",
+        "Replaces": "us.hackulo.appsync50, net.angelxwind.appsyncunified",
+        "Section": "Tweaks",
+        "Version": "116.0"
+      },
+      "filename": "debs/ai.akemi.appsyncunified_116.0_iphoneos-arm.deb",
+      "sha256": "0036f28fcbdb165d4f58968a237ca9fe7b6ed33fea25b9a5eb1fc141f6bf5a09",
+      "size": 51658,
+      "version": "116.0"
+    }
+  ],
+  "formatVersion": 1,
+  "package": "com.redditbox",
+  "previousIndexes": [
+    {
+      "path": "by-hash/SHA256/752b45bd1b31a928b766e4723731e2be0c2513b611cf9bfd628ebad2df8f62c4",
+      "sha256": "752b45bd1b31a928b766e4723731e2be0c2513b611cf9bfd628ebad2df8f62c4",
+      "size": 3919
+    },
+    {
+      "path": "by-hash/SHA256/81e3b6c9b4313db61b05e60f65c7e56fd51e29e2d0f05721cdef91acd5dc03d5",
+      "sha256": "81e3b6c9b4313db61b05e60f65c7e56fd51e29e2d0f05721cdef91acd5dc03d5",
+      "size": 1305
+    },
+    {
+      "path": "by-hash/SHA256/b3884293e87fa701eb6aafb76fd1ce2b8da6f35ddee1ebfacadc9b23f3136136",
+      "sha256": "b3884293e87fa701eb6aafb76fd1ce2b8da6f35ddee1ebfacadc9b23f3136136",
+      "size": 3919
+    },
+    {
+      "path": "by-hash/SHA256/0a62d7fb0e632fdf9d25b62a8ae55550dc7f17d762afc1a37d44ec6e08c012f3",
+      "sha256": "0a62d7fb0e632fdf9d25b62a8ae55550dc7f17d762afc1a37d44ec6e08c012f3",
+      "size": 1303
+    },
+    {
+      "path": "by-hash/SHA256/35e32153d26987d3ad652351fca9825c4bbf9a6be8ad91057f1d1742f82ed1fc",
+      "sha256": "35e32153d26987d3ad652351fca9825c4bbf9a6be8ad91057f1d1742f82ed1fc",
+      "size": 3917
+    },
+    {
+      "path": "by-hash/SHA256/55e9e6ff8ff584838f0728b027f6562fd40be2ef17ef6087de4d57536a9c22af",
+      "sha256": "55e9e6ff8ff584838f0728b027f6562fd40be2ef17ef6087de4d57536a9c22af",
+      "size": 1305
+    }
+  ],
+  "publishedAt": "2026-09-17T18:54:05.158507+00:00",
+  "requiresMDMReadoption": true,
+  "signingContractHash": "9a5ef7c3b56c49e8b7ff8fe5bbd793c0f66c5ca6be7b0f8a606dd0e397769bbe",
+  "version": "0.1.25",
+  "versions": [
+    {
+      "blobURL": "https://iyitgqxbaggwqtn3.public.blob.vercel-storage.com/apt/redditbox-rootful/debs/fbf8c5d5ee88f17c3e7883a558e99692ab61c914d98b3dd3168ae679a1011e8f/com.redditbox_0.1.25_iphoneos-arm.deb",
+      "control": {
+        "Architecture": "iphoneos-arm",
+        "Author": "PC",
+        "Depends": "mobilesubstrate, firmware (>= 15.0), ldid, ai.akemi.appinst (>= 2.1.1), zip, ai.akemi.appsyncunified, uikittools (>= 2.1.6)",
+        "Description": "Multi-account containers + anti-fingerprint system for Reddit (palera1n rootless/rootful and Dopamine rootless)",
+        "Installed-Size": "5680",
+        "Maintainer": "PC",
+        "Name": "RedditBox",
+        "Package": "com.redditbox",
+        "Section": "Tweaks",
+        "Version": "0.1.25"
+      },
+      "filename": "debs/com.redditbox_0.1.25_iphoneos-arm.deb",
+      "release": {
+        "installPrefix": "",
+        "packageArchitecture": "iphoneos-arm",
+        "packageScheme": "rootful",
+        "requiresMDMReadoption": true,
+        "schemaVersion": 2,
+        "signingContractHash": "9a5ef7c3b56c49e8b7ff8fe5bbd793c0f66c5ca6be7b0f8a606dd0e397769bbe",
+        "version": "0.1.25"
+      },
+      "sha256": "fbf8c5d5ee88f17c3e7883a558e99692ab61c914d98b3dd3168ae679a1011e8f",
+      "size": 1970342,
+      "version": "0.1.25"
+    },
+    {
+      "blobURL": "https://iyitgqxbaggwqtn3.public.blob.vercel-storage.com/apt/redditbox-rootful/debs/a91c14e659a5378d962413bd1d7c8594ee277d01097f4e419b64259df13c7c7e/com.redditbox_0.1.12_iphoneos-arm.deb",
+      "control": {
+        "Architecture": "iphoneos-arm",
+        "Author": "PC",
+        "Depends": "mobilesubstrate, firmware (>= 15.0), ldid, ai.akemi.appinst (>= 2.1.1), zip, ai.akemi.appsyncunified, uikittools (>= 2.1.6)",
+        "Description": "Multi-account containers + anti-fingerprint system for Reddit (palera1n rootless/rootful and Dopamine rootless)",
+        "Installed-Size": "4808",
+        "Maintainer": "PC",
+        "Name": "RedditBox",
+        "Package": "com.redditbox",
+        "Section": "Tweaks",
+        "Version": "0.1.12"
+      },
+      "filename": "debs/com.redditbox_0.1.12_iphoneos-arm.deb",
+      "release": {
+        "installPrefix": "",
+        "packageArchitecture": "iphoneos-arm",
+        "packageScheme": "rootful",
+        "requiresMDMReadoption": false,
+        "schemaVersion": 2,
+        "signingContractHash": "36c962a079311269c598a9f7635c3c73d8e047ede112dc07b931f7cc7d0779ae",
+        "version": "0.1.12"
+      },
+      "sha256": "a91c14e659a5378d962413bd1d7c8594ee277d01097f4e419b64259df13c7c7e",
+      "size": 1638226,
+      "version": "0.1.12"
+    },
+    {
+      "blobURL": "https://iyitgqxbaggwqtn3.public.blob.vercel-storage.com/apt/redditbox-rootful/debs/6fa75f463772db53d6a64e39c220b4528dde3c4c02c639a113a3a3efe8fb885c/com.redditbox_0.1.11_iphoneos-arm.deb",
+      "control": {
+        "Architecture": "iphoneos-arm",
+        "Author": "PC",
+        "Depends": "mobilesubstrate, firmware (>= 15.0), ldid, ai.akemi.appinst (>= 2.1.1), zip, ai.akemi.appsyncunified, uikittools (>= 2.1.6)",
+        "Description": "Multi-account containers + anti-fingerprint system for Reddit (palera1n rootless/rootful and Dopamine rootless)",
+        "Installed-Size": "4708",
+        "Maintainer": "PC",
+        "Name": "RedditBox",
+        "Package": "com.redditbox",
+        "Section": "Tweaks",
+        "Version": "0.1.11"
+      },
+      "filename": "debs/com.redditbox_0.1.11_iphoneos-arm.deb",
+      "release": {
+        "installPrefix": "",
+        "packageArchitecture": "iphoneos-arm",
+        "packageScheme": "rootful",
+        "requiresMDMReadoption": false,
+        "schemaVersion": 2,
+        "signingContractHash": "36c962a079311269c598a9f7635c3c73d8e047ede112dc07b931f7cc7d0779ae",
+        "version": "0.1.11"
+      },
+      "sha256": "6fa75f463772db53d6a64e39c220b4528dde3c4c02c639a113a3a3efe8fb885c",
+      "size": 1603896,
+      "version": "0.1.11"
+    }
+  ]
+}

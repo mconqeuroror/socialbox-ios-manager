@@ -1,0 +1,978 @@
+{
+  "schemaVersion": 1,
+  "version": "0.1.35",
+  "date": "2026-09-18",
+  "branch": "feat/socialbox-multiapp",
+  "merged": false,
+  "package": {
+    "file": "packages/com.redditbox_0.1.35_iphoneos-arm64.deb",
+    "sha256": "f353901e2eb5f0c5c40aaaa1c19e80742f46016cd599b2136813ad090ceb0beb",
+    "scheme": "rootless",
+    "signing": "Procursus ldid; no Apple Development Team",
+    "components": 7,
+    "architectureSlices": 12,
+    "codePagesVerified": 1398,
+    "entitlementsUnchangedFrom": "0.1.28",
+    "licensePublicPinUnchanged": true,
+    "installedBySSH": true,
+    "APT": "NOT_PUBLISHED"
+  },
+  "device": {
+    "model": "iPhone10,4",
+    "os": "16.7.16",
+    "jailbreak": "palera1n rootless",
+    "facebookSource": "578.1.0 (1063022819)",
+    "redditSource": "2026.36.0 (664762)",
+    "physicalNetwork": "offline during clone probes",
+    "accountsLoggedIn": 0
+  },
+  "units": [
+    {
+      "unit": "numeric",
+      "commit": "a5ae3e246fd95f1746598c99fdae49e0a13247a8",
+      "tests": [
+        [
+          "bash",
+          "tools/test_socket_guard.sh"
+        ]
+      ],
+      "exactStagedSnapshot": "PASS",
+      "staticCheck": "PASS"
+    },
+    {
+      "unit": "exception",
+      "commit": "f3493f1513f0eef58d715a9668d37c9a1f70343e",
+      "tests": [
+        [
+          "bash",
+          "tools/test_exception_port_guard.sh"
+        ],
+        [
+          "bash",
+          "tools/test_app_runtime.sh"
+        ]
+      ],
+      "exactStagedSnapshot": "PASS",
+      "staticCheck": "PASS"
+    },
+    {
+      "unit": "iosapi",
+      "commit": "663ac5556760360e21d3ea68d9abdc8b3a2379c5",
+      "tests": [
+        [
+          "bash",
+          "tools/test_hook_readiness.sh"
+        ],
+        [
+          "python3",
+          "tools/test_optional_ios_hooks.py"
+        ]
+      ],
+      "exactStagedSnapshot": "PASS",
+      "staticCheck": "PASS"
+    },
+    {
+      "unit": "process",
+      "commit": "5ebca5720f18fd6f5663e6ef0c67ef222c20199b",
+      "tests": [
+        [
+          "bash",
+          "tools/test_app_process.sh"
+        ]
+      ],
+      "exactStagedSnapshot": "PASS",
+      "staticCheck": "PASS"
+    },
+    {
+      "unit": "storage",
+      "commit": "33c52f8fbef946fbba7fee5a78a351461396aacd",
+      "tests": [
+        [
+          "bash",
+          "tools/test_storage_gate.sh"
+        ],
+        [
+          "bash",
+          "tools/test_storage_access.sh"
+        ],
+        [
+          "bash",
+          "tools/test_staged_executable.sh"
+        ],
+        [
+          "bash",
+          "tools/test_app_process_coordinator.sh"
+        ],
+        [
+          "python3",
+          "tools/test_app_deletion_closure.py"
+        ],
+        [
+          "python3",
+          "tools/test_app_global_recovery.py"
+        ],
+        [
+          "python3",
+          "tools/test_app_launch_flow.py"
+        ],
+        [
+          "python3",
+          "tools/test_app_removal_identity.py"
+        ],
+        [
+          "python3",
+          "tools/test_build_version.py"
+        ]
+      ],
+      "exactStagedSnapshot": "PASS",
+      "staticCheck": "PASS"
+    }
+  ],
+  "host": {
+    "fullBuild": "PASS",
+    "staticCheck": "PASS",
+    "testEntrypoints": [
+      "tools/test_build_version.py",
+      "tools/test_package_variants.py",
+      "tools/test_apt_release.py",
+      "tools/test_facebook_binary_audit.py",
+      "tools/test_app_bundle_policy.sh",
+      "tools/test_app_runtime.sh",
+      "tools/test_facebook_user_agent.py",
+      "tools/test_facebook_user_agent_hooks.py",
+      "tools/test_facebook_storage_policy.sh",
+      "tools/test_facebook_private_group_store.sh",
+      "tools/test_facebook_storage_hooks.py",
+      "tools/test_app_profile.py",
+      "tools/test_clone_profile_ownership.py",
+      "tools/test_app_registry.sh",
+      "tools/test_workspace_selection.sh",
+      "tools/test_workspace_dispatch.py",
+      "tools/test_app_keychain_policy.sh",
+      "tools/test_app_keychain_hooks.sh",
+      "tools/test_app_keychain_entitlements.sh",
+      "tools/test_app_process.sh",
+      "tools/test_app_process_coordinator.sh",
+      "tools/test_app_source.py",
+      "tools/test_app_mdm.sh",
+      "tools/test_app_scope.sh",
+      "tools/test_launcher_multiapp.py",
+      "tools/test_workspace_presentation.py",
+      "tools/test_apt_metadata_refresh.py",
+      "tools/test_clone_architecture.py",
+      "tools/test_identity_editor.py",
+      "tools/test_clone_visibility_metadata.py",
+      "tools/test_installer_evidence.py",
+      "tools/test_app_install_recovery.py",
+      "tools/test_app_removal_identity.py",
+      "tools/test_app_deletion_flow.py",
+      "tools/test_app_deletion_targets.py",
+      "tools/test_app_deletion_closure.py",
+      "tools/test_app_launch_flow.py",
+      "tools/test_app_gate_control.py",
+      "tools/test_clone_gate_writer.py",
+      "tools/test_app_gate_readiness.py",
+      "tools/test_app_global_recovery.py",
+      "tools/test_app_maintenance_closure.py",
+      "tools/test_app_replacement_backend.py",
+      "tools/test_identity_manual_inputs.py",
+      "tools/test_automatic_identity.py",
+      "tools/test_passcode_removal.py",
+      "tools/test_passcode_store.sh",
+      "tools/test_identity_user_agent.py",
+      "tools/test_app_version_settings.py",
+      "tools/test_creation_defaults.py",
+      "tools/test_device_catalog_data.py",
+      "tools/test_device_version_hook.py",
+      "tools/test_sensor_startup.py",
+      "tools/test_clone_support_directory.py",
+      "tools/test_storage_gate.sh",
+      "tools/test_storage_access.sh",
+      "tools/test_staged_executable.sh",
+      "tools/test_identity_choices.py",
+      "tools/test_launcher_architecture.py",
+      "tests/test_replacement_architecture.py",
+      "tools/test_firewall_policy.sh",
+      "tools/test_request_queue.sh",
+      "tools/test_secure_config.sh",
+      "tools/test_identity_draft_store.sh",
+      "tools/test_cloud_vault_store.sh",
+      "tools/test_cloud_vault_bridge.py",
+      "tools/test_cloud_app_admission.py",
+      "tools/test_cloud_assignment_closure.py",
+      "tools/test_preinstall.py",
+      "tools/test_postinstall.py",
+      "tools/test_macho_probe.py",
+      "tools/test_request_budgets.py",
+      "tools/test_proxy_library.sh",
+      "tools/test_proxy_configuration.py",
+      "tools/test_proxy_redirect_policy.py",
+      "tools/test_proxy_region.sh",
+      "tools/test_proxy_region_transport.py",
+      "tools/test_rotation_secrets.sh",
+      "tools/test_backup_snapshot.sh",
+      "tools/test_backup_identity.py",
+      "tools/test_app_backup_flow.py",
+      "tools/test_app_backup_transaction.py",
+      "tools/test_backup_restore_cleanup.py",
+      "tools/test_backup_archive.py",
+      "tools/test_identity_freeze.py",
+      "tools/test_smoke_log_order.py",
+      "tools/test_sign_firewall_app.py",
+      "tools/test_keychain_cleaner.sh",
+      "tools/test_keychain_sync.sh",
+      "tools/test_clone_acceptance.sh",
+      "tools/test_isolation_sentinel.sh",
+      "tools/test_launch_safety.sh",
+      "tools/test_proxy_route_transport.py",
+      "tools/test_acceptance_checks.sh",
+      "tools/test_operator_wording.sh",
+      "tools/test_wizard_draft.sh",
+      "tools/test_device_acceptance_ssh.py",
+      "tools/test_device_acceptance_canaries.py",
+      "tools/test_deletion_journal.sh",
+      "tools/test_profile_metadata.sh",
+      "tests/test_replacement.sh",
+      "tools/test_profile_metadata.py",
+      "tools/test_account_status_browser.py",
+      "tools/test_license_key.py",
+      "tools/test_license_screen.py",
+      "tools/test_license_presentation.py",
+      "tools/test_license_presentation.sh",
+      "tests/test_license_token.sh",
+      "tests/test_license_architecture.py",
+      "tests/test_data_schema.sh",
+      "tests/test_data_schema_architecture.py",
+      "tools/test_update_startup.py",
+      "tools/test_device_catalog.sh",
+      "tools/test_fingerprint_registry.sh",
+      "tools/test_operation_context.sh",
+      "tools/test_memory_budget.sh",
+      "tools/test_request_deadlines.sh",
+      "tools/test_bounded_process.sh",
+      "tools/test_service_lifetime.sh",
+      "tools/test_socket_guard.sh",
+      "tools/test_exception_port_guard.sh",
+      "tools/test_hook_readiness.sh",
+      "tools/test_optional_ios_hooks.py",
+      "tools/test_http_proxy.sh",
+      "tools/test_reddit_payload.sh",
+      "tools/test_leak_audit.py",
+      "tools/test_leak_surface.py"
+    ],
+    "testEntrypointCount": 127,
+    "pasteboardAPICheck": "PASS",
+    "leakLedgerRows": 377,
+    "primitiveAssertions": 50386,
+    "storageAuthorityAssertions": 10354,
+    "stagedExecutableAssertions": 23,
+    "hostScale": {
+      "entries": 40,
+      "selections": 120
+    },
+    "note": "Repeated assertions are not separate attack surfaces. Fixtures do not establish real network isolation."
+  },
+  "deviceResults": {
+    "freshPairCreateAndSync": "PASS",
+    "sealedExportAndExecutableModes": "PASS on initial pair",
+    "closedDeletion": "PASS for initial and final pairs; four committed journals",
+    "AtoBtoAContent": "PASS for seeded own/foreign canaries, including raw ARM64 openat",
+    "directoryRootMetadata": "FAIL: stat of sibling home remains visible",
+    "finalPairedCanaries": {
+      "PASS": 76,
+      "FAIL": 2,
+      "failures": "one repeated directory-root-metadata failure per clone"
+    },
+    "offlineStartupObservedSecondsAtLeast": {
+      "A": 102,
+      "B": 131
+    },
+    "backgroundWakeups": "Resource diagnostic observed during offline retry traffic; sustained energy/load not accepted",
+    "FacebookWireReadiness": false,
+    "FacebookProductionRunnable": false,
+    "upgradeStartup": "PASS after correcting all-app stop budget",
+    "daemonRestart": "PASS",
+    "networkState": "CLOSED",
+    "operationRecoveryFence": "empty",
+    "licenseActive": true,
+    "cleanup": "Four disposable clones removed through normal registry deletion; temporary injection absent; original filter exact; test fence archived only after exact-byte, absent-registration/path and committed-journal verification"
+  },
+  "pairedReports": {
+    "A": {
+      "checks": [
+        {
+          "probe": "validated-profile",
+          "pass": true,
+          "detail": 501
+        },
+        {
+          "probe": "storage-installer",
+          "pass": true,
+          "detail": "checked installer"
+        },
+        {
+          "probe": "keychain-installer",
+          "pass": true,
+          "detail": "checked installer"
+        },
+        {
+          "probe": "keychain-own:T84QZS65DQ.platformFamily",
+          "pass": true,
+          "detail": 0
+        },
+        {
+          "probe": "keychain-own:group.com.facebook.family",
+          "pass": true,
+          "detail": 0
+        },
+        {
+          "probe": "keychain-own:group.com.facebook.Facebook",
+          "pass": true,
+          "detail": 0
+        },
+        {
+          "probe": "defaults-own",
+          "pass": true,
+          "detail": "value comparison only"
+        },
+        {
+          "probe": "suite-own:group.com.facebook.Facebook",
+          "pass": true,
+          "detail": "value comparison only"
+        },
+        {
+          "probe": "cf-own:group.com.facebook.Facebook",
+          "pass": true,
+          "detail": "cross-API comparison"
+        },
+        {
+          "probe": "group-own:group.com.facebook.Facebook",
+          "pass": true,
+          "detail": "private-home marker"
+        },
+        {
+          "probe": "suite-own:group.com.facebook.family",
+          "pass": true,
+          "detail": "value comparison only"
+        },
+        {
+          "probe": "cf-own:group.com.facebook.family",
+          "pass": true,
+          "detail": "cross-API comparison"
+        },
+        {
+          "probe": "group-own:group.com.facebook.family",
+          "pass": true,
+          "detail": "private-home marker"
+        },
+        {
+          "probe": "suite-own:group.com.metaplatforms.family",
+          "pass": true,
+          "detail": "value comparison only"
+        },
+        {
+          "probe": "cf-own:group.com.metaplatforms.family",
+          "pass": true,
+          "detail": "cross-API comparison"
+        },
+        {
+          "probe": "group-own:group.com.metaplatforms.family",
+          "pass": true,
+          "detail": "private-home marker"
+        },
+        {
+          "probe": "suite-own:group.com.facebook.msysstorage",
+          "pass": true,
+          "detail": "value comparison only"
+        },
+        {
+          "probe": "cf-own:group.com.facebook.msysstorage",
+          "pass": true,
+          "detail": "cross-API comparison"
+        },
+        {
+          "probe": "group-own:group.com.facebook.msysstorage",
+          "pass": true,
+          "detail": "private-home marker"
+        },
+        {
+          "probe": "filesystem-own",
+          "pass": true,
+          "detail": "own marker readable"
+        },
+        {
+          "probe": "filesystem-own-direct-syscall",
+          "pass": true,
+          "detail": {
+            "opened": 1,
+            "errno": 0,
+            "matchedCanary": true
+          }
+        },
+        {
+          "probe": "keychain-foreign:SBXFBCLN00.<final-B-bundle>",
+          "pass": true,
+          "detail": -34018
+        },
+        {
+          "probe": "keychain-foreign:SBXFBCLN00.<final-B-bundle>.family",
+          "pass": true,
+          "detail": -34018
+        },
+        {
+          "probe": "keychain-foreign:SBXFBCLN00.<final-B-bundle>.app",
+          "pass": true,
+          "detail": -34018
+        },
+        {
+          "probe": "defaults-foreign",
+          "pass": true,
+          "detail": "foreign suite absent"
+        },
+        {
+          "probe": "cf-foreign:group.com.facebook.Facebook",
+          "pass": true,
+          "detail": "foreign domain absent"
+        },
+        {
+          "probe": "cf-foreign:group.com.facebook.family",
+          "pass": true,
+          "detail": "foreign domain absent"
+        },
+        {
+          "probe": "cf-foreign:group.com.metaplatforms.family",
+          "pass": true,
+          "detail": "foreign domain absent"
+        },
+        {
+          "probe": "cf-foreign:group.com.facebook.msysstorage",
+          "pass": true,
+          "detail": "foreign domain absent"
+        },
+        {
+          "probe": "sandbox-observer",
+          "pass": true,
+          "detail": {
+            "check": 1,
+            "csops": 0,
+            "flags": 637538319
+          }
+        },
+        {
+          "probe": "filesystem-foreign-data",
+          "pass": true,
+          "detail": {
+            "error": 257,
+            "matchedForeignCanary": false
+          }
+        },
+        {
+          "probe": "filesystem-foreign-posix",
+          "pass": true,
+          "detail": {
+            "opened": 0,
+            "errno": 13,
+            "matchedCanary": false
+          }
+        },
+        {
+          "probe": "filesystem-foreign-direct-syscall",
+          "pass": true,
+          "detail": {
+            "opened": 0,
+            "errno": 13,
+            "matchedCanary": false
+          }
+        },
+        {
+          "probe": "filesystem-foreign-file-stat",
+          "pass": true,
+          "detail": 257
+        },
+        {
+          "probe": "filesystem-foreign-stat",
+          "pass": false,
+          "detail": 0
+        },
+        {
+          "probe": "closed-socket-gate",
+          "pass": true,
+          "detail": 65
+        },
+        {
+          "probe": "closed-udp-2",
+          "pass": true,
+          "detail": 13
+        },
+        {
+          "probe": "closed-udp-30",
+          "pass": true,
+          "detail": 13
+        },
+        {
+          "probe": "unix-ipc-still-works",
+          "pass": true,
+          "detail": "local IPC control"
+        }
+      ],
+      "phase": "verify",
+      "uid": 501,
+      "passed": false,
+      "role": "A",
+      "timestamp": 1789754415.25369,
+      "installed": {
+        "location": true,
+        "appattest-devicecheck": true,
+        "pasteboard": true,
+        "web-policy": true,
+        "defaults-wire": false,
+        "push": true,
+        "notifications": true,
+        "keychain-sync-policy": true,
+        "network-metadata": true,
+        "process-proxy": true,
+        "runtime-timing": true,
+        "telephony": true,
+        "sensors-display": true,
+        "locale": true,
+        "metal-gpu": true,
+        "sysctl-uname": true,
+        "iokit": true,
+        "idfa-idfv": true,
+        "socket-guard": true,
+        "facebook-storage": true,
+        "battery": true,
+        "timezone": true,
+        "facebook-ua-producer": true,
+        "jailbreak-hiding": true,
+        "mobilegestalt": true,
+        "facebook-breakpoint-compatibility": true,
+        "device": true
+      }
+    },
+    "B": {
+      "checks": [
+        {
+          "probe": "validated-profile",
+          "pass": true,
+          "detail": 501
+        },
+        {
+          "probe": "storage-installer",
+          "pass": true,
+          "detail": "checked installer"
+        },
+        {
+          "probe": "keychain-installer",
+          "pass": true,
+          "detail": "checked installer"
+        },
+        {
+          "probe": "keychain-own:T84QZS65DQ.platformFamily",
+          "pass": true,
+          "detail": 0
+        },
+        {
+          "probe": "keychain-own:group.com.facebook.family",
+          "pass": true,
+          "detail": 0
+        },
+        {
+          "probe": "keychain-own:group.com.facebook.Facebook",
+          "pass": true,
+          "detail": 0
+        },
+        {
+          "probe": "defaults-own",
+          "pass": true,
+          "detail": "value comparison only"
+        },
+        {
+          "probe": "suite-own:group.com.facebook.Facebook",
+          "pass": true,
+          "detail": "value comparison only"
+        },
+        {
+          "probe": "cf-own:group.com.facebook.Facebook",
+          "pass": true,
+          "detail": "cross-API comparison"
+        },
+        {
+          "probe": "group-own:group.com.facebook.Facebook",
+          "pass": true,
+          "detail": "private-home marker"
+        },
+        {
+          "probe": "suite-own:group.com.facebook.family",
+          "pass": true,
+          "detail": "value comparison only"
+        },
+        {
+          "probe": "cf-own:group.com.facebook.family",
+          "pass": true,
+          "detail": "cross-API comparison"
+        },
+        {
+          "probe": "group-own:group.com.facebook.family",
+          "pass": true,
+          "detail": "private-home marker"
+        },
+        {
+          "probe": "suite-own:group.com.metaplatforms.family",
+          "pass": true,
+          "detail": "value comparison only"
+        },
+        {
+          "probe": "cf-own:group.com.metaplatforms.family",
+          "pass": true,
+          "detail": "cross-API comparison"
+        },
+        {
+          "probe": "group-own:group.com.metaplatforms.family",
+          "pass": true,
+          "detail": "private-home marker"
+        },
+        {
+          "probe": "suite-own:group.com.facebook.msysstorage",
+          "pass": true,
+          "detail": "value comparison only"
+        },
+        {
+          "probe": "cf-own:group.com.facebook.msysstorage",
+          "pass": true,
+          "detail": "cross-API comparison"
+        },
+        {
+          "probe": "group-own:group.com.facebook.msysstorage",
+          "pass": true,
+          "detail": "private-home marker"
+        },
+        {
+          "probe": "filesystem-own",
+          "pass": true,
+          "detail": "own marker readable"
+        },
+        {
+          "probe": "filesystem-own-direct-syscall",
+          "pass": true,
+          "detail": {
+            "opened": 1,
+            "errno": 0,
+            "matchedCanary": true
+          }
+        },
+        {
+          "probe": "keychain-foreign:SBXFBCLN00.<final-A-bundle>",
+          "pass": true,
+          "detail": -34018
+        },
+        {
+          "probe": "keychain-foreign:SBXFBCLN00.<final-A-bundle>.family",
+          "pass": true,
+          "detail": -34018
+        },
+        {
+          "probe": "keychain-foreign:SBXFBCLN00.<final-A-bundle>.app",
+          "pass": true,
+          "detail": -34018
+        },
+        {
+          "probe": "defaults-foreign",
+          "pass": true,
+          "detail": "foreign suite absent"
+        },
+        {
+          "probe": "cf-foreign:group.com.facebook.Facebook",
+          "pass": true,
+          "detail": "foreign domain absent"
+        },
+        {
+          "probe": "cf-foreign:group.com.facebook.family",
+          "pass": true,
+          "detail": "foreign domain absent"
+        },
+        {
+          "probe": "cf-foreign:group.com.metaplatforms.family",
+          "pass": true,
+          "detail": "foreign domain absent"
+        },
+        {
+          "probe": "cf-foreign:group.com.facebook.msysstorage",
+          "pass": true,
+          "detail": "foreign domain absent"
+        },
+        {
+          "probe": "sandbox-observer",
+          "pass": true,
+          "detail": {
+            "check": 1,
+            "csops": 0,
+            "flags": 637538319
+          }
+        },
+        {
+          "probe": "filesystem-foreign-data",
+          "pass": true,
+          "detail": {
+            "error": 257,
+            "matchedForeignCanary": false
+          }
+        },
+        {
+          "probe": "filesystem-foreign-posix",
+          "pass": true,
+          "detail": {
+            "opened": 0,
+            "errno": 13,
+            "matchedCanary": false
+          }
+        },
+        {
+          "probe": "filesystem-foreign-direct-syscall",
+          "pass": true,
+          "detail": {
+            "opened": 0,
+            "errno": 13,
+            "matchedCanary": false
+          }
+        },
+        {
+          "probe": "filesystem-foreign-file-stat",
+          "pass": true,
+          "detail": 257
+        },
+        {
+          "probe": "filesystem-foreign-stat",
+          "pass": false,
+          "detail": 0
+        },
+        {
+          "probe": "closed-socket-gate",
+          "pass": true,
+          "detail": 65
+        },
+        {
+          "probe": "closed-udp-2",
+          "pass": true,
+          "detail": 13
+        },
+        {
+          "probe": "closed-udp-30",
+          "pass": true,
+          "detail": 13
+        },
+        {
+          "probe": "unix-ipc-still-works",
+          "pass": true,
+          "detail": "local IPC control"
+        }
+      ],
+      "phase": "verify",
+      "uid": 501,
+      "passed": false,
+      "role": "B",
+      "timestamp": 1789754561.5191588,
+      "installed": {
+        "location": true,
+        "appattest-devicecheck": true,
+        "pasteboard": true,
+        "web-policy": true,
+        "defaults-wire": false,
+        "push": true,
+        "notifications": true,
+        "keychain-sync-policy": true,
+        "network-metadata": true,
+        "process-proxy": true,
+        "runtime-timing": true,
+        "telephony": true,
+        "sensors-display": true,
+        "locale": true,
+        "metal-gpu": true,
+        "sysctl-uname": true,
+        "iokit": true,
+        "idfa-idfv": true,
+        "socket-guard": true,
+        "facebook-storage": true,
+        "battery": true,
+        "timezone": true,
+        "facebook-ua-producer": true,
+        "jailbreak-hiding": true,
+        "mobilegestalt": true,
+        "facebook-breakpoint-compatibility": true,
+        "device": true
+      }
+    }
+  },
+  "installIntegrity": {
+    "installedCodeMatchesPackage": true,
+    "verifiedComponents": 7,
+    "profileFilesCompared": 14,
+    "profileBytesOwnershipModesPreserved": true,
+    "existingStorageObjectsUnchanged": true,
+    "allExistingStorageClosedAfterRestart": true,
+    "diagnosticsRequestCompleted": true,
+    "diagnosticsOverallReady": false
+  },
+  "diagnostics": {
+    "requestCompleted": true,
+    "overallReady": false,
+    "reason": "Two valid existing Reddit clones lack MDM management; no managed app-proxy routing proof",
+    "checks": [
+      {
+        "id": "daemon",
+        "title": "RedditBox daemon",
+        "status": "pass"
+      },
+      {
+        "id": "configuration",
+        "title": "Saved proxy",
+        "status": "pass"
+      },
+      {
+        "id": "package-variant",
+        "title": "Jailbreak package",
+        "status": "info"
+      },
+      {
+        "id": "license",
+        "title": "Device license",
+        "status": "pass"
+      },
+      {
+        "id": "data-schema",
+        "title": "Data schema and startup",
+        "status": "pass"
+      },
+      {
+        "id": "update-applied",
+        "title": "Installed update",
+        "status": "info"
+      },
+      {
+        "id": "update-mdm",
+        "title": "Clone VPN association",
+        "status": "info"
+      },
+      {
+        "id": "clone-tools",
+        "title": "Clone installation tools",
+        "status": "pass"
+      },
+      {
+        "id": "source",
+        "title": "Decrypted Reddit source",
+        "status": "pass"
+      },
+      {
+        "id": "heartbeat",
+        "title": "Daemon/firewall heartbeat",
+        "status": "pass"
+      },
+      {
+        "id": "lease",
+        "title": "Lease and firewall agreement",
+        "status": "info"
+      },
+      {
+        "id": "firewall",
+        "title": "System app proxy",
+        "status": "info"
+      },
+      {
+        "id": "vpn-scope",
+        "title": "Supervised per-app VPN",
+        "status": "info"
+      },
+      {
+        "id": "existing-clone",
+        "title": "Existing Reddit clone",
+        "status": "fail"
+      },
+      {
+        "id": "existing-clone",
+        "title": "Existing Reddit clone",
+        "status": "fail"
+      },
+      {
+        "id": "clones",
+        "title": "Clone isolation summary",
+        "status": "fail"
+      },
+      {
+        "id": "hooks",
+        "title": "Active clone hooks",
+        "status": "info"
+      },
+      {
+        "id": "routing-proof",
+        "title": "Managed routing verification",
+        "status": "info"
+      },
+      {
+        "id": "operation-recovery",
+        "title": "Operation recovery",
+        "status": "pass"
+      }
+    ]
+  },
+  "notRun": [
+    "40 physical clones",
+    "User account login/browse/post/share",
+    "Managed per-app VPN adoption and actual packet capture",
+    "Proxy outage, network change, DNS/IPv6/QUIC escape acceptance",
+    "Phone reboot/jailbreak recovery",
+    "Cross-device authenticated backup restore",
+    "Rootful physical device",
+    "Screen recording: screenshotr unavailable"
+  ],
+  "remainingLimits": [
+    "Sibling home metadata remains observable; this is not a repaired kernel sandbox",
+    "Opaque MobileGestalt keys, Facebook SDK persistence/wire paths and broker/shared surfaces retain their ledger verdicts",
+    "No protection against root or guarantee against server-side account correlation",
+    "Data permission changes do not revoke already-held file descriptors; admission depends on proven global process termination",
+    "No online readiness without actual MDM assignment and routing evidence"
+  ],
+  "privateRawEvidenceSHA256": {
+    "build-startup-final.log": "f331c1022c930989b2570ede4874948a66da5a33440bc6ec226392928be82135",
+    "code-directory-final.json": "53b5840ae685ebf6f230fb1736be8adc1392b6d030423c288ae812db593d9d9a",
+    "package-inspection.json": "523cad1ce3b5aadf72c054d3b6669125bcb2ab847d8824f30be98a15e758f376",
+    "runtime-fixed-A.json": "50f6879537f39543b0f1f19a4f525d60eb6d5ec8c53acf12c37b60bbbba9e1f3",
+    "runtime-fixed-B.json": "6986180ffeadb11e81f587a2d82e5ca0ec32fb9a9ce47f4a1e50865b948ce04e",
+    "final-A-seed.json": "f01fb0daee25460fb02a33f30f4365e14eca3a00badb3319163e4b915daa5f5b",
+    "final-B-seed.json": "c276a0f5d6d311b1123c9ee0a54e2cb57ecb1a8b9b212ffcc8a4a77d9092ce5b",
+    "final-A-verify.json": "105575bcc374810042b4c4487555c349fdb5d2736497276b5d9b50e491abfdc5",
+    "final-B-verify.json": "2889c015d9ffe37df90d91bc3ab5ffd3a82a285f35496f718bd86aaf37c874fd",
+    "socialbox-storage-035-export.ipa": "cbc61eb22fdb6b938fc896bf0836f83a1876615688bb982d7f607090a7a75874",
+    "export-check.json": "c2d8279fa65b8c53a7a7d9b429c83675584ddc676241743bfafde9afbdf3b705",
+    "final-B-crash.ips": "2b2f4062778c98824628b20d22d987569f8dac0926affaa5c9632204d9c4a16e",
+    "socialbox-storage-035-crash.ips": "aedf778137e6d5cb6dcf5ab9451cc9e4b6d49e37575839374d89f9787448cd87",
+    "socialbox-storage-035-crash-next.ips": "4ec1d4e9b9c963a43882ef790dfa6357aed59013a7102b603c58f1d9ddf4dd9f",
+    "socialbox-storage-035-operation-fence.tar": "6c5739d1ef2bed9d309a2efdb7876b09bcb492aa5f39b11bd86768a5f5e0961c",
+    "socialbox-test-035-logs.tar": "a3138480fa50c312fa7c28cc9a010d2e3a05f3c3b58f2624be29cdfc21c1f29e",
+    "socialbox-private-fixtures-035.tar": "ca60058e5db28987a1687cc86888508c498e85316c296fe4c33dd0bdccd70745",
+    "socialbox-profiles-pre-035.tar": "afef18efacf8d6125250b414b452e14639a675454986f7930bf6740653a101ab",
+    "socialbox-profiles-final-035.tar": "3be56b19e5235467e7275481a53edc8d6e424816afbd17ac311fa9f7e4c1cfae",
+    "socialbox-state-restart-035.plist": "a6e511fc233d9f61895aa85878fc8e0887dafd403e814900b70c45951e56b495",
+    "socialbox-existing-storage-before-035.json": "a24c467aa83438dfb72af707c4c3c1d785d3aa0a9626fc301ef709a62cf1bc19",
+    "socialbox-existing-storage-final-035.json": "c287426eaf8d100761482b5bce888f6f589797d3040c7ad3516eeaf60323ee36",
+    "socialbox-install-035-final.log": "5ce2695ca0cb818bc1092fb48af169f0dabaf6ac0ee06e744b95c69d500d6c12",
+    "diagnostics-result.plist": "c6e540ff3dbd5718a2cacbf57933c09d49452b7ad637dd63485783b6fe256bde",
+    "retire-own-test-fence.m": "d6c8fad364e2f058a6c2cb73cdedcd6f87f18fb4f36fa7500a125c4ef2aa4b75",
+    "numeric-failing-first.log": "b95e8575c5da07686766aa8fd45607279c2f433b1311febacdc8e8dbb774fb37",
+    "ios-hooks-failing-first.log": "5ac9911ed2e97b9bde23054947ab44e7392e2e070e2348faebbbf9e57388e707",
+    "mg-typed-failing-first.log": "4d5a2e60957bdaeee3c7af52f6c32078b80752efd80e4065e70dcc473d380c5a",
+    "process-failing-first.log": "a5b30b753ccafcc701008e744fd5ec722931d25003d188437e7d03b4a41f832b",
+    "startup-budget-red.log": "d85394e5cb35e89243dba4fe59ceb0ca225d05a9facf917bf0e1af80d056c4a4",
+    "device-syslog.txt": "9e12c97fc555159ba6723e7a51d0916661c1d223379462bc1dd41742de10b9d6",
+    "facebook-wakeups-resource.ips": "b8a91f92d943d8f09dfda80fbf2d477c4c4dfbaf62e7a1bcc51c76c90a288081"
+  },
+  "observerSources": {
+    "tools/fixtures/facebook_offline_acceptance/FBOfflineAcceptance.m": "49b69102631f2d8bdcf8701bc195238432e2b23f1d1baa4777beda2a9d024844",
+    "tools/fixtures/facebook_offline_acceptance/FBOfflineProbe.m": "0a9d8f5f490d278c0f3643396a5a09e17fbb1c960881e818ef1a309d9837582a"
+  },
+  "MDMReferences": [
+    "https://developer.apple.com/documentation/technotes/tn3134-network-extension-provider-deployment",
+    "https://developer.apple.com/documentation/devicemanagement/applayervpn"
+  ],
+  "MDMFeasibility": "Apple documents managed-device/app requirements for iOS app-proxy per-app VPN. The AppLayerVPN payload does not impose iOS supervision itself. Enrollment/adoption of these ldid-signed clones without erasing this specific phone is NOT verified and no erase or enrollment was performed."
+}

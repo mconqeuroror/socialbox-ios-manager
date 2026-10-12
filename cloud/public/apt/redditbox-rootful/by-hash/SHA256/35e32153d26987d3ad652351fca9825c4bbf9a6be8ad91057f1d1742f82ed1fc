@@ -1,0 +1,83 @@
+Architecture: iphoneos-arm
+Author: PC
+Depends: mobilesubstrate, firmware (>= 15.0), ldid, ai.akemi.appinst (>= 2.1.1), zip, ai.akemi.appsyncunified, uikittools (>= 2.1.6)
+Description: Multi-account containers + anti-fingerprint system for Reddit (palera1n rootless/rootful and Dopamine rootless)
+Filename: debs/com.redditbox_0.1.11_iphoneos-arm.deb
+Installed-Size: 4708
+Maintainer: PC
+Name: RedditBox
+Package: com.redditbox
+SHA256: 6fa75f463772db53d6a64e39c220b4528dde3c4c02c639a113a3a3efe8fb885c
+Section: Tweaks
+Size: 1603896
+Version: 0.1.11
+
+Architecture: iphoneos-arm
+Author: PC
+Depends: mobilesubstrate, firmware (>= 15.0), ldid, ai.akemi.appinst (>= 2.1.1), zip, ai.akemi.appsyncunified, uikittools (>= 2.1.6)
+Description: Multi-account containers + anti-fingerprint system for Reddit (palera1n rootless/rootful and Dopamine rootless)
+Filename: debs/com.redditbox_0.1.10_iphoneos-arm.deb
+Installed-Size: 4612
+Maintainer: PC
+Name: RedditBox
+Package: com.redditbox
+SHA256: d74712545dd5765a1d158459cb7d0ecda45d08902dbeb300b746d3c48663cf9f
+Section: Tweaks
+Size: 1542954
+Version: 0.1.10
+
+Architecture: iphoneos-arm
+Author: PC
+Depends: mobilesubstrate, firmware (>= 15.0), ldid, ai.akemi.appinst (>= 2.1.1), zip, ai.akemi.appsyncunified, uikittools (>= 2.1.6)
+Description: Multi-account containers + anti-fingerprint system for Reddit (palera1n rootless/rootful and Dopamine rootless)
+Filename: debs/com.redditbox_0.1.9_iphoneos-arm.deb
+Installed-Size: 4576
+Maintainer: PC
+Name: RedditBox
+Package: com.redditbox
+SHA256: ef20842ed58ededaee83bb13b2eea60fd4cd65b0c1f24bdb57273cb58d4eaef3
+Section: Tweaks
+Size: 1531250
+Version: 0.1.9
+
+Architecture: iphoneos-arm
+Author: Karen/あけみ, Linus Yang <karen@akemi.ai>
+Conflicts: com.sull.appinstaller
+Depends: ai.akemi.appsyncunified (>= 5.1)
+Depiction: https://cydia.akemi.ai/?page/ai.akemi.appinst
+Description: A command-line IPA app installer.
+Filename: debs/ai.akemi.appinst_2.1.1-redditbox2_iphoneos-arm.deb
+Homepage: https://github.com/akemin-dayo/AppSync
+Installed-Size: 124
+Maintainer: Karen/あけみ <karen@akemi.ai>
+Name: appinst (App Installer)
+Package: ai.akemi.appinst
+Pre-Depends: firmware (>= 15.0)
+Priority: standard
+Provides: com.linusyang.appinst
+Replaces: com.linusyang.appinst
+SHA256: 2fe5e0f1fc007c3a0126764c8ba45ae191c13296918b9382edc375267ccae0c0
+Section: Utilities
+Size: 24696
+Tag: role::enduser, purpose::console
+Version: 2.1.1-redditbox2
+
+Architecture: iphoneos-arm
+Author: Karen/あけみ, Linus Yang <karen@akemi.ai>
+Conflicts: us.hackulo.appsync50, us.hackulo.appsync50plus, com.hackyouriphone.appsync7, com.teiron.ppsync, appsync50plus2.25pp, com.linusyang.appsync, com.sull.appsyncunified, com.sull.appsyncunifiedbeta, com.xsellize.appsync50, com.xsellize.appsync50plus, appsync50plus.178, appsync50plus2.178, cydia.net.angelxwind.appsyncunified, com.ifucker.appsync, com.sexyphonetech.appsyncunified, appsyncunifiedofficial, org.digbick.asufixed, cn.mingmei.asu623517234615234813, technology.goated.appsync, technology.goated.appsyncunified, vaginalfisting.appsynctool, science.xnu.substitute, akemi.appsink, akemi.appsyncunifed, akemi.appsyncunifed2, akemi.appsyncunifedpatched, appsyncpatched, appsyncrootless, weaponized.autism.technology.appsyncunified, ellekit (< 1.1)
+Depends: firmware (>= 5.0), mobilesubstrate (>= 0.9.5100), firmware (<= 18.2)
+Depiction: https://cydia.akemi.ai/?page/ai.akemi.appsyncunified
+Description: Enables the ability to install unsigned/fakesigned iOS applications.
+Filename: debs/ai.akemi.appsyncunified_116.0_iphoneos-arm.deb
+Homepage: https://cydia.akemi.ai/
+Installed-Size: 636
+Maintainer: Karen/あけみ <karen@akemi.ai>
+Name: AppSync Unified
+Package: ai.akemi.appsyncunified
+Provides: appsync, net.angelxwind.appsyncunified
+Replaces: us.hackulo.appsync50, net.angelxwind.appsyncunified
+SHA256: 0036f28fcbdb165d4f58968a237ca9fe7b6ed33fea25b9a5eb1fc141f6bf5a09
+Section: Tweaks
+Size: 51658
+Version: 116.0
+

@@ -1,0 +1,10 @@
+# Upload only cloud sources and signed public APT metadata.
+*
+!cloud
+!cloud/**
+cloud/node_modules/**
+cloud/.next/**
+cloud/.env*
+cloud/.vercel/**
+cloud/.data/**
+cloud/tsconfig.tsbuildinfo

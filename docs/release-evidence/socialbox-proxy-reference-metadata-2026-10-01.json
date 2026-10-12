@@ -1,0 +1,185 @@
+{
+  "schemaVersion": 1,
+  "unit": 37,
+  "kind": "exact-authored-proxy-reference-metadata-transport",
+  "recordedAt": "2026-10-01T22:12:17.096502+00:00",
+  "status": "PASS_LOCAL_METADATA_ONLY",
+  "clientDeliveryReady": false,
+  "freshInstallReady": false,
+  "customerArtifactReleased": false,
+  "customerCodeIssued": false,
+  "problem": "The root metadata wire formerly refused all nonempty references and root creation forced empty; merely accepting them without exact correlation could acknowledge the wrong choice.",
+  "scope": {
+    "data": "Only existing authored empty or canonical lowercase nonzero UUID proxyReference. No schema widening, URL/password/credential input, resolver, owner selection or traffic grant.",
+    "exactness": "Creation retains the full chosen reference; wire StageMatches, root pending input-versus-slot parser and frontend retained-intent acknowledgement all compare it exactly. Existing full expected update/CAS and full retirement proof preserve it.",
+    "recovery": "Unresolved work retains exact available full input/original and request; UUID/token/epoch/slot remain exact once staged, with no invented fields. Fresh signed validation/authenticated status precede actions; edit/retirement use FULL read and create/recovery use exact durable slot/proof. No startup resend, stripping, regeneration, discard/reset/adoption.",
+    "unchanged": "Closed allocation still refuses any proxy. Ordinary visible form still says proxy unavailable. Roles, source owner/original deadlines, licensing/issuer/factories/package policies remain unchanged. Mixed old readers/writers and established-image migration unsupported."
+  },
+  "host": {
+    "status": "PASS",
+    "affectedSuites": 8,
+    "assertions": 7469,
+    "suites": [
+      {
+        "name": "test_container_closed_allocation",
+        "assertions": 578,
+        "status": "PASS"
+      },
+      {
+        "name": "test_container_configuration_retirement",
+        "assertions": 843,
+        "status": "PASS"
+      },
+      {
+        "name": "test_container_configuration_store",
+        "assertions": 494,
+        "status": "PASS"
+      },
+      {
+        "name": "test_container_mutation_client",
+        "assertions": 128,
+        "status": "PASS"
+      },
+      {
+        "name": "test_container_mutation_ipc",
+        "assertions": 591,
+        "status": "PASS"
+      },
+      {
+        "name": "test_root_mutation_coordinator",
+        "assertions": 2977,
+        "status": "PASS"
+      },
+      {
+        "name": "test_root_pending_mutation",
+        "assertions": 581,
+        "status": "PASS"
+      },
+      {
+        "name": "test_root_pending_retirement",
+        "assertions": 1277,
+        "status": "PASS"
+      }
+    ],
+    "initialCombinedQuotedInputs": 56,
+    "initialGraphStable": true,
+    "finalCoordinatorQuotedInputs": 35,
+    "finalGraphStableCurrent": true,
+    "other55InitialInputsStillCurrent": true,
+    "fixtureOnlyCorrection": "Only root_mutation_coordinator.m changes after initial run; first restart denial is now asserted before fresh synthetic signed validation and separate durable parser refusal. Production unchanged.",
+    "scope": "Actual temporary host files with explicit existing role/test seams and ephemeral signed synthetic owner/vault; no authenticated kernel peer, device install/provenance or real account/traffic acceptance."
+  },
+  "counterexample": {
+    "status": "PASS_EXPECTED_COUNTEREXAMPLE",
+    "assertions": 591,
+    "expectedFailures": 2,
+    "quotedInputs": 8,
+    "sourceStableCurrent": true,
+    "change": "Only exact proxy equality in wire StageMatches removed from NEW private current-source copy; two wrong-reference staged/completed acknowledgements fail. Working tree unchanged.",
+    "resultSHA256": "2fde6bc15f173fa5f4a3debd61e2c852156786bc97a86f8dd8f41f14af1f472f"
+  },
+  "native": {
+    "status": "PASS",
+    "consumer": "manager service/installer candidates; existing manager not rebuilt",
+    "quotedInputs": 45,
+    "sourceStableCurrent": true,
+    "architectures": [
+      "arm64",
+      "arm64e"
+    ],
+    "programs": {
+      "service": {
+        "sha256": "a2d4ef2e1ce4ffebb656d93a6418b09d9d1ae694c7c19b360ff0b2920b621988",
+        "size": 1154816
+      },
+      "installer": {
+        "sha256": "76188d85808f3fc33bf2fefef63475a4570aaf63eb8f813900dec32460b5ec1f",
+        "size": 1153152
+      }
+    },
+    "rawToolJournals": 20,
+    "strictHostAdHocRoleIdentifierBothSlices": "PASS",
+    "emptyEntitlementsBothSlices": "PASS",
+    "namedProvidersAbsent": "PASS",
+    "generatedConfiguration": "One generated header observed after build and after longer raw-tool observations; digest matches exact text, not a frozen64-file graph.",
+    "scope": "Public-only pin input; SDK/compiler/macOS/OpenSSL/ldid execution trust excluded. No publisher/OS/device launch or installed image-policy migration acceptance.",
+    "buildReportSHA256": "7ca16b44df1cb5ae66829ac645c62728b47df19d721623384ecc8a7bbf899c58",
+    "verificationSHA256": "4cd6b802f35aef979ecadbd0aa2822f6294f54654922f0c0ea316f089b52fe49",
+    "coordinatorObjectVerification": {
+      "status": "PASS_NEW_SUPPLEMENT",
+      "quotedInputs": 7,
+      "sourceStableCurrent": true,
+      "rawToolJournals": 5,
+      "objects": {
+        "arm64": {
+          "sha256": "a1e74eeec50fc1de5a4cb270a8e8dee4cf8a1eec15357d427d95f557622516d2",
+          "size": 118280,
+          "twoNamedSelectorsAbsent": true
+        },
+        "arm64e": {
+          "sha256": "6ac44f1afc7844a09e2eb9f57a7b19b00c6f269ed55d10417b9a5b0c0e851de4",
+          "size": 119608,
+          "twoNamedSelectorsAbsent": true
+        }
+      },
+      "resultSHA256": "eba8ffe0bc6513ddb04b226da59d55f3dc7f9141a5a0a0c72ae444402cdcfb14",
+      "scope": "NEW compile-only production coordinator objects and explicit successful strings scan for two named selectors; no repeated host tests, signing, linked overlay, device or runtime acceptance"
+    }
+  },
+  "phoneObservation": {
+    "status": "PASS_READ_ONLY",
+    "exactProgramControlFilesMatchPrior": 10,
+    "newSourceAddonNodesAbsent": 10,
+    "rootRealEffectiveGroup": [
+      0,
+      0,
+      0
+    ],
+    "managerProcessObserved": true,
+    "programSourceAccountContentsRead": false,
+    "accountContentsInspected": false,
+    "UIProgramsDefaultSourceStateChanged": false,
+    "addonInstalled": false,
+    "newLicense": false,
+    "sourceAbsenceGrantsAuthority": false,
+    "componentAcceptance": "NOT_RUN; no harmless supported normal Containers action invokes the loader within visual-only scope. No operation, injected preview driver, invented admission or installation used.",
+    "retainedFailure": "inspection01 sudo-n timestamp refused after verification before path observation; corrected direct command in new inspection02.",
+    "scope": "Instantaneous fixed program/control/path metadata only, not manager effective role, mapped-image lifetime, current UI screen, full-engine quiescence, account equality or new backup/restore."
+  },
+  "retainedFailures": [
+    {
+      "attempt": "host-01",
+      "status": "FAIL_RETAINED",
+      "coordinatorChecks": 2965,
+      "failures": 3,
+      "reason": "New parser fixture directly requested status after service restart before fresh signed validation; correct closed admission denied it. Fixture correction asserts that denial, then explicitly validates before parser test. No production check relaxed."
+    },
+    {
+      "attempt": "blue-loader inspection-01",
+      "status": "FAIL_BEFORE_OBSERVATION_RETAINED",
+      "reason": "Separate sudo-n command could not reuse verification timestamp; new direct fixed-command authentication path used, no files/UI/account effect."
+    },
+    {
+      "attempt": "coordinator-02 object scan",
+      "status": "UNSUPPORTED_PASS_MARKERS_RETAINED",
+      "reason": "Both shell object-scan pipelines reported PASS while rg was missing. Functional2977 checks and compiles remain accepted; original selector-absence claim is NOT_ACCEPTED. NEW compile-only object-verification01 checks successful tool exit codes and two named selector absence with seven stable inputs/five journals; original raw stderr/result unchanged."
+    }
+  ],
+  "review": {
+    "status": "ROOT_AND_SCOPED_WRAPPER_REVIEW_PASS",
+    "production": "Root read all five production deltas and all three fixture changes, including explicit restart correction. Agent authored implementation/fixtures; root independently ran and checked exact logs/current graphs. No reviewer-own-test independence claim.",
+    "wrappers": "Root authored fresh orchestration. Separate read-only review reconciles counts, graphs, artifacts and raw journals and identified masked missing-rg scans. Unsupported markers remain retained and NOT_ACCEPTED; NEW explicit compile-only supplement is separately reviewed. Review does not independently assess reviewer-authored fixtures. Existing reviewed public pin is a build input; no private-key or completed license/vault/fixture-state reuse. New supplement wrapper/raw journals/objects/current seven-input graph receive scoped read-only review; successful scans exclude exactly the two named selectors, without linked-overlay/signing/device acceptance.",
+    "limits": "No full native UI overlay rebuild or owner current/default peer/installation/traffic test. Coordinator and ablation wrappers do not persist a complete result on every timeout/unexpected exception; observed completed runs do not establish exhaustive failure-journal acceptance."
+  },
+  "notRun": [
+    "Physical proxy-reference typed root peer",
+    "Visible proxy selector/resolver/traffic",
+    "Blue original loader component/artwork/timer/hide",
+    "Saved-settings owner retirement",
+    "Clean customer install/default activation/Sileo/download",
+    "Instagram isolation/sibling leak correction",
+    "Facebook launch/accounts/proxy/running-session recovery"
+  ],
+  "governance": "Own ADOPT-011/ADOPT-012/ADOPT-015 trailer and own-range gates before export. Historical Unit30 full-history FAIL remains unchanged.",
+  "supersededInitialReceiptSHA256": "a1af074ac5e2c4fbb5d7840d7e5bd9fee8d981cc2466d3f3307aaff5c490ad52"
+}

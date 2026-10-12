@@ -1,0 +1,132 @@
+{
+  "schemaVersion": 1,
+  "kind": "socialbox-typed-prepared-paired-establishment",
+  "unit": 19,
+  "recordedAt": "2026-10-01T09:36:05.014958+00:00",
+  "status": "PASS_SAVED_METADATA_WITH_CUSTOMER_INSTALL_AND_RUNTIME_GAPS",
+  "clientDeliveryReady": false,
+  "customerArtifactReleased": false,
+  "customerCodeIssued": false,
+  "contract": {
+    "preparation": "Explicit pristine root preparation now seeds a fixed one-shot record inside the immutable anchor; prepared document binds original node, full pristine file witness and canonical digest. Old no-seed prepared schema is refused; migration unsupported.",
+    "initial": "Exact typed factory installation, same source owner/store/original deadline, pointer-identical held-empty namespace callback. One-shot consumed terminal is written and synced on the original descriptor BEFORE pending mkdir. No parser/Boolean/bootstrap RPC.",
+    "binding": "Durable pending context includes stable four-key prepared witness, stable paired credential fingerprints and namespace; mutable vault revision is excluded. Every effect/reply/current/reopen requires fresh guarded observations.",
+    "queue": "After genuine activate/validate completion, move to the separate trusted root mutation queue, then enter the same source-owner fence with the original request deadline. Active reply is projected only after paired pending readiness; failure preserves pairing but projects recovery_required/storage_unavailable.",
+    "retry": "Complete published state reconciles read-only; consumed attempt with missing/partial nodes stays closed, including complete pending leaf+marker loss after restart. Never reset/adopt/delete/remint, discard the exact pending candidate or rewrite prepared image policy.",
+    "drift": "Created pending root and held lock checked before/after longer source/proof observations, before later fresh writes/syncs. Stale pristine restoration, same-byte independent seed replacement, missing seed, expired/revoked admission and copied callback facts deny.",
+    "limits": "Cooperative instantaneous filesystem observations and bounded hashing, not syscall cancellation, publisher attestation, atomic lifetime authority or arbitrary-root defense. Host object restart/interruption is not physical crash/power-loss acceptance."
+  },
+  "host": {
+    "status": "PASS",
+    "sourceProofAssertions": 200,
+    "pairedEstablishmentAssertions": 163,
+    "updatedPreparationRegressionAssertions": 129,
+    "configurationStoreRegressionAssertions": 494,
+    "rootPendingOwnerRegressionAssertions": 581,
+    "productionHostRoleChecksPerFocusedSuite": 3,
+    "packageCompositionTests": 8,
+    "sourceStable": true,
+    "admission": "Synthetic signed host fixture; production website used only on the physical phone",
+    "completePendingLossAfterRestart": "PASS actual host files with staged candidate and empty configuration namespace",
+    "physicalCrashRebootPowerLoss": "NOT_RUN"
+  },
+  "production": {
+    "status": "PASS",
+    "architectures": [
+      "arm64",
+      "arm64e"
+    ],
+    "sourceStable": true,
+    "testProvidersAbsent": true,
+    "entitlements": {},
+    "sourceFiles": 45,
+    "serviceSHA256": "f1a6e0d8b8038157cbb2f3b4877be34905a0ed3387d9cd00d8e9ed0fe0109c0e",
+    "installerSHA256": "654c7420a63d84940edbce03005035740336b6d9dc15f7e76911025506224058",
+    "acceptanceClientSHA256": "bc06e66a270a8e3765a49f0847f54bb320a1be92ce70bec23a6e145fafeeb170",
+    "privateBuildReportSHA256": "24b8c775ba3e10e8a391a071f2a478cbaf30d3c94411a1345dfa94ae43a75520",
+    "wholeCustomerPackage": "NOT_RUN"
+  },
+  "physical": {
+    "status": "PASS",
+    "device": "iPhone X",
+    "iOS": "16.7.16",
+    "checks": 41,
+    "scope": "Final exact signed production code at compile-time private endpoint, fixed root installer/service and independent pinned real501/effective501 native UI-API client; NEW genuine disposable website key. No owner overlay replaced.",
+    "tested": [
+      "missing provenance no effects",
+      "real501 installer entry guard and real0 client denial",
+      "explicit pristine preparation and duplicate byte preservation",
+      "fresh genuine activation automatically establishes authenticated empty pending metadata",
+      "validation reconciles pending byte for byte",
+      "exact random saved setup staging/retry/create/read",
+      "same-record edit and held-proof clear without recursive lock",
+      "service restart preserves paired pending and exact saved identifiers",
+      "signed website revocation closes metadata reads without erasing candidate",
+      "same-byte consumed record replacement denies cached/reopened/restarted service"
+    ],
+    "preservation": {
+      "freshQuiescedPrivateBackup": "PASS",
+      "sixOwnerProgramByteIdentities": "PASS",
+      "18StoredSetupFileByteIdentities": "PASS",
+      "ownerOverlayChanged": false,
+      "wholeLegacyDirectoryStaticEquality": "NOT_RUN; three known dynamic config/license/audit files excluded",
+      "excludedDynamicFiles": [
+        "config.plist",
+        "license.plist",
+        ".daemon-audit.log"
+      ]
+    },
+    "cleanup": {
+      "bothDisposableKeysRevoked": "PASS",
+      "bothExactPrivateJobsDirectoriesRemoved": "PASS",
+      "originalManagerRelaunched": "PASS"
+    },
+    "privateReportSHA256": "b3ebb39c645514a9d4158f76f7adf657a96e44a4451a637f6ad2569ccec9dccd",
+    "privateDriverSHA256": "6b5b0e851d1e79c619959979dd6b53553f3ae4d01590110712dacdd19bfaa58d",
+    "defaultProductionEndpoint": "NOT_RUN",
+    "actualOwnerActivationForm": "NOT_RUN",
+    "freshCustomerInstaller": "NOT_RUN",
+    "completePendingLossAfterPhysicalRestart": "NOT_RUN"
+  },
+  "retainedFailures": {
+    "firstHostCompile": "FAIL nullability/direct nil and duplicate helper name; test corrected without weakening production checks",
+    "secondHostCompile": "FAIL ARC conditional return in new source; corrected before frozen tests/builds",
+    "independentReview": "Initial failed-lock marker creation and complete pending-loss reinitialization findings corrected; actual loss/drift tests pass and final independent read-only review PASS",
+    "firstPhysical": "PASS41/revoked/cleaned before fresh-root/lock tightening. A NEW second private namespace/key accepted final source; completed fixtures never reused."
+  },
+  "limits": [
+    "Default endpoint/original locked activation-page and customer installer remain NOT_RUN",
+    "No permanent owner update, customer package/access code or new website release",
+    "No bootstrap RPC/reset/adoption/migration; old no-seed proof is deliberately unsupported",
+    "Physical process kill/reboot/power loss and full recovery remain NOT_RUN",
+    "Saved source UUIDs/metadata are not numeric CID/runtime authority",
+    "Automatic safe switching/isolation/recovery and running-session licensing NOT_RUN",
+    "Two actual accounts/proxy traffic NOT_RUN; prior Instagram sibling normal/direct read FAIL remains unfixed",
+    "Facebook launch FAIL; Twitter has no accepted retained runtime"
+  ],
+  "next": "Accept normal production endpoint and original locked activation-page with explicit trusted first preparation, then complete customer installer/download and remaining genuine runtime/account acceptance. Preserve owner state and use new private fixtures only.",
+  "sourceSHA256": {
+    "lucid/Authorization/LBXLicenseInstallationEstablishment.h": "3a88f7bd3b2e6f5dfc3c7409ac0a910c8e9e2c0d768adc09fda45b39f308ddad",
+    "lucid/Authorization/LBXLicenseInstallationEstablishment.m": "8a0676f50d6e3b7b9d4bed655dc7e4c9dcc0f44957c5a9e859e38f6c25d7fcef",
+    "lucid/Authorization/LicenseService.m": "59a5265c1b5ab09040e77edf26701f0de10cc294dadac9ef9424540452a5dd6c",
+    "lucid/Authorization/ClientProbe.m": "7320ae045e50acf3e26248d871320b12958eb1a77bb56071dc141fdaf5c2594a",
+    "lucid/Containers/LBXContainerConfigurationStore.h": "6650b57ceee345337d71d90bf251af94d330f6d9558adde4ad5dfec8673940cf",
+    "lucid/Containers/LBXContainerConfigurationStore.m": "8ed3feb0f8585e4db83165777ab5ceda5c2c159b8ee4d5b5c5c2e1c009072196",
+    "lucid/Containers/LBXContainerRootPendingStore.h": "463d6d7cfd299ef3022f1680ac69c0d28a98c882d7184dbc046374166f549be2",
+    "lucid/Containers/LBXContainerRootPendingStore.m": "88fb974c544a3326539694fdbd6a3daff8854b999ed97e8da2819ab5a2e8be00",
+    "lucid/Containers/LBXContainerRootMutationOwner.h": "8486bbd3559e9e7876a8e2da217765d9c18972582969ed23c4037e515856df63",
+    "lucid/Containers/LBXContainerRootMutationOwner.m": "bb670199252a01616010927142638f78cc8cafd3863a1caaa0153089634ceb08",
+    "lucid/tests/installation_establishment.m": "b92ce8534f889092e6bfaca46c7bd783eddaa710721bf063375440e0b5196eaa",
+    "lucid/tests/installation_source_proof.m": "ae4f453e24817d02d53de227edd15787ebc8c714b532e9ec3cf602d15ef90ec9",
+    "lucid/tests/paired_pending_establishment.m": "7b67b71a597155bd1dfdf79fd1eea537cf5bafbed9585e9cce50294f547b5ad5",
+    "lucid/tests/test_installation_source_proof.sh": "62278278de3d829df3a8f99a3c9b453ffdf3ad86e11ce550e0778fd383fd0d3e",
+    "lucid/tests/test_paired_pending_establishment.sh": "9e232fa0fa2d655b45841b5cfcdefad3c79c2778578b13697ec012d60a039f74",
+    "scripts/build-socialbox-license-service.py": "36dcbcc09e2379d7c162cb22fa47648f961dc42d70dd963da7f784b3099c6436"
+  },
+  "privateEvidenceSHA256": {
+    "oneShotSummary": "3fbc8014017b2e8f3f3853f4c7841eab436d3596061da20b065bf5ff7347bd1a",
+    "pairedHost": "d17b290a6e643ae0d4930960e788dcb90a2f2ed017baedcba0f08a4258141f4a",
+    "rootRegression": "1a754cd65b71c34ebe8fe9d05f43519b4bd54075969fcb087b6755bea14f1f2c",
+    "package": "33ca2b73d673d9a7d76182af185f32365af7fd88428484659efd7dd739daaf6a"
+  }
+}

@@ -1,0 +1,87 @@
+#import "../Authorization/LBXLicenseInstallationEstablishment.h"
+#import "../Authorization/LBXLicenseVault.h"
+#import "../Authorization/LBXLicenseOwner.h"
+#import "../Authorization/LBXLicenseIPC.h"
+#import "../Containers/LBXContainerConfigurationStore.h"
+#import <CommonCrypto/CommonDigest.h>
+#include <sys/stat.h>
+#include <sys/acl.h>
+#include <membership.h>
+#include <fcntl.h>
+#include <unistd.h>
+static NSUInteger checks,failures;
+static void Check(BOOL good,NSString *why){checks++;if(!good){failures++;fprintf(stderr,"FAIL: %s\n",why.UTF8String);}}
+#if LBX_LICENSE_INSTALLATION_TESTING
+#import "../../tests/RBXLicenseTestSupport.h"
+static NSString *SignedStatus=@"active";
+@interface PreparedProtocol:NSURLProtocol @end
+@implementation PreparedProtocol
++ (BOOL)canInitWithRequest:(NSURLRequest *)request{(void)request;return YES;}
++ (NSURLRequest *)canonicalRequestForRequest:(NSURLRequest *)request{return request;}
+- (void)stopLoading{}
+- (void)startLoading{NSData *body=self.request.HTTPBody;
+    if(!body&&self.request.HTTPBodyStream){NSInputStream *stream=self.request.HTTPBodyStream;[stream open];NSMutableData *data=[NSMutableData data];uint8_t buffer[1024];NSInteger n;while((n=[stream read:buffer maxLength:sizeof(buffer)])>0)[data appendBytes:buffer length:(NSUInteger)n];[stream close];body=data;}
+    NSDictionary *request=[NSJSONSerialization JSONObjectWithData:body options:0 error:nil];
+    NSMutableDictionary *claims=TestLicenseClaims(@"AAAA-BBBB-CCCC-DDDD",request[@"nonce"],NSDate.date.timeIntervalSince1970);
+    claims[@"iss"]=@"https://redditspoof.vercel.app";claims[@"deviceBinding"]=[RBXLicenseToken fingerprint:request[@"deviceIdentity"]];claims[@"status"]=SignedStatus;
+    NSDictionary *reply=@{@"licenseToken":TestLicenseJWT(claims,nil),@"deviceId":@"fixture-device",@"token":[@"a" stringByPaddingToLength:64 withString:@"a" startingAtIndex:0]};
+    [self.client URLProtocol:self didReceiveResponse:[[NSHTTPURLResponse alloc] initWithURL:self.request.URL statusCode:200 HTTPVersion:@"HTTP/1.1" headerFields:@{}] cacheStoragePolicy:NSURLCacheStorageNotAllowed];
+    [self.client URLProtocol:self didLoadData:[NSJSONSerialization dataWithJSONObject:reply options:0 error:nil]];[self.client URLProtocolDidFinishLoading:self];}
+@end
+static NSString *Join(NSString *a,NSString *b){return [a stringByAppendingPathComponent:b];}
+static NSString *SHA(NSData *data){unsigned char bytes[CC_SHA256_DIGEST_LENGTH];CC_SHA256(data.bytes,(CC_LONG)data.length,bytes);NSMutableString *result=[NSMutableString string];for(NSUInteger i=0;i<sizeof(bytes);i++)[result appendFormat:@"%02x",bytes[i]];return result;}
+static BOOL Put(NSString *path,NSData *bytes,mode_t mode){int fd=open(path.fileSystemRepresentation,O_CREAT|O_EXCL|O_WRONLY|O_NOFOLLOW,mode);if(fd<0)return NO;BOOL okay=write(fd,bytes.bytes,bytes.length)==(ssize_t)bytes.length&&!fsync(fd);return !close(fd)&&okay;}
+static NSDictionary *Paths(NSString *base,NSString *name){NSMutableDictionary *paths=[NSMutableDictionary dictionary];
+    for(NSString *key in @[@"anchor",@"vault",@"configuration",@"pending"] )paths[key]=Join(base,[NSString stringWithFormat:@"%@-%@",name,key]);
+    for(NSString *key in @[@"installer",@"service",@"client"])paths[key]=Join(base,key);return [paths copy];}
+static NSDictionary *Snapshot(NSString *path){struct stat n;if(lstat(path.fileSystemRepresentation,&n))return nil;NSMutableDictionary *value=[@{@"inode":@(n.st_ino),@"device":@(n.st_dev),@"mode":@(n.st_mode),@"links":@(n.st_nlink)} mutableCopy];
+    if(S_ISREG(n.st_mode))value[@"bytes"]=[NSData dataWithContentsOfFile:path]?:NSData.data;
+    if(S_ISDIR(n.st_mode)){NSMutableDictionary *children=[NSMutableDictionary dictionary];for(NSString *leaf in [NSFileManager.defaultManager contentsOfDirectoryAtPath:path error:nil])children[leaf]=Snapshot(Join(path,leaf))?:@{};value[@"children"]=children;}return value;}
+static BOOL ACL(NSString *path,BOOL populated){acl_t acl=acl_init(1);BOOL good=acl!=NULL;if(populated){uuid_t subject;acl_entry_t entry;acl_permset_t perms;good=good&&!mbr_uid_to_uuid(geteuid(),subject)&&!acl_create_entry(&acl,&entry)&&!acl_set_tag_type(entry,ACL_EXTENDED_ALLOW)&&!acl_set_qualifier(entry,subject)&&!acl_get_permset(entry,&perms)&&!acl_add_perm(perms,ACL_READ_DATA);}good=good&&!acl_set_file(path.fileSystemRepresentation,ACL_TYPE_EXTENDED,acl);if(acl)acl_free(acl);return good;}
+static NSData *Canonical(id doc){return [NSJSONSerialization dataWithJSONObject:doc options:NSJSONWritingSortedKeys|NSJSONWritingWithoutEscapingSlashes error:nil];}
+static LBXLicenseInstallationEstablishment *Prepare(NSDictionary *paths,NSData *client){return [LBXLicenseInstallationEstablishment testPreparePaths:paths clientSHA256:SHA(client) size:client.length error:nil];}
+static LBXLicenseInstallationEstablishment *Open(NSDictionary *paths,NSData *client){return [LBXLicenseInstallationEstablishment testOpenPaths:paths clientSHA256:SHA(client) size:client.length error:nil];}
+static NSDictionary *Send(LBXLicenseOwner *owner,NSString *operation){dispatch_semaphore_t done=dispatch_semaphore_create(0);__block NSDictionary *reply;
+    [owner handleRequest:LBXLicenseIPCRequest(operation,[operation isEqual:@"activate"]?@"AAAA-BBBB-CCCC-DDDD":nil) completion:^(NSDictionary *value){reply=value;dispatch_semaphore_signal(done);}];
+    Check(!dispatch_semaphore_wait(done,dispatch_time(DISPATCH_TIME_NOW,5*NSEC_PER_SEC)),@"bounded signed synthetic website reply");return reply;}
+static void MissingTests(NSString *base,NSData *client){NSDictionary *paths=Paths(base,@"missing"),*before=Snapshot(base);Check(!Open(paths,client),@"ordinary open refuses missing prepared state");Check([before isEqual:Snapshot(base)],@"ordinary missing-state open has no effects");
+    for(NSString *key in @[@"vault",@"configuration",@"pending"]){NSDictionary *p=Paths(base,[key stringByAppendingString:@"-present"]);Check(!mkdir([p[key] fileSystemRepresentation],0700),@"existing resource fixture");NSDictionary *old=Snapshot(base);Check(!Prepare(p,client)&&[old isEqual:Snapshot(base)],@"explicit preparation refuses preexisting resource without effects");}
+    NSDictionary *p=Paths(base,@"marker-present");NSString *marker=Join(base,[NSString stringWithFormat:@".%@.socialbox-root-pending-v1.json",[p[@"pending"] lastPathComponent]]);Check(Put(marker,NSData.data,0600),@"old pending marker fixture");before=Snapshot(base);Check(!Prepare(p,client)&&[before isEqual:Snapshot(base)],@"previous marker cannot become first-install authority");
+    p=Paths(base,@"wrong-pin");before=Snapshot(base);Check(![LBXLicenseInstallationEstablishment testPreparePaths:p clientSHA256:[@"0" stringByPaddingToLength:64 withString:@"0" startingAtIndex:0] size:client.length error:nil]&&[before isEqual:Snapshot(base)],@"wrong installed client pin denies before resources");
+    NSMutableDictionary *invalid=[p mutableCopy];invalid[@"vault"]=Join(base,@"../escape");Check(!Prepare(invalid,client)&&[before isEqual:Snapshot(base)],@"traversal policy rejected before effects");invalid=[p mutableCopy];invalid[@"pending"]=p[@"configuration"];Check(!Prepare(invalid,client),@"duplicate policy leaves rejected");}
+static void InterruptionTests(NSString *base,NSData *client){for(NSString *boundary in @[@"intent_synced",@"vault_created",@"configuration_created",@"pending_seed_synced",@"prepared_synced"]){NSDictionary *paths=Paths(base,boundary);[LBXLicenseInstallationEstablishment testStopAfterBoundary:boundary];Check(!Prepare(paths,client),@"failure-only interruption returns no successful proof");[LBXLicenseInstallationEstablishment testStopAfterBoundary:nil];NSDictionary *before=Snapshot(base);Check(!Prepare(paths,client)&&[before isEqual:Snapshot(base)],@"explicit retry cannot adopt or rewrite interrupted infrastructure");
+        LBXLicenseInstallationEstablishment *reopened=Open(paths,client);Check([boundary isEqual:@"prepared_synced"]?reopened!=nil:reopened==nil,@"only fully published prepared result may reconcile after failure");Check([before isEqual:Snapshot(base)],@"reconciliation open is read only");}}
+static void SubstitutionTests(NSString *base,NSData *client){for(NSString *resource in @[@"intent.json",@"prepared.json",@"pending-establishment.json",@"vault",@"configuration",@"vault-lock",@"configuration-lock"]){NSDictionary *paths=Paths(base,[resource stringByReplacingOccurrencesOfString:@"." withString:@"-"]);LBXLicenseInstallationEstablishment *proof=Prepare(paths,client);Check(proof!=nil,@"substitution prepared fixture");
+        NSString *path=[resource isEqual:@"vault"]||[resource isEqual:@"configuration"]?paths[resource]:[resource isEqual:@"vault-lock"]?Join(paths[@"vault"],@"owner.lock"):[resource isEqual:@"configuration-lock"]?Join(paths[@"configuration"],@"configuration.lock"):Join(paths[@"anchor"],resource);
+        NSString *moved=[path stringByAppendingString:@"-old"];Check(!rename(path.fileSystemRepresentation,moved.fileSystemRepresentation),@"move exact node without destroying it");struct stat n;lstat(moved.fileSystemRepresentation,&n);
+        if(S_ISDIR(n.st_mode)){Check([NSFileManager.defaultManager copyItemAtPath:moved toPath:path error:nil]&&!chmod(path.fileSystemRepresentation,0700),@"copied directory fixture");}
+        else Check(Put(path,[NSData dataWithContentsOfFile:moved],0600),@"same-byte file replacement fixture");
+        Check(![proof preparedInstallationCurrent:nil]&&!Open(paths,client),@"same-byte replacement denied cached and after reopen");}}
+static void IntegrityTests(NSString *base,NSData *client){for(NSString *kind in @[@"unknown",@"public",@"hardlink",@"acl",@"boolean-version",@"image"]){NSDictionary *paths=Paths(base,kind);LBXLicenseInstallationEstablishment *proof=Prepare(paths,client);Check(proof!=nil,@"integrity prepared fixture");NSString *target=Join(paths[@"anchor"],@"prepared.json");
+        if([kind isEqual:@"unknown"])Check(Put(Join(paths[@"anchor"],@"unknown"),NSData.data,0600),@"unknown anchor node fixture");
+        else if([kind isEqual:@"public"])Check(!chmod(target.fileSystemRepresentation,0644),@"public anchor file fixture");
+        else if([kind isEqual:@"hardlink"])Check(!link(target.fileSystemRepresentation,Join(base,@"linked-proof").fileSystemRepresentation),@"anchor hardlink fixture");
+        else if([kind isEqual:@"acl"])Check(ACL(target,YES),@"actual anchor file ACL fixture");
+        else if([kind isEqual:@"boolean-version"]){NSMutableDictionary *doc=[[NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:target] options:0 error:nil] mutableCopy];doc[@"formatVersion"]=@YES;Check([Canonical(doc) writeToFile:target atomically:NO],@"strict Boolean version fixture");}
+        else{target=paths[@"service"];int fd=open(target.fileSystemRepresentation,O_WRONLY|O_APPEND);Check(fd>=0&&write(fd,"x",1)==1&&!close(fd),@"same installed image changed");}
+        Check(![proof preparedInstallationCurrent:nil]&&!Open(paths,client),@"changed provenance denied cached and after reopen");
+        if([kind isEqual:@"image"]){NSData *bytes=[@"#!/fixture-service\n" dataUsingEncoding:NSUTF8StringEncoding];Check([bytes writeToFile:target atomically:NO],@"restore shared image fixture bytes");}}}
+static void ConcurrentTests(NSString *base,NSData *client){for(NSUInteger attempt=0;attempt<8;attempt++){NSDictionary *paths=Paths(base,[NSString stringWithFormat:@"concurrent-%lu",(unsigned long)attempt]);dispatch_group_t group=dispatch_group_create();dispatch_semaphore_t start=dispatch_semaphore_create(0);NSMutableArray *answers=[NSMutableArray array];
+    for(NSUInteger i=0;i<2;i++)dispatch_group_async(group,dispatch_get_global_queue(QOS_CLASS_DEFAULT,0),^{@autoreleasepool{dispatch_semaphore_wait(start,DISPATCH_TIME_FOREVER);id value=Prepare(paths,client);@synchronized(answers){[answers addObject:value?:NSNull.null];}}});
+    dispatch_semaphore_signal(start);dispatch_semaphore_signal(start);Check(!dispatch_group_wait(group,dispatch_time(DISPATCH_TIME_NOW,10*NSEC_PER_SEC)),@"bounded actual host-thread installer race");NSUInteger winners=0;for(id value in answers)if(value!=NSNull.null)winners++;Check(winners==1&&Open(paths,client)!=nil,@"exclusive anchor admits exactly one complete concurrent preparation");}}
+static void FinalObservationTests(NSString *base,NSData *client){for(NSString *kind in @[@"intent.json",@"prepared.json",@"pending-establishment.json",@"unknown"]){NSDictionary *paths=Paths(base,[@"final-" stringByAppendingString:[kind stringByReplacingOccurrencesOfString:@"." withString:@"-"]]);LBXLicenseInstallationEstablishment *proof=Prepare(paths,client);Check(proof!=nil,@"final-observation prepared fixture");__block BOOL ran=NO;
+    [LBXLicenseInstallationEstablishment testBoundaryHandler:^(NSString *boundary){if(!ran&&[boundary isEqual:@"before_final_reobservation"]){ran=YES;NSString *target=Join(paths[@"anchor"],kind);if([kind isEqual:@"unknown"])Check(Put(target,NSData.data,0600),@"unknown node appears after initial observation");else{NSData *bytes=[NSData dataWithContentsOfFile:target];Check(!rename(target.fileSystemRepresentation,Join(base,[@"held-" stringByAppendingString:kind]).fileSystemRepresentation)&&Put(target,bytes,0600),@"same-byte anchor replacement appears after initial observation");}}}];
+    BOOL current=[proof preparedInstallationCurrent:nil];[LBXLicenseInstallationEstablishment testBoundaryHandler:nil];Check(ran&&!current&&!Open(paths,client),@"final repeated exact read and inventory reject changes during long observation");}}
+int main(void){@autoreleasepool{char template[]="/tmp/socialbox-installation-establishment.XXXXXX",physical[PATH_MAX];char *made=mkdtemp(template);Check(made&&realpath(made,physical),@"actual physical temporary parent");NSString *base=[NSString stringWithUTF8String:physical];Check(!chown(base.fileSystemRepresentation,geteuid(),getegid()),@"host fixture parent has explicit role group");NSData *client=[@"#!/fixture-client\n" dataUsingEncoding:NSUTF8StringEncoding];
+    for(NSString *key in @[@"installer",@"service",@"client"])Check(Put(Join(base,key),[[NSString stringWithFormat:@"#!/fixture-%@\n",key] dataUsingEncoding:NSUTF8StringEncoding],0755),@"fixed regular executable image fixture");
+    MissingTests(base,client);InterruptionTests(base,client);SubstitutionTests(base,client);IntegrityTests(base,client);ConcurrentTests(base,client);FinalObservationTests(base,client);
+    NSDictionary *paths=Paths(base,@"accepted");LBXLicenseInstallationEstablishment *proof=Prepare(paths,client);Check(proof&&[proof preparedInstallationCurrent:nil]&&Open(paths,client),@"pristine exact preparation and ordinary existing reopen");NSDictionary *before=Snapshot(base);Check(!Prepare(paths,client)&&[before isEqual:Snapshot(base)],@"duplicate trusted invocation preserves exact state");
+    NSDictionary *context=[proof.vault installationContextForTrustedInstaller:nil],*namespace=[proof.configurationStore configurationNamespaceContextForTrustedInstaller:nil],*witness=[proof privatePreparedWitness:nil];Check(context&&namespace&&witness&&!context[@"key"]&&!context[@"token"]&&!context[@"revision"],@"private stable observations contain no credential or grant");
+    [proof.vault testUsePublicKey:TestLicensePublicDER() keyID:TestLicenseKeyID()];[proof.licenseOwner testUseProtocol:PreparedProtocol.class publicKey:TestLicensePublicDER() keyID:TestLicenseKeyID()];
+    for(NSString *op in @[@"activate",@"validate"]){Check([Send(proof.licenseOwner,op)[@"result"] isEqual:@"active"],@"genuine signature fixture owner admits source licensing only");Check([proof preparedInstallationCurrent:nil]&&[context isEqual:[proof.vault installationContextForTrustedInstaller:nil]]&&[namespace isEqual:[proof.configurationStore configurationNamespaceContextForTrustedInstaller:nil]]&&[witness isEqual:[proof privatePreparedWitness:nil]],@"prepared facts remain exact across credential generations");}
+    SignedStatus=@"revoked";Check([Send(proof.licenseOwner,@"validate")[@"result"] isEqual:@"revoked"],@"signed revocation accepted");Check([proof preparedInstallationCurrent:nil],@"provenance current is not active-license authority");Check(!Snapshot(paths[@"pending"]),@"preparation and genuine pairing never initialize pending state");Check(![proof.description containsString:base]&&![proof.description containsString:context[@"deviceIdentity"]],@"private descriptions do not expose local facts");
+    NSDictionary *unknownBefore=Snapshot(paths[@"anchor"]);Check(!chmod([paths[@"anchor"] fileSystemRepresentation],0755)&&![proof preparedInstallationCurrent:nil],@"public root anchor denies cached proof");Check(!chmod([paths[@"anchor"] fileSystemRepresentation],0700)&&[unknownBefore isEqual:Snapshot(paths[@"anchor"])],@"fixture permissions restored without reset");
+    [NSFileManager.defaultManager removeItemAtPath:base error:nil];fprintf(stdout,"%s: %lu installation establishment assertions, %lu failures\n",failures?"FAIL":"PASS",(unsigned long)checks,(unsigned long)failures);return failures?1:0;}}
+#else
+int main(void){@autoreleasepool{Check(getuid()!=0,@"production host fixture is ordinary non-root");Check(![LBXLicenseInstallationEstablishment prepareFixedInstallation:nil],@"production preparation rejects non-root host");Check(![LBXLicenseInstallationEstablishment openFixedPreparedInstallation:nil],@"production existing observation rejects non-root host");fprintf(stdout,"%s: %lu production installer boundary checks\n",failures?"FAIL":"PASS",(unsigned long)checks);return failures?1:0;}}
+#endif

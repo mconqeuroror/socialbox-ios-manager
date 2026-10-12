@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RedditBox · Launcher design preview</title>
+<style>
+  :root { color-scheme: light; --canvas:#f4f5fa; --surface:#fff; --field:#f2f2f7; --text:#191a24; --muted:#616370; --accent:#4552b8; --soft:rgba(69,82,184,.09); --on-accent:#fff; --line:#e3e5ee; --green:#217248; --orange:#9b5805; }
+  :root[data-theme="dark"] { color-scheme:dark; --canvas:#0e1017; --surface:#1c1c1e; --field:#2c2c2e; --text:#f5f5fa; --muted:#b1b2bd; --accent:#aeb8ff; --soft:rgba(174,184,255,.10); --on-accent:#0e1017; --line:#30313a; --green:#72d79a; --orange:#ffbb63; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--canvas); color:var(--text); font:16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; transition:background .15s,color .15s; }
+  button,input { font:inherit; }
+  button { cursor:pointer; }
+  button:focus-visible,input:focus-visible { outline:3px solid var(--accent); outline-offset:3px; }
+  .bar { max-width:1480px; margin:auto; padding:40px 32px 24px; display:flex; align-items:center; justify-content:space-between; gap:24px; }
+  .brand { display:flex; align-items:center; gap:14px; }
+  .mark { display:grid; place-items:center; width:48px; height:48px; border-radius:15px; background:var(--accent); color:var(--on-accent); }
+  h1,h2,h3,p { margin:0; }
+  .brand h1 { font-size:24px; letter-spacing:-.8px; }
+  .eyebrow { font-size:11px; letter-spacing:1.5px; font-weight:700; color:var(--muted); }
+  .controls { display:flex; gap:8px; flex-wrap:wrap; }
+  .control { border:1px solid var(--line); padding:10px 16px; background:var(--surface); color:var(--text); border-radius:100px; font-size:13px; font-weight:600; }
+  .intro { max-width:1480px; margin:auto; padding:0 32px 30px; color:var(--muted); font-size:14px; }
+  .gallery { max-width:1480px; margin:0 auto; padding:0 32px 48px; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:26px; align-items:start; }
+  .screen-label { color:var(--muted); font-size:12px; font-weight:600; margin:0 0 12px 4px; letter-spacing:.5px; }
+  .phone { border:1px solid var(--line); border-radius:30px; background:var(--canvas); overflow:hidden; box-shadow:0 16px 44px rgba(15,20,40,.045); }
+  .nav { padding:22px 22px 12px; }
+  .nav-actions { display:flex; justify-content:space-between; align-items:center; color:var(--accent); font-size:22px; margin-bottom:18px; }
+  .icons { display:flex; gap:22px; }
+  .nav h2 { font-size:32px; line-height:1.15; letter-spacing:-1.2px; font-weight:750; }
+  .nav.compact h2 { font-size:22px; letter-spacing:-.5px; }
+  .content { padding:12px 20px 24px; }
+  .card { padding:20px 18px; border-radius:20px; background:var(--surface); margin-bottom:14px; }
+  .summary { background:var(--soft); }
+  .summary .eyebrow { color:var(--accent); margin-bottom:10px; }
+  .summary h3,.empty h3 { font-size:22px; line-height:1.25; letter-spacing:-.45px; font-weight:650; margin-bottom:10px; }
+  .summary p,.empty p { color:var(--muted); font-size:15px; }
+  .section-label { font-size:13px; color:var(--muted); margin:24px 4px 10px; }
+  .profile-top { display:flex; align-items:center; gap:12px; }
+  .avatar { width:48px; height:48px; flex:none; border-radius:14px; color:var(--accent); background:var(--soft); display:grid; place-items:center; }
+  .person { width:25px; height:25px; fill:none; stroke:currentColor; stroke-width:1.6; }
+  .profile-name { min-width:0; flex:1; }
+  .profile-name h3 { font-size:17px; line-height:1.3; overflow-wrap:anywhere; }
+  .status { display:block; font-size:11px; font-weight:600; letter-spacing:.55px; color:var(--muted); margin-top:4px; }
+  .status.active { color:var(--accent); }
+  .chevron { color:var(--muted); font-size:23px; }
+  .identity { margin-top:12px; font-size:15px; color:var(--muted); line-height:1.5; }
+  .metadata { color:var(--muted); font-size:12px; line-height:1.7; margin-top:12px; }
+  .footnote { color:var(--muted); font-size:12px; margin:14px 4px 0; }
+  .empty .primary { margin-top:20px; }
+  .form h3 { font-size:17px; margin-bottom:10px; }
+  .form p { color:var(--muted); font-size:13px; margin-bottom:16px; }
+  label { display:block; font-size:12px; color:var(--muted); margin:14px 0 6px; }
+  input { width:100%; min-height:52px; padding:12px; border:0; border-radius:12px; background:var(--field); color:var(--text); font-size:15px; }
+  .primary,.secondary { width:100%; display:block; border:0; padding:14px 16px; min-height:52px; font-weight:600; border-radius:14px; font-size:15px; margin-top:12px; text-align:center; }
+  .primary { background:var(--accent); color:var(--on-accent); }
+  .secondary { background:var(--soft); color:var(--accent); }
+  .check { display:flex; gap:12px; padding:18px 0; border-bottom:1px solid var(--line); }
+  .check:last-child { border:0; padding-bottom:0; }
+  .check:first-of-type { padding-top:6px; }
+  .check-icon { font-size:19px; font-weight:650; flex:none; color:var(--accent); }
+  .check-icon.pass { color:var(--green); }
+  .check h3 { font-size:15px; margin-bottom:4px; }
+  .check p { font-size:12px; color:var(--muted); }
+  .note { color:var(--muted); font-size:12px; margin-top:24px; padding-top:20px; border-top:1px solid var(--line); }
+  svg { display:block; }
+  .large .phone { font-size:20px; }
+  .large .phone p,.large .phone h3,.large .phone label,.large .phone .status,.large .phone button,.large .phone input { font-size:1em; }
+  .large .phone h2 { font-size:1.6em; }
+  .large .phone .metadata,.large .phone .footnote { font-size:.85em; }
+  @media(max-width:1100px) { .gallery { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+  @media(max-width:720px) { .bar { padding:24px 20px 18px; flex-direction:column; align-items:flex-start; gap:16px; } .intro { padding:0 20px 24px; } .gallery { grid-template-columns:minmax(0,1fr); padding:0 12px 32px; max-width:440px; } }
+  @media(prefers-reduced-motion:reduce) { body { transition:none; } }
+</style>
+</head>
+<body>
+<svg width="0" height="0" aria-hidden="true" style="position:absolute"><defs><symbol id="person" viewBox="0 0 26 26"><rect x="2" y="2" width="22" height="22" rx="5"/><circle cx="13" cy="10" r="3.5"/><path d="M6.5 21c.5-5.5 12.5-5.5 13 0"/></symbol></defs></svg>
+<header class="bar">
+  <div class="brand"><div class="mark" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="8" height="8" rx="2"/><rect x="15" y="3" width="8" height="8" rx="2"/><rect x="3" y="15" width="8" height="8" rx="2"/><rect x="15" y="15" width="8" height="8" rx="2"/></svg></div><div><h1>RedditBox</h1><div class="eyebrow">LAUNCHER DESIGN PREVIEW</div></div></div>
+  <div class="controls"><button class="control" id="theme" aria-pressed="false">Dark appearance</button><button class="control" id="text-size" aria-pressed="false">Larger text</button></div>
+</header>
+<p class="intro">A browser reference for the UIKit styling, using sample data. These are not iPhone screenshots. Build and device acceptance are still pending.</p>
+<main class="gallery">
+<section><p class="screen-label">01 / PROFILES</p><div class="phone">
+  <div class="nav"><div class="nav-actions" aria-hidden="true"><span>↻</span><span class="icons"><span>⚙</span><span>＋</span></span></div><h2>RedditBox</h2></div>
+  <div class="content">
+    <div class="card summary"><div class="eyebrow">YOUR WORKSPACE</div><h3>Session in progress</h3><p>One profile at a time. Review Diagnostics for VPN and hook status.</p></div>
+    <p class="section-label">Your profiles · 2</p>
+    <article class="card"><div class="profile-top"><div class="avatar" aria-hidden="true"><svg class="person"><use href="#person"/></svg></div><div class="profile-name"><h3>Profile A</h3><span class="status active">ACTIVE PROFILE</span></div><span class="chevron" aria-hidden="true">›</span></div><p class="identity">US · Catalog identity<br>en_US</p><p class="metadata">Proxy active · VPN ready · hooks ready<br>Health unknown · Authenticated: 2 min ago<br>Last active 1 min ago</p></article>
+    <article class="card"><div class="profile-top"><div class="avatar" aria-hidden="true"><svg class="person"><use href="#person"/></svg></div><div class="profile-name"><h3>Profile B</h3><span class="status">INACTIVE</span></div><span class="chevron" aria-hidden="true">›</span></div><p class="identity">GB · Catalog identity<br>en_GB</p><p class="metadata">Proxy unknown · VPN idle · hooks idle<br>Health unknown · Account: unknown<br>Last active never</p></article>
+    <p class="footnote">Tap a container to open Reddit or edit its identity. Swipe right to share an IPA. The daemon authorizes every launch.</p>
+  </div>
+</div><p class="note">The preview shows a sample OPEN state. It is not evidence that routing or browser authentication works.</p></section>
+<section><p class="screen-label">02 / FIRST PROFILE</p><div class="phone">
+  <div class="nav"><div class="nav-actions" aria-hidden="true"><span>↻</span><span class="icons"><span>⚙</span><span>＋</span></span></div><h2>RedditBox</h2></div>
+  <div class="content"><div class="card summary"><div class="eyebrow">YOUR WORKSPACE</div><h3>Finish your setup</h3><p>Create profiles offline. Complete managed VPN setup in Settings before opening Reddit.</p></div>
+    <div class="card empty"><h3>A space for each profile</h3><p>Create your first container, then finish setup before opening Reddit.</p><button class="primary demo-action">Create your first profile</button></div>
+    <p class="footnote">Setup and diagnostics are available from Settings.</p>
+  </div>
+</div>
+<p class="screen-label" style="margin-top:24px">04 / DIAGNOSTICS DETAIL</p><div class="phone"><div class="nav compact"><h2>Diagnostics</h2></div><div class="content"><div class="card">
+  <div class="check"><span class="check-icon pass" aria-hidden="true">✓</span><div><h3>Operation recovery</h3><p>PASS · No unfinished operation safety fence.</p></div></div>
+  <div class="check"><span class="check-icon" aria-hidden="true">ⓘ</span><div><h3>Managed routing verification</h3><p>INFO · Managed-app status does not prove the OS VPN assignment. Verify traffic and disconnect behavior on device.</p></div></div>
+</div><p class="footnote">A passing check is not proof of VPN assignment or browser login coverage.</p></div></div></section>
+<section><p class="screen-label">03 / SETTINGS DETAIL</p><div class="phone">
+  <div class="nav compact"><div class="nav-actions" aria-hidden="true"><span>‹ RedditBox</span></div><h2>Setup &amp; Settings</h2></div>
+  <div class="content"><div class="card form"><h3>Proxy &amp; rotation</h3><p>Use an HTTP proxy URL with an explicit port. SOCKS5 and HTTPS proxy URLs are unsupported.</p>
+    <label for="proxy">Proxy URL</label><input id="proxy" value="http://proxy.example.net:8080" readonly>
+    <label for="rotate">Rotation URL (HTTPS)</label><input id="rotate" value="https://provider.example/rotate" readonly>
+    <label for="auth">Authorization</label><input id="auth" value="Sample credential" type="password" readonly>
+    <button class="secondary demo-action">Save securely</button><button class="primary demo-action">Save and test connection</button><p style="margin-top:14px;margin-bottom:0">Testing closes any active Reddit session, calls rotation once, then verifies the proxy exit.</p>
+  </div><div class="card form"><h3>Managed VPN</h3><p>A supervised device and MDM service must assign the exported clone apps to the VPN.</p><button class="secondary demo-action">Share MDM/VPN setup files</button><button class="primary demo-action">Open Firewall Setup</button></div></div>
+</div><p class="note">Settings, Identity and Diagnostics share the same typography, spacing and controls. Values above are examples.</p></section>
+</main>
+<p id="feedback" role="status" style="position:fixed;left:50%;bottom:20px;transform:translateX(-50%);max-width:calc(100% - 32px);padding:12px 20px;border-radius:14px;background:var(--text);color:var(--canvas);box-shadow:0 8px 30px #0002;display:none;text-align:center"></p>
+<script>
+const root=document.documentElement;
+const theme=document.getElementById('theme');
+function setTheme(dark){root.dataset.theme=dark?'dark':'light';theme.setAttribute('aria-pressed',String(dark));theme.textContent=dark?'Light appearance':'Dark appearance';}
+setTheme(matchMedia('(prefers-color-scheme: dark)').matches);
+theme.addEventListener('click',()=>setTheme(root.dataset.theme!=='dark'));
+document.getElementById('text-size').addEventListener('click',event=>{const large=root.classList.toggle('large');event.currentTarget.setAttribute('aria-pressed',String(large));event.currentTarget.textContent=large?'Default text':'Larger text';});
+let feedbackTimer;
+document.querySelectorAll('.demo-action').forEach(button=>button.addEventListener('click',()=>{const feedback=document.getElementById('feedback');feedback.textContent='Design preview only. This action runs in the installed iOS app.';feedback.style.display='block';clearTimeout(feedbackTimer);feedbackTimer=setTimeout(()=>feedback.style.display='none',4000);}));
+</script>
+</body>
+</html>

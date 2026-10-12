@@ -1,0 +1,2764 @@
+{
+  "schemaVersion": 1,
+  "scope": "Current decrypted Reddit IPA static enumeration plus an explicitly labeled earlier ORIGINAL sandbox key-name-only snapshot. No SDK-specific runtime call graph or fresh-clone first-run trace is claimed.",
+  "ipaSHA256": "68cf3bb1ea394d225c5eec2d85032deeebaff2ccfd2153e9b1ce92c726782046",
+  "baseline": "fdf181f",
+  "method": [
+    "ZIP magic scan of every file; all8 Mach-O payloads identified.",
+    "Bounded Mach-O parser resolves all chained and classic dyld ObjC reference tables and Swift type/protocol context descriptors.",
+    "SDK rows require a resolved implementation class/type descriptor; resource-only declarations are separate.",
+    "Candidate storage names are classified as names only; device preference values, credentials and payloads are excluded."
+  ],
+  "rows": [
+    {
+      "id": "BIN-001",
+      "category": "binary inventory",
+      "surface": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies",
+      "mechanism": "Enumerated by ZIP magic, bounded Mach-O load commands, chained/classic dyld bindings, Objective-C refs and Swift context descriptors. This row covers enumeration, not runtime isolation.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies",
+          "sha256": "f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222",
+          "detail": "5045 selector references; 505 class references; 8160 Swift descriptors; 3447 undefined symbols; cryptid values [0]",
+          "line": 1
+        }
+      ],
+      "verification": "Scanner completed with zero unresolved references for this binary; no runtime calls inferred.",
+      "fix": "Re-enumerate whenever source IPA hash changes."
+    },
+    {
+      "id": "BIN-002",
+      "category": "binary inventory",
+      "surface": "Payload/RedditApp.app/Frameworks/Lottie.framework/Lottie",
+      "mechanism": "Enumerated by ZIP magic, bounded Mach-O load commands, chained/classic dyld bindings, Objective-C refs and Swift context descriptors. This row covers enumeration, not runtime isolation.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/Frameworks/Lottie.framework/Lottie",
+          "sha256": "f69029c462cf9afff9af43fbd69f548b6a34be0073b80415b6fa41eae806d907",
+          "detail": "221 selector references; 34 class references; 419 Swift descriptors; 924 undefined symbols; cryptid values [0]",
+          "line": 1
+        }
+      ],
+      "verification": "Scanner completed with zero unresolved references for this binary; no runtime calls inferred.",
+      "fix": "Re-enumerate whenever source IPA hash changes."
+    },
+    {
+      "id": "BIN-003",
+      "category": "binary inventory",
+      "surface": "Payload/RedditApp.app/PlugIns/NotificationServiceExtension.appex/NotificationServiceExtension",
+      "mechanism": "Enumerated by ZIP magic, bounded Mach-O load commands, chained/classic dyld bindings, Objective-C refs and Swift context descriptors. This row covers enumeration, not runtime isolation.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/PlugIns/NotificationServiceExtension.appex/NotificationServiceExtension",
+          "sha256": "d6e68011ff4df8445ded9583f2da4354e48ae8799035466b9d68c3a96866b39a",
+          "detail": "21 selector references; 7 class references; 1 Swift descriptors; 288 undefined symbols; cryptid values [0]",
+          "line": 1
+        }
+      ],
+      "verification": "Scanner completed with zero unresolved references for this binary; no runtime calls inferred.",
+      "fix": "Re-enumerate whenever source IPA hash changes."
+    },
+    {
+      "id": "BIN-004",
+      "category": "binary inventory",
+      "surface": "Payload/RedditApp.app/PlugIns/RedditIntents.appex/RedditIntents",
+      "mechanism": "Enumerated by ZIP magic, bounded Mach-O load commands, chained/classic dyld bindings, Objective-C refs and Swift context descriptors. This row covers enumeration, not runtime isolation.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/PlugIns/RedditIntents.appex/RedditIntents",
+          "sha256": "ea26431dafc1d5a223f8b1f5c71a16b0bf6a50778bd2a33afe32aed0bd77c57d",
+          "detail": "13 selector references; 3 class references; 24 Swift descriptors; 172 undefined symbols; cryptid values [0]",
+          "line": 1
+        }
+      ],
+      "verification": "Scanner completed with zero unresolved references for this binary; no runtime calls inferred.",
+      "fix": "Re-enumerate whenever source IPA hash changes."
+    },
+    {
+      "id": "BIN-005",
+      "category": "binary inventory",
+      "surface": "Payload/RedditApp.app/PlugIns/RedditWidgetsExtension.appex/RedditWidgetsExtension",
+      "mechanism": "Enumerated by ZIP magic, bounded Mach-O load commands, chained/classic dyld bindings, Objective-C refs and Swift context descriptors. This row covers enumeration, not runtime isolation.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/PlugIns/RedditWidgetsExtension.appex/RedditWidgetsExtension",
+          "sha256": "d7905312659bee66c156fb366e6a8486ff1801fe35126113660e6fd712938052",
+          "detail": "24 selector references; 4 class references; 79 Swift descriptors; 637 undefined symbols; cryptid values [0]",
+          "line": 1
+        }
+      ],
+      "verification": "Scanner completed with zero unresolved references for this binary; no runtime calls inferred.",
+      "fix": "Re-enumerate whenever source IPA hash changes."
+    },
+    {
+      "id": "BIN-006",
+      "category": "binary inventory",
+      "surface": "Payload/RedditApp.app/PlugIns/ShareExtension.appex/ShareExtension",
+      "mechanism": "Enumerated by ZIP magic, bounded Mach-O load commands, chained/classic dyld bindings, Objective-C refs and Swift context descriptors. This row covers enumeration, not runtime isolation.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/PlugIns/ShareExtension.appex/ShareExtension",
+          "sha256": "6a722dd8f9cc77aee680792ee616c5b38bc3e653ebde4c3efee1a51b99a29307",
+          "detail": "7 selector references; 2 class references; 2 Swift descriptors; 94 undefined symbols; cryptid values [0]",
+          "line": 1
+        }
+      ],
+      "verification": "Scanner completed with zero unresolved references for this binary; no runtime calls inferred.",
+      "fix": "Re-enumerate whenever source IPA hash changes."
+    },
+    {
+      "id": "BIN-007",
+      "category": "binary inventory",
+      "surface": "Payload/RedditApp.app/PlugIns/stickers.appex/stickers",
+      "mechanism": "Enumerated by ZIP magic, bounded Mach-O load commands, chained/classic dyld bindings, Objective-C refs and Swift context descriptors. This row covers enumeration, not runtime isolation.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/PlugIns/stickers.appex/stickers",
+          "sha256": "42c4a341eefb7a2722becad6f89132ed3e3ede30414d6bf3ecfedee60be5c031",
+          "detail": "19 selector references; 5 class references; 0 Swift descriptors; 22 undefined symbols; cryptid values []",
+          "line": 1
+        }
+      ],
+      "verification": "Scanner completed with zero unresolved references for this binary; no runtime calls inferred.",
+      "fix": "Re-enumerate whenever source IPA hash changes."
+    },
+    {
+      "id": "BIN-008",
+      "category": "binary inventory",
+      "surface": "Payload/RedditApp.app/RedditApp",
+      "mechanism": "Enumerated by ZIP magic, bounded Mach-O load commands, chained/classic dyld bindings, Objective-C refs and Swift context descriptors. This row covers enumeration, not runtime isolation.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/RedditApp",
+          "sha256": "b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5",
+          "detail": "12446 selector references; 1068 class references; 55482 Swift descriptors; 17409 undefined symbols; cryptid values [0]",
+          "line": 1
+        }
+      ],
+      "verification": "Scanner completed with zero unresolved references for this binary; no runtime calls inferred.",
+      "fix": "Re-enumerate whenever source IPA hash changes."
+    },
+    {
+      "id": "SDK-001",
+      "category": "bundled SDK / internal client module",
+      "surface": "AppsFlyer attribution identifiers",
+      "mechanism": "AppsFlyer classes coexist with IDFA/IDFV selectors. SDK-specific read-to-send edges remain untraced.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/RedditApp",
+          "sha256": "b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5",
+          "section": "__objc_classlist",
+          "offset": "0xa0ea520",
+          "detail": "Payload/RedditApp.app/RedditApp SHA256 b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5, __objc_classlist@0xa0ea520: AFSDKDevice",
+          "line": 1
+        },
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/RedditApp",
+          "sha256": "b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5",
+          "section": "__objc_classlist",
+          "offset": "0xa0ea6b8",
+          "detail": "Payload/RedditApp.app/RedditApp SHA256 b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5, __objc_classlist@0xa0ea6b8: AppsFlyerLib",
+          "line": 1
+        }
+      ],
+      "verification": "Static presence/reference only. SDK-specific API call edges, persisted writes and actual outgoing fields have NOT been traced on two fresh clones.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "SDK-002",
+      "category": "bundled SDK / internal client module",
+      "surface": "AppsFlyer Keychain persistence",
+      "mechanism": "Keychain storage classes are linked; original access-group/item policy must be checked against clone entitlements and Keychain rows.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/RedditApp",
+          "sha256": "b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5",
+          "section": "__objc_classlist",
+          "offset": "0xa0ea508",
+          "detail": "Payload/RedditApp.app/RedditApp SHA256 b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5, __objc_classlist@0xa0ea508: AppsFlyerKeychainWrapper",
+          "line": 1
+        },
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/RedditApp",
+          "sha256": "b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5",
+          "section": "__objc_classlist",
+          "offset": "0xa0ea610",
+          "detail": "Payload/RedditApp.app/RedditApp SHA256 b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5, __objc_classlist@0xa0ea610: AFSDKKeychainFactory",
+          "line": 1
+        }
+      ],
+      "verification": "Static presence/reference only. SDK-specific API call edges, persisted writes and actual outgoing fields have NOT been traced on two fresh clones.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "SDK-003",
+      "category": "bundled SDK / internal client module",
+      "surface": "AppsFlyer UserDefaults persistence",
+      "mechanism": "Explicit defaults storage classes; per-clone sandbox is the intended isolation boundary.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/RedditApp",
+          "sha256": "b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5",
+          "section": "__objc_classlist",
+          "offset": "0xa0ea6e0",
+          "detail": "Payload/RedditApp.app/RedditApp SHA256 b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5, __objc_classlist@0xa0ea6e0: AFSDKUserDefaultsStorage",
+          "line": 1
+        },
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/RedditApp",
+          "sha256": "b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5",
+          "section": "__objc_classlist",
+          "offset": "0xa0ea6f0",
+          "detail": "Payload/RedditApp.app/RedditApp SHA256 b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5, __objc_classlist@0xa0ea6f0: AFSDKRCUserDefaultsStorage",
+          "line": 1
+        }
+      ],
+      "verification": "Static presence/reference only. SDK-specific API call edges, persisted writes and actual outgoing fields have NOT been traced on two fresh clones.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "SDK-004",
+      "category": "bundled SDK / internal client module",
+      "surface": "AppsFlyer App Group storage/migration",
+      "mechanism": "Explicit App Group storage class plus AppsFlyerAppGroupName/MigrateToAppGroups string candidates; verify no shared group can be recreated.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/RedditApp",
+          "sha256": "b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5",
+          "section": "__objc_classlist",
+          "offset": "0xa0ea6b0",
+          "detail": "Payload/RedditApp.app/RedditApp SHA256 b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5, __objc_classlist@0xa0ea6b0: AFSDKAppGroupStorage",
+          "line": 1
+        }
+      ],
+      "verification": "Static presence/reference only. SDK-specific API call edges, persisted writes and actual outgoing fields have NOT been traced on two fresh clones.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "SDK-005",
+      "category": "bundled SDK / internal client module",
+      "surface": "AppsFlyer HTTP/event transport",
+      "mechanism": "SDK transport and event cache classes; every actual endpoint must satisfy NET routing enforcement.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/RedditApp",
+          "sha256": "b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5",
+          "section": "__objc_classlist",
+          "offset": "0xa0ea5d0",
+          "detail": "Payload/RedditApp.app/RedditApp SHA256 b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5, __objc_classlist@0xa0ea5d0: AFSDKEventCache",
+          "line": 1
+        },
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/RedditApp",
+          "sha256": "b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5",
+          "section": "__objc_classlist",
+          "offset": "0xa0ea608",
+          "detail": "Payload/RedditApp.app/RedditApp SHA256 b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5, __objc_classlist@0xa0ea608: AppsFlyerHTTPClient",
+          "line": 1
+        },
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/RedditApp",
+          "sha256": "b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5",
+          "section": "__objc_classlist",
+          "offset": "0xa0ea630",
+          "detail": "Payload/RedditApp.app/RedditApp SHA256 b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5, __objc_classlist@0xa0ea630: AFSDKHTTPClientFactory",
+          "line": 1
+        }
+      ],
+      "verification": "Static presence/reference only. SDK-specific API call edges, persisted writes and actual outgoing fields have NOT been traced on two fresh clones.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "SDK-006",
+      "category": "bundled SDK / internal client module",
+      "surface": "AppsFlyer deep links and referrals",
+      "mechanism": "Deep-link/referral helpers can carry caller-supplied identity; static presence does not prove persisted value or request execution.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/RedditApp",
+          "sha256": "b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5",
+          "section": "__objc_classlist",
+          "offset": "0xa0ea560",
+          "detail": "Payload/RedditApp.app/RedditApp SHA256 b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5, __objc_classlist@0xa0ea560: AppsFlyerDeepLink",
+          "line": 1
+        },
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/RedditApp",
+          "sha256": "b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5",
+          "section": "__objc_classlist",
+          "offset": "0xa0ea680",
+          "detail": "Payload/RedditApp.app/RedditApp SHA256 b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5, __objc_classlist@0xa0ea680: AppsFlyerLinkGenerator",
+          "line": 1
+        },
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/RedditApp",
+          "sha256": "b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5",
+          "section": "__objc_classlist",
+          "offset": "0xa0ea6e8",
+          "detail": "Payload/RedditApp.app/RedditApp SHA256 b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5, __objc_classlist@0xa0ea6e8: AppsFlyerCrossPromotionHelper",
+          "line": 1
+        }
+      ],
+      "verification": "Static presence/reference only. SDK-specific API call edges, persisted writes and actual outgoing fields have NOT been traced on two fresh clones.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "SDK-007",
+      "category": "bundled SDK / internal client module",
+      "surface": "AppsFlyer SKAdNetwork attribution",
+      "mechanism": "Attribution implementation classes are present; OS attribution and server-to-server identifiers need explicit observations.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/RedditApp",
+          "sha256": "b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5",
+          "section": "__objc_classlist",
+          "offset": "0xa0ea568",
+          "detail": "Payload/RedditApp.app/RedditApp SHA256 b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5, __objc_classlist@0xa0ea568: AFSDKSKAdNetworkV3Impl",
+          "line": 1
+        },
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/RedditApp",
+          "sha256": "b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5",
+          "section": "__objc_classlist",
+          "offset": "0xa0ea578",
+          "detail": "Payload/RedditApp.app/RedditApp SHA256 b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5, __objc_classlist@0xa0ea578: AFSDKSKAdNetworkV4Impl",
+          "line": 1
+        },
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/RedditApp",
+          "sha256": "b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5",
+          "section": "__objc_classlist",
+          "offset": "0xa0ea650",
+          "detail": "Payload/RedditApp.app/RedditApp SHA256 b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5, __objc_classlist@0xa0ea650: AFSDKSKAdNetworkS2SMessage",
+          "line": 1
+        }
+      ],
+      "verification": "Static presence/reference only. SDK-specific API call edges, persisted writes and actual outgoing fields have NOT been traced on two fresh clones.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "SDK-008",
+      "category": "bundled SDK / internal client module",
+      "surface": "AppsFlyer on-device measurement",
+      "mechanism": "Measurement/consent implementation classes; actual collection depends on runtime configuration.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/RedditApp",
+          "sha256": "b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5",
+          "section": "__objc_classlist",
+          "offset": "0xa0ea708",
+          "detail": "Payload/RedditApp.app/RedditApp SHA256 b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5, __objc_classlist@0xa0ea708: AFSDKOnDeviceMeasurement",
+          "line": 1
+        },
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/RedditApp",
+          "sha256": "b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5",
+          "section": "__objc_classlist",
+          "offset": "0xa0ea718",
+          "detail": "Payload/RedditApp.app/RedditApp SHA256 b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5, __objc_classlist@0xa0ea718: AppsFlyerDMAService",
+          "line": 1
+        },
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/RedditApp",
+          "sha256": "b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5",
+          "section": "__swift5_types",
+          "offset": "0x9694164",
+          "detail": "Payload/RedditApp.app/RedditApp SHA256 b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5, __swift5_types@0x9694164: AppsFlyerLib.AFSDKOnDeviceMeasurement",
+          "line": 1
+        },
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/RedditApp",
+          "sha256": "b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5",
+          "section": "__swift5_types",
+          "offset": "0x9694168",
+          "detail": "Payload/RedditApp.app/RedditApp SHA256 b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5, __swift5_types@0x9694168: AppsFlyerLib.AppsFlyerDMADataMapper",
+          "line": 1
+        }
+      ],
+      "verification": "Static presence/reference only. SDK-specific API call edges, persisted writes and actual outgoing fields have NOT been traced on two fresh clones.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "SDK-009",
+      "category": "bundled SDK / internal client module",
+      "surface": "Firebase Analytics / Google App Measurement",
+      "mechanism": "Analytics identifier and measurement implementations linked inside ExtensionDependencies; collection/persistence must be observed.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies",
+          "sha256": "f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222",
+          "section": "__objc_classlist",
+          "offset": "0x2725a38",
+          "detail": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies SHA256 f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222, __objc_classlist@0x2725a38: FIRAIdentifiers",
+          "line": 1
+        },
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies",
+          "sha256": "f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222",
+          "section": "__objc_classlist",
+          "offset": "0x2725a40",
+          "detail": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies SHA256 f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222, __objc_classlist@0x2725a40: FIRAMeasurement",
+          "line": 1
+        },
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies",
+          "sha256": "f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222",
+          "section": "__objc_classlist",
+          "offset": "0x2725a48",
+          "detail": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies SHA256 f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222, __objc_classlist@0x2725a48: FIRAnalytics",
+          "line": 1
+        },
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies",
+          "sha256": "f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222",
+          "section": "__swift5_types",
+          "offset": "0x24a0998",
+          "detail": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies SHA256 f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222, __swift5_types@0x24a0998: FirebaseAnalytics.LoggedAnalyticsModifier",
+          "line": 1
+        }
+      ],
+      "verification": "Static presence/reference only. SDK-specific API call edges, persisted writes and actual outgoing fields have NOT been traced on two fresh clones.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "SDK-010",
+      "category": "bundled SDK / internal client module",
+      "surface": "Firebase Crashlytics identifiers and reports",
+      "mechanism": "Install-identifier model, report uploader, file manager and user-defaults implementations exist; report payloads not captured.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies",
+          "sha256": "f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222",
+          "section": "__objc_classlist",
+          "offset": "0x2726148",
+          "detail": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies SHA256 f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222, __objc_classlist@0x2726148: FIRCLSReportUploader",
+          "line": 1
+        },
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies",
+          "sha256": "f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222",
+          "section": "__objc_classlist",
+          "offset": "0x2726170",
+          "detail": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies SHA256 f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222, __objc_classlist@0x2726170: FIRCrashlytics",
+          "line": 1
+        },
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies",
+          "sha256": "f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222",
+          "section": "__objc_classlist",
+          "offset": "0x27261c0",
+          "detail": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies SHA256 f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222, __objc_classlist@0x27261c0: FIRCLSInstallIdentifierModel",
+          "line": 1
+        }
+      ],
+      "verification": "Static presence/reference only. SDK-specific API call edges, persisted writes and actual outgoing fields have NOT been traced on two fresh clones.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "SDK-011",
+      "category": "bundled SDK / internal client module",
+      "surface": "Firebase Installations FID/IID/auth token store",
+      "mechanism": "Dedicated identifier/token store and API service implementations; fresh-clone Keychain and file isolation not tested.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies",
+          "sha256": "f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222",
+          "section": "__objc_classlist",
+          "offset": "0x2726380",
+          "detail": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies SHA256 f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222, __objc_classlist@0x2726380: FIRInstallationsIIDStore",
+          "line": 1
+        },
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies",
+          "sha256": "f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222",
+          "section": "__objc_classlist",
+          "offset": "0x27263a0",
+          "detail": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies SHA256 f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222, __objc_classlist@0x27263a0: FIRInstallationsAPIService",
+          "line": 1
+        },
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies",
+          "sha256": "f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222",
+          "section": "__objc_classlist",
+          "offset": "0x27263c8",
+          "detail": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies SHA256 f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222, __objc_classlist@0x27263c8: FIRInstallationsStore",
+          "line": 1
+        }
+      ],
+      "verification": "Static presence/reference only. SDK-specific API call edges, persisted writes and actual outgoing fields have NOT been traced on two fresh clones.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "SDK-012",
+      "category": "bundled SDK / internal client module",
+      "surface": "Firebase Sessions cache/settings",
+      "mechanism": "Session implementation plus firebase-sessions-cache-key/settings static candidates and original-sandbox key names; fresh-clone behavior unknown.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies",
+          "sha256": "f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222",
+          "section": "__objc_classlist",
+          "offset": "0x27262d8",
+          "detail": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies SHA256 f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222, __objc_classlist@0x27262d8: FIRSessions",
+          "line": 1
+        },
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies",
+          "sha256": "f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222",
+          "section": "__objc_classlist",
+          "offset": "0x27262f8",
+          "detail": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies SHA256 f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222, __objc_classlist@0x27262f8: FIRSessionDetails",
+          "line": 1
+        },
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies",
+          "sha256": "f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222",
+          "section": "__swift5_types",
+          "offset": "0x24a099c",
+          "detail": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies SHA256 f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222, __swift5_types@0x24a099c: FirebaseSessions.ApplicationInfo",
+          "line": 1
+        },
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies",
+          "sha256": "f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222",
+          "section": "__swift5_types",
+          "offset": "0x24a09c4",
+          "detail": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies SHA256 f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222, __swift5_types@0x24a09c4: FirebaseSessions.DevEventConsoleLogger",
+          "line": 1
+        }
+      ],
+      "verification": "Static presence/reference only. SDK-specific API call edges, persisted writes and actual outgoing fields have NOT been traced on two fresh clones.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "SDK-013",
+      "category": "bundled SDK / internal client module",
+      "surface": "Firebase Core heartbeat and environment",
+      "mechanism": "Heartbeat/environment metadata providers are present; exact emitted fields not captured.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies",
+          "sha256": "f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222",
+          "section": "__objc_classlist",
+          "offset": "0x2726420",
+          "detail": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies SHA256 f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222, __objc_classlist@0x2726420: FIRFirebaseUserAgent",
+          "line": 1
+        },
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies",
+          "sha256": "f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222",
+          "section": "__objc_classlist",
+          "offset": "0x2726428",
+          "detail": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies SHA256 f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222, __objc_classlist@0x2726428: FIRHeartbeatLogger",
+          "line": 1
+        },
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies",
+          "sha256": "f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222",
+          "section": "__objc_classlist",
+          "offset": "0x2726470",
+          "detail": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies SHA256 f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222, __objc_classlist@0x2726470: FIRHeartbeatController",
+          "line": 1
+        },
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies",
+          "sha256": "f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222",
+          "section": "__swift5_types",
+          "offset": "0x24a0a28",
+          "detail": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies SHA256 f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222, __swift5_types@0x24a0a28: FirebaseCoreInternal.Heartbeat",
+          "line": 1
+        },
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies",
+          "sha256": "f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222",
+          "section": "__swift5_types",
+          "offset": "0x24a0a2c",
+          "detail": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies SHA256 f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222, __swift5_types@0x24a0a2c: FirebaseCoreInternal.Heartbeat.<unnamed/extension>.CodingKeys",
+          "line": 1
+        }
+      ],
+      "verification": "Static presence/reference only. SDK-specific API call edges, persisted writes and actual outgoing fields have NOT been traced on two fresh clones.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "SDK-014",
+      "category": "bundled SDK / internal client module",
+      "surface": "Firebase Crashlytics Remote Config interop",
+      "mechanism": "Remote-config rollout interop is linked; this does not establish a full Firebase Remote Config client or its execution.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies",
+          "sha256": "f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222",
+          "section": "__objc_classlist",
+          "offset": "0x27264c0",
+          "detail": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies SHA256 f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222, __objc_classlist@0x27264c0: FIRCLSRemoteConfigManager",
+          "line": 1
+        },
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies",
+          "sha256": "f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222",
+          "section": "__objc_classlist",
+          "offset": "0x27264e0",
+          "detail": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies SHA256 f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222, __objc_classlist@0x27264e0: FIRRemoteConfigConstants",
+          "line": 1
+        },
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies",
+          "sha256": "f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222",
+          "section": "__swift5_types",
+          "offset": "0x24a0aa8",
+          "detail": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies SHA256 f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222, __swift5_types@0x24a0aa8: FirebaseRemoteConfigInterop.RemoteConfigConstants",
+          "line": 1
+        },
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies",
+          "sha256": "f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222",
+          "section": "__swift5_types",
+          "offset": "0x24a0aac",
+          "detail": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies SHA256 f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222, __swift5_types@0x24a0aac: FirebaseRemoteConfigInterop.RolloutAssignment",
+          "line": 1
+        }
+      ],
+      "verification": "Static presence/reference only. SDK-specific API call edges, persisted writes and actual outgoing fields have NOT been traced on two fresh clones.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "SDK-015",
+      "category": "bundled SDK / internal client module",
+      "surface": "GoogleUtilities UserDefaults",
+      "mechanism": "GULUserDefaults implementation plus its privacy manifest; same sandbox boundary needs two-clone sentinels.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies",
+          "sha256": "f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222",
+          "section": "__objc_classlist",
+          "offset": "0x27264a0",
+          "detail": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies SHA256 f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222, __objc_classlist@0x27264a0: GULUserDefaults",
+          "line": 1
+        }
+      ],
+      "verification": "Static presence/reference only. SDK-specific API call edges, persisted writes and actual outgoing fields have NOT been traced on two fresh clones.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "SDK-016",
+      "category": "bundled SDK / internal client module",
+      "surface": "GoogleUtilities Keychain",
+      "mechanism": "Dedicated Keychain storage helpers; service/account/access-group outcomes not traced.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies",
+          "sha256": "f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222",
+          "section": "__objc_classlist",
+          "offset": "0x27265d0",
+          "detail": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies SHA256 f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222, __objc_classlist@0x27265d0: GULKeychainStorage",
+          "line": 1
+        },
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies",
+          "sha256": "f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222",
+          "section": "__objc_classlist",
+          "offset": "0x27265d8",
+          "detail": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies SHA256 f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222, __objc_classlist@0x27265d8: GULKeychainUtils",
+          "line": 1
+        }
+      ],
+      "verification": "Static presence/reference only. SDK-specific API call edges, persisted writes and actual outgoing fields have NOT been traced on two fresh clones.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "SDK-017",
+      "category": "bundled SDK / internal client module",
+      "surface": "GoogleUtilities networking/reachability",
+      "mechanism": "Network/session/reachability classes; query and upload execution not inferred from linkage.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies",
+          "sha256": "f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222",
+          "section": "__objc_classlist",
+          "offset": "0x2725ac8",
+          "detail": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies SHA256 f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222, __objc_classlist@0x2725ac8: GULNetwork",
+          "line": 1
+        },
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies",
+          "sha256": "f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222",
+          "section": "__objc_classlist",
+          "offset": "0x2725ad0",
+          "detail": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies SHA256 f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222, __objc_classlist@0x2725ad0: GULNetworkURLSession",
+          "line": 1
+        },
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies",
+          "sha256": "f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222",
+          "section": "__objc_classlist",
+          "offset": "0x2725ae0",
+          "detail": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies SHA256 f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222, __objc_classlist@0x2725ae0: GULReachabilityChecker",
+          "line": 1
+        }
+      ],
+      "verification": "Static presence/reference only. SDK-specific API call edges, persisted writes and actual outgoing fields have NOT been traced on two fresh clones.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "SDK-018",
+      "category": "bundled SDK / internal client module",
+      "surface": "GoogleDataTransport persisted event upload",
+      "mechanism": "Flat-file event storage and transport/uploader classes; cache contents and upload metadata require first-run trace.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies",
+          "sha256": "f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222",
+          "section": "__objc_classlist",
+          "offset": "0x2726510",
+          "detail": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies SHA256 f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222, __objc_classlist@0x2726510: GDTCCTUploader",
+          "line": 1
+        },
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies",
+          "sha256": "f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222",
+          "section": "__objc_classlist",
+          "offset": "0x2726538",
+          "detail": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies SHA256 f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222, __objc_classlist@0x2726538: GDTCORFlatFileStorage",
+          "line": 1
+        },
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies",
+          "sha256": "f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222",
+          "section": "__objc_classlist",
+          "offset": "0x27265a0",
+          "detail": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies SHA256 f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222, __objc_classlist@0x27265a0: GDTCORTransport",
+          "line": 1
+        }
+      ],
+      "verification": "Static presence/reference only. SDK-specific API call edges, persisted writes and actual outgoing fields have NOT been traced on two fresh clones.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "SDK-019",
+      "category": "bundled SDK / internal client module",
+      "surface": "AFNetworking session and serialization",
+      "mechanism": "Concrete URL-session/HTTP implementations; API hooks apply only to enumerated entry points and policy.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies",
+          "sha256": "f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222",
+          "section": "__objc_classlist",
+          "offset": "0x27243f8",
+          "detail": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies SHA256 f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222, __objc_classlist@0x27243f8: AFHTTPSessionManager",
+          "line": 1
+        },
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies",
+          "sha256": "f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222",
+          "section": "__objc_classlist",
+          "offset": "0x2724440",
+          "detail": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies SHA256 f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222, __objc_classlist@0x2724440: AFHTTPRequestSerializer",
+          "line": 1
+        },
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies",
+          "sha256": "f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222",
+          "section": "__objc_classlist",
+          "offset": "0x2724480",
+          "detail": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies SHA256 f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222, __objc_classlist@0x2724480: AFURLSessionManager",
+          "line": 1
+        }
+      ],
+      "verification": "Static presence/reference only. SDK-specific API call edges, persisted writes and actual outgoing fields have NOT been traced on two fresh clones.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "SDK-020",
+      "category": "bundled SDK / internal client module",
+      "surface": "Apollo GraphQL networking",
+      "mechanism": "Swift ABI module contexts establish Apollo implementation; GraphQL payload identifiers and transport behavior must be captured.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies",
+          "sha256": "f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222",
+          "section": "__swift5_types",
+          "offset": "0x249c190",
+          "detail": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies SHA256 f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222, __swift5_types@0x249c190: Apollo.AnyGraphQLResponse",
+          "line": 1
+        },
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies",
+          "sha256": "f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222",
+          "section": "__swift5_types",
+          "offset": "0x249c194",
+          "detail": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies SHA256 f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222, __swift5_types@0x249c194: Apollo.CachePolicy",
+          "line": 1
+        }
+      ],
+      "verification": "Static presence/reference only. SDK-specific API call edges, persisted writes and actual outgoing fields have NOT been traced on two fresh clones.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "SDK-021",
+      "category": "bundled SDK / internal client module",
+      "surface": "Apollo SQLite normalized cache",
+      "mechanism": "Swift ABI context establishes SQLite-backed cache implementation; verify file path and fresh/restore lifecycle outcomes.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies",
+          "sha256": "f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222",
+          "section": "__swift5_types",
+          "offset": "0x24a35cc",
+          "detail": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies SHA256 f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222, __swift5_types@0x24a35cc: ApolloSQLite.JournalMode",
+          "line": 1
+        },
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies",
+          "sha256": "f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222",
+          "section": "__swift5_types",
+          "offset": "0x24a35d0",
+          "detail": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies SHA256 f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222, __swift5_types@0x24a35d0: ApolloSQLite.DatabaseRow",
+          "line": 1
+        }
+      ],
+      "verification": "Static presence/reference only. SDK-specific API call edges, persisted writes and actual outgoing fields have NOT been traced on two fresh clones.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "SDK-022",
+      "category": "bundled SDK / internal client module",
+      "surface": "AppAuth OAuth and token state",
+      "mechanism": "Concrete OAuth state, service and transport implementation; account tokens belong to account/session state and must not be blanket rewritten.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/RedditApp",
+          "sha256": "b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5",
+          "section": "__objc_classlist",
+          "offset": "0xa0ea7d8",
+          "detail": "Payload/RedditApp.app/RedditApp SHA256 b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5, __objc_classlist@0xa0ea7d8: OIDAuthState",
+          "line": 1
+        },
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/RedditApp",
+          "sha256": "b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5",
+          "section": "__objc_classlist",
+          "offset": "0xa0ea800",
+          "detail": "Payload/RedditApp.app/RedditApp SHA256 b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5, __objc_classlist@0xa0ea800: OIDAuthorizationService",
+          "line": 1
+        },
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/RedditApp",
+          "sha256": "b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5",
+          "section": "__objc_classlist",
+          "offset": "0xa0ea878",
+          "detail": "Payload/RedditApp.app/RedditApp SHA256 b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5, __objc_classlist@0xa0ea878: OIDURLSessionProvider",
+          "line": 1
+        }
+      ],
+      "verification": "Static presence/reference only. SDK-specific API call edges, persisted writes and actual outgoing fields have NOT been traced on two fresh clones.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "SDK-023",
+      "category": "bundled SDK / internal client module",
+      "surface": "AppAuth external authentication browser",
+      "mechanism": "External-browser auth implementations; browser/system process cookie or network state is not proved isolated by app hooks.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/RedditApp",
+          "sha256": "b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5",
+          "section": "__objc_classlist",
+          "offset": "0xa0ea7b8",
+          "detail": "Payload/RedditApp.app/RedditApp SHA256 b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5, __objc_classlist@0xa0ea7b8: OIDExternalUserAgentIOS",
+          "line": 1
+        },
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/RedditApp",
+          "sha256": "b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5",
+          "section": "__objc_classlist",
+          "offset": "0xa0ea7c0",
+          "detail": "Payload/RedditApp.app/RedditApp SHA256 b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5, __objc_classlist@0xa0ea7c0: OIDExternalUserAgentIOSCustomBrowser",
+          "line": 1
+        }
+      ],
+      "verification": "Static presence/reference only. SDK-specific API call edges, persisted writes and actual outgoing fields have NOT been traced on two fresh clones.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "SDK-024",
+      "category": "bundled SDK / internal client module",
+      "surface": "reCAPTCHA Enterprise",
+      "mechanism": "Swift ABI context establishes bundled SDK implementation; device-attestation/anti-abuse request fields and stores not observed.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/RedditApp",
+          "sha256": "b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5",
+          "section": "__swift5_types",
+          "offset": "0x96b928c",
+          "detail": "Payload/RedditApp.app/RedditApp SHA256 b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5, __swift5_types@0x96b928c: RecaptchaEnterpriseSDK.RecaptchaConstant",
+          "line": 1
+        },
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/RedditApp",
+          "sha256": "b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5",
+          "section": "__swift5_types",
+          "offset": "0x96b92b8",
+          "detail": "Payload/RedditApp.app/RedditApp SHA256 b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5, __swift5_types@0x96b92b8: RecaptchaEnterpriseSDK.RCaqx",
+          "line": 1
+        }
+      ],
+      "verification": "Static presence/reference only. SDK-specific API call edges, persisted writes and actual outgoing fields have NOT been traced on two fresh clones.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "SDK-025",
+      "category": "bundled SDK / internal client module",
+      "surface": "PINCache memory/disk cache",
+      "mechanism": "Concrete memory and disk cache implementations; cache filenames and inherited content need two-clone/lifecycle tests.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/RedditApp",
+          "sha256": "b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5",
+          "section": "__objc_classlist",
+          "offset": "0xa105a68",
+          "detail": "Payload/RedditApp.app/RedditApp SHA256 b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5, __objc_classlist@0xa105a68: PINCache",
+          "line": 1
+        },
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/RedditApp",
+          "sha256": "b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5",
+          "section": "__objc_classlist",
+          "offset": "0xa105a70",
+          "detail": "Payload/RedditApp.app/RedditApp SHA256 b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5, __objc_classlist@0xa105a70: PINDiskCache",
+          "line": 1
+        },
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/RedditApp",
+          "sha256": "b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5",
+          "section": "__objc_classlist",
+          "offset": "0xa105a80",
+          "detail": "Payload/RedditApp.app/RedditApp SHA256 b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5, __objc_classlist@0xa105a80: PINMemoryCache",
+          "line": 1
+        }
+      ],
+      "verification": "Static presence/reference only. SDK-specific API call edges, persisted writes and actual outgoing fields have NOT been traced on two fresh clones.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "SDK-026",
+      "category": "bundled SDK / internal client module",
+      "surface": "Reddit Accounts.AccountIdentifiers",
+      "mechanism": "Actual module contexts/symbols identify the account-identifier provider. IDFV/IDFA/install timestamp dataflow needs explicit per-field verification.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies",
+          "sha256": "f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222",
+          "section": "__swift5_types",
+          "offset": "0x249cb4c",
+          "detail": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies SHA256 f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222, __swift5_types@0x249cb4c: Accounts_AccountIdentifiers.AccountIdentifier",
+          "line": 1
+        }
+      ],
+      "verification": "Static presence/reference only. SDK-specific API call edges, persisted writes and actual outgoing fields have NOT been traced on two fresh clones.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "SDK-027",
+      "category": "bundled SDK / internal client module",
+      "surface": "Reddit AnalyticsSessionTracker",
+      "mechanism": "Actual Swift module context identifies session tracking. Session identifiers must retain account/session semantics.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies",
+          "sha256": "f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222",
+          "section": "__swift5_types",
+          "offset": "0x24a07cc",
+          "detail": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies SHA256 f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222, __swift5_types@0x24a07cc: AnalyticsSessionTracker_Impl.AnalyticsSessionTrackerImpl",
+          "line": 1
+        },
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies",
+          "sha256": "f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222",
+          "section": "__swift5_types",
+          "offset": "0x24a07d0",
+          "detail": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies SHA256 f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222, __swift5_types@0x24a07d0: AnalyticsSessionTracker_Impl.HMACSessionSignerImpl",
+          "line": 1
+        }
+      ],
+      "verification": "Static presence/reference only. SDK-specific API call edges, persisted writes and actual outgoing fields have NOT been traced on two fresh clones.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "SDK-028",
+      "category": "bundled SDK / internal client module",
+      "surface": "Reddit attestation provider",
+      "mechanism": "Actual Swift context for attestation; hardware/server challenge behavior is outside pure UUID generator coverage.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies",
+          "sha256": "f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222",
+          "section": "__swift5_types",
+          "offset": "0x24a07fc",
+          "detail": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies SHA256 f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222, __swift5_types@0x24a07fc: Attestation_Internal.AttestationEventFactoryImpl",
+          "line": 1
+        },
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies",
+          "sha256": "f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222",
+          "section": "__swift5_types",
+          "offset": "0x24a080c",
+          "detail": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies SHA256 f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222, __swift5_types@0x24a080c: Attestation_Internal.AttestationKeyIdKeychainStorage",
+          "line": 1
+        }
+      ],
+      "verification": "Static presence/reference only. SDK-specific API call edges, persisted writes and actual outgoing fields have NOT been traced on two fresh clones.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "SDK-029",
+      "category": "bundled SDK / internal client module",
+      "surface": "Reddit device-attestation token service",
+      "mechanism": "Actual Swift context for device-token service; token storage and transmission require on-device evidence.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies",
+          "sha256": "f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222",
+          "section": "__swift5_types",
+          "offset": "0x24a08e4",
+          "detail": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies SHA256 f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222, __swift5_types@0x24a08e4: DeviceAttestationTokenService_Internal.DeviceAttestationEventFactoryImpl",
+          "line": 1
+        },
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies",
+          "sha256": "f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222",
+          "section": "__swift5_types",
+          "offset": "0x24a08ec",
+          "detail": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies SHA256 f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222, __swift5_types@0x24a08ec: DeviceAttestationTokenService_Internal.DeviceAttestationTokenCreationServiceImpl",
+          "line": 1
+        }
+      ],
+      "verification": "Static presence/reference only. SDK-specific API call edges, persisted writes and actual outgoing fields have NOT been traced on two fresh clones.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "SDK-030",
+      "category": "bundled SDK / internal client module",
+      "surface": "Reddit URLSession wrapper",
+      "mechanism": "Actual Swift context for the shared URLSession implementation; background/ephemeral/delegate entry points and redirects must be enumerated.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies",
+          "sha256": "f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222",
+          "section": "__swift5_types",
+          "offset": "0x24a3760",
+          "detail": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies SHA256 f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222, __swift5_types@0x24a3760: RedditURLSession_Internal.RedditNetworkReachability",
+          "line": 1
+        },
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies",
+          "sha256": "f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222",
+          "section": "__swift5_types",
+          "offset": "0x24a3764",
+          "detail": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies SHA256 f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222, __swift5_types@0x24a3764: RedditURLSession_Internal.<unnamed/extension>.Listener",
+          "line": 1
+        }
+      ],
+      "verification": "Static presence/reference only. SDK-specific API call edges, persisted writes and actual outgoing fields have NOT been traced on two fresh clones.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "SDK-031",
+      "category": "bundled SDK / internal client module",
+      "surface": "Reddit NetworkingKit",
+      "mechanism": "Actual Swift networking module contexts; request mutation cannot establish routing of other transports.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies",
+          "sha256": "f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222",
+          "section": "__swift5_types",
+          "offset": "0x249d3b4",
+          "detail": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies SHA256 f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222, __swift5_types@0x249d3b4: NetworkingKit.NoOpMutationContextProvider",
+          "line": 1
+        },
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies",
+          "sha256": "f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222",
+          "section": "__swift5_types",
+          "offset": "0x249d3b8",
+          "detail": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies SHA256 f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222, __swift5_types@0x249d3b8: NetworkingKit.APIGatewayError",
+          "line": 1
+        }
+      ],
+      "verification": "Static presence/reference only. SDK-specific API call edges, persisted writes and actual outgoing fields have NOT been traced on two fresh clones.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "SDK-032",
+      "category": "bundled SDK / internal client module",
+      "surface": "Reddit SocketKit",
+      "mechanism": "Actual Swift socket module context; BSD/Network.framework routes must satisfy fail-closed policy.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/RedditApp",
+          "sha256": "b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5",
+          "section": "__swift5_types",
+          "offset": "0x96a3ff8",
+          "detail": "Payload/RedditApp.app/RedditApp SHA256 b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5, __swift5_types@0x96a3ff8: SocketKit_Internal.SocketSessionFactoryImpl",
+          "line": 1
+        },
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/RedditApp",
+          "sha256": "b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5",
+          "section": "__swift5_types",
+          "offset": "0x96a3ffc",
+          "detail": "Payload/RedditApp.app/RedditApp SHA256 b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5, __swift5_types@0x96a3ffc: SocketKit_Internal.SocketSessionImpl",
+          "line": 1
+        }
+      ],
+      "verification": "Static presence/reference only. SDK-specific API call edges, persisted writes and actual outgoing fields have NOT been traced on two fresh clones.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "SDK-033",
+      "category": "bundled SDK / internal client module",
+      "surface": "Reddit StorageKit",
+      "mechanism": "Actual Swift storage module contexts; defaults/files/Keychain first-run keys and per-clone boundaries require observations.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies",
+          "sha256": "f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222",
+          "section": "__swift5_types",
+          "offset": "0x249dc3c",
+          "detail": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies SHA256 f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222, __swift5_types@0x249dc3c: StorageKit.ContentDiskCacheManagerImpl",
+          "line": 1
+        },
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies",
+          "sha256": "f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222",
+          "section": "__swift5_types",
+          "offset": "0x249dc40",
+          "detail": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies SHA256 f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222, __swift5_types@0x249dc40: StorageKit.LocalMutationDuration",
+          "line": 1
+        }
+      ],
+      "verification": "Static presence/reference only. SDK-specific API call edges, persisted writes and actual outgoing fields have NOT been traced on two fresh clones.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "SDK-034",
+      "category": "bundled SDK / internal client module",
+      "surface": "Reddit RemoteLogger",
+      "mechanism": "Actual Swift context for remote logging; privacy-sensitive field selection and egress not captured.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies",
+          "sha256": "f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222",
+          "section": "__swift5_types",
+          "offset": "0x24a37ec",
+          "detail": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies SHA256 f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222, __swift5_types@0x24a37ec: RemoteLogger_Internal.RemoteLoggerComponent",
+          "line": 1
+        },
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies",
+          "sha256": "f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222",
+          "section": "__swift5_types",
+          "offset": "0x24a37f0",
+          "detail": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies SHA256 f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222, __swift5_types@0x24a37f0: RemoteLogger_Internal.RemoteLoggerExceptionComponent",
+          "line": 1
+        }
+      ],
+      "verification": "Static presence/reference only. SDK-specific API call edges, persisted writes and actual outgoing fields have NOT been traced on two fresh clones.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "SDK-035",
+      "category": "bundled SDK / internal client module",
+      "surface": "Reddit MetricLogger",
+      "mechanism": "Actual Swift context for metrics; metric dimensions/identifiers and upload routes not captured.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies",
+          "sha256": "f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222",
+          "section": "__swift5_types",
+          "offset": "0x24a0ab4",
+          "detail": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies SHA256 f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222, __swift5_types@0x24a0ab4: MetricLogger_Impl.BatchBuilderImpl",
+          "line": 1
+        },
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies",
+          "sha256": "f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222",
+          "section": "__swift5_types",
+          "offset": "0x24a0ab8",
+          "detail": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies SHA256 f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222, __swift5_types@0x24a0ab8: MetricLogger_Impl.BatchBuilderResult",
+          "line": 1
+        }
+      ],
+      "verification": "Static presence/reference only. SDK-specific API call edges, persisted writes and actual outgoing fields have NOT been traced on two fresh clones.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "SDK-036",
+      "category": "bundled SDK / internal client module",
+      "surface": "Reddit SequenceLogger",
+      "mechanism": "Actual Swift context for sequenced event logging; emitted identifiers and persisted queues not captured.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies",
+          "sha256": "f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222",
+          "section": "__swift5_types",
+          "offset": "0x24a37f8",
+          "detail": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies SHA256 f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222, __swift5_types@0x24a37f8: SequenceLogger_Internal.SequenceLoggerExtensionEventSubmitter",
+          "line": 1
+        },
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies",
+          "sha256": "f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222",
+          "section": "__swift5_types",
+          "offset": "0x24a37fc",
+          "detail": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies SHA256 f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222, __swift5_types@0x24a37fc: SequenceLogger_Internal.SequenceLoggerImpl",
+          "line": 1
+        }
+      ],
+      "verification": "Static presence/reference only. SDK-specific API call edges, persisted writes and actual outgoing fields have NOT been traced on two fresh clones.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "SDK-037",
+      "category": "bundled SDK / internal client module",
+      "surface": "Reddit WebView wrapper",
+      "mechanism": "Actual Swift WebView module context; WebKit subprocess storage/egress and external authentication remain separate surfaces.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/RedditApp",
+          "sha256": "b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5",
+          "section": "__swift5_types",
+          "offset": "0x96a38fc",
+          "detail": "Payload/RedditApp.app/RedditApp SHA256 b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5, __swift5_types@0x96a38fc: RedditWebView_Internal.RedditSafariViewController",
+          "line": 1
+        },
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/RedditApp",
+          "sha256": "b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5",
+          "section": "__swift5_types",
+          "offset": "0x96a3900",
+          "detail": "Payload/RedditApp.app/RedditApp SHA256 b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5, __swift5_types@0x96a3900: RedditWebView_Internal.WebKitCleanupManagerImpl",
+          "line": 1
+        }
+      ],
+      "verification": "Static presence/reference only. SDK-specific API call edges, persisted writes and actual outgoing fields have NOT been traced on two fresh clones.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "SDK-038",
+      "category": "bundled SDK / internal client module",
+      "surface": "Reddit advertising outbound-session tracking",
+      "mechanism": "Actual Swift module context for ad session tracking; client/session identity and external ad links require tests.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/RedditApp",
+          "sha256": "b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5",
+          "section": "__swift5_types",
+          "offset": "0x96a2880",
+          "detail": "Payload/RedditApp.app/RedditApp SHA256 b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5, __swift5_types@0x96a2880: RedditAds_AdOutboundSessionTracker_Internal.AdOutboundSessionTrackerImpl",
+          "line": 1
+        },
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/RedditApp",
+          "sha256": "b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5",
+          "section": "__swift5_types",
+          "offset": "0x96a2884",
+          "detail": "Payload/RedditApp.app/RedditApp SHA256 b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5, __swift5_types@0x96a2884: RedditAds_AdOutboundSessionTracker_Internal.AdOutboundSessionTrackerImpl.<unnamed/extension>.Command",
+          "line": 1
+        }
+      ],
+      "verification": "Static presence/reference only. SDK-specific API call edges, persisted writes and actual outgoing fields have NOT been traced on two fresh clones.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "SDK-039",
+      "category": "bundled SDK / internal client module",
+      "surface": "Reddit ads IPv4 probe",
+      "mechanism": "Actual Swift module context for IPv4 probe listener; observe raw/API route and verify proxy policy explicitly.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/RedditApp",
+          "sha256": "b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5",
+          "section": "__swift5_types",
+          "offset": "0x9693240",
+          "detail": "Payload/RedditApp.app/RedditApp SHA256 b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5, __swift5_types@0x9693240: AdsIpv4Probe_EventKitEventsListener_Internal.AdsIpv4ProbeAppStartListenerImpl",
+          "line": 1
+        },
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/RedditApp",
+          "sha256": "b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5",
+          "section": "__swift5_types",
+          "offset": "0x9693244",
+          "detail": "Payload/RedditApp.app/RedditApp SHA256 b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5, __swift5_types@0x9693244: AdsIpv4Probe_EventKitEventsListener_Internal.AdsIpv4ProbeAppStartListenerImpl.<unnamed/extension>.DeferredEventsState",
+          "line": 1
+        }
+      ],
+      "verification": "Static presence/reference only. SDK-specific API call edges, persisted writes and actual outgoing fields have NOT been traced on two fresh clones.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "SDK-040",
+      "category": "bundled SDK / internal client module",
+      "surface": "Reddit app-session manager",
+      "mechanism": "Actual Swift app-session context; session continuity must not be overwritten as a device identifier.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/RedditApp",
+          "sha256": "b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5",
+          "section": "__swift5_types",
+          "offset": "0x969400c",
+          "detail": "Payload/RedditApp.app/RedditApp SHA256 b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5, __swift5_types@0x969400c: AppSessionKit_Internal.AppSessionLoggerImpl",
+          "line": 1
+        },
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/RedditApp",
+          "sha256": "b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5",
+          "section": "__swift5_types",
+          "offset": "0x9694010",
+          "detail": "Payload/RedditApp.app/RedditApp SHA256 b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5, __swift5_types@0x9694010: AppSessionKit_Internal.AppSessionManagerImpl",
+          "line": 1
+        }
+      ],
+      "verification": "Static presence/reference only. SDK-specific API call edges, persisted writes and actual outgoing fields have NOT been traced on two fresh clones.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "SDK-041",
+      "category": "bundled SDK declaration",
+      "surface": "swift-nio_NIOPosix",
+      "mechanism": "Bundled privacy manifest is concrete resource evidence; linkage/execution/caller attribution is not established by a manifest alone.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.json",
+          "binary": "Payload/RedditApp.app/swift-nio_NIOPosix.bundle/PrivacyInfo.xcprivacy",
+          "sha256": "982f20d820bc4460acc9d4116c3e6c8ec837f717dc82edbb7308f7400515c909",
+          "detail": "Static privacy declaration; NOT runtime invocation evidence",
+          "line": 1
+        }
+      ],
+      "verification": "Static presence/reference only. SDK-specific API call edges, persisted writes and actual outgoing fields have NOT been traced on two fresh clones.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "SDK-042",
+      "category": "bundled SDK declaration",
+      "surface": "AppAuth_AppAuthCore",
+      "mechanism": "Bundled privacy manifest is concrete resource evidence; linkage/execution/caller attribution is not established by a manifest alone.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.json",
+          "binary": "Payload/RedditApp.app/AppAuth_AppAuthCore.bundle/PrivacyInfo.xcprivacy",
+          "sha256": "5ade962faaea1eddbbdd06c4cf8a872cec554f64c55a00e00136004d378e1ced",
+          "detail": "Static privacy declaration; NOT runtime invocation evidence",
+          "line": 1
+        }
+      ],
+      "verification": "Static presence/reference only. SDK-specific API call edges, persisted writes and actual outgoing fields have NOT been traced on two fresh clones.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "SDK-043",
+      "category": "bundled SDK declaration",
+      "surface": "GoogleUtilities_GoogleUtilities_Environment",
+      "mechanism": "Bundled privacy manifest is concrete resource evidence; linkage/execution/caller attribution is not established by a manifest alone.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.json",
+          "binary": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/GoogleUtilities_GoogleUtilities_Environment.bundle/PrivacyInfo.xcprivacy",
+          "sha256": "b08273d687379394792f71c94c1083616a04af8afaa396d8058980f444cfb3d4",
+          "detail": "Static privacy declaration; NOT runtime invocation evidence",
+          "line": 1
+        }
+      ],
+      "verification": "Static presence/reference only. SDK-specific API call edges, persisted writes and actual outgoing fields have NOT been traced on two fresh clones.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "STORE-001",
+      "category": "app-persisted identifier / key candidate",
+      "surface": "liveActivitiesEnabledInLastSession",
+      "mechanism": "Key name observed in original Reddit preferences; original value and fresh-clone value are not retained or compared. Sandbox/generator/hook ownership must be assigned after tracing its producer, storage namespace and consumer; do not rewrite session/account data solely because a name contains id.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/sdk-inventory.json",
+          "detail": "Sanitized earlier ORIGINAL Reddit sandbox key-name snapshot: liveActivitiesEnabledInLastSession, value type bool. No value retained; not a fresh clone or first-run observation.",
+          "line": 1
+        }
+      ],
+      "verification": "Original-sandbox key presence is explicitly distinguished from first-run/fresh-clone writes. Fresh A/B storage inventory, restore and egress comparisons NOT RUN.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "STORE-002",
+      "category": "app-persisted identifier / key candidate",
+      "surface": "AppRating-SessionKey",
+      "mechanism": "Key name observed in original Reddit preferences; original value and fresh-clone value are not retained or compared. Sandbox/generator/hook ownership must be assigned after tracing its producer, storage namespace and consumer; do not rewrite session/account data solely because a name contains id.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/sdk-inventory.json",
+          "detail": "Sanitized earlier ORIGINAL Reddit sandbox key-name snapshot: AppRating-SessionKey, value type int. No value retained; not a fresh clone or first-run observation.",
+          "line": 1
+        }
+      ],
+      "verification": "Original-sandbox key presence is explicitly distinguished from first-run/fresh-clone writes. Fresh A/B storage inventory, restore and egress comparisons NOT RUN.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "STORE-003",
+      "category": "app-persisted identifier / key candidate",
+      "surface": "kSessionCountForNotificationPermissionPrompt",
+      "mechanism": "Key name observed in original Reddit preferences; original value and fresh-clone value are not retained or compared. Sandbox/generator/hook ownership must be assigned after tracing its producer, storage namespace and consumer; do not rewrite session/account data solely because a name contains id.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/sdk-inventory.json",
+          "detail": "Sanitized earlier ORIGINAL Reddit sandbox key-name snapshot: kSessionCountForNotificationPermissionPrompt, value type int. No value retained; not a fresh clone or first-run observation.",
+          "line": 1
+        }
+      ],
+      "verification": "Original-sandbox key presence is explicitly distinguished from first-run/fresh-clone writes. Fresh A/B storage inventory, restore and egress comparisons NOT RUN.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "STORE-004",
+      "category": "app-persisted identifier / key candidate",
+      "surface": "firebase-sessions-cache-key",
+      "mechanism": "Key name observed in original Reddit preferences; original value and fresh-clone value are not retained or compared. Sandbox/generator/hook ownership must be assigned after tracing its producer, storage namespace and consumer; do not rewrite session/account data solely because a name contains id.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies",
+          "sha256": "f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222",
+          "section": "__cstring",
+          "offset": "0x2178b60",
+          "detail": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies SHA256 f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222, __cstring@0x2178b60: firebase-sessions-cache-key",
+          "line": 1
+        },
+        {
+          "path": "docs/leak-surface/sdk-inventory.json",
+          "detail": "Sanitized earlier ORIGINAL Reddit sandbox key-name snapshot: firebase-sessions-cache-key, value type bytes. No value retained; not a fresh clone or first-run observation.",
+          "line": 1
+        }
+      ],
+      "verification": "Original-sandbox key presence is explicitly distinguished from first-run/fresh-clone writes. Fresh A/B storage inventory, restore and egress comparisons NOT RUN.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "STORE-005",
+      "category": "app-persisted identifier / key candidate",
+      "surface": "firebase-sessions-settings",
+      "mechanism": "Key name observed in original Reddit preferences; original value and fresh-clone value are not retained or compared. Sandbox/generator/hook ownership must be assigned after tracing its producer, storage namespace and consumer; do not rewrite session/account data solely because a name contains id.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies",
+          "sha256": "f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222",
+          "section": "__cstring",
+          "offset": "0x2178960",
+          "detail": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies SHA256 f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222, __cstring@0x2178960: firebase-sessions-settings",
+          "line": 1
+        },
+        {
+          "path": "docs/leak-surface/sdk-inventory.json",
+          "detail": "Sanitized earlier ORIGINAL Reddit sandbox key-name snapshot: firebase-sessions-settings, value type dict. No value retained; not a fresh clone or first-run observation.",
+          "line": 1
+        }
+      ],
+      "verification": "Original-sandbox key presence is explicitly distinguished from first-run/fresh-clone writes. Fresh A/B storage inventory, restore and egress comparisons NOT RUN.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "STORE-006",
+      "category": "app-persisted identifier / key candidate",
+      "surface": "AppsFlyerInstallDate",
+      "mechanism": "Key name observed in original Reddit preferences; original value and fresh-clone value are not retained or compared. Sandbox/generator/hook ownership must be assigned after tracing its producer, storage namespace and consumer; do not rewrite session/account data solely because a name contains id.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/RedditApp",
+          "sha256": "b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5",
+          "section": "__cstring",
+          "offset": "0x7f06207",
+          "detail": "Payload/RedditApp.app/RedditApp SHA256 b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5, __cstring@0x7f06207: AppsFlyerInstallDate",
+          "line": 1
+        },
+        {
+          "path": "docs/leak-surface/sdk-inventory.json",
+          "detail": "Sanitized earlier ORIGINAL Reddit sandbox key-name snapshot: AppsFlyerInstallDate, value type str. No value retained; not a fresh clone or first-run observation.",
+          "line": 1
+        }
+      ],
+      "verification": "Original-sandbox key presence is explicitly distinguished from first-run/fresh-clone writes. Fresh A/B storage inventory, restore and egress comparisons NOT RUN.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "STORE-007",
+      "category": "app-persisted identifier / key candidate",
+      "surface": "AppSessionIdKey",
+      "mechanism": "Key name observed in original Reddit preferences; original value and fresh-clone value are not retained or compared. Sandbox/generator/hook ownership must be assigned after tracing its producer, storage namespace and consumer; do not rewrite session/account data solely because a name contains id.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/sdk-inventory.json",
+          "detail": "Sanitized earlier ORIGINAL Reddit sandbox key-name snapshot: AppSessionIdKey, value type str. No value retained; not a fresh clone or first-run observation.",
+          "line": 1
+        }
+      ],
+      "verification": "Original-sandbox key presence is explicitly distinguished from first-run/fresh-clone writes. Fresh A/B storage inventory, restore and egress comparisons NOT RUN.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "STORE-008",
+      "category": "app-persisted identifier / key candidate",
+      "surface": "AppsFlyerReInstallCounter",
+      "mechanism": "Key name observed in original Reddit preferences; original value and fresh-clone value are not retained or compared. Sandbox/generator/hook ownership must be assigned after tracing its producer, storage namespace and consumer; do not rewrite session/account data solely because a name contains id.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/RedditApp",
+          "sha256": "b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5",
+          "section": "__cstring",
+          "offset": "0x7f0631c",
+          "detail": "Payload/RedditApp.app/RedditApp SHA256 b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5, __cstring@0x7f0631c: AppsFlyerReInstallCounter",
+          "line": 1
+        },
+        {
+          "path": "docs/leak-surface/sdk-inventory.json",
+          "detail": "Sanitized earlier ORIGINAL Reddit sandbox key-name snapshot: AppsFlyerReInstallCounter, value type int. No value retained; not a fresh clone or first-run observation.",
+          "line": 1
+        }
+      ],
+      "verification": "Original-sandbox key presence is explicitly distinguished from first-run/fresh-clone writes. Fresh A/B storage inventory, restore and egress comparisons NOT RUN.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "STORE-009",
+      "category": "app-persisted identifier / key candidate",
+      "surface": "gLoidCreatedTimeKey",
+      "mechanism": "Key name observed in original Reddit preferences; original value and fresh-clone value are not retained or compared. Sandbox/generator/hook ownership must be assigned after tracing its producer, storage namespace and consumer; do not rewrite session/account data solely because a name contains id.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies",
+          "sha256": "f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222",
+          "section": "__cstring",
+          "offset": "0x2141850",
+          "detail": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies SHA256 f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222, __cstring@0x2141850: gLoidCreatedTimeKey",
+          "line": 1
+        },
+        {
+          "path": "docs/leak-surface/sdk-inventory.json",
+          "detail": "Sanitized earlier ORIGINAL Reddit sandbox key-name snapshot: gLoidCreatedTimeKey, value type str. No value retained; not a fresh clone or first-run observation.",
+          "line": 1
+        }
+      ],
+      "verification": "Original-sandbox key presence is explicitly distinguished from first-run/fresh-clone writes. Fresh A/B storage inventory, restore and egress comparisons NOT RUN.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "STORE-010",
+      "category": "app-persisted identifier / key candidate",
+      "surface": "kPushNotificationsSettingsKey2",
+      "mechanism": "Key name observed in original Reddit preferences; original value and fresh-clone value are not retained or compared. Sandbox/generator/hook ownership must be assigned after tracing its producer, storage namespace and consumer; do not rewrite session/account data solely because a name contains id.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/sdk-inventory.json",
+          "detail": "Sanitized earlier ORIGINAL Reddit sandbox key-name snapshot: kPushNotificationsSettingsKey2, value type bytes. No value retained; not a fresh clone or first-run observation.",
+          "line": 1
+        }
+      ],
+      "verification": "Original-sandbox key presence is explicitly distinguished from first-run/fresh-clone writes. Fresh A/B storage inventory, restore and egress comparisons NOT RUN.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "STORE-011",
+      "category": "app-persisted identifier / key candidate",
+      "surface": "analytics-install-ts-key",
+      "mechanism": "Key name observed in original Reddit preferences; original value and fresh-clone value are not retained or compared. Sandbox/generator/hook ownership must be assigned after tracing its producer, storage namespace and consumer; do not rewrite session/account data solely because a name contains id.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies",
+          "sha256": "f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222",
+          "section": "__cstring",
+          "offset": "0x213d640",
+          "detail": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies SHA256 f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222, __cstring@0x213d640: analytics-install-ts-key",
+          "line": 1
+        },
+        {
+          "path": "docs/leak-surface/sdk-inventory.json",
+          "detail": "Sanitized earlier ORIGINAL Reddit sandbox key-name snapshot: analytics-install-ts-key, value type str. No value retained; not a fresh clone or first-run observation.",
+          "line": 1
+        }
+      ],
+      "verification": "Original-sandbox key presence is explicitly distinguished from first-run/fresh-clone writes. Fresh A/B storage inventory, restore and egress comparisons NOT RUN.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "STORE-012",
+      "category": "app-persisted identifier / key candidate",
+      "surface": "analytics-loid-key",
+      "mechanism": "String candidate in current executable, which may be a storage key OR a wire field, not proof of a persisted write. Sandbox/generator/hook ownership must be assigned after tracing its producer, storage namespace and consumer; do not rewrite session/account data solely because a name contains id.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies",
+          "sha256": "f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222",
+          "section": "__cstring",
+          "offset": "0x213d620",
+          "detail": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies SHA256 f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222, __cstring@0x213d620: analytics-loid-key",
+          "line": 1
+        }
+      ],
+      "verification": "Original-sandbox key presence is explicitly distinguished from first-run/fresh-clone writes. Fresh A/B storage inventory, restore and egress comparisons NOT RUN.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "STORE-013",
+      "category": "app-persisted identifier / key candidate",
+      "surface": "reddit-ios-client-vendor-id",
+      "mechanism": "String candidate in current executable, which may be a storage key OR a wire field, not proof of a persisted write. Sandbox/generator/hook ownership must be assigned after tracing its producer, storage namespace and consumer; do not rewrite session/account data solely because a name contains id.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies",
+          "sha256": "f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222",
+          "section": "__cstring",
+          "offset": "0x213c910",
+          "detail": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies SHA256 f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222, __cstring@0x213c910: reddit-ios-client-vendor-id",
+          "line": 1
+        }
+      ],
+      "verification": "Original-sandbox key presence is explicitly distinguished from first-run/fresh-clone writes. Fresh A/B storage inventory, restore and egress comparisons NOT RUN.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "STORE-014",
+      "category": "app-persisted identifier / key candidate",
+      "surface": "reddit-device-id",
+      "mechanism": "String candidate in current executable, which may be a storage key OR a wire field, not proof of a persisted write. Sandbox/generator/hook ownership must be assigned after tracing its producer, storage namespace and consumer; do not rewrite session/account data solely because a name contains id.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies",
+          "sha256": "f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222",
+          "section": "__cstring",
+          "offset": "0x214a590",
+          "detail": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies SHA256 f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222, __cstring@0x214a590: reddit-device-id",
+          "line": 1
+        }
+      ],
+      "verification": "Original-sandbox key presence is explicitly distinguished from first-run/fresh-clone writes. Fresh A/B storage inventory, restore and egress comparisons NOT RUN.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "STORE-015",
+      "category": "app-persisted identifier / key candidate",
+      "surface": "AppsFlyerUserId",
+      "mechanism": "String candidate in current executable, which may be a storage key OR a wire field, not proof of a persisted write. Sandbox/generator/hook ownership must be assigned after tracing its producer, storage namespace and consumer; do not rewrite session/account data solely because a name contains id.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/RedditApp",
+          "sha256": "b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5",
+          "section": "__cstring",
+          "offset": "0x7f061e6",
+          "detail": "Payload/RedditApp.app/RedditApp SHA256 b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5, __cstring@0x7f061e6: AppsFlyerUserId",
+          "line": 1
+        }
+      ],
+      "verification": "Original-sandbox key presence is explicitly distinguished from first-run/fresh-clone writes. Fresh A/B storage inventory, restore and egress comparisons NOT RUN.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "STORE-016",
+      "category": "app-persisted identifier / key candidate",
+      "surface": "AppsFlyerInstallTimestamp",
+      "mechanism": "String candidate in current executable, which may be a storage key OR a wire field, not proof of a persisted write. Sandbox/generator/hook ownership must be assigned after tracing its producer, storage namespace and consumer; do not rewrite session/account data solely because a name contains id.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/RedditApp",
+          "sha256": "b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5",
+          "section": "__cstring",
+          "offset": "0x7f0621c",
+          "detail": "Payload/RedditApp.app/RedditApp SHA256 b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5, __cstring@0x7f0621c: AppsFlyerInstallTimestamp",
+          "line": 1
+        }
+      ],
+      "verification": "Original-sandbox key presence is explicitly distinguished from first-run/fresh-clone writes. Fresh A/B storage inventory, restore and egress comparisons NOT RUN.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "STORE-017",
+      "category": "app-persisted identifier / key candidate",
+      "surface": "AppsFlyerFirstLaunchDate",
+      "mechanism": "String candidate in current executable, which may be a storage key OR a wire field, not proof of a persisted write. Sandbox/generator/hook ownership must be assigned after tracing its producer, storage namespace and consumer; do not rewrite session/account data solely because a name contains id.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/RedditApp",
+          "sha256": "b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5",
+          "section": "__cstring",
+          "offset": "0x7f06236",
+          "detail": "Payload/RedditApp.app/RedditApp SHA256 b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5, __cstring@0x7f06236: AppsFlyerFirstLaunchDate",
+          "line": 1
+        }
+      ],
+      "verification": "Original-sandbox key presence is explicitly distinguished from first-run/fresh-clone writes. Fresh A/B storage inventory, restore and egress comparisons NOT RUN.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "STORE-018",
+      "category": "app-persisted identifier / key candidate",
+      "surface": "AppsFlyerConversiondataKey",
+      "mechanism": "String candidate in current executable, which may be a storage key OR a wire field, not proof of a persisted write. Sandbox/generator/hook ownership must be assigned after tracing its producer, storage namespace and consumer; do not rewrite session/account data solely because a name contains id.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/RedditApp",
+          "sha256": "b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5",
+          "section": "__cstring",
+          "offset": "0x7f0624f",
+          "detail": "Payload/RedditApp.app/RedditApp SHA256 b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5, __cstring@0x7f0624f: AppsFlyerConversiondataKey",
+          "line": 1
+        }
+      ],
+      "verification": "Original-sandbox key presence is explicitly distinguished from first-run/fresh-clone writes. Fresh A/B storage inventory, restore and egress comparisons NOT RUN.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "STORE-019",
+      "category": "app-persisted identifier / key candidate",
+      "surface": "AppsFlyerDeviceToken",
+      "mechanism": "String candidate in current executable, which may be a storage key OR a wire field, not proof of a persisted write. Sandbox/generator/hook ownership must be assigned after tracing its producer, storage namespace and consumer; do not rewrite session/account data solely because a name contains id.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/RedditApp",
+          "sha256": "b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5",
+          "section": "__cstring",
+          "offset": "0x7f06336",
+          "detail": "Payload/RedditApp.app/RedditApp SHA256 b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5, __cstring@0x7f06336: AppsFlyerDeviceToken",
+          "line": 1
+        }
+      ],
+      "verification": "Original-sandbox key presence is explicitly distinguished from first-run/fresh-clone writes. Fresh A/B storage inventory, restore and egress comparisons NOT RUN.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "STORE-020",
+      "category": "app-persisted identifier / key candidate",
+      "surface": "AppsFlyerTimePassedSincePrevLaunch",
+      "mechanism": "String candidate in current executable, which may be a storage key OR a wire field, not proof of a persisted write. Sandbox/generator/hook ownership must be assigned after tracing its producer, storage namespace and consumer; do not rewrite session/account data solely because a name contains id.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/RedditApp",
+          "sha256": "b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5",
+          "section": "__cstring",
+          "offset": "0x7f0634b",
+          "detail": "Payload/RedditApp.app/RedditApp SHA256 b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5, __cstring@0x7f0634b: AppsFlyerTimePassedSincePrevLaunch",
+          "line": 1
+        }
+      ],
+      "verification": "Original-sandbox key presence is explicitly distinguished from first-run/fresh-clone writes. Fresh A/B storage inventory, restore and egress comparisons NOT RUN.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "STORE-021",
+      "category": "app-persisted identifier / key candidate",
+      "surface": "AppsFlyerLastSessionDuration",
+      "mechanism": "String candidate in current executable, which may be a storage key OR a wire field, not proof of a persisted write. Sandbox/generator/hook ownership must be assigned after tracing its producer, storage namespace and consumer; do not rewrite session/account data solely because a name contains id.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/RedditApp",
+          "sha256": "b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5",
+          "section": "__cstring",
+          "offset": "0x7f063c5",
+          "detail": "Payload/RedditApp.app/RedditApp SHA256 b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5, __cstring@0x7f063c5: AppsFlyerLastSessionDuration",
+          "line": 1
+        }
+      ],
+      "verification": "Original-sandbox key presence is explicitly distinguished from first-run/fresh-clone writes. Fresh A/B storage inventory, restore and egress comparisons NOT RUN.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "STORE-022",
+      "category": "app-persisted identifier / key candidate",
+      "surface": "AppsFlyerBackupInfo",
+      "mechanism": "String candidate in current executable, which may be a storage key OR a wire field, not proof of a persisted write. Sandbox/generator/hook ownership must be assigned after tracing its producer, storage namespace and consumer; do not rewrite session/account data solely because a name contains id.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/RedditApp",
+          "sha256": "b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5",
+          "section": "__cstring",
+          "offset": "0x7f063e2",
+          "detail": "Payload/RedditApp.app/RedditApp SHA256 b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5, __cstring@0x7f063e2: AppsFlyerBackupInfo",
+          "line": 1
+        }
+      ],
+      "verification": "Original-sandbox key presence is explicitly distinguished from first-run/fresh-clone writes. Fresh A/B storage inventory, restore and egress comparisons NOT RUN.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "STORE-023",
+      "category": "app-persisted identifier / key candidate",
+      "surface": "AppsFlyerPreviousTrackingAuthorizationStatus",
+      "mechanism": "String candidate in current executable, which may be a storage key OR a wire field, not proof of a persisted write. Sandbox/generator/hook ownership must be assigned after tracing its producer, storage namespace and consumer; do not rewrite session/account data solely because a name contains id.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/RedditApp",
+          "sha256": "b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5",
+          "section": "__cstring",
+          "offset": "0x7f064bd",
+          "detail": "Payload/RedditApp.app/RedditApp SHA256 b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5, __cstring@0x7f064bd: AppsFlyerPreviousTrackingAuthorizationStatus",
+          "line": 1
+        }
+      ],
+      "verification": "Original-sandbox key presence is explicitly distinguished from first-run/fresh-clone writes. Fresh A/B storage inventory, restore and egress comparisons NOT RUN.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "STORE-024",
+      "category": "app-persisted identifier / key candidate",
+      "surface": "AppsFlyerCurrentLastInstallDate",
+      "mechanism": "String candidate in current executable, which may be a storage key OR a wire field, not proof of a persisted write. Sandbox/generator/hook ownership must be assigned after tracing its producer, storage namespace and consumer; do not rewrite session/account data solely because a name contains id.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/RedditApp",
+          "sha256": "b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5",
+          "section": "__cstring",
+          "offset": "0x7f06bc3",
+          "detail": "Payload/RedditApp.app/RedditApp SHA256 b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5, __cstring@0x7f06bc3: AppsFlyerCurrentLastInstallDate",
+          "line": 1
+        }
+      ],
+      "verification": "Original-sandbox key presence is explicitly distinguished from first-run/fresh-clone writes. Fresh A/B storage inventory, restore and egress comparisons NOT RUN.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "STORE-025",
+      "category": "app-persisted identifier / key candidate",
+      "surface": "AppsFlyerAppGroupName",
+      "mechanism": "String candidate in current executable, which may be a storage key OR a wire field, not proof of a persisted write. Sandbox/generator/hook ownership must be assigned after tracing its producer, storage namespace and consumer; do not rewrite session/account data solely because a name contains id.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/RedditApp",
+          "sha256": "b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5",
+          "section": "__cstring",
+          "offset": "0x7f06b51",
+          "detail": "Payload/RedditApp.app/RedditApp SHA256 b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5, __cstring@0x7f06b51: AppsFlyerAppGroupName",
+          "line": 1
+        }
+      ],
+      "verification": "Original-sandbox key presence is explicitly distinguished from first-run/fresh-clone writes. Fresh A/B storage inventory, restore and egress comparisons NOT RUN.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "STORE-026",
+      "category": "app-persisted identifier / key candidate",
+      "surface": "AppsFlyerMigrateToAppGroups",
+      "mechanism": "String candidate in current executable, which may be a storage key OR a wire field, not proof of a persisted write. Sandbox/generator/hook ownership must be assigned after tracing its producer, storage namespace and consumer; do not rewrite session/account data solely because a name contains id.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/RedditApp",
+          "sha256": "b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5",
+          "section": "__cstring",
+          "offset": "0x7f06174",
+          "detail": "Payload/RedditApp.app/RedditApp SHA256 b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5, __cstring@0x7f06174: AppsFlyerMigrateToAppGroups",
+          "line": 1
+        }
+      ],
+      "verification": "Original-sandbox key presence is explicitly distinguished from first-run/fresh-clone writes. Fresh A/B storage inventory, restore and egress comparisons NOT RUN.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "STORE-027",
+      "category": "app-persisted identifier / key candidate",
+      "surface": "AppsFlyerResetReinstallDetectionOnce",
+      "mechanism": "String candidate in current executable, which may be a storage key OR a wire field, not proof of a persisted write. Sandbox/generator/hook ownership must be assigned after tracing its producer, storage namespace and consumer; do not rewrite session/account data solely because a name contains id.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/RedditApp",
+          "sha256": "b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5",
+          "section": "__cstring",
+          "offset": "0x7f06b9e",
+          "detail": "Payload/RedditApp.app/RedditApp SHA256 b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5, __cstring@0x7f06b9e: AppsFlyerResetReinstallDetectionOnce",
+          "line": 1
+        }
+      ],
+      "verification": "Original-sandbox key presence is explicitly distinguished from first-run/fresh-clone writes. Fresh A/B storage inventory, restore and egress comparisons NOT RUN.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "STORE-028",
+      "category": "app-persisted identifier / key candidate",
+      "surface": "AppsFlyerConfigurationData",
+      "mechanism": "String candidate in current executable, which may be a storage key OR a wire field, not proof of a persisted write. Sandbox/generator/hook ownership must be assigned after tracing its producer, storage namespace and consumer; do not rewrite session/account data solely because a name contains id.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/RedditApp",
+          "sha256": "b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5",
+          "section": "__cstring",
+          "offset": "0x7f0a527",
+          "detail": "Payload/RedditApp.app/RedditApp SHA256 b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5, __cstring@0x7f0a527: AppsFlyerConfigurationData",
+          "line": 1
+        }
+      ],
+      "verification": "Original-sandbox key presence is explicitly distinguished from first-run/fresh-clone writes. Fresh A/B storage inventory, restore and egress comparisons NOT RUN.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "STORE-029",
+      "category": "app-persisted identifier / key candidate",
+      "surface": "AppsFlyerLastFetchTimeInterval",
+      "mechanism": "String candidate in current executable, which may be a storage key OR a wire field, not proof of a persisted write. Sandbox/generator/hook ownership must be assigned after tracing its producer, storage namespace and consumer; do not rewrite session/account data solely because a name contains id.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/RedditApp",
+          "sha256": "b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5",
+          "section": "__cstring",
+          "offset": "0x7f0a542",
+          "detail": "Payload/RedditApp.app/RedditApp SHA256 b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5, __cstring@0x7f0a542: AppsFlyerLastFetchTimeInterval",
+          "line": 1
+        }
+      ],
+      "verification": "Original-sandbox key presence is explicitly distinguished from first-run/fresh-clone writes. Fresh A/B storage inventory, restore and egress comparisons NOT RUN.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "STORE-030",
+      "category": "app-persisted identifier / key candidate",
+      "surface": "appsflyer.keychain",
+      "mechanism": "String candidate in current executable, which may be a storage key OR a wire field, not proof of a persisted write. Sandbox/generator/hook ownership must be assigned after tracing its producer, storage namespace and consumer; do not rewrite session/account data solely because a name contains id.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/RedditApp",
+          "sha256": "b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5",
+          "section": "__cstring",
+          "offset": "0x7f01bc4",
+          "detail": "Payload/RedditApp.app/RedditApp SHA256 b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5, __cstring@0x7f01bc4: appsflyer.keychain",
+          "line": 1
+        }
+      ],
+      "verification": "Original-sandbox key presence is explicitly distinguished from first-run/fresh-clone writes. Fresh A/B storage inventory, restore and egress comparisons NOT RUN.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "STORE-031",
+      "category": "app-persisted identifier / key candidate",
+      "surface": "appsflyer_id",
+      "mechanism": "String candidate in current executable, which may be a storage key OR a wire field, not proof of a persisted write. Sandbox/generator/hook ownership must be assigned after tracing its producer, storage namespace and consumer; do not rewrite session/account data solely because a name contains id.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/RedditApp",
+          "sha256": "b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5",
+          "section": "__cstring",
+          "offset": "0x7f032cb",
+          "detail": "Payload/RedditApp.app/RedditApp SHA256 b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5, __cstring@0x7f032cb: appsflyer_id",
+          "line": 1
+        }
+      ],
+      "verification": "Original-sandbox key presence is explicitly distinguished from first-run/fresh-clone writes. Fresh A/B storage inventory, restore and egress comparisons NOT RUN.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "STORE-032",
+      "category": "app-persisted identifier / key candidate",
+      "surface": "custom_install_id",
+      "mechanism": "String candidate in current executable, which may be a storage key OR a wire field, not proof of a persisted write. Sandbox/generator/hook ownership must be assigned after tracing its producer, storage namespace and consumer; do not rewrite session/account data solely because a name contains id.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/RedditApp",
+          "sha256": "b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5",
+          "section": "__cstring",
+          "offset": "0x7f02f66",
+          "detail": "Payload/RedditApp.app/RedditApp SHA256 b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5, __cstring@0x7f02f66: custom_install_id",
+          "line": 1
+        }
+      ],
+      "verification": "Original-sandbox key presence is explicitly distinguished from first-run/fresh-clone writes. Fresh A/B storage inventory, restore and egress comparisons NOT RUN.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "STORE-033",
+      "category": "app-persisted identifier / key candidate",
+      "surface": "vendorId",
+      "mechanism": "String candidate in current executable, which may be a storage key OR a wire field, not proof of a persisted write. Sandbox/generator/hook ownership must be assigned after tracing its producer, storage namespace and consumer; do not rewrite session/account data solely because a name contains id.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/RedditApp",
+          "sha256": "b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5",
+          "section": "__cstring",
+          "offset": "0x7f06e73",
+          "detail": "Payload/RedditApp.app/RedditApp SHA256 b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5, __cstring@0x7f06e73: vendorId",
+          "line": 1
+        }
+      ],
+      "verification": "Original-sandbox key presence is explicitly distinguished from first-run/fresh-clone writes. Fresh A/B storage inventory, restore and egress comparisons NOT RUN.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "STORE-034",
+      "category": "app-persisted identifier / key candidate",
+      "surface": "com.crashlytics.install.iid",
+      "mechanism": "String candidate in current executable, which may be a storage key OR a wire field, not proof of a persisted write. Sandbox/generator/hook ownership must be assigned after tracing its producer, storage namespace and consumer; do not rewrite session/account data solely because a name contains id.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies",
+          "sha256": "f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222",
+          "section": "__cstring",
+          "offset": "0x2175a59",
+          "detail": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies SHA256 f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222, __cstring@0x2175a59: com.crashlytics.install.iid",
+          "line": 1
+        }
+      ],
+      "verification": "Original-sandbox key presence is explicitly distinguished from first-run/fresh-clone writes. Fresh A/B storage inventory, restore and egress comparisons NOT RUN.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "STORE-035",
+      "category": "app-persisted identifier / key candidate",
+      "surface": "com.crashlytics.install.adid",
+      "mechanism": "String candidate in current executable, which may be a storage key OR a wire field, not proof of a persisted write. Sandbox/generator/hook ownership must be assigned after tracing its producer, storage namespace and consumer; do not rewrite session/account data solely because a name contains id.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies",
+          "sha256": "f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222",
+          "section": "__cstring",
+          "offset": "0x2175a75",
+          "detail": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies SHA256 f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222, __cstring@0x2175a75: com.crashlytics.install.adid",
+          "line": 1
+        }
+      ],
+      "verification": "Original-sandbox key presence is explicitly distinguished from first-run/fresh-clone writes. Fresh A/B storage inventory, restore and egress comparisons NOT RUN.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "STORE-036",
+      "category": "app-persisted identifier / key candidate",
+      "surface": "com.crashlytics.user-id",
+      "mechanism": "String candidate in current executable, which may be a storage key OR a wire field, not proof of a persisted write. Sandbox/generator/hook ownership must be assigned after tracing its producer, storage namespace and consumer; do not rewrite session/account data solely because a name contains id.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies",
+          "sha256": "f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222",
+          "section": "__cstring",
+          "offset": "0x21731e1",
+          "detail": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies SHA256 f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222, __cstring@0x21731e1: com.crashlytics.user-id",
+          "line": 1
+        }
+      ],
+      "verification": "Original-sandbox key presence is explicitly distinguished from first-run/fresh-clone writes. Fresh A/B storage inventory, restore and egress comparisons NOT RUN.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "STORE-038",
+      "category": "app-persisted identifier / key candidate",
+      "surface": "installation_id",
+      "mechanism": "String candidate in current executable, which may be a storage key OR a wire field, not proof of a persisted write. Sandbox/generator/hook ownership must be assigned after tracing its producer, storage namespace and consumer; do not rewrite session/account data solely because a name contains id.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies",
+          "sha256": "f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222",
+          "section": "__cstring",
+          "offset": "0x20e7475",
+          "detail": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies SHA256 f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222, __cstring@0x20e7475: installation_id",
+          "line": 1
+        }
+      ],
+      "verification": "Original-sandbox key presence is explicitly distinguished from first-run/fresh-clone writes. Fresh A/B storage inventory, restore and egress comparisons NOT RUN.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "STORE-039",
+      "category": "app-persisted identifier / key candidate",
+      "surface": "ga_session_id",
+      "mechanism": "String candidate in current executable, which may be a storage key OR a wire field, not proof of a persisted write. Sandbox/generator/hook ownership must be assigned after tracing its producer, storage namespace and consumer; do not rewrite session/account data solely because a name contains id.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies",
+          "sha256": "f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222",
+          "section": "__cstring",
+          "offset": "0x216e499",
+          "detail": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies SHA256 f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222, __cstring@0x216e499: ga_session_id",
+          "line": 1
+        }
+      ],
+      "verification": "Original-sandbox key presence is explicitly distinguished from first-run/fresh-clone writes. Fresh A/B storage inventory, restore and egress comparisons NOT RUN.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "STORE-040",
+      "category": "app-persisted identifier / key candidate",
+      "surface": "app_quality_session_id",
+      "mechanism": "String candidate in current executable, which may be a storage key OR a wire field, not proof of a persisted write. Sandbox/generator/hook ownership must be assigned after tracing its producer, storage namespace and consumer; do not rewrite session/account data solely because a name contains id.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies",
+          "sha256": "f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222",
+          "section": "__cstring",
+          "offset": "0x2172f18",
+          "detail": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies SHA256 f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222, __cstring@0x2172f18: app_quality_session_id",
+          "line": 1
+        },
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies",
+          "sha256": "f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222",
+          "section": "__objc_methname",
+          "offset": "0x23bd3f0",
+          "detail": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies SHA256 f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222, __objc_methname@0x23bd3f0: app_quality_session_id",
+          "line": 1
+        }
+      ],
+      "verification": "Original-sandbox key presence is explicitly distinguished from first-run/fresh-clone writes. Fresh A/B storage inventory, restore and egress comparisons NOT RUN.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "STORE-041",
+      "category": "app-persisted identifier / key candidate",
+      "surface": "install_id",
+      "mechanism": "String candidate in current executable, which may be a storage key OR a wire field, not proof of a persisted write. Sandbox/generator/hook ownership must be assigned after tracing its producer, storage namespace and consumer; do not rewrite session/account data solely because a name contains id.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies",
+          "sha256": "f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222",
+          "section": "__cstring",
+          "offset": "0x2172f2f",
+          "detail": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies SHA256 f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222, __cstring@0x2172f2f: install_id",
+          "line": 1
+        }
+      ],
+      "verification": "Original-sandbox key presence is explicitly distinguished from first-run/fresh-clone writes. Fresh A/B storage inventory, restore and egress comparisons NOT RUN.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "STORE-042",
+      "category": "app-persisted identifier / key candidate",
+      "surface": "odf_app_installation_id",
+      "mechanism": "String candidate in current executable, which may be a storage key OR a wire field, not proof of a persisted write. Sandbox/generator/hook ownership must be assigned after tracing its producer, storage namespace and consumer; do not rewrite session/account data solely because a name contains id.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies",
+          "sha256": "f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222",
+          "section": "__cstring",
+          "offset": "0x215cb90",
+          "detail": "Payload/RedditApp.app/Frameworks/ExtensionDependencies.framework/ExtensionDependencies SHA256 f7ff54d75cac91c88f3bee3ce03809e8a9f32d3f6647b426a10ac9623f186222, __cstring@0x215cb90: odf_app_installation_id",
+          "line": 1
+        }
+      ],
+      "verification": "Original-sandbox key presence is explicitly distinguished from first-run/fresh-clone writes. Fresh A/B storage inventory, restore and egress comparisons NOT RUN.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "STORE-043",
+      "category": "app-persisted identifier / key candidate",
+      "surface": "platform_device_id",
+      "mechanism": "String candidate in current executable, which may be a storage key OR a wire field, not proof of a persisted write. Sandbox/generator/hook ownership must be assigned after tracing its producer, storage namespace and consumer; do not rewrite session/account data solely because a name contains id.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/RedditApp",
+          "sha256": "b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5",
+          "section": "__cstring",
+          "offset": "0x7ef1440",
+          "detail": "Payload/RedditApp.app/RedditApp SHA256 b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5, __cstring@0x7ef1440: platform_device_id",
+          "line": 1
+        }
+      ],
+      "verification": "Original-sandbox key presence is explicitly distinguished from first-run/fresh-clone writes. Fresh A/B storage inventory, restore and egress comparisons NOT RUN.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "STORE-044",
+      "category": "app-persisted identifier / key candidate",
+      "surface": "mweb_user_id",
+      "mechanism": "String candidate in current executable, which may be a storage key OR a wire field, not proof of a persisted write. Sandbox/generator/hook ownership must be assigned after tracing its producer, storage namespace and consumer; do not rewrite session/account data solely because a name contains id.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/RedditApp",
+          "sha256": "b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5",
+          "section": "__cstring",
+          "offset": "0x7f81bc4",
+          "detail": "Payload/RedditApp.app/RedditApp SHA256 b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5, __cstring@0x7f81bc4: mweb_user_id",
+          "line": 1
+        }
+      ],
+      "verification": "Original-sandbox key presence is explicitly distinguished from first-run/fresh-clone writes. Fresh A/B storage inventory, restore and egress comparisons NOT RUN.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "STORE-045",
+      "category": "app-persisted identifier / key candidate",
+      "surface": "com.reddit.ad_events_manager.user_agent_key",
+      "mechanism": "String candidate in current executable, which may be a storage key OR a wire field, not proof of a persisted write. Sandbox/generator/hook ownership must be assigned after tracing its producer, storage namespace and consumer; do not rewrite session/account data solely because a name contains id.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/RedditApp",
+          "sha256": "b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5",
+          "section": "__cstring",
+          "offset": "0x803c6a0",
+          "detail": "Payload/RedditApp.app/RedditApp SHA256 b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5, __cstring@0x803c6a0: com.reddit.ad_events_manager.user_agent_key",
+          "line": 1
+        }
+      ],
+      "verification": "Original-sandbox key presence is explicitly distinguished from first-run/fresh-clone writes. Fresh A/B storage inventory, restore and egress comparisons NOT RUN.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "STORE-046",
+      "category": "app-persisted identifier / key candidate",
+      "surface": "in_app_time_session_id",
+      "mechanism": "String candidate in current executable, which may be a storage key OR a wire field, not proof of a persisted write. Sandbox/generator/hook ownership must be assigned after tracing its producer, storage namespace and consumer; do not rewrite session/account data solely because a name contains id.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/RedditApp",
+          "sha256": "b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5",
+          "section": "__cstring",
+          "offset": "0x80938d0",
+          "detail": "Payload/RedditApp.app/RedditApp SHA256 b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5, __cstring@0x80938d0: in_app_time_session_id",
+          "line": 1
+        }
+      ],
+      "verification": "Original-sandbox key presence is explicitly distinguished from first-run/fresh-clone writes. Fresh A/B storage inventory, restore and egress comparisons NOT RUN.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    },
+    {
+      "id": "STORE-047",
+      "category": "app-persisted identifier / key candidate",
+      "surface": "x-reddit-eventkit-healthcheck-last-tracked-session-id",
+      "mechanism": "String candidate in current executable, which may be a storage key OR a wire field, not proof of a persisted write. Sandbox/generator/hook ownership must be assigned after tracing its producer, storage namespace and consumer; do not rewrite session/account data solely because a name contains id.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/leak-surface/binary-inventory.full.json.gz",
+          "binary": "Payload/RedditApp.app/RedditApp",
+          "sha256": "b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5",
+          "section": "__cstring",
+          "offset": "0x7f57cd0",
+          "detail": "Payload/RedditApp.app/RedditApp SHA256 b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5, __cstring@0x7f57cd0: x-reddit-eventkit-healthcheck-last-tracked-session-id",
+          "line": 1
+        }
+      ],
+      "verification": "Original-sandbox key presence is explicitly distinguished from first-run/fresh-clone writes. Fresh A/B storage inventory, restore and egress comparisons NOT RUN.",
+      "fix": "Do not mark covered until caller/API tracing, storage sentinels and two-clone egress comparison pass; use corresponding OS/NET rows for concrete mechanism gaps."
+    }
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "schemaVersion": 1,
+  "scope": "Bounded fixes from the 2026-09-14 code and device isolation review; no global runtime all-clear.",
+  "rows": [
+    {
+      "id": "ISOOWN-001",
+      "category": "Isolation audit fixes",
+      "surface": "Profile metadata must not redirect A-owned controls into B sandbox",
+      "mechanism": "Exact app descriptor and container-to-bundle derivation are validated before clone operations and profile consumption. Supplied ensure target must match profile identity; sandbox lookup accepts only the manager descriptor family. Missing legacy pre-install app metadata remains compatible.",
+      "coverage": "blocked",
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "shared/RBXAppProfileIdentity.h",
+          "line": 1,
+          "detail": "Exact descriptor/container derivation rejects contradictory optional clone bundle metadata."
+        },
+        {
+          "path": "shared/RBXAppAdmission.h",
+          "line": 1,
+          "detail": "Clone admission checks ownership before dispatched clone operations."
+        },
+        {
+          "path": "daemon/RBXProfileIO.m",
+          "line": 1,
+          "detail": "Profile decoder rejects contradictory owner metadata before consumers can route writes."
+        },
+        {
+          "path": "daemon/RBXCloneManager.m",
+          "line": 1,
+          "detail": "Explicit ensure target validation and descriptor-scoped sandbox lookup; existing installed bundle-path checks retained."
+        },
+        {
+          "path": "scripts/build-mac.sh",
+          "line": 1,
+          "detail": "The native ownership regression is part of every package build."
+        },
+        {
+          "path": "tools/test_clone_profile_ownership.py",
+          "line": 1,
+          "detail": "34 cases execute actual decoder/wrappers/control writer in inert temporary storage; baseline permits foreign write."
+        }
+      ],
+      "verification": "Failing-first native fixture on 3440f5b reproduced foreign control publication. Fixed decoder, admission, ensure and actual control writer pass 34 ownership cases; existing profile/source/deletion/backup regressions remain required.",
+      "fix": "Keep exact ownership tests in the build. Physical A/B lifecycle acceptance and Meta multi-group recovery remain separate open items; this fix does not activate Facebook or prove full sandbox isolation."
+    },
+    {
+      "id": "ISONET-001",
+      "category": "Isolation audit fixes",
+      "surface": "Redirects and application delegate rewrites must retain destination policy",
+      "mechanism": "When third-party networking is disabled, both an HTTP redirect and any substitute request from the application delegate are checked against the current critical-host policy. Allowed/explicit-enabled requests, cancellation and legacy daemon delegate handling retain their semantics.",
+      "coverage": "hook",
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "shared/RBXHTTPProxy.h",
+          "line": 1,
+          "detail": "Optional redirect destination policy; old initializer preserves daemon callers."
+        },
+        {
+          "path": "shared/RBXHTTPProxy.m",
+          "line": 1,
+          "detail": "Check redirected request before delegation and after delegate replacement/completion."
+        },
+        {
+          "path": "tweak/Network/RBXProxyHooks.xm",
+          "line": 1,
+          "detail": "Existing third-party/critical-host policy wired into the actual session delegate wrapper and initial resume."
+        },
+        {
+          "path": "scripts/build-mac.sh",
+          "line": 1,
+          "detail": "Real Foundation redirect regression required by package builds."
+        },
+        {
+          "path": "tools/test_proxy_redirect_policy.py",
+          "line": 1,
+          "detail": "Shipped wrapper and policy exercised with real loopback Foundation transfers; independent server receipts prove denied endpoints receive no request."
+        }
+      ],
+      "verification": "Failing-first real Foundation fixture received denied loopback destination before the fix. Fixed 10-case fixture checks HTTP result, delegate calls and independent server destinations. Proxy auth/route/configuration/region/firewall/socket regressions pass.",
+      "fix": "This closes an NSURLSession destination-preference bypass, not a demonstrated proxy/IP escape. Actual MDM routing, custom transports, background egress and external auth remain separately unverified."
+    },
+    {
+      "id": "ISOSEN-001",
+      "category": "Isolation audit fixes",
+      "surface": "Sentinel evidence must not manufacture PASS or discard positive foreign reads",
+      "mechanism": "Not-found from historical Keychain seed and unwitnessed clipboard emptiness remain inconclusive. Null/error providers cannot look absent. Foreign metadata/defaults/read handles remain LEAK even if a later probe or cleanup throws. Old report normalization preserves LEAK and retained alerts after process binding.",
+      "coverage": "none",
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "shared/RBXIsolationSentinel.h",
+          "line": 1,
+          "detail": "Inconclusive absence stays NOT_RUN; successful foreign access survives subsequent probe/cleanup exceptions."
+        },
+        {
+          "path": "shared/RBXSentinelIO.h",
+          "line": 1,
+          "detail": "Normalize weak old PASS rows without discarding valid LEAK evidence after structural validation."
+        },
+        {
+          "path": "daemon/RBXSentinelController.m",
+          "line": 1,
+          "detail": "Normalize only after process/control binding; durable alerts retained, allPassed requires every row PASS."
+        },
+        {
+          "path": "tweak/LeakDetection/RBXIsolationSentinel.m",
+          "line": 1,
+          "detail": "Actual public API adapters use nil-receiver checks and tested positive-preserving cleanup helpers."
+        },
+        {
+          "path": "tools/test_isolation_sentinel.m",
+          "line": 1,
+          "detail": "Failing-first false-PASS, mixed old report and positive-then-exception fixtures; 44 Security mock calls in final suite."
+        },
+        {
+          "path": "tools/test_clone_architecture.py",
+          "line": 1,
+          "detail": "Architecture follows real helper and normalization call paths."
+        },
+        {
+          "path": "docs/isolation-storage-audit.md",
+          "line": 1,
+          "detail": "Reviewed active storage boundaries and honest probe limitations."
+        }
+      ],
+      "verification": "Five failing-first regressions: historical Keychain absence, mixed old report LEAK loss, and three positive-then-exception paths. Native sentinel/architecture/launch-safety/Keychain sync checks pass; iPhoneOS syntax passes. These use synthetic providers, not two running clones.",
+      "fix": "Execute deliberate A/B/A canaries on a managed admitted clone. Defaults/API variants, current Keychain continuity, external stores and private clipboard paths remain unverified. The observer does not change hooks, entitlements or active network policy."
+    }
+  ]
+}

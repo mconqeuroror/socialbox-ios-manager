@@ -1,0 +1,19 @@
+{
+  "version": "0.1.13",
+  "defaultOff": "PASS",
+  "clipboardChallengeDefaultOff": "PASS",
+  "settingsRoundTrip": "PASS",
+  "actualCloneSentinelRun": "NOT_RUN",
+  "twoCloneIsolation": "NOT_RUN",
+  "reason": "Managed per-app VPN is deferred and only one clone is installed.",
+  "touchscreenRendering": "NOT_RUN",
+  "rootControlDelivered": "PASS",
+  "noSiblingDoesNotClaimPass": "PASS",
+  "invalidSettingsRejected": "PASS",
+  "restoredOff": "PASS",
+  "profileBytesPreserved": true,
+  "nonSentinelContainerMetadataPreserved": true,
+  "gateGenerationAndStatePreserved": true,
+  "licenseActive": true,
+  "recoveryRequired": false
+}

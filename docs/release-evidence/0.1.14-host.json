@@ -1,0 +1,38 @@
+{
+  "variant": "rootless",
+  "version": "0.1.14",
+  "sha256": "518575121e319cee3531d87c9a5c0d54877aa976644627767ff0cc5630e0c2e4",
+  "size": 1645894,
+  "releasePhase": "complete",
+  "releaseMetadata": {
+    "version": "0.1.14",
+    "schemaVersion": 2,
+    "signingContractHash": "e129f8576205b6b49014d555e02d04f5ca80884ef20cfe7ef94856797f3f566a",
+    "requiresMDMReadoption": false,
+    "packageScheme": "rootless",
+    "packageArchitecture": "iphoneos-arm64",
+    "installPrefix": "/var/jb"
+  },
+  "hostNativeBuild": "PASS",
+  "localProxyAndDirectFixtures": "PASS",
+  "macLiveHTTPSConnectPeerCheck": "PASS",
+  "iPhoneUpdateInstallation": "NOT_RUN",
+  "iPhoneReason": "USB device absent; managed per-app VPN and two-clone acceptance still require device setup",
+  "staging": {
+    "variant": "rootless",
+    "version": "0.1.14",
+    "deploymentURL": "https://redditspoof-f5xaov83q-modelclone.vercel.app",
+    "status": "PASS",
+    "ready": true,
+    "issuerMatches": true,
+    "keyIdMatches": true,
+    "expectedKeyId": "b2c5d4176c727107c9826ad69386d4d65f90920074981bd842127d6b22add6e9",
+    "httpStatus": 200,
+    "journalPhaseBeforeRequest": "deployed",
+    "journalPhaseAfterRequest": "deployed",
+    "beforePromotionConfirmed": true,
+    "isReleaseGate": false,
+    "requestStartedAt": "2026-09-12T20:57:49.585790+00:00",
+    "requestCompletedAt": "2026-09-12T20:57:50.262353+00:00"
+  }
+}

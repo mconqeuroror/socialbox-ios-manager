@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "sourceIPASHA256": "2cdaab3bd8bd0238660ea23b566b7bd7713121d996032bbc045d4066d2233e8a",
+  "privateScannerEvidenceSHA256": "76692e8a3f3738e1b6dccb14d335c8a3ec7c779d02953c6ba3eb80d82e68c2f7",
+  "interpretation": "Undefined imports justify covering these key creation APIs; they do not prove invocation, key purpose, value provenance or clone behavior. NotificationServiceExtension is removed from clones.",
+  "images": [
+    {
+      "path": "Payload/Facebook.app/Frameworks/FBFeedAttachmentsFramework.framework/FBFeedAttachmentsFramework",
+      "sha256": "62f24393edc8978daf24d9ea9aacd810237f600db1a061018ce5086cdcad3254",
+      "undefinedSymbols": [
+        {
+          "address": "0x0",
+          "external": true,
+          "name": "_SecKeyCreateRandomKey",
+          "offset": "0x4897b0",
+          "origin": "LC_SYMTAB",
+          "undefined": true
+        },
+        {
+          "address": "0x0",
+          "external": true,
+          "name": "_SecKeyCreateWithData",
+          "offset": "0x4897c0",
+          "origin": "LC_SYMTAB",
+          "undefined": true
+        }
+      ]
+    },
+    {
+      "path": "Payload/Facebook.app/Frameworks/FBRarelyUsedFramework.framework/FBRarelyUsedFramework",
+      "sha256": "2c8e99ba11bc9505d6e59b20bf944c034da0c42b7c47f6bf08eaf742b35df7b1",
+      "undefinedSymbols": [
+        {
+          "address": "0x0",
+          "external": true,
+          "name": "_SecKeyCreateRandomKey",
+          "offset": "0x2a41680",
+          "origin": "LC_SYMTAB",
+          "undefined": true
+        }
+      ]
+    },
+    {
+      "path": "Payload/Facebook.app/Frameworks/FBSharedFramework.framework/FBSharedFramework",
+      "sha256": "16f3c4752486bdfd421c73d6e62746bc2481b13b841fecd4c51e1a3781a2dc94",
+      "undefinedSymbols": [
+        {
+          "address": "0x0",
+          "external": true,
+          "name": "_SecKeyCreateRandomKey",
+          "offset": "0x97fc8e8",
+          "origin": "LC_SYMTAB",
+          "undefined": true
+        },
+        {
+          "address": "0x0",
+          "external": true,
+          "name": "_SecKeyCreateWithData",
+          "offset": "0x97fc908",
+          "origin": "LC_SYMTAB",
+          "undefined": true
+        },
+        {
+          "address": "0x0",
+          "external": true,
+          "name": "_SecKeyGeneratePair",
+          "offset": "0x97fc938",
+          "origin": "LC_SYMTAB",
+          "undefined": true
+        }
+      ]
+    },
+    {
+      "path": "Payload/Facebook.app/Frameworks/widevine_cdm_secured_ios.framework/widevine_cdm_secured_ios",
+      "sha256": "e4b508b722342d0a0a91a5b0a34b226c3442aeac10fab44823fbf71d8602c0e6",
+      "undefinedSymbols": [
+        {
+          "address": "0x0",
+          "external": true,
+          "name": "_SecKeyCreateWithData",
+          "offset": "0x3534b8",
+          "origin": "LC_SYMTAB",
+          "undefined": true
+        }
+      ]
+    },
+    {
+      "path": "Payload/Facebook.app/PlugIns/NotificationServiceExtension.appex/NotificationServiceExtension",
+      "sha256": "d9296fb326c9183755180479a65c0c840f5063884ca81ca8ecdd6ce4122c69b6",
+      "undefinedSymbols": [
+        {
+          "address": "0x0",
+          "external": true,
+          "name": "_SecKeyCreateWithData",
+          "offset": "0xca5708",
+          "origin": "LC_SYMTAB",
+          "undefined": true
+        }
+      ]
+    }
+  ]
+}

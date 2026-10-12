@@ -1,0 +1,293 @@
+{
+  "formatVersion": 1,
+  "unit": "root-observed identity specification and licensed fresh closed allocation",
+  "recordedAtUTC": "2026-10-01T01:54:39.406750+00:00",
+  "status": "PASS",
+  "runtimeAccepted": false,
+  "engineAuthorized": false,
+  "customerReleased": false,
+  "host": {
+    "identity_specification": {
+      "status": "PASS",
+      "assertions": 157,
+      "privateLogSHA256": "369a2aa1a91183283a47fdf9fc7e0716740968ed9b1f6baaf546c9525642dc37"
+    },
+    "closed_allocation": {
+      "status": "PASS",
+      "assertions": 359,
+      "privateLogSHA256": "8321ef570c6000c204100a612add6470a25f2234767c97ea249a6c433f536439"
+    }
+  },
+  "productionCompilation": {
+    "arm64": "PASS",
+    "arm64e": "PASS",
+    "testSeamsExcluded": true,
+    "transportMockUsed": false,
+    "entitlements": {},
+    "signedRootProbeSHA256": "c4ecc85d239e5a9a0392e89ccf3e281c576dbfecf629468ed6d1f9901068ecf7",
+    "signedMobileProbeSHA256": "8d032ec0b37b88e9c20bbc2f694b813d33181f395cd0b51c02498999e0b65025"
+  },
+  "physicalDevice": {
+    "model": "iPhone X",
+    "iOS": "16.7.16",
+    "rootUID": 0,
+    "rootEUID": 0,
+    "mobileUID": 501,
+    "mobileEUID": 501,
+    "genuineDisposableProductionWebsiteLicense": true,
+    "syntheticSigningKeyUsed": false,
+    "status": "PASS",
+    "nativeRootAssertions": 95,
+    "knownPresentMobileReadAssertions": 4,
+    "native": {
+      "exercise": {
+        "status": "PASS",
+        "assertions": 77,
+        "privateLogSHA256": "c458aa648c269a3c77f91c43d62e2ce1671062d9a09e1e6c35a4e6b99d17c520",
+        "results": {
+          "0001 bounded private key input": "PASS",
+          "0002 explicit fresh private stores initialized with the same owner": "PASS",
+          "0003 fresh owner starts without source authorization": "PASS",
+          "0004 one private random configuration prepared": "PASS",
+          "0005 unlicensed save and allocation denied without journal publication": "PASS",
+          "0006 bounded genuine source-owner reply": "PASS",
+          "0007 genuine disposable production website activation accepted": "PASS",
+          "0008 exact configuration saved under source licensing": "PASS",
+          "0009 new namespace allocation is durable closed and bound to exact configuration": "PASS",
+          "0010 all ten generated strings preserved in private identity specification": "PASS",
+          "0011 actual owner-phone model and OS observed without unique hardware identifiers": "PASS",
+          "0012 manufacturer radio and advertising relationships remain explicitly unverified": "PASS",
+          "0013 new directory remains root-owned closed with exact durable inode binding": "PASS",
+          "0014 new directory remains root-owned closed with exact durable inode binding": "PASS",
+          "0015 exact retry confirms same journal bytes and inode without rewrite": "PASS",
+          "0016 exact retry retains directory device inode ownership and mode": "PASS",
+          "0017 exact retry retains directory device inode ownership and mode": "PASS",
+          "0018 restart retains closed resources but denies reuse before revalidation": "PASS",
+          "0019 bounded genuine source-owner reply": "PASS",
+          "0020 fresh production source revalidation": "PASS",
+          "0021 revalidated restart reuses original identity and resource bindings": "PASS",
+          "0022 syntactic collision counterexample saved as private configuration": "PASS",
+          "0023 normalized serial or cross-field UUID MAC reservation rejected before allocation effects": "PASS",
+          "0024 bounded genuine source-owner reply": "PASS",
+          "0025 fresh production source revalidation": "PASS",
+          "0026 syntactic collision counterexample saved as private configuration": "PASS",
+          "0027 normalized serial or cross-field UUID MAC reservation rejected before allocation effects": "PASS",
+          "0028 bounded genuine source-owner reply": "PASS",
+          "0029 fresh production source revalidation": "PASS",
+          "0030 syntactic collision counterexample saved as private configuration": "PASS",
+          "0031 normalized serial or cross-field UUID MAC reservation rejected before allocation effects": "PASS",
+          "0032 bounded genuine source-owner reply": "PASS",
+          "0033 fresh production source revalidation": "PASS",
+          "0034 unsupported runtime scope remains valid requested metadata": "PASS",
+          "0035 unsupported app combination or unresolved proxy never allocates runtime namespaces": "PASS",
+          "0036 unsupported runtime scope remains valid requested metadata": "PASS",
+          "0037 unsupported app combination or unresolved proxy never allocates runtime namespaces": "PASS",
+          "0038 unsupported runtime scope remains valid requested metadata": "PASS",
+          "0039 unsupported app combination or unresolved proxy never allocates runtime namespaces": "PASS",
+          "0040 unsupported runtime scope remains valid requested metadata": "PASS",
+          "0041 unsupported app combination or unresolved proxy never allocates runtime namespaces": "PASS",
+          "0042 unexpected nested node counterexample created in private fixture": "PASS",
+          "0043 unknown nested namespace contents refused without journal repair": "PASS",
+          "0044 bounded genuine source-owner reply": "PASS",
+          "0045 fresh production source revalidation": "PASS",
+          "0046 public journal mode counterexample established": "PASS",
+          "0047 unsafe journal mode refused without permission repair": "PASS",
+          "0048 bounded genuine source-owner reply": "PASS",
+          "0049 fresh production source revalidation": "PASS",
+          "0050 journal hardlink counterexample established": "PASS",
+          "0051 multi-link journal refused without changing durable bytes": "PASS",
+          "0052 bounded genuine source-owner reply": "PASS",
+          "0053 fresh production source revalidation": "PASS",
+          "0054 corrupt private journal counterexample established": "PASS",
+          "0055 corrupt journal refused without silent replacement": "PASS",
+          "0056 bounded genuine source-owner reply": "PASS",
+          "0057 fresh production source revalidation": "PASS",
+          "0058 assigned directory inode replacement established": "PASS",
+          "0059 replaced directory is not rebound or adopted": "PASS",
+          "0060 bounded genuine source-owner reply": "PASS",
+          "0061 fresh production source revalidation": "PASS",
+          "0062 mobile ACL counterexample established on private resource": "PASS",
+          "0063 extended resource ACL refused without journal repair": "PASS",
+          "0064 only the fixture ACL is cleared": "PASS",
+          "0065 bounded genuine source-owner reply": "PASS",
+          "0066 fresh production source revalidation": "PASS",
+          "0067 verified original closed state remains reusable after rejected fixtures": "PASS",
+          "0068 exact saved configuration advances independently of closed allocation": "PASS",
+          "0069 stale configuration snapshot cannot reuse closed allocation": "PASS",
+          "0070 bounded genuine source-owner reply": "PASS",
+          "0071 fresh production source revalidation": "PASS",
+          "0072 same UUID with different complete snapshot conflicts without reallocation": "PASS",
+          "0073 rejected snapshots preserve all original resource identities": "PASS",
+          "0074 rejected snapshots preserve all original resource identities": "PASS",
+          "0075 allocation status descriptions exclude private configuration values": "PASS",
+          "0076 allocation status descriptions exclude private configuration values": "PASS",
+          "0077 allocation status descriptions exclude private configuration values": "PASS"
+        }
+      },
+      "canaries": {
+        "status": "PASS",
+        "assertions": 7,
+        "privateLogSHA256": "0e797ff48400bef7e8faefbe1edb69ac7fc4063a7698f51965d6211fe3372a57",
+        "results": {
+          "0001 private canary owner configuration is exact": "PASS",
+          "0002 private canary directory has exact durable inode and closed root ownership": "PASS",
+          "0003 known-present synthetic witness committed privately": "PASS",
+          "0004 private witness directory synced": "PASS",
+          "0005 private canary directory has exact durable inode and closed root ownership": "PASS",
+          "0006 known-present synthetic witness committed privately": "PASS",
+          "0007 private witness directory synced": "PASS"
+        }
+      },
+      "remove-canaries": {
+        "status": "PASS",
+        "assertions": 7,
+        "privateLogSHA256": "ad49724dc2094c70018bb9c6e3ba307e529903134fb20b3b953c4dec499eb629",
+        "results": {
+          "0001 private canary owner configuration is exact": "PASS",
+          "0002 private canary directory has exact durable inode and closed root ownership": "PASS",
+          "0003 only the exact private synthetic witness is removed": "PASS",
+          "0004 private witness removal synced": "PASS",
+          "0005 private canary directory has exact durable inode and closed root ownership": "PASS",
+          "0006 only the exact private synthetic witness is removed": "PASS",
+          "0007 private witness removal synced": "PASS"
+        }
+      },
+      "revoked": {
+        "status": "PASS",
+        "assertions": 4,
+        "privateLogSHA256": "70d4fa8c3d9ebaf3190f009dd3587179a07a5699bdab273b71a184cd58ab9518",
+        "results": {
+          "0001 revocation probe reopens exact private stores": "PASS",
+          "0002 bounded genuine source-owner reply": "PASS",
+          "0003 genuine signed website revocation closes source authorization": "PASS",
+          "0004 revocation denies allocation reuse and preserves durable journal": "PASS"
+        }
+      }
+    },
+    "mobileReads": {
+      "dataOrdinary": "PASS",
+      "dataDirectSYS_open": "PASS",
+      "groupsOrdinary": "PASS",
+      "groupsDirectSYS_open": "PASS"
+    },
+    "disposableLicenseRevoked": "PASS",
+    "exactPrivateDirectoriesRemoved": "PASS",
+    "sixInstalledOwnerPayloadHashesUnchanged": "PASS",
+    "ownerUIChanged": false,
+    "ownerAccountsChanged": false
+  },
+  "allocationContract": {
+    "rootLibraryConsumerOnly": true,
+    "mobileAllocationIPC": false,
+    "membership": [
+      "com.burbn.instagram"
+    ],
+    "proxyMustBeEmpty": true,
+    "resources": [
+      "data",
+      "groups"
+    ],
+    "rootOwnerUID": 0,
+    "rootOwnerGID": 0,
+    "closedDirectoryMode": "0700",
+    "journalAndLockMode": "0600",
+    "phases": [
+      "intent",
+      "allocation_bound",
+      "data_intent",
+      "data_bound",
+      "groups_intent",
+      "resources_bound",
+      "closing",
+      "closed"
+    ],
+    "maximumJournalBytes": 32768,
+    "maximumInventoryRecords": 4096,
+    "retry": "same configuration UUID and exact full saved document/specification",
+    "unboundPostMkdirNode": "pending; never adopt, replace or delete",
+    "relationshipVerdicts": {
+      "applicability": "UNVERIFIED",
+      "manufacturer": "UNVERIFIED",
+      "TAC": "UNVERIFIED",
+      "operator": "UNVERIFIED",
+      "advertising": "UNVERIFIED"
+    }
+  },
+  "preservedAttempts": [
+    {
+      "status": "FAIL",
+      "stage": "initial native build freshness inspection",
+      "deviceExecution": "NOT_RUN",
+      "productionLicenseCreated": false,
+      "reason": "Final allocator specification comparison changed after the first native build. Hash inspection refused that stale executable before staging or license creation; a fresh build used the frozen source."
+    },
+    {
+      "status": "PASS",
+      "stage": "first private physical run",
+      "independentReplacementInodeAcceptance": "NOT_RUN",
+      "exactPreEffectCanaryInodeBinding": "NOT_RUN",
+      "reason": "Read-only review found the held original inside allocation inventory could confound the inode counterexample, and witness effects lacked persisted inode checks. That completed run remains private; a separate fresh license/build/run moved the original outside inventory and checked exact device/inode before witness effects. Counts above refer only to the revised final run.",
+      "disposableLicenseRevoked": true,
+      "exactPrivateDirectoriesRemoved": true
+    }
+  ],
+  "notRun": [
+    "installed owner creation/editor integration",
+    "mobile allocation consumer IPC",
+    "complete coherent manufactured model/software/carrier identity and applicability",
+    "official Instagram home and app-group registration",
+    "identity hooks consuming the new immutable specification",
+    "automatic safe switching and ongoing session expiry/revocation",
+    "retained descriptors, shared brokers and individual opened-parent storage isolation",
+    "proxy ownership resolution and traffic enforcement",
+    "physical crash, reboot, power-loss or journal-phase interruption recovery",
+    "actual signed-in Instagram account A/B/A",
+    "runnable Facebook/Twitter acceptance",
+    "fresh customer installation/package/download/license acceptance"
+  ],
+  "scopeNotes": [
+    "Root-only direct library acceptance is separate from earlier authenticated mobile metadata IPC. No new allocation operation is exposed by the installed manager or Mach service.",
+    "Ten saved identifier strings are retained exactly; normalized shared UUID/MAC namespaces reserve aliases across pending and closed allocations. This does not prove platform device recognition or manufacturer/carrier consistency.",
+    "Physical facts are captured freshly by root without real unique hardware identifiers. A parsed snapshot alone is not provenance; full observed specification is rechecked on retry and final completion.",
+    "All fresh namespaces remain empty, root-owned and closed. They are unregistered and never opened or launched for a target app.",
+    "UID501 known-present ordinary/direct read denial occurs through a root-private parent as well as closed leaves. It does not prove independent leaf enforcement after opening a runtime parent, official Instagram isolation, or retained-descriptor/broker denial.",
+    "Explicit trusted setup resolves a fixed existing physical parent with POSIX realpath before appending new fixed names. Literal symlink ancestors including /var/jb are refused by the allocator.",
+    "Every failed operation may follow durable effects. Retain the exact original configuration UUID/document, revalidate and reconcile; never regenerate silently. Changed same-UUID configurations conflict, and no identity retirement or allocation edit/migration policy is implemented.",
+    "Host failure-only interruption tests are not physical crash or power-loss acceptance. Present unbound post-create nodes are intentionally refused rather than automatically recovered.",
+    "Production fixture keys, pairing, random identifiers, physical context, raw device reports, archives and screenshots remain private outside Git."
+  ],
+  "sourcesSHA256": {
+    "lucid/Containers/LBXContainerIdentitySpecification.h": "1752cf84c1f33dfbdb3ffdd97fee4f8670ccf20adb82815f1ba7138dbfed7c10",
+    "lucid/Containers/LBXContainerIdentitySpecification.m": "614d15eec2a7988ac2e0e41421f526919890452181fdb422fe8a5faba1d92fce",
+    "lucid/Containers/LBXContainerClosedAllocation.h": "9fdb0d83a91ea052939a21e2418ed8c2a554a65b931ef6418f26a997ca124180",
+    "lucid/Containers/LBXContainerClosedAllocation.m": "68f95c1d2efb3b8d6373312bb31311c0ea2f8b02a265c007cc970c17d401eae2",
+    "lucid/tests/container_identity_specification.m": "51748bc432199c5947fcc752ca500496d4ca76a34e692ebef841b85f12e0108c",
+    "lucid/tests/test_container_identity_specification.sh": "08599ab1b25b35f425456cbd5eec55bc8289539e3b69bc4cfe1320d4279683cd",
+    "lucid/tests/container_closed_allocation.m": "5ced57c062fd718c3b217d7e74b20713d45a0b61aa131362475e7e62f5c5a20e",
+    "lucid/tests/test_container_closed_allocation.sh": "784e5c5c91d2d029a6c20a8429d94792761d81c4a6037b5720d7a27c96a7e2a4"
+  },
+  "productionSourceClosureSHA256": {
+    "daemon/RBXLicenseToken.h": "a21d1072b10136c4ecc809ad1855bebd368849a2bc0628db63202399fcb52979",
+    "daemon/RBXLicenseToken.m": "e3f00d563c99a47400d22b31b152ec4d2ab6123505b9aaa0f2d2d787f13d55da",
+    "lucid/Authorization/LBXLicenseExchange.h": "ab24d7e92934dce040add199712c0bce2cdd29e581b7e0c1a6246708c90f9b29",
+    "lucid/Authorization/LBXLicenseExchange.m": "5a7ed4ef11dcf87ec32876ce34f75463077215734525929f9750f4afc02e7c93",
+    "lucid/Authorization/LBXLicenseIPC.h": "8ff579acaa3b3113e6480f472022df893095d633de08b362a42de3b63df839ea",
+    "lucid/Authorization/LBXLicenseIPC.m": "7c3aec2a53d8c666b4cfd6ba8deb323f172b5c962de82c809834876b9396ffbc",
+    "lucid/Authorization/LBXLicenseOwner.h": "3db4e666a8c4dd9d99b751c2ea4ba8c93fd8917597e8e4438e641d20546c5dc4",
+    "lucid/Authorization/LBXLicenseOwner.m": "37d7194b2877baa0b9158519dc68b9d018834e403c6f8cdc217a37a5f4496f27",
+    "lucid/Authorization/LBXLicenseTransport.h": "bbf31e9e89f19ad7edca17ceb4bfec5e66ff6566d7daff1c125e44af0682e54a",
+    "lucid/Authorization/LBXLicenseTransport.m": "40999576d5d20030ecb50631e4ba69d333de79c2119867923975691147acf35a",
+    "lucid/Authorization/LBXLicenseVault.h": "c799b5249fc7421f35e79d1bcae858e0c0e92680e87ab527f3d87dc51187bc5a",
+    "lucid/Authorization/LBXLicenseVault.m": "e57ccd311379fbdfd02e1dcdd000b8a339c9683997492ce038be8b075e095dd8",
+    "lucid/Containers/LBXContainerClosedAllocation.h": "9fdb0d83a91ea052939a21e2418ed8c2a554a65b931ef6418f26a997ca124180",
+    "lucid/Containers/LBXContainerClosedAllocation.m": "68f95c1d2efb3b8d6373312bb31311c0ea2f8b02a265c007cc970c17d401eae2",
+    "lucid/Containers/LBXContainerConfiguration.h": "bf178269d63bccf8ee2651113ba43401784aff79724b25062026f74e465828fe",
+    "lucid/Containers/LBXContainerConfiguration.m": "0475f4c7443d6a74bca17e47bd19c4c736af8faa319b2bd18d4e2a9c405b58a8",
+    "lucid/Containers/LBXContainerConfigurationStore.h": "0c7e01ace9cbb5241dd9674127f0f07c532cb3720737aaa38c8a41114bf256be",
+    "lucid/Containers/LBXContainerConfigurationStore.m": "d74058930cccbc12b5067cc3bf4c1f257f566168b606024fca2cfb919e85356b",
+    "lucid/Containers/LBXContainerIdentitySpecification.h": "1752cf84c1f33dfbdb3ffdd97fee4f8670ccf20adb82815f1ba7138dbfed7c10",
+    "lucid/Containers/LBXContainerIdentitySpecification.m": "614d15eec2a7988ac2e0e41421f526919890452181fdb422fe8a5faba1d92fce",
+    "shared/RBXLicensePin.h": "e81b82da4597828a48c3dbfa76055a06c3e4a4323a165ed3e7d70b7e97ee9f3f",
+    "shared/RBXStorageGate.h": "95e77751b8b78276d6ef34699176eab2df3243b902f494d5a23cfb257d7fe9ac"
+  }
+}

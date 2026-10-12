@@ -1,0 +1,552 @@
+{
+  "formatVersion": 1,
+  "rows": [
+    {
+      "id": "CLOUD-001",
+      "category": "Cloud workspace and transfer",
+      "surface": "Account/license provenance and private backup authorization",
+      "mechanism": "Capture immutable upload license and authoritative app from the registered profile; revalidate owner, token, activation binding and license. Legacy records retain origin-only access. Web owner management stays account-scoped. The native window root is now a key-only activation screen until a fresh valid daemon publication unlocks it. Revocation/expiry/malformed/stale publication replaces the entire workspace and presented sheets, with an opaque background cover and foreground recheck. Existing signing keys and license authority remain unchanged; UI state alone does not authorize daemon operations. On 2026-09-23 the public web workspace and installation pages were retired in favor of a private admin-only console; device APIs, stored backups and their authorization were preserved. The source-built launcher/daemon/tweak path uses its existing native RS256 verifier and SocialBox deployment, independently of the recovered engine. Fresh installs select that origin; malformed explicit origins fail closed. First-activation rejection remains visible without a pairing. The source daemon also gates queued mutations and direct clone provisioning before any profile access or dispatch. Locked refresh publishes only local state; activation, traffic closure and diagnostic recovery remain available.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "cloud/package.json",
+          "line": 1,
+          "detail": "Integration source or executable regression; full limits in docs/cloud-workspace-integration.md."
+        },
+        {
+          "path": "cloud/scripts/backup-chunks-test.ts",
+          "line": 1,
+          "detail": "Integration source or executable regression; full limits in docs/cloud-workspace-integration.md."
+        },
+        {
+          "path": "cloud/scripts/backup-transfer-test.ts",
+          "line": 1,
+          "detail": "Integration source or executable regression; full limits in docs/cloud-workspace-integration.md."
+        },
+        {
+          "path": "cloud/scripts/cloud-vault-ui-test.mjs",
+          "line": 1,
+          "detail": "Integration source or executable regression; full limits in docs/cloud-workspace-integration.md."
+        },
+        {
+          "path": "cloud/src/app/api/backups/[id]/route.ts",
+          "line": 1,
+          "detail": "Integration source or executable regression; full limits in docs/cloud-workspace-integration.md."
+        },
+        {
+          "path": "cloud/src/app/api/backups/route.ts",
+          "line": 1,
+          "detail": "Integration source or executable regression; full limits in docs/cloud-workspace-integration.md."
+        },
+        {
+          "path": "cloud/src/app/api/backups/transfer/route.ts",
+          "line": 1,
+          "detail": "Integration source or executable regression; full limits in docs/cloud-workspace-integration.md."
+        },
+        {
+          "path": "cloud/src/app/apps/reddit/page.tsx",
+          "line": 1,
+          "detail": "Integration source or executable regression; full limits in docs/cloud-workspace-integration.md."
+        },
+        {
+          "path": "cloud/src/lib/backup-access.ts",
+          "line": 1,
+          "detail": "Integration source or executable regression; full limits in docs/cloud-workspace-integration.md."
+        },
+        {
+          "path": "cloud/src/lib/backup-transfer.ts",
+          "line": 1,
+          "detail": "Integration source or executable regression; full limits in docs/cloud-workspace-integration.md."
+        },
+        {
+          "path": "cloud/src/lib/storage.ts",
+          "line": 1,
+          "detail": "Integration source or executable regression; full limits in docs/cloud-workspace-integration.md."
+        },
+        {
+          "path": "docs/cloud-workspace-integration.md",
+          "line": 1,
+          "detail": "Operator flow, verification and credential/device residuals."
+        },
+        {
+          "path": "launcher/RBXLauncherAppDelegate.m",
+          "line": 323,
+          "anchor": "- (void)refreshLicenseGate {",
+          "detail": "Whole-window gate constructs no workspace before a fresh grant and removes retired roots/sheets on revocation."
+        },
+        {
+          "path": "launcher/RBXLicenseViewController.h",
+          "line": 11,
+          "anchor": "activationOnly:(BOOL)activationOnly;",
+          "detail": "Explicit root-only presentation contract; no maintenance/server controls are constructed for the locked root."
+        },
+        {
+          "path": "launcher/RBXLicenseViewController.m",
+          "line": 178,
+          "anchor": "- (void)buildActivationOnlyView {",
+          "detail": "Key-only entry view retains guarded activation and existing production origin; no key/signature replacement."
+        },
+        {
+          "path": "launcher/RBXLauncherViewController.m",
+          "line": 1367,
+          "anchor": "- (BOOL)workspaceUnlocked {",
+          "detail": "Existing local passcode and license predicate remain necessary inside the granted workspace."
+        },
+        {
+          "path": "docs/license-root-gate-2026-09-20.md",
+          "line": 1,
+          "anchor": "# License-only entry screen",
+          "detail": "Falling baseline, actual UI49/workspace240/native33 results and synthetic-authority limitations."
+        },
+        {
+          "path": "tools/test_license_gate_fixture.m",
+          "line": 18,
+          "anchor": "@interface NSDictionary (GateFixture)",
+          "detail": "Actual AppDelegate/root gate UIKit fixture, including expiry/revocation, sheets, queued deep links, retired tabs and passcode."
+        },
+        {
+          "path": "shared/RBXCloudOrigin.h",
+          "line": 1,
+          "detail": "Source-owned license path and fixed production origin; fresh activation, signed admission, denial visibility and isolated live acceptance."
+        },
+        {
+          "path": "daemon/RBXLicenseGuard.m",
+          "line": 1,
+          "detail": "Source-owned license path and fixed production origin; fresh activation, signed admission, denial visibility and isolated live acceptance."
+        },
+        {
+          "path": "daemon/RBXCloudSync.h",
+          "line": 1,
+          "detail": "Source-owned license path and fixed production origin; fresh activation, signed admission, denial visibility and isolated live acceptance."
+        },
+        {
+          "path": "daemon/RBXCloudSync.m",
+          "line": 1,
+          "detail": "Source-owned license path and fixed production origin; fresh activation, signed admission, denial visibility and isolated live acceptance."
+        },
+        {
+          "path": "prefs/RBXCloudListController.h",
+          "line": 1,
+          "detail": "Source-owned license path and fixed production origin; fresh activation, signed admission, denial visibility and isolated live acceptance."
+        },
+        {
+          "path": "prefs/RBXCloudListController.m",
+          "line": 1,
+          "detail": "Source-owned license path and fixed production origin; fresh activation, signed admission, denial visibility and isolated live acceptance."
+        },
+        {
+          "path": "prefs/RBXRootListController.m",
+          "line": 1,
+          "detail": "Source-owned license path and fixed production origin; fresh activation, signed admission, denial visibility and isolated live acceptance."
+        },
+        {
+          "path": "prefs/RedditBoxPrefs.plist",
+          "line": 1,
+          "detail": "Source-owned license path and fixed production origin; fresh activation, signed admission, denial visibility and isolated live acceptance."
+        },
+        {
+          "path": "tools/test_service_lifetime.m",
+          "line": 1,
+          "detail": "Source-owned license path and fixed production origin; fresh activation, signed admission, denial visibility and isolated live acceptance."
+        },
+        {
+          "path": "tools/license_guard_live_probe.m",
+          "line": 1,
+          "detail": "Source-owned license path and fixed production origin; fresh activation, signed admission, denial visibility and isolated live acceptance."
+        },
+        {
+          "path": "control",
+          "line": 1,
+          "detail": "Independent package boundary and incompatible-engine preflight; preserves installed data instead of coinstalling different isolation engines."
+        },
+        {
+          "path": "layout/DEBIAN/preinst",
+          "line": 1,
+          "detail": "Independent package boundary and incompatible-engine preflight; preserves installed data instead of coinstalling different isolation engines."
+        },
+        {
+          "path": "scripts/build-socialbox-source.sh",
+          "line": 1,
+          "detail": "Independent package boundary and incompatible-engine preflight; preserves installed data instead of coinstalling different isolation engines."
+        },
+        {
+          "path": "tools/check_source_socialbox_package.py",
+          "line": 1,
+          "detail": "Independent package boundary and incompatible-engine preflight; preserves installed data instead of coinstalling different isolation engines."
+        },
+        {
+          "path": "tools/test_source_socialbox_package.py",
+          "line": 1,
+          "detail": "Independent package boundary and incompatible-engine preflight; preserves installed data instead of coinstalling different isolation engines."
+        },
+        {
+          "path": "tools/test_preinstall.py",
+          "line": 1,
+          "detail": "Independent package boundary and incompatible-engine preflight; preserves installed data instead of coinstalling different isolation engines."
+        },
+        {
+          "path": "docs/socialbox-source-licensing.md",
+          "line": 1,
+          "detail": "Independent package boundary and incompatible-engine preflight; preserves installed data instead of coinstalling different isolation engines."
+        },
+        {
+          "path": "daemon/main.m",
+          "line": 1,
+          "detail": "Own signed-grant admission precedes queue dispatch and CLI provisioning; 166 native fixture assertions include unknown actions and local-only locked refresh."
+        },
+        {
+          "path": "scripts/build-mac.sh",
+          "line": 1,
+          "detail": "Own signed-grant admission precedes queue dispatch and CLI provisioning; 166 native fixture assertions include unknown actions and local-only locked refresh."
+        },
+        {
+          "path": "tools/test_license_dispatch.py",
+          "line": 1,
+          "detail": "Own signed-grant admission precedes queue dispatch and CLI provisioning; 166 native fixture assertions include unknown actions and local-only locked refresh."
+        }
+      ],
+      "verification": "Current web scope: backup UI retired on 2026-09-23; its former UI test delegates to the new admin console/redirect acceptance. Backup API and transfer authorization tests remain in npm test. Real routes, compiled bridge/store/admission and restore transaction fixtures, shipped UIKit and built web UI. Physical transfer/Keychain/MDM/network evidence remains required. License gate update: actual UIKit root fixture49 PASS, workspace240 PASS and license-screen native33 PASS using inert IPC and synthetic publication. Cold launch, timer expiry, revoked queued Facebook deep link, retired tabs and independent passcode are covered. No real license activation/server or physical isolation proof is inferred. September 29 independent source authority: actual verifier/transport passed live production activation, restart, validation, second-installation rejection and signed revocation on the Mac and iPhone with isolated, subsequently removed acceptance storage. Two disposable keys were revoked. Queue admission regression failed before the fix and passed 166 assertions afterward. Installed recovered app upgrade and container isolation are NOT_RUN; see docs/socialbox-source-licensing.md.",
+      "fix": "Retain authorization/private-delivery checks on changes; test two physical phones under the same license before claiming portable login or isolation."
+    },
+    {
+      "id": "CLOUD-002",
+      "category": "Cloud workspace and transfer",
+      "surface": "Native private cloud key and selected-app restore boundary",
+      "mechanism": "Request-bound expiring Keychain records carry private metadata/key; public queues carry IDs. UI requires explicit confirmation and valid license status. Decrypted app ownership is checked before restore mutations.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "daemon/RBXCloudSync.h",
+          "line": 1,
+          "detail": "Integration source or executable regression; full limits in docs/cloud-workspace-integration.md."
+        },
+        {
+          "path": "daemon/RBXCloudSync.m",
+          "line": 1,
+          "detail": "Integration source or executable regression; full limits in docs/cloud-workspace-integration.md."
+        },
+        {
+          "path": "daemon/main.m",
+          "line": 1,
+          "detail": "Integration source or executable regression; full limits in docs/cloud-workspace-integration.md."
+        },
+        {
+          "path": "launcher/Makefile",
+          "line": 1,
+          "detail": "Integration source or executable regression; full limits in docs/cloud-workspace-integration.md."
+        },
+        {
+          "path": "launcher/RBXCloudVaultViewController.h",
+          "line": 1,
+          "detail": "Integration source or executable regression; full limits in docs/cloud-workspace-integration.md."
+        },
+        {
+          "path": "launcher/RBXCloudVaultViewController.m",
+          "line": 1,
+          "detail": "Integration source or executable regression; full limits in docs/cloud-workspace-integration.md."
+        },
+        {
+          "path": "launcher/RBXLauncherViewController.m",
+          "line": 1,
+          "detail": "Integration source or executable regression; full limits in docs/cloud-workspace-integration.md."
+        },
+        {
+          "path": "launcher/RBXSettingsViewController.m",
+          "line": 1,
+          "detail": "Integration source or executable regression; full limits in docs/cloud-workspace-integration.md."
+        },
+        {
+          "path": "scripts/build-mac.sh",
+          "line": 1,
+          "detail": "Integration source or executable regression; full limits in docs/cloud-workspace-integration.md."
+        },
+        {
+          "path": "shared/RBXSecureConfig.h",
+          "line": 1,
+          "detail": "Integration source or executable regression; full limits in docs/cloud-workspace-integration.md."
+        },
+        {
+          "path": "shared/RBXSecureConfig.m",
+          "line": 1,
+          "detail": "Integration source or executable regression; full limits in docs/cloud-workspace-integration.md."
+        },
+        {
+          "path": "docs/cloud-workspace-integration.md",
+          "line": 1,
+          "detail": "Operator flow, verification and credential/device residuals."
+        }
+      ],
+      "verification": "Real routes, compiled bridge/store/admission and restore transaction fixtures, shipped UIKit and built web UI. Physical transfer/Keychain/MDM/network evidence remains required.",
+      "fix": "Retain authorization/private-delivery checks on changes; test two physical phones under the same license before claiming portable login or isolation."
+    },
+    {
+      "id": "CLOUD-003",
+      "category": "Cloud workspace and transfer",
+      "surface": "Chunked encrypted transfer and incomplete publication",
+      "mechanism": "1 MiB authenticated ciphertext parts, per-part and whole-ciphertext hashes plus existing AEAD; maximum 200 MiB. Incomplete staging is not a backup. Scoped expiry cleanup excludes completed backups; atomic publication requires all part acknowledgements.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "cloud/src/app/api/backups/transfer/route.ts",
+          "line": 1,
+          "detail": "Bounded transport or executed failure fixture."
+        },
+        {
+          "path": "cloud/src/app/api/backups/[id]/route.ts",
+          "line": 1,
+          "detail": "Bounded transport or executed failure fixture."
+        },
+        {
+          "path": "cloud/src/app/api/backups/route.ts",
+          "line": 1,
+          "detail": "Bounded transport or executed failure fixture."
+        },
+        {
+          "path": "cloud/src/lib/backup-transfer.ts",
+          "line": 1,
+          "detail": "Bounded transport or executed failure fixture."
+        },
+        {
+          "path": "cloud/src/lib/storage.ts",
+          "line": 1,
+          "detail": "Bounded transport or executed failure fixture."
+        },
+        {
+          "path": "daemon/RBXCloudSync.m",
+          "line": 1,
+          "detail": "Bounded transport or executed failure fixture."
+        },
+        {
+          "path": "tools/test_cloud_vault_bridge.py",
+          "line": 1,
+          "detail": "Bounded transport or executed failure fixture."
+        },
+        {
+          "path": "cloud/scripts/backup-chunks-test.ts",
+          "line": 1,
+          "detail": "Bounded transport or executed failure fixture."
+        }
+      ],
+      "verification": "Actual routes reassemble 6 MiB+101 B with ownership, corrupt-part, expiry and delete cases. Native fixture checks corrupt/missing bytes and unconfirmed receipts. Phone memory/throughput at maximum size remains unverified.",
+      "fix": "Verify staged/production availability and real two-phone transfer. Interrupted upload retry starts a new session; expired staging cleanup is lazy."
+    },
+    {
+      "id": "CLOUD-004",
+      "category": "Cloud workspace and transfer",
+      "surface": "Private owner admin console, session routing and license-key presentation",
+      "mechanism": "The owner console and sign-in remain private; /install is a public client entry page exposing only public release status and support links. Signed claims prefilter the canonical configured seed email and admin role; the server layout and every admin API re-read the stored identity and role. Dedicated same-origin owner login issues only an owner session. Customer native login/registration, license/device APIs, backups, existing signer, passwords, session cookie and both old APT repositories retain their contracts. Plaintext generated keys remain in component memory and require acknowledgement. Release UI and /updates remain dormant redirects; /install offers only a promoted upgrade when available, never a fresh-install package or unapproved download. The machine update API remains available. License generation/edit/enable/delete/revoke additionally recheck one unique current actor under the same auth-state transaction callback, before effects. HTTP revoke uses a required-actor API; typed denial does not publish or append audit. Private license/user read endpoints also require that unique current owner in the final auth snapshot used for synchronous projection. Separate audit read precedes the final license guard; user rows and device counts share that same auth snapshot. No authorization write transaction or storage migration contract change. Owner-requested new device issuance fixes expiresAt:null/maxActivations:1 and refuses duration/expanded-limit inputs before issuance; form removes those choices. Existing rows/bindings/history and native freshness/deadlines are unchanged. One installation/bearer is not hardware attestation; local tests/build/browser acceptance is not production or customer/runtime acceptance.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "cloud/package.json",
+          "line": 1,
+          "detail": "Private console implementation and behavioral acceptance. No new license signer or app/backend licensing bridge."
+        },
+        {
+          "path": "cloud/package-lock.json",
+          "line": 1,
+          "detail": "Private console implementation and behavioral acceptance. No new license signer or app/backend licensing bridge."
+        },
+        {
+          "path": "cloud/src/app/admin/page.tsx",
+          "line": 1,
+          "detail": "Private console implementation and behavioral acceptance. No new license signer or app/backend licensing bridge."
+        },
+        {
+          "path": "cloud/src/app/apps/reddit/page.tsx",
+          "line": 1,
+          "detail": "Private console implementation and behavioral acceptance. No new license signer or app/backend licensing bridge."
+        },
+        {
+          "path": "cloud/src/app/globals.css",
+          "line": 1,
+          "detail": "Private console implementation and behavioral acceptance. No new license signer or app/backend licensing bridge."
+        },
+        {
+          "path": "cloud/src/app/install/page.tsx",
+          "line": 1,
+          "detail": "Public installation entry uses validated promoted release metadata. Fresh client installation remains unavailable; no license data, signer or licensing bridge is exposed."
+        },
+        {
+          "path": "cloud/src/app/layout.tsx",
+          "line": 1,
+          "detail": "Private console implementation and behavioral acceptance. No new license signer or app/backend licensing bridge."
+        },
+        {
+          "path": "cloud/src/app/login/page.tsx",
+          "line": 1,
+          "detail": "Private console implementation and behavioral acceptance. No new license signer or app/backend licensing bridge."
+        },
+        {
+          "path": "cloud/src/app/page.tsx",
+          "line": 1,
+          "detail": "Private console implementation and behavioral acceptance. No new license signer or app/backend licensing bridge."
+        },
+        {
+          "path": "cloud/src/lib/admin.ts",
+          "line": 1,
+          "detail": "Private console implementation and behavioral acceptance. No new license signer or app/backend licensing bridge."
+        },
+        {
+          "path": "cloud/src/middleware.ts",
+          "line": 1,
+          "detail": "Private console implementation and behavioral acceptance. No new license signer or app/backend licensing bridge."
+        },
+        {
+          "path": "cloud/scripts/admin-console-test.ts",
+          "line": 1,
+          "detail": "Private console implementation and behavioral acceptance. No new license signer or app/backend licensing bridge."
+        },
+        {
+          "path": "cloud/scripts/admin-console-ui-test.mjs",
+          "line": 1,
+          "detail": "Private console implementation and behavioral acceptance. No new license signer or app/backend licensing bridge."
+        },
+        {
+          "path": "cloud/scripts/cloud-vault-ui-test.mjs",
+          "line": 1,
+          "detail": "Private console implementation and behavioral acceptance. No new license signer or app/backend licensing bridge."
+        },
+        {
+          "path": "docs/release-evidence/socialbox-admin-contact-2026-09-23.json",
+          "line": 1,
+          "detail": "Sanitized production/site and 59-file physical installation receipt; no original foreground or recovered isolation acceptance."
+        },
+        {
+          "path": "cloud/src/lib/console-owner.ts",
+          "line": 1,
+          "detail": "Fresh owner-only authorization and license-only navigation; disposable real-handler and browser acceptance. No production license mutation."
+        },
+        {
+          "path": "cloud/src/lib/console-auth.ts",
+          "line": 1,
+          "detail": "Fresh owner-only authorization and license-only navigation; disposable real-handler and browser acceptance. No production license mutation."
+        },
+        {
+          "path": "cloud/src/app/admin/layout.tsx",
+          "line": 1,
+          "detail": "Fresh owner-only authorization and license-only navigation; disposable real-handler and browser acceptance. No production license mutation."
+        },
+        {
+          "path": "cloud/src/app/api/auth/owner-login/route.ts",
+          "line": 1,
+          "detail": "Fresh owner-only authorization and license-only navigation; disposable real-handler and browser acceptance. No production license mutation."
+        },
+        {
+          "path": "cloud/scripts/private-console-ui-test.mjs",
+          "line": 1,
+          "detail": "Fresh owner-only authorization and license-only navigation; disposable real-handler and browser acceptance. No production license mutation."
+        },
+        {
+          "path": "cloud/PRIVATE_CONSOLE.md",
+          "line": 1,
+          "detail": "Fresh owner-only authorization and license-only navigation; disposable real-handler and browser acceptance. No production license mutation."
+        },
+        {
+          "path": "docs/release-evidence/private-console-startup-2026-09-28/console-browser.json",
+          "line": 1,
+          "detail": "Fresh owner-only authorization and license-only navigation; disposable real-handler and browser acceptance. No production license mutation."
+        },
+        {
+          "path": "cloud/scripts/device-license-test.ts",
+          "line": 1,
+          "detail": "Canonical owner policy applied after fresh stored-user resolution; existing device-license behavior preserved by regression."
+        },
+        {
+          "path": "cloud/src/app/api/admin/licenses/[id]/revoke/route.ts",
+          "line": 1,
+          "detail": "Canonical owner policy applied after fresh stored-user resolution; existing device-license behavior preserved by regression."
+        },
+        {
+          "path": "cloud/src/app/api/admin/licenses/[id]/route.ts",
+          "line": 1,
+          "detail": "Canonical owner policy applied after fresh stored-user resolution; existing device-license behavior preserved by regression."
+        },
+        {
+          "path": "cloud/src/app/api/admin/licenses/route.ts",
+          "line": 1,
+          "detail": "Canonical owner policy applied after fresh stored-user resolution; existing device-license behavior preserved by regression."
+        },
+        {
+          "path": "cloud/src/app/api/admin/users/route.ts",
+          "line": 1,
+          "detail": "Canonical owner policy applied after fresh stored-user resolution; existing device-license behavior preserved by regression."
+        },
+        {
+          "path": "cloud/src/app/api/auth/me/route.ts",
+          "line": 1,
+          "detail": "Canonical owner policy applied after fresh stored-user resolution; existing device-license behavior preserved by regression."
+        },
+        {
+          "path": "cloud/src/lib/device-licenses.ts",
+          "line": 1,
+          "detail": "Existing activation retries require the stored device bearer; copied UUID plus license cannot reissue or overwrite a paired credential. Fresh claiming and migrated owner pairing remain covered."
+        },
+        {
+          "path": "cloud/src/lib/licenses.ts",
+          "line": 1,
+          "detail": "Unit24 ordinary console license transaction authority and bounded synthetic/local acceptance; no first-provisioning or runtime grant."
+        },
+        {
+          "path": "cloud/scripts/console-license-authority-test.ts",
+          "line": 1,
+          "detail": "Unit24 ordinary console license transaction authority and bounded synthetic/local acceptance; no first-provisioning or runtime grant."
+        },
+        {
+          "path": "docs/release-evidence/socialbox-console-license-authority-2026-10-01.json",
+          "line": 1,
+          "detail": "Unit24 ordinary console license transaction authority and bounded synthetic/local acceptance; no first-provisioning or runtime grant."
+        },
+        {
+          "path": "docs/release-evidence/socialbox-website-license-deployment-2026-10-01.json",
+          "line": 1,
+          "detail": "Unit25 accepted existing-site cloud-only deployment of Unit24,18 local suites and anonymous production/APT preservation. No customer installation, signing, account or runtime acceptance."
+        },
+        {
+          "path": "cloud/scripts/console-read-authority-test.ts",
+          "line": 1,
+          "detail": "Unit26 guarded final read snapshots,20 focused actual-handler/local groups and old-source15 expected failures; migrated-fixture byte equality only. No deployment/native/customer/runtime authority."
+        },
+        {
+          "path": "docs/release-evidence/socialbox-console-read-authority-2026-10-01.json",
+          "line": 1,
+          "detail": "Unit26 guarded final read snapshots,20 focused actual-handler/local groups and old-source15 expected failures; migrated-fixture byte equality only. No deployment/native/customer/runtime authority."
+        },
+        {
+          "path": "docs/release-evidence/socialbox-website-read-deployment-2026-10-01.json",
+          "line": 1,
+          "detail": "Unit27 accepted existing-site deployment of Unit26 guarded reads;19 local suites/152 inputs,151 upload files and anonymous production/APT preservation. No customer/native/signing/runtime authority."
+        },
+        {
+          "path": "cloud/scripts/permanent-device-license-test.ts",
+          "line": 1,
+          "detail": "Permanent one-installation issuance, local actual-handler37 groups/124 regressions/11 production-browser checks; no deployed/customer/runtime grant."
+        },
+        {
+          "path": "docs/release-evidence/socialbox-permanent-device-issuance-2026-10-01.json",
+          "line": 1,
+          "detail": "Permanent one-installation issuance, local actual-handler37 groups/124 regressions/11 production-browser checks; no deployed/customer/runtime grant."
+        },
+        {
+          "path": "docs/release-evidence/socialbox-website-permanent-license-deployment-2026-10-01.json",
+          "line": 1,
+          "detail": "Unit36 exact existing-site permanent policy deployment;20 suites/153 inputs,152 upload files, fixed CLI/API reconciliation and six APT/public phases. No real customer/native/runtime acceptance; public-lock/result-shape refusals retained."
+        }
+      ],
+      "verification": "Production Next.js build and existing npm test pass; 13 route/default-password checks and 14 built-browser UI checks pass with synthetic data. Stage and production verification recorded separately. This does not establish that this web signer interoperates with the adopted app licensing engine. 2026-09-28: full cloud suite/build, 10 owner real-handler groups and 10 production-build browser checks PASS with disposable storage/40 keys. Existing production configured owner matched exactly one current admin record by a read-only check; real production password entry remains NOT_RUN. 2026-09-29: reproduced credential reissuance with a copied UUID and key (HTTP 200). Fixed unauthenticated existing-device claims to HTTP 409 without changing device/license records; same-owner alternate-key takeover, invalid/foreign bearer and concurrent first-claim tests included. All 23 device-license groups and full cloud suite pass. This is installation credential binding, not hardware attestation. Unit24 PASS42 ordinary license-authority groups (7 controls,28 real local actor-drift commits,7 synthetic callback replays),23 device/10 console/11 concurrency/18 legacy regressions,typecheck and private production build. Old sourceFAIL35 denied-actor cases retained.116 cloud test inputs and150 copied build inputs stable; no actual Blob-conflict or live deployment/device/customer acceptance. Unit25 PASS18 frozen local suites, exact150-file upload, existing-project unaliased production build/promote and immutable deployment-ID verification;16 APT metadata files unchanged, anonymous public gates PASS and lock released. Unit24 actor-race acceptance remains local; production account/license mutations, owner login, signing/native/customer/runtime acceptance NOT_RUN. Unit26 PASS20 focused read/privacy/coherence/error groups,104 selected regressions,typecheck and151-input synthetic production build; old-sourcePASS5/FAIL15 retained.151 current copied inputs and150 committed counterfactual inputs separately frozen/checked. Local scheduling is not Blob contention; legacy reads can migrate, audit/auth remain separate, authority has no post-read lifetime guarantee. Unit26 acceptance was source-only. Unit27 PASS19 complete local suites with152 frozen copied inputs, exact151-file upload, existing-project unaliased remote build and immutable CLI/API source/project/ID reconciliation, promotion and final canonical ID/public gates.16 APT metadata files unchanged and exact owned lock released. Observed API digest is separate from retained sanitized summary hash; no compiled-bundle byte, production owner race/signing/native/customer/runtime acceptance. Initial nested CLI result-shape parser failure retained and corrected before reconciliation effects; no repeat deploy. Unit36 deploys the permanent null-expiry/max1 policy with all20 local suites/typecheck,153 frozen repository inputs,152-file cloud-only upload and remote build/CLI/API/public gates. Additional2 same-owned-lock continuation and1 exact CLI-shape reconciliation runners are separately stable, retaining both refusals. Six phases preserve16 APT metadata files; owned conditional lock released. No real owner key/hardware/compiled-byte/native/customer acceptance.",
+      "fix": "Validate original mobile licensing consumer integration separately; preserve current token verification and never replace it with always-valid admission."
+    }
+  ]
+}

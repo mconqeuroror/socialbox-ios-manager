@@ -1,0 +1,306 @@
+{
+  "schemaVersion": 1,
+  "script": "scripts/device-acceptance-ssh.sh",
+  "statusValues": [
+    "PASS",
+    "FAIL",
+    "NOT_RUN"
+  ],
+  "contract": "A matching PASS closes only the named observation for this captured device, revision and generation. It never changes a LEAK_SURFACE row automatically or proves all API families in a row.",
+  "checks": [
+    {
+      "match": "publication",
+      "rows": [
+        "ACCEPT-001",
+        "NET-037"
+      ],
+      "automatedObservation": "Fresh daemon state publication",
+      "cannotClose": "Live daemon executable or packet enforcement"
+    },
+    {
+      "match": "license",
+      "rows": [
+        "ACCEPT-001"
+      ],
+      "automatedObservation": "Published activation state",
+      "cannotClose": "Offline grace, revocation and real login"
+    },
+    {
+      "match": "configuration",
+      "rows": [
+        "NET-038",
+        "ACCEPT-001"
+      ],
+      "automatedObservation": "Configuration saved/readable",
+      "cannotClose": "Rotation success, own proxies and country match"
+    },
+    {
+      "match": "source",
+      "rows": [
+        "LIFE-001",
+        "LIFE-002"
+      ],
+      "automatedObservation": "Published source validation",
+      "cannotClose": "Import stress survival and app login"
+    },
+    {
+      "match": "lease-state",
+      "rows": [
+        "LIFE-021",
+        "NET-036"
+      ],
+      "automatedObservation": "Published OPEN state",
+      "cannotClose": "Current lease binding or real network route"
+    },
+    {
+      "match": "reported-*",
+      "rows": [
+        "LIFE-030",
+        "LIFE-010",
+        "NET-036",
+        "LIFE-021",
+        "NET-034",
+        "LIFE-005",
+        "NET-037"
+      ],
+      "automatedObservation": "Existing diagnostics results at their recorded inspection time",
+      "cannotClose": "Current generation after a switch; actual VPN assignment or cross-clone denial"
+    },
+    {
+      "match": "daemon-process",
+      "rows": [
+        "ACCEPT-003",
+        "NET-037"
+      ],
+      "automatedObservation": "Exactly one PID bound to the installed daemon executable",
+      "cannotClose": "Long-running service stability"
+    },
+    {
+      "match": "h02-budget",
+      "rows": [
+        "ACCEPT-003",
+        "LIFE-002"
+      ],
+      "automatedObservation": "GET-only kernel memory limit readback, explicit active/inactive >=256 MiB",
+      "cannotClose": "Import completion, Jetsam survival, default/unlimited kernel limit interpretation"
+    },
+    {
+      "match": "live-lease-*",
+      "rows": [
+        "NET-036",
+        "LIFE-021"
+      ],
+      "automatedObservation": "Captured fresh agreement and OPEN state",
+      "cannotClose": "Traffic stops on revoke or VPN disconnect"
+    },
+    {
+      "match": "live-provider",
+      "rows": [
+        "NET-034"
+      ],
+      "automatedObservation": "Provider reports fresh per-app enforcement",
+      "cannotClose": "OS VPNUUID assignment and packet path"
+    },
+    {
+      "match": "*-structure",
+      "rows": [
+        "ID-005",
+        "LIFE-005",
+        "OS-008",
+        "OS-026"
+      ],
+      "automatedObservation": "Installed main bundle ID and expected sole keychain entitlement; shared/cloud/push/associated-domain entitlements absent",
+      "cannotClose": "Security framework access denial, every nested architecture, App Group runtime recreation"
+    },
+    {
+      "match": "*-removed-extensions",
+      "rows": [
+        "LIFE-006"
+      ],
+      "automatedObservation": "Installed PlugIns/Watch/AppClips directories absent",
+      "cannotClose": "Other bundled SDK or dynamic code behavior"
+    },
+    {
+      "match": "*-data-container",
+      "rows": [
+        "ID-005",
+        "OS-030"
+      ],
+      "automatedObservation": "OS metadata identifies exactly one clone data container",
+      "cannotClose": "Foreign sandbox read/write denial"
+    },
+    {
+      "match": "A-B-distinct-metadata",
+      "rows": [
+        "ID-005",
+        "OS-001",
+        "OS-008",
+        "OS-030"
+      ],
+      "automatedObservation": "Different A/B identifiers, groups and data paths",
+      "cannotClose": "UserDefaults/keychain values and foreign access denial"
+    },
+    {
+      "match": "storage-sentinel-locations",
+      "rows": [
+        "OS-030",
+        "ACCEPT-002"
+      ],
+      "automatedObservation": "Opt-in marker at A tmp absent at B tmp, with cleanup",
+      "cannotClose": "B attempting to open A's absolute path in clone context"
+    },
+    {
+      "match": "hook-*",
+      "rows": [
+        "NET-037",
+        "LIFE-021"
+      ],
+      "automatedObservation": "Receipt binds live executable, generation, clone and epoch; required installed groups true; finite/nonfuture receipt ordering follows ARMED-before-OPEN semantics, with fresh control files at final capture",
+      "cannotClose": "Every hooked selector or downstream SDK data flow"
+    },
+    {
+      "match": "behavior-*",
+      "rows": [
+        "NET-037",
+        "LIFE-021"
+      ],
+      "automatedObservation": "Required in-clone behavior self-reports true under the bound receipt",
+      "cannotClose": "Cross-clone canary denial; keychain-sync-policy READY may mean unchanged mode"
+    },
+    {
+      "match": "*-keychain-sync-policy",
+      "rows": [
+        "OS-011"
+      ],
+      "automatedObservation": "Configured mode displayed without claiming sync isolation",
+      "cannotClose": "Always NOT_RUN until actual iOS query/login evidence"
+    },
+    {
+      "match": "B-deleted-files",
+      "rows": [
+        "LIFE-027",
+        "ACCEPT-002"
+      ],
+      "automatedObservation": "Exact baseline B data directory, installed bundle and profile paths return ENOENT; baseline must match the same nonempty daemon boot epoch",
+      "cannotClose": "Keychain cleanup, all exports, cloud retirement and backup ownership"
+    },
+    {
+      "match": "temporary-observer-cleanup",
+      "rows": [
+        "ACCEPT-002"
+      ],
+      "automatedObservation": "Exact temporary observer removed",
+      "cannotClose": "Any clone state or credential cleanup"
+    },
+    {
+      "match": "capture-generation",
+      "rows": [
+        "NET-036",
+        "LIFE-021"
+      ],
+      "automatedObservation": "Collection detects a lease change and invalidates binding results",
+      "cannotClose": "A changing capture is NOT_RUN"
+    },
+    {
+      "match": "collection",
+      "rows": [
+        "ACCEPT-002"
+      ],
+      "automatedObservation": "Collector dependency/transport/format failure recorded",
+      "cannotClose": "Incomplete collection is NOT_RUN"
+    },
+    {
+      "match": "h02",
+      "rows": [
+        "ACCEPT-003",
+        "LIFE-002"
+      ],
+      "automatedObservation": "None; explicit operator item",
+      "cannotClose": "Import completion and post-import daemon survival"
+    },
+    {
+      "match": "keychain-canary",
+      "rows": [
+        "OS-008",
+        "OS-009",
+        "OS-010"
+      ],
+      "automatedObservation": "None in the read-only battery",
+      "cannotClose": "Readiness-only check remains NOT_RUN. Explicit optional canary-* observations provide separate bounded in-clone evidence; never infer it from root metadata."
+    },
+    {
+      "match": "sandbox-denial",
+      "rows": [
+        "OS-033",
+        "OS-035"
+      ],
+      "automatedObservation": "None in the read-only battery",
+      "cannotClose": "Readiness-only check remains NOT_RUN. Explicit optional canary-* observations provide separate bounded in-clone evidence; never infer it from root metadata."
+    },
+    {
+      "match": "login-actions",
+      "rows": [
+        "AUDIT-001"
+      ],
+      "automatedObservation": "None; no account actions are automated",
+      "cannotClose": "Login, post, vote, logout/switch state"
+    },
+    {
+      "match": "oauth-owner",
+      "rows": [
+        "LIFE-007",
+        "NET-032",
+        "NET-033"
+      ],
+      "automatedObservation": "None; one-at-a-time is a mitigation",
+      "cannotClose": "Callback-owner correctness and external browser routing"
+    },
+    {
+      "match": "packet-routing",
+      "rows": [
+        "NET-034",
+        "NET-036"
+      ],
+      "automatedObservation": "None; provider self-report is insufficient",
+      "cannotClose": "Captured VPN association/disconnect and bypass matrix"
+    },
+    {
+      "match": "public-visibility",
+      "rows": [
+        "AUDIT-001"
+      ],
+      "automatedObservation": "None; operator checks the exact permalink",
+      "cannotClose": "Moderation/ranking or account-wide restriction claims"
+    },
+    {
+      "match": "deletion",
+      "rows": [
+        "LIFE-026",
+        "LIFE-027"
+      ],
+      "automatedObservation": "None for whole cleanup; B-deleted-files is a bounded subset",
+      "cannotClose": "Keychain cleanup requires a separately verified canary"
+    },
+    {
+      "match": "canary-*",
+      "rows": [
+        "ACCEPT-004",
+        "OS-008",
+        "OS-009",
+        "OS-033",
+        "OS-035"
+      ],
+      "automatedObservation": "Explicit root-owned challenge staging and per-stage live process/lease-bound in-clone receipts; aggregate requires ordered A seed, B denial, A continuity and cleanup plus source sentinel witnesses.",
+      "cannotClose": "Prepared/aborted/missing/mismatched/expired results stay NOT_RUN. A full PASS covers the fixed generic-password and filesystem calls only, not every row API or SDK."
+    },
+    {
+      "match": "B-recorded-keychain-cleanup",
+      "rows": [
+        "LIFE-026",
+        "LIFE-027"
+      ],
+      "automatedObservation": "Same-device-epoch committed deletion journal for exact B group updated after baseline, without recovery evidence.",
+      "cannotClose": "Recorded helper completion is not a retained raw Security receipt or independently repeated post-delete keychain query."
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "rows": [
+    {
+      "id": "BOOT-001",
+      "category": "Runtime startup",
+      "surface": "Sensor/display behavior checks and constructor readiness scheduling",
+      "mechanism": "Install hook interception synchronously. Defer readiness, acceptance and sentinel registration onto the main queue after the dylib initializer returns. Construct CoreMotion/UIKit verification objects only in the behavior verifier, before a readiness receipt; recompute rather than return cached success. Network authorization still requires the unchanged signed lease and all existing checks.",
+      "coverage": [
+        "hook",
+        "blocked"
+      ],
+      "verdict": "covered-in-code",
+      "verification": "An actual Facebook clone hit iOS process-launch watchdog after sensor initialization under the dyld initializer lock. Checkpoints stopped after battery and the stackshot showed the main thread waiting with UIKit applicationSupportClient. Failing-first native fixture reproduces premature hardware construction. Actual methods pass with normal, mismatched-display and failed-hook providers. Offline device retry reaches subsequent hook installers and storage probes. Separate Facebook app execution later terminates in its own framework; this change does not claim stable Facebook launch.",
+      "fix": "Constructor hang fixed. Facebook admission remains inactive and defaults-wire remains false. Actual production Reddit UI and online/MDM acceptance still require their own device tests.",
+      "evidence": [
+        {
+          "path": "tweak/Identity/RBXSensorHooks.xm",
+          "anchor": "BOOL RBXInstallSensorHooks(void)",
+          "line": 235,
+          "detail": "Synchronous installation without UIKit/CoreMotion object creation; actual deferred verifier."
+        },
+        {
+          "path": "tweak/RedditBox.xm",
+          "anchor": "dispatch_async(dispatch_get_main_queue(), ^{",
+          "line": 133,
+          "detail": "Readiness and diagnostics after constructor returns, with unchanged gate."
+        },
+        {
+          "path": "tools/test_sensor_startup.py",
+          "anchor": "Execute actual sensor installation/verification",
+          "line": 2,
+          "detail": "Actual production method fixture rejects pre-start hardware access and stale/failed behavior."
+        },
+        {
+          "path": "scripts/build-mac.sh",
+          "anchor": "python3 \"$ROOT/tools/test_sensor_startup.py\"",
+          "line": 92,
+          "detail": "Required executable regression gate."
+        }
+      ]
+    },
+    {
+      "id": "FSOWN-001",
+      "category": "Clone local filesystem",
+      "surface": "Profile control-directory parents created by root daemon",
+      "mechanism": "Traverse the exact OS-issued clone home with openat and O_NOFOLLOW. Provision every Library/Application Support/RedditBox component for the mobile owner, repair only root-owned legacy components, reject foreign ownership/symlinks, and propagate fchown/fchmod failures. Preserve existing app-owned parent modes.",
+      "coverage": [
+        "sandbox"
+      ],
+      "verdict": "covered-in-code",
+      "verification": "Physical clone A had root-owned mode-0700 Application Support, preventing all four private group directories. Actual daemon sync repaired both disposable clone parents to mobile and all four own-group marker checks then passed. Host test executes the actual no-follow helper: 22 assertions covering fresh/existing paths, owner rejection, symlink/regular-file denial, injected chmod failure and preservation of existing parent modes. This fixes own access only: actual cross-clone file reads still succeed on this phone and remain an independent release-blocking gap.",
+      "fix": "Own-parent ownership fixed; do not equate successful own I/O with enforced sandbox isolation.",
+      "evidence": [
+        {
+          "path": "shared/RBXCloneSupportDirectory.h",
+          "anchor": "static inline NSString *RBXCloneSupportDirectory",
+          "line": 10,
+          "detail": "Actual per-component ownership/no-follow helper."
+        },
+        {
+          "path": "daemon/RBXCloneManager.m",
+          "anchor": "NSString *support = sealed ? RBXCloneSupportDirectoryWithRootOwner",
+          "line": 3407,
+          "detail": "Actual profile synchronization must use checked parent provisioning."
+        },
+        {
+          "path": "tools/test_clone_support_directory.py",
+          "anchor": "Actual clone support directory traversal",
+          "line": 2,
+          "detail": "Real filesystem helper checks and production call wiring."
+        },
+        {
+          "path": "scripts/build-mac.sh",
+          "anchor": "python3 \"$ROOT/tools/test_clone_support_directory.py\"",
+          "line": 93,
+          "detail": "Mandatory executable build gate."
+        },
+        {
+          "path": "scripts/build-version.py",
+          "anchor": "\"shared/RBXCloneSupportDirectory.h\",",
+          "line": 31,
+          "detail": "Included in signing contract hash."
+        },
+        {
+          "path": "tools/test_build_version.py",
+          "anchor": "\"shared/RBXCloneSupportDirectory.h\", \"shared/RBXStagedExecutable.h\"]:",
+          "line": 21,
+          "detail": "Changing the ownership helper invalidates the authenticated signing contract."
+        }
+      ]
+    }
+  ]
+}

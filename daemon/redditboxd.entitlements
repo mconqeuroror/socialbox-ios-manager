@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>application-identifier</key>
+    <string>RBXBOXCFG.com.redditbox.daemon</string>
+    <key>com.apple.runningboard.terminateprocess</key><true/>
+    <key>platform-application</key>
+    <true/>
+    <key>com.apple.private.mobileinstall.allowedSPI</key>
+    <array>
+        <string>Uninstall</string>
+        <string>UninstallForLaunchServices</string>
+    </array>
+    <key>com.apple.private.uninstall.deletion</key>
+    <true/>
+    <key>com.apple.security.exception.mach-lookup.global-name</key>
+    <array>
+        <string>com.apple.mobile.installd</string>
+    </array>
+    <key>keychain-access-groups</key>
+    <array>
+        <string>RBXBOXCFG.com.redditbox.config</string>
+        <string>RBXBOXCFG.com.redditbox.daemon-control</string>
+    </array>
+</dict>
+</plist>

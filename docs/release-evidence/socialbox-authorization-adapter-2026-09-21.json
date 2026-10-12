@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "checkedAtUTC": "2026-09-20T22:26:51.084988+00:00",
+  "branch": "feat/lucid-base",
+  "sourceCommit": "c1ddb1d4065fabf2fde0bfe89e90c941496d33b6",
+  "scope": "Source-only adapter for the existing SocialBox licensing service; not linked into recovered presentation candidate",
+  "nativeAssertions": 109,
+  "nativeStatus": "PASS",
+  "existingSignedTokenCases": 23,
+  "existingSignedTokenStatus": "PASS",
+  "existingLicensingArchitectureContract": "PASS",
+  "staticCheck": "PASS",
+  "leakSurfaceGate": "PASS",
+  "productionCompile": {
+    "architectures": [
+      "arm64",
+      "arm64e"
+    ],
+    "minimumIOS": "15.0",
+    "warningsAsErrors": true,
+    "status": "PASS",
+    "testKeyAndClockSelectorsAbsent": true
+  },
+  "failingFirstFixes": [
+    "Reject trailing line terminators in IDs and bearer credentials",
+    "Recheck exchange deadline, supplied revision and signed expiry after verification",
+    "Do not expand future-issue tolerance after a clock rollback"
+  ],
+  "sourceSHA256": {
+    "lucid/Authorization/LBXLicenseExchange.h": "ab24d7e92934dce040add199712c0bce2cdd29e581b7e0c1a6246708c90f9b29",
+    "lucid/Authorization/LBXLicenseExchange.m": "18800c7b454e0ef69e38b02b44853addd46e694327cc012db34020fbb6491b19",
+    "lucid/tests/license_exchange.m": "d70064406be4fc0a1111a25fa4e93c4acb590fa1ff8a61c53a30d0a24f89126f",
+    "lucid/tests/test_license_exchange.sh": "a66af58d0e1bbae141813b67efb4cde83cb94868a0ad29be6fc0be495c7b8ca8",
+    "daemon/RBXLicenseToken.m": "e3f00d563c99a47400d22b31b152ec4d2ab6123505b9aaa0f2d2d787f13d55da"
+  },
+  "serverRequests": false,
+  "deviceChanges": false,
+  "privateCredentialWrites": false,
+  "originalLicenseChecksModified": false,
+  "recoveredEngineAuthorization": "NOT_IMPLEMENTED",
+  "candidateUnchanged": "3.1.0-1+socialbox.1"
+}

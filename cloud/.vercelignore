@@ -1,0 +1,5 @@
+.next
+.data
+.env
+.env.*
+node_modules

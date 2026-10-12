@@ -1,0 +1,224 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-09-28",
+  "scope": "Private owner website and startup presentation fix; no customer release or isolation acceptance",
+  "candidate": {
+    "version": "3.1.0-1+socialbox.17",
+    "packageSHA256": "5a095ad0c05a6eabfb335ae9be03c15a6be9d443c77f0fc33bdd9ff3bf92bba7",
+    "status": "INSTALLED_PAYLOAD_VERIFIED",
+    "payloadFiles": 59,
+    "metadataByteIdentical": true
+  },
+  "backup": {
+    "archiveSHA256": "2154fb9ae3091d458c2cb17650299c7c98ec463479e386539f9c6dfe18972c01",
+    "rawArchiveSHA256": "301edabcca16df0fd83e6b9196507f076edb61c7c01754b5abc856f598d9a346",
+    "storage": "Mac-only private gzip archive",
+    "deviceArchiveCreated": false,
+    "manifestSHA256": "3f7feb4c9cfbc45bf3d587c6e91e89faeb56740fcf0a9548f888becf6f336e11",
+    "archiveBytes": 359811044,
+    "rawArchiveBytes": 853350400,
+    "uncompressedKiB": 846764,
+    "entryCount": 17472,
+    "rootCount": 19,
+    "twoMatchingManifests": true,
+    "persistedGzipDigestAndManifestVerified": true,
+    "scope": "owned runtime state; global system Keychain and foreign target-account recovery not covered"
+  },
+  "dataComparison": {
+    "allOwnedRuntime": {
+      "beforeToFirstPost": {
+        "added": 3,
+        "modified": 3,
+        "removed": 0
+      },
+      "beforeToSecondPost": {
+        "added": 3,
+        "modified": 3,
+        "removed": 0
+      },
+      "entryCounts": [
+        17472,
+        17475,
+        17475
+      ],
+      "firstToSecondPost": {
+        "added": 0,
+        "modified": 2,
+        "removed": 0
+      },
+      "normalizedSHA256": [
+        "5b7ebc32096128285fa21d5da6d87ca36f620b5c506ed8d3aceddbdd8a25ef9f",
+        "ef961199e1d94d75338f64385c6d4287e470191bb11dd763dd606e024936d914",
+        "1c334689bd5771c006193e872f62422421bd41c512a5efe05d6d98fb7a4bea2c"
+      ],
+      "postSnapshotsEqual": false,
+      "regularOrHardlinkCounts": [
+        13940,
+        13943,
+        13943
+      ],
+      "status": "inconclusive",
+      "threeEqual": false
+    },
+    "comparisonReceiptSHA256": "961a46489600068b46ee0be1fa21f51f51f09bc01bc895c739aa22d9994fe7c5",
+    "excludedComparisonFields": [
+      "entry atime/ctime/mtime",
+      "PAX atime/ctime/mtime"
+    ],
+    "installResultSHA256": "4cba76c00c940f30a9ac2cae61e5d91fa9adef02e26a8493fcf15acc7a2443e3",
+    "packageSHA256": "5a095ad0c05a6eabfb335ae9be03c15a6be9d443c77f0fc33bdd9ff3bf92bba7",
+    "rootCounts": [
+      19,
+      19,
+      19
+    ],
+    "rootListsEqual": true,
+    "schemaVersion": 1,
+    "scope": "Container trees and metadata-resolved owned app/group roots; no global Keychain or foreign-account recovery claim",
+    "scopedContainerData": {
+      "beforeToFirstPost": {
+        "added": 0,
+        "modified": 0,
+        "removed": 0
+      },
+      "beforeToSecondPost": {
+        "added": 0,
+        "modified": 0,
+        "removed": 0
+      },
+      "entryCounts": [
+        63,
+        63,
+        63
+      ],
+      "firstToSecondPost": {
+        "added": 0,
+        "modified": 0,
+        "removed": 0
+      },
+      "normalizedSHA256": [
+        "4e59f3837f731b0f92e241f736472aa5739bb78cc5beb9bd2a55683a00ce0dbe",
+        "4e59f3837f731b0f92e241f736472aa5739bb78cc5beb9bd2a55683a00ce0dbe",
+        "4e59f3837f731b0f92e241f736472aa5739bb78cc5beb9bd2a55683a00ce0dbe"
+      ],
+      "postSnapshotsEqual": true,
+      "regularOrHardlinkCounts": [
+        14,
+        14,
+        14
+      ],
+      "status": "same",
+      "threeEqual": true
+    },
+    "scopedSubsetNonempty": true,
+    "sourceManifestSHA256": [
+      "3f7feb4c9cfbc45bf3d587c6e91e89faeb56740fcf0a9548f888becf6f336e11",
+      "fc1585fa116645eef878e1214f990409e7071c515e8de44be9925da3a5d0a80e",
+      "5828f9322eaf188955ed80170f91bfd89468ebd6104e7ae3819dfae0d3db7d2e"
+    ],
+    "version": "3.1.0-1+socialbox.17"
+  },
+  "website": {
+    "production": "https://redditspoof.vercel.app",
+    "deployment": "https://redditspoof-butr5yu7d-modelclone.vercel.app",
+    "status": "complete",
+    "stagingChecks": {
+      "status": "PASS",
+      "routes": [
+        {
+          "route": "/login",
+          "status": 200
+        },
+        {
+          "route": "/",
+          "status": 307
+        },
+        {
+          "route": "/admin",
+          "status": 307
+        },
+        {
+          "route": "/admin/releases",
+          "status": 307
+        },
+        {
+          "route": "/apps/reddit",
+          "status": 307
+        },
+        {
+          "route": "/install",
+          "status": 307
+        },
+        {
+          "route": "/api/admin/releases",
+          "status": 403
+        },
+        {
+          "route": "/api/admin/licenses",
+          "status": 403
+        },
+        {
+          "route": "/api/admin/users",
+          "status": 403
+        },
+        {
+          "route": "/updates",
+          "status": 307
+        },
+        {
+          "route": "/api/releases/socialbox/latest",
+          "status": 200
+        },
+        {
+          "route": "/apt/socialbox/Release",
+          "status": 404
+        }
+      ],
+      "unchangedAPTFiles": 16,
+      "existingAdminReadOnly": "NOT_RUN: protected existing password unavailable; real-handler owner login and revocation passed with disposable storage, production identity matched read-only"
+    },
+    "productionChecks": "PASS: same route and unchanged 16 APT checks completed before publication lock released",
+    "productionBrowserObservation": "PASS: English private license console login; former /updates redirects to /login",
+    "publicationLockReleased": true,
+    "productionOwnerIdentity": "PASS: exact configured existing owner matched stored admin read-only; no credential reset",
+    "liveOwnerCredentialEntry": "NOT_RUN"
+  },
+  "checks": {
+    "cloudFullSuite": "PASS",
+    "cloudProductionBuild": "PASS",
+    "ownerRealHandlerGroups": 10,
+    "realLocalBrowserChecks": 10,
+    "nativeStartupAssertions": 234,
+    "nativeWorkspaceAssertions": 174,
+    "packageTests": 36,
+    "helperTests": 7,
+    "englishCatalogEntries": 287,
+    "englishCatalogChecks": 875,
+    "brandingSourceFiles": 24,
+    "strictUIKitCompile": "PASS",
+    "static": "PASS",
+    "leakSurfaceRows": 390
+  },
+  "foregroundAcceptance": "USER_REPORTED: owner reports the original startup brand no longer appears on installed .17. Agent-recorded post-upgrade cold start and proxy-screen walkthrough NOT_RUN.",
+  "productionMutations": {
+    "websiteDeployment": true,
+    "ownerPhonePackageUpgrade": true,
+    "appPublicRelease": false,
+    "licenses": false,
+    "passwords": false
+  },
+  "observedBefore": {
+    "description": "Physical .16 startup displayed original brand during Verifying license, then SocialBox",
+    "recordingSHA256": "6be71c87bae9303313934719a27def4559b3da327a70e0c210b5254136834577",
+    "bytes": 84707339,
+    "storage": "Private Mac recording; not committed"
+  },
+  "independentScopedReview": "PASS: no actionable startup/proxy diff issues found; constructor timing remains subject to physical acceptance",
+  "ownerStartupObservation": {
+    "result": "PASS",
+    "provenance": "User report in this task after .17 installation",
+    "observation": "Original startup brand no longer appears",
+    "agentRecording": "NOT_RUN",
+    "scope": "Startup presentation only; not license integration, proxy or isolation acceptance"
+  }
+}

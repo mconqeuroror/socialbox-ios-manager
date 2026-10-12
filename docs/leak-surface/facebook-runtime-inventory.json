@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "appType": "facebook",
+  "rows": [
+    {
+      "id": "FBRUN-001",
+      "category": "Facebook binary and runtime acceptance",
+      "surface": "Observed original-app Keychain/defaults/attestation calls; live clone SDK state remains unverified",
+      "mechanism": "Two metadata-only original Facebook launches observe three successful keychain access groups and both generic-password and key item classes. Receiver tracking corrects the earlier defaults-domain placeholder. No identifier values or clone isolation are established.",
+      "coverage": [
+        "blocked"
+      ],
+      "verdict": "gap",
+      "evidence": [
+        {
+          "path": "docs/facebook-runtime-observations.md",
+          "line": 13,
+          "anchor": "## Observed keychain groups and item classes",
+          "detail": "Observed groups, statuses and item classes; original app only, with no values inspected."
+        },
+        {
+          "path": "docs/facebook-runtime-observations.md",
+          "line": 39,
+          "anchor": "## Proposed mitigation and reason it is stopped",
+          "detail": "Historical gap rationale; coordinated group/signing/cleanup/lifecycle implementation is now recorded in FBKEY and FBLIFE rows, while live SDK acceptance remains open."
+        },
+        {
+          "path": "docs/facebook-runtime-evidence.json",
+          "line": 2,
+          "anchor": "\"schemaVersion\": 1",
+          "detail": "Selected redacted metadata bound to both private capture hashes; v1 defaults label normalized and qualified."
+        }
+      ],
+      "verification": "Captures emitted 430/448 records and zero probe errors. Both read the securefamilydeviceid service and a key-class item. Second capture observes AppAttest generate/attest calls and successful adds of two attestation-named services, with completion and server results unknown.",
+      "fix": "Distinct groups, Security wrappers, signing/runtime, cleanup and app-owned lifecycle code are implemented in FBKEY/FBLIFE rows. FBSTORE-001/002 now add preferences and private group directories with synthetic real-Substrate iOS evidence. Keep Facebook inactive and defaults-wire denied until actual clone first-use ordering, persisted identity/restore semantics, managed routing and A/B acceptance are proven."
+    },
+    {
+      "id": "FBRUN-002",
+      "category": "Facebook binary and runtime acceptance",
+      "surface": "Actual Facebook User-Agent producer fields and Mozilla-prefix hardware/OS consistency",
+      "mechanism": "Current FBSharedFramework _FBUserAgent at 0x413a98 returns an Objective-C object via independently resolved retain/autorelease stubs. Ten original-app producer observations expose bounded model/OS/scale/locale and app-version/build fields plus a Mozilla system prefix. This covers producer evidence, not request transmission.",
+      "coverage": [
+        "blocked"
+      ],
+      "verdict": "gap",
+      "verification": "20-second fixed-original-app capture, 10 allowlisted UA records; offline privacy guards passed; no probe-error events. Dynamic fields were not rewritten. Initial dyld attach failure produced no accepted evidence; fresh launches succeeded.",
+      "fix": "FBUA-001 now implements and host-tests the observed prefix/block policy with preserved real app/server metadata. Actual clone interception, first-use timing, broader SDK/defaults/transport and managed routing remain unverified; do not enable Facebook from original producer or host evidence alone.",
+      "evidence": [
+        {
+          "path": "docs/facebook-user-agent-producer-evidence.json",
+          "anchor": "\"staticEvidence\":",
+          "line": 32,
+          "detail": "Exact symbol/image/hash and indirect-stub identity with selected producer records."
+        },
+        {
+          "path": "docs/facebook-integration-status-0.1.22.md",
+          "anchor": "## Newly resolved User-Agent producer",
+          "line": 13,
+          "detail": "Boundaries and implications of the new runtime evidence."
+        }
+      ]
+    }
+  ]
+}

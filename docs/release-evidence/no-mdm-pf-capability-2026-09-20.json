@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-09-20",
+  "scope": "Read-only PF capability; no network enforcement acceptance",
+  "device": {
+    "model": "iPhone10,6",
+    "ios": "16.7.16",
+    "jailbreak": "palera1n rootless",
+    "kernelRelease": "22.6.0",
+    "kernelBuild": "xnu-8796.142.1.703.8",
+    "architecture": "ARM64_T8015"
+  },
+  "probe": {
+    "source": "tools/pf_readonly_probe.c",
+    "sourceSHA256": "5b00895c76bcfb9421a5e23ef9289bdd1c4fb1c8daa430b3858a05cd7e07d871",
+    "binarySHA256": "a4205f7c1b803b7d9f878c66ccb266198e9f9028c6b923ac6ab489828ea61d21",
+    "signature": "Procursus ldid 2.1.5-procursus7, explicit empty XML/DER entitlements",
+    "signatureVerified": true,
+    "executionPath": "/var/jb/usr/local/libexec/socialbox-diagnostics/pf-readonly-probe",
+    "euid": 0,
+    "abiBytes": 440,
+    "ioctl": "0xc1b84415",
+    "openFlags": "O_RDONLY | O_CLOEXEC",
+    "mutatingIoctls": false
+  },
+  "observed": {
+    "pfOpen": 0,
+    "pfOpenErrno": 0,
+    "pfGetStatus": 0,
+    "pfGetStatusErrno": 0,
+    "running": false,
+    "states": 0,
+    "sourceNodes": 0,
+    "interfaces": [
+      "lo0",
+      "pdp_ip0",
+      "pdp_ip1",
+      "pdp_ip2",
+      "pdp_ip3",
+      "pdp_ip4",
+      "anpi0",
+      "en1",
+      "en2",
+      "ap1",
+      "en0",
+      "utun0",
+      "awdl0",
+      "utun1",
+      "llw0",
+      "utun2",
+      "utun3",
+      "utun4"
+    ]
+  },
+  "startupObservation": "Execution from /var/mobile was killed before output. The same signed bytes ran after copying our diagnostic to /var/jb/usr/local/libexec/socialbox-diagnostics. No global trust setting was changed; this observation does not establish a general path-based trust rule.",
+  "verdicts": {
+    "kernelStatusRead": "PASS",
+    "ruleInstallation": "NOT_RUN",
+    "IPv4Enforcement": "NOT_RUN",
+    "IPv6Enforcement": "NOT_RUN",
+    "directDNSUDPQUIC": "NOT_RUN",
+    "retainedStates": "NOT_RUN",
+    "daemonDeath": "NOT_RUN",
+    "networkChange": "NOT_RUN",
+    "reboot": "NOT_RUN",
+    "perAppAttribution": "NOT_PROVIDED"
+  },
+  "limitations": [
+    "PF was not enabled and no rules/routes/VPN preferences were changed.",
+    "An accessible status API does not prove packets traverse PF or rules enforce on every iOS interface.",
+    "All ordinary app processes share mobile UID; PF UID matching is not independent clone attribution.",
+    "The connected phone has active reference-product hooks; their behavior cannot count as SocialBox evidence.",
+    "The private execution log is retained outside the repo; this is the sanitized observation reported by the coordinating root agent."
+  ]
+}

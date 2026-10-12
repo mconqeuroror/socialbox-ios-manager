@@ -1,0 +1,332 @@
+{
+  "schemaVersion": 1,
+  "recordedAtUTC": "2026-09-14T14:19:06.621766+00:00",
+  "branch": "feat/socialbox-multiapp",
+  "baseRevision": "9d5aa5b738f6b2dd77e6403d56002f806b678319",
+  "codeRevision": "093892fe557da2241697a5c9673e5b68e17e8a1b",
+  "merged": false,
+  "codeUnits": [
+    {
+      "commit": "9a90c91f33fcdc84cbec38d6e585296e85a41fb0",
+      "staticCheck": "PASS",
+      "all90HostAndNativeEntryPointsPassed": true
+    },
+    {
+      "commit": "0075a6713ab26ba960e34474217fea6132fcab7a",
+      "staticCheck": "PASS",
+      "all90HostAndNativeEntryPointsPassed": true
+    },
+    {
+      "commit": "0333d3fced6e22f174fd68e077a57c8b7295e22e",
+      "staticCheck": "PASS",
+      "all90HostAndNativeEntryPointsPassed": true
+    },
+    {
+      "commit": "70af6893f9dd05fd700bd2541aac52501b4e8b50",
+      "staticCheck": "PASS",
+      "hostAndNativeEntryPoints": 91,
+      "allEntryPointsPassed": true
+    },
+    {
+      "commit": "093892fe557da2241697a5c9673e5b68e17e8a1b",
+      "staticCheck": "PASS",
+      "hostAndNativeEntryPoints": 92,
+      "allEntryPointsPassed": true
+    }
+  ],
+  "entryPoints": [
+    "tools/test_build_version.py",
+    "tools/test_package_variants.py",
+    "tools/test_apt_release.py",
+    "tools/test_facebook_binary_audit.py",
+    "tools/test_app_bundle_policy.sh",
+    "tools/test_app_runtime.sh",
+    "tools/test_app_profile.py",
+    "tools/test_clone_profile_ownership.py",
+    "tools/test_app_registry.sh",
+    "tools/test_app_process.sh",
+    "tools/test_app_process_coordinator.sh",
+    "tools/test_app_source.py",
+    "tools/test_app_mdm.sh",
+    "tools/test_app_scope.sh",
+    "tools/test_launcher_multiapp.py",
+    "tools/test_apt_metadata_refresh.py",
+    "tools/test_clone_architecture.py",
+    "tools/test_identity_editor.py",
+    "tools/test_clone_visibility_metadata.py",
+    "tools/test_installer_evidence.py",
+    "tools/test_identity_manual_inputs.py",
+    "tools/test_automatic_identity.py",
+    "tools/test_passcode_removal.py",
+    "tools/test_passcode_store.sh",
+    "tools/test_identity_user_agent.py",
+    "tools/test_app_version_settings.py",
+    "tools/test_creation_defaults.py",
+    "tools/test_device_catalog_data.py",
+    "tools/test_device_version_hook.py",
+    "tools/test_identity_choices.py",
+    "tools/test_launcher_architecture.py",
+    "tests/test_replacement_architecture.py",
+    "tools/test_firewall_policy.sh",
+    "tools/test_request_queue.sh",
+    "tools/test_secure_config.sh",
+    "tools/test_identity_draft_store.sh",
+    "tools/test_preinstall.py",
+    "tools/test_postinstall.py",
+    "tools/test_macho_probe.py",
+    "tools/test_request_budgets.py",
+    "tools/test_proxy_library.sh",
+    "tools/test_proxy_configuration.py",
+    "tools/test_proxy_redirect_policy.py",
+    "tools/test_proxy_region.sh",
+    "tools/test_proxy_region_transport.py",
+    "tools/test_rotation_secrets.sh",
+    "tools/test_backup_snapshot.sh",
+    "tools/test_backup_identity.py",
+    "tools/test_backup_restore_cleanup.py",
+    "tools/test_backup_archive.py",
+    "tools/test_identity_freeze.py",
+    "tools/test_smoke_log_order.py",
+    "tools/test_sign_firewall_app.py",
+    "tools/test_keychain_cleaner.sh",
+    "tools/test_keychain_sync.sh",
+    "tools/test_clone_acceptance.sh",
+    "tools/test_isolation_sentinel.sh",
+    "tools/test_launch_safety.sh",
+    "tools/test_proxy_route_transport.py",
+    "tools/test_acceptance_checks.sh",
+    "tools/test_operator_wording.sh",
+    "tools/test_wizard_draft.sh",
+    "tools/test_device_acceptance_ssh.py",
+    "tools/test_device_acceptance_canaries.py",
+    "tools/test_deletion_journal.sh",
+    "tools/test_profile_metadata.sh",
+    "tests/test_replacement.sh",
+    "tools/test_profile_metadata.py",
+    "tools/test_account_status_browser.py",
+    "tools/test_license_key.py",
+    "tools/test_license_screen.py",
+    "tools/test_license_presentation.py",
+    "tools/test_license_presentation.sh",
+    "tests/test_license_token.sh",
+    "tests/test_license_architecture.py",
+    "tests/test_data_schema.sh",
+    "tests/test_data_schema_architecture.py",
+    "tools/test_update_startup.py",
+    "tools/test_device_catalog.sh",
+    "tools/test_fingerprint_registry.sh",
+    "tools/test_operation_context.sh",
+    "tools/test_memory_budget.sh",
+    "tools/test_request_deadlines.sh",
+    "tools/test_bounded_process.sh",
+    "tools/test_service_lifetime.sh",
+    "tools/test_socket_guard.sh",
+    "tools/test_hook_readiness.sh",
+    "tools/test_http_proxy.sh",
+    "tools/test_reddit_payload.sh",
+    "tools/test_leak_audit.py",
+    "tools/test_leak_surface.py",
+    "tools/check_pasteboard_api.py"
+  ],
+  "previous88EntryPointsRetained": true,
+  "UIKit": {
+    "checks": 138,
+    "failures": 0,
+    "providers": "Actual UIKit with inert IPC/private drafts; no phone UI taps"
+  },
+  "automaticDraftNative": {
+    "checks": 42,
+    "failures": 0
+  },
+  "manualIdentifierNative": {
+    "checks": 419,
+    "failures": 0
+  },
+  "builds": {
+    "rootless": "PASS",
+    "rootful": "PASS",
+    "version": "0.1.19",
+    "signing": "Procursus ldid; no Apple Development Team; unchanged existing public license pin"
+  },
+  "resolvedFailures": [
+    "Receipt test originally extracted new neighboring helper functions; bounded its existing assertions to intended functions. Gates1-6 passed initially; corrected gate7 passed; unchanged8-90 resumed; final static/source contract passed.",
+    "Full rootless build caught four misleading-indentation errors. Explicit braces/separate returns preserve semantics; warning promoted to error in automatic native fixture; all90 gates and both full builds subsequently passed.",
+    "Backend commit message was corrected with its required EDIT-008 trailer using an exact-lease update of the just-pushed owned commit; no source content changed."
+  ],
+  "replayLogQualification": "Buildfix-specific RED/GREEN compiler logs are explicitly later replays against their recorded source revisions; original failure is independently retained in the full failed device build log.",
+  "logs": [
+    {
+      "privateLog": "automatic-backend-checks.log",
+      "sha256": "68ae90eaa75ae731687602daaac99c375b13872e953235d19be56c758ded7830"
+    },
+    {
+      "privateLog": "automatic-backend-check7.log",
+      "sha256": "66d1b85893771d6ac3747220f8b78f36e93bd301f96a102d6282558f8fd6900b"
+    },
+    {
+      "privateLog": "automatic-backend-checks-rest.log",
+      "sha256": "d41a2837c0d9c1e6c21cea620c01f1f7dea1d43c4352929def2be480f18c7818"
+    },
+    {
+      "privateLog": "automatic-backend-final-static.log",
+      "sha256": "f4935a40d51562f6e38dca9afd2102b8d7563e878eac0859d26d605b098cf8f5"
+    },
+    {
+      "privateLog": "automatic-ui-checks.log",
+      "sha256": "fb6b6a1cbc3d3e7884a3ad6772ba4d0908a50864c27268d01e24036d5c3ed96f"
+    },
+    {
+      "privateLog": "automatic-compile-checks.log",
+      "sha256": "6e02f2b3cba443fd2f469ed74505cc478158e69d574f5d550d466b94ef9317bb"
+    },
+    {
+      "privateLog": "automatic-ui-simulator-red.log",
+      "sha256": "6a008e52722eef2b94d9b1a90fe2fa0da1377835bcb22a541c7db118b78f3a45"
+    },
+    {
+      "privateLog": "automatic-ui-idfa-red.log",
+      "sha256": "02ec482ee7364ce3bac907a37a9101b11de6fa77f1aeb5a2250b9f3791e4878d"
+    },
+    {
+      "privateLog": "automatic-ui-simulator-green.log",
+      "sha256": "aea1d4ddef6c6dba8076a9ac268a7600332604a1d6354da73c0be2d0da38d3d7"
+    },
+    {
+      "privateLog": "automatic-ui-focused.log",
+      "sha256": "aef166be6c62b02398a8d382bb411d3bf34affb7ff84038bb8979948800baa3d"
+    },
+    {
+      "privateLog": "automatic-build-rootless-0.1.19.log",
+      "sha256": "399d72106e0964a54dcf1b69eb54e06827e0b856a674355b55739d4629dec4be"
+    },
+    {
+      "privateLog": "automatic-build-rootless-0.1.19-final.log",
+      "sha256": "835bb88ad486e9e98a1c049e7b49ebed09add1521239e56698bc16a6d2109d64"
+    },
+    {
+      "privateLog": "automatic-build-rootful-0.1.19-final.log",
+      "sha256": "161737effc220558a16febdfa4d00077cd6e29cacf881be3d285331e6ca78e45"
+    },
+    {
+      "privateLog": "automatic-build-contract-final.log",
+      "sha256": "8b3102472b2fb5b6cc3cc720747259fd4f7d315cbfede701cb0a2470b334ec2d"
+    },
+    {
+      "privateLog": "automatic-build-static-final.log",
+      "sha256": "acccbbcefeea821cab93d8dee6203599f544e2924bf62fb2e3a335379a23f0a6"
+    },
+    {
+      "privateLog": "automatic-package-inspection.log",
+      "sha256": "9677623910e6e5c70a7c24bb07fee379cbec2aba18b9b224a50161e626972eff"
+    },
+    {
+      "privateLog": "automatic-buildfix-native-red-replay.log",
+      "sha256": "bac5b844ecbb861b4161c5f95d5f753c3deda4b120d946b5e30bba729d15de87"
+    },
+    {
+      "privateLog": "automatic-buildfix-native-green-replay.log",
+      "sha256": "6824a189d063e990917835dc2363b7ca1f1322569525320779fdaded2ff08896"
+    },
+    {
+      "privateLog": "automatic-buildfix-iphoneos-arm64-green-replay.log",
+      "sha256": "5fb2b35d8047abecdea4ab51337e5f2c4e700b8e0f593833220789db04036561"
+    },
+    {
+      "privateLog": "automatic-buildfix-iphoneos-arm64e-green-replay.log",
+      "sha256": "b1dee41d70d39688c7a73a952ea39f0b8d8c418038ef1b6d1c1cf595f9727718"
+    }
+  ],
+  "previous90EntryPointsRetained": true,
+  "installerAndVisibilityLogs": [
+    {
+      "privateLog": "automatic-installer-checks-valid.log",
+      "sha256": "457d72a3b580c87d54b90b7d11cdd9bde1cd499dc03d994fa2f86325e88e842d"
+    },
+    {
+      "privateLog": "automatic-visibility-checks.log",
+      "sha256": "1d169430c1d714660b2c26d04f3c6b93c868f5bf0ba6b6f98c552120bbd22c2a"
+    },
+    {
+      "privateLog": "bounded-termination-native-red.log",
+      "sha256": "28543a27f9d4c6b00986472d5a6ad36b7b46454944a46e585a96ede7d819285a"
+    },
+    {
+      "privateLog": "bounded-termination-native-green.log",
+      "sha256": "1424e26aab89452c47c481a5eef33aece048a13d038d73dd210768fd0670cf28"
+    },
+    {
+      "privateLog": "installer-evidence-native-red.log",
+      "sha256": "b236ea3fd43789016de11ed2fb4a1b198141d1c2b13ec9d6b273dcf5b78194ba"
+    },
+    {
+      "privateLog": "installer-evidence-native-green.log",
+      "sha256": "2f1ec12dc9a987ab661793fc51610060fab2765d654328fd835d1e6433009d98"
+    },
+    {
+      "privateLog": "clone-visibility-native-red.log",
+      "sha256": "a1d68ae805e8d41d90763d800b351333c5dab68d0b827a3b70eff0f49e6686cb"
+    },
+    {
+      "privateLog": "clone-visibility-native-green.log",
+      "sha256": "e0a3ec57f302163ece59e5342fbea9886700a3e5f79400f1150f1bca6f45e0d5"
+    },
+    {
+      "privateLog": "automatic-build-rootless-0.1.20.log",
+      "sha256": "e80ff8d9433adb2e955639181a41307d450a6026ea9df700ff082ae2305d9cde"
+    },
+    {
+      "privateLog": "automatic-build-rootful-0.1.20.log",
+      "sha256": "6795a0962da07d467f04d2e0f6bcc77f7e803e908a35c72e3a82b3fe7e897403"
+    },
+    {
+      "privateLog": "automatic-package-inspection-0.1.20.log",
+      "sha256": "d5c2f9e3b767930d851b6dee9bff6145755aeeca9084dca9a879337cfb554f1a"
+    },
+    {
+      "privateLog": "automatic-build-static-0.1.20.log",
+      "sha256": "acccbbcefeea821cab93d8dee6203599f544e2924bf62fb2e3a335379a23f0a6"
+    }
+  ],
+  "installerEvidenceNative": {
+    "checks": 151,
+    "result": "PASS",
+    "realInstaller": "NOT_RUN by fixture",
+    "actualMethods": true,
+    "filesystem": "real private fixture",
+    "processProvider": "mocked"
+  },
+  "cloneVisibilityNative": {
+    "checks": 85,
+    "redFailures": 8,
+    "result": "PASS",
+    "physicalCrashRemediation": "NOT_YET_PROVEN"
+  },
+  "builds020": {
+    "rootless": "PASS",
+    "rootful": "PASS",
+    "ldidOnly": true,
+    "appleDevelopmentTeamUsed": false,
+    "productionPublished": false,
+    "packageEvidence": "automatic-identity-packages-0.1.20.json"
+  },
+  "finalDocumentationCheck": {
+    "staticCheck": "PASS_ALL_CLEAN",
+    "gitDiffCheck": "PASS",
+    "documentationJSON": "PASS",
+    "actualDevice": "30 checks PASS on 0.1.20; see automatic-identity-device-acceptance-2026-09-14.json",
+    "focusedNativeRecheck": [
+      {
+        "checksPassed": 42,
+        "failures": 0,
+        "privateLog": "automatic-final-native-draft.log",
+        "sha256": "74a43ee038030777d8fc77f608e4ce32bf0d8b7bfb17952d4396573390c074c8"
+      },
+      {
+        "checksPassed": 419,
+        "failures": 0,
+        "privateLog": "automatic-final-native-manual.log",
+        "sha256": "c55b61f5a7b7d51639d5dc39d3b808e8ecd6f02e630fabbfb89a3eb1887c8cdc"
+      }
+    ]
+  }
+}

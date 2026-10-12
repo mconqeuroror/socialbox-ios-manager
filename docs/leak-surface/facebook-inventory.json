@@ -1,0 +1,450 @@
+{
+  "schemaVersion": 1,
+  "appType": "facebook",
+  "phase": "A static evidence baseline; runtime rows remain open",
+  "rows": [
+    {
+      "id": "FB-001",
+      "category": "Facebook binary and runtime acceptance",
+      "surface": "Input identity and bounded structural enumeration",
+      "mechanism": "Scanner records hash-bound original declarations and complete supported structural tables; selected public-name supplement and independent import/dependency checks.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "docs/facebook-binary-audit.md",
+          "line": 7,
+          "detail": "FB-001 static findings, exact offsets and explicit runtime limits.",
+          "anchor": "## Input and reproducibility"
+        },
+        {
+          "path": "docs/leak-surface/facebook-binary-evidence.json",
+          "line": 53253,
+          "detail": "Hash-bound selected structural reference records; examples capped with match_count; not observed invocation.",
+          "anchor": "\"platform_identifiers\": ["
+        },
+        {
+          "path": "tools/enumerate_facebook_binary.py",
+          "line": 1,
+          "detail": "Reusable supplemental scanner verifies source/image identity and bounds-checks embedded entitlement blobs."
+        },
+        {
+          "path": "tools/test_facebook_binary_audit.py",
+          "line": 1,
+          "detail": "Native data-parser and committed-evidence invariant checks; no phone effects."
+        },
+        {
+          "path": "docs/leak-surface/facebook-binary-validation.json",
+          "line": 1,
+          "detail": "Independent nm/otool comparisons for all images; chained-fixup-only additions and LC_ID_DYLIB differences explicitly recorded."
+        }
+      ],
+      "verification": "Twenty decrypted images and zero unresolved decoded references; host enumeration is established only for this source IPA and scanner hash.",
+      "fix": "Re-enumerate a new IPA hash; separately validate effective clone artifact and runtime behavior."
+    },
+    {
+      "id": "FB-002",
+      "category": "Facebook binary and runtime acceptance",
+      "surface": "IDFV, IDFA and platform identifier callers",
+      "mechanism": "Main and framework selector references are candidate callers; platform hooks need app-specific installation and return-value evidence.",
+      "coverage": [
+        "hook"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/facebook-binary-audit.md",
+          "line": 57,
+          "detail": "FB-002 static findings, exact offsets and explicit runtime limits.",
+          "anchor": "## Platform and local app identity"
+        },
+        {
+          "path": "docs/leak-surface/facebook-binary-evidence.json",
+          "line": 53253,
+          "detail": "Hash-bound selected structural reference records; examples capped with match_count; not observed invocation.",
+          "anchor": "\"platform_identifiers\": ["
+        }
+      ],
+      "verification": "Main identifierForVendor at 0xfc6208 and advertisingIdentifier at 0xfc5bd8; no instrumented clone API result captured.",
+      "fix": "Trace actual receivers/callers and validate fresh A/B identity consistency, tracking-disabled semantics and restore behavior."
+    },
+    {
+      "id": "FB-003",
+      "category": "Facebook binary and runtime acceptance",
+      "surface": "Local app/device/analytics identifier storage candidates",
+      "mechanism": "Narrow literal candidates identify names to investigate; no arbitrary default-key seeding or schema-blind wire replacement follows from names.",
+      "coverage": [
+        "sandbox"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/facebook-binary-audit.md",
+          "line": 57,
+          "detail": "FB-003 static findings, exact offsets and explicit runtime limits.",
+          "anchor": "## Platform and local app identity"
+        },
+        {
+          "path": "docs/leak-surface/facebook-binary-evidence.json",
+          "line": 42006,
+          "detail": "Hash-bound selected structural reference records; examples capped with match_count; not observed invocation.",
+          "anchor": "\"family_device_identity\": ["
+        }
+      ],
+      "verification": "app_scoped_device_id, app_device_id, analytics_device_id and com.facebook.analytics.device_id are static candidates; writes, types and provenance remain unknown.",
+      "fix": "Observe first-run key names/types/status and within-run private fingerprints; trace generation, persistence and send provenance before mutations."
+    },
+    {
+      "id": "FB-004",
+      "category": "Facebook binary and runtime acceptance",
+      "surface": "Family-device identity and cross-app backup candidates",
+      "mechanism": "FBFamilyDeviceID is defined in shared framework and notification extension; cache/setup/sync refs and family key literals identify possible shared persistence.",
+      "coverage": [
+        "sandbox"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/facebook-binary-audit.md",
+          "line": 72,
+          "detail": "FB-004 static findings, exact offsets and explicit runtime limits.",
+          "anchor": "## Family identity and machine/session state"
+        },
+        {
+          "path": "docs/leak-surface/facebook-binary-evidence.json",
+          "line": 42006,
+          "detail": "Hash-bound selected structural reference records; examples capped with match_count; not observed invocation.",
+          "anchor": "\"family_device_identity\": ["
+        },
+        {
+          "path": "docs/facebook-runtime-observations.md",
+          "line": 1,
+          "detail": "Subsequent original-app API metadata observations; not clone or identifier-value evidence."
+        }
+      ],
+      "verification": "Exact static class/reference/literal offsets are recorded. FBRUN-001 later observed original-app Keychain/defaults API names, groups, return statuses and caller offsets. Persisted values and complete local/server identity provenance were deliberately not captured; clone isolation remains unverified.",
+      "fix": "Validate clone-scoped keychain and app-group boundaries on fresh and restored profiles; trace fallback and synchronization without inventing identifier formats."
+    },
+    {
+      "id": "FB-005",
+      "category": "Facebook binary and runtime acceptance",
+      "surface": "Machine ID and authentication/session ownership",
+      "mechanism": "FBMachineID data source/fetcher/persister classes and login-related selector references require provenance analysis; preserve opaque server/session state.",
+      "coverage": [
+        "sandbox"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/facebook-binary-audit.md",
+          "line": 72,
+          "detail": "FB-005 static findings, exact offsets and explicit runtime limits.",
+          "anchor": "## Family identity and machine/session state"
+        },
+        {
+          "path": "docs/leak-surface/facebook-binary-evidence.json",
+          "line": 42006,
+          "detail": "Hash-bound selected structural reference records; examples capped with match_count; not observed invocation.",
+          "anchor": "\"family_device_identity\": ["
+        }
+      ],
+      "verification": "machine_id and mid are literal candidates; static class names do not prove local generation or server ownership.",
+      "fix": "Observe storage API and schema boundaries; preserve credentials, assertions and server-issued identity until exact ownership is established."
+    },
+    {
+      "id": "FB-006",
+      "category": "Facebook binary and runtime acceptance",
+      "surface": "Original shared keychain and effective clone entitlement boundary",
+      "mechanism": "Original Info and XML name T84QZS65DQ.platformFamily; SecItem imports and shared-keychain selector refs require clone remapping and failure-path checks.",
+      "coverage": [
+        "sandbox",
+        "generator"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/facebook-binary-audit.md",
+          "line": 91,
+          "detail": "FB-006 static findings, exact offsets and explicit runtime limits.",
+          "anchor": "## Keychain, defaults, app groups and cloud"
+        },
+        {
+          "path": "docs/leak-surface/facebook-binary-evidence.json",
+          "line": 43402,
+          "detail": "Hash-bound selected structural reference records; examples capped with match_count; not observed invocation.",
+          "anchor": "\"keychain\": ["
+        }
+      ],
+      "verification": "Original entitlement declarations are recorded separately from effective clone permissions. No cloned SecItem access/success/failure or cross-profile read observed.",
+      "fix": "Inspect generated clone Info/signature, ensure exact per-profile access group, test all SecItem operations and access-denied/fallback behavior."
+    },
+    {
+      "id": "FB-007",
+      "category": "Facebook binary and runtime acceptance",
+      "surface": "Defaults suites, four app groups, files and cloud stores",
+      "mechanism": "Native defaults/files share OS sandbox boundary; original app groups/iCloud/ubiquity declarations and suite/group references require isolated effective artifact behavior.",
+      "coverage": [
+        "sandbox",
+        "generator"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/facebook-binary-audit.md",
+          "line": 91,
+          "detail": "FB-007 static findings, exact offsets and explicit runtime limits.",
+          "anchor": "## Keychain, defaults, app groups and cloud"
+        },
+        {
+          "path": "docs/leak-surface/facebook-binary-evidence.json",
+          "line": 53403,
+          "detail": "Hash-bound selected structural reference records; examples capped with match_count; not observed invocation.",
+          "anchor": "\"preferences_groups_cloud\": ["
+        }
+      ],
+      "verification": "Original main declares four app groups plus Wilde and encrypted-backup cloud containers; actual read/write locations and runtime fallbacks unknown.",
+      "fix": "Inspect stripped/remapped effective entitlements and first-run locations; validate cross-app/profile state isolation and restore ownership."
+    },
+    {
+      "id": "FB-008",
+      "category": "Facebook binary and runtime acceptance",
+      "surface": "Meta frameworks and SDK caller attribution",
+      "mechanism": "Frameworks, structural class names and privacy manifests establish presence/declarations only; retain each possible caller-to-storage-to-transport path.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/facebook-binary-audit.md",
+          "line": 114,
+          "detail": "FB-008 static findings, exact offsets and explicit runtime limits.",
+          "anchor": "## Meta framework and SDK attribution"
+        },
+        {
+          "path": "docs/leak-surface/facebook-binary-evidence.json",
+          "line": 44494,
+          "detail": "Hash-bound selected structural reference records; examples capped with match_count; not observed invocation.",
+          "anchor": "\"meta_sdk_candidates\": ["
+        }
+      ],
+      "verification": "Ten framework directories and eleven privacy manifests; FBAnalytics, FBAppAttestationKit, FBMQTT, FBTigon, RCT, Odin and MetaEncryptedMessaging candidates are inventoried.",
+      "fix": "Trace concrete callers and data provenance; avoid attributing a global API reference to every SDK."
+    },
+    {
+      "id": "FB-009",
+      "category": "Facebook binary and runtime acceptance",
+      "surface": "Facebook HTTP headers, bodies and hostname policy candidates",
+      "mechanism": "Static header/key/URL-host candidates may inform narrow DNS-label host policy; no blanket replacement or transport completeness claim.",
+      "coverage": [
+        "hook"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/facebook-binary-audit.md",
+          "line": 127,
+          "detail": "FB-009 static findings, exact offsets and explicit runtime limits.",
+          "anchor": "## HTTP fields, host candidates and non-HTTP transports"
+        },
+        {
+          "path": "docs/leak-surface/facebook-binary-evidence.json",
+          "line": 49216,
+          "detail": "Hash-bound selected structural reference records; examples capped with match_count; not observed invocation.",
+          "anchor": "\"meta_transport\": ["
+        }
+      ],
+      "verification": "Main X-FB-Device-ID, X-FB-Family-Device-Id and X-FB-Integrity-Session-ID are literals; facebook.com, fbcdn.net, facebook.net and fbsbx.com have static host evidence only.",
+      "fix": "Capture actual header names, transport and schema with secrets omitted; prove replacement provenance/signature ordering before enabling schema-specific mutations."
+    },
+    {
+      "id": "FB-010",
+      "category": "Facebook binary and runtime acceptance",
+      "surface": "MQTT, Tigon, Proxygen/Liger, sockets and QUIC candidates",
+      "mechanism": "Direct socket/import and MQTT/Tigon references identify transports that cannot be assumed covered by NSURLSession interception.",
+      "coverage": [
+        "hook",
+        "blocked"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/facebook-binary-audit.md",
+          "line": 127,
+          "detail": "FB-010 static findings, exact offsets and explicit runtime limits.",
+          "anchor": "## HTTP fields, host candidates and non-HTTP transports"
+        },
+        {
+          "path": "docs/leak-surface/facebook-binary-evidence.json",
+          "line": 54813,
+          "detail": "Hash-bound selected structural reference records; examples capped with match_count; not observed invocation.",
+          "anchor": "\"socket_transport\": ["
+        }
+      ],
+      "verification": "Main FBMQTTManager, mqttHostName/mqttPort refs and Shared socket/connect/send/sendmsg/CFStream imports are concrete static evidence; actual egress unknown.",
+      "fix": "Validate proxy enforcement and fail-closed behavior for every observed HTTP/TLS/TCP/UDP/MQTT/background path and network transition."
+    },
+    {
+      "id": "FB-011",
+      "category": "Facebook binary and runtime acceptance",
+      "surface": "Background modes, APNs, VoIP and nine extensions",
+      "mechanism": "Original background/permission declarations and independent notification-extension identity/network code require packaging and lifecycle evidence.",
+      "coverage": [
+        "generator",
+        "blocked"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/facebook-binary-audit.md",
+          "line": 154,
+          "detail": "FB-011 static findings, exact offsets and explicit runtime limits.",
+          "anchor": "## Background, push, VoIP and extensions"
+        },
+        {
+          "path": "docs/leak-surface/facebook-binary-evidence.json",
+          "line": 41362,
+          "detail": "Hash-bound selected structural reference records; examples capped with match_count; not observed invocation.",
+          "anchor": "\"background_push_voip\": ["
+        }
+      ],
+      "verification": "Seven main background modes, production APNs, multicast/Hotspot/wifi-info declarations and nine original extension bundles are enumerated; effective clone behavior untested.",
+      "fix": "Inspect clone extension removal and permissions; test wake/stop/lease expiry/background/foreground transitions and late extension/network events."
+    },
+    {
+      "id": "FB-012",
+      "category": "Facebook binary and runtime acceptance",
+      "surface": "App integrity, DeviceCheck, App Attest and reinstallation state",
+      "mechanism": "Actual DCAppAttestService import, key/assertion/attest selector refs and FBAppAttestationStorage2 definition require real compatibility evidence; assertion data remains opaque.",
+      "coverage": [
+        "sandbox"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/facebook-binary-audit.md",
+          "line": 171,
+          "detail": "FB-012 static findings, exact offsets and explicit runtime limits.",
+          "anchor": "## App integrity, DeviceCheck and App Attest"
+        },
+        {
+          "path": "docs/leak-surface/facebook-binary-evidence.json",
+          "line": 40694,
+          "detail": "Hash-bound selected structural reference records; examples capped with match_count; not observed invocation.",
+          "anchor": "\"app_integrity\": ["
+        }
+      ],
+      "verification": "Main XML lacks App Attest environment key but DER not decoded; static declaration absence does not disprove actual use. No API support/result or login acceptance observed.",
+      "fix": "Observe support/result codes and storage behavior on disposable clones/restores; never forge assertions or describe renamed identity as accepted without server/device evidence."
+    },
+    {
+      "id": "FB-013",
+      "category": "Facebook binary and runtime acceptance",
+      "surface": "Facebook user agent and device fingerprint consistency",
+      "mechanism": "Multiple Meta UA construction references identify independent formatting paths requiring consistency checks with platform/generated device fields.",
+      "coverage": [
+        "hook"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/facebook-binary-audit.md",
+          "line": 189,
+          "detail": "FB-013 static findings, exact offsets and explicit runtime limits.",
+          "anchor": "## User agent and browser state"
+        },
+        {
+          "path": "docs/leak-surface/facebook-binary-evidence.json",
+          "line": 55855,
+          "detail": "Hash-bound selected structural reference records; examples capped with match_count; not observed invocation.",
+          "anchor": "\"user_agent\": ["
+        }
+      ],
+      "verification": "Exact main formatting-block and shared userAgent/builder selector offsets recorded; no emitted UA or receiving caller has been observed.",
+      "fix": "Capture sanitized UA schema or private fingerprints per path and verify version/build/device-field consistency without changing Reddit UA outputs."
+    },
+    {
+      "id": "FB-014",
+      "category": "Facebook binary and runtime acceptance",
+      "surface": "WebView, cookies, authentication brokers and pasteboard",
+      "mechanism": "Browser/cookie/auth/pasteboard structural candidates require separate storage and broker-state evidence beyond native app sandbox.",
+      "coverage": [
+        "sandbox",
+        "hook"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/facebook-binary-audit.md",
+          "line": 189,
+          "detail": "FB-014 static findings, exact offsets and explicit runtime limits.",
+          "anchor": "## User agent and browser state"
+        },
+        {
+          "path": "docs/leak-surface/facebook-binary-evidence.json",
+          "line": 56526,
+          "detail": "Hash-bound selected structural reference records; examples capped with match_count; not observed invocation.",
+          "anchor": "\"web_auth_cookie\": ["
+        }
+      ],
+      "verification": "References are inventoried; actual web data store, external authentication context and same-account restore state unknown.",
+      "fix": "Exercise login/browser flows on disposable profiles and record caller/context/cookie-store separation without exposing account state."
+    },
+    {
+      "id": "FB-015",
+      "category": "Facebook binary and runtime acceptance",
+      "surface": "Fresh Facebook profiles, identity restore and cross-app lifecycle",
+      "mechanism": "Static source IPA evidence does not establish fresh/restore/switch/admission correctness; profile binding and effective artifact must be observed.",
+      "coverage": [
+        "sandbox",
+        "generator",
+        "blocked"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/facebook-binary-audit.md",
+          "line": 203,
+          "detail": "FB-015 static findings, exact offsets and explicit runtime limits.",
+          "anchor": "## Runtime acceptance and residual limits"
+        },
+        {
+          "path": "docs/leak-surface/facebook-binary-evidence.json",
+          "line": 42006,
+          "detail": "Hash-bound selected structural reference records; examples capped with match_count; not observed invocation.",
+          "anchor": "\"family_device_identity\": ["
+        }
+      ],
+      "verification": "No paired first-run clones, same-identity restore, cross-app switch or first-use provenance was captured by Phase A.",
+      "fix": "Run hash-bound two-profile fresh/restore lifecycle acceptance; compare key-name/type records and private per-run fingerprints with explicit account semantics."
+    },
+    {
+      "id": "FB-016",
+      "category": "Facebook binary and runtime acceptance",
+      "surface": "Dynamic discovery and end-to-end acceptance residual",
+      "mechanism": "Explicit unresolved boundary for dynamic names, web/server configuration, future builds and unobserved transports; missing static names are never absence proof.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "docs/facebook-binary-audit.md",
+          "line": 203,
+          "detail": "FB-016 static findings, exact offsets and explicit runtime limits.",
+          "anchor": "## Runtime acceptance and residual limits"
+        },
+        {
+          "path": "docs/leak-surface/facebook-binary-evidence.json",
+          "line": 49216,
+          "detail": "Hash-bound selected structural reference records; examples capped with match_count; not observed invocation.",
+          "anchor": "\"meta_transport\": ["
+        }
+      ],
+      "verification": "Complete supported structural enumeration is not complete runtime/transport coverage. This ledger contains no not-used-with-evidence verdict.",
+      "fix": "Keep readiness gated until declared supported scope has device evidence; record package/IPA/profile/iOS/capture binding and retain every unresolved path."
+    }
+  ]
+}

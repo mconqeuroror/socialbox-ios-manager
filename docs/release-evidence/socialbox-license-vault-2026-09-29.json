@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-09-29",
+  "scope": "Durable pairing owner for future SocialBox authorization consumers; no retained-engine admission",
+  "build": {
+    "schemaVersion": 1,
+    "kind": "standalone-license-acceptance",
+    "entrypoint": "vault",
+    "keyId": "b2c5d4176c727107c9826ad69386d4d65f90920074981bd842127d6b22add6e9",
+    "architectures": [
+      "arm64",
+      "arm64e"
+    ],
+    "minimumIOS": "15.0",
+    "sha256": "4dd617da6cefab20e87266b87187080c122b008bb86416896117bb71117a1c75",
+    "sourceSHA256": {
+      "lucid/Authorization/LBXLicenseTransport.m": "40999576d5d20030ecb50631e4ba69d333de79c2119867923975691147acf35a",
+      "lucid/Authorization/LBXLicenseExchange.m": "5a7ed4ef11dcf87ec32876ce34f75463077215734525929f9750f4afc02e7c93",
+      "daemon/RBXLicenseToken.m": "e3f00d563c99a47400d22b31b152ec4d2ab6123505b9aaa0f2d2d787f13d55da",
+      "lucid/Authorization/VaultProbe.m": "d4097fc736785a40162899eca9352c85ea071580cf774e3c5fd69a4e365dbb95",
+      "lucid/Authorization/LBXLicenseVault.m": "47e320bdeb7b231c3bd48621fc5b795e238ad1133bf56f3565a669694021ef3b",
+      "lucid/Authorization/LBXLicenseTransport.h": "bbf31e9e89f19ad7edca17ceb4bfec5e66ff6566d7daff1c125e44af0682e54a",
+      "lucid/Authorization/LBXLicenseExchange.h": "ab24d7e92934dce040add199712c0bce2cdd29e581b7e0c1a6246708c90f9b29",
+      "daemon/RBXLicenseToken.h": "a21d1072b10136c4ecc809ad1855bebd368849a2bc0628db63202399fcb52979",
+      "shared/RBXLicensePin.h": "e81b82da4597828a48c3dbfa76055a06c3e4a4323a165ed3e7d70b7e97ee9f3f",
+      "scripts/license-key.py": "25b7a73e6e14dca7cfe690a76279810e558aefe1dd6d0c266d95f08c1644e465",
+      "scripts/build-socialbox-license-probe.py": "f7acf4636a875c4db5f18903496ffe481c5ead650e282fe25380e18162ac8a3c",
+      "lucid/Authorization/LBXLicenseVault.h": "6b89ae6e9ac1fbce952bc34488284b013215c54202fa3a95a66e61a081a97b53"
+    },
+    "entitlements": {},
+    "retainedEngineIntegration": false,
+    "deviceExecution": "NOT_RUN",
+    "credentialsInReport": false
+  },
+  "physicalDeviceExecution": "PASS: arm64 slice on connected iPhone; arm64e execution NOT_RUN",
+  "processLifecycleResults": [
+    {
+      "claim": true,
+      "engineAuthorized": false,
+      "exchangeStatus": "active",
+      "httpOrVerificationError": 0,
+      "pairingCommitted": true,
+      "state": {
+        "engineAuthorized": false,
+        "paired": 1,
+        "storage": "ready"
+      },
+      "storageError": 0,
+      "sameInstallationAndCredentialAfterProcessRestart": "first claim",
+      "mode": "claim",
+      "vaultSHA256": "50e845a6f2965feed9ba9945fce8a2be6bfe6530feef8382d579537b081f50a3"
+    },
+    {
+      "claim": false,
+      "engineAuthorized": false,
+      "exchangeStatus": "active",
+      "httpOrVerificationError": 0,
+      "pairingCommitted": true,
+      "state": {
+        "engineAuthorized": false,
+        "paired": 1,
+        "storage": "ready"
+      },
+      "storageError": 0,
+      "sameInstallationAndCredentialAfterProcessRestart": true,
+      "mode": "validate",
+      "vaultSHA256": "d334dfba0a400909f27e96baf21ccdb9d52d3ec1893cbd7884f91ab6094e9ae1"
+    },
+    {
+      "claim": false,
+      "engineAuthorized": false,
+      "exchangeStatus": "revoked",
+      "httpOrVerificationError": 0,
+      "pairingCommitted": true,
+      "state": {
+        "engineAuthorized": false,
+        "paired": 1,
+        "storage": "ready"
+      },
+      "storageError": 0,
+      "sameInstallationAndCredentialAfterProcessRestart": true,
+      "mode": "revoked",
+      "vaultSHA256": "a8b4827a1976c4161ad9230cefe6b4cadc2a7679addd563573c480f5d752bb19"
+    }
+  ],
+  "physicalFaults": {
+    "mobileCredentialRead": "DENIED",
+    "missingEstablishedRecord": "DENIED_WITHOUT_REGENERATION",
+    "restoredRecordByteIdentical": true,
+    "phoneReboot": "NOT_RUN",
+    "retainedEngineIntegration": false
+  },
+  "nativeAssertions": {
+    "vault": 53,
+    "exchange": 109,
+    "transport": 110
+  },
+  "existingSourceLicenseArchitecture": "PASS",
+  "failingFirstEvidence": "Boolean schema version reproduced one failure in 43 assertions before requiring a numeric schema version",
+  "productionFixture": {
+    "oneDeviceLimit": 1,
+    "expiryDays": 1,
+    "cleanup": "revoked",
+    "unrelatedLicensesUsersAndDeviceRecords": "unchanged by setup and cleanup"
+  },
+  "installedApplicationChanged": false,
+  "credentialsIncluded": false,
+  "notRun": [
+    "App/daemon/injected-engine consumer integration",
+    "Device reboot",
+    "Second physical phone",
+    "Offline admission/revocation enforcement in retained engine"
+  ],
+  "limits": [
+    "Root-owned credential storage is not hardware attestation.",
+    "A paired credential and descriptive lastStatus never constitute admission. No offline authorization token is stored.",
+    "The whole vault directory must survive upgrades and remain outside container exports. Loss of the whole private directory cannot be distinguished from a fresh installation without an external record."
+  ]
+}

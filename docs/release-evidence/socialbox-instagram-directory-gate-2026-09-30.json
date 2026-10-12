@@ -1,0 +1,41 @@
+{
+  "date": "2026-09-30",
+  "kind": "recovered-profile-directory-permission-experiment",
+  "device": "iPhone10,6 / iOS 16.7.16",
+  "instagram": "448.0.0 / 1072661960",
+  "sharedPrimitive": "shared/RBXStorageGate.h: RBXStorageGateDirectoryTransition",
+  "nativeTests": {
+    "directoryAssertions": 41574,
+    "existingCloneAssertions": 50386,
+    "directoryProfiles": 40,
+    "directorySelections": 120,
+    "directoryChmodFaults": 82,
+    "hostUsesSameUIDForAllRoles": true
+  },
+  "physicalResults": {
+    "knownPresentAOwnCanaryBeforeAndAfterSeal": "PASS: root read the exact canary before and after descriptor-pinned sealing",
+    "unprivilegedInstagramMainProcess": true,
+    "ordinaryOpen": "PASS: denied with EACCES (13)",
+    "libcDirectSyscallOpen": "PASS: denied with EACCES (13)",
+    "automaticSwitchIntegration": "NOT_RUN",
+    "completeSharedGroupInventory": "NOT_RUN",
+    "fullProcessAndBrokerDrain": "NOT_RUN",
+    "previousOpenFileDescriptorRevocation": "NOT_RUN",
+    "crashRebootRecovery": "NOT_RUN",
+    "twoSignedInAccounts": "NOT_RUN",
+    "ownProcessFileCanaryWriteAndRead": "PASS",
+    "transactionBoundBProcessContext": "NOT_PROVEN: receipt establishes actual Instagram UID 501 and kernel file denial, not a transaction-bound recovered-container identity"
+  },
+  "rollback": {
+    "originalDirectoryInodeAndModeRestored": "PASS: UID/GID 501/501 and mode 0755",
+    "originalActiveInstagramSelectionRestored": "PASS: 0",
+    "originalSignedInFeedResumed": "PASS",
+    "temporaryInjectionRemoved": true,
+    "temporaryRootTrialExecutableRemoved": true
+  },
+  "trialToolSHA256": "7c155d5032b0fcc430e398571aa63781a1818623ef7a810e051fafd9c17f53fa",
+  "probeSHA256": "5fd69d1e3b15bbfebf384e5ee64b46d66f21201f9648c1281eeadfb3c2a1005b",
+  "rawEvidenceSHA256": "10bcf8d4e3479457b495b5934c639ff4169100ce8e8da48bc5271c27041283de",
+  "productionFixIntegrated": false,
+  "customerReady": false
+}

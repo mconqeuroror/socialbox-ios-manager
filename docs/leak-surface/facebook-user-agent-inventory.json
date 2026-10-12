@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "rows": [
+    {
+      "id": "FBUA-001",
+      "category": "Facebook runtime producer policy",
+      "surface": "Audited FBUserAgent producer model, OS/build, scale and locale",
+      "mechanism": "Exact validated app/bundle/version/image binding; immutable per-container values rewrite only observed producer fields and Mozilla OS/build; unsupported output withheld.",
+      "coverage": [
+        "hook",
+        "generator",
+        "blocked"
+      ],
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "shared/RBXFacebookUserAgent.h",
+          "line": 42,
+          "anchor": "static inline NSString *RBXRewriteFacebookUserAgent",
+          "detail": "Actual bounded producer grammar and rewrite policy."
+        },
+        {
+          "path": "tweak/Network/RBXFacebookUserAgentHooks.xm",
+          "line": 38,
+          "anchor": "BOOL RBXInstallFacebookUserAgentHooks",
+          "detail": "Actual checked installer with ownership, version and image boundary."
+        },
+        {
+          "path": "tweak/RedditBox.xm",
+          "line": 112,
+          "anchor": "BOOL producer = RBXInstallFacebookUserAgentHooks",
+          "detail": "Facebook-only partial installation evidence; defaults-wire stays denied."
+        },
+        {
+          "path": "tools/test_facebook_user_agent.py",
+          "line": 2,
+          "anchor": "\"\"\"Executable producer policy",
+          "detail": "Real policy host fixtures for valid/malformed structures."
+        },
+        {
+          "path": "tools/test_facebook_user_agent_hooks.py",
+          "line": 2,
+          "anchor": "\"\"\"Actual FB UA hook installer",
+          "detail": "Actual wrapper/installer compiled against inert services and temporary enabled registry."
+        },
+        {
+          "path": "docs/facebook-user-agent-policy.md",
+          "line": 11,
+          "anchor": "## Host verification and limits",
+          "detail": "Failing-first evidence, tested scope and required physical acceptance."
+        },
+        {
+          "path": "docs/facebook-user-agent-build-0.1.23.json",
+          "line": 2,
+          "anchor": "\"schemaVersion\": 1",
+          "detail": "Both complete 0.1.23 builds, exact artifacts, 109 test entrypoints, code-page/special-slot integrity and explicit device/MDM limits."
+        },
+        {
+          "path": "tweak/Network/RBXFacebookUserAgentHooks.h",
+          "line": 6,
+          "anchor": "BOOL RBXInstallFacebookUserAgentHooks",
+          "detail": "Public installer declaration; producer evidence cannot grant broader readiness."
+        },
+        {
+          "path": "tweak/Makefile",
+          "line": 42,
+          "anchor": "Network/RBXFacebookUserAgentHooks.xm",
+          "detail": "Both tweak architectures compile the new producer unit."
+        },
+        {
+          "path": "scripts/build-mac.sh",
+          "line": 40,
+          "anchor": "python3 \"$ROOT/tools/test_facebook_user_agent_hooks.py\"",
+          "detail": "Both package builds execute the actual installer and wrapper regression fixture."
+        }
+      ],
+      "verification": "69 pure-policy assertions plus actual installer/wrapper scenarios pass on host; physical producer interception and wire delivery remain unverified. Original producer evidence is FBRUN-002, not evidence for rewritten clone traffic.",
+      "fix": "Keep Facebook inactive/defaults-wire denied until paired-clone SDK/state and managed routing acceptance. Re-audit any new source version or producer grammar before enabling."
+    }
+  ]
+}

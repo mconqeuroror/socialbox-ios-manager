@@ -1,0 +1,1062 @@
+{
+  "schemaVersion": 1,
+  "scope": "Mechanical source traversal of lifecycle and identity persistence paths at baseline fdf181f; code evidence does not assert hardware/network coverage.",
+  "baseline": "fdf181f",
+  "deviceLimit": "iPhone 8 iOS16.7.16 rootless, RedditBox0.1.2 source import passed; zero profiles/no managed per-app VPN or assigned proxy. No device mutation in this audit.",
+  "rows": [
+    {
+      "id": "LIFE-001",
+      "category": "lifecycle",
+      "surface": "Source IPA selection and inbox ownership",
+      "mechanism": "User-selected IPA crosses Files provider into mobile-owned SourceInbox, then root-owned private source staging; openat/O_NOFOLLOW and descriptor identity constrain reads.",
+      "coverage": [
+        "sandbox"
+      ],
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "daemon/RBXCloneManager.m",
+          "line": 1653,
+          "detail": "Opened inbox entry must be owned by mobile, regular, one link, and bounded size; source stays root private."
+        }
+      ],
+      "verification": "Source import completed on iPhone 8/iOS 16.7.16 at 0.1.2; not a clone-isolation test.",
+      "fix": "None for the enumerated import boundary; rerun hostile-path fixtures on changes."
+    },
+    {
+      "id": "LIFE-002",
+      "category": "lifecycle",
+      "surface": "Source archive traversal and executable encryption",
+      "mechanism": "libarchive extracts bounded Payload/Reddit.app entries with path/type/link checks; all nested Mach-O files must be decrypted.",
+      "coverage": [
+        "blocked"
+      ],
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "daemon/RBXCloneManager.m",
+          "line": 966,
+          "detail": "Extractor permits regular files/directories, rejects traversal, links, duplicate archive entries and excessive sizes; imported source validator enumerates nested code."
+        }
+      ],
+      "verification": "0.1.2 import of current Reddit 2026.36.0 completed; observed eight Mach-O files in supplied IPA had no encrypted slice.",
+      "fix": "Keep archive bounds and full nested-code validation intact."
+    },
+    {
+      "id": "LIFE-003",
+      "category": "lifecycle",
+      "surface": "Source replacement publication",
+      "mechanism": "Validates and syncs complete staging tree before atomic private source swap; source is shared code input, not shared app-data sandbox.",
+      "coverage": [
+        "sandbox"
+      ],
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "daemon/RBXCloneManager.m",
+          "line": 1728,
+          "detail": "Publication uses renameatx_np with exchange for an existing source and restores prior source if durability check fails."
+        }
+      ],
+      "verification": "Code inspected; interrupt-at-each-publication-boundary device test not performed.",
+      "fix": "No code gap identified; preserve prior source on failure."
+    },
+    {
+      "id": "LIFE-004",
+      "category": "lifecycle",
+      "surface": "Fresh clone code versus original Reddit account data",
+      "mechanism": "Fresh clone copies only source application bundle; installd allocates separate data container for deterministic new bundle identifier.",
+      "coverage": [
+        "sandbox",
+        "generator"
+      ],
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "daemon/RBXCloneManager.m",
+          "line": 1163,
+          "detail": "Fresh-create path copies source bundle into transaction Payload and installs it; original Reddit data container is not copied."
+        }
+      ],
+      "verification": "tools/test_clone_architecture.py passed for 30 deterministic identities; fresh-clone first-run hardware behavior unverified.",
+      "fix": "Do not add original app-data copying to clone creation."
+    },
+    {
+      "id": "LIFE-005",
+      "category": "lifecycle",
+      "surface": "Clone App Groups, iCloud/KVS, push and associated domains",
+      "mechanism": "Entitlements are regenerated as strict allowlist: clone application/team/keychain identity and optional App Attest; no shared groups or cloud entitlement carried from source.",
+      "coverage": [
+        "sandbox",
+        "blocked"
+      ],
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "daemon/RBXCloneManager.m",
+          "line": 1887,
+          "detail": "Effective ldid entitlements are reread and checked for exactly one clone keychain group, absent App Groups, ubiquity, iCloud, push and associated domains."
+        }
+      ],
+      "verification": "Static/architecture checks pass; actual newly installed clone entitlements and group-directory non-recreation still require device clone test.",
+      "fix": "Keep both signing allowlist and runtime entitlement verification; do not infer actual group absence from code alone."
+    },
+    {
+      "id": "LIFE-006",
+      "category": "lifecycle",
+      "surface": "Extensions, Watch targets and App Clips",
+      "mechanism": "Clone transformation removes PlugIns, Watch and AppClips; nested retained frameworks are signed with empty entitlements.",
+      "coverage": [
+        "blocked"
+      ],
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "daemon/RBXCloneManager.m",
+          "line": 1911,
+          "detail": "Installed clone shape validation requires no PlugIns; nested Mach-O signing strips inherited entitlements."
+        }
+      ],
+      "verification": "Architecture checks pass; direct current clone bundle inspection not available because phone has zero profiles.",
+      "fix": "Retain removal and installed-bundle shape checks."
+    },
+    {
+      "id": "LIFE-007",
+      "category": "lifecycle",
+      "surface": "Original shared OAuth callback URL scheme",
+      "mechanism": "Clone retains original CFBundleURLTypes and appends clone-specific diagnostic scheme; shared login callback may route to a sibling clone.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "gap",
+      "evidence": [
+        {
+          "path": "daemon/RBXCloneManager.m",
+          "line": 1955,
+          "detail": "Code explicitly copies original callback registrations into every clone. A new diagnostic scheme does not rewrite Reddit OAuth callback requests."
+        },
+        {
+          "path": "docs/device-acceptance-final.md",
+          "line": 1,
+          "detail": "Ordered acceptance documents sequential external-browser login, wrong-clone failure and the continuing shared-callback limitation."
+        }
+      ],
+      "verification": "Source code proves shared registration; no current-iOS request/callback trace proves clone-specific ownership. The final runbook serializes external-browser login and requires observing the receiving clone; this is a mitigation, not a passing ownership test.",
+      "fix": "Known limitation: only one external-browser login at a time on the device; finish or cancel it before switching. Keep the existing unsupported-flow refusal. Do not rewrite provider redirect URIs without a verified per-clone design. A sibling callback, refused flow or unfinished login remains FAIL/NOT_RUN."
+    },
+    {
+      "id": "LIFE-008",
+      "category": "lifecycle",
+      "surface": "Signed bootstrap and live profile copy",
+      "mechanism": "Transport profile omits rotation credentials; signed bundle embeds this per-container document and daemon syncs only destination clone copy.",
+      "coverage": [
+        "sandbox",
+        "generator"
+      ],
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "shared/RBXProfileTransport.h",
+          "line": 6,
+          "detail": "Top-level accessKey/deviceToken/passphrase/rotation fields removed; proxy subsection allowlists url/country/proxyId. Proxy connection credentials remain intentionally available to clone."
+        }
+      ],
+      "verification": "Profile transport and clone-local architecture tests exist; actual clone-readable artifact comparison pending.",
+      "fix": "Changes adding profile fields must audit transport exports explicitly."
+    },
+    {
+      "id": "LIFE-009",
+      "category": "lifecycle",
+      "surface": "Rebuild after source or signed-identity drift",
+      "mechanism": "Same container/bundle retains identity and OS data; old application and data snapshot retained in transaction before appinst replacement.",
+      "coverage": [
+        "sandbox"
+      ],
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "daemon/RBXCloneManager.m",
+          "line": 2396,
+          "detail": "Rebuild triggered by source version/build or bootstrap identity mismatch; previous-data and previous.ipa created before install-attempted journal."
+        }
+      ],
+      "verification": "Code inspected and architecture tests pass; successful upgrade with live account preferences/Keychain not device-tested.",
+      "fix": "Preserve same-account app-data and Keychain continuity on same-bundle rebuild."
+    },
+    {
+      "id": "LIFE-010",
+      "category": "lifecycle",
+      "surface": "Install failure rollback and data ownership",
+      "mechanism": "Recovery restores prior bundle/data only for exact transaction ownership and retains uncertain install artifacts rather than adopting another clone.",
+      "coverage": [
+        "sandbox",
+        "blocked"
+      ],
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "daemon/RBXCloneManager.m",
+          "line": 1159,
+          "detail": "Versioned transaction captures bundle/container and exact installation transaction marker; rollback skips OS MobileContainerManager metadata."
+        }
+      ],
+      "verification": "Clone architecture tests pass; installd failure/cancellation fault injection on real phone pending.",
+      "fix": "Keep ownership checks and pending service-operation fences."
+    },
+    {
+      "id": "LIFE-011",
+      "category": "lifecycle",
+      "surface": "Clone IPA export for MDM",
+      "mechanism": "Exports signed application bundle/profile to private IPAs directory; user data is excluded from this app-install artifact.",
+      "coverage": [
+        "sandbox"
+      ],
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "daemon/RBXCloneManager.m",
+          "line": 2932,
+          "detail": "Export uses clone bundle rather than data container; stored private mode 0600. This contains clone synthetic identity and connection settings."
+        }
+      ],
+      "verification": "Code inspected; exported clone binary/profile not generated on current zero-profile phone.",
+      "fix": "Treat exported clone IPA as private identity-bearing artifact; do not add app data."
+    },
+    {
+      "id": "LIFE-012",
+      "category": "lifecycle",
+      "surface": "Cloud backup quiescence and snapshot consistency",
+      "mechanism": "Closes traffic, stops clones, then compares source before/after inode/content inventory and staged hashes; SQLite/WAL validation precedes upload.",
+      "coverage": [
+        "blocked",
+        "sandbox"
+      ],
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "daemon/RBXBackupSnapshot.m",
+          "line": 77,
+          "detail": "Regular files and directories only, no hard/symbolic links or special files; exact content inventory equality and PRAGMA quick_check."
+        }
+      ],
+      "verification": "tools/test_backup_snapshot.sh passed: WAL preservation, source mutation rejection, cancellation, symlink and corrupt database cases. Real device interruption tests pending.",
+      "fix": "Keep snapshot consistency gate; hardware filesystem interruption tests remain pending."
+    },
+    {
+      "id": "LIFE-013",
+      "category": "lifecycle",
+      "surface": "Cloud backup scope and credential disclosure",
+      "mechanism": "Backup carries source app files, cookie/cache/preferences/database state plus synthetic profile and nickname/username inside encrypted envelope.",
+      "coverage": [
+        "sandbox"
+      ],
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "daemon/RBXCloudSync.m",
+          "line": 1721,
+          "detail": "Manifest explicitly declares app-data included, Keychain not exported, device-bound keys not transferable and login verification required. OS container metadata and legacy clone-local profile excluded."
+        }
+      ],
+      "verification": "Code inspected; no cloud export of user account data performed during audit.",
+      "fix": "This is intentional same-account transfer, never classify restored account state as a fresh anonymous container."
+    },
+    {
+      "id": "LIFE-014",
+      "category": "lifecycle",
+      "surface": "Selected backup identity versus decrypted manifest identity",
+      "mechanism": "Selected backup owner must be canonical and exactly equal to decrypted manifest owner before proxy checks, extraction or profile publication.",
+      "coverage": [
+        "blocked"
+      ],
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "daemon/RBXCloudSync.m",
+          "line": 302,
+          "detail": "Actual manifest validator rejects missing, unsafe or mismatched selected container identity."
+        },
+        {
+          "path": "tools/test_backup_identity.py",
+          "line": 1,
+          "detail": "Compiles verbatim validator and actual profile decoder; 13 synthetic ownership cases."
+        }
+      ],
+      "verification": "RED: seven wrong/missing selected IDs were accepted before fix. GREEN: all 13 cases pass. static_check.py and git diff --check pass.",
+      "fix": "c9cafe8 \u2014 bind restored manifest to selected container; exact-owner legacy restore remains accepted.",
+      "baselineVerdict": "gap"
+    },
+    {
+      "id": "LIFE-015",
+      "category": "lifecycle",
+      "surface": "Cloud archive extraction before link validation",
+      "mechanism": "Bounded libarchive reader accepts one AppData or exact legacy source root, rejects unsafe paths/types/links/duplicates before each write, and opens output relative to private directory descriptors.",
+      "coverage": [
+        "blocked",
+        "sandbox"
+      ],
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "daemon/RBXBackupArchive.h",
+          "line": 1,
+          "detail": "Root-owned private stage, NOFOLLOW/O_EXCL per-component file operations; 65536 entries, 1 GiB/member, 3 GiB expansion and compressed input caps; cancellation callback and retained per-entry errors."
+        },
+        {
+          "path": "tools/test_backup_archive.py",
+          "line": 1,
+          "detail": "Actual native extractor exercises 18 harmless archive cases including both valid formats and hostile entries; verifies outside sentinel and operation recovery record remain unchanged."
+        },
+        {
+          "path": "daemon/RBXCloudSync.m",
+          "line": 502,
+          "anchor": "static BOOL RBXCloudUntar(",
+          "detail": "Production cloud restore calls the bounded extractor with the selected legacy root and operation cancellation guard."
+        }
+      ],
+      "verification": "RED former untar body accepted linked/special/duplicate/mixed-root and oversized fixture content and allowed staging recovery-record overwrite. GREEN 18 actual extractor cases, 13 selected-owner cases, static_check.py and diff check pass.",
+      "fix": "845132d \u2014 constrain backup extraction before filesystem writes. Existing post-extraction snapshot/SQLite and restore ownership checks retained.",
+      "baselineVerdict": "gap"
+    },
+    {
+      "id": "LIFE-016",
+      "category": "lifecycle",
+      "surface": "Restore to new local clone with same logical account identity",
+      "mechanism": "Fresh restored-UUID and new bundle/keychain group are allocated, but profile IDs, device tuple, app files and account state intentionally inherit backup identity. Same-account restored profile is frozen locally immediately, even before its first destination launch; the freeze timestamp is lifecycle metadata, not inherited device identity.",
+      "coverage": [
+        "sandbox",
+        "generator"
+      ],
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "daemon/RBXCloudSync.m",
+          "line": 2281,
+          "detail": "Full ids/serials/timing/reddit/security/device sections are copied; local container ID differs. validatedImportedProfile rejects overlapping local identities."
+        }
+      ],
+      "verification": "Source code verified; no two-device same-account restore test performed.",
+      "fix": "Preserve distinction between logical-identity continuation and fresh replacement; do not regenerate IDs while silently retaining same account session. cd96ddc prevents identity editing after same-account restore."
+    },
+    {
+      "id": "LIFE-017",
+      "category": "lifecycle",
+      "surface": "Restored app preference-domain relocation",
+      "mechanism": "Restore copies Library/Preferences filenames unchanged into new clone whose CFBundleIdentifier differs from source clone; no source-domain migration/invalidation is implemented.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "daemon/RBXCloudSync.m",
+          "line": 462,
+          "detail": "Top-level AppData entries are copied verbatim except OS metadata and RedditBox control/profile files. No mapping from source clone defaults domain to destination bundle ID."
+        }
+      ],
+      "verification": "Code proves no remapping; actual Reddit/defaults domain choice and cfprefsd behavior require first-run and restore device observation.",
+      "fix": "Test source/destination standard and explicit preferences domains before designing narrowly scoped migration; do not claim session continuity."
+    },
+    {
+      "id": "LIFE-018",
+      "category": "lifecycle",
+      "surface": "Restore old control lease, heartbeat and hook receipt",
+      "mechanism": "Restore succeeds only after each archived network-lease, firewall-status, hook-ready and legacy profile path is removed (if present) and lstat verifies ENOENT. Removal, inspection, false-success deletion and final cancellation fail into existing caller rollback/recovery. Worker identity sync remains unchanged.",
+      "coverage": [
+        "blocked",
+        "generator"
+      ],
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "daemon/RBXCloudSync.m",
+          "line": 499,
+          "detail": "Actual restore-copy function checks four declared exclusions and context; lifecycle caller handles failure through existing candidate rollback/recovery."
+        },
+        {
+          "path": "tools/test_backup_restore_cleanup.py",
+          "line": 1,
+          "detail": "Actual restore function with temporary bytes and injected denial/no-op/inspection/cancellation failures; no phone or identity mutation."
+        },
+        {
+          "path": "scripts/build-mac.sh",
+          "line": 1,
+          "detail": "Every package requires the restore cleanup regression."
+        }
+      ],
+      "verification": "Failing-first fixture proves false restore success after deletion denial. All 42 native fixture assertions pass after strict absence checks, with backup manifest/archive/snapshot regressions. Physical reboot/import replay and device rollback remain untested.",
+      "fix": "New control paths must join the exclusion inventory and retain clone/epoch binding. This closes false-success cleanup, not a demonstrated stale-lease reactivation; new-identity and same-identity restore semantics remain distinct."
+    },
+    {
+      "id": "LIFE-019",
+      "category": "lifecycle",
+      "surface": "First launch identity freeze durability",
+      "mechanism": "Checked central-store publication of immutable identityFrozenAt precedes ARMED and process launch; definite or uncertain publication failure aborts admission with traffic closed. Successful lastActiveAt semantics unchanged.",
+      "coverage": [
+        "blocked"
+      ],
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "daemon/RBXIdentityLifecycle.h",
+          "line": 1,
+          "detail": "Root-private lifecycle marker is not a generated device identifier. Existing/malformed markers and legacy activity lock the editor; publication preserves marker across retries."
+        },
+        {
+          "path": "daemon/main.m",
+          "line": 578,
+          "detail": "Freeze gate is checked before armTrafficForContainer and launchRedditCloneForProfile."
+        },
+        {
+          "path": "tools/test_identity_freeze.py",
+          "line": 1,
+          "detail": "13 native store-failure/marker cases plus integration checks for pre-arm admission and editor/restore use."
+        }
+      ],
+      "verification": "RED old post-OPEN writer admitted launches despite definite/uncertain persistence failure. GREEN 13 native fault cases; integration, replacement, identity editor, clone, startup and static checks pass. Hardware packet capture remains pending.",
+      "fix": "cd96ddc \u2014 persist identity freeze before authorizing launch. Marker lives only in local central metadata; fresh create/replacement starts without it, same-account restore starts frozen, delete removes entry while reservations/tombstones survive.",
+      "baselineVerdict": "gap"
+    },
+    {
+      "id": "LIFE-020",
+      "category": "lifecycle",
+      "surface": "Switch/open ordering and old connection ownership",
+      "mechanism": "CLOSED lease precedes killing all old processes; firewall CLOSED acknowledged and old socket absence proven before rotation/ARMED.",
+      "coverage": [
+        "blocked"
+      ],
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "daemon/main.m",
+          "line": 468,
+          "detail": "Actual launch path checks profile, clone entitlement/readiness, managed-installation eligibility, proxy rotation and socket drain."
+        }
+      ],
+      "verification": "Static launch architecture tests pass; two real clones and packet capture unavailable on current phone.",
+      "fix": "Keep generation-bound ordering; cannot call hardware coverage complete from code tests."
+    },
+    {
+      "id": "LIFE-021",
+      "category": "lifecycle",
+      "surface": "Managed installation, hooks and OPEN admission",
+      "mechanism": "Clone launch remains blocked until MDM eligibility, ARMED firewall, live PID and mandatory hook readiness are verified. Retained isolation sentinel findings now reject a subsequent Open before switching and immediately before OPEN, including when the observer is disabled. Status refresh has a three-second caller deadline.",
+      "coverage": [
+        "blocked"
+      ],
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "daemon/main.m",
+          "line": 534,
+          "detail": "App is launched in armed state, current clone controls synced, hook receipt checked before OPEN. No MDM bypass for audit."
+        },
+        {
+          "path": "shared/RBXLaunchSafety.h",
+          "line": 1,
+          "detail": "Admission rejects retained sentinel findings and unreadable safety state; refresh is bounded and rechecked before OPEN."
+        },
+        {
+          "path": "daemon/RBXLauncherState.h",
+          "line": 1,
+          "detail": "Admission rejects retained sentinel findings and unreadable safety state; refresh is bounded and rechecked before OPEN."
+        },
+        {
+          "path": "daemon/RBXLauncherState.m",
+          "line": 1,
+          "detail": "Admission rejects retained sentinel findings and unreadable safety state; refresh is bounded and rechecked before OPEN."
+        },
+        {
+          "path": "tools/test_launch_safety.m",
+          "line": 1,
+          "detail": "Admission rejects retained sentinel findings and unreadable safety state; refresh is bounded and rechecked before OPEN."
+        },
+        {
+          "path": "tools/test_launch_safety.sh",
+          "line": 1,
+          "detail": "Admission rejects retained sentinel findings and unreadable safety state; refresh is bounded and rechecked before OPEN."
+        },
+        {
+          "path": "docs/setup-and-launch-safety.md",
+          "line": 1,
+          "detail": "Admission rejects retained sentinel findings and unreadable safety state; refresh is bounded and rechecked before OPEN."
+        }
+      ],
+      "verification": "Current phone has no profiles or per-app MDM/proxy setup; runtime launch coverage is explicitly unverified.",
+      "fix": "Require managed setup and controlled device capture to upgrade this row to device verified."
+    },
+    {
+      "id": "LIFE-022",
+      "category": "lifecycle",
+      "surface": "Exit/close stale generation handling",
+      "mechanism": "On process exit compares container, bundle, generation and bootEpoch before revoking lease so stale process event cannot close new profile.",
+      "coverage": [
+        "blocked"
+      ],
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "daemon/main.m",
+          "line": 674,
+          "detail": "Old observations ignored when a different live lease exists; matching lease closes traffic and deactivates corresponding proxy."
+        }
+      ],
+      "verification": "Code inspected; simultaneous stale exit/new open test remains device pending.",
+      "fix": "Maintain complete identity/generation comparison across lifecycle changes."
+    },
+    {
+      "id": "LIFE-023",
+      "category": "lifecycle",
+      "surface": "Identity edit and regeneration before first use",
+      "mechanism": "Mutation closes traffic and stops clones; candidate uniqueness reserved, profile changed and clone rebuilt; rollback retains original on failure.",
+      "coverage": [
+        "generator",
+        "blocked"
+      ],
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "daemon/RBXContainerRegistry.m",
+          "line": 1390,
+          "detail": "Non-security identity edit blocked after recorded first activity; candidate/original identifiers permanently reserved before publication."
+        },
+        {
+          "path": "daemon/RBXContainerRegistry.h",
+          "line": 55,
+          "anchor": "// Create with a fresh daemon-derived region suggestion",
+          "detail": "Fresh proxy-region suggestions are applied before new clone provisioning. An unused, unassigned profile can change its requested country; cloud-assigned profiles retain strict country matching and all freeze/validation/reservation gates."
+        },
+        {
+          "path": "daemon/RBXContainerRegistry.m",
+          "line": 1158,
+          "anchor": "BOOL assignedProxy =",
+          "detail": "Fresh proxy-region suggestions are applied before new clone provisioning. An unused, unassigned profile can change its requested country; cloud-assigned profiles retain strict country matching and all freeze/validation/reservation gates."
+        }
+      ],
+      "verification": "tools/test_identity_editor.py and native freeze fault tests pass; durable pre-launch freeze repaired in LIFE-019. Actual clone rebuild/device identity outputs remain unverified. Proxy-region update: Fresh proxy-region suggestions are applied before new clone provisioning. An unused, unassigned profile can change its requested country; cloud-assigned profiles retain strict country matching and all freeze/validation/reservation gates. Native parser/transport and generator checks pass; on-device acceptance is recorded separately when completed.",
+      "fix": "cd96ddc closes the first-use freeze durability gap. Security-only adjustments retain the original policy exception; generated device identity remains frozen."
+    },
+    {
+      "id": "LIFE-024",
+      "category": "lifecycle",
+      "surface": "Replace profile creates fresh identity and app state",
+      "mechanism": "New replacement container generated with new identity and no old app files; nickname/role retained, notes/username cleared; original deleted only after candidate validation and proxy rotation. The fresh central entry does not inherit identityFrozenAt; it freezes at its own first launch admission.",
+      "coverage": [
+        "generator",
+        "sandbox"
+      ],
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "daemon/RBXReplacement.m",
+          "line": 244,
+          "detail": "Exact newId retained on retries; createContainer used and no source data restore method called. Old profile survives earlier failure."
+        }
+      ],
+      "verification": "tests/test_replacement.sh covers phase failures/replays and ownership; actual appinst replacement/hardware not exercised.",
+      "fix": "Keep metadata inheritance explicit; never copy old tokens/cookies/storage into fresh replacement."
+    },
+    {
+      "id": "LIFE-025",
+      "category": "lifecycle",
+      "surface": "Replacement transaction ownership and retry",
+      "mechanism": "Pending candidate cannot launch, be nested-replaced or be independently deleted; exact original remains resumable.",
+      "coverage": [
+        "blocked"
+      ],
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "daemon/RBXReplacement.m",
+          "line": 332,
+          "detail": "Versioned persisted journal owns oldId/newId and phase; earlier committed predecessor cannot mask current pending transaction."
+        }
+      ],
+      "verification": "tests/test_replacement.sh passed 21 transition cases and 43 ownership cases; device execution unverified.",
+      "fix": "Preserve current transaction ownership checks."
+    },
+    {
+      "id": "LIFE-026",
+      "category": "lifecycle",
+      "surface": "Delete Keychain group before uninstall",
+      "mechanism": "Deletion records exact clone target, closes traffic, signs constrained cleaner, proves effective group access with random canary, erases four backing classes and verifies absence.",
+      "coverage": [
+        "sandbox",
+        "blocked"
+      ],
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "daemon/RBXKeychainCleaner.m",
+          "line": 192,
+          "detail": "Runs as uid/gid 501 with no group other than primary mobile (Darwin may report it after clearing supplementary groups), and exact clone entitlements; synchronizable-any, Data Protection Keychain; no wildcard access group."
+        },
+        {
+          "path": "daemon/RBXCloneManager.m",
+          "line": 923,
+          "anchor": "static NSString *RBXDeletionJobsRoot(NSString *bundle) {",
+          "detail": "Rootless cleanup executables use durable bootstrap storage. Both legacy and current job roots must be free of unproven-exit fences before retries or cleanup."
+        }
+      ],
+      "verification": "Native helper regression reproduces the Darwin primary-group result and denies extra groups/inspection errors. On-device constrained probe completed exact-group canary and cleanup for an owned failed test container; full clone A/B isolation and daemon deletion acceptance remain separate. See docs/cleanup-helper-2026-09-11.md.",
+      "fix": "No keychain clear success without canary authorization plus final per-class absence verification."
+    },
+    {
+      "id": "LIFE-027",
+      "category": "lifecycle",
+      "surface": "Delete app files, exports, proxy and rotation secrets",
+      "mechanism": "Targeted removal uses captured clone installation and owned journal/export metadata; rejects changed inode or cross-container paths before deletion.",
+      "coverage": [
+        "sandbox",
+        "blocked"
+      ],
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "daemon/RBXContainerRegistry.m",
+          "line": 1681,
+          "detail": "Clones cleanupArtifacts, exact legacy tree cleanup, proxy upstream and rotation secret removal precede central store/profile removal."
+        }
+      ],
+      "verification": "Deletion journal and clone architecture tests; real device interrupted-delete testing pending.",
+      "fix": "Retain staged evidence on failure; do not replace exact ownership checks with broad path deletion."
+    },
+    {
+      "id": "LIFE-028",
+      "category": "lifecycle",
+      "surface": "Permanent tombstones and identity no-reuse after delete",
+      "mechanism": "Committed deletion tombstone and hashed identity reservations survive raw profile removal; case-insensitive retired IDs cannot be recreated/restored. identityFrozenAt is removed with the deleted central entry; raw identifier reservations and retired ID remain authoritative against reuse.",
+      "coverage": [
+        "generator",
+        "blocked"
+      ],
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "daemon/RBXContainerRegistry.m",
+          "line": 187,
+          "detail": "Deletion commits only after cleanup; raw profile evidence removed from committed tombstone, reservation hashes remain in store."
+        }
+      ],
+      "verification": "tools/test_deletion_journal.sh passed actual journal publication faults, phase retries, receipt state and malformed-profile evidence retention.",
+      "fix": "Do not drop tombstones or hashes during migrations/cleanup."
+    },
+    {
+      "id": "LIFE-029",
+      "category": "lifecycle",
+      "surface": "Package upgrade/removal retains user data",
+      "mechanism": "prerm stops daemon; postinst reloads daemon; postrm unregisters UI. Scripts do not delete profiles, account storage, source or licenses.",
+      "coverage": [
+        "sandbox"
+      ],
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "layout/DEBIAN/prerm",
+          "line": 4,
+          "detail": "Existing data survives .deb upgrade; startup performs independent CLOSED/default and migration preflight rather than auto-opening prior profile."
+        },
+        {
+          "path": "cloud/public/apt/redditbox/repository.json",
+          "line": 1,
+          "detail": "Published rootless 0.1.11 signed release metadata retains prior packages and the existing rootful repository; device acceptance is recorded separately."
+        },
+        {
+          "path": "cloud/public/apt/redditbox-rootful/repository.json",
+          "line": 1,
+          "detail": "Published rootful 0.1.9 signed metadata retains its older versions and rootless 0.1.11. Staging and production download/signature checks passed; rootful on-device execution remains unverified."
+        },
+        {
+          "path": "cloud/src/app/install/page.tsx",
+          "line": 1,
+          "anchor": "import { releaseCandidates, releaseState }",
+          "detail": "Public client entry explains the license flow, distinguishes existing-installation upgrades from unavailable fresh installation, and asks users to back up before an approved upgrade. Both appinst source archives remain unchanged."
+        },
+        {
+          "path": "layout/DEBIAN/preinst",
+          "line": 10,
+          "anchor": "# Stop only these exact installed UI executables before dpkg replaces their files.",
+          "detail": "Before upgrade, exact resolved installed UI executables must terminate so strict process inspection does not encounter stale unlinked binaries. Enumeration failures abort update."
+        },
+        {
+          "path": "layout/DEBIAN/postinst",
+          "line": 29,
+          "anchor": "# RunAtLoad starts the freshly bootstrapped service. A second kickstart -k",
+          "detail": "Bootstrap once; avoid interrupting startup recovery with a redundant kickstart."
+        },
+        {
+          "path": "tools/test_postinstall.py",
+          "line": 3,
+          "anchor": "from pathlib import Path",
+          "detail": "Mocked actual postinst fails on a second destructive start."
+        },
+        {
+          "path": "scripts/build-mac.sh",
+          "line": 111,
+          "anchor": "python3 \"$ROOT/tools/test_postinstall.py\"",
+          "detail": "Release build executes the install regression fixture."
+        },
+        {
+          "path": "daemon/RBXFingerprintRegistry.m",
+          "line": 88,
+          "anchor": "NSMutableDictionary<NSString *, NSNumber *> *retirement = [NSMutableDictionary dictionary];",
+          "detail": "Resolve deletion state before central store update to avoid recursive serial-queue read during startup with existing profiles."
+        },
+        {
+          "path": "tools/test_fingerprint_registry.m",
+          "line": 13,
+          "anchor": "static BOOL InsideStoreUpdate;",
+          "detail": "Regression reproduces the production deletion lookup store read and rejects reentrant access; failed before the startup fix and passes after."
+        },
+        {
+          "path": "tools/test_build_version.py",
+          "line": 60,
+          "anchor": "self.assertNotIn('kickstart -k \"system/$SERVICE\"', postinst)",
+          "detail": "Package regression now rejects the redundant destructive start."
+        },
+        {
+          "path": "daemon/RBXCloneManager.m",
+          "line": 1077,
+          "anchor": "static BOOL RBXIsMachOAtPath(NSString *path) {",
+          "detail": "Read exactly four bytes when classifying nested resources; encryption inspection requires mapping and a scoped autorelease pool instead of full-copy fallback."
+        },
+        {
+          "path": "tools/test_macho_probe.py",
+          "line": 2,
+          "anchor": "\"\"\"Execute the shipped classifier against a sparse large file; require bounded I/O.\"\"\"",
+          "detail": "Native production classifier on a 1 GiB sparse file: all eight magics, bounded I/O, truncation, resources, links and directory cases. Original implementation fails the bounded-read contract."
+        },
+        {
+          "path": "scripts/build-mac.sh",
+          "line": 112,
+          "anchor": "python3 \"$ROOT/tools/test_macho_probe.py\"",
+          "detail": "Release gate executes bounded Mach-O classifier fixture."
+        },
+        {
+          "path": "daemon/main.m",
+          "line": 154,
+          "anchor": "static NSTimeInterval requestBudget(NSString *action) {",
+          "detail": "Identity rebuild includes rollback archive and full clone signing/install; use the same bounded 600-second budget as creation. Native budget fixture failed before the change."
+        },
+        {
+          "path": "tools/test_request_budgets.py",
+          "line": 2,
+          "anchor": "\"\"\"Clone rebuilding needs the same bounded budget as clone creation.\"\"\"",
+          "detail": "Identity rebuild includes rollback archive and full clone signing/install; use the same bounded 600-second budget as creation. Native budget fixture failed before the change."
+        },
+        {
+          "path": "scripts/build-mac.sh",
+          "line": 113,
+          "anchor": "python3 \"$ROOT/tools/test_request_budgets.py\"",
+          "detail": "Identity rebuild includes rollback archive and full clone signing/install; use the same bounded 600-second budget as creation. Native budget fixture failed before the change."
+        },
+        {
+          "path": "docs/release-evidence/0.1.11-distribution.json",
+          "line": 1,
+          "detail": "Both completed publication journals, signed indexes and retained downloads, matching existing license signer and staging health observed before promotion."
+        },
+        {
+          "path": "docs/release-evidence/0.1.11-device-state.json",
+          "line": 1,
+          "detail": "Rootless 0.1.10 to 0.1.11 upgrade retained the test profile and active license. Startup succeeded and recovery was empty. Managed VPN remains unconfigured; launch not accepted."
+        },
+        {
+          "path": "docs/release-0.1.13.md",
+          "line": 1,
+          "detail": "Rootless 0.1.13/rootful 0.1.11 signed distribution, staging/production and explicit device-acceptance limits."
+        },
+        {
+          "path": "docs/release-evidence/0.1.13-distribution.json",
+          "line": 1,
+          "detail": "Rootless 0.1.13/rootful 0.1.11 signed distribution, staging/production and explicit device-acceptance limits."
+        },
+        {
+          "path": "docs/release-evidence/0.1.14-distribution.json",
+          "line": 1,
+          "detail": "Both signed production repositories, retained package bytes, staging health, existing signer and installation versions verified; iPhone update/MDM/A-B NOT_RUN."
+        }
+      ],
+      "verification": "0.1.1 to 0.1.2 installed on phone; zero-profile test does not prove active clone upgrade behavior.",
+      "fix": "Preserve explicit user-data retention; test active-session daemon-loss closure with hardware before asserting coverage."
+    },
+    {
+      "id": "LIFE-030",
+      "category": "lifecycle",
+      "surface": "Startup recovery and future-schema guard",
+      "mechanism": "Startup establishes CLOSED/stopped clones, inventories schemas read-only, then migrates; prior boot active operation produces recovery fence. Registered app-specific recovery versions are validated independently of runnable admission; Facebook records never activate Facebook.",
+      "coverage": [
+        "blocked"
+      ],
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "daemon/RBXDataMigration.m",
+          "line": 144,
+          "detail": "Global read-only preflight repeated before each publication; unknown/future/corrupt journals preserved; operation journal old epoch blocks unproven effects."
+        },
+        {
+          "path": "shared/RBXDataSchema.h",
+          "anchor": "static inline BOOL RBXSchemaValidate",
+          "line": 49,
+          "detail": "Shared store writers/readers accept only exact app-owned Facebook replacement v2 records and preserve legacy Reddit version limits."
+        }
+      ],
+      "verification": "tools/test_update_startup.py passed; phone import crash recovery previously required inspected manual recovery, not generic replay. Physical Facebook deletion produced valid format-2 tombstones that older global preflight rejected. Failing-first native migration tests now cover inactive Facebook install v3, deletion v2 and replacement v2, exact owner/group validation, future/unknown/missing owner rejection and byte preservation (15 app/version cases). Reddit legacy limits remain unchanged; global dispatch passes 99 inactive and 122 active-fixture assertions.",
+      "fix": "Never automatically discard recovery journals to make startup pass."
+    },
+    {
+      "id": "LIFE-031",
+      "category": "lifecycle",
+      "surface": "Cloud ownership binding and retirement",
+      "mechanism": "Inventory/proxy/rotation assignment validates serverURL/deviceId binding; cloud retirement revokes active profile and becomes permanent local retirement.",
+      "coverage": [
+        "blocked"
+      ],
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "daemon/RBXCloudSync.m",
+          "line": 1264,
+          "detail": "Per-profile cloud bindings compared against current server/device before assignment; retired profiles rejected by registry."
+        },
+        {
+          "path": "cloud/scripts/smoke-test.mjs",
+          "line": 156,
+          "anchor": "check(\"unregistered profile backup rejected without receipt\"",
+          "detail": "Local HTTP smoke rejects an unregistered backup, registers a unique profile to its authenticated device, then checks the opaque backup round trip. This does not establish device-side binding or cross-account isolation."
+        }
+      ],
+      "verification": "Code inspected; unauthorized account/device/server substitution integration tests pending.",
+      "fix": "Do not conflate this binding with backup manifest comparison LIFE-014 or global restore concurrency."
+    },
+    {
+      "id": "ID-001",
+      "category": "identifier-lifecycle",
+      "surface": "IDFV and IDFA generation/posture",
+      "mechanism": "Per-container UUID fields persisted; all-zero IDFA is deliberately shared for ATT-denied posture, nonzero identities subject to uniqueness.",
+      "coverage": [
+        "generator"
+      ],
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "daemon/RBXProfileGenerator.m",
+          "line": 223,
+          "detail": "Random posture generates UUID, denied posture returns zero; IDFV random UUID in profile ids."
+        }
+      ],
+      "verification": "Generator/catalog and consistency tests; outbound current Reddit observations pending.",
+      "fix": "Changes must preserve stable IDFV and ATT/IDFA posture consistency."
+    },
+    {
+      "id": "ID-002",
+      "category": "identifier-lifecycle",
+      "surface": "Reddit install and external installation IDs",
+      "mechanism": "Independent generated UUIDs persisted per container and collision checked against existing profiles and identity reservation history.",
+      "coverage": [
+        "generator"
+      ],
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "daemon/RBXProfileGenerator.m",
+          "line": 228,
+          "detail": "installId and externalInstallationId sampled separately and must differ; registry includes both in unique paths."
+        }
+      ],
+      "verification": "Code inspected; current Reddit SDK storage keys separately inventoried by binary analysis owner.",
+      "fix": "Keep SDK-owned persisted IDs distinct from these application generator keys."
+    },
+    {
+      "id": "ID-003",
+      "category": "identifier-lifecycle",
+      "surface": "Synthetic hardware identifiers and model tuple",
+      "mechanism": "Serial, UDID, IMEI, MAC, platform UUID, MLB and chip ID generated; synthetic catalog facts persisted rather than derived from host on launch. New generic model templates omit unverified retail SKU and IMEI/TAC instead of reusing an old model\u2019s values; synthetic UDID format is not a verified manufacturer prefix.",
+      "coverage": [
+        "generator"
+      ],
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "daemon/RBXProfileGenerator.m",
+          "line": 282,
+          "detail": "Profile generator samples model/OS tuple, per-container serial identifiers, locale/carrier/location; hash reservations protect used identities."
+        },
+        {
+          "path": "profiles/catalog.json",
+          "line": 653,
+          "anchor": "\"timezoneCountry\": {",
+          "detail": "City entries now carry explicit IANA timezones; US/CA/AU cities no longer inherit the first national zone. New generated profiles use the selected city zone. Existing saved identities are not automatically migrated."
+        },
+        {
+          "path": "daemon/RBXDeviceCatalog.m",
+          "line": 108,
+          "anchor": "@\"city\", @\"lat\", @\"lon\", @\"timezone\"",
+          "detail": "City entries now carry explicit IANA timezones; US/CA/AU cities no longer inherit the first national zone. New generated profiles use the selected city zone. Existing saved identities are not automatically migrated."
+        },
+        {
+          "path": "daemon/RBXProfileGenerator.m",
+          "line": 238,
+          "anchor": "NSString *geoTimezone = city[@\"timezone\"]",
+          "detail": "City entries now carry explicit IANA timezones; US/CA/AU cities no longer inherit the first national zone. New generated profiles use the selected city zone. Existing saved identities are not automatically migrated."
+        },
+        {
+          "path": "tools/test_device_catalog.m",
+          "line": 251,
+          "anchor": "generated city and timezone must agree",
+          "detail": "City entries now carry explicit IANA timezones; US/CA/AU cities no longer inherit the first national zone. New generated profiles use the selected city zone. Existing saved identities are not automatically migrated."
+        }
+      ],
+      "verification": "Device catalog/identity architecture tests; actual hook outputs on phone remain unverified. 59 catalog tuples passed native generator/validator regression. Apple source provenance and explicit inference limits are recorded in docs/device-catalog-evidence.json. Proxy-region update: City entries now carry explicit IANA timezones; US/CA/AU cities no longer inherit the first national zone. New generated profiles use the selected city zone. Existing saved identities are not automatically migrated. Native parser/transport and generator checks pass; on-device acceptance is recorded separately when completed.",
+      "fix": "Do not claim generator coverage implies every API alias is hooked."
+    },
+    {
+      "id": "ID-004",
+      "category": "identifier-lifecycle",
+      "surface": "Installation timestamps, synthetic boot epoch and battery offset",
+      "mechanism": "Stable generated profile values inherit through reopen and same-account restore, regenerate for new profiles/replacement.",
+      "coverage": [
+        "generator"
+      ],
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "daemon/RBXProfileGenerator.m",
+          "line": 302,
+          "detail": "Install timestamp randomized in past; synthetic boot epoch persisted; stable battery offset. Timing API behavior is outside this lifecycle row."
+        }
+      ],
+      "verification": "Code inspected; time/boot/upgrade correlation on device unverified.",
+      "fix": "Keep persisted values stable; test timing coherence across all timing surfaces separately."
+    },
+    {
+      "id": "ID-005",
+      "category": "identifier-lifecycle",
+      "surface": "Canonical local container, bundle and access-group mapping",
+      "mechanism": "Canonical ASCII ID maps deterministically to clone bundle hash and single RBXCLONE00 access group; original Reddit bundle/group never reused.",
+      "coverage": [
+        "generator",
+        "sandbox"
+      ],
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "daemon/RBXCloneManager.m",
+          "line": 1591,
+          "detail": "64-bit FNV-derived bundle suffix; installed marker container ID checked before reuse. Tombstones prevent retired ID reuse."
+        }
+      ],
+      "verification": "tools/test_clone_architecture.py passed 30 values; this is collision defense by marker checks, not mathematical collision impossibility.",
+      "fix": "Retain exact signed marker check whenever mapping is used."
+    },
+    {
+      "id": "ID-006",
+      "category": "identifier-lifecycle",
+      "surface": "Identity history reservation",
+      "mechanism": "SHA256 of normalized field-name/value maps to owning container; reservation fails closed on corrupt history and survives identity edits/deletion.",
+      "coverage": [
+        "generator",
+        "blocked"
+      ],
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "daemon/RBXContainerRegistry.m",
+          "line": 437,
+          "detail": "Covers 12 paths including MLB/chip ID plus nonzero advertising ID; live unique list additionally checked."
+        }
+      ],
+      "verification": "Source/test evidence; cloud restore publication does not reserve until future registry mutation\u2014live-profile uniqueness still applies.",
+      "fix": "Any new unique identity field must join generation, schema, live uniqueness and durable hash reservation inventories."
+    },
+    {
+      "id": "ID-007",
+      "category": "identifier-lifecycle",
+      "surface": "Cross-clone control boot epoch",
+      "mechanism": "Daemon raw boot epoch transformed by HMAC-SHA256 with clone bundle before delivery so sibling-readable controls do not share raw token.",
+      "coverage": [
+        "generator"
+      ],
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "daemon/RBXCloneEpoch.h",
+          "line": 7,
+          "detail": "Distinct clone label input under private boot-epoch key; clone controls bound to own restart token."
+        }
+      ],
+      "verification": "Source inspected and architecture tests; direct sibling control-file comparison pending device profiles.",
+      "fix": "New control channels must use per-clone epoch, not raw daemon boot epoch."
+    },
+    {
+      "id": "ID-008",
+      "category": "identifier-lifecycle",
+      "surface": "Same-account restore across devices and concurrent owner",
+      "mechanism": "Local duplicate identities rejected, but source phone may retain original active profile after encrypted backup is restored on another phone.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "daemon/RBXCloudSync.m",
+          "line": 2216,
+          "detail": "Restore creates a new local worker ID and does not retire source-device identity or prove exclusive logical-account ownership across devices."
+        }
+      ],
+      "verification": "No cross-device test or cloud transfer-ownership transaction found in this restore path. This is same-account transfer, not unrelated-container isolation.",
+      "fix": "Define and implement intended single-owner handoff if required; do not claim global uniqueness from local reservations."
+    },
+    {
+      "id": "ID-009",
+      "category": "identifier-lifecycle",
+      "surface": "Keychain and device-bound identity after restore",
+      "mechanism": "New destination Keychain access group has no transferred Keychain or App Attest keys; push disabled, loginKnown false, re-attestation policy recorded. Original application-groups entitlements are excluded, not recreated.",
+      "coverage": [
+        "sandbox",
+        "blocked"
+      ],
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "daemon/RBXCloudSync.m",
+          "line": 2233,
+          "detail": "Restored files may contain account/session tokens but corresponding keychain credentials are absent; explicitly requires login verification."
+        }
+      ],
+      "verification": "Source verified; actual auth/login restoration behavior not device-tested.",
+      "fix": "Do not advertise preserved login or transfer Secure Enclave/device-bound keys."
+    },
+    {
+      "id": "ID-010",
+      "category": "identifier-lifecycle",
+      "surface": "Persisted app/SDK identity keys copied on backup restore",
+      "mechanism": "All eligible app files copied, so persisted installation/session/analytics IDs in defaults, SQLite, cookies and caches inherit same-account source values.",
+      "coverage": [
+        "sandbox"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "daemon/RBXCloudSync.m",
+          "line": 464,
+          "detail": "No per-key migration inventory exists here; correct continuity depends on actual binary and first-run persistence enumeration. Source bundle-domain relocation tracked LIFE-017."
+        },
+        {
+          "path": "daemon/RBXContainerRegistry.m",
+          "line": 1637,
+          "anchor": "- (BOOL)applyIdentityChoices:",
+          "detail": "Identity editor rejects mutation when the durable freeze or legacy first-use marker is present; unreadable metadata is an error."
+        },
+        {
+          "path": "daemon/RBXCloudSync.m",
+          "line": 2324,
+          "anchor": "@\"identityFrozenAt\": @(now),",
+          "detail": "Same-identity restore publishes a local freeze marker with its lifecycle entry before use."
+        }
+      ],
+      "verification": "Current phone has imported source only; no fresh clone observed storage inventory. Binary analysis alone cannot enumerate dynamically assembled keys.",
+      "fix": "Add observed current-Reddit first-run storage evidence; distinguish inherited account state from fresh replacement and never recursively rewrite arbitrary session JSON. cd96ddc adds only root-private identityFrozenAt lifecycle metadata; it is not a Reddit/SDK device identifier, not exposed in synthetic profile or backup seed, and does not complete observed SDK-key coverage."
+    }
+  ]
+}

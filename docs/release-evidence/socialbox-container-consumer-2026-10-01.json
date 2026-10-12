@@ -1,0 +1,157 @@
+{
+  "formatVersion": 1,
+  "unit": "authenticated source-owned mobile container configuration consumer",
+  "recordedAtUTC": "2026-10-01T01:05:32.591841+00:00",
+  "status": "PASS",
+  "runtimeAccepted": false,
+  "engineAuthorized": false,
+  "customerReleased": false,
+  "host": {
+    "container_configuration": {
+      "assertions": 703,
+      "status": "PASS",
+      "privateLogSHA256": "0bbb1a841f4fd27fb300280d45e8fbd04a95367f5f9969363383373821dbe4a0"
+    },
+    "container_configuration_store": {
+      "assertions": 79,
+      "status": "PASS",
+      "privateLogSHA256": "e7d300373754efcb7413f268263a13e4dea6f28455a9a427a6ddb72ca93c67fe"
+    },
+    "container_ipc": {
+      "assertions": 390,
+      "status": "PASS",
+      "privateLogSHA256": "738cd4102b291eb75b1aa4a4fddde5092825fd7b0d2b0d6f985e895d27c5b43a"
+    },
+    "container_owner": {
+      "assertions": 296,
+      "status": "PASS",
+      "privateLogSHA256": "666bfcf805bc3216b410955a6fc3c5206ac4096479388f73046c2124f518d86b"
+    }
+  },
+  "productionCompilation": {
+    "arm64": "PASS",
+    "arm64e": "PASS",
+    "testSeamsExcluded": true,
+    "transportMockUsed": false,
+    "entitlements": {},
+    "signedClientSHA256": "427ff9055b98b166625f9437fcdaa484141a19126e6580669168b391753764c7",
+    "signedServiceSHA256": "29586ed0b8fe6f0e6b3a863391795a878dde1940835f7e1b789f94f6e939b35d",
+    "signedSetupSHA256": "a929ae7e556ad0efe942679d1558e6e6cf02cabbcf040fe58ed3271d08415875",
+    "exactClientPathHashAndKernelPeerAuthentication": "PASS"
+  },
+  "physicalDevice": {
+    "model": "iPhone X",
+    "iOS": "16.7.16",
+    "clientUID": 501,
+    "clientEUID": 501,
+    "disposableGenuineProductionWebsiteLicense": true,
+    "syntheticSigningKeyUsed": false,
+    "assertions": 29,
+    "status": "PASS",
+    "disposableLicenseRevoked": "PASS",
+    "exactPrivateServiceAndDirectoriesRemoved": "PASS",
+    "sixInstalledOwnerPayloadHashesUnchanged": "PASS",
+    "ownerUIChanged": false,
+    "ownerAccountsChanged": false,
+    "results": {
+      "six installed owner payloads captured without mutation": "PASS",
+      "exact private client installed": "PASS",
+      "exact private service installed": "PASS",
+      "exact private initialize installed": "PASS",
+      "exact private service.plist installed": "PASS",
+      "fresh private configuration directory and lock initialized": "PASS",
+      "mobile configuration prepare denied before activation": "PASS",
+      "fresh private owner has no pair and starts unchecked": "PASS",
+      "genuine production one-device activation accepted over mobile IPC": "PASS",
+      "production-authorized mobile prepare returns random private document": "PASS",
+      "prepare leaves committed store empty": "PASS",
+      "mobile create commits the exact prepared identity once": "PASS",
+      "duplicate create confirms same UUID bytes and revision": "PASS",
+      "mobile cannot read root pairing credentials": "PASS",
+      "fresh online validation renews source assessment before edit": "PASS",
+      "manual update preserves all ten exact inputs": "PASS",
+      "duplicate exact update confirms existing document without rewrite": "PASS",
+      "different stale edit conflicts and preserves current bytes": "PASS",
+      "private list contains exact bounded projection only": "PASS",
+      "mobile read reloads exact saved manual document": "PASS",
+      "service restart preserves pairing but starts unchecked": "PASS",
+      "configuration read after restart requires new verification": "PASS",
+      "production revalidation reopens source configuration access": "PASS",
+      "restart and revalidation retain exact manual record bytes": "PASS",
+      "identical binary at wrong path denied by license peer authentication": "PASS",
+      "identical binary at wrong path cannot access configuration IPC": "PASS",
+      "production signed revocation closes the current source owner": "PASS",
+      "revocation denies even exact create retry and leaves record unchanged": "PASS",
+      "revocation denies private listing": "PASS"
+    }
+  },
+  "protocol": {
+    "family": "container-configuration",
+    "requestMaximumBytes": 16384,
+    "replyMaximumBytes": 65536,
+    "pageMaximumEntries": 40,
+    "inventoryMaximumRecords": 4096,
+    "absoluteDeadlineMaximumSeconds": 25,
+    "operations": [
+      "prepare",
+      "create",
+      "update",
+      "read",
+      "list"
+    ],
+    "retryIdentity": "same canonical configuration UUID and exact complete candidate document",
+    "safeErrorsOnly": true,
+    "listContainsIdentityValuesOrProxyReference": false
+  },
+  "preservedFailedAttempts": [
+    {
+      "status": "FAIL",
+      "stage": "initial host IPC page-bound integration",
+      "failures": 2,
+      "reason": "A legal 40-entry page with long Unicode names exceeded the initial 16 KiB reply ceiling. Kept the 16 KiB request bound, increased the bounded reply ceiling to 64 KiB and retained the counterexample; final 390 assertions pass."
+    }
+  ],
+  "notRun": [
+    "current owner UI creation/edit integration",
+    "complete coupled model/software/carrier identity",
+    "cross-container identity reservation",
+    "app-specific runtime provisioning and target hooks",
+    "proxy ownership resolution and traffic enforcement",
+    "automatic safe switching and storage recovery",
+    "running-session license expiry/revocation enforcement",
+    "power-loss and interrupted-publication recovery",
+    "actual signed-in account A/B/A",
+    "runnable Facebook/Twitter acceptance",
+    "full customer installer builder and exact packaged client acceptance",
+    "fresh customer installation/package/download flow"
+  ],
+  "scopeNotes": [
+    "The private production client executes the actual authored mobile configuration and license clients against the root service; the installed owner app does not yet link this consumer.",
+    "Configuration records are private source metadata, not recovered active containers or target runtime grants.",
+    "Preparation generates one private preview without publishing. Consumers must retain that exact preview and UUID across save retries.",
+    "Every non-saved mutation, including authorization_required, can follow publication. Revalidate and reconcile the exact candidate instead of regenerating or assuming no write.",
+    "The service opens configuration storage with create:NO. Explicit trusted installer setup is still required; unavailable state is not silently recreated.",
+    "Requested Twitter/multi-app membership does not prove retained-engine support; no new success flag, active UI row or seed writer is used.",
+    "A successful source operation does not authorize the lifetime of a launched social-media session."
+  ],
+  "sourcesSHA256": {
+    "lucid/Authorization/LicenseService.m": "d3acccd85af6969c757ad1a6ee21066fdc659042896e22adad09b740b9b4f511",
+    "lucid/Containers/LBXContainerConfiguration.h": "bf178269d63bccf8ee2651113ba43401784aff79724b25062026f74e465828fe",
+    "lucid/Containers/LBXContainerConfiguration.m": "0475f4c7443d6a74bca17e47bd19c4c736af8faa319b2bd18d4e2a9c405b58a8",
+    "lucid/Containers/LBXContainerConfigurationStore.h": "0c7e01ace9cbb5241dd9674127f0f07c532cb3720737aaa38c8a41114bf256be",
+    "lucid/Containers/LBXContainerConfigurationStore.m": "d74058930cccbc12b5067cc3bf4c1f257f566168b606024fca2cfb919e85356b",
+    "lucid/Containers/LBXContainerClient.h": "8d4fe00c232cdc7af831b5b1bc86bf6549f18d99ee1903b0ad1e1fe260f3d6bf",
+    "lucid/Containers/LBXContainerClient.m": "a004ec1ad77b1e1baed1a35b7c678e3204586a366abdd02e5dbf9c597815319b",
+    "lucid/Containers/LBXContainerEndpoints.h": "1e326000194692008c4720f8d6971b1d7828748163d550be7c4aacd3f7647a41",
+    "lucid/Containers/LBXContainerIPC.h": "b1cadb446b6f2b9e420bea05b7def048e2dbb17a3b621b523f596f5695a8ea93",
+    "lucid/Containers/LBXContainerIPC.m": "a997795f418a5fb498008c15e159e23e9e499b88ca2f14f4dfe3206297e6e68c",
+    "lucid/Containers/LBXContainerOwner.h": "ce2ac125c114bbc8b4e950b5371dae532649bd05329d89abbf11b3b791441547",
+    "lucid/Containers/LBXContainerOwner.m": "6b67b6406cd761f1971d996901e927a50e730421accaf2b079bb4d74f1b01dc8",
+    "lucid/tests/container_configuration_store.m": "b966f80037cc9b879bfa07eeceaa8d03210a6b256a92a7b309a399db9366d35a",
+    "lucid/tests/container_ipc.m": "3126f40608e375330896d81870ebfd6119928ef8a156846691d939b99579f7bc",
+    "lucid/tests/container_owner.m": "5f0c8ac834b39b0be1a2d66ea51f403730af2d4eb26dbde877e89f0a6cd348bb",
+    "lucid/tests/test_container_ipc.sh": "ee1e98166635cc3d02f73bf3213e98a823d080160e9ee8b7db789fadfe4ac0fc",
+    "lucid/tests/test_container_owner.sh": "55cb0f4517492e351726fc831bba4731f2eed61dabdbe4eee1bd6b58f23f145d",
+    "scripts/build-socialbox-license-service.py": "755f603725d67b695e22d262ce66cefdd9dc9129285b3a6f4bb3a41831c09089"
+  }
+}

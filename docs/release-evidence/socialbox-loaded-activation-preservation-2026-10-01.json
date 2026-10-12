@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "kind": "socialbox-loaded-activation-and-installation-preservation",
+  "unit": 20,
+  "recordedAt": "2026-10-01T10:34:44.571588+00:00",
+  "status": "PASS_WITH_CUSTOMER_INSTALLATION_AND_RUNTIME_GAPS",
+  "clientDeliveryReady": false,
+  "customerArtifactReleased": false,
+  "customerCodeIssued": false,
+  "contract": {
+    "loadedActivation": "Presentation installation also adopts an already-loaded registered locked license page. Existing window traversal, host metadata/class/getter/lifecycle ABI guards and LBXApply are retained. No controller/root creation or original admission callback.",
+    "preservation": "Original license input, button, error, delegate, targets/actions, disabled state, root/children and load count are unchanged. Repeat installation retains one source form and its entered code; rendering sends no activation, validation or saved-metadata request and constructs no admitted navigation.",
+    "upgrade": "External preflight and incoming preinst refuse any present fixed source installation, pairing, configuration, pending leaf or external marker, including dangling links, before package replacement. Parent safety must be observed before absence. Established/partial source state has no supported image migration.",
+    "authority": "All-absent state permits only the existing pinned upgrade checks. It never authorizes first preparation, runs the initializer, resets/adopts data or widens fresh-install support. Ordinary service startup remains existing-only; one-shot paired establishment and licensing are unchanged.",
+    "limits": "Upgrade guard is an instantaneous read-only package check, not an atomic lock spanning dpkg or protection against a concurrently acting root administrator. Synthetic UI acceptance is not owner locked-page/default endpoint or fresh customer acceptance."
+  },
+  "syntheticUIKit": {
+    "presentation": {
+      "status": "PASS",
+      "assertions": 242,
+      "sourceStable": true,
+      "privateReportSHA256": "64d1c891c3edf7e76b88531648a9963fb93372a82af89271621a90dd9cbeaccd"
+    },
+    "activation": {
+      "status": "PASS",
+      "assertions": 86,
+      "sourceStable": true,
+      "privateReportSHA256": "c228227ac2dcc0cfc4b653951d5a41c263c6cfc9b8925c82b422eedfad91f832"
+    },
+    "counterfactual": {
+      "status": "PASS",
+      "oldStartupOnlyPredicate": "FAIL_EXPECTED",
+      "focusedFailures": 3,
+      "workingTreeUnchanged": true,
+      "privateReportSHA256": "29061cd73def426f8c18c679be354a6bea7bce67b49b47e4815d5f21f28231b1"
+    },
+    "visualReview": "PASS existing synthetic license style; screenshot remains private"
+  },
+  "package": {
+    "status": "PASS",
+    "tests": 13,
+    "emittedShellExecutions": 130,
+    "leafRefusalCases": 100,
+    "unsafeParentCases": 24,
+    "allAbsentPasses": 4,
+    "freshInstallRefusals": 2,
+    "sourceStable": true,
+    "sourceStabilityScope": "Two edited package files before/after; complete imported dependency graph was not frozen.",
+    "sourceSHA256": {
+      "scripts/build-socialbox-helper-safety.py": "1dcedb9788be602a6d31afc98ba54157bf99adaa976d29c82cc4988ed4028647",
+      "tools/test_socialbox_helper_package.py": "e39592ba2feb68795cfd0a7eaf4538a858f226e3caf344a0fd63a2c124273177"
+    },
+    "privateLogSHA256": "d1e06adaa5a929753ac94a3e1b11d9aeaadea80d13c4f19cbbbe43f164ef7ee9",
+    "privateReportSHA256": "e9e17d6e21a4fa833b3b73f169c20aef25f9544ba199895f2b72eda596dc377f",
+    "ownerPackageInstallation": "NOT_RUN"
+  },
+  "regressions": {
+    "interfaceCopy": {
+      "status": "PASS",
+      "assertions": 815,
+      "referenceChecks": 302,
+      "privateReportSHA256": "e2827c9e4ccab3a45c558f409eca4b99846b6bf4c2bdfeb3d9f8a1fad5d9c96c"
+    },
+    "recoveredBuilder": {
+      "status": "PASS",
+      "tests": 36,
+      "privateLogSHA256": "fc22f45addd74c091d86aab4001a5e333763291664c76d241aef3d62e5a3d700"
+    }
+  },
+  "production": {
+    "status": "PASS",
+    "architectures": [
+      "arm64",
+      "arm64e"
+    ],
+    "sourceStable": true,
+    "testProvidersAbsent": true,
+    "overlaySHA256": "cf5fae106d1d3b296ca412a0f8085f3d15e8f13d1b0c7d7677ffacd2688c9832",
+    "privateReportSHA256": "dfc4832854d091e8779bdd8c57f82454166e091ce4048c64892223e2fdbdec07",
+    "ownerInstallation": "NOT_RUN",
+    "customerPackage": "NOT_RUN"
+  },
+  "physicalReadOnly": {
+    "status": "PASS",
+    "scope": "Nine fixed installation-node metadata observations and exact manager image digest; no account or credential contents read.",
+    "newServiceInstallerJobAndFiveStateNodes": "ABSENT",
+    "managerPinnedImage": "PASS",
+    "firstInstallAuthorityFromAbsence": false,
+    "deviceChangesPerformed": false,
+    "newLicenseIssued": false,
+    "privateReportSHA256": "e117ff291708a1f6c33dc6fc41ca5a5ac727035debe4605dd3bd3428e896a0ac",
+    "actualDefaultActivation": "NOT_RUN",
+    "normalLockedPage": "NOT_RUN",
+    "customerInstallation": "NOT_RUN"
+  },
+  "independentReview": {
+    "ui": "PASS read-only source review; no concrete bug. Real injection timing, device layout, authentication and engine admission unverified.",
+    "package": "Root independently reviewed final source/test diff; see focused package receipt."
+  },
+  "retainedFailures": {
+    "packageFixtureAttempt1": "FAIL synthetic setup tried to recreate an existing var/lib parent. Final fixture corrects setup only; production guard was not weakened. Original attempt log retained privately.",
+    "counterfactual": "FAIL_EXPECTED exactly three late-license checks with the former startup-only predicate; working sources untouched."
+  },
+  "limits": [
+    "Fresh customer installer/default endpoint and original locked-page owner acceptance remain NOT_RUN",
+    "No new owner update, customer package/code, APT download or website deployment",
+    "Saved metadata remains distinct from retained-engine admission and numeric-CID runtime authority",
+    "Automatic safe switching/isolation/recovery and running-session licensing NOT_RUN",
+    "Prior actual Instagram sibling normal/direct read FAIL remains unfixed; Facebook launch FAIL and Twitter runtime unaccepted",
+    "Actual two-account acceptance and proxy traffic NOT_RUN"
+  ],
+  "next": "Separate explicit trusted first-install package preparation from check-only/refused existing state and all abort branches; accept exact normal endpoint/locked page before publishing. Complete runtime/account/proxy acceptance separately.",
+  "sourceSHA256": {
+    "lucid/Presentation/LBXPresentation.m": "49b0cedbb19b456a3dd61e8b7db868c9eeaa5a1311e72834f6d9c72695b93407",
+    "lucid/Presentation/Tests/fixture.m": "42ace3222588e7334828fe30ac7f8d01a664e72574ef3b5644d72700bfe2a8dc",
+    "scripts/build-socialbox-helper-safety.py": "1dcedb9788be602a6d31afc98ba54157bf99adaa976d29c82cc4988ed4028647",
+    "tools/test_socialbox_helper_package.py": "e39592ba2feb68795cfd0a7eaf4538a858f226e3caf344a0fd63a2c124273177"
+  }
+}

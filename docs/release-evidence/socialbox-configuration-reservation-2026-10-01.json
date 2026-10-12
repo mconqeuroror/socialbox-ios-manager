@@ -1,0 +1,229 @@
+{
+  "formatVersion": 1,
+  "unit": "source-owned durable configuration reservation and fail-closed metadata edits",
+  "recordedAtUTC": "2026-10-01T03:14:35.421533+00:00",
+  "status": "PASS",
+  "runtimeAccepted": false,
+  "engineAuthorized": false,
+  "customerReleased": false,
+  "host": {
+    "status": "PASS",
+    "sourceAndTestsStable": "PASS",
+    "perSuite": {
+      "closedAllocation": {
+        "status": "PASS",
+        "assertions": 578,
+        "logSHA256": "dde8d43554d0c187ad1733c72b90d7bcf5c49e041527f2264fbb1526f81474da"
+      },
+      "configurationStore": {
+        "status": "PASS",
+        "assertions": 383,
+        "logSHA256": "5e87956b6eb9189e173f2f4c407666d862cbabea5f0f0706ae1cadb57d9de8d0"
+      },
+      "containerOwner": {
+        "status": "PASS",
+        "assertions": 347,
+        "logSHA256": "76177929e8fd4c7b990ca45bafd6c94b8395ca3e6f5f89dba9f4fb0f01eacc21"
+      },
+      "licenseOwner": {
+        "status": "PASS",
+        "assertions": 230,
+        "logSHA256": "879500cc762574e5453226e4532f9b7bf745a5301680bb4d149890bb18236c54"
+      }
+    },
+    "assertions": 1538,
+    "concurrencyScope": "16 simultaneous independent-owner/store host-thread races plus a deterministic allocation-wins interleaving; not physical processes"
+  },
+  "productionCompilation": {
+    "arm64": "PASS",
+    "arm64e": "PASS",
+    "testSeamsExcluded": true,
+    "entitlements": {},
+    "context": "private native acceptance fixture; no full customer app/package build",
+    "signedPrivateProbeSHA256": "e3e76cec54bc425586c60df287b8203bdc313b6f76924d9c11c758a84bea67a8"
+  },
+  "physicalDevice": {
+    "status": "PASS",
+    "model": "iPhone X",
+    "iOS": "16.7.16",
+    "executedArchitecture": "arm64",
+    "rootUID": 0,
+    "rootEUID": 0,
+    "nativeRootAssertions": 60,
+    "native": {
+      "exercise": {
+        "status": "PASS",
+        "assertions": 54,
+        "results": {
+          "0001 bounded private key input": "PASS",
+          "0002 fresh source-owned private stores initialized": "PASS",
+          "0003 new owner starts closed with immutable candidate": "PASS",
+          "0004 unlicensed creation has no durable effect": "PASS",
+          "0005 reservation outside a source operation is denied": "PASS",
+          "0006 bounded genuine source-owner reply": "PASS",
+          "0007 genuine disposable production website activation": "PASS",
+          "0008 licensed configuration creation": "PASS",
+          "0009 unallocated exact metadata edit remains accepted": "PASS",
+          "0010 allocation closes against exact edited document": "PASS",
+          "0011 exact configuration and strict Boolean reservation published in one record": "PASS",
+          "0012 frozen record remains private root single-link file": "PASS",
+          "0013 exact allocation retry preserves frozen bytes and inode": "PASS",
+          "0014 independent store refuses next revision without any rewrite": "PASS",
+          "0015 bounded genuine source-owner reply": "PASS",
+          "0016 fresh production source revalidation": "PASS",
+          "0017 independent store refuses next revision without any rewrite": "PASS",
+          "0018 bounded genuine source-owner reply": "PASS",
+          "0019 fresh production source revalidation": "PASS",
+          "0020 independent store refuses next revision without any rewrite": "PASS",
+          "0021 bounded genuine source-owner reply": "PASS",
+          "0022 fresh production source revalidation": "PASS",
+          "0023 independent store refuses next revision without any rewrite": "PASS",
+          "0024 bounded genuine source-owner reply": "PASS",
+          "0025 fresh production source revalidation": "PASS",
+          "0026 bounded typed direct root consumer reply": "PASS",
+          "0027 typed direct root read preserves original public record shape": "PASS",
+          "0028 bounded typed direct root consumer reply": "PASS",
+          "0029 exact already-saved typed update reconciles without thaw or rewrite": "PASS",
+          "0030 bounded typed direct root consumer reply": "PASS",
+          "0031 typed direct root update cannot bypass reservation": "PASS",
+          "0032 bounded genuine source-owner reply": "PASS",
+          "0033 fresh production source revalidation": "PASS",
+          "0034 restarted owner stays closed and frozen bytes persist": "PASS",
+          "0035 bounded genuine source-owner reply": "PASS",
+          "0036 fresh production source revalidation": "PASS",
+          "0037 revalidation never releases edit reservation": "PASS",
+          "0038 bounded genuine source-owner reply": "PASS",
+          "0039 fresh production source revalidation": "PASS",
+          "0040 exact restart recovery retains original storage binding": "PASS",
+          "0041 second independent candidate saved before interrupted reservation": "PASS",
+          "0042 failed fence can follow durable freeze before allocation intent": "PASS",
+          "0043 bounded genuine source-owner reply": "PASS",
+          "0044 fresh production source revalidation": "PASS",
+          "0045 missing allocation journal never thaws reservation": "PASS",
+          "0046 bounded genuine source-owner reply": "PASS",
+          "0047 fresh production source revalidation": "PASS",
+          "0048 revalidation and exact pending candidate reconcile then allocate safely": "PASS",
+          "0049 third private candidate saved": "PASS",
+          "0050 unallocated candidate advances before stale reservation": "PASS",
+          "0051 stale full document cannot freeze the newer revision": "PASS",
+          "0052 bounded genuine source-owner reply": "PASS",
+          "0053 fresh production source revalidation": "PASS",
+          "0054 rejected stale reservation leaves current document editable": "PASS"
+        },
+        "privateResultSHA256": "9d5f89b5660cf6935f9dafc942f0e232e12bd12be9f3303413805d959d81e652",
+        "privateLogSHA256": "9c6f23ba63b1544ffe3883c043fb62ccb5dbfa024a717dc552fb48b1cbc88f79"
+      },
+      "revoked": {
+        "status": "PASS",
+        "assertions": 6,
+        "results": {
+          "0001 revocation reopens exact private source stores": "PASS",
+          "0002 bounded genuine source-owner reply": "PASS",
+          "0003 genuine signed website revocation denies source admission": "PASS",
+          "0004 revocation preserves reservation and journal while denying reuse": "PASS",
+          "0005 bounded typed direct root consumer reply": "PASS",
+          "0006 revocation denies typed consumer inspection": "PASS"
+        },
+        "privateResultSHA256": "25c7e28df00799aaf50bac5c0753b6b0ba4043ac6be3bd63c843e9c683026104",
+        "privateLogSHA256": "6d33bf5d900ae0c680800d99ee4a2941fb60b1befa0bb3f6cb77ecb032fe6060"
+      }
+    },
+    "genuineDisposableProductionWebsiteLicense": true,
+    "syntheticSigningKeyUsed": false,
+    "typedConsumerBoundary": "direct trusted root LBXContainerOwner handler; no new mobile Mach IPC run",
+    "uid501PrivateEntryPointGuard": "PASS; source API factory-role denial is not inferred from this guard",
+    "disposableLicenseRevoked": "PASS",
+    "exactPrivateDirectoriesRemoved": "PASS",
+    "sixInstalledOwnerPayloadHashesUnchanged": "PASS",
+    "ownerAccountContentsRead": false,
+    "ownerAccountOperationRequested": false,
+    "installedOwnerUIChanged": false
+  },
+  "reservationContract": {
+    "storageEnvelopeKeys": [
+      "storageVersion",
+      "configuration",
+      "allocationReserved"
+    ],
+    "storageVersion": 1,
+    "reservationType": "strict Boolean",
+    "publication": "same atomically replaced UUID configuration file; full envelope readback",
+    "rootLocalContext": "same retained owner active synchronous source-operation queue; exact original deadline; live signed admission",
+    "normalEdits": "all next-revision mutations conflict after reservation, including rename; no byte rewrite",
+    "exactRetry": "reconcile unchanged candidate/UUID; already-saved typed mutation does not rewrite or thaw",
+    "beforeIntentFailure": "reservation may remain without allocation journal; never infer editable state from missing intent",
+    "legacyBareConfiguration": "read/list only; UNKNOWN reservation blocks edits; no-journal trusted allocation may conservatively reserve exact snapshot as true",
+    "presentJournal": "must already have strict reserved:true; false/bare state denied without refreeze or repair",
+    "finalVerification": "read-only exact reservation assertion",
+    "lockAuthority": "lifetime device/inode pin and same held configuration.lock around publication",
+    "atomicityScope": "cooperating current-version store writers; mixed old code and arbitrary out-of-protocol root writes unsupported",
+    "ordinaryThawOrMigrationOrRetirement": false
+  },
+  "preservedAttempts": [
+    {
+      "status": "FAIL",
+      "stage": "initial host owner test",
+      "assertions": 347,
+      "failures": 1,
+      "reason": "Test compared pre-reservation bytes after a legitimate envelope reservation; expected snapshot corrected. No production source change."
+    },
+    {
+      "status": "FAIL",
+      "stage": "initial host store test fixture",
+      "reason": "Invalid 14-character manual serial produced a nil test candidate and aborted the fixture; corrected to the accepted length. No production source change."
+    },
+    {
+      "status": "PASS",
+      "stage": "first production native compile",
+      "deviceExecution": "NOT_RUN",
+      "reason": "Artifact superseded by comment-only cooperative-writer clarification; exact final source rebuilt before physical execution."
+    }
+  ],
+  "notRun": [
+    "installed owner creation/editor integration",
+    "new actual mobile Mach IPC update acceptance for this envelope revision",
+    "post-allocation editing through explicit migration/successor and identity retirement",
+    "quiesced legacy-journal migration or mixed-version upgrade acceptance",
+    "simultaneous independent physical processes",
+    "physical process kill, crash, reboot or power-loss interruption recovery",
+    "source UUID/allocation/official installation transaction",
+    "authoritative official Instagram data/group registration and complete-writer audit",
+    "target identity hooks and opened runtime isolation",
+    "safe automatic switching and ongoing running-session expiry/revocation",
+    "proxy enforcement and accepted Facebook/Twitter runtime",
+    "actual signed-in Instagram account A/B/A",
+    "fresh customer package, website download and license acceptance"
+  ],
+  "sourceDependencySHA256": {
+    "daemon/RBXLicenseToken.h": "a21d1072b10136c4ecc809ad1855bebd368849a2bc0628db63202399fcb52979",
+    "daemon/RBXLicenseToken.m": "e3f00d563c99a47400d22b31b152ec4d2ab6123505b9aaa0f2d2d787f13d55da",
+    "lucid/Authorization/LBXLicenseExchange.h": "ab24d7e92934dce040add199712c0bce2cdd29e581b7e0c1a6246708c90f9b29",
+    "lucid/Authorization/LBXLicenseExchange.m": "5a7ed4ef11dcf87ec32876ce34f75463077215734525929f9750f4afc02e7c93",
+    "lucid/Authorization/LBXLicenseIPC.h": "8ff579acaa3b3113e6480f472022df893095d633de08b362a42de3b63df839ea",
+    "lucid/Authorization/LBXLicenseIPC.m": "7c3aec2a53d8c666b4cfd6ba8deb323f172b5c962de82c809834876b9396ffbc",
+    "lucid/Authorization/LBXLicenseOwner.h": "72c3d6e340164e82065cec0fc6ae44d6bb5c17b56009542474eceb1e59e1160f",
+    "lucid/Authorization/LBXLicenseOwner.m": "3dd388c7a5de722f4473e282361d79353bbdeb4580c3323a4c4fe05d58b00945",
+    "lucid/Authorization/LBXLicenseTransport.h": "bbf31e9e89f19ad7edca17ceb4bfec5e66ff6566d7daff1c125e44af0682e54a",
+    "lucid/Authorization/LBXLicenseTransport.m": "40999576d5d20030ecb50631e4ba69d333de79c2119867923975691147acf35a",
+    "lucid/Authorization/LBXLicenseVault.h": "c799b5249fc7421f35e79d1bcae858e0c0e92680e87ab527f3d87dc51187bc5a",
+    "lucid/Authorization/LBXLicenseVault.m": "e57ccd311379fbdfd02e1dcdd000b8a339c9683997492ce038be8b075e095dd8",
+    "lucid/Containers/LBXContainerClosedAllocation.h": "b7568b42307b6221dde6ee3ea3e0017ebbc0c33f6505110caadb2763d3502300",
+    "lucid/Containers/LBXContainerClosedAllocation.m": "a6e3a7c366cc3c0a68db3185672f0c44a6396a7d9cc395e1cdf6e6862df51918",
+    "lucid/Containers/LBXContainerConfiguration.h": "bf178269d63bccf8ee2651113ba43401784aff79724b25062026f74e465828fe",
+    "lucid/Containers/LBXContainerConfiguration.m": "0475f4c7443d6a74bca17e47bd19c4c736af8faa319b2bd18d4e2a9c405b58a8",
+    "lucid/Containers/LBXContainerConfigurationStore.h": "c47e49a2b6a0baf858e11154966d08936134c264977b765e8d374ad070681840",
+    "lucid/Containers/LBXContainerConfigurationStore.m": "6acfeb3d02107677a32b6ba4b56e826d53f27bfe404030dde30884ecd2a4bde2",
+    "lucid/Containers/LBXContainerIPC.h": "b1cadb446b6f2b9e420bea05b7def048e2dbb17a3b621b523f596f5695a8ea93",
+    "lucid/Containers/LBXContainerIPC.m": "a997795f418a5fb498008c15e159e23e9e499b88ca2f14f4dfe3206297e6e68c",
+    "lucid/Containers/LBXContainerIdentitySpecification.h": "1752cf84c1f33dfbdb3ffdd97fee4f8670ccf20adb82815f1ba7138dbfed7c10",
+    "lucid/Containers/LBXContainerIdentitySpecification.m": "614d15eec2a7988ac2e0e41421f526919890452181fdb422fe8a5faba1d92fce",
+    "lucid/Containers/LBXContainerOwner.h": "ce2ac125c114bbc8b4e950b5371dae532649bd05329d89abbf11b3b791441547",
+    "lucid/Containers/LBXContainerOwner.m": "6b67b6406cd761f1971d996901e927a50e730421accaf2b079bb4d74f1b01dc8",
+    "shared/RBXLicensePin.h": "e81b82da4597828a48c3dbfa76055a06c3e4a4323a165ed3e7d70b7e97ee9f3f",
+    "shared/RBXStorageGate.h": "95e77751b8b78276d6ef34699176eab2df3243b902f494d5a23cfb257d7fe9ac"
+  },
+  "privacy": {
+    "privateConfigurationsIdentifiersKeysCredentialsAndRawPathsExported": false,
+    "rawFixtureReportsAndNativeToolsOutsideGit": true
+  }
+}

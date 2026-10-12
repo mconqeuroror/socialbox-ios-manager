@@ -1,0 +1,42 @@
+{
+  "name": "socialbox-admin",
+  "version": "1.0.0",
+  "private": true,
+  "description": "SocialBox private license administration",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "seed": "tsx src/scripts/seed.ts",
+    "seed:va": "tsx scripts/seed-va.ts",
+    "test": "tsx scripts/license-auth-test.ts && tsx scripts/auth-concurrency-test.ts && tsx scripts/blob-storage-etag-test.ts && tsx scripts/device-license-test.ts && tsx scripts/permanent-device-license-test.ts && tsx scripts/console-license-authority-test.ts && tsx scripts/console-read-authority-test.ts && tsx scripts/http-proxy-test.ts && tsx scripts/profile-inventory-test.ts && tsx scripts/app-registry-test.ts && tsx scripts/profile-metadata-test.ts && tsx scripts/assignment-migration-test.ts && tsx scripts/device-scope-test.ts && tsx scripts/backup-transfer-test.ts && tsx scripts/backup-chunks-test.ts && node scripts/apt-publication-test.mjs && tsx scripts/apt-route-test.ts && tsx scripts/installation-test.ts && tsx scripts/admin-console-test.ts && tsx scripts/socialbox-release-test.ts",
+    "test:apt": "node scripts/apt-publication-test.mjs && tsx scripts/apt-route-test.ts",
+    "test:auth-concurrency": "tsx scripts/auth-concurrency-test.ts",
+    "smoke": "node scripts/smoke-test.mjs",
+    "test:releases": "tsx scripts/socialbox-release-test.ts"
+  },
+  "dependencies": {
+    "@vercel/blob": "^2.8.0",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.6.1",
+    "jose": "^5.9.6",
+    "next": "^14.2.15",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/node": "^20.16.11",
+    "@types/react": "^18.3.11",
+    "@types/react-dom": "^18.3.1",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.13",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.3"
+  }
+}

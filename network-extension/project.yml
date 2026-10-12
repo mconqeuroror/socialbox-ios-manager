@@ -1,0 +1,61 @@
+name: RedditBoxFirewall
+options:
+  deploymentTarget:
+    iOS: "15.0"
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    CODE_SIGN_STYLE: Manual
+    CODE_SIGNING_ALLOWED: false
+    CODE_SIGNING_REQUIRED: false
+targets:
+  RedditBoxFirewall:
+    type: application
+    platform: iOS
+    sources: [FirewallHost]
+    info:
+      path: FirewallHost/Info.plist
+      properties:
+        CFBundleDisplayName: RedditBox Firewall
+        CFBundleIdentifier: com.redditbox.firewall
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        SBAppTags: [hidden]
+        RBXLauncherOnly: true
+        UILaunchScreen: {}
+        UIApplicationSceneManifest:
+          UIApplicationSupportsMultipleScenes: false
+    dependencies:
+      - target: PacketTunnel
+        embed: true
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.redditbox.firewall
+        CODE_SIGN_ENTITLEMENTS: FirewallHost/RedditBoxFirewall.entitlements
+  PacketTunnel:
+    type: app-extension
+    platform: iOS
+    sources: [PacketTunnel]
+    info:
+      path: PacketTunnel/Info.plist
+      properties:
+        CFBundleDisplayName: RedditBox App Firewall
+        CFBundleIdentifier: com.redditbox.firewall.PacketTunnel
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        NSExtension:
+          NSExtensionPointIdentifier: com.apple.networkextension.app-proxy
+          NSExtensionPrincipalClass: $(PRODUCT_MODULE_NAME).PacketTunnelProvider
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.redditbox.firewall.PacketTunnel
+        CODE_SIGN_ENTITLEMENTS: PacketTunnel/PacketTunnel.entitlements
+        APPLICATION_EXTENSION_API_ONLY: true
+schemes:
+  RedditBoxFirewall:
+    build:
+      targets:
+        RedditBoxFirewall: all
+        PacketTunnel: all
+    archive:
+      config: Release

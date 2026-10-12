@@ -1,0 +1,108 @@
+{
+  "version": "rootless 0.1.11 / rootful 0.1.9",
+  "checkedAtUTC": "2026-09-11T20:07:08.361801+00:00",
+  "installURL": "https://redditspoof.vercel.app/install",
+  "aptSigningFingerprint": "B020EEB51600D74C02D6FE57448FA877778E0D1F",
+  "repositories": [
+    {
+      "scheme": "rootless",
+      "url": "https://redditspoof.vercel.app/apt/redditbox/",
+      "architecture": "iphoneos-arm64",
+      "version": "0.1.11",
+      "filename": "debs/com.redditbox_0.1.11_iphoneos-arm64.deb",
+      "sha256": "09ad1b9fd8a923f0f6752e15e3713a7b6e2f3a5f4f4660a203eec7bc4f60f744",
+      "size": 1536056,
+      "retainedVersions": [
+        "0.1.11",
+        "0.1.10",
+        "0.1.9"
+      ],
+      "dependencies": [
+        "ai.akemi.appinst@2.1.1-redditbox2",
+        "ai.akemi.appsyncunified@116.0"
+      ],
+      "requiresMDMReadoption": false,
+      "stagedDeployment": "https://redditspoof-5mlbijl4q-modelclone.vercel.app",
+      "signedIndexesAndAllRetainedDownloads": "PASS",
+      "localMetadataMatchesProduction": true,
+      "stagingLicenseHealthEvidence": {
+        "variant": "rootless",
+        "version": "0.1.11",
+        "deploymentURL": "https://redditspoof-5mlbijl4q-modelclone.vercel.app",
+        "status": "PASS",
+        "ready": true,
+        "issuerMatches": true,
+        "keyIdMatches": true,
+        "expectedKeyId": "b2c5d4176c727107c9826ad69386d4d65f90920074981bd842127d6b22add6e9",
+        "httpStatus": 200,
+        "journalPhaseBeforeRequest": "deployed",
+        "journalPhaseAfterRequest": "deployed",
+        "beforePromotionConfirmed": true,
+        "isReleaseGate": false,
+        "requestStartedAt": "2026-09-11T19:57:50.439353+00:00",
+        "requestCompletedAt": "2026-09-11T19:57:51.031255+00:00"
+      }
+    },
+    {
+      "scheme": "rootful",
+      "url": "https://redditspoof.vercel.app/apt/redditbox-rootful/",
+      "architecture": "iphoneos-arm",
+      "version": "0.1.9",
+      "filename": "debs/com.redditbox_0.1.9_iphoneos-arm.deb",
+      "sha256": "ef20842ed58ededaee83bb13b2eea60fd4cd65b0c1f24bdb57273cb58d4eaef3",
+      "size": 1531250,
+      "retainedVersions": [
+        "0.1.9",
+        "0.1.8",
+        "0.1.7"
+      ],
+      "dependencies": [
+        "ai.akemi.appinst@2.1.1-redditbox2",
+        "ai.akemi.appsyncunified@116.0"
+      ],
+      "requiresMDMReadoption": false,
+      "stagedDeployment": "https://redditspoof-dhyvtn0or-modelclone.vercel.app",
+      "signedIndexesAndAllRetainedDownloads": "PASS",
+      "localMetadataMatchesProduction": true,
+      "stagingLicenseHealthEvidence": {
+        "variant": "rootful",
+        "version": "0.1.9",
+        "deploymentURL": "https://redditspoof-dhyvtn0or-modelclone.vercel.app",
+        "status": "PASS",
+        "ready": true,
+        "issuerMatches": true,
+        "keyIdMatches": true,
+        "expectedKeyId": "b2c5d4176c727107c9826ad69386d4d65f90920074981bd842127d6b22add6e9",
+        "httpStatus": 200,
+        "journalPhaseBeforeRequest": "deployed",
+        "journalPhaseAfterRequest": "deployed",
+        "beforePromotionConfirmed": true,
+        "isReleaseGate": false,
+        "requestStartedAt": "2026-09-11T20:05:03.782250+00:00",
+        "requestCompletedAt": "2026-09-11T20:05:04.374391+00:00"
+      }
+    }
+  ],
+  "deviceAcceptance": "See separate device records; rootful device NOT_RUN",
+  "licenseSigner": {
+    "ready": true,
+    "issuer": "https://redditspoof.vercel.app",
+    "keyId": "b2c5d4176c727107c9826ad69386d4d65f90920074981bd842127d6b22add6e9",
+    "matchesExistingPublicPEM": true
+  },
+  "web": {
+    "installHTTP": 200,
+    "homeHTTP": 200,
+    "canonicalSileoLinks": [
+      "sileo://source/https://redditspoof.vercel.app/apt/redditbox/",
+      "sileo://source/https://redditspoof.vercel.app/apt/redditbox-rootful/"
+    ],
+    "bothDisplayedVersions": [
+      "0.1.11",
+      "0.1.9"
+    ],
+    "copyButtonsRendered": 2,
+    "browserClickOrSileoAcceptance": "NOT_RUN",
+    "hydratedHomeLinkRecheck": "NOT_RUN; homepage unchanged from 0.1.3"
+  }
+}

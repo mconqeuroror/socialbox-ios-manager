@@ -1,0 +1,94 @@
+{
+  "allOwnedRuntime": {
+    "beforeToFirstPost": {
+      "added": 0,
+      "modified": 3,
+      "removed": 0
+    },
+    "beforeToSecondPost": {
+      "added": 0,
+      "modified": 3,
+      "removed": 0
+    },
+    "entryCounts": [
+      17906,
+      17906,
+      17906
+    ],
+    "firstToSecondPost": {
+      "added": 0,
+      "modified": 2,
+      "removed": 0
+    },
+    "normalizedSHA256": [
+      "6a88cf5d3bd26e239b1b9e25bf36ac334c96bdf25e14ae51d065b9de3d397313",
+      "acfa2f7683b0ef08503b80241cb55ab8b8e6f79a09862c9968d04193f46b9b25",
+      "bb478939a839b88c3e77a3e870892028e22c7c581416415492b6fe79a0de5941"
+    ],
+    "postSnapshotsEqual": false,
+    "regularOrHardlinkCounts": [
+      14374,
+      14374,
+      14374
+    ],
+    "status": "inconclusive",
+    "threeEqual": false
+  },
+  "comparisonReceiptSHA256": "5022c8febf2b2ec2004ff722d1039b89dc06784b644c9cfbe001a91ca59ae35d",
+  "excludedComparisonFields": [
+    "entry atime/ctime/mtime",
+    "PAX atime/ctime/mtime"
+  ],
+  "installResultSHA256": "0d0548e90193967903fe7a67b958e27efd7b565fcd1d7af2dcad210ef4034f21",
+  "packageSHA256": "67104de576dcbc8e901fffed1bada89df07169347dbbfcc6d21154e25a85087a",
+  "rootCounts": [
+    18,
+    18,
+    18
+  ],
+  "rootListsEqual": true,
+  "schemaVersion": 1,
+  "scope": "Container trees and metadata-resolved owned app/group roots; no global Keychain or foreign-account recovery claim",
+  "scopedContainerData": {
+    "beforeToFirstPost": {
+      "added": 0,
+      "modified": 0,
+      "removed": 0
+    },
+    "beforeToSecondPost": {
+      "added": 0,
+      "modified": 0,
+      "removed": 0
+    },
+    "entryCounts": [
+      63,
+      63,
+      63
+    ],
+    "firstToSecondPost": {
+      "added": 0,
+      "modified": 0,
+      "removed": 0
+    },
+    "normalizedSHA256": [
+      "f34fa671b8ba94229c4c98f4b8603b1762d2f677144a6c4e154c1526777db346",
+      "f34fa671b8ba94229c4c98f4b8603b1762d2f677144a6c4e154c1526777db346",
+      "f34fa671b8ba94229c4c98f4b8603b1762d2f677144a6c4e154c1526777db346"
+    ],
+    "postSnapshotsEqual": true,
+    "regularOrHardlinkCounts": [
+      14,
+      14,
+      14
+    ],
+    "status": "same",
+    "threeEqual": true
+  },
+  "scopedSubsetNonempty": true,
+  "sourceManifestSHA256": [
+    "28811e1055efaa092ca1af0c23f138cf9136dfc5f4845d20237b0f28b44f6d9f",
+    "5f1aa283a627e7f4b2e5b969138364de83fe4b41b2e2d14a02577e793ba2faea",
+    "9461bfc4a716a901f48f41c41cfadb0cb37f8d4fd2201f10f6aef3254009a957"
+  ],
+  "version": "3.1.0-1+socialbox.15"
+}

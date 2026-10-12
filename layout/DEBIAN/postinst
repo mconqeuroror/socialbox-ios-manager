@@ -1,0 +1,49 @@
+#!/bin/sh
+set -e
+
+case "${1:-configure}" in
+  configure|abort-upgrade|abort-remove|abort-deconfigure) ;;
+  *) exit 0 ;;
+esac
+
+SERVICE=com.redditbox.daemon
+PLIST=/var/jb/Library/LaunchDaemons/$SERVICE.plist
+LAUNCHCTL=$(command -v launchctl || true)
+[ -n "$LAUNCHCTL" ] && [ -f "$PLIST" ] || {
+  echo "RedditBox: launchctl or $PLIST is missing; package configuration failed." >&2
+  exit 1
+}
+chown 0:0 "$PLIST"
+chmod 644 "$PLIST"
+# Reload rather than retaining the old executable/configuration after an upgrade.
+if "$LAUNCHCTL" print "system/$SERVICE" >/dev/null 2>&1; then
+  "$LAUNCHCTL" bootout "system/$SERVICE" || {
+    echo "RedditBox: could not stop the previous daemon during upgrade." >&2
+    exit 1
+  }
+fi
+"$LAUNCHCTL" bootstrap system "$PLIST" || {
+  echo "RedditBox: launchd rejected the daemon; check package installation and jailbreak state." >&2
+  exit 1
+}
+# RunAtLoad starts the freshly bootstrapped service. A second kickstart -k
+# can kill its in-flight startup operation and leave a persistent recovery fence.
+attempt=0
+while ! "$LAUNCHCTL" print "system/$SERVICE" 2>/dev/null | grep -Eq '^[[:space:]]*pid = [0-9]+'; do
+  attempt=$((attempt + 1))
+  if [ "$attempt" -ge 5 ]; then
+    echo "RedditBox: daemon did not stay running; reinstall after checking the daemon crash log." >&2
+    exit 1
+  fi
+  sleep 1
+done
+
+if [ -x /var/jb/usr/bin/uicache ]; then
+  /var/jb/usr/bin/uicache -p /var/jb/Applications/RedditBox.app
+  /var/jb/usr/bin/uicache -p /var/jb/Applications/RedditBoxFirewall.app
+elif command -v uicache >/dev/null 2>&1; then
+  uicache -p /var/jb/Applications/RedditBox.app
+  uicache -p /var/jb/Applications/RedditBoxFirewall.app
+fi
+
+exit 0

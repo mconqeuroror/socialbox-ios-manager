@@ -1,0 +1,520 @@
+{
+  "schemaVersion": 1,
+  "recordedDate": "2026-09-28",
+  "baseRevision": "e1a4cca",
+  "scope": "Source-owned SocialBox presentation over retained compiled core. Static inventories do not establish runtime reachability or full visual coverage.",
+  "primarySections": [
+    "Containers",
+    "Connection",
+    "Settings"
+  ],
+  "phoneAcceptance": "NOT_RUN",
+  "fixedCopyCatalog": {
+    "path": "lucid/Presentation/SBLegacyDisplayCatalog.m",
+    "reviewedWholeLegacyInputs": 40,
+    "mechanism": "Only SB_LEGACY-marked input strings may contain legacy display literals. Output copy and source UI remain owned."
+  },
+  "roleContract": {
+    "Fixed": "Exact reviewed fixed copy; unknown text unchanged.",
+    "Status": "Reviewed fixed/templates; unknown legacy product/support status uses neutral text and stable short SHA-256 reference. Ordinary status remains unchanged.",
+    "Diagnostic": "Known fixed errors and reviewed safe helper causes; all unrecognized diagnostics use neutral text and stable short SHA-256 reference. No raw logging, URLs, credentials or arbitrary suffix reflection.",
+    "UserData": "Always unchanged, including a value exactly matching a legacy product word or fixed-copy key.",
+    "Apply": "Only explicitly role-marked labels are eligible; unmarked labels, user controls, fields and navigation titles are untouched.",
+    "OriginalAlerts": "Default adapter maps reviewed fixed/templates only. Diagnostic context is limited to the exact Cloud, CloudPush and license showError: entrypoints; prior per-owner nesting state is restored on return and exception. Both adapters preserve original action objects, callbacks, enabled state, style, preferred action, fields and delegates. No alert-title guessing.",
+    "SourceActions": "LBXDisplayActionTitle maps only source-created fixed titles. It cannot rename an existing readonly UIAlertAction.title."
+  },
+  "reportedRegression": {
+    "controller": "_Xc9m",
+    "buttonSymbol": "square.and.arrow.down",
+    "method": "importContainerTapped",
+    "address": "0x100121100",
+    "privateDecompilerLines": [
+      78253,
+      89349,
+      89895,
+      90989
+    ],
+    "utf16FileOffsets": [
+      "0x3e99a6",
+      "0x870eb2"
+    ],
+    "newMessage": "No importable container archives found. Save an archive to Downloads in Files, then try again.",
+    "interpretation": "Empty archive import search, not an empty saved-containers error.",
+    "validation": {
+      "baselineNative": "EXPECTED_FAIL: original mapping left exact message unchanged (exit 1)",
+      "currentNative": "PASS: 31 production copy assertions including English labels and user-data preservation",
+      "uikitHookAndPhone": "PASS: base 228 and workspace 141 synthetic UI assertions with English copy; phone UI NOT_RUN",
+      "iosCompilation": "PASS: LBXDisplayCopy.m and SBLegacyDisplayCatalog.m, arm64 iOS 15 simulator, -Wall -Wextra -Werror"
+    },
+    "previousDisplayText": {
+      "version": "3.1.0-1+socialbox.13",
+      "language": "sk",
+      "text": "Nena\u0161li sa \u017eiadne z\u00e1lohy na import. Ulo\u017e z\u00e1lohu do prie\u010dinka Downloads v aplik\u00e1cii S\u00fabory a sk\u00fas znova."
+    }
+  },
+  "mechanicalEvidence": {
+    "binary": {
+      "name": "SocialBox",
+      "sha256": "e230dab07690e30c292962a3c0a3ea8301f9532aaa583a7209fdf33142552dd0",
+      "executed": false,
+      "markerStringCount": 714,
+      "uniqueMarkerStringCount": 223,
+      "classificationCounts": {
+        "compatibility_or_symbol_candidate": 442,
+        "reviewed_display_input": 62,
+        "unreviewed_display_or_diagnostic_candidate": 210
+      },
+      "reachability": "NOT_ESTABLISHED_BY_STATIC_STRINGS"
+    },
+    "metadata": [
+      {
+        "name": "SocialBox.functions.tsv",
+        "sha256": "e31dbc9000632eeb8b56cf21949b6f7eee134768c08738d054cbfd3aee7c806d",
+        "markerLineCount": 216,
+        "executed": false,
+        "reachability": "NOT_ESTABLISHED_BY_METADATA"
+      },
+      {
+        "name": "SocialBox.c",
+        "sha256": "1b5cb98498c37f04cfa7283b1872d46543e822387935afa97fe0a0225e473c48",
+        "markerLineCount": 735,
+        "executed": false,
+        "reachability": "NOT_ESTABLISHED_BY_METADATA"
+      }
+    ],
+    "command": "python3 tools/check_socialbox_branding.py --binary <private-original-manager> --metadata <private-method-index> --metadata <private-decompiler> --json",
+    "limits": [
+      "Original binary and metadata read only; no imported executable was run.",
+      "Binary results contain offsets, hashes and classifications, not raw runtime/user content.",
+      "Obfuscated strings, server responses, web content and all future runtime messages cannot be proven covered by static string extraction.",
+      "A candidate binary match is not proof of UI reachability.",
+      "Raw legacy input is preserved in the compatibility catalog and original core; the source guard is not a whole-binary zero-string claim."
+    ]
+  },
+  "surfaceRegister": [
+    {
+      "id": "startup",
+      "entry": "Admission-owned startup status",
+      "compatibilityEndpoint": "_Xd2z",
+      "coverageDesign": "source-owned startup; fixed/status roles",
+      "physicalAcceptance": {
+        "status": "NOT_RUN",
+        "cases": "Startup copy and asynchronous denial states"
+      },
+      "runtimeReachability": "NOT_VERIFIED_ON_PHONE"
+    },
+    {
+      "id": "license",
+      "entry": "Admission-owned license form",
+      "compatibilityEndpoint": "_Xm8u",
+      "coverageDesign": "source-owned form; diagnostic errors; original validation",
+      "physicalAcceptance": {
+        "status": "NOT_RUN",
+        "cases": "Keyboard, loading, invalid/network/unsupported responses; no admission bypass"
+      },
+      "runtimeReachability": "NOT_VERIFIED_ON_PHONE"
+    },
+    {
+      "id": "welcome",
+      "entry": "After original admission/onboarding routing",
+      "compatibilityEndpoint": "SocialBoxOnboardingViewController",
+      "coverageDesign": "source-owned welcome; original callbacks",
+      "physicalAcceptance": {
+        "status": "NOT_RUN",
+        "cases": "Create/skip callback ownership and cold-start repeat"
+      },
+      "runtimeReachability": "NOT_VERIFIED_ON_PHONE"
+    },
+    {
+      "id": "containers",
+      "entry": "Primary section 1",
+      "compatibilityEndpoint": "_Xc9m",
+      "coverageDesign": "source-owned stable-ID list; scrollable header and empty guidance; adaptive narrow/accessibility layouts and native keyboard guide",
+      "physicalAcceptance": {
+        "status": "NOT_RUN",
+        "cases": "Search, 40 rows, reorder, swipe/context menu, import/export, cancel"
+      },
+      "runtimeReachability": "NOT_VERIFIED_ON_PHONE"
+    },
+    {
+      "id": "container-import-empty",
+      "entry": "Containers import action",
+      "compatibilityEndpoint": "_Xc9m::importContainerTapped",
+      "coverageDesign": "exact Unicode fixed-copy catalog",
+      "physicalAcceptance": {
+        "status": "NOT_RUN",
+        "cases": "No-file dialog title/message and original OK action/completion"
+      },
+      "runtimeReachability": "NOT_VERIFIED_ON_PHONE"
+    },
+    {
+      "id": "container-import-present",
+      "entry": "Containers import action",
+      "compatibilityEndpoint": "_Xc9m::importContainerTapped",
+      "coverageDesign": "original archive filters and actions retained",
+      "physicalAcceptance": {
+        "status": "NOT_RUN",
+        "cases": "One archive, pack, corrupt/unsupported archive; keep filename and selected file unchanged"
+      },
+      "runtimeReachability": "NOT_VERIFIED_ON_PHONE"
+    },
+    {
+      "id": "container-export",
+      "entry": "Container or batch export",
+      "compatibilityEndpoint": "_Xc9m",
+      "coverageDesign": "reviewed fixed suffix templates; captured filenames unchanged",
+      "physicalAcceptance": {
+        "status": "NOT_RUN",
+        "cases": "Share instructions, counts, sizes and actual filenames preserved"
+      },
+      "runtimeReachability": "NOT_VERIFIED_ON_PHONE"
+    },
+    {
+      "id": "connection-proxy",
+      "entry": "Primary section 2 / Proxy",
+      "compatibilityEndpoint": "ProxyViewController",
+      "coverageDesign": "source-owned connection cards replace interior layout; original action carriers, hidden/enabled states and user values retained; unknown structure unavailable",
+      "physicalAcceptance": {
+        "status": "NOT_RUN",
+        "cases": "Add/import/test proxy, credentials, menus, async status"
+      },
+      "runtimeReachability": "NOT_VERIFIED_ON_PHONE"
+    },
+    {
+      "id": "connection-location",
+      "entry": "Primary section 2 / Location",
+      "compatibilityEndpoint": "LocSimViewController",
+      "coverageDesign": "source-owned location panel; original map/search",
+      "physicalAcceptance": {
+        "status": "NOT_RUN",
+        "cases": "Map/search/keyboard, coordinates, async simulation status"
+      },
+      "runtimeReachability": "NOT_VERIFIED_ON_PHONE"
+    },
+    {
+      "id": "settings",
+      "entry": "Primary section 3",
+      "compatibilityEndpoint": "SettingsViewController",
+      "coverageDesign": "source-owned settings; explicit status vs user-data bindings",
+      "physicalAcceptance": {
+        "status": "NOT_RUN",
+        "cases": "License/account values, maintenance confirmations, Contact, reset/sign-out cancel"
+      },
+      "runtimeReachability": "NOT_VERIFIED_ON_PHONE"
+    },
+    {
+      "id": "overview",
+      "entry": "Secondary route if retained; not a primary section",
+      "compatibilityEndpoint": "HomeViewController",
+      "coverageDesign": "source-owned device overview",
+      "physicalAcceptance": {
+        "status": "NOT_RUN",
+        "cases": "No promotional sidebar route; identity values remain data"
+      },
+      "runtimeReachability": "NOT_VERIFIED_ON_PHONE"
+    },
+    {
+      "id": "identity",
+      "entry": "Container/device configuration route",
+      "compatibilityEndpoint": "FakeInfoViewController",
+      "coverageDesign": "source-owned form with original controls",
+      "physicalAcceptance": {
+        "status": "NOT_RUN",
+        "cases": "Conditional controls, original tags/delegates and compatibility messages"
+      },
+      "runtimeReachability": "NOT_VERIFIED_ON_PHONE"
+    },
+    {
+      "id": "pickers",
+      "entry": "Identity and app membership routes",
+      "compatibilityEndpoint": "CountryPickerViewController / CarrierPickerViewController / ModelPickerViewController / VersionPickerViewController / DRTAllowedModelsViewController / AppListViewController",
+      "coverageDesign": "original data/delegates with source presentation",
+      "physicalAcceptance": {
+        "status": "NOT_RUN",
+        "cases": "Search, selection, Done/cancel, selected identity and user content"
+      },
+      "runtimeReachability": "NOT_VERIFIED_ON_PHONE"
+    },
+    {
+      "id": "local-backups",
+      "entry": "Retained backup route",
+      "compatibilityEndpoint": "BackupsViewController",
+      "coverageDesign": "original backup handlers; reviewed display copy",
+      "physicalAcceptance": {
+        "status": "NOT_RUN",
+        "cases": "Restore/export/delete confirmation and cancellation"
+      },
+      "runtimeReachability": "NOT_VERIFIED_ON_PHONE"
+    },
+    {
+      "id": "cloud-backups",
+      "entry": "Retained licensed backup route if enabled",
+      "compatibilityEndpoint": "CloudViewController / CloudPushViewController",
+      "coverageDesign": "reviewed fixed and name-bearing confirmation templates; exact Cloud/CloudPush error-entry diagnostic context",
+      "physicalAcceptance": {
+        "status": "NOT_RUN",
+        "cases": "Quota/passphrase and permanent deletion meaning; never substitute payment support"
+      },
+      "runtimeReachability": "NOT_VERIFIED_ON_PHONE"
+    },
+    {
+      "id": "session-details",
+      "entry": "Retained detail route if exposed",
+      "compatibilityEndpoint": "TokensDetailViewController",
+      "coverageDesign": "user/session values are UserData",
+      "physicalAcceptance": {
+        "status": "NOT_RUN",
+        "cases": "No rewriting, logging or diagnostic reflection of session fields"
+      },
+      "runtimeReachability": "NOT_VERIFIED_ON_PHONE"
+    },
+    {
+      "id": "bulk-proxy-import",
+      "entry": "Connection import route",
+      "compatibilityEndpoint": "BulkProxyImportViewController",
+      "coverageDesign": "source-owned import text; entered proxies remain UserData",
+      "physicalAcceptance": {
+        "status": "NOT_RUN",
+        "cases": "Multiple lines, preview, errors, cancel and accepted credential bytes"
+      },
+      "runtimeReachability": "NOT_VERIFIED_ON_PHONE"
+    },
+    {
+      "id": "guide",
+      "entry": "Owned help route",
+      "compatibilityEndpoint": "UserGuideViewController",
+      "coverageDesign": "owned help replaces legacy guide prose",
+      "physicalAcceptance": {
+        "status": "NOT_RUN",
+        "cases": "Guide opened from retained routes, VoiceOver and expanded content"
+      },
+      "runtimeReachability": "NOT_VERIFIED_ON_PHONE"
+    },
+    {
+      "id": "marketplace",
+      "entry": "Must not be reachable from owned UI",
+      "compatibilityEndpoint": "AddonsMarketViewController",
+      "coverageDesign": "removed from owned navigation and guarded modal routes, including exact CloudPlansViewController alias; licensed Cloud routes remain admitted",
+      "physicalAcceptance": {
+        "status": "NOT_RUN",
+        "cases": "Attempt every former sidebar/menu/link route; no shop shown"
+      },
+      "runtimeReachability": "NOT_VERIFIED_ON_PHONE"
+    },
+    {
+      "id": "checkout",
+      "entry": "Must not be reachable from owned UI",
+      "compatibilityEndpoint": "CryptoCheckoutViewController",
+      "coverageDesign": "removed from public navigation; compiled core retained",
+      "physicalAcceptance": {
+        "status": "NOT_RUN",
+        "cases": "No purchase/receipt/support/payment route from owned UI"
+      },
+      "runtimeReachability": "NOT_VERIFIED_ON_PHONE"
+    },
+    {
+      "id": "original-alert-actions",
+      "entry": "Original confirmation/file-selection dialogs",
+      "compatibilityEndpoint": "UIAlertController / UIAlertAction",
+      "coverageDesign": "original action objects, handlers, style, fields preserved",
+      "physicalAcceptance": {
+        "status": "NOT_RUN",
+        "cases": "Legacy product copy in original action titles is NOT covered by readonly-title mapping; file/user titles stay exact"
+      },
+      "runtimeReachability": "NOT_VERIFIED_ON_PHONE"
+    },
+    {
+      "id": "system-surfaces",
+      "entry": "SpringBoard / Files / VPN / permission prompts",
+      "compatibilityEndpoint": "Info.plist + extension metadata + icon assets",
+      "coverageDesign": "package display metadata and owned artwork; compatibility IDs preserved",
+      "physicalAcceptance": {
+        "status": "NOT_RUN",
+        "cases": "Physical app icon, Files label, document sharing, VPN name and permission prompts"
+      },
+      "runtimeReachability": "NOT_VERIFIED_ON_PHONE"
+    },
+    {
+      "id": "unsupported-runtime",
+      "entry": "ABI or getter contract mismatch",
+      "compatibilityEndpoint": "Pinned host compatibility checks",
+      "coverageDesign": "explicit source-owned unavailable state required by final integration",
+      "physicalAcceptance": {
+        "status": "NOT_RUN",
+        "cases": "No stale original branded fallback; no speculative selectors or mutations"
+      },
+      "runtimeReachability": "NOT_VERIFIED_ON_PHONE"
+    },
+    {
+      "id": "sessions-list",
+      "entry": "Current sessions route",
+      "compatibilityEndpoint": "TokensViewController",
+      "coverageDesign": "owned table presentation with exact native spinner and original delegate/selection",
+      "physicalAcceptance": {
+        "status": "NOT_RUN",
+        "cases": "List, loading updates, selection and cancel"
+      },
+      "runtimeReachability": "NOT_VERIFIED_ON_PHONE"
+    },
+    {
+      "id": "session-import",
+      "entry": "Existing session import route",
+      "compatibilityEndpoint": "TokensImportViewController",
+      "coverageDesign": "owned table presentation; original navigation actions and selected rows",
+      "physicalAcceptance": {
+        "status": "NOT_RUN",
+        "cases": "Available source items, import confirmation and cancel"
+      },
+      "runtimeReachability": "NOT_VERIFIED_ON_PHONE"
+    },
+    {
+      "id": "cloud-batch",
+      "entry": "Existing batch Cloud upload route",
+      "compatibilityEndpoint": "CMVC_BulkCloudPushViewController",
+      "coverageDesign": "owned form and sections; exact native label/passphrase inputs, secure state, delegates and action carriers",
+      "physicalAcceptance": {
+        "status": "NOT_RUN",
+        "cases": "Keyboard, label/passphrase preservation, section selection, upload confirmation and cancel"
+      },
+      "runtimeReachability": "NOT_VERIFIED_ON_PHONE"
+    },
+    {
+      "id": "session-export",
+      "entry": "Existing session export route",
+      "compatibilityEndpoint": "TokensBulkExtractViewController",
+      "coverageDesign": "owned table presentation; original export action and selection",
+      "physicalAcceptance": {
+        "status": "NOT_RUN",
+        "cases": "Selected records, export destination, original confirmation and cancel"
+      },
+      "runtimeReachability": "NOT_VERIFIED_ON_PHONE"
+    },
+    {
+      "id": "session-destination",
+      "entry": "Existing session destination route",
+      "compatibilityEndpoint": "TokensRouteAllPickerViewController",
+      "coverageDesign": "owned table presentation with exact search field; completion and model data remain private",
+      "physicalAcceptance": {
+        "status": "NOT_RUN",
+        "cases": "Search, destination selection, original completion and cancel"
+      },
+      "runtimeReachability": "NOT_VERIFIED_ON_PHONE"
+    }
+  ],
+  "preservedCompatibility": [
+    "Executable/bundle/class/selector and XPC/daemon identities",
+    "Archive extensions, formats, old data and filesystem paths",
+    "URL schemes, UTIs, entitlements and extension routing",
+    "User-created names, filenames, inputs, proxy credentials and account/session values",
+    "License notices, attribution and recovery provenance"
+  ],
+  "guard": {
+    "path": "tools/check_socialbox_branding.py",
+    "scope": "Every top-level .m/.h in lucid/Presentation, matching production translation-unit layout",
+    "exemptions": "Exact ABI literals in enumerated files; SB_LEGACY-marked catalog inputs; synthetic Tests directory is nonproduction. No blanket exemption for an entire UI implementation.",
+    "regressions": "New-file legacy label, near-match ABI label, unmarked catalog output, empty scan, C format-string parsing, and read-only UTF-16 binary audit.",
+    "latestSourceCheck": {
+      "status": "PASS",
+      "scannedFileCount": 22,
+      "unapprovedReferenceCount": 0,
+      "phoneAcceptance": "NOT_RUN",
+      "evidence": "docs/release-evidence/socialbox-ui-completion-2026-09-28/source-guard-result.json"
+    }
+  },
+  "diagnosticContext": {
+    "registry": "SBBackendDiagnosticHooks",
+    "encoding": "v24@0:8@16",
+    "metadataEvidence": {
+      "file": "socialbox-app-arm64-objc-metadata.txt",
+      "entries": [
+        {
+          "screen": "CloudViewController",
+          "address": "0x100088ba8",
+          "typeLine": 4645
+        },
+        {
+          "screen": "CloudPushViewController",
+          "address": "0x10008e450",
+          "typeLine": 6266
+        },
+        {
+          "screen": "_Xm8u",
+          "address": "0x100167000",
+          "typeLine": 33091
+        }
+      ]
+    },
+    "behavior": "Cloud methods present synchronously; license method retains its original label update. Unknown error messages receive a stable short reference without raw values. Arguments and exceptions are untouched. Ordinary confirmations outside the exact synchronous error context remain reviewed-template/user-data preserving.",
+    "syntheticValidation": "PASS: nested error calls, original object argument, real completion, original action/field identity, no handler invocation, exception propagation and same-title confirmation after context cleanup.",
+    "phoneAcceptance": "NOT_RUN"
+  },
+  "authoredCopyCatalog": {
+    "path": "lucid/Presentation/SBInterfaceCopy.m",
+    "entries": 273,
+    "references": 310,
+    "nativeChecks": 833,
+    "language": "en"
+  },
+  "finalSourceGuard": "PASS: 22 production UI files; no unapproved legacy reference",
+  "workspaceFixture": {
+    "assertions": 166,
+    "status": "PASS",
+    "evidence": "docs/release-evidence/socialbox-ui-completion-2026-09-28/workspace-synthetic-result.json",
+    "capture": "Includes verified full control, saved/active proxy and empty-import captures. Original sender/tag/gesture retained; rendering invokes zero actions. Synthetic evidence, not phone acceptance."
+  },
+  "languageCorrection": {
+    "version": "3.1.0-1+socialbox.14",
+    "authoredLanguage": "en",
+    "scope": "All authored presentation copy, diagnostic/status replacements and accessibility labels; no changes to user data, phone locale, identity values or compatibility inputs."
+  },
+  "currentPresentationVersion": "3.1.0-1+socialbox.15",
+  "currentEvidence": "docs/release-evidence/socialbox-ui-completion-2026-09-28.json",
+  "releaseStatus": "INSTALLED_HOST_AND_SCOPED_DATA_VERIFIED_PHYSICAL_UI_PENDING",
+  "layoutFixture": {
+    "assertions": 559,
+    "status": "PASS",
+    "evidence": "docs/release-evidence/socialbox-ui-completion-2026-09-28/layout-synthetic-result.json",
+    "backendOperations": 0,
+    "phoneAcceptance": "NOT_RUN"
+  },
+  "secondaryFixture": {
+    "assertions": 81,
+    "status": "PASS",
+    "evidence": "docs/release-evidence/socialbox-ui-completion-2026-09-28/secondary-synthetic-result.json",
+    "phoneAcceptance": "NOT_RUN"
+  },
+  "backendFixture": {
+    "assertions": 119,
+    "status": "PASS",
+    "evidence": "docs/release-evidence/socialbox-ui-completion-2026-09-28/backend-synthetic-result.json",
+    "phoneAcceptance": "NOT_RUN"
+  },
+  "sourceOwnedRouteCompletion": {
+    "registryEntries": 29,
+    "presentationDescriptors": 26,
+    "addedRoles": [
+      "sessions",
+      "sessionImport",
+      "bulkCloudPush",
+      "sessionExport",
+      "sessionDestination"
+    ],
+    "storeAliasDenied": "CloudPlansViewController",
+    "getterABI": "@16@0:8",
+    "backupBadgeBoundary": "Only the verified fourth centered 10-point rounded type badge is Fixed copy; filenames and all other row values remain UserData.",
+    "sectionHeaderBoundary": "Owned header overlay preserves original root, tag, gesture and asynchronous user-label updates.",
+    "phoneAcceptance": "NOT_RUN"
+  },
+  "baseFixture": {
+    "assertions": 232,
+    "status": "PASS",
+    "evidence": "docs/release-evidence/socialbox-ui-completion-2026-09-28/base-synthetic-result.json",
+    "headerABI": "Actual installed method encoding; unsupported section argument is rejected. Original callback precedes owned rendering."
+  },
+  "identityFixture": {
+    "assertions": 41,
+    "status": "PASS",
+    "evidence": "docs/release-evidence/socialbox-ui-completion-2026-09-28/identity-synthetic-result.json",
+    "phoneAcceptance": "NOT_RUN"
+  }
+}

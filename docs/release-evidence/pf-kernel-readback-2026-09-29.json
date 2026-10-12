@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "kind": "pf-read-only-policy-readback",
+  "sourceSHA256": {
+    "experimental/pf/RBXPFPolicyPlan.m": "991c0134469b3d871dffbdf655aa4ff7fe02773ee0e581694ad9d5023ec5522f",
+    "experimental/pf/RBXPFKernelPolicy.m": "815d4609babb91815dcbaaff2188fac7e1b42b467c1f74ee75cf433e5264884c",
+    "tools/pf_policy_readback.m": "34f215d06dab1b9d94c766c1d43c04a20f60728769970d192aaa705239b90ee2",
+    "experimental/pf/RBXPFPolicyPlan.h": "51c5d88496d7f6250758611092eb4092fecf453e77a55d78da30176221a5b128",
+    "experimental/pf/RBXPFKernelPolicy.h": "1c58909f0db806eac1e31908b6776ae56e42076aac7672c3f478460121cc7bb3",
+    "experimental/pf/RBXPFKernelABI.h": "bb38ba8619a19cb8e3e936d4f79b0fad792b45f8c1f68a9e929c46c7c7853adc",
+    "scripts/build-pf-readback.py": "4ba3e9d933ab1a5f60088edc05fb5241309241c4d46a395afa3fbae32738724b"
+  },
+  "signerSHA256": "932cfe6d92f07dca3e85a8288a43271aa8e9c0881f026fdcdecaecfbf1a7dea4",
+  "binaries": {
+    "arm64": {
+      "file": "socialbox-pf-readback-arm64",
+      "size": 135168,
+      "sha256": "c915b580da6f7f504837f84488e964e4dd7126f2b26676fdc1d382981507196e",
+      "codeSignatureVerified": true,
+      "entitlements": {}
+    },
+    "arm64e": {
+      "file": "socialbox-pf-readback-arm64e",
+      "size": 135168,
+      "sha256": "e72693187c3be71dee8d5caee25cc5bc005b8bee184b9da663943c8827efcc74",
+      "codeSignatureVerified": true,
+      "entitlements": {}
+    }
+  },
+  "reviewedDeviceKernel": {
+    "model": "iPhone10,6",
+    "release": "22.6.0",
+    "xnu": "8796.142.1.703.8",
+    "architecture": "ARM64_T8015"
+  },
+  "readOnly": true,
+  "enforcementVerified": false,
+  "applicationAdmissionAllowed": false,
+  "deviceExecution": "NOT_RUN",
+  "ruleInstallation": "NOT_IMPLEMENTED",
+  "date": "2026-09-29",
+  "scope": "Experimental compiler/readback and standalone read-only tool; no enforcement acceptance",
+  "tests": {
+    "nativeCompilerReadback": {
+      "status": "PASS",
+      "assertions": 1365,
+      "transport": "inert ioctl",
+      "sanitizers": [
+        "ASan",
+        "UBSan"
+      ]
+    },
+    "nativeTransactionModel": {
+      "status": "PASS",
+      "assertions": 596
+    },
+    "readonlyInventory": {
+      "status": "PASS",
+      "assertions": 132
+    },
+    "cli": {
+      "status": "PASS",
+      "testMethods": 6,
+      "kernelAccess": "host compile guard returns before open"
+    },
+    "existingPinnedABI": {
+      "status": "PASS",
+      "assertionsPerTarget": 112,
+      "targets": [
+        "host",
+        "arm64"
+      ]
+    },
+    "compilerPinnedABI": {
+      "status": "PASS",
+      "assertionsPerTarget": 86,
+      "targets": [
+        "host",
+        "arm64",
+        "arm64e"
+      ]
+    },
+    "staticCheck": {
+      "status": "PASS"
+    }
+  },
+  "findings": [
+    "Interface skip flags bypass otherwise matching PF rules; readback rejects all nonzero interface flags.",
+    "Rule-copyout pool pointers cannot establish an empty pool; query the pool count separately.",
+    "An unconstructed policy must not be treated as zero expected rules; rejected before I/O.",
+    "Inactive transaction ticket validation is not active-checksum CAS against arbitrary other PF writers."
+  ],
+  "limits": [
+    "No kernel writes, device deployment, enabled-rule readback, state revocation or packet measurements.",
+    "Two consistent observations are not an atomic snapshot or lifetime enforcement proof.",
+    "Device-wide destination rules do not establish independent clone attribution.",
+    "No loader, independent revoker, boot integration or production admission consumer is included.",
+    "USB device list was empty; hardware tests remain NOT_RUN."
+  ],
+  "verifiedAtUTC": "2026-09-29T22:00:28Z"
+}

@@ -1,0 +1,151 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-09-27",
+  "version": "3.1.0-1+socialbox.13",
+  "packageSHA256": "0325662e817ee8b51ac52845f6a647c8bbf8a3b961fa56cef740991b87b6ca1a",
+  "status": "INSTALLED_PAYLOAD_VERIFIED_PHONE_UI_ACCEPTANCE_PENDING",
+  "package": {
+    "installed": true,
+    "priorVersion": "3.1.0-1+socialbox.12",
+    "priorSHA256": "4967002e30b9133dad0fd383927f0d161bbdc5b2dd4367d71b7ead34e2fe3fec",
+    "payloadFiles": 59,
+    "originalProgramsByteIdentical": 15,
+    "originalProgramsResigned": false,
+    "sourceSnapshotMatches": true,
+    "architectures": [
+      "arm64",
+      "arm64e"
+    ],
+    "signer": "ldid; no Apple Development Team",
+    "publishedToAPT": false,
+    "independentVersionReadback": "3.1.0-1+socialbox.13|installed",
+    "installedPayloadFilesVerified": 59,
+    "globalContainerMetadataByteIdentical": true
+  },
+  "validation": {
+    "fixtures": [
+      {
+        "name": "base",
+        "status": "PASS",
+        "assertions": 224,
+        "resultSHA256": "73dc51b03ac36d496dd7a502cdae1024ea3ec317a743d2b27f048f23d62508af",
+        "scope": "production source with synthetic backend, not physical/core/isolation acceptance",
+        "resultPath": "docs/release-evidence/socialbox-interface-2026-09-27/base-synthetic-result.json"
+      },
+      {
+        "name": "workspace",
+        "status": "PASS",
+        "assertions": 141,
+        "resultSHA256": "c09bef50c196332df63b79f78739cc8561b5930940f197f0180b3cf9f83b280c",
+        "scope": "production source with synthetic backend, not physical/core/isolation acceptance",
+        "resultPath": "docs/release-evidence/socialbox-interface-2026-09-27/workspace-synthetic-result.json"
+      },
+      {
+        "name": "backend",
+        "status": "PASS",
+        "assertions": 90,
+        "resultSHA256": "da55f5ea4756cf90adce4a6fb18c11065d1ed78704138a1451ead71f2660cff4",
+        "scope": "production source with synthetic backend, not physical/core/isolation acceptance",
+        "resultPath": "docs/release-evidence/socialbox-interface-2026-09-27/backend-synthetic-result.json"
+      },
+      {
+        "name": "identity",
+        "status": "PASS",
+        "assertions": 37,
+        "resultSHA256": "385989c3c1188d7747e633c280b96c7d25c3b257cb2554a4d9e9939da34586c7",
+        "scope": "production source with synthetic backend, not physical/core/isolation acceptance",
+        "resultPath": "docs/release-evidence/socialbox-interface-2026-09-27/identity-synthetic-result.json"
+      },
+      {
+        "name": "secondary",
+        "status": "PASS",
+        "assertions": 27,
+        "resultSHA256": "0ba987435d9cb62634ced0987ddd20f6bc9820e4950ea3beba412f99bbb91dde",
+        "scope": "production source with synthetic backend, not physical/core/isolation acceptance",
+        "resultPath": "docs/release-evidence/socialbox-interface-2026-09-27/secondary-synthetic-result.json"
+      }
+    ],
+    "displayCopyNativeAssertions": 27,
+    "displayCopyTestGroups": 7,
+    "interfaceCatalogEntries": 249,
+    "interfaceCatalogRuntimeChecks": 760,
+    "interfaceCatalogReferenceChecks": 284,
+    "sourceBrandingGuard": "PASS: 22 UI source files; 0 violations",
+    "packageTestGroups": 35,
+    "helperCompositionTestGroups": 7,
+    "leakContractTests": 8,
+    "leakRows": 388,
+    "staticCheck": "ALL CLEAN",
+    "sourceBuildReview": "PASS: 17 production translation units, 16 headers, 35 input hashes match final .13 build"
+  },
+  "physical": {
+    "status": "NOT_RUN",
+    "videoRecorded": false,
+    "usbPreview": "Black image after installation and successful launch request; phone unlock requested but not confirmed. SSH reachable.",
+    "coldStart": "NOT_RUN",
+    "threeSections": "NOT_RUN",
+    "archiveEmptyValidPackCorruptCancel": "NOT_RUN",
+    "dynamicStatesAndKeyboard": "NOT_RUN",
+    "launchRequest": {
+      "exitCode": 0,
+      "foregroundVerified": false
+    }
+  },
+  "notClaimed": [
+    "Complete physical UI acceptance",
+    "Persistent manual ordering through an unverified core API",
+    "Per-container identity or session-token endpoint where only shared/current-session API is known",
+    "Independent rewrite or removal of original technical/provenance identifiers",
+    "Core licensing or Cloud interoperability acceptance",
+    "Storage/network isolation or product readiness for sale"
+  ],
+  "syntheticPreview": {
+    "path": "docs/release-evidence/socialbox-interface-2026-09-27/containers-synthetic.png",
+    "sha256": "539fd74d52a5a6503d5fc9ec968669e319ec2782684b19f93800bca1925ed74e",
+    "scope": "Production UI with 40 synthetic records; not physical phone evidence"
+  },
+  "runtimeBackup": {
+    "archiveSHA256": "845b281da3372aaf1aa74684557f523d335b33e63697e6004a2c73a1d57d775c",
+    "deviceArchiveSHA256": "33b785a0af6c182b04ac95b27127aec8f36663f2300de07957e74eed5d221de3",
+    "deviceArchiveFormat": "uncompressed tar; device gzip is not installed",
+    "manifestSHA256": "6782ba64f5094a309ad4bdf19d1667ac3a28ece76ae7ae424cc6be10db055854",
+    "archiveBytes": 359836077,
+    "deviceArchiveBytes": 853913600,
+    "uncompressedKiB": 847532,
+    "entryCount": 17748,
+    "rootCount": 18,
+    "twoMatchingManifests": true,
+    "scope": "owned runtime state; global system Keychain and foreign target-account recovery not covered"
+  },
+  "runtimeComparison": {
+    "status": "inconclusive",
+    "twoMatchingPostManifests": false,
+    "containerData": {
+      "status": "inconclusive"
+    },
+    "configurationAndOtherOwnedRuntime": {
+      "status": "inconclusive"
+    },
+    "reasonCode": "POST_INSTALL_STATE_NOT_STABLE",
+    "observedPostChanges": {
+      "added": 0,
+      "removed": 0,
+      "modified": 2,
+      "total": 2
+    },
+    "privateComparisonSHA256": "38b2c94119e117c426962dbc0560ec1714764f262c3ace77a14211a31cacd45b"
+  },
+  "scopedContainerDataReview": {
+    "status": "PASS",
+    "scope": "Owned Containers trees and exact own app, extension and app-group roots; all three recorded snapshots have identical file bytes, types, links, modes, ownership and preserved ACL/xattr values. Access/change/modification timestamps excluded. No foreign target-account or global Keychain recovery claim.",
+    "comparedEntries": 63,
+    "snapshots": 3,
+    "changes": 0,
+    "inputSHA256": [
+      "6782ba64f5094a309ad4bdf19d1667ac3a28ece76ae7ae424cc6be10db055854",
+      "e12041404ea73f09c366308a000eea45d37b97b5082c9caed80e848127a9fda8",
+      "4eec7bb7f9bea9009faa65bdfdfada0d09c186519b1f497a917b2d8012d38fbf"
+    ],
+    "otherRuntime": "Aggregate state comparison remains inconclusive because two daemon runtime files changed between observations. Six daemon log/state/relay files differ from pre-install; they were preserved, not rolled back."
+  }
+}

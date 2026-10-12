@@ -1,0 +1,5 @@
+{
+  "ok": true,
+  "checks": 10,
+  "scope": "Actual production build and API handlers, disposable synthetic owner and 40 keys; no production requests or mutations."
+}

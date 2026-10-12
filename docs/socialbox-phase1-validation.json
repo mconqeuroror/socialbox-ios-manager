@@ -1,0 +1,50 @@
+{
+  "branch": "feat/socialbox-multiapp",
+  "base": "c089804c16aa277d20d55f05ac1c49d82c0291a7",
+  "nativeCodeCommit": "ca3173369914abbb9e52707e8a4c03037d4c3e19",
+  "package": "com.redditbox_0.1.15_iphoneos-arm64.deb",
+  "sha256": "d61552759c42c654fb457e3c52dedf8feb0121694325116cdd21a85177347eae",
+  "size": 1698472,
+  "nativeBuild": "PASS",
+  "nativeBuildChecks": 72,
+  "existingChecks": 66,
+  "newChecks": 6,
+  "signing": "Procursus ldid; no Apple Development Team",
+  "signedBinaryInspection": [
+    {
+      "binary": "var/jb/Applications/RedditBox.app/RedditBox",
+      "signedArchitectureCount": 2,
+      "entitlementKeys": [
+        "application-identifier",
+        "keychain-access-groups"
+      ]
+    },
+    {
+      "binary": "var/jb/usr/bin/redditboxd",
+      "signedArchitectureCount": 2,
+      "entitlementKeys": [
+        "application-identifier",
+        "com.apple.private.mobileinstall.allowedSPI",
+        "com.apple.private.uninstall.deletion",
+        "com.apple.security.exception.mach-lookup.global-name",
+        "keychain-access-groups",
+        "platform-application"
+      ]
+    }
+  ],
+  "releaseMetadata": {
+    "version": "0.1.15",
+    "schemaVersion": 2,
+    "signingContractHash": "82aec9321c23a5e333be4c369b3624378277e12e7c75609c214ea745a0979165",
+    "requiresMDMReadoption": true,
+    "packageScheme": "rootless",
+    "packageArchitecture": "iphoneos-arm64",
+    "installPrefix": "/var/jb"
+  },
+  "cloudChecks": "npm test, tsc, next build and GitHub Cloud CI (including smoke) PASS",
+  "cloudCI": "https://github.com/typekpaco2002/redditspoof/actions/runs/34779102848",
+  "productionDeployment": "NOT_RUN \u2014 branch-only refactor",
+  "deviceAcceptance": "NOT_RUN",
+  "facebookBinaryAudit": "NOT_RUN \u2014 decrypted Facebook IPA required",
+  "facebookCloneCreation": "BLOCKED \u2014 inactive descriptor pending Phase2 lifecycle coverage"
+}

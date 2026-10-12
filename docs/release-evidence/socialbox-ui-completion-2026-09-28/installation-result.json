@@ -1,0 +1,73 @@
+{
+  "version": "3.1.0-1+socialbox.15",
+  "packageSHA256": "67104de576dcbc8e901fffed1bada89df07169347dbbfcc6d21154e25a85087a",
+  "quiescence": {
+    "stopRequested": true,
+    "scope": "one_exact_hash_pinned_owned_management_app",
+    "matched": 0,
+    "twoAbsentSnapshots": 1,
+    "networkFence": false,
+    "signalsSubmitted": 1
+  },
+  "runtimeBackup": {
+    "archiveSHA256": "f9e635606b338d625e4074dab3a1ab90dea9efd776aedb5c5c5f2e541f0aa16e",
+    "rawArchiveSHA256": "6eca8a277badb0c69cb9a638cafdc0f426a021638818027893813c506062db33",
+    "storage": "Mac-only private gzip archive",
+    "deviceArchiveCreated": false,
+    "manifestSHA256": "28811e1055efaa092ca1af0c23f138cf9136dfc5f4845d20237b0f28b44f6d9f",
+    "archiveBytes": 359914574,
+    "rawArchiveBytes": 854691840,
+    "uncompressedKiB": 848436,
+    "entryCount": 17906,
+    "rootCount": 18,
+    "twoMatchingManifests": true,
+    "persistedGzipDigestAndManifestVerified": true,
+    "scope": "owned runtime state; global system Keychain and foreign target-account recovery not covered"
+  },
+  "quiescenceAfterBackup": {
+    "stopRequested": true,
+    "scope": "one_exact_hash_pinned_owned_management_app",
+    "matched": 0,
+    "twoAbsentSnapshots": 1,
+    "networkFence": false,
+    "signalsSubmitted": 0
+  },
+  "runtimeComparison": {
+    "status": "inconclusive",
+    "twoMatchingPostManifests": false,
+    "containerData": {
+      "status": "inconclusive"
+    },
+    "configurationAndOtherOwnedRuntime": {
+      "status": "inconclusive"
+    },
+    "reasonCode": "POST_INSTALL_STATE_NOT_STABLE",
+    "observedPostChanges": {
+      "added": 0,
+      "removed": 0,
+      "modified": 2,
+      "total": 2
+    },
+    "privateComparisonSHA256": "5022c8febf2b2ec2004ff722d1039b89dc06784b644c9cfbe001a91ca59ae35d"
+  },
+  "status": "INSTALLED_PAYLOAD_VERIFIED",
+  "payloadFiles": 59,
+  "metadataByteIdentical": true,
+  "recoverySHA256": "68898a7964a370cc1c07c23ce5c6af7d0ab74765e61de6168da357ce75daf90b",
+  "foregroundLaunch": "DEFERRED_FOR_RECORDED_ACCEPTANCE",
+  "mappedModules": {
+    "DoritosHelper": {
+      "endErrno": 22,
+      "mappedModules": [
+        "LBXHelperSafety.dylib",
+        "DoritosHelper",
+        "systemhook.dylib",
+        "dyld",
+        ".plist-cache.wHJC3Pfd"
+      ],
+      "methodInstallation": "NOT_PROVEN_BY_IMAGE_MAPPING",
+      "regions": 73,
+      "sameObservedProcess": true
+    }
+  }
+}

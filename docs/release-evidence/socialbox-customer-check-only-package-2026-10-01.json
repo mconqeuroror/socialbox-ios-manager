@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "kind": "socialbox-private-customer-check-only-package",
+  "unit": 21,
+  "recordedAt": "2026-10-01T11:17:57.202607+00:00",
+  "status": "PASS_WITH_FIRST_PREPARATION_AND_CUSTOMER_GAPS",
+  "clientDeliveryReady": false,
+  "customerArtifactReleased": false,
+  "customerCodeIssued": false,
+  "contract": {
+    "unpack": "Separate fixed rootless new-package profile; successful complete inventory, safe source parents and all source/payload destinations absent. External preflight refuses all recorded manager history. Incoming install without previous version accepts only this version/architecture half-installed row; unpack only, never preparation authority.",
+    "existingOnly": "Exact installed bytes/ownership/modes/single links/parents precede the fixed native check. Configure, repeated configure and supported abort branches invoke check only, then licensing startup and app registration. No initializer fallback, reset, adoption, cleanup or original helper/engine startup command.",
+    "preservation": "Check failure prevents startup and registration, leaving missing/partial/unknown/consumed state intact. Removal/deconfiguration stops licensing only and preserves source data. Upgrade refuses before effects; no postrm or image-policy migration.",
+    "archive": "Only regenerated canonical lifecycle controls accepted. Source-state payloads, escaping paths, writable modes, mismatched modes, missing required inputs and dependency header injection are rejected.",
+    "authority": "Independent external first-preparation transaction/issuer/history NOT_IMPLEMENTED. Ordinary configure, absence, failed check and complete anchor disappearance never provide first-install/reset authority. This candidate is private and cannot pass the unchanged upgrade-only release gate.",
+    "limits": "Cooperative instantaneous shell observations, not a lock across dpkg or loaded launchd job ownership/lifetime authority. Inert checker results prove shell ordering/preservation, not native prepared-state validity or actual dpkg/customer installation."
+  },
+  "syntheticLifecycle": {
+    "status": "PASS",
+    "tests": 20,
+    "emittedShellExecutions": 200,
+    "sourceStable": true,
+    "frozenPythonFiles": 132,
+    "sourceStabilityScope": "All repository Python source files recursively beneath scripts/ and tools/; native/OS dependencies are outside this freeze.",
+    "privateLogSHA256": "296665ae1dc0f97f320144ae20e4be9550bfe285e5fc363dacdb8abedf08a47e",
+    "privateReportSHA256": "f6b264dea95c96d1c032e27e7056c3163837adbc1ebe73c2f645844a99f774a8",
+    "scope": "Actual temporary filesystem nodes/modes/hashes with inert id/stat/package/native-check/job providers; synthetic root role. Canonical archive controls/payload/modes and input refusals are also checked. No real package lifecycle, native initialization, network or device effects."
+  },
+  "productionComposition": {
+    "status": "PASS",
+    "version": "3.1.0-1+socialbox.customer.1",
+    "architectures": [
+      "arm64",
+      "arm64e"
+    ],
+    "sourceStable": true,
+    "pythonInputs": 132,
+    "overlayInputs": 69,
+    "licenseSourceInputs": 45,
+    "sourceStabilityScope": "Conservative scripts/tools Python superset, native overlay and licensing builders own quoted production input graphs; SDK/Theos/toolchain excluded.",
+    "testProvidersAbsent": true,
+    "payloadFiles": 56,
+    "preservedOriginalPrograms": 15,
+    "originalBytesIncludingSignaturesUnchanged": true,
+    "canonicalControlsAndPayloadModesMatch": true,
+    "packageSHA256": "d52d60de37f3cbb93dbe5d356008f549fbbc37bf5dfc44a3b83ca7d437e06fbd",
+    "overlaySHA256": "a5a17615ec62601edb4a0a316dc297eaf9fc191465b6118b0f1336e2a325a7a2",
+    "licenseServiceSHA256": "c174e09807228e6229e29b662dc1516a256281a5845809538f4710677fafea7a",
+    "installerSHA256": "128a3d549cf8a7b51b58e6053b18b82b9ebafa824e5b30ddc69a7f049d1074a9",
+    "privateBuildReportSHA256": "355ef96de7be305a8db3b507e58b0f354059184a096ad45984ad51b42b266f57",
+    "privateCompositionReportSHA256": "54961df7c742b343b0ed94690a3e67c12b3b0d13ea00ca45d858e6abfe961091",
+    "installed": false,
+    "freshInstallReady": false,
+    "customerDeliveryReady": false,
+    "actualDefaultEndpointAndLockedPage": "NOT_RUN",
+    "customerInstallation": "NOT_RUN",
+    "licenseConfigurationHeaderCount": 1,
+    "licenseConfigurationHeaderSHA256": "e1d5e2c1c7f1f024396b7b4760823123801493af72db78d00d001772bdd8be93",
+    "licenseConfigurationHeaderObservation": "One generated owner-config.h digest observed at report time; not a frozen 64-file input graph."
+  },
+  "device": {
+    "status": "NOT_RUN",
+    "effectsPerformed": false,
+    "newLicenseIssued": false,
+    "ownerUIAndAccountsChanged": false
+  },
+  "retainedFailures": {
+    "syntheticAttempt1": "FAIL one fixture static false positive: read-only destination-check argument mistaken for initializer command. Corrected test recognizes command position; inert provider already refuses every execution except check. Source drift from archive-control guard/additional tests recorded; final frozen attempt passes.",
+    "independentCompositionCheckerAttempt1": "FAIL private checker omitted scripts import path for apt_repository. Corrected checker verifies unchanged successful production output; production source/control checks were not weakened."
+  },
+  "limits": [
+    "External trusted first-preparation authority/transaction not implemented by this profile",
+    "No actual package install, normal default activation or customer download/code accepted",
+    "No current owner overlay/service change and no website/APT publication",
+    "Source saved metadata UUIDs are not retained numeric CID/runtime authority",
+    "Automatic isolation/switching/recovery and ongoing runtime licensing remain NOT_RUN",
+    "Earlier Instagram sibling normal/direct read FAIL remains unfixed; Facebook launch FAIL and Twitter runtime unaccepted",
+    "Two-account and actual proxy traffic acceptance NOT_RUN"
+  ],
+  "next": "Review and implement a separate explicitly trusted root first-preparation transaction outside routine package lifecycle; preserve unknown/history state, never mint from absence or failed checks. Accept exact default endpoint/original locked page and actual package before release; runtime/account/proxy acceptance remains separate.",
+  "sourceSHA256": {
+    "scripts/build-socialbox-customer-candidate.py": "84045fac53e69f9d022741ed4039b343ce065e0c466e02b3473bcc57f3cad717",
+    "tools/test_socialbox_customer_installation.py": "ffd644ca9cc9032b5618624302a494ce5e3053bd5f1e0345c89fa278b775591f"
+  },
+  "independentReview": {
+    "status": "PASS_WITH_LIMITS",
+    "scope": "Read-only final builder/contract/control ordering and frozen source/artifact comparison; no concrete packaging bug found. Actual native preparation, dpkg/default activation, job lifetime and runtime remain NOT_RUN."
+  },
+  "evidenceCorrection": {
+    "recordedAt": "2026-10-01T11:34:44.594031+00:00",
+    "previous": "String length of one hexadecimal configSHA256 was incorrectly reported as64 configuration input files.",
+    "corrected": "One generated configuration-header digest;45 native source-input files,69 overlay inputs and132 Python input files remain correct.",
+    "packageSourceAndTestHashesChanged": false
+  }
+}

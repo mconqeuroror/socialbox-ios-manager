@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "rows": [
+    {
+      "id": "FBDEVICE-001",
+      "category": "Facebook source import and admission acceptance",
+      "surface": "Actual source separation, inactive create rejection and Reddit preservation on iPhone8",
+      "mechanism": "Installed ldid-only0.1.16 rootless package; daemon validated/imported auditedFacebookIPA to its privatecache. Inactive create stayed denied. Existing Reddit container identity fields and sourceInfo/executable hashes remained unchanged; license active, network closed, no recovery fence.",
+      "coverage": [
+        "blocked"
+      ],
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "docs/socialbox-phase23-device-evidence.json",
+          "line": 1,
+          "detail": "Sanitized actual SSH install/import/admission and source/identity preservation results."
+        },
+        {
+          "path": "docs/socialbox-phase23-package-evidence.json",
+          "line": 1,
+          "detail": "Package version/hash, reviewed payload and actual architecture/ldid entitlement-key inspection."
+        }
+      ],
+      "verification": "iPhone10,4 / iOS16.7.16 rootless. Facebook578.1.0 build1063022819 and Reddit2026.36.0 build664762 have separate decrypted privatecache status. Installed daemon/tweak/launcher hashes match the inspected package. This is not Facebook clone, network, MDM, account or A/B isolation acceptance.",
+      "fix": "Keep execution inactive and complete FBRUN-001/FBPROC-001 plus FB-002\u2013FB-016 and supervised MDM acceptance before enabling Facebook."
+    },
+    {
+      "id": "FBDEVICE-002",
+      "category": "Integration build and device acceptance",
+      "surface": "App-owned lifecycle candidate installation and preservation, with managed routing still unconfigured",
+      "mechanism": "Both ldid-only 0.1.22 variants built; rootless installed and all seven component hashes verified. Two profiles and both private source Info/executable hashes unchanged; active license, stable SpringBoard, no new crash or Safe Mode, CLOSED network. Read-only daemon draft probes passed. Zero managed installations and provider not ready prevent network acceptance.",
+      "coverage": [
+        "blocked"
+      ],
+      "verdict": "covered-in-code",
+      "verification": "107 entrypoints and static check pass for each complete build; 7 components/12 slices inspected per package. Actual SSH installation and read-only receipt evidence. No clone launch, account or routing pass claimed.",
+      "fix": "Keep Facebook inactive until SDK/state and MDM/network acceptance completes. Rootful not installed; no APT publication.",
+      "evidence": [
+        {
+          "path": "docs/facebook-integration-packages-0.1.22.json",
+          "anchor": "\"nativeEntrypointsPerBuild\":",
+          "line": 426,
+          "detail": "Two complete builds, exact package/component hashes, unchanged global entitlements and license pin."
+        },
+        {
+          "path": "docs/facebook-integration-device-0.1.22.json",
+          "anchor": "\"installation\":",
+          "line": 103,
+          "detail": "Physical installation, preserved profiles/sources and bounded read-only draft checks."
+        },
+        {
+          "path": "docs/facebook-integration-status-0.1.22.md",
+          "anchor": "# Integration candidate",
+          "line": 1,
+          "detail": "Current implementation versus remaining external/runtime prerequisites."
+        }
+      ]
+    }
+  ]
+}

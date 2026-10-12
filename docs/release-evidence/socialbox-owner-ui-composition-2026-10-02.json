@@ -1,0 +1,233 @@
+{
+  "schemaVersion": 1,
+  "unit": 41,
+  "date": "2026-10-02",
+  "status": "PASS_LOCAL_COMPOSITION_ONLY",
+  "customerDeliveryReady": false,
+  "freshInstallReady": false,
+  "ownerInstalled": false,
+  "phoneEffect": false,
+  "change": "Separate owner-preserving minimal Containers plus blue-loader profile, excluding later full saved-settings/activation UI. Private deb always refuses install/configure.",
+  "baseline": {
+    "commit": "ca333e80d89e3ee86f3c62a77503738430239467",
+    "tree": "81ca825314080cc958a20e5abfd9e5080013650f",
+    "quotedInputCount": 50,
+    "preservedOriginalSourceFiles": 47,
+    "exactChangedPaths": [
+      "lucid/Presentation/LBXPresentation.m",
+      "lucid/Presentation/SBContainersView.m",
+      "lucid/Presentation/SBInterfaceCopy.m",
+      "lucid/Presentation/SBSwitchProgress.h",
+      "lucid/Presentation/SBSwitchProgress.m"
+    ],
+    "scope": "Git source bytes only; no fresh device/program/mapped-byte observation. Original programs are absent from payload, not verified on phone by this unit."
+  },
+  "build": {
+    "productionInputs": {
+      "sha256": {
+        "lucid/Authorization/LBXLicenseClient.h": "63267ad770a9f373edadc18b700b8c1909a25784ff054b2e43c6011bd7ec9686",
+        "lucid/Authorization/LBXLicenseClient.m": "34f06ce5d479543172b9dddecba5d3b847dc499f432c57a78b3181f2bfb1fd94",
+        "lucid/Authorization/LBXLicenseEndpoints.h": "a9b98b6c2269b7ce9a50bcd76e243c8d9d12733368cf8cd7ebf699c0fdbc07e1",
+        "lucid/Authorization/LBXLicenseIPC.h": "8ff579acaa3b3113e6480f472022df893095d633de08b362a42de3b63df839ea",
+        "lucid/Authorization/LBXLicenseIPC.m": "7c3aec2a53d8c666b4cfd6ba8deb323f172b5c962de82c809834876b9396ffbc",
+        "lucid/Authorization/LBXLicensePeer.h": "72bcd832201fba2394ad3fc04a30d6d4f5e46e43456dbb8cc2491cc233f96a3b",
+        "lucid/Authorization/LBXLicensePeer.m": "340972f74cc51572fe6ad2619dd54f6275c5cf824b67a33d36cd01b92d69cd1b",
+        "lucid/Diagnostics/LBXIsolationAssessment.h": "bf14c6febf68b555e90a2374299ec82fc34021b735c284d1262355e9e55d82b9",
+        "lucid/Diagnostics/LBXIsolationAssessment.m": "001acf0e5725bfd8f57a7fc4976ddacd47b895d408534300cdce6ba850ddae13",
+        "lucid/Diagnostics/LBXIsolationViewController.h": "3a6e909eac3c7a04641f29559f563e48c268ba11c350e2f3b261f651fea27275",
+        "lucid/Diagnostics/LBXIsolationViewController.m": "9d697faca9c172cc67560060aa3dc48e1397659e56c5f2a8ee998b1a208b0e80",
+        "lucid/Diagnostics/LBXRecoveredContextAdapter.h": "ffa6aa40adada3e04058638c799e3214c8f946aca7122b6a58a776b48d0f32a7",
+        "lucid/Diagnostics/LBXRecoveredContextAdapter.m": "6398569e9c05f6e65a46120c180571d90e8d2a5bf432e581268941d3eb9b36e7",
+        "lucid/HelperSafety/LBXCallerFile.h": "d538e65c56b235190971dee04aa9ae57606d22ff176519e006079bef05853888",
+        "lucid/HelperSafety/LBXCallerFile.m": "8eaece9470b8024f514f35c52fb35fdeb24d9bb8b139eb18be9a9a42b67a75b0",
+        "lucid/HelperSafety/LBXXPC.h": "dd03df90efb001c332e622a2a1f1292d1f3ceaca02916a8a7dc3d86f1c4d474d",
+        "lucid/LBXPresentation.plist": "0e8a081a5b34a863af91c1cf30cffe29c203a3cd7f8323588e96e09f6128b4af",
+        "lucid/Makefile": "dc1d266d06a72d8384252b6c895790b6d2c53da6d8afa8514cc657fc4d97e2ea",
+        "lucid/Presentation/LBXDisplayCopy.h": "018d93c42f5b88b1baff53018eb9eed3558601329b7b41a902a8875c6d7c11fe",
+        "lucid/Presentation/LBXDisplayCopy.m": "2b9ce764cc446d934963cbf7a26e20c4f3a6a8a758f958dffc0f027c0f72caef",
+        "lucid/Presentation/LBXPresentation.h": "f7b4065942e1c31ea344f3e0a49cba18fae80f75345b4bdecb2a6f5f4b241346",
+        "lucid/Presentation/LBXPresentation.m": "222abbc0cae9630ef5dde491c7d98371243a89153f5907f9984c6b910267f493",
+        "lucid/Presentation/LBXWorkspace.h": "3c84013be4125157a208e7f010e455ed318f0e907ecdae91d5eae9d7200d0511",
+        "lucid/Presentation/LBXWorkspace.m": "4a791f62179da15332cd324f8190ac860406888343644dc0e888d176aebde19c",
+        "lucid/Presentation/SBActivationView.h": "84638a628f537cb4fbb974c72ee3aa0cb4ad3e70c5d0ce47dbbf2f921c28e52d",
+        "lucid/Presentation/SBActivationView.m": "4c5c33279da8270b8861b0cf1a8230ce39e8a717e4f4d856b97914c94af49bfe",
+        "lucid/Presentation/SBBackendAdapter.h": "47684ebd58d9ef02bd90d019fa1b8313bc797a82aebe8843893b82f1f086d56f",
+        "lucid/Presentation/SBBackendAdapter.m": "e897774f96ec8a87e01de8c63dc14e5a7454eb6e9436464cae6ccd5b8e68821b",
+        "lucid/Presentation/SBContainersView.h": "b9013a9e90dd9b88a68946820c2431d1817ea40b7ffae44daf7ecf2c23dc77eb",
+        "lucid/Presentation/SBContainersView.m": "7cb919d840fd20391a5e89b6f8986028899b2ff54fdb12cefd65811770f5db8d",
+        "lucid/Presentation/SBDesign.h": "8fc781b1eade10e55a828cf96096383011b3dc7869ee5b336578f57afb8859d3",
+        "lucid/Presentation/SBDesign.m": "ad569c0321ea05b194651837dcf5ef1240efce3c8ad3714d5f23f05c3e83e777",
+        "lucid/Presentation/SBIdentityForm.h": "db834a513aeae3725eff4cb0c3178d6fbccee6165a5304e657c5f9c2a974a4b5",
+        "lucid/Presentation/SBIdentityForm.m": "fb2f0c0bb6300717a5050878c94da459c26ed97a69a7ba6a4eed2b73cd3901b3",
+        "lucid/Presentation/SBInterfaceCopy.h": "b86a065a3e465f9c716b9989a943237f5660344d43f94c119e68d2adc55ec031",
+        "lucid/Presentation/SBInterfaceCopy.m": "84dc449b55b2546bdfcdcaf6336ad47a8ec58af7427405056c5b747c46012b5a",
+        "lucid/Presentation/SBLegacyDisplayCatalog.h": "4195e2a45e58ea7338c79a94bc50c1a9a47f9a72d8b5d8f30dda2b9816aea8b3",
+        "lucid/Presentation/SBLegacyDisplayCatalog.m": "3d4a94a33963fd214183c64ba3988f4e2ad36d305551058b28c3740775cf3903",
+        "lucid/Presentation/SBSecondaryScreens.h": "05be0a7547a36fa2d7a8c1cad631d68e29d9fc72878b701bdb4d0faed199f8ec",
+        "lucid/Presentation/SBSecondaryScreens.m": "724dc4dd3dc2e11f8e41461664eb69242d9a3f675531f3135c60eb59f55d4275",
+        "lucid/Presentation/SBSwitchProgress.h": "39ed2ecae3cbcd8df4cdc1eefff7acb643d69e74526e9cbc7af1a0f92dd0edd7",
+        "lucid/Presentation/SBSwitchProgress.m": "a2caaa4c8b0d55591b31691234528509468b03716611b6ea5ca0b3e5026101de",
+        "lucid/Presentation/SBUpdateService.h": "e3d0117a1649cd6de5f58e3671ad2e553ce1599cf16813a3b6677f849bceb85d",
+        "lucid/Presentation/SBUpdateService.m": "d18715aae46b980f8f5273feda440a5ccf38dae342c9a9eba8686f391d8bbbfc",
+        "lucid/Presentation/SBWorkspaceCoordinator.h": "5f0ac3d3530e6c74b759eb71f97becc9961c812face9aad38ba7a3f7009bdc7d",
+        "lucid/Presentation/SBWorkspaceCoordinator.m": "7078e2c61aa446f7fb578e096257d283106c7176c6882ef2bb3200f3e9084948",
+        "lucid/ProxyInput/LBXProxyInput.h": "631bff921855d5107b824535ec89b6d361a36a317474598d58acc3104b3e4375",
+        "lucid/ProxyInput/LBXProxyInput.m": "3ec8244632d6f0a979dafcc459d2f66b7f9eb9853eb4a1b7fb77749a75474495",
+        "lucid/ProxyInput/LBXProxyInputHook.m": "e416b13f0611e52a9cb20a7f2a45f9b2de3c56ca5138b56b983827257cb92625",
+        "shared/RBXHTTPProxy.h": "e3ef54cfb9c8c908bcd5d87983169664644c11d79c0d43b856965d6b0ab79ce8",
+        "shared/RBXHTTPProxy.m": "12274640c86a415627390b7c68b0232b16247abf65b61ca39f0923047007c9ce",
+        "shared/RBXProc.h": "988131ea103712173f484ff1226477c141b5ab21a1d232241210941010fe410e"
+      },
+      "translationUnits": [
+        "lucid/Authorization/LBXLicenseClient.m",
+        "lucid/Authorization/LBXLicenseIPC.m",
+        "lucid/Authorization/LBXLicensePeer.m",
+        "lucid/Diagnostics/LBXIsolationAssessment.m",
+        "lucid/Diagnostics/LBXIsolationViewController.m",
+        "lucid/Diagnostics/LBXRecoveredContextAdapter.m",
+        "lucid/HelperSafety/LBXCallerFile.m",
+        "lucid/Presentation/LBXDisplayCopy.m",
+        "lucid/Presentation/LBXPresentation.m",
+        "lucid/Presentation/LBXWorkspace.m",
+        "lucid/Presentation/SBActivationView.m",
+        "lucid/Presentation/SBBackendAdapter.m",
+        "lucid/Presentation/SBContainersView.m",
+        "lucid/Presentation/SBDesign.m",
+        "lucid/Presentation/SBIdentityForm.m",
+        "lucid/Presentation/SBInterfaceCopy.m",
+        "lucid/Presentation/SBLegacyDisplayCatalog.m",
+        "lucid/Presentation/SBSecondaryScreens.m",
+        "lucid/Presentation/SBSwitchProgress.m",
+        "lucid/Presentation/SBUpdateService.m",
+        "lucid/Presentation/SBWorkspaceCoordinator.m",
+        "lucid/ProxyInput/LBXProxyInput.m",
+        "lucid/ProxyInput/LBXProxyInputHook.m",
+        "shared/RBXHTTPProxy.m"
+      ]
+    },
+    "quotedInputCount": 52,
+    "translationUnits": 24,
+    "producerContracts": {
+      "tools/build_socialbox_owner_ui.py": "59bcd08ab383e8b4512c21604de6e8689b9725636b39dae30f797fc26b0a0bcd",
+      "tools/enumerate_leak_binary.py": "9eaf4c33c63431dff420076a888fa013778bf4e3a56dfd29a79656f9f9c3a8c7",
+      "tools/verify_socialbox_presentation.py": "f012cf01f2e5fdf64f923651ff250f58cfec6311bb6a2715b23df17dd232ca35"
+    },
+    "overlaySHA256": "f1039752845c64dc5b7a213082d2145ad81fb06f94c47a9f8631c9aea05f2e12",
+    "overlayBytes": 1113616,
+    "packageSHA256": "e1fadaf5b3162aa5b747545d33059c893911a2ac78aa8cf56368293663b62329",
+    "packageBytes": 349504,
+    "rawToolSteps": 19,
+    "exportsPerSlice": [
+      142,
+      142
+    ],
+    "strictAdHocPerSlice": true,
+    "emptyEntitlementsPerSlice": true,
+    "signingIdentifier": "com.socialbox.presentation.owner-ui",
+    "namedForbiddenMarkerChecks": 9,
+    "inputLimits": "3 producer files frozen before/after build; imports precede snapshot. 52 composed quoted project inputs before/after. SDK/Theos/compiler/OS/signer dynamic dependencies excluded. Host trust only."
+  },
+  "archive": {
+    "control": {
+      "control": {
+        "bytes": 485,
+        "mode": "0o644",
+        "sha256": "3a594e9abb519b083cb3907e455e20ba05461f5c4bddb5de17641a402104343e"
+      },
+      "postinst": {
+        "bytes": 130,
+        "mode": "0o755",
+        "sha256": "298d96bfd15d8a867182ea094c8fa7320308c60471576d92af1ac7e490451601"
+      },
+      "preinst": {
+        "bytes": 130,
+        "mode": "0o755",
+        "sha256": "298d96bfd15d8a867182ea094c8fa7320308c60471576d92af1ac7e490451601"
+      }
+    },
+    "customerDeliveryReady": false,
+    "installable": false,
+    "payload": {
+      "var/jb/Library/MobileSubstrate/DynamicLibraries/LBXPresentation.dylib": {
+        "bytes": 1113616,
+        "mode": "0o755",
+        "sha256": "f1039752845c64dc5b7a213082d2145ad81fb06f94c47a9f8631c9aea05f2e12"
+      },
+      "var/jb/Library/MobileSubstrate/DynamicLibraries/LBXPresentation.plist": {
+        "bytes": 313,
+        "mode": "0o644",
+        "sha256": "a521e2edf4b0a69a54b5421d41c98cf17eff488b397d9f8dd26956d5ad96bc02"
+      }
+    }
+  },
+  "checks": {
+    "focusedMethods": 10,
+    "inertLifecycleExecutions": 22,
+    "focusedFrozenPythonInputs": {
+      "tools/build_socialbox_owner_ui.py": "59bcd08ab383e8b4512c21604de6e8689b9725636b39dae30f797fc26b0a0bcd",
+      "tools/test_owner_ui_composition.py": "0de688124e5084d747b56cc68be829cad618fbd907cb9d0e7e78ed1ac94a9cfa",
+      "tools/verify_socialbox_presentation.py": "f012cf01f2e5fdf64f923651ff250f58cfec6311bb6a2715b23df17dd232ca35",
+      "tools/enumerate_leak_binary.py": "9eaf4c33c63431dff420076a888fa013778bf4e3a56dfd29a79656f9f9c3a8c7"
+    },
+    "layoutAssertions": 723,
+    "layoutCases": 7,
+    "layoutGraphCount": 52,
+    "layoutControlInputs": {
+      "lucid/Presentation/Tests/layout_fixture.m": "c4d3476cedcdfcab0d303f9c205cfb593128ed5b89d3876d1c4d51a18827c9b5",
+      "tools/build_socialbox_owner_ui.py": "59bcd08ab383e8b4512c21604de6e8689b9725636b39dae30f797fc26b0a0bcd",
+      "tools/enumerate_leak_binary.py": "9eaf4c33c63431dff420076a888fa013778bf4e3a56dfd29a79656f9f9c3a8c7",
+      "tools/test_owner_ui_simulator.py": "353e13057a73a0245438196715aab75d1f499eafed0e2b3f34dffc1b90703a5d",
+      "tools/verify_socialbox_presentation.py": "f012cf01f2e5fdf64f923651ff250f58cfec6311bb6a2715b23df17dd232ca35"
+    },
+    "progressAssertions": 33,
+    "progressGraphCount": 52,
+    "progressControlInputs": {
+      "lucid/Presentation/Tests/activation_transport_fixture.h": "f79bd7df09b5f19de3991bff49ec9a3c708d71e1b1ff55f7a5ef52e51d24a796",
+      "lucid/Presentation/Tests/saved_setup_transport_fixture.h": "1defbb0380be12458fed73c58a430a90f676f6263ac1348f98f04c2bc2510ff3",
+      "lucid/Presentation/Tests/switch_progress_fixture.m": "90b84efa559dc2158742d642b5065be62426e669507ac322c3823317465b84d3",
+      "tools/build_socialbox_owner_ui.py": "59bcd08ab383e8b4512c21604de6e8689b9725636b39dae30f797fc26b0a0bcd",
+      "tools/enumerate_leak_binary.py": "9eaf4c33c63431dff420076a888fa013778bf4e3a56dfd29a79656f9f9c3a8c7",
+      "tools/owner_progress_transport_fixture.m": "0837b6fbecdf040eb6d8fe125b99650f8a1eee267208846d300682e2d1fb1234",
+      "tools/test_owner_ui_simulator.py": "353e13057a73a0245438196715aab75d1f499eafed0e2b3f34dffc1b90703a5d",
+      "tools/verify_socialbox_presentation.py": "f012cf01f2e5fdf64f923651ff250f58cfec6311bb6a2715b23df17dd232ca35"
+    },
+    "offlineExternalToolSteps": 6,
+    "offlineReview": "Actual BSD ar member listing, libarchive read/tar inventories and strict universal codesign, exact thin/full byte comparison. Root review, not independent reviewer or installation acceptance."
+  },
+  "retainedFailures": [
+    "tests01: 8 PASS/2 fixture errors, temporary macOS alias refused before composition. Tests resolve private temp parent; production guard unchanged.",
+    "progress01: all33 component assertions PASS but wrapper refuses numeric1 instead of Boolean true. Fixture emits typed Boolean; production unchanged.",
+    "layout01/progress02 narrower passing attempts retained before final runner cleanup ordering correction. Final layout02/progress03 publish PASS only after successful unique fixture uninstall.",
+    "offline-review01 BSD ar displays member slash suffix; private expected-list assertion failed. offline-review02 ar print lookup failed. New offline-review03 uses actual libarchive member extraction; no artifact/production changes."
+  ],
+  "review": "Root reviewed producer, fixtures, journal/error handling, raw results, current hashes/counts and simulator screenshots. No delegated/independent own-test review is claimed.",
+  "notRun": [
+    "current trusted phone role/fixed-path/program/state observation",
+    "owner overlay installation/actual native creation and switch confirmations",
+    "default activation or first-customer provisioning",
+    "Instagram sibling leak repair/full safe isolation",
+    "actual two-account/proxy/session recovery",
+    "final customer Sileo/download flow"
+  ],
+  "scopeLimits": [
+    "native create wizard remains original; automatic app membership not accepted",
+    "47 preserved source files are not original installed program preservation evidence",
+    "private composition deb is not an installable owner/customer package",
+    "no runtime/identity risk-rejected task retried"
+  ],
+  "completedPrivateAttempts": [
+    "tests01/02",
+    "production01",
+    "layout01/02",
+    "progress01/02/03",
+    "offline-review01/02/03"
+  ],
+  "privateEvidenceSHA256": {
+    "buildReport": "79576c35fca82d994554c2b8507e2b91c4721c61df364cfe6abaf6532858ed5a",
+    "focused": "ea4bfcb099794557c9cde1d9e17e751aa673a688acbdda100a9210948ea57e24",
+    "layout": "978a5e52ad6db9f0e36bb8724acaa8487e7c5f70763bfd29bae5c68b16e38fca",
+    "progress": "c46464854bd49c3aa509a3d3a0b03f524ffe4ae348df57f554843f0555eaacd4",
+    "offlineReview": "2f945f167e770ca0054d5b67757a5bfd4885e49bd4756f5eeac9eaff928c0af1"
+  },
+  "next": "Current trusted phone access and NEW inspection/quiescence/backups before reversible exact owner UI acceptance. No default pairing/reset or customer publication."
+}

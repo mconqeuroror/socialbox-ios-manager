@@ -1,0 +1,12 @@
+{
+  "version": "0.1.11",
+  "startupReady": true,
+  "recoveryEmpty": true,
+  "identityApplied": true,
+  "modelDraftSaveEvidence": "identity-save-device-0.1.11.json",
+  "firewallSetupReady": false,
+  "networkState": "closed",
+  "cloneLaunchOrManagedVPN": "NOT_RUN",
+  "uiTapsOrRendering": "NOT_RUN",
+  "licenseStatus": "active"
+}

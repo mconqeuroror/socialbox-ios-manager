@@ -1,0 +1,429 @@
+{
+  "schemaVersion": 1,
+  "ipa_sha256": "2cdaab3bd8bd0238660ea23b566b7bd7713121d996032bbc045d4066d2233e8a",
+  "method": [
+    "Ran /usr/bin/nm -uj and /usr/bin/otool -L on private temporary extracted copies of all 20 images; removed extracted copies after read-only comparisons.",
+    "Every nm undefined symbol is retained by the scanner. Additional scanner names originate only in chained-fixup import records, which nm does not list; this is an explicit representational difference, not full independent validation of fixup decoding.",
+    "otool -L includes LC_ID_DYLIB on frameworks. Exact self-IDs are recorded and excluded before comparing dependency sets.",
+    "This is independent validation of imported names/dependencies, not calls, SDK attribution, effective code signing, runtime behavior or isolation."
+  ],
+  "images": [
+    {
+      "path": "Payload/Facebook.app/Facebook",
+      "sha256": "dda58bddb0cf203554217628c81cc98d23b47ccf9174011c3500187d7510438f",
+      "nm_unique_undefined_names": 18344,
+      "scanner_unique_undefined_names": 18726,
+      "nm_only_count": 0,
+      "scanner_additional_count": 382,
+      "scanner_additional_origins": [
+        "chained_fixup_import"
+      ],
+      "scanner_additional_examples": [
+        "_$s10AppIntents09_SupportsA12DependenciesMp",
+        "_$s10AppIntents0A17ShortcutsProviderMp",
+        "_$s10AppIntents0A17ShortcutsProviderP03appC0SayAA0A8ShortcutVGvgZTq"
+      ],
+      "otool_linked_dependency_count": 93,
+      "scanner_linked_dependency_count": 93,
+      "otool_lc_id_dylib_excluded": [],
+      "unexplained_dependency_differences": [],
+      "passed": true
+    },
+    {
+      "path": "Payload/Facebook.app/Frameworks/FBCameraFramework.framework/FBCameraFramework",
+      "sha256": "69547f07e5b65216c9a13ff84fa7ef707c7a3ca60405f918a965612293d4465c",
+      "nm_unique_undefined_names": 26192,
+      "scanner_unique_undefined_names": 26688,
+      "nm_only_count": 0,
+      "scanner_additional_count": 496,
+      "scanner_additional_origins": [
+        "chained_fixup_import"
+      ],
+      "scanner_additional_examples": [
+        "_$s021FOAAIAgentsVoiceEndToC6LoggerAAC010sessionDidC04with9subReason6callId5errorySo010RPXEndCallJ0V_S2SSgs5Error_pSgtF",
+        "_$s021FOAAIAgentsVoiceEndToC6LoggerAAC010sessionDidC11ByDevXAgentyyF",
+        "_$s021FOAAIAgentsVoiceEndToC6LoggerAAC010sessionDidC12VideoCaptureyySo16UIViewControllerCF"
+      ],
+      "otool_linked_dependency_count": 115,
+      "scanner_linked_dependency_count": 115,
+      "otool_lc_id_dylib_excluded": [
+        "@rpath/FBCameraFramework.framework/FBCameraFramework"
+      ],
+      "unexplained_dependency_differences": [],
+      "passed": true
+    },
+    {
+      "path": "Payload/Facebook.app/Frameworks/FBFeedAttachmentsFramework.framework/FBFeedAttachmentsFramework",
+      "sha256": "62f24393edc8978daf24d9ea9aacd810237f600db1a061018ce5086cdcad3254",
+      "nm_unique_undefined_names": 5121,
+      "scanner_unique_undefined_names": 5220,
+      "nm_only_count": 0,
+      "scanner_additional_count": 99,
+      "scanner_additional_origins": [
+        "chained_fixup_import"
+      ],
+      "scanner_additional_examples": [
+        "_$s10Foundation15_BridgedNSErrorMp",
+        "_$s10Foundation15_BridgedNSErrorP14_nsErrorDomainSSvgZTq",
+        "_$s10Foundation15_BridgedNSErrorP8RawValueSY_s17FixedWidthIntegerTn"
+      ],
+      "otool_linked_dependency_count": 58,
+      "scanner_linked_dependency_count": 58,
+      "otool_lc_id_dylib_excluded": [
+        "@rpath/FBFeedAttachmentsFramework.framework/FBFeedAttachmentsFramework"
+      ],
+      "unexplained_dependency_differences": [],
+      "passed": true
+    },
+    {
+      "path": "Payload/Facebook.app/Frameworks/FBRarelyUsedFramework.framework/FBRarelyUsedFramework",
+      "sha256": "2c8e99ba11bc9505d6e59b20bf944c034da0c42b7c47f6bf08eaf742b35df7b1",
+      "nm_unique_undefined_names": 24931,
+      "scanner_unique_undefined_names": 25444,
+      "nm_only_count": 0,
+      "scanner_additional_count": 513,
+      "scanner_additional_origins": [
+        "chained_fixup_import"
+      ],
+      "scanner_additional_examples": [
+        "_$s10Foundation13CustomNSErrorMp",
+        "_$s10Foundation13CustomNSErrorP11errorDomainSSvgZTq",
+        "_$s10Foundation13CustomNSErrorP13errorUserInfoSDySSypGvgTq"
+      ],
+      "otool_linked_dependency_count": 116,
+      "scanner_linked_dependency_count": 116,
+      "otool_lc_id_dylib_excluded": [
+        "@rpath/FBRarelyUsedFramework.framework/FBRarelyUsedFramework"
+      ],
+      "unexplained_dependency_differences": [],
+      "passed": true
+    },
+    {
+      "path": "Payload/Facebook.app/Frameworks/FBReactNativeProductsFramework.framework/FBReactNativeProductsFramework",
+      "sha256": "150d57662a4bbb33835ea7e15676ea60312214b5fe99301f9cb7de1be591a929",
+      "nm_unique_undefined_names": 18196,
+      "scanner_unique_undefined_names": 18535,
+      "nm_only_count": 0,
+      "scanner_additional_count": 339,
+      "scanner_additional_origins": [
+        "chained_fixup_import"
+      ],
+      "scanner_additional_examples": [
+        "_$s10Foundation13CustomNSErrorMp",
+        "_$s10Foundation13CustomNSErrorP11errorDomainSSvgZTq",
+        "_$s10Foundation13CustomNSErrorP13errorUserInfoSDySSypGvgTq"
+      ],
+      "otool_linked_dependency_count": 94,
+      "scanner_linked_dependency_count": 94,
+      "otool_lc_id_dylib_excluded": [
+        "@rpath/FBReactNativeProductsFramework.framework/FBReactNativeProductsFramework"
+      ],
+      "unexplained_dependency_differences": [],
+      "passed": true
+    },
+    {
+      "path": "Payload/Facebook.app/Frameworks/FBSharedDynamicFramework.framework/FBSharedDynamicFramework",
+      "sha256": "eb97660c0661cc9227e491ab0c0b095a5f001210b88e9b594ed1b099bd3f4d02",
+      "nm_unique_undefined_names": 12202,
+      "scanner_unique_undefined_names": 12422,
+      "nm_only_count": 0,
+      "scanner_additional_count": 220,
+      "scanner_additional_origins": [
+        "chained_fixup_import"
+      ],
+      "scanner_additional_examples": [
+        "_$s10Foundation13CustomNSErrorMp",
+        "_$s10Foundation13CustomNSErrorP11errorDomainSSvgZTq",
+        "_$s10Foundation13CustomNSErrorP13errorUserInfoSDySSypGvgTq"
+      ],
+      "otool_linked_dependency_count": 100,
+      "scanner_linked_dependency_count": 100,
+      "otool_lc_id_dylib_excluded": [
+        "@rpath/FBSharedDynamicFramework"
+      ],
+      "unexplained_dependency_differences": [],
+      "passed": true
+    },
+    {
+      "path": "Payload/Facebook.app/Frameworks/FBSharedFramework.framework/FBSharedFramework",
+      "sha256": "16f3c4752486bdfd421c73d6e62746bc2481b13b841fecd4c51e1a3781a2dc94",
+      "nm_unique_undefined_names": 8115,
+      "scanner_unique_undefined_names": 8449,
+      "nm_only_count": 0,
+      "scanner_additional_count": 334,
+      "scanner_additional_origins": [
+        "chained_fixup_import"
+      ],
+      "scanner_additional_examples": [
+        "_$s021FOAAIAgentsVoiceEndToC6LoggerAAC17thinkingStartTime33_31DC00F6BFF0065B35E3702EEA171C05LL10Foundation4DateVSgvM",
+        "_$s021FOAAIAgentsVoiceEndToC6LoggerAAC17thinkingStartTime33_31DC00F6BFF0065B35E3702EEA171C05LL10Foundation4DateVSgvg",
+        "_$s021FOAAIAgentsVoiceEndToC6LoggerAAC17thinkingStartTime33_31DC00F6BFF0065B35E3702EEA171C05LL10Foundation4DateVSgvs"
+      ],
+      "otool_linked_dependency_count": 138,
+      "scanner_linked_dependency_count": 138,
+      "otool_lc_id_dylib_excluded": [
+        "@rpath/FBSharedFramework"
+      ],
+      "unexplained_dependency_differences": [],
+      "passed": true
+    },
+    {
+      "path": "Payload/Facebook.app/Frameworks/SpotifyiOS.framework/SpotifyiOS",
+      "sha256": "43459a618845e97b5653f7ab7be969d4c34079871d32b722cbd7de92e875b975",
+      "nm_unique_undefined_names": 115,
+      "scanner_unique_undefined_names": 115,
+      "nm_only_count": 0,
+      "scanner_additional_count": 0,
+      "scanner_additional_origins": [],
+      "scanner_additional_examples": [],
+      "otool_linked_dependency_count": 9,
+      "scanner_linked_dependency_count": 9,
+      "otool_lc_id_dylib_excluded": [
+        "@rpath/SpotifyiOS.framework/SpotifyiOS"
+      ],
+      "unexplained_dependency_differences": [],
+      "passed": true
+    },
+    {
+      "path": "Payload/Facebook.app/Frameworks/libavcodec.framework/libavcodec",
+      "sha256": "2804361d10625e8b76fb4bd61079c0084b449ad2750adf58edd50bccf517a737",
+      "nm_unique_undefined_names": 109,
+      "scanner_unique_undefined_names": 109,
+      "nm_only_count": 0,
+      "scanner_additional_count": 0,
+      "scanner_additional_origins": [],
+      "scanner_additional_examples": [],
+      "otool_linked_dependency_count": 4,
+      "scanner_linked_dependency_count": 4,
+      "otool_lc_id_dylib_excluded": [
+        "@rpath/libavcodec.framework/libavcodec"
+      ],
+      "unexplained_dependency_differences": [],
+      "passed": true
+    },
+    {
+      "path": "Payload/Facebook.app/Frameworks/libavutil.framework/libavutil",
+      "sha256": "d9c3a967f1638202bf2420e29f504a1fcda4ee9f19130187ae8f7bdeeaf7c44a",
+      "nm_unique_undefined_names": 74,
+      "scanner_unique_undefined_names": 74,
+      "nm_only_count": 0,
+      "scanner_additional_count": 0,
+      "scanner_additional_origins": [],
+      "scanner_additional_examples": [],
+      "otool_linked_dependency_count": 3,
+      "scanner_linked_dependency_count": 3,
+      "otool_lc_id_dylib_excluded": [
+        "@rpath/libavutil.framework/libavutil"
+      ],
+      "unexplained_dependency_differences": [],
+      "passed": true
+    },
+    {
+      "path": "Payload/Facebook.app/Frameworks/widevine_cdm_secured_ios.framework/widevine_cdm_secured_ios",
+      "sha256": "e4b508b722342d0a0a91a5b0a34b226c3442aeac10fab44823fbf71d8602c0e6",
+      "nm_unique_undefined_names": 176,
+      "scanner_unique_undefined_names": 176,
+      "nm_only_count": 0,
+      "scanner_additional_count": 0,
+      "scanner_additional_origins": [],
+      "scanner_additional_examples": [],
+      "otool_linked_dependency_count": 11,
+      "scanner_linked_dependency_count": 11,
+      "otool_lc_id_dylib_excluded": [
+        "@rpath/widevine_cdm_secured_ios.framework/widevine_cdm_secured_ios"
+      ],
+      "unexplained_dependency_differences": [],
+      "passed": true
+    },
+    {
+      "path": "Payload/Facebook.app/PlugIns/BroadcastUploadExtension.appex/BroadcastUploadExtension",
+      "sha256": "d991c9813762eb5fb203d5541706ac91fc2ef30b2ec710889055e8f3d678b26a",
+      "nm_unique_undefined_names": 680,
+      "scanner_unique_undefined_names": 716,
+      "nm_only_count": 0,
+      "scanner_additional_count": 36,
+      "scanner_additional_origins": [
+        "chained_fixup_import"
+      ],
+      "scanner_additional_examples": [
+        "_$s15_ObjectiveCTypes01_A11CBridgeablePTl",
+        "_$s8RawValueSYTl",
+        "_$sBOWV"
+      ],
+      "otool_linked_dependency_count": 34,
+      "scanner_linked_dependency_count": 34,
+      "otool_lc_id_dylib_excluded": [],
+      "unexplained_dependency_differences": [],
+      "passed": true
+    },
+    {
+      "path": "Payload/Facebook.app/PlugIns/FBLockscreenWidgetExtension.appex/FBLockscreenWidgetExtension",
+      "sha256": "492e27bc2cf0059b83b04cd4b0c495be29612d0afd8244f0b69e9bde7f8def5d",
+      "nm_unique_undefined_names": 2040,
+      "scanner_unique_undefined_names": 2283,
+      "nm_only_count": 0,
+      "scanner_additional_count": 243,
+      "scanner_additional_origins": [
+        "chained_fixup_import"
+      ],
+      "scanner_additional_examples": [
+        "_$s10AppIntents09_SupportsA12DependenciesMp",
+        "_$s10AppIntents0A5ValueMp",
+        "_$s10AppIntents0A5ValuePAA07_IntentC0Tb"
+      ],
+      "otool_linked_dependency_count": 62,
+      "scanner_linked_dependency_count": 62,
+      "otool_lc_id_dylib_excluded": [],
+      "unexplained_dependency_differences": [],
+      "passed": true
+    },
+    {
+      "path": "Payload/Facebook.app/PlugIns/IntentsExtension.appex/IntentsExtension",
+      "sha256": "df6d52f4e78da8f3617619456f51a43fb09ac3923cd7572eaa1dc69776f12991",
+      "nm_unique_undefined_names": 207,
+      "scanner_unique_undefined_names": 235,
+      "nm_only_count": 0,
+      "scanner_additional_count": 28,
+      "scanner_additional_origins": [
+        "chained_fixup_import"
+      ],
+      "scanner_additional_examples": [
+        "_$s8RawValueSYTl",
+        "_$sBOWV",
+        "_$sBi64_WV"
+      ],
+      "otool_linked_dependency_count": 21,
+      "scanner_linked_dependency_count": 21,
+      "otool_lc_id_dylib_excluded": [],
+      "unexplained_dependency_differences": [],
+      "passed": true
+    },
+    {
+      "path": "Payload/Facebook.app/PlugIns/NotificationContentExtension.appex/NotificationContentExtension",
+      "sha256": "80566bc4bbd87b09eef3af6709356ce61a7aa25b546bda552b7489f1b6fc286e",
+      "nm_unique_undefined_names": 792,
+      "scanner_unique_undefined_names": 873,
+      "nm_only_count": 0,
+      "scanner_additional_count": 81,
+      "scanner_additional_origins": [
+        "chained_fixup_import"
+      ],
+      "scanner_additional_examples": [
+        "_$s10Foundation14LocalizedErrorMp",
+        "_$s10Foundation14LocalizedErrorP10helpAnchorSSSgvgTq",
+        "_$s10Foundation14LocalizedErrorP13failureReasonSSSgvgTq"
+      ],
+      "otool_linked_dependency_count": 29,
+      "scanner_linked_dependency_count": 29,
+      "otool_lc_id_dylib_excluded": [],
+      "unexplained_dependency_differences": [],
+      "passed": true
+    },
+    {
+      "path": "Payload/Facebook.app/PlugIns/NotificationServiceExtension.appex/NotificationServiceExtension",
+      "sha256": "d9296fb326c9183755180479a65c0c840f5063884ca81ca8ecdd6ce4122c69b6",
+      "nm_unique_undefined_names": 2118,
+      "scanner_unique_undefined_names": 2224,
+      "nm_only_count": 0,
+      "scanner_additional_count": 106,
+      "scanner_additional_origins": [
+        "chained_fixup_import"
+      ],
+      "scanner_additional_examples": [
+        "_$s15_ObjectiveCTypes01_A11CBridgeablePTl",
+        "_$s16FloatLiteralTypes013ExpressibleByaB0PTl",
+        "_$s17StringLiteralTypes013ExpressibleByaB0PTl"
+      ],
+      "otool_linked_dependency_count": 66,
+      "scanner_linked_dependency_count": 66,
+      "otool_lc_id_dylib_excluded": [],
+      "unexplained_dependency_differences": [],
+      "passed": true
+    },
+    {
+      "path": "Payload/Facebook.app/PlugIns/NotificationsWidgetExtension.appex/NotificationsWidgetExtension",
+      "sha256": "28caf02d4f8c77b106dedc0eee6ab70d9b60fce3a3c4a02642edcbc601e4f288",
+      "nm_unique_undefined_names": 1953,
+      "scanner_unique_undefined_names": 2193,
+      "nm_only_count": 0,
+      "scanner_additional_count": 240,
+      "scanner_additional_origins": [
+        "chained_fixup_import"
+      ],
+      "scanner_additional_examples": [
+        "_$s10AppIntents09_SupportsA12DependenciesMp",
+        "_$s10AppIntents0A5ValueMp",
+        "_$s10AppIntents0A5ValuePAA07_IntentC0Tb"
+      ],
+      "otool_linked_dependency_count": 63,
+      "scanner_linked_dependency_count": 63,
+      "otool_lc_id_dylib_excluded": [],
+      "unexplained_dependency_differences": [],
+      "passed": true
+    },
+    {
+      "path": "Payload/Facebook.app/PlugIns/ShareExtension.appex/ShareExtension",
+      "sha256": "064688b2a7e64caec94e324f305bfd48096a62cd92bdb9286b4f1bd33952ddf5",
+      "nm_unique_undefined_names": 1465,
+      "scanner_unique_undefined_names": 1536,
+      "nm_only_count": 0,
+      "scanner_additional_count": 71,
+      "scanner_additional_origins": [
+        "chained_fixup_import"
+      ],
+      "scanner_additional_examples": [
+        "_$s15_ObjectiveCTypes01_A11CBridgeablePTl",
+        "_$s19ArrayLiteralElements013ExpressibleByaB0PTl",
+        "_$s7Elements10SetAlgebraPTl"
+      ],
+      "otool_linked_dependency_count": 54,
+      "scanner_linked_dependency_count": 54,
+      "otool_lc_id_dylib_excluded": [],
+      "unexplained_dependency_differences": [],
+      "passed": true
+    },
+    {
+      "path": "Payload/Facebook.app/PlugIns/VideoWidgetExtension.appex/VideoWidgetExtension",
+      "sha256": "b6356abc45d61dc9836e689ad8a46cbb12edab7ee16adce7a659afd7867acbc1",
+      "nm_unique_undefined_names": 1710,
+      "scanner_unique_undefined_names": 1918,
+      "nm_only_count": 0,
+      "scanner_additional_count": 208,
+      "scanner_additional_origins": [
+        "chained_fixup_import"
+      ],
+      "scanner_additional_examples": [
+        "_$s10AppIntents09_SupportsA12DependenciesMp",
+        "_$s10AppIntents0A5ValueMp",
+        "_$s10AppIntents0A5ValuePAA07_IntentC0Tb"
+      ],
+      "otool_linked_dependency_count": 51,
+      "scanner_linked_dependency_count": 51,
+      "otool_lc_id_dylib_excluded": [],
+      "unexplained_dependency_differences": [],
+      "passed": true
+    },
+    {
+      "path": "Payload/Facebook.app/PlugIns/WidgetExtension.appex/WidgetExtension",
+      "sha256": "7e656fedb370bf6bd077ce02267d5fa5a8df3bfaa738a72b2e10f44f305b7968",
+      "nm_unique_undefined_names": 1248,
+      "scanner_unique_undefined_names": 1354,
+      "nm_only_count": 0,
+      "scanner_additional_count": 106,
+      "scanner_additional_origins": [
+        "chained_fixup_import"
+      ],
+      "scanner_additional_examples": [
+        "_$s15_ObjectiveCTypes01_A11CBridgeablePTl",
+        "_$s19ArrayLiteralElements013ExpressibleByaB0PTl",
+        "_$s2IDs12IdentifiablePTl"
+      ],
+      "otool_linked_dependency_count": 43,
+      "scanner_linked_dependency_count": 43,
+      "otool_lc_id_dylib_excluded": [],
+      "unexplained_dependency_differences": [],
+      "passed": true
+    }
+  ],
+  "passed": true
+}

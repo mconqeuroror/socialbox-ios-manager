@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "rows": [
+    {
+      "id": "FBAPP-001",
+      "category": "Facebook clone policy",
+      "surface": "Audited keychain group hint in copied Facebook bundle metadata",
+      "mechanism": "Canonical descriptor lists literal audited Info keys; before signing, rewrite only present string hints to exact derived clone group. Verify on clone validation. Reddit key list is empty and its metadata stays unchanged. This does not remap hardcoded SDK queries or authorize source family groups.",
+      "coverage": [
+        "generator",
+        "blocked"
+      ],
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "cloud/src/config/app-registry.json",
+          "line": 1,
+          "detail": "Audited clone metadata rewrite, exact ownership validation, canonical descriptor/schema, signing-input digest or native failing-first regression."
+        },
+        {
+          "path": "cloud/src/lib/app-registry.ts",
+          "line": 1,
+          "detail": "Audited clone metadata rewrite, exact ownership validation, canonical descriptor/schema, signing-input digest or native failing-first regression."
+        },
+        {
+          "path": "shared/RBXAppRegistryData.h",
+          "line": 1,
+          "detail": "Audited clone metadata rewrite, exact ownership validation, canonical descriptor/schema, signing-input digest or native failing-first regression."
+        },
+        {
+          "path": "shared/RBXAppBundlePolicy.h",
+          "line": 1,
+          "detail": "Audited clone metadata rewrite, exact ownership validation, canonical descriptor/schema, signing-input digest or native failing-first regression."
+        },
+        {
+          "path": "daemon/RBXCloneManager.m",
+          "line": 1,
+          "detail": "Audited clone metadata rewrite, exact ownership validation, canonical descriptor/schema, signing-input digest or native failing-first regression."
+        },
+        {
+          "path": "tools/generate_app_registry.py",
+          "line": 1,
+          "detail": "Audited clone metadata rewrite, exact ownership validation, canonical descriptor/schema, signing-input digest or native failing-first regression."
+        },
+        {
+          "path": "tools/test_app_bundle_policy.m",
+          "line": 1,
+          "detail": "Audited clone metadata rewrite, exact ownership validation, canonical descriptor/schema, signing-input digest or native failing-first regression."
+        },
+        {
+          "path": "tools/test_app_bundle_policy.sh",
+          "line": 1,
+          "detail": "Audited clone metadata rewrite, exact ownership validation, canonical descriptor/schema, signing-input digest or native failing-first regression."
+        },
+        {
+          "path": "tools/test_app_source.py",
+          "line": 1,
+          "detail": "Audited clone metadata rewrite, exact ownership validation, canonical descriptor/schema, signing-input digest or native failing-first regression."
+        },
+        {
+          "path": "tools/test_build_version.py",
+          "line": 1,
+          "detail": "Audited clone metadata rewrite, exact ownership validation, canonical descriptor/schema, signing-input digest or native failing-first regression."
+        },
+        {
+          "path": "scripts/build-version.py",
+          "line": 1,
+          "detail": "Audited clone metadata rewrite, exact ownership validation, canonical descriptor/schema, signing-input digest or native failing-first regression."
+        },
+        {
+          "path": "scripts/build-mac.sh",
+          "line": 1,
+          "detail": "Audited clone metadata rewrite, exact ownership validation, canonical descriptor/schema, signing-input digest or native failing-first regression."
+        },
+        {
+          "path": "docs/facebook-binary-audit.md",
+          "line": 102,
+          "detail": "Original Meta family keychain and App Group declarations; runtime semantics remain separate."
+        }
+      ],
+      "verification": "Actual native fixture failed before implementation because platformFamily remained. Passing tests verify exact Facebook group, no source mutation, exact Reddit no-op, idempotence, malformed value/foreign bundle rejection and post-rewrite validation. Signing-input drift test failed before adding the policy header to the contract digest. All inherited group/restore/runtime questions remain open.",
+      "fix": "Keep Facebook inactive until multi-group SecItem/SecKey behavior, cleaner/backup/restoration and network/MDM acceptance are verified; no source-group entitlement passthrough."
+    }
+  ]
+}

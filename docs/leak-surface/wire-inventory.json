@@ -1,0 +1,313 @@
+{
+  "schemaVersion": 1,
+  "scope": "Current iOS wire transformation paths; lexical/binary evidence is not end-to-end transport proof.",
+  "rows": [
+    {
+      "id": "WIRE-001",
+      "category": "wire",
+      "surface": "Reddit header host classification",
+      "mechanism": "Exact reddit.com/redditmedia.com/redditstatic.com/redd.it domain or dot-delimited subdomain, case-insensitive. This is header classification, not egress enforcement.",
+      "coverage": [
+        "hook"
+      ],
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "tweak/Network/RBXRedditAPIHooks.xm",
+          "line": 25,
+          "anchor": "static BOOL RBXIsRedditAPIHost(",
+          "detail": "Old substring matcher accepted notreddit.com and reddit.com.attacker.invalid. Current IPA hostname literals support these four domain families; snooguts has no corroborating literal."
+        }
+      ],
+      "verification": "Production-function regression: lookalike domain failed before fa2d835, accepted/rejected/missing-host cases pass afterward. Device redirects and new server-driven hostnames remain capture work.",
+      "fix": "Fixed fa2d835; new domain needs evidence and this row update."
+    },
+    {
+      "id": "WIRE-002",
+      "category": "wire",
+      "surface": "Opaque server session/loid/auth trees",
+      "mechanism": "Ownership exclusion before dictionary/array recursion preserves server-owned values, including nested client-looking keys.",
+      "coverage": [
+        "hook"
+      ],
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "tweak/Network/RBXRedditAPIHooks.xm",
+          "line": 309,
+          "anchor": "// WIRE-002:",
+          "detail": "Pass-through applies to entire subtree; does not mint account IDs."
+        },
+        {
+          "path": "scripts/build-mac.sh",
+          "line": 170,
+          "anchor": "test_reddit_payload.sh",
+          "detail": "Full Mac build runs native production payload regressions plus backup identity/archive checks."
+        }
+      ],
+      "verification": "Production-function regression failed on session before aa25953; dictionaries, arrays, strings and mixed client/server trees pass afterward.",
+      "fix": "Fixed aa25953. Test all additions to the server-owned key set."
+    },
+    {
+      "id": "WIRE-003",
+      "category": "wire",
+      "surface": "Global JSON serialization including local state and unrelated SDKs",
+      "mechanism": "No global NSJSONSerialization hook: local persistence and SDK JSON serialization remain native. Mutation occurs only in request dispatch with a known Reddit-domain destination.",
+      "coverage": [
+        "hook"
+      ],
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "tweak/Network/RBXRedditAPIHooks.xm",
+          "line": 666,
+          "anchor": "static NSData *RBXRewriteBodyForRequest(",
+          "detail": "The global serialization hook was removed. Destination-aware dispatch is the mutation boundary, after the final request URL is available."
+        }
+      ],
+      "verification": "Native actual-function regression: third-party and lookalike-domain JSON/binary bodies remain byte-identical; Reddit bodies still apply existing fields and preserve opaque session trees. Device critical-path acceptance pending.",
+      "fix": "Global serialization mutation removed in final integration. Current iOS field schema and signed-request constraints remain separately tracked by WIRE-005/006/010."
+    },
+    {
+      "id": "WIRE-004",
+      "category": "wire",
+      "surface": "HTTP body and upload destination scope",
+      "mechanism": "A shared request-domain policy gates data bodies and upload data/files; body assignment itself remains native until dispatch. Non-Reddit domains pass through.",
+      "coverage": [
+        "hook"
+      ],
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "tweak/Network/RBXRedditAPIHooks.xm",
+          "line": 666,
+          "anchor": "static NSData *RBXRewriteBodyForRequest(",
+          "detail": "HTTPBody and upload data/files all use RBXIsRedditAPIHost at dispatch. Foreign-domain bodies pass through byte-for-byte."
+        }
+      ],
+      "verification": "Native Foundation regression compiles shipped rewrite functions; non-Reddit JSON/protobuf and suffix lookalikes remain unchanged; Reddit JSON/protobuf mutate and nested server-owned trees remain unchanged.",
+      "fix": "Host boundary closed in code. This is domain-aware, not a proven per-endpoint schema; actual schema/capture work remains WIRE-010."
+    },
+    {
+      "id": "WIRE-005",
+      "category": "wire",
+      "surface": "Request authentication and HMAC after mutation",
+      "mechanism": "Recognized HMAC, Signature/Signature-Input and Digest/Content-Digest headers freeze the complete request at dispatch. All NSMutableURLRequest assignment stays native, preserving fields when URL or signature is added last. Upload data/files share the guard.",
+      "coverage": [
+        "hook"
+      ],
+      "verdict": "gap",
+      "evidence": [
+        {
+          "path": "tweak/Network/RBXRedditAPIHooks.xm",
+          "line": 660,
+          "anchor": "static BOOL RBXRequestHasBodyAuthentication(",
+          "detail": "Recognized signature/digest headers short-circuit the complete request and upload body. There is no signature stripping or claimed re-signing."
+        }
+      ],
+      "verification": "Native regression failed on signature/header removal before fix; six case-insensitive signature/digest families now retain original JSON bytes and every header even when identity fields would otherwise change. Device signing order, query signatures and unknown custom authentication remain unverified. Builder-boundary regression rejects assignment hooks; native fixtures cover set/add/all-header builders with signature last and a final URL reassigned to a foreign host. This does not prove later delegate/session-configuration signing behavior.",
+      "fix": "Partially closed: never strip known signatures or mutate their signed bytes; no re-sign path is claimed. Unsupported signature formats, redirected/resumed requests and captured native critical flows remain an on-device acceptance item."
+    },
+    {
+      "id": "WIRE-006",
+      "category": "wire",
+      "surface": "Protobuf/opaque binary request bodies",
+      "mechanism": "Same-length real-ID byte swaps and printable 96-byte key lookahead; no field-number/schema decoder.",
+      "coverage": [
+        "hook"
+      ],
+      "verdict": "gap",
+      "evidence": [
+        {
+          "path": "tweak/Network/RBXRedditAPIHooks.xm",
+          "line": 531,
+          "anchor": "static NSData *RBXRewriteProtobufData(",
+          "detail": "Length preservation does not establish semantic ownership. A printable value after a key can be unrelated, compressed/encrypted content can evade detection."
+        }
+      ],
+      "verification": "Domain guard passes native JSON and binary same/different-host regressions. Source algorithm reviewed; no iOS protobuf schema or captured request corpus establishes safe rewriting.",
+      "fix": "Gap partially closed: verified domain-aware pass-through leaves SDK/foreign bodies untouched. This is the requested pass-through scope boundary, not a Reddit schema decoder; Reddit-domain heuristics remain schema-unaware. Replace heuristic with schema-specific transformation, or explicitly configurable pass-through for unsupported schemas; do not claim covered."
+    },
+    {
+      "id": "WIRE-007",
+      "category": "wire",
+      "surface": "Push-like identifiers inside protobuf",
+      "mechanism": "Push key entries have empty replacement strings, which the replacement loop skips.",
+      "coverage": [
+        "hook"
+      ],
+      "verdict": "gap",
+      "evidence": [
+        {
+          "path": "tweak/Network/RBXRedditAPIHooks.xm",
+          "line": 580,
+          "anchor": "if (!key.length || !repl.length) continue;",
+          "detail": "This function does not remove APNs/FCM-like values; entitlements/hooks are separate OS controls."
+        }
+      ],
+      "verification": "Domain guard passes native JSON and binary same/different-host regressions. Code proves no substitution for empty entries; actual current FCM/other token transmission unverified.",
+      "fix": "Gap partially closed: verified domain-aware pass-through leaves SDK/foreign bodies untouched. This is the requested pass-through scope boundary, not a Reddit schema decoder; Reddit-domain heuristics remain schema-unaware. Use SDK-specific token lifecycle/transport evidence. Do not equate missing APNs entitlement with no SDK registration ID."
+    },
+    {
+      "id": "WIRE-008",
+      "category": "wire",
+      "surface": "Streamed, resumed and deferred body production",
+      "mechanism": "uploadTaskWithStreamedRequest passes through the request wrapper; HTTPBodyStream bytes are not parsed.",
+      "coverage": [
+        "hook"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "tweak/Network/RBXRedditAPIHooks.xm",
+          "line": 967,
+          "anchor": "- (NSURLSessionUploadTask *)uploadTaskWithStreamedRequest:",
+          "detail": "No body-stream transformation or delegate needNewBodyStream handling in this layer. Network confinement is tracked under NET rows."
+        }
+      ],
+      "verification": "No first-run instrumented stream/delegate corpus.",
+      "fix": "Capture all stream/deferred tasks for current client and SDKs; map actual identifiers before intervention."
+    },
+    {
+      "id": "WIRE-009",
+      "category": "wire",
+      "surface": "Compressed, multipart and encrypted payload encodings",
+      "mechanism": "Dispatcher sniffs JSON/form/media and falls back to binary heuristics; it is not a gzip/multipart/encryption decoder.",
+      "coverage": [
+        "hook"
+      ],
+      "verdict": "gap",
+      "evidence": [
+        {
+          "path": "tweak/Network/RBXRedditAPIHooks.xm",
+          "line": 622,
+          "anchor": "static NSData *RBXRewriteBodyData(",
+          "detail": "Content encoding and multipart part semantics are not verified here."
+        }
+      ],
+      "verification": "Domain guard passes native JSON and binary same/different-host regressions. Static parser coverage only; no claim that bytes cannot contain a correlator.",
+      "fix": "Gap partially closed: verified domain-aware pass-through leaves SDK/foreign bodies untouched. This is the requested pass-through scope boundary, not a Reddit schema decoder; Reddit-domain heuristics remain schema-unaware. Inventory observed encodings per SDK and endpoint; unsupported encodings remain uncovered until verified at a pre-encoding schema boundary."
+    },
+    {
+      "id": "WIRE-010",
+      "category": "wire",
+      "surface": "Actual current iOS GraphQL and analytics schema",
+      "mechanism": "Generic key aliases map install, external, ad, device, timing and locale fields. Android evidence is not used to establish current iOS field ownership.",
+      "coverage": [
+        "hook"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "tweak/Network/RBXRedditAPIHooks.xm",
+          "line": 130,
+          "anchor": "static BOOL RBXIsInstallIdKey(",
+          "detail": "Current binary account/device and install-time symbols establish candidate modules, not every serialized field or caller."
+        }
+      ],
+      "verification": "Actual binary references recorded in binary-inventory.json; no traced call graph from each persisted ID to outbound field.",
+      "fix": "Use two fresh sandboxes plus request/call-site capture; complete SDK-to-storage-to-send evidence before marking covered."
+    },
+    {
+      "id": "WIRE-011",
+      "category": "wire",
+      "surface": "Install timestamp and UTC offset units",
+      "mechanism": "Timestamp conversion and UTC offset infer units from magnitude; profile generator staggers timestamps but app-persisted fields can have other schemas.",
+      "coverage": [
+        "hook"
+      ],
+      "verdict": "gap",
+      "evidence": [
+        {
+          "path": "tweak/Network/RBXRedditAPIHooks.xm",
+          "line": 276,
+          "anchor": "static NSNumber *RBXUtcOffsetMatching(",
+          "detail": "Zero UTC offset is ambiguous; heuristic does not establish field units or compare source SDK install timestamps."
+        }
+      ],
+      "verification": "Unverified on device: no captured current-iOS field/type/unit corpus. Zero UTC offset is intrinsically ambiguous to magnitude inference; generator presence alone is not wire proof.",
+      "fix": "Keep this known code gap open; do not guess units or add a broad timestamp hook. Acceptance must attribute each emitted field to its current binary caller, compare seconds versus milliseconds and minutes versus seconds at zero/nonzero offsets and DST boundaries, then add exact-schema fixtures before changing conversion."
+    },
+    {
+      "id": "WIRE-012",
+      "category": "wire",
+      "surface": "Analytics geometry, font and locale representation",
+      "mechanism": "Generic field-name replacement combines profile values and actual app version/build.",
+      "coverage": [
+        "hook"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "tweak/Network/RBXRedditAPIHooks.xm",
+          "line": 268,
+          "anchor": "static BOOL RBXIsFontSizeKey(",
+          "detail": "Units, accessibility category vs numeric font size, landscape and point/pixel semantics differ across APIs."
+        }
+      ],
+      "verification": "OS hooks are independently inventoried; actual payload coherence not yet measured.",
+      "fix": "Capture per-endpoint field types, orientation, text size and locale behavior; do not invent field semantics."
+    },
+    {
+      "id": "WIRE-013",
+      "category": "wire",
+      "surface": "Forced Reddit request header values",
+      "mechanism": "Client-Vendor-ID/x-reddit-device-id -> profile install ID; X-Dev-Ad-Id -> profile IDFA; device name, UA, language from profile.",
+      "coverage": [
+        "hook",
+        "generator"
+      ],
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "tweak/Network/RBXRedditAPIHooks.xm",
+          "line": 63,
+          "anchor": "static NSString *RBXForcedHeaderValue(",
+          "detail": "Only NSURLSession request/URL dispatch adapters apply forced headers. Native request assignment is untouched so final destination and recognized signature state can be checked first."
+        }
+      ],
+      "verification": "Source mapping is proven, but sent headers after redirects/delegates/protocols require network capture.",
+      "fix": "No added identity fields. Retain identity collision checks and inspect redirect/session configuration behavior."
+    },
+    {
+      "id": "WIRE-014",
+      "category": "wire",
+      "surface": "User-Agent actual app version vs configured override",
+      "mechanism": "RBXBuiltUserAgent accepts stored profile UA first, otherwise constructs from current app version/build and profile device metadata.",
+      "coverage": [
+        "hook"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "tweak/Network/RBXRedditAPIHooks.xm",
+          "line": 48,
+          "anchor": "static NSString *RBXBuiltUserAgent(",
+          "detail": "A stored override may become stale after app/source upgrade. Profile model/OS coherence must be checked separately."
+        }
+      ],
+      "verification": "No runtime comparison of internal SDK UA builders with final transmitted UA across source upgrade.",
+      "fix": "Validate configured override against intended profile semantics and exact Reddit source version; keep SDK UA paths in capture set."
+    },
+    {
+      "id": "WIRE-015",
+      "category": "wire",
+      "surface": "Future SDKs, dynamically generated selectors and server configuration",
+      "mechanism": "Static enumeration provides all decoded references in this IPA; dynamic strings/reflection/downloaded configuration and OS-service behavior are not a finite static proof.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "unverified",
+      "evidence": [
+        {
+          "path": "tweak/Network/RBXRedditAPIHooks.xm",
+          "line": 982,
+          "anchor": "BOOL RBXInstallRedditAPIHooks(",
+          "detail": "Known generic hooks cannot establish absence of unenumerated future channels. This is the explicit unknown/delta row."
+        }
+      ],
+      "verification": "New IPA hash requires regenerated structural inventory and fresh device observations; missing symbols never become a not-used verdict.",
+      "fix": "Fail future change acceptance on unexplained binary/source inventory deltas; add specific rows and evidence before declaring coverage."
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "date": "2026-09-30",
+  "scope": "Existing SocialBox .17 owner-phone UI update; whole fresh-client product is unfinished",
+  "uiStylePreserved": true,
+  "controls": [
+    "Swipe left on an inactive container to show Delete",
+    "Visible Delete button in container details"
+  ],
+  "confirmation": "Existing original confirmDeleteContainer: entry point; selection re-resolved by stable ID at tap time",
+  "safeguards": [
+    "Active container deletion remains unavailable",
+    "Full-swipe automatic deletion disabled",
+    "No row disappearance before confirmation or fabricated deletion result"
+  ],
+  "validation": {
+    "currentSourceUIKitAssertions": 241,
+    "exactInstalledBaselineUIKitAssertions": 178,
+    "nativeDeviceCLIRecordDeletion": "PASS: newly created inactive disposable record removed; all 110 prior records and selection unchanged",
+    "nativeDeviceCLIFileDeletion": "PASS: second own test file was witnessed before deleting its dormant container; its directory and file absent afterwards; all 110 prior records and selection unchanged",
+    "physicalTapThroughNewControls": "PASS: actual manager process opened details for the exact named trial 108, invoked the new Delete button, observed original Cancel/Delete confirmation, and dismissed it without invoking destructive confirmation",
+    "physicalSwipeConfiguration": "PASS: action available; full-swipe deletion disabled",
+    "physicalFinalInventory": "OWNER_CONFIRMED: containers 1 and 2 were intentionally removed by the owner; selection and all other pre-test records matched"
+  },
+  "installed": true,
+  "packageVersion": "3.1.0-1+socialbox.17",
+  "overlayBeforeSHA256": "2a59c23bf18f600288601407f2549fd3ab7cd8ad8a4bb0e1cadc69673c13ffc3",
+  "overlayAfterSHA256": "911606412d389f98849baf3e76c3e3c0b0813acf3d9a24ab873fe3ccb9928fbb",
+  "originalAppHelperAndDaemonsUnchanged": true,
+  "managerRelaunchedAndContainerScreenObserved": true,
+  "rollbackAvailable": true,
+  "freshClientActivation": "NOT_IMPLEMENTED",
+  "clientPackagePublished": false,
+  "temporaryUITestInjectionRemoved": true,
+  "UITestBinarySHA256": "c2dc67189e815b61b1fb204c606cca4551a43a78780bb48e43bb9ccc8c435017",
+  "UITestSourceSHA256": "7b0e086eebe829bb50fa11c441060772af87c43319797bf1050e73b0be4ba01d",
+  "UITestLogSHA256": "9cb1c016bf9fa872999f27afe50de8edfa036bc5124017c8af0a693c6418036c"
+}

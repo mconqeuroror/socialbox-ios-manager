@@ -1,0 +1,195 @@
+{
+  "schemaVersion": 1,
+  "reviewDate": "2026-09-14",
+  "branch": "feat/socialbox-multiapp",
+  "baseRevision": "3440f5b",
+  "codeRevision": "0b3dfccd7cfe0ed0adf3c72566cb5495ca7605ac",
+  "merged": false,
+  "nativeAndHostEntryPoints": [
+    "tools/test_build_version.py",
+    "tools/test_package_variants.py",
+    "tools/test_apt_release.py",
+    "tools/test_facebook_binary_audit.py",
+    "tools/test_app_bundle_policy.sh",
+    "tools/test_app_runtime.sh",
+    "tools/test_app_profile.py",
+    "tools/test_clone_profile_ownership.py",
+    "tools/test_app_registry.sh",
+    "tools/test_app_process.sh",
+    "tools/test_app_process_coordinator.sh",
+    "tools/test_app_source.py",
+    "tools/test_app_mdm.sh",
+    "tools/test_app_scope.sh",
+    "tools/test_launcher_multiapp.py",
+    "tools/test_apt_metadata_refresh.py",
+    "tools/test_clone_architecture.py",
+    "tools/test_identity_editor.py",
+    "tools/test_launcher_architecture.py",
+    "tests/test_replacement_architecture.py",
+    "tools/test_firewall_policy.sh",
+    "tools/test_request_queue.sh",
+    "tools/test_secure_config.sh",
+    "tools/test_identity_draft_store.sh",
+    "tools/test_preinstall.py",
+    "tools/test_postinstall.py",
+    "tools/test_macho_probe.py",
+    "tools/test_request_budgets.py",
+    "tools/test_proxy_library.sh",
+    "tools/test_proxy_configuration.py",
+    "tools/test_proxy_redirect_policy.py",
+    "tools/test_proxy_region.sh",
+    "tools/test_proxy_region_transport.py",
+    "tools/test_rotation_secrets.sh",
+    "tools/test_backup_snapshot.sh",
+    "tools/test_backup_identity.py",
+    "tools/test_backup_restore_cleanup.py",
+    "tools/test_backup_archive.py",
+    "tools/test_identity_freeze.py",
+    "tools/test_smoke_log_order.py",
+    "tools/test_sign_firewall_app.py",
+    "tools/test_keychain_cleaner.sh",
+    "tools/test_keychain_sync.sh",
+    "tools/test_clone_acceptance.sh",
+    "tools/test_isolation_sentinel.sh",
+    "tools/test_launch_safety.sh",
+    "tools/test_proxy_route_transport.py",
+    "tools/test_acceptance_checks.sh",
+    "tools/test_operator_wording.sh",
+    "tools/test_wizard_draft.sh",
+    "tools/test_device_acceptance_ssh.py",
+    "tools/test_device_acceptance_canaries.py",
+    "tools/test_deletion_journal.sh",
+    "tools/test_profile_metadata.sh",
+    "tests/test_replacement.sh",
+    "tools/test_profile_metadata.py",
+    "tools/test_account_status_browser.py",
+    "tools/test_license_key.py",
+    "tools/test_license_screen.py",
+    "tools/test_license_presentation.py",
+    "tools/test_license_presentation.sh",
+    "tests/test_license_token.sh",
+    "tests/test_license_architecture.py",
+    "tests/test_data_schema.sh",
+    "tests/test_data_schema_architecture.py",
+    "tools/test_update_startup.py",
+    "tools/test_device_catalog.sh",
+    "tools/test_fingerprint_registry.sh",
+    "tools/test_operation_context.sh",
+    "tools/test_memory_budget.sh",
+    "tools/test_request_deadlines.sh",
+    "tools/test_bounded_process.sh",
+    "tools/test_service_lifetime.sh",
+    "tools/test_socket_guard.sh",
+    "tools/test_hook_readiness.sh",
+    "tools/test_http_proxy.sh",
+    "tools/test_reddit_payload.sh",
+    "tools/test_leak_audit.py",
+    "tools/test_leak_surface.py",
+    "tools/check_pasteboard_api.py"
+  ],
+  "entryPointCount": 80,
+  "unitValidation": [
+    {
+      "commit": "e678df3a43e1433400cc37bba04d6a73335781de",
+      "unit": "Daemon collection and executable binding",
+      "gateCount": 77,
+      "result": "PASS",
+      "logs": [
+        {
+          "name": "isolation-audit-collector-checks.log",
+          "sha256": "3aa493ab7d5d545fd268bba0c1397349906f5f05ee6f4bbaaf7b3003be0ec7a4"
+        },
+        {
+          "name": "isolation-audit-collector-checks-rest.log",
+          "sha256": "c94fa625e20d8363afe00ebdfabb1c0e903120c6f30dbfb4b66521ef45addc95"
+        },
+        {
+          "name": "isolation-audit-collector-final-focused.log",
+          "sha256": "b6826235a34aa84c6f17779243cd06496251b78a660c382102ecaaa856719c90"
+        }
+      ],
+      "validationNote": "Unchanged passing gate results retained; later focused collector updates reran the affected native fixture and remaining gates. An initial host environment omission (libarchive include) was corrected by sourcing the prepared build environment."
+    },
+    {
+      "commit": "f4837dbef0c62d942082085de02ffe2c99259d06",
+      "unit": "Container metadata ownership boundary",
+      "gateCount": 78,
+      "result": "PASS",
+      "logs": [
+        {
+          "name": "isolation-audit-ownership-checks.log",
+          "sha256": "01368f3b6ec09d497d376ebf145a6b370439d4d472a7d4f75aa4ab29e07649fb"
+        }
+      ]
+    },
+    {
+      "commit": "f06c912e86e1676121d1ddc2223d289e3bbd2c1a",
+      "unit": "Rootless observer staging and Boolean evidence",
+      "gateCount": 78,
+      "result": "PASS",
+      "logs": [
+        {
+          "name": "isolation-audit-observer-mount-checks.log",
+          "sha256": "d28a6166a6752cea561cbbe16504d9ccf869890a22bd30913715c85ccbe1dc38"
+        },
+        {
+          "name": "isolation-audit-observer-bool-checks.log",
+          "sha256": "6f014e53ea5a4219cff4ddb3fa24e0a53f6cd87f5bcbacf050bb89740e6ea2ab"
+        }
+      ],
+      "validationNote": "Unchanged passing gate results retained; later focused collector updates reran the affected native fixture and remaining gates. An initial host environment omission (libarchive include) was corrected by sourcing the prepared build environment."
+    },
+    {
+      "commit": "b9ca3a19c6570214b23d458ba6902261b063fad7",
+      "unit": "Redirect destination policy",
+      "gateCount": 79,
+      "result": "PASS",
+      "logs": [
+        {
+          "name": "isolation-audit-redirect-checks.log",
+          "sha256": "e585913db026b1451b3657c14e7118cab0f1bd46ef641ed1b67eae6bdbf15b85"
+        }
+      ]
+    },
+    {
+      "commit": "901af69fce105b49a86674c742c9f457b676949e",
+      "unit": "Sentinel proof classification and positive evidence",
+      "gateCount": 79,
+      "result": "PASS",
+      "logs": [
+        {
+          "name": "isolation-audit-sentinel-checks.log",
+          "sha256": "fada96718bdee529e0ad6055d3c297ca9f28007f7899ebd4e14cd09ca60909c1"
+        }
+      ]
+    },
+    {
+      "commit": "0b3dfccd7cfe0ed0adf3c72566cb5495ca7605ac",
+      "unit": "Verified restore-control cleanup",
+      "gateCount": 80,
+      "result": "PASS",
+      "logs": [
+        {
+          "name": "isolation-audit-restore-checks.log",
+          "sha256": "4e2e080e47339e46996d25c824b6ca1d0b1128b7c154f20687c3f434cef0facc"
+        }
+      ]
+    }
+  ],
+  "claimLimit": "Host/native fixtures are not two-clone, account, MDM or on-device egress acceptance.",
+  "finalBuild": {
+    "version": "0.1.17",
+    "scheme": "rootless",
+    "result": "PASS",
+    "all80EntryPointsRun": true,
+    "codeRevision": "0b3dfccd7cfe0ed0adf3c72566cb5495ca7605ac",
+    "packageEvidence": "docs/isolation-review-package-0.1.17.json",
+    "logSHA256": "ae49aeab62d270e94a2183ef88524585dd2b99c069bbcce357dd422fe1082774"
+  },
+  "finalDocumentationChecks": {
+    "result": "PASS",
+    "entryPointCount": 80,
+    "staticCheck": "PASS",
+    "logSHA256": "72bd8048afa829a77938841720b84472251db64d8d50bd6f28cc8fc4574f4028"
+  }
+}

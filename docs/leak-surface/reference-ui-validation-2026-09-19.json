@@ -1,0 +1,815 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-09-19",
+  "branch": "feat/socialbox-multiapp",
+  "reviewedHead": "9aa6bec6a942dd15b46ed8ca68e27df59837cb3c",
+  "scope": "Source review and reported executable host/simulator fixtures of reference-interface delta; includes current working tree as reflected by source-inventory.json. No device mutation or production enablement by this audit.",
+  "sourceSnapshot": "docs/leak-surface/source-inventory.json",
+  "binaryInputsUnchanged": true,
+  "checks": [
+    {
+      "name": "tools/test_creation_prepare.py",
+      "status": "PASS",
+      "assertions": 57,
+      "evidenceClass": "host",
+      "scope": "Shipped registry generation/validation, controlled IO.",
+      "provenance": "Observed in current implementation session; separate suite counts are not summed into isolation coverage."
+    },
+    {
+      "name": "tools/test_creation_draft_store.sh",
+      "status": "PASS",
+      "assertions": 45,
+      "evidenceClass": "host",
+      "scope": "Real private draft authority store.",
+      "provenance": "Observed in current implementation session; separate suite counts are not summed into isolation coverage."
+    },
+    {
+      "name": "tools/test_creation_dispatch.py",
+      "status": "PASS",
+      "assertions": 234,
+      "evidenceClass": "host",
+      "scope": "Extracted shipped draft and creation dispatch with inert OS/cloud/proxy/registry providers.",
+      "provenance": "Observed in current implementation session; separate suite counts are not summed into isolation coverage."
+    },
+    {
+      "name": "tools/test_creation_source_binding.py",
+      "status": "PASS",
+      "assertions": 62,
+      "evidenceClass": "host-filesystem",
+      "scope": "Real source binding on synthetic temporary bundle files; no Mach-O decryption proof.",
+      "provenance": "Observed in current implementation session; separate suite counts are not summed into isolation coverage."
+    },
+    {
+      "name": "tools/test_creation_wizard_simulator.py",
+      "status": "PASS",
+      "assertions": 26,
+      "evidenceClass": "simulator",
+      "scope": "Actual UIKit wizard with inert IPC/private candidate seams.",
+      "provenance": "Observed in current implementation session; separate suite counts are not summed into isolation coverage."
+    },
+    {
+      "name": "tools/test_identity_editor_simulator.py",
+      "status": "PASS",
+      "assertions": 198,
+      "evidenceClass": "simulator",
+      "scope": "Actual UIKit editor/picker, existing and creation modes; overlapping suite across UI-003/UI-011.",
+      "provenance": "Observed in current implementation session; separate suite counts are not summed into isolation coverage."
+    },
+    {
+      "name": "tools/test_proxy_import.sh",
+      "status": "PASS",
+      "assertions": 45,
+      "evidenceClass": "host",
+      "scope": "Real parser/library with controlled secure store.",
+      "provenance": "Observed in current implementation session; separate suite counts are not summed into isolation coverage."
+    },
+    {
+      "name": "tools/test_proxy_import_ui.py",
+      "status": "PASS",
+      "assertions": 20,
+      "evidenceClass": "simulator",
+      "scope": "Actual UIKit importer with inert IPC/Keychain; no live egress.",
+      "provenance": "Observed in current implementation session; separate suite counts are not summed into isolation coverage."
+    },
+    {
+      "name": "tools/test_workspace_simulator.py",
+      "status": "PASS",
+      "assertions": 216,
+      "evidenceClass": "simulator",
+      "scope": "50 synthetic rows,40 selections; not40 clones or accounts. Final suite includes rename/cancel/invalid-name/search checks. Final four routing assertions prove both Reddit Home/Containers New enter actual wizard without provisioning IPC.",
+      "provenance": "Observed in current implementation session; separate suite counts are not summed into isolation coverage."
+    },
+    {
+      "name": "tools/test_settings_presentation.py",
+      "status": "PASS",
+      "assertions": 32,
+      "evidenceClass": "host",
+      "scope": "Extracted status/Cloud route helpers.",
+      "provenance": "Observed in current implementation session; separate suite counts are not summed into isolation coverage."
+    },
+    {
+      "name": "tools/test_profile_rename.py",
+      "status": "PASS",
+      "assertions": 55,
+      "evidenceClass": "host",
+      "scope": "Actual registry metadata methods, both app namespaces, inert persistence; identity/ownership/siblings preserved."
+    },
+    {
+      "name": "tools/test_profile_metadata.sh",
+      "status": "PASS",
+      "evidenceClass": "host",
+      "scope": "Native nickname validation, divergent/exact acknowledgement and exact legacy reply helper behavior."
+    },
+    {
+      "name": "cloud/scripts/profile-metadata-test.ts",
+      "status": "PASS",
+      "assertions": 14,
+      "evidenceClass": "host",
+      "scope": "Actual cloud handlers and fixture storage; new/legacy nickname and optimistic revision behavior. Failing-first first-offline legacy-name enrollment regression also passes."
+    },
+    {
+      "name": "cloud/scripts/profile-inventory-test.ts",
+      "status": "PASS",
+      "assertions": 9,
+      "evidenceClass": "host",
+      "scope": "Cloud inventory lifecycle and ownership with fixture storage."
+    },
+    {
+      "name": "tools/check_leak_surface.py --write; tools/check_leak_surface.py",
+      "status": "PASS",
+      "evidenceClass": "contract-structure",
+      "scope": "381 rows, binary evidence digests, reviewed source hashes, valid anchors and generated Markdown. This is not historical trailer-gate compliance or isolation proof."
+    },
+    {
+      "name": "tools/test_creation_defaults.py",
+      "status": "PASS",
+      "assertions": 16,
+      "evidenceClass": "host",
+      "scope": "Extracted production creation entry/defaults: scoped Reddit wizard/noIPC, legacy advanced form, Auto/draft defaults and inactive Facebook admission."
+    },
+    {
+      "name": "cloud npm test and tsc --noEmit",
+      "status": "PASS",
+      "evidenceClass": "host",
+      "scope": "Full existing Cloud test suite and TypeScript check passed after legacy-label compatibility changes; no production deployment."
+    },
+    {
+      "name": "tools/test_leak_surface.py",
+      "status": "PASS",
+      "assertions": 8,
+      "evidenceClass": "contract-regression",
+      "scope": "Contract validation behavior; unrelated device/runtime boundaries remain open."
+    },
+    {
+      "name": "scripts/build-mac.sh rootless and rootful 0.1.36",
+      "status": "PASS",
+      "evidenceClass": "host-build",
+      "scope": "Each complete build ran 135 host/native test entry points, Xcode archive without Apple signing, Procursus ldid and Debian packaging. Both resulting archives passed inspect_package for version, architecture, reviewed maintainer scripts, stable app identifiers, allowed files and release metadata. No installation/runtime claim."
+    }
+  ],
+  "pendingChecks": [],
+  "notRun": [
+    "Physical acceptance of this reference-UI/draft/import/rename candidate",
+    "Forty installed clones with per-clone canaries and actual account login",
+    "A/B/A foreign Keychain/files/defaults/pasteboard tests for the final candidate",
+    "Labelled IPv4/IPv6/DNS/QUIC/direct-egress and proxy/provider/network-failure capture",
+    "Original App Store icon routing and no-MDM confinement implementation/acceptance",
+    "Cross-device login/credential continuity for encrypted cloud restore",
+    "Production APT/Vercel deployment of this candidate"
+  ],
+  "governance": {
+    "historicalTrailerGate": "FAIL",
+    "reason": "Six already committed implementation units omitted required Leak-Surface trailers. Supplemental mappings below are review evidence, not retroactive trailer compliance. History is not rewritten and validation code is not weakened.",
+    "futureRequirement": "Every future commit touching shipped files requires evidenced Leak-Surface row trailers.",
+    "commitMappings": [
+      {
+        "commit": "d4a3bbec7110eb4f8ba42da5982d2338b1fd50e4",
+        "title": "Prepare complete container identities before provisioning",
+        "rows": [
+          "UI-002"
+        ],
+        "trailerStatus": "MISSING",
+        "mappingStatus": "Supplemental reviewed mapping; not a gate waiver."
+      },
+      {
+        "commit": "545aff40c34d80ffcd65df78080eedc2948c2a7d",
+        "title": "Review and atomically import HTTP proxy lists",
+        "rows": [
+          "UI-009"
+        ],
+        "trailerStatus": "MISSING",
+        "mappingStatus": "Supplemental reviewed mapping; not a gate waiver."
+      },
+      {
+        "commit": "5339cb52f56471009d3bd5a16de7c551d79668da",
+        "title": "Redesign the five-tab workspace from the reference flow",
+        "rows": [
+          "UI-007"
+        ],
+        "trailerStatus": "MISSING",
+        "mappingStatus": "Supplemental reviewed mapping; not a gate waiver."
+      },
+      {
+        "commit": "e7c7665be32d90bd5cee238d4b82a351eeb92b58",
+        "title": "Require a private reviewed draft before simple container creation",
+        "rows": [
+          "UI-002",
+          "UI-003"
+        ],
+        "trailerStatus": "MISSING",
+        "mappingStatus": "Supplemental reviewed mapping; not a gate waiver."
+      },
+      {
+        "commit": "194cb80c440f3738631d1861b97c6d4f7b8f4f17",
+        "title": "Clarify setup readiness and scope Cloud to the selected app",
+        "rows": [
+          "UI-010"
+        ],
+        "trailerStatus": "MISSING",
+        "mappingStatus": "Supplemental reviewed mapping; not a gate waiver."
+      },
+      {
+        "commit": "37dee9715f2eeddd4ca1d3128e8e1e9e8bea1dee",
+        "title": "Search compatible models, iOS versions and regional identity choices",
+        "rows": [
+          "UI-003",
+          "UI-011"
+        ],
+        "trailerStatus": "MISSING",
+        "mappingStatus": "Supplemental reviewed mapping; not a gate waiver."
+      },
+      {
+        "commit": "1384d59dd6362683a8677d9065b3bcd60c316a46",
+        "title": "Reject malformed sources and stale reviewed creation requests",
+        "rows": [
+          "UI-002"
+        ],
+        "trailerStatus": "PRESENT",
+        "mappingStatus": "Validated against current inventory"
+      },
+      {
+        "commit": "f5233a563c57ab2d37cc32462267384367d2fee7",
+        "title": "Rename containers with revision-checked Cloud metadata",
+        "rows": [
+          "UI-012",
+          "UI-002"
+        ],
+        "trailerStatus": "PRESENT",
+        "mappingStatus": "Validated against current inventory"
+      },
+      {
+        "commit": "ab0a8fc9df3883360c44fb69e4a332184d538c52",
+        "title": "Route Reddit creation through the reviewed wizard",
+        "rows": [
+          "UI-002",
+          "UI-007",
+          "UI-009",
+          "UI-012"
+        ],
+        "trailerStatus": "PRESENT",
+        "mappingStatus": "Validated against current inventory"
+      },
+      {
+        "commit": "9aa6bec6a942dd15b46ed8ca68e27df59837cb3c",
+        "title": "Run reviewed-creation and interface regressions in Mac builds",
+        "rows": [
+          "UI-002",
+          "UI-003",
+          "UI-009",
+          "UI-010",
+          "UI-012"
+        ],
+        "trailerStatus": "PRESENT",
+        "mappingStatus": "Validated against current inventory"
+      }
+    ],
+    "newCommitTrailerGate": {
+      "base": "37dee9715f2eeddd4ca1d3128e8e1e9e8bea1dee",
+      "status": "PASS"
+    }
+  },
+  "existingRowsPreserved": 377,
+  "newRows": [
+    "UI-009",
+    "UI-010",
+    "UI-011",
+    "UI-012"
+  ],
+  "priorVerdictsUnchanged": true,
+  "rowCount": 381,
+  "verdictCounts": {
+    "covered-in-code": 180,
+    "gap": 31,
+    "unverified": 170
+  },
+  "reanchoredEvidence": [
+    {
+      "row": "FBKEY-005",
+      "path": "daemon/RBXCloneManager.m",
+      "from": 3135,
+      "to": 3154,
+      "anchor": "if (!RBXAppKeychainCleanupReceiptComplete"
+    },
+    {
+      "row": "FBLIFE-001",
+      "path": "scripts/build-mac.sh",
+      "from": 64,
+      "to": 65,
+      "anchor": "python3 \"$ROOT/tools/test_app_install_recovery.py\""
+    },
+    {
+      "row": "FBLIFE-002",
+      "path": "scripts/build-mac.sh",
+      "from": 66,
+      "to": 67,
+      "anchor": "python3 \"$ROOT/tools/test_app_deletion_flow.py\""
+    },
+    {
+      "row": "FBLIFE-003",
+      "path": "daemon/main.m",
+      "from": 47,
+      "to": 49,
+      "anchor": "static RBXAppProcessCoordinator *sProc;"
+    },
+    {
+      "row": "FBLIFE-003",
+      "path": "scripts/build-mac.sh",
+      "from": 69,
+      "to": 70,
+      "anchor": "python3 \"$ROOT/tools/test_app_launch_flow.py\""
+    },
+    {
+      "row": "FBLIFE-003",
+      "path": "daemon/RBXCloneManager.m",
+      "from": 3400,
+      "to": 3419,
+      "anchor": "- (BOOL)writeGateControlPlist:"
+    },
+    {
+      "row": "FBLIFE-003",
+      "path": "scripts/build-mac.sh",
+      "from": 71,
+      "to": 72,
+      "anchor": "python3 \"$ROOT/tools/test_clone_gate_writer.py\""
+    },
+    {
+      "row": "FBLIFE-004",
+      "path": "daemon/main.m",
+      "from": 1559,
+      "to": 1673,
+      "anchor": "if (![RBXCloneManager recoverAllInterruptedTransactionsWithContext:"
+    },
+    {
+      "row": "FBLIFE-004",
+      "path": "scripts/build-mac.sh",
+      "from": 73,
+      "to": 74,
+      "anchor": "python3 \"$ROOT/tools/test_app_global_recovery.py\""
+    },
+    {
+      "row": "FBLIFE-005",
+      "path": "daemon/RBXContainerRegistry.h",
+      "from": 85,
+      "to": 103,
+      "anchor": "deletionIdentityForContainer:"
+    },
+    {
+      "row": "FBLIFE-005",
+      "path": "scripts/build-mac.sh",
+      "from": 75,
+      "to": 76,
+      "anchor": "python3 \"$ROOT/tools/test_app_replacement_backend.py\""
+    },
+    {
+      "row": "FBLIFE-006",
+      "path": "daemon/RBXCloudSync.m",
+      "from": 1596,
+      "to": 1597,
+      "anchor": "- (NSString *)_dataContainerForProfile:"
+    },
+    {
+      "row": "FBLIFE-006",
+      "path": "daemon/RBXCloudSync.m",
+      "from": 2225,
+      "to": 2226,
+      "anchor": "BOOL profileWriteAttempted = NO"
+    },
+    {
+      "row": "FBLIFE-006",
+      "path": "daemon/RBXCloudSync.m",
+      "from": 2384,
+      "to": 2385,
+      "anchor": "Worker ownership changed; candidate retained"
+    },
+    {
+      "row": "FBLIFE-006",
+      "path": "scripts/build-mac.sh",
+      "from": 113,
+      "to": 119,
+      "anchor": "python3 \"$ROOT/tools/test_app_backup_flow.py\""
+    },
+    {
+      "row": "FBLIFE-006",
+      "path": "scripts/build-mac.sh",
+      "from": 114,
+      "to": 120,
+      "anchor": "python3 \"$ROOT/tools/test_app_backup_transaction.py\""
+    },
+    {
+      "row": "LIFE-023",
+      "path": "daemon/RBXContainerRegistry.m",
+      "from": 1151,
+      "to": 1158,
+      "anchor": "BOOL assignedProxy ="
+    },
+    {
+      "row": "LIFE-029",
+      "path": "scripts/build-mac.sh",
+      "from": 102,
+      "to": 107,
+      "anchor": "python3 \"$ROOT/tools/test_postinstall.py\""
+    },
+    {
+      "row": "LIFE-029",
+      "path": "scripts/build-mac.sh",
+      "from": 103,
+      "to": 108,
+      "anchor": "python3 \"$ROOT/tools/test_macho_probe.py\""
+    },
+    {
+      "row": "LIFE-029",
+      "path": "daemon/main.m",
+      "from": 151,
+      "to": 153,
+      "anchor": "static NSTimeInterval requestBudget(NSString *action) {"
+    },
+    {
+      "row": "LIFE-029",
+      "path": "scripts/build-mac.sh",
+      "from": 104,
+      "to": 109,
+      "anchor": "python3 \"$ROOT/tools/test_request_budgets.py\""
+    },
+    {
+      "row": "ID-010",
+      "path": "daemon/RBXContainerRegistry.m",
+      "from": 1630,
+      "to": 1637,
+      "anchor": "- (BOOL)applyIdentityChoices:"
+    },
+    {
+      "row": "ID-010",
+      "path": "daemon/RBXCloudSync.m",
+      "from": 2322,
+      "to": 2323,
+      "anchor": "@\"identityFrozenAt\": @(now),"
+    },
+    {
+      "row": "OS-008",
+      "path": "scripts/build-mac.sh",
+      "from": 122,
+      "to": 128,
+      "anchor": "test_clone_acceptance.sh"
+    },
+    {
+      "row": "OS-011",
+      "path": "scripts/build-mac.sh",
+      "from": 121,
+      "to": 127,
+      "anchor": "test_keychain_sync.sh"
+    },
+    {
+      "row": "NET-038",
+      "path": "daemon/main.m",
+      "from": 1150,
+      "to": 1260,
+      "anchor": "if ([action isEqualToString:@\"detectProxyRegion\"])"
+    },
+    {
+      "row": "NET-038",
+      "path": "scripts/build-mac.sh",
+      "from": 108,
+      "to": 114,
+      "anchor": "sh \"$ROOT/tools/test_proxy_region.sh\""
+    },
+    {
+      "row": "BOOT-001",
+      "path": "scripts/build-mac.sh",
+      "from": 85,
+      "to": 90,
+      "anchor": "python3 \"$ROOT/tools/test_sensor_startup.py\""
+    },
+    {
+      "row": "FSOWN-001",
+      "path": "daemon/RBXCloneManager.m",
+      "from": 3388,
+      "to": 3407,
+      "anchor": "NSString *support = sealed ? RBXCloneSupportDirectoryWithRootOwner"
+    },
+    {
+      "row": "FSOWN-001",
+      "path": "scripts/build-mac.sh",
+      "from": 86,
+      "to": 91,
+      "anchor": "python3 \"$ROOT/tools/test_clone_support_directory.py\""
+    },
+    {
+      "row": "UI-001",
+      "path": "launcher/RBXLauncherViewController.m",
+      "from": 163,
+      "to": 165,
+      "anchor": "- (instancetype)init {"
+    },
+    {
+      "row": "UI-001",
+      "path": "launcher/RBXLauncherViewController.m",
+      "from": 1239,
+      "to": 1335,
+      "anchor": "- (void)showAdvancedOverview"
+    },
+    {
+      "row": "UI-001",
+      "path": "launcher/RBXLauncherViewController.m",
+      "from": 1044,
+      "to": 1115,
+      "anchor": "- (void)createContainer {"
+    },
+    {
+      "row": "UI-003",
+      "path": "launcher/RBXIdentityViewController.m",
+      "from": 73,
+      "to": 74,
+      "anchor": "- (instancetype)initWithContainerRow:(NSDictionary *)row simpleMode:"
+    },
+    {
+      "row": "UI-003",
+      "path": "launcher/RBXIdentityViewController.m",
+      "from": 573,
+      "to": 578,
+      "anchor": "- (void)chooseModel"
+    },
+    {
+      "row": "UI-003",
+      "path": "daemon/RBXContainerRegistry.m",
+      "from": 1504,
+      "to": 1511,
+      "anchor": "- (NSDictionary *)privateIdentityEditorDraftForContainer:(NSString *)containerId randomize:(BOOL)randomize selection:(NSDictionary *)selection error:(NSError **)error {"
+    },
+    {
+      "row": "UI-003",
+      "path": "daemon/main.m",
+      "from": 1318,
+      "to": 1428,
+      "anchor": "if ([@[@\"loadIdentityEditor\", @\"randomizeIdentityEditor\"] containsObject:action])"
+    },
+    {
+      "row": "UI-003",
+      "path": "scripts/build-mac.sh",
+      "from": 96,
+      "to": 101,
+      "anchor": "bash \"$ROOT/tools/test_identity_draft_store.sh\""
+    },
+    {
+      "row": "UI-003",
+      "path": "launcher/RBXIdentityViewController.m",
+      "from": 422,
+      "to": 426,
+      "anchor": "- (void)detectProxyRegion {"
+    },
+    {
+      "row": "UI-005",
+      "path": "launcher/RBXLauncherViewController.m",
+      "from": 1345,
+      "to": 1441,
+      "anchor": "message:RBXOperatorMessage(detail)"
+    },
+    {
+      "row": "WIRE-002",
+      "path": "scripts/build-mac.sh",
+      "from": 157,
+      "to": 164,
+      "anchor": "test_reddit_payload.sh"
+    }
+  ],
+  "result": "Host/simulator UI and private authority checks pass within their stated scope. Existing gaps and unverified rows remain; no aggregate isolation or device-readiness verdict.",
+  "completedOn": "2026-09-20",
+  "sourceSnapshotSHA256": "b6409d68655407b81e2f33714e89ca1e5a6f6058bc068b3a2d290935ca0fa5d8",
+  "sourceFileCount": 382,
+  "fixesReproduced": [
+    {
+      "surface": "UI-002",
+      "finding": "Source binding accepted a directory at executable path.",
+      "resolution": "Failing source fixture, then directory/regular-file shape and dot-name rejection;62 assertions PASS."
+    },
+    {
+      "surface": "UI-002",
+      "finding": "NaN prepared time could retain a nonexpiring draft.",
+      "resolution": "Failing store fixture, then finite clock/prepared-time checks;45 assertions PASS."
+    },
+    {
+      "surface": "UI-002",
+      "finding": "Default Reddit New still entered immediate legacy form.",
+      "resolution": "Source exclusion removed; actual UIKit both New entries and extracted defaults prove wizard/noIPC."
+    },
+    {
+      "surface": "UI-012",
+      "finding": "New nickname limits rejected unchanged or first-offline legacy names during sync.",
+      "resolution": "Legacy compatibility preserves old label; explicit changed-name validation and revision binding retained. Native and Cloud regressions PASS."
+    }
+  ],
+  "completedAt": "2026-09-20",
+  "packages": {
+    "rootless": {
+      "version": "0.1.36",
+      "filename": "debs/com.redditbox_0.1.36_iphoneos-arm64.deb",
+      "sha256": "af6b28284ff77730600318887d143eca20c924d788dbe7133c127fc3d19fa83e",
+      "size": 2164852,
+      "release": {
+        "version": "0.1.36",
+        "schemaVersion": 2,
+        "signingContractHash": "9cb5239518cd4a98cd6dd98f2b8e86315d399b4c01a789c183b40ac77b54eda0",
+        "requiresMDMReadoption": true,
+        "packageScheme": "rootless",
+        "packageArchitecture": "iphoneos-arm64",
+        "installPrefix": "/var/jb"
+      },
+      "inspection": "PASS"
+    },
+    "rootful": {
+      "version": "0.1.36",
+      "filename": "debs/com.redditbox_0.1.36_iphoneos-arm.deb",
+      "sha256": "d30d42444b0cab20e55bf5058c5be36622e5a81734c74b0d070f4463c09c6a63",
+      "size": 2155122,
+      "release": {
+        "version": "0.1.36",
+        "schemaVersion": 2,
+        "signingContractHash": "db6f87d376b2d123fc282e5ff3e206665684368ae67156802f5bc3330d6c984e",
+        "requiresMDMReadoption": true,
+        "packageScheme": "rootful",
+        "packageArchitecture": "iphoneos-arm",
+        "installPrefix": ""
+      },
+      "inspection": "PASS"
+    }
+  },
+  "buildCheckEntrypoints": [
+    "tools/test_build_version.py",
+    "tools/test_package_variants.py",
+    "tools/test_apt_release.py",
+    "tools/test_facebook_binary_audit.py",
+    "tools/test_app_bundle_policy.sh",
+    "tools/test_app_runtime.sh",
+    "tools/test_facebook_user_agent.py",
+    "tools/test_facebook_user_agent_hooks.py",
+    "tools/test_facebook_storage_policy.sh",
+    "tools/test_facebook_private_group_store.sh",
+    "tools/test_facebook_storage_hooks.py",
+    "tools/test_app_profile.py",
+    "tools/test_clone_profile_ownership.py",
+    "tools/test_app_registry.sh",
+    "tools/test_workspace_selection.sh",
+    "tools/test_workspace_dispatch.py",
+    "tools/test_app_keychain_policy.sh",
+    "tools/test_app_keychain_hooks.sh",
+    "tools/test_app_keychain_entitlements.sh",
+    "tools/test_app_process.sh",
+    "tools/test_app_process_coordinator.sh",
+    "tools/test_app_source.py",
+    "tools/test_app_mdm.sh",
+    "tools/test_app_scope.sh",
+    "tools/test_launcher_multiapp.py",
+    "tools/test_workspace_presentation.py",
+    "tools/test_settings_presentation.py",
+    "tools/test_apt_metadata_refresh.py",
+    "tools/test_clone_architecture.py",
+    "tools/test_identity_editor.py",
+    "tools/test_clone_visibility_metadata.py",
+    "tools/test_installer_evidence.py",
+    "tools/test_app_install_recovery.py",
+    "tools/test_app_removal_identity.py",
+    "tools/test_app_deletion_flow.py",
+    "tools/test_app_deletion_targets.py",
+    "tools/test_app_deletion_closure.py",
+    "tools/test_app_launch_flow.py",
+    "tools/test_app_gate_control.py",
+    "tools/test_clone_gate_writer.py",
+    "tools/test_app_gate_readiness.py",
+    "tools/test_app_global_recovery.py",
+    "tools/test_app_maintenance_closure.py",
+    "tools/test_app_replacement_backend.py",
+    "tools/test_identity_manual_inputs.py",
+    "tools/test_automatic_identity.py",
+    "tools/test_creation_prepare.py",
+    "tools/test_creation_dispatch.py",
+    "tools/test_creation_source_binding.py",
+    "tools/test_creation_draft_store.sh",
+    "tools/test_passcode_removal.py",
+    "tools/test_passcode_store.sh",
+    "tools/test_identity_user_agent.py",
+    "tools/test_app_version_settings.py",
+    "tools/test_creation_defaults.py",
+    "tools/test_device_catalog_data.py",
+    "tools/test_device_version_hook.py",
+    "tools/test_sensor_startup.py",
+    "tools/test_clone_support_directory.py",
+    "tools/test_storage_gate.sh",
+    "tools/test_storage_access.sh",
+    "tools/test_staged_executable.sh",
+    "tools/test_identity_choices.py",
+    "tools/test_launcher_architecture.py",
+    "tests/test_replacement_architecture.py",
+    "tools/test_firewall_policy.sh",
+    "tools/test_request_queue.sh",
+    "tools/test_secure_config.sh",
+    "tools/test_identity_draft_store.sh",
+    "tools/test_cloud_vault_store.sh",
+    "tools/test_cloud_vault_bridge.py",
+    "tools/test_cloud_app_admission.py",
+    "tools/test_cloud_assignment_closure.py",
+    "tools/test_preinstall.py",
+    "tools/test_postinstall.py",
+    "tools/test_macho_probe.py",
+    "tools/test_request_budgets.py",
+    "tools/test_proxy_library.sh",
+    "tools/test_proxy_import.sh",
+    "tools/test_proxy_configuration.py",
+    "tools/test_proxy_redirect_policy.py",
+    "tools/test_proxy_region.sh",
+    "tools/test_proxy_region_transport.py",
+    "tools/test_rotation_secrets.sh",
+    "tools/test_backup_snapshot.sh",
+    "tools/test_backup_identity.py",
+    "tools/test_app_backup_flow.py",
+    "tools/test_app_backup_transaction.py",
+    "tools/test_backup_restore_cleanup.py",
+    "tools/test_backup_archive.py",
+    "tools/test_identity_freeze.py",
+    "tools/test_smoke_log_order.py",
+    "tools/test_sign_firewall_app.py",
+    "tools/test_keychain_cleaner.sh",
+    "tools/test_keychain_sync.sh",
+    "tools/test_clone_acceptance.sh",
+    "tools/test_isolation_sentinel.sh",
+    "tools/test_launch_safety.sh",
+    "tools/test_proxy_route_transport.py",
+    "tools/test_acceptance_checks.sh",
+    "tools/test_operator_wording.sh",
+    "tools/test_wizard_draft.sh",
+    "tools/test_device_acceptance_ssh.py",
+    "tools/test_device_acceptance_canaries.py",
+    "tools/test_deletion_journal.sh",
+    "tools/test_profile_metadata.sh",
+    "tools/test_profile_rename.py",
+    "tests/test_replacement.sh",
+    "tools/test_profile_metadata.py",
+    "tools/test_account_status_browser.py",
+    "tools/test_license_key.py",
+    "tools/test_license_screen.py",
+    "tools/test_license_presentation.py",
+    "tools/test_license_presentation.sh",
+    "tests/test_license_token.sh",
+    "tests/test_license_architecture.py",
+    "tests/test_data_schema.sh",
+    "tests/test_data_schema_architecture.py",
+    "tools/test_update_startup.py",
+    "tools/test_device_catalog.sh",
+    "tools/test_fingerprint_registry.sh",
+    "tools/test_operation_context.sh",
+    "tools/test_memory_budget.sh",
+    "tools/test_request_deadlines.sh",
+    "tools/test_bounded_process.sh",
+    "tools/test_service_lifetime.sh",
+    "tools/test_socket_guard.sh",
+    "tools/test_exception_port_guard.sh",
+    "tools/test_hook_readiness.sh",
+    "tools/test_optional_ios_hooks.py",
+    "tools/test_http_proxy.sh",
+    "tools/test_reddit_payload.sh",
+    "tools/test_leak_audit.py",
+    "tools/test_leak_surface.py",
+    "tools/check_pasteboard_api.py"
+  ],
+  "buildCheckEntrypointCount": 135,
+  "licensePinPreserved": true,
+  "signing": "Procursus ldid; unchanged existing public license pin; no Apple Development Team",
+  "logs": {
+    "rootless": {
+      "localPath": "work/socialbox-reference-0.1.36-rootless.log",
+      "sha256": "2d2f4eb5c1f9067c9aa75c2fb4579ca142d3cd3b200e1be51b8621c7c5689db4"
+    },
+    "rootful": {
+      "localPath": "work/socialbox-reference-0.1.36-rootful.log",
+      "sha256": "2e0fb194709f6a1257bf1252a9deb21e3bdb0bd47d6a547f9323b219022a6fd2"
+    },
+    "cloud": {
+      "localPath": "work/socialbox-reference-0.1.36-cloud.log",
+      "sha256": "b814d9c309ea0d9840872c1dc6f4d8b277f5d1e69085765d4ebb4ed223d030e4"
+    }
+  },
+  "visualEvidence": {
+    "scope": "Actual production UIKit controllers with inert IPC/Keychain and synthetic fixture data. Dark and light appearances; not phone isolation, live proxy or Cloud-transfer proof.",
+    "workspaceAssertions": 216,
+    "images": [
+      {
+        "path": "docs/assets/socialbox-reference-0.1.36/home.png",
+        "sha256": "4ab8001fa690a83ea8da55c83ce4f05a0ef481c1b6b6b487ba6d5c3f12edd670"
+      },
+      {
+        "path": "docs/assets/socialbox-reference-0.1.36/containers.png",
+        "sha256": "1c0b2db73ac234190a1d93e769dd07862936855985d519b08d3585e2a3c23c80"
+      },
+      {
+        "path": "docs/assets/socialbox-reference-0.1.36/settings.png",
+        "sha256": "103fc126a158dfebcd3acab2e95e7741f9cfd300447aeb5814374db92f237207"
+      }
+    ],
+    "video": {
+      "localPath": "private-device/socialbox-ui-2026-09-19/workspace-ui-fixture.mp4",
+      "durationSeconds": 37.058333,
+      "sha256": "5ea27dc773929b04f35149b6093d078c11dfbf8114d1f65c6d9d600dd8d3d9db",
+      "codec": "h264",
+      "width": 750,
+      "height": 1334
+    }
+  }
+}

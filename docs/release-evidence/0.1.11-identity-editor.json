@@ -1,0 +1,30 @@
+{
+  "version": "0.1.11",
+  "status": "PASS",
+  "filledIdentifierFields": [
+    "serialNumber",
+    "udid",
+    "wifiMac",
+    "btMac",
+    "platformUUID",
+    "idfa",
+    "idfv",
+    "installId",
+    "externalInstallationId"
+  ],
+  "selectedModel": "iPhone 17 Pro",
+  "selectedIOS": "26.6.2",
+  "selectedTuplePreservedTwice": true,
+  "invalidTupleRejected": true,
+  "unverifiedIMEINotGenerated": true,
+  "savedValuesLoaded": true,
+  "randomDraftChangedIdentifiers": true,
+  "exactRandomDraftConsistencyPreview": true,
+  "randomFillDidNotApply": true,
+  "rawIdentifiersAbsentFromPublicStateAndReceipts": true,
+  "uiTapsOrRendering": "NOT_RUN",
+  "fullIsolation": "NOT_RUN",
+  "saveAppliedExactDraft": true,
+  "savedIdentifiersReloaded": true,
+  "cloneLaunchOrMDM": "NOT_RUN"
+}

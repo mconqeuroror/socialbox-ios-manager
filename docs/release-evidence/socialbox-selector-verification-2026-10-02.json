@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "unit": 40,
+  "kind": "fail-closed-production-selector-verification",
+  "recordedAt": "2026-10-02T01:00:24.963222+00:00",
+  "status": "PASS_TEST_RUNNER_ONLY",
+  "clientDeliveryReady": false,
+  "freshInstallReady": false,
+  "customerArtifactReleased": false,
+  "customerCodeIssued": false,
+  "problem": "Original conditional strings|rg pipeline treated missing/failed tools like absent selectors and printed PASS. Unit37 original absence marker remains NOT_ACCEPTED.",
+  "change": "Successful strings extraction to a separate private listing is required. Explicit rg status1 alone accepts absence; status0 refuses named selector presence, all other statuses refuse inspection. No conditional pipeline. Helper is shared by the actual runner and failure tests.",
+  "focused": {
+    "status": "PASS",
+    "methods": 8,
+    "guardInvocations": 13,
+    "realToolControls": 3,
+    "scope": "Inert stubs for missing extraction/search, extraction partial failure, search errors2/126/130/137 and present-selector return. Three actual strings/rg text-file controls cover absence and each named selector. No compiler/device/live account effects.",
+    "sourceObservation": "Current direct test/helper hashes after execution; no focused whole-graph before/after freeze claimed.",
+    "testSHA256": "fc4b42f74c48b14a2404f6070f3a722eba0af915979fb5396d191aaa19338221",
+    "guardSHA256": "7e3852e5662f0dfc9e697733e985897a9a587a010a6fef62757667e2c7005796",
+    "logSHA256": "d91f9aa9f0cdc99f7cba47b49084ff09658adf502d4b33fba47fe402467df359"
+  },
+  "regression": {
+    "status": "PASS",
+    "rootCoordinatorAssertions": 2977,
+    "productionArchitectures": [
+      "arm64",
+      "arm64e"
+    ],
+    "productionObjectInspection": "Both newly compiled production objects pass explicit successful extraction and search-miss checks. This checks only the two named selectors, not every provider/string or signed linked program.",
+    "quotedInputs": 37,
+    "inputs": {
+      "daemon/RBXLicenseToken.h": "a21d1072b10136c4ecc809ad1855bebd368849a2bc0628db63202399fcb52979",
+      "daemon/RBXLicenseToken.m": "e3f00d563c99a47400d22b31b152ec4d2ab6123505b9aaa0f2d2d787f13d55da",
+      "lucid/Authorization/LBXLicenseClient.h": "63267ad770a9f373edadc18b700b8c1909a25784ff054b2e43c6011bd7ec9686",
+      "lucid/Authorization/LBXLicenseEndpoints.h": "cd0287d7b0f443ef9964b3a0679531c82d18d067a8ed03dbe1ca979bf5c7d016",
+      "lucid/Authorization/LBXLicenseExchange.h": "ab24d7e92934dce040add199712c0bce2cdd29e581b7e0c1a6246708c90f9b29",
+      "lucid/Authorization/LBXLicenseExchange.m": "5a7ed4ef11dcf87ec32876ce34f75463077215734525929f9750f4afc02e7c93",
+      "lucid/Authorization/LBXLicenseIPC.h": "8ff579acaa3b3113e6480f472022df893095d633de08b362a42de3b63df839ea",
+      "lucid/Authorization/LBXLicenseIPC.m": "7c3aec2a53d8c666b4cfd6ba8deb323f172b5c962de82c809834876b9396ffbc",
+      "lucid/Authorization/LBXLicenseInstallationEstablishment.h": "3a88f7bd3b2e6f5dfc3c7409ac0a910c8e9e2c0d768adc09fda45b39f308ddad",
+      "lucid/Authorization/LBXLicenseOwner.h": "ec2b0a3bc4354ae0f2ed942c8f45e54767e97e0a6ff35e8d79c0c67e4e159736",
+      "lucid/Authorization/LBXLicenseOwner.m": "b61bc078a29087947608963f0d0f3963889238dbe098bfb98676a0b2ea3e3154",
+      "lucid/Authorization/LBXLicenseTransport.h": "bbf31e9e89f19ad7edca17ceb4bfec5e66ff6566d7daff1c125e44af0682e54a",
+      "lucid/Authorization/LBXLicenseTransport.m": "40999576d5d20030ecb50631e4ba69d333de79c2119867923975691147acf35a",
+      "lucid/Authorization/LBXLicenseVault.h": "a9a0583689fa9ec7f8f9861df9533a4b443670aa88d15b948b7fe58fc224fd2f",
+      "lucid/Authorization/LBXLicenseVault.m": "e2d3d3ce123655913d10ca983db7de7f4aa62aed4138434fc50f9f139c4639d0",
+      "lucid/Containers/LBXContainerConfiguration.h": "7cca41e4337794e10cf2d0ea2c3d9d398905bb169b6c72460d805b53bb693fa7",
+      "lucid/Containers/LBXContainerConfiguration.m": "a6c090c894aee9ce68902e8a426924fc8c9e9801efc90057605df07a2ee2c993",
+      "lucid/Containers/LBXContainerConfigurationStore.h": "34a163269430c95d3aee1904938d08c5bacaff6af2a71462952510631caf5abc",
+      "lucid/Containers/LBXContainerConfigurationStore.m": "83d42357e974f9f5f58f871a24e5fe97da7db358e5c4156c1bf4373283287567",
+      "lucid/Containers/LBXContainerIPC.h": "b1cadb446b6f2b9e420bea05b7def048e2dbb17a3b621b523f596f5695a8ea93",
+      "lucid/Containers/LBXContainerIPC.m": "a997795f418a5fb498008c15e159e23e9e499b88ca2f14f4dfe3206297e6e68c",
+      "lucid/Containers/LBXContainerMutationClient.h": "c20e7f98ddd5624e44017ba930d12ded38b0e7fed6a19e84ba4d93bb33d721eb",
+      "lucid/Containers/LBXContainerMutationIPC.h": "630258f7b034d9ef541c735c9a43da223c88ed606ba3e229023eee83ba488aaa",
+      "lucid/Containers/LBXContainerMutationIPC.m": "f3970974711132bb165eef347cb414be4b08215532505815795527bb524155d9",
+      "lucid/Containers/LBXContainerRootMutationCoordinator.h": "31f7031c5a402f638a0c8762c50985c402deee0b922a7fa33e52fdb52885f713",
+      "lucid/Containers/LBXContainerRootMutationCoordinator.m": "955a5922a55dd4f9a220be7629b991522758023669b3cbcf7338b8b9a0b0cc5c",
+      "lucid/Containers/LBXContainerRootMutationOwner.h": "2440d0272a20564c6716f6f939245db592105a214318f31497ab5d50d631ebe1",
+      "lucid/Containers/LBXContainerRootMutationOwner.m": "e7c12afdb9e4330f53a73011b0193def5477440dec6c186f7ed0d0d456be8210",
+      "lucid/Containers/LBXContainerRootPendingStore.h": "463d6d7cfd299ef3022f1680ac69c0d28a98c882d7184dbc046374166f549be2",
+      "lucid/Containers/LBXContainerRootPendingStore.m": "3d83bd8795942d517aacaa8172ec306ac763620717ffc87f622fa408830b0bba",
+      "lucid/tests/production_selector_guard.sh": "7e3852e5662f0dfc9e697733e985897a9a587a010a6fef62757667e2c7005796",
+      "lucid/tests/root_mutation_coordinator.m": "f47a04fb4ef56aaae625d39c6ca38abf68613927c00e10cb6ca67c2dc37a258f",
+      "lucid/tests/test_production_selector_guard.py": "fc4b42f74c48b14a2404f6070f3a722eba0af915979fb5396d191aaa19338221",
+      "lucid/tests/test_root_mutation_coordinator.sh": "b573d8f317a3fa36c0db46974bac60672cedd993b41f9b2fcce3bc0fb347cb79",
+      "shared/RBXLicensePin.h": "e81b82da4597828a48c3dbfa76055a06c3e4a4323a165ed3e7d70b7e97ee9f3f",
+      "shared/RBXStorageGate.h": "95e77751b8b78276d6ef34699176eab2df3243b902f494d5a23cfb257d7fe9ac",
+      "tests/RBXLicenseTestSupport.h": "39f0f79eb2b0f44f30bf5473aa109db285f399684b9eb087ab7e714da2fec5bb"
+    },
+    "sourceStableCurrent": true,
+    "scope": "Actual host root owner/files with ephemeral synthetic RSA/test role seams. No kernel-peer/runtime/account acceptance.",
+    "logSHA256": "ccec2fff86e42b7db1bd043ca31a69dfab1e56bcc907185883b3758d27dcdcfb"
+  },
+  "counterfactual": {
+    "status": "PASS_EXPECTED_OLD_FALSE_PASS",
+    "originalCommit": "6fbab906d9224d0a26410ee3b020f0b9097a7e9a",
+    "originalSHA256": "17454607e7419d876d2c16071e6668f62e4d6405e4a7f8e5b9f3f07cde85c372",
+    "scope": "Only exact original shell inspection block with inert command stubs; no full compiler/host/device invocation.",
+    "cases": [
+      {
+        "case": "missing-search",
+        "oldReturncode": 0,
+        "falsePass": true
+      },
+      {
+        "case": "failed-search",
+        "oldReturncode": 0,
+        "falsePass": true
+      },
+      {
+        "case": "failed-extract",
+        "oldReturncode": 0,
+        "falsePass": true
+      }
+    ]
+  },
+  "retainedNarrowerAttempt": "Focused01 seven methods passed; focused02 adds real-tool pattern controls, no production relaxation.",
+  "review": "Root reviewed shell return handling, tests/actual results/current graphs. No independent review, loaded-object lifetime, signed publisher, compromised-successful-tool or atomic file-observation claim.",
+  "effects": "No production runtime, native installer/license policy, phone/account/UI/website/customer effect. Test-only helper and runner changed.",
+  "completedPrivateAttempts": [
+    "focused01/02",
+    "host01",
+    "counterfactual01"
+  ]
+}

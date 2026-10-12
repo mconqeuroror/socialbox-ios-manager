@@ -1,0 +1,17 @@
+{
+  "status" : {
+    "reasonCodes" : [
+
+    ],
+    "scope" : "shared-rules-current-session",
+    "fieldCount" : 13,
+    "available" : 1,
+    "runtimeVerified" : false
+  },
+  "fixtureOnly" : true,
+  "failures" : [
+
+  ],
+  "ok" : 1,
+  "assertions" : 37
+}

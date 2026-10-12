@@ -1,0 +1,126 @@
+{
+  "schemaVersion": 1,
+  "kind": "socialbox-private-customer-package-inventory-parser",
+  "unit": 23,
+  "recordedAt": "2026-10-01T12:31:23.229797+00:00",
+  "status": "PASS_WITH_FIRST_PREPARATION_AND_CUSTOMER_GAPS",
+  "clientDeliveryReady": false,
+  "customerArtifactReleased": false,
+  "customerCodeIssued": false,
+  "contract": {
+    "before": "Whitespace IFS collapsed empty catalog columns, ignored trailing empty extra columns/all-tab rows and accepted unknown unrelated states, duplicate identities and padded names that evade history matching.",
+    "after": "Literal tab splitting requires exactly four nonempty fields. C/ASCII package, architecture and version character shape; eight known state words; optional single qualifier must equal Architecture; canonical base-package/architecture duplicate keys refuse. Valid distinct architectures remain subject to existing conflict rules.",
+    "history": "Matching qualified manager records keep the same exact version/architecture half-installed incoming boundary. External preflight refuses manager history. Valid prior-version conflict fixtures require migration refusal, not an earlier malformed-row result.",
+    "preservation": "Both unpack guards still read only. Configure/repeat/abort remain native check-only, never initialize on absence/failure. Removal preserves source state, upgrade refuses, release gate and prepared-image migration policy unchanged.",
+    "scope": "These observations permit unpack only and never establish pristine history, first authority, a source license or runtime grant.",
+    "limits": "Not full Debian version semantics, an atomic inventory lease, cancellation/byte bound on query, or detection of successful omitted/truncated output. Command substitution strips trailing newlines; trailing blank rows/newline-only output are indistinguishable from a zero-record observation. Interior blanks refuse. No firmware-row requirement."
+  },
+  "syntheticLifecycle": {
+    "status": "PASS",
+    "tests": 25,
+    "emittedShellExecutions": 278,
+    "sourceStable": true,
+    "frozenPythonFiles": 132,
+    "sourceStabilityScope": "All repository Python source files recursively beneath scripts/ and tools/; native/OS dependencies are outside this freeze.",
+    "privateLogSHA256": "1d27e28896d355a97abf3cc02a9dcac2a4afe0299ee0ad1160ce689ba27b47a1",
+    "privateReportSHA256": "a12cc0e89dca3a72ec03f3e90bdc704b0480622c3b159408b8aff79ca29865ca",
+    "scope": "Temporary actual nodes/modes/content preservation, inert identity/stat/dpkg/check/job providers and actual emitted guards/canonical archive helper. Simulated root only; no real dpkg/device/native initialization/network/authority acceptance."
+  },
+  "counterfactual": {
+    "status": "FAIL_EXPECTED",
+    "oldParserNewTests": 4,
+    "emittedShellExecutions": 54,
+    "failures": 48,
+    "errors": 0,
+    "sourceStable": true,
+    "privateLogSHA256": "ae58bd75b2f841b1d0b96116abec5194078c52d800c655238a6a1f4f0ce43f34",
+    "scope": "Current new regression fixtures against unchanged previous parser, before production correction; tests demonstrate previously accepted malformed/status/duplicate inputs. No device/native execution."
+  },
+  "productionComposition": {
+    "status": "PASS",
+    "version": "3.1.0-1+socialbox.customer.1",
+    "architectures": [
+      "arm64",
+      "arm64e"
+    ],
+    "sourceStable": true,
+    "pythonInputs": 132,
+    "overlayInputs": 69,
+    "licenseSourceInputs": 45,
+    "sourceStabilityScope": "Producer before/after Python132, overlay69 and quoted native45 graphs; independently match current sources. SDK/Theos/compiler/OS/public-pin input excluded.",
+    "configurationHeaderCount": 1,
+    "configurationHeaderSHA256": "e1d5e2c1c7f1f024396b7b4760823123801493af72db78d00d001772bdd8be93",
+    "configurationHeaderScope": "One generated header digest reported after native build; matches expected manager header text. Temporary file removed by builder, no independent same-file reobservation or frozen64-file graph.",
+    "payloadFiles": 56,
+    "preservedOriginalPrograms": 15,
+    "originalBytesIncludingSignaturesUnchanged": true,
+    "canonicalControlsAndPayloadModesMatch": true,
+    "testProvidersAbsent": true,
+    "packageSHA256": "afb0dea86e04f3e84aa2a225e96d1f9642966b1f24839b4deb12f8853e0ab1b8",
+    "licenseServiceSHA256": "c174e09807228e6229e29b662dc1516a256281a5845809538f4710677fafea7a",
+    "installerSHA256": "d016cd450e8587e9a2243a1a052883c3c4f815d349fca9bd2cf9703058fe3919",
+    "privateBuildReportSHA256": "9db87a7b2b2be39b70bed08574b35df975e7e4230efc69bb4d9cbb499b7a785c",
+    "privateCompositionReportSHA256": "8ea3497836372e9727759258255ab87a9a1b18f6afa4c18e624eb4d051c6acfa",
+    "controlsExecuted": false,
+    "installed": false,
+    "freshInstallReady": false,
+    "customerDeliveryReady": false,
+    "actualDefaultEndpointAndLockedPage": "NOT_RUN",
+    "customerInstallation": "NOT_RUN"
+  },
+  "firstProvisioningReview": {
+    "status": "REVIEW_COMPLETE_NOT_IMPLEMENTED",
+    "proposedBoundary": "Separately invoked fixed-profile post-unpack coordinator: read-only exact role/profile/package/payload/parents checks, then typed authenticated external first-provisioning authorization durably consumed, then fixed prepare once and check. Unknown/failure preserves exact effects; ordinary lifecycle remains check-only.",
+    "missingInputs": [
+      "Independent issuer/verifier identity and trust policy",
+      "Target/prior-history binding",
+      "Durable one-shot consumption/history backend outside five replaceable source nodes"
+    ],
+    "notAuthority": [
+      "Root intent/command",
+      "Successful package inventory",
+      "License installation UUID",
+      "Absent or completely lost source anchors",
+      "Caller Boolean/dictionary/self-issued token"
+    ],
+    "implementation": "No production issuer/consumer/coordinator acceptance added; do not fabricate a grant from currently available observations.",
+    "requiredPhysicalAcceptance": "A genuinely fresh jailbreak test target is required; owner phone already has manager history. User question pending; no new question should be repeated without changed information."
+  },
+  "device": {
+    "status": "NOT_RUN",
+    "effectsPerformed": false,
+    "newLicenseIssued": false,
+    "ownerProgramsOrAccountsChanged": false
+  },
+  "retainedAttempts": {
+    "attempt01": "PASS24/258 frozen inputs before review found historical fixture prior-version now refused too early. Retained as narrower evidence, not final corrected-history acceptance. Valid3.0-1/matching qualifiers/migration reasons and positive matching manager qualifier added; final attempt02 passes25/278.",
+    "verifierAttempt01": "FAIL private verifier compared integer archive modes with octal report strings and treated original_programs list as count. Corrected strict conversion and exact list/hash checks; unchanged successful artifact independently verified.",
+    "reportScopeCorrection": "Final private testScope initially under-described canonical-control/archive/input checks as customer_scripts/candidate_scope only. Original report retained; metadata corrected to actual suite scope without rerunning tests or changing source/artifact."
+  },
+  "limits": [
+    "External trusted first-preparation authority/transaction not implemented",
+    "No actual default activation, package install, current owner update, client download/code or website/APT publication",
+    "No automatic safe runtime isolation/switching/recovery or running-session licensing acceptance",
+    "Earlier Instagram sibling normal/direct read FAIL remains unfixed; Facebook launch FAIL and Twitter runtime unaccepted",
+    "Actual two-account/proxy acceptance NOT_RUN"
+  ],
+  "primaryReferences": [
+    {
+      "title": "dpkg package-state words",
+      "url": "https://manpages.debian.org/bookworm/dpkg/dpkg.1.en.html"
+    },
+    {
+      "title": "dpkg-query fields, qualifiers and exit status",
+      "url": "https://manpages.debian.org/bookworm/dpkg/dpkg-query.1.en.html"
+    }
+  ],
+  "next": "Define independently trusted target/history issuer and durable one-shot consumer outside routine lifecycle; accept exact normal endpoint/locked page/package on a real fresh target before client release. Continue bounded local work without inventing authority or resetting owner state.",
+  "sourceSHA256": {
+    "scripts/build-socialbox-customer-candidate.py": "cd5d7eaceb39b54b1624902de8059ce1b88883c1ed688fc60e2b0bc20642126c",
+    "tools/test_socialbox_customer_installation.py": "ce8171f2ae80769cbc55c0aaf9cee76bf30791d370da8c9fe35179f5c4ea61af"
+  },
+  "independentReview": {
+    "status": "PASS_WITH_LIMITS",
+    "scope": "Read-only parser/fixtures and exact logs/manifests/build/composition review. Valid history fixtures exercise migration rule, matching incoming qualifier remains positive; all132 before/after hashes and production inputs match. No concrete code defect. Report scope metadata corrected separately; no new execution or device action."
+  }
+}

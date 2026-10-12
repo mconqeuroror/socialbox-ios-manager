@@ -1,0 +1,50 @@
+{
+  "version": "0.1.16",
+  "packageSHA256": "591e706353ac3e8efcd3768b49ad656093dd468be764beaf68bdfb1d6a669fa0",
+  "deviceProduct": "iPhone10,4",
+  "iOS": "16.7.16",
+  "sourceIPA_SHA256": "2cdaab3bd8bd0238660ea23b566b7bd7713121d996032bbc045d4066d2233e8a",
+  "facebookSourceImport": {
+    "ok": true,
+    "message": "Source imported. Facebook remains inactive until its binary and lifecycle audit passes."
+  },
+  "facebookCloneLifecycle": "NOT_RUN: registry inactive",
+  "facebookLoginBrowsePostShare": "NOT_RUN",
+  "rootfulDevice": "NOT_RUN",
+  "twoCloneIsolation": "NOT_RUN",
+  "MDMRouting": "NOT_CONFIGURED",
+  "inactiveCreateDenied": true,
+  "inactiveCreateMessage": "Facebook is coming soon. Import its own decrypted source first; clone creation and launch remain disabled until its binary and lifecycle audit passes.",
+  "networkState": "closed",
+  "licenseActive": true,
+  "recoveryRequired": false,
+  "sources": {
+    "facebook": {
+      "build": "1063022819",
+      "decrypted": true,
+      "found": 1,
+      "location": "private-cache",
+      "message": "Decrypted Facebook source ready",
+      "version": "578.1.0"
+    },
+    "reddit": {
+      "build": "664762",
+      "decrypted": true,
+      "found": 1,
+      "location": "private-cache",
+      "message": "Decrypted Reddit source ready",
+      "version": "2026.36.0"
+    }
+  },
+  "existingContainerIDsPreserved": true,
+  "existingIdentityFieldsPreserved": true,
+  "redditSourceInfoAndExecutableUnchanged": true,
+  "installedCodeMatchesPackage": [
+    "var/jb/Applications/RedditBox.app/RedditBox",
+    "var/jb/Library/MobileSubstrate/DynamicLibraries/RedditBox.dylib",
+    "var/jb/usr/bin/redditboxd"
+  ],
+  "sourceCommit": "a336fd0",
+  "recordedAtUTC": "2026-09-13T22:23:08.140101+00:00",
+  "scope": "Local rootless candidate; Facebook execution inactive; no production publication."
+}

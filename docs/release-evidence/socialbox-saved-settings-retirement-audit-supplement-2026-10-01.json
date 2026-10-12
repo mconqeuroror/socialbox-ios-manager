@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "kind": "published-commit-missing-audit-trailer-supplement",
+  "unit": 30,
+  "sourceCommit": "954a52a73120988354416a0193e4e06f594add9b",
+  "parentCommit": "ec7ff4c46d7b9041540e3173087a567a96465bb1",
+  "tree": "aeeab774555c6e65dca8508aee996e248a3b7af6",
+  "rawCommitSHA256": "9d681a47677fda08264aa783bced80dcdbed5597d80a8413eba20591db68927b",
+  "originalMessageSHA256": "13b3aa87180d426718ca5211098dda6d262fe4f40149654c53a839b0d888b9db",
+  "messageHashEncoding": "Exact raw git cat-file commit bytes after the first header separator, including final LF.",
+  "originalReceiptSHA256": "c0260ab41f85ad0496ee043ee8c2f8bf32e555c42ac1565fa4c02e6f99e9aeb4",
+  "originalPrivateSnapshot": "be8863c3c6eccbd2fbd8254097a4df34ab6f12a4",
+  "trailerStatus": "MISSING",
+  "requiredDeclaration": "Leak-Surface: ADOPT-010, ADOPT-012",
+  "supplementalMapping": [
+    {
+      "path": "lucid/Containers/LBXContainerRootMutationCoordinator.h",
+      "sourceSHA256": "9ac8a4b7efe1d0e981b0771d36ca762b615521c1666adb7e6635495f9c13440f",
+      "ownCommitEvidence": [
+        {
+          "rowID": "ADOPT-012",
+          "ledger": "docs/leak-surface/recovered-adoption-inventory.json",
+          "line": 1,
+          "anchor": null,
+          "detail": "Unit16 exact source-owned saved-settings frontend/build/test boundary; evidence remains metadata/licensing only with runtime and customer installation unaccepted."
+        }
+      ]
+    },
+    {
+      "path": "lucid/Containers/LBXContainerRootMutationCoordinator.m",
+      "sourceSHA256": "7f2820da59654fbcb01568a31bf60510adff327677f2a62fe52063c0a3a3ecf1",
+      "ownCommitEvidence": [
+        {
+          "rowID": "ADOPT-012",
+          "ledger": "docs/leak-surface/recovered-adoption-inventory.json",
+          "line": 1,
+          "anchor": null,
+          "detail": "Unit16 exact source-owned saved-settings frontend/build/test boundary; evidence remains metadata/licensing only with runtime and customer installation unaccepted."
+        }
+      ]
+    },
+    {
+      "path": "lucid/Presentation/SBSavedContainerSetup.m",
+      "sourceSHA256": "23a5fe90b6787fbdba4153009864f7494c7267c102dfef89f6ed37b4c513927d",
+      "ownCommitEvidence": [
+        {
+          "rowID": "ADOPT-010",
+          "ledger": "docs/leak-surface/recovered-adoption-inventory.json",
+          "line": 1,
+          "anchor": null,
+          "detail": "Bounded metadata UI/recovery, frozen host/UIKit/production compilation and physical role-denial evidence; no accepted current owner creation flow or runtime/client release."
+        },
+        {
+          "rowID": "ADOPT-012",
+          "ledger": "docs/leak-surface/recovered-adoption-inventory.json",
+          "line": 1,
+          "anchor": null,
+          "detail": "Unit16 exact source-owned saved-settings frontend/build/test boundary; evidence remains metadata/licensing only with runtime and customer installation unaccepted."
+        }
+      ]
+    }
+  ],
+  "historicalGate": "FAIL",
+  "historicalGateBase": "79cc247b38bd6006a2c62a96d5b8e7af91bc19ab",
+  "reason": "Root omitted the required commit trailer and exported before awaiting the post-commit gate. Code acceptance does not satisfy this governance requirement.",
+  "handling": "Preserve immutable published source and mirror history. Document the own-commit row mapping only. The checker, original commit and historical FAIL are unchanged; this supplement cannot make that gate pass.",
+  "laterValidation": "A gate beginning at this commit checks only later commits and excludes the known omission; it must never be described as a repaired full-history gate.",
+  "deviceEffects": "NOT_RUN",
+  "clientDeliveryReady": false
+}

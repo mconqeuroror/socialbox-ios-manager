@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-09-29",
+  "scope": "SocialBox-owned signed license transport and production installation binding; not retained-engine admission",
+  "productionOrigin": "https://redditspoof.vercel.app",
+  "serverCommit": "98c1baf",
+  "deployment": "https://redditspoof-ew94nuzn4-modelclone.vercel.app",
+  "stagingAndProductionPrivateRoutes": "PASS",
+  "existingAPTMetadataFilesUnchanged": 16,
+  "publicationLockReleased": true,
+  "publicAppRelease": false,
+  "build": {
+    "schemaVersion": 1,
+    "kind": "standalone-license-acceptance",
+    "keyId": "b2c5d4176c727107c9826ad69386d4d65f90920074981bd842127d6b22add6e9",
+    "architectures": [
+      "arm64",
+      "arm64e"
+    ],
+    "minimumIOS": "15.0",
+    "sha256": "a5d0c7e1274775de2ef330d5c128122100e7e04122e0d7e2dc1fed5b49df7bbb",
+    "sourceSHA256": {
+      "lucid/Authorization/Probe.m": "69b6758500f91898269b2c68d9197f14d135f9f84196b3e0b3b7ad912887f3a9",
+      "lucid/Authorization/LBXLicenseTransport.m": "40999576d5d20030ecb50631e4ba69d333de79c2119867923975691147acf35a",
+      "lucid/Authorization/LBXLicenseExchange.m": "18800c7b454e0ef69e38b02b44853addd46e694327cc012db34020fbb6491b19",
+      "daemon/RBXLicenseToken.m": "e3f00d563c99a47400d22b31b152ec4d2ab6123505b9aaa0f2d2d787f13d55da"
+    },
+    "entitlements": {},
+    "retainedEngineIntegration": false,
+    "deviceExecution": "NOT_RUN",
+    "credentialsInReport": false
+  },
+  "physicalDeviceExecution": "PASS (arm64 slice; arm64e execution NOT_RUN)",
+  "productionClientResults": [
+    {
+      "mode": "claim",
+      "result": "active",
+      "errorCode": null,
+      "activeAtReceipt": true,
+      "retainedEngineAuthorized": false,
+      "privateResultSHA256": "20c3be636cc8aeb59feed58f3ff23b7be38e6c2b22d0efc0d4f0b336aacee955",
+      "nativePhysicalDevice": true,
+      "scope": "standalone source-owned client on the first physical phone"
+    },
+    {
+      "mode": "validate",
+      "result": "active",
+      "errorCode": null,
+      "activeAtReceipt": true,
+      "retainedEngineAuthorized": false,
+      "privateResultSHA256": "81ad68ce9dd64d2e1fff832596eb516ecb3c989861f51baa63cad1d15a3d93e3",
+      "nativePhysicalDevice": true,
+      "scope": "standalone source-owned client on the first physical phone"
+    },
+    {
+      "mode": "copied",
+      "result": "rejected",
+      "errorCode": 409,
+      "activeAtReceipt": false,
+      "retainedEngineAuthorized": false,
+      "privateResultSHA256": "af4374fdda007b66ec431d7097f39131ebe8614c0f05b4d9de71cf6fc6e734bf",
+      "nativePhysicalDevice": true,
+      "scope": "standalone source-owned client on the first physical phone"
+    },
+    {
+      "mode": "second",
+      "result": "rejected",
+      "errorCode": 409,
+      "activeAtReceipt": false,
+      "retainedEngineAuthorized": false,
+      "privateResultSHA256": "af4374fdda007b66ec431d7097f39131ebe8614c0f05b4d9de71cf6fc6e734bf",
+      "nativePhysicalDevice": true,
+      "scope": "distinct installation UUID on the first physical phone"
+    },
+    {
+      "mode": "validate",
+      "result": "active",
+      "errorCode": null,
+      "activeAtReceipt": true,
+      "retainedEngineAuthorized": false,
+      "privateResultSHA256": "0c43f81102fe23934f19589d8b75e7c3ff9d7905ddd39932861229490a4d4b6b",
+      "nativePhysicalDevice": true,
+      "scope": "standalone source-owned client on the first physical phone"
+    },
+    {
+      "mode": "revoked",
+      "result": "revoked",
+      "errorCode": null,
+      "activeAtReceipt": false,
+      "retainedEngineAuthorized": false,
+      "privateResultSHA256": "d67a1e2325614f49058103cfe9bb91dc0f1c99d3c1d53cf7c7bc1fa217266c1d",
+      "nativePhysicalDevice": true,
+      "scope": "standalone source-owned client on the first physical phone"
+    }
+  ],
+  "testKeyCleanup": {
+    "status": "revoked",
+    "otherLicenses": "unchanged",
+    "users": "unchanged",
+    "pairedDevices": "unchanged",
+    "method": "existing CAS-backed revokeLicense service with audit; browser confirmation control was unavailable"
+  },
+  "checks": {
+    "cloudDeviceLicenseGroups": 23,
+    "cloudFullSuite": "PASS",
+    "cloudProductionBuild": "PASS",
+    "licenseExchangeAssertions": 109,
+    "licenseTransportAssertions": 110
+  },
+  "notRun": [
+    "Same active key on a second physical phone",
+    "Retained app activation using the source-owned client",
+    "Retained daemon and injected-engine signed grant enforcement",
+    "Durable credential migration, restart and offline lease integration"
+  ],
+  "limits": [
+    "Installation UUID and credential binding is not hardware attestation. Copying all private credentials is outside this proof.",
+    "Signed denial is demonstrated in the standalone client. It does not establish termination of an already running retained engine.",
+    "Production policy permits offline cached access for up to 72 hours in integrated consumers; this client has no offline cache.",
+    "Lost initial claim response requires explicit recovery; the server does not reissue the bearer to a naked key plus UUID."
+  ],
+  "credentialsIncluded": false
+}

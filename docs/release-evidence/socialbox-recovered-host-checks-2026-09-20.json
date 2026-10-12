@@ -1,0 +1,856 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-09-20",
+  "branch": "feat/lucid-base",
+  "baseline": "68d02a5",
+  "scope": "Existing SocialBox code regression. These are not recovered Doritos runtime results.",
+  "status": "PASS",
+  "checks": [
+    {
+      "test": "tools/static_check.py",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.23
+    },
+    {
+      "test": "tools/test_build_version.py",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.09
+    },
+    {
+      "test": "tools/test_package_variants.py",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.14
+    },
+    {
+      "test": "tools/test_apt_release.py",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 1.5
+    },
+    {
+      "test": "tools/test_facebook_binary_audit.py",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.13
+    },
+    {
+      "test": "tools/test_app_bundle_policy.sh",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.76
+    },
+    {
+      "test": "tools/test_app_runtime.sh",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 1.1
+    },
+    {
+      "test": "tools/test_facebook_user_agent.py",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.68
+    },
+    {
+      "test": "tools/test_facebook_user_agent_hooks.py",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 1.54
+    },
+    {
+      "test": "tools/test_facebook_storage_policy.sh",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.67
+    },
+    {
+      "test": "tools/test_facebook_private_group_store.sh",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.62
+    },
+    {
+      "test": "tools/test_facebook_storage_hooks.py",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 1.82,
+      "configuredEnvironment": true
+    },
+    {
+      "test": "tools/test_app_profile.py",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 1.44
+    },
+    {
+      "test": "tools/test_clone_profile_ownership.py",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.89
+    },
+    {
+      "test": "tools/test_app_registry.sh",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 1.31
+    },
+    {
+      "test": "tools/test_workspace_selection.sh",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.64
+    },
+    {
+      "test": "tools/test_workspace_dispatch.py",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.7
+    },
+    {
+      "test": "tools/test_app_keychain_policy.sh",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.64
+    },
+    {
+      "test": "tools/test_app_keychain_hooks.sh",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.68
+    },
+    {
+      "test": "tools/test_app_keychain_entitlements.sh",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.63
+    },
+    {
+      "test": "tools/test_app_process.sh",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.83
+    },
+    {
+      "test": "tools/test_app_process_coordinator.sh",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.77
+    },
+    {
+      "test": "tools/test_app_source.py",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.82
+    },
+    {
+      "test": "tools/test_app_mdm.sh",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 1.81
+    },
+    {
+      "test": "tools/test_app_scope.sh",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 1.5
+    },
+    {
+      "test": "tools/test_launcher_multiapp.py",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.03
+    },
+    {
+      "test": "tools/test_workspace_presentation.py",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.7
+    },
+    {
+      "test": "tools/test_settings_presentation.py",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.67
+    },
+    {
+      "test": "tools/test_apt_metadata_refresh.py",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.38
+    },
+    {
+      "test": "tools/test_clone_architecture.py",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.04
+    },
+    {
+      "test": "tools/test_identity_editor.py",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.03
+    },
+    {
+      "test": "tools/test_location_screen.sh",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.64
+    },
+    {
+      "test": "tools/test_clone_visibility_metadata.py",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 1.55
+    },
+    {
+      "test": "tools/test_installer_evidence.py",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.72
+    },
+    {
+      "test": "tools/test_app_install_recovery.py",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 1.02
+    },
+    {
+      "test": "tools/test_app_removal_identity.py",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.74
+    },
+    {
+      "test": "tools/test_app_deletion_flow.py",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 1.11
+    },
+    {
+      "test": "tools/test_app_deletion_targets.py",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.8,
+      "configuredEnvironment": true
+    },
+    {
+      "test": "tools/test_app_deletion_closure.py",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.72
+    },
+    {
+      "test": "tools/test_app_launch_flow.py",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 1.16
+    },
+    {
+      "test": "tools/test_app_gate_control.py",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 1.31
+    },
+    {
+      "test": "tools/test_clone_gate_writer.py",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.68
+    },
+    {
+      "test": "tools/test_app_gate_readiness.py",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 2.71
+    },
+    {
+      "test": "tools/test_app_global_recovery.py",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 1.63
+    },
+    {
+      "test": "tools/test_app_maintenance_closure.py",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.68
+    },
+    {
+      "test": "tools/test_app_replacement_backend.py",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.93
+    },
+    {
+      "test": "tools/test_identity_manual_inputs.py",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 2.09
+    },
+    {
+      "test": "tools/test_automatic_identity.py",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 2.27
+    },
+    {
+      "test": "tools/test_creation_prepare.py",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 1.77
+    },
+    {
+      "test": "tools/test_creation_dispatch.py",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.73
+    },
+    {
+      "test": "tools/test_creation_source_binding.py",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.66
+    },
+    {
+      "test": "tools/test_creation_draft_store.sh",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.65
+    },
+    {
+      "test": "tools/test_passcode_removal.py",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.72
+    },
+    {
+      "test": "tools/test_passcode_store.sh",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.67
+    },
+    {
+      "test": "tools/test_identity_user_agent.py",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 2.16
+    },
+    {
+      "test": "tools/test_app_version_settings.py",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.65
+    },
+    {
+      "test": "tools/test_creation_defaults.py",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.66
+    },
+    {
+      "test": "tools/test_device_catalog_data.py",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.04
+    },
+    {
+      "test": "tools/test_device_version_hook.py",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.64
+    },
+    {
+      "test": "tools/test_sensor_startup.py",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.63
+    },
+    {
+      "test": "tools/test_clone_support_directory.py",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.63
+    },
+    {
+      "test": "tools/test_storage_gate.sh",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 2.75
+    },
+    {
+      "test": "tools/test_storage_access.sh",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 3.97
+    },
+    {
+      "test": "tools/test_staged_executable.sh",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.6
+    },
+    {
+      "test": "tools/test_identity_choices.py",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 6.19
+    },
+    {
+      "test": "tools/test_launcher_architecture.py",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.03
+    },
+    {
+      "test": "tests/test_replacement_architecture.py",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.03
+    },
+    {
+      "test": "tools/test_firewall_policy.sh",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 1.76
+    },
+    {
+      "test": "tools/test_pf_policy_plan.sh",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 1.08
+    },
+    {
+      "test": "tools/test_request_queue.sh",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.99
+    },
+    {
+      "test": "tools/test_secure_config.sh",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.8
+    },
+    {
+      "test": "tools/test_identity_draft_store.sh",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.86
+    },
+    {
+      "test": "tools/test_cloud_vault_store.sh",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.68
+    },
+    {
+      "test": "tools/test_cloud_vault_bridge.py",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.75
+    },
+    {
+      "test": "tools/test_cloud_app_admission.py",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.67
+    },
+    {
+      "test": "tools/test_cloud_assignment_closure.py",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.66
+    },
+    {
+      "test": "tools/test_preinstall.py",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.13
+    },
+    {
+      "test": "tools/test_postinstall.py",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.05
+    },
+    {
+      "test": "tools/test_macho_probe.py",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.67
+    },
+    {
+      "test": "tools/test_request_budgets.py",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.67
+    },
+    {
+      "test": "tools/test_proxy_library.sh",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 1.06
+    },
+    {
+      "test": "tools/test_proxy_import.sh",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 1.08
+    },
+    {
+      "test": "tools/test_proxy_configuration.py",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.84
+    },
+    {
+      "test": "tools/test_proxy_redirect_policy.py",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 1.45
+    },
+    {
+      "test": "tools/test_proxy_region.sh",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 1.01
+    },
+    {
+      "test": "tools/test_proxy_region_transport.py",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 1.18
+    },
+    {
+      "test": "tools/test_rotation_secrets.sh",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.83
+    },
+    {
+      "test": "tools/test_backup_snapshot.sh",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.68
+    },
+    {
+      "test": "tools/test_backup_identity.py",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.92
+    },
+    {
+      "test": "tools/test_app_backup_flow.py",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.93
+    },
+    {
+      "test": "tools/test_app_backup_transaction.py",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 1.03
+    },
+    {
+      "test": "tools/test_backup_restore_cleanup.py",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.93
+    },
+    {
+      "test": "tools/test_backup_archive.py",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.79,
+      "configuredEnvironment": true
+    },
+    {
+      "test": "tools/test_identity_freeze.py",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.9
+    },
+    {
+      "test": "tools/test_smoke_log_order.py",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.06
+    },
+    {
+      "test": "tools/test_sign_firewall_app.py",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.09
+    },
+    {
+      "test": "tools/test_keychain_cleaner.sh",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.8
+    },
+    {
+      "test": "tools/test_keychain_sync.sh",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.68
+    },
+    {
+      "test": "tools/test_clone_acceptance.sh",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.77
+    },
+    {
+      "test": "tools/test_isolation_sentinel.sh",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.72
+    },
+    {
+      "test": "tools/test_launch_safety.sh",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.73
+    },
+    {
+      "test": "tools/test_proxy_route_transport.py",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 1.56
+    },
+    {
+      "test": "tools/test_acceptance_checks.sh",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 1.61
+    },
+    {
+      "test": "tools/test_operator_wording.sh",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.7
+    },
+    {
+      "test": "tools/test_wizard_draft.sh",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.63
+    },
+    {
+      "test": "tools/test_device_acceptance_ssh.py",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 1.07
+    },
+    {
+      "test": "tools/test_device_acceptance_canaries.py",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.1
+    },
+    {
+      "test": "tools/test_deletion_journal.sh",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.99
+    },
+    {
+      "test": "tools/test_profile_metadata.sh",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.7
+    },
+    {
+      "test": "tools/test_profile_rename.py",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.76
+    },
+    {
+      "test": "tests/test_replacement.sh",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.71
+    },
+    {
+      "test": "tools/test_profile_metadata.py",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.03
+    },
+    {
+      "test": "tools/test_account_status_browser.py",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.03
+    },
+    {
+      "test": "tools/test_license_key.py",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.57
+    },
+    {
+      "test": "tools/test_license_screen.py",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.69
+    },
+    {
+      "test": "tools/test_license_presentation.py",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.42
+    },
+    {
+      "test": "tools/test_license_presentation.sh",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.66
+    },
+    {
+      "test": "tests/test_license_token.sh",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 1.16
+    },
+    {
+      "test": "tests/test_license_architecture.py",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.03
+    },
+    {
+      "test": "tests/test_data_schema.sh",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 1.56
+    },
+    {
+      "test": "tests/test_data_schema_architecture.py",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.03
+    },
+    {
+      "test": "tools/test_update_startup.py",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.03
+    },
+    {
+      "test": "tools/test_device_catalog.sh",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 3.04
+    },
+    {
+      "test": "tools/test_fingerprint_registry.sh",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.68
+    },
+    {
+      "test": "tools/test_operation_context.sh",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 3.09
+    },
+    {
+      "test": "tools/test_memory_budget.sh",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.4
+    },
+    {
+      "test": "tools/test_request_deadlines.sh",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 3.29
+    },
+    {
+      "test": "tools/test_bounded_process.sh",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 6.82
+    },
+    {
+      "test": "tools/test_service_lifetime.sh",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 2.18
+    },
+    {
+      "test": "tools/test_socket_guard.sh",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 1.07,
+      "configuredEnvironment": true
+    },
+    {
+      "test": "tools/test_exception_port_guard.sh",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.72
+    },
+    {
+      "test": "tools/test_hook_readiness.sh",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.78,
+      "configuredEnvironment": true
+    },
+    {
+      "test": "tools/test_optional_ios_hooks.py",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 1.58,
+      "configuredEnvironment": true
+    },
+    {
+      "test": "tools/test_http_proxy.sh",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 1.17
+    },
+    {
+      "test": "tools/test_reddit_payload.sh",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 1.44
+    },
+    {
+      "test": "tools/test_leak_audit.py",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.07
+    },
+    {
+      "test": "tools/test_leak_surface.py",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.73
+    },
+    {
+      "test": "tools/check_pasteboard_api.py",
+      "exitCode": 0,
+      "status": "PASS",
+      "seconds": 0.04
+    }
+  ],
+  "environmentNote": "Six initial attempts lacked THEOS/libarchive include configuration. All six were rerun successfully after loading the existing build-env.sh; no source change was needed for them.",
+  "newUnitChecks": {
+    "contextAdapterAssertions": 185,
+    "assessmentAssertions": 204,
+    "syntheticUIKitAssertions": 107,
+    "isolationSourceContractTests": 8,
+    "packagingBehavioralGroups": 23
+  },
+  "physicalDevice": "NOT_RUN",
+  "runtimeIsolatingObserverPort": "NOT_IMPLEMENTED",
+  "networkContainment": "NOT_RUN",
+  "sourceCommit": "af935f4a5d5c9bb578bb5cc3488792cf54651ccc"
+}

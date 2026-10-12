@@ -1,0 +1,159 @@
+{
+  "schemaVersion": 1,
+  "rows": [
+    {
+      "id": "FBUI-001",
+      "category": "Multi-app launcher",
+      "surface": "App-owned views, durable request ownership, source staging and MDM export namespace",
+      "mechanism": "Each controller captures a canonical descriptor; requests and profile views are app-scoped. Legacy Reddit preferences and MDM output are preserved. Inactive Facebook exposes source setup only. Device license, proxies and network fences remain shared. Visible-source archival remains Reddit-only until the daemon archival path is app-scoped.",
+      "coverage": [
+        "blocked"
+      ],
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "launcher/RBXAppScope.h",
+          "line": 1,
+          "detail": "App scope implementation or native/UI regression fixture."
+        },
+        {
+          "path": "launcher/RBXDiagnosticsViewController.h",
+          "line": 1,
+          "detail": "App scope implementation or native/UI regression fixture."
+        },
+        {
+          "path": "launcher/RBXDiagnosticsViewController.m",
+          "line": 1,
+          "detail": "App scope implementation or native/UI regression fixture."
+        },
+        {
+          "path": "launcher/RBXIdentityViewController.m",
+          "line": 1,
+          "detail": "App scope implementation or native/UI regression fixture."
+        },
+        {
+          "path": "launcher/RBXIsolationViewController.h",
+          "line": 1,
+          "detail": "App scope implementation or native/UI regression fixture."
+        },
+        {
+          "path": "launcher/RBXIsolationViewController.m",
+          "line": 1,
+          "detail": "App scope implementation or native/UI regression fixture."
+        },
+        {
+          "path": "launcher/RBXLauncherAppDelegate.m",
+          "line": 1,
+          "detail": "App scope implementation or native/UI regression fixture."
+        },
+        {
+          "path": "launcher/RBXLauncherIPC.h",
+          "line": 1,
+          "detail": "App scope implementation or native/UI regression fixture."
+        },
+        {
+          "path": "launcher/RBXLauncherIPC.m",
+          "line": 1,
+          "detail": "App scope implementation or native/UI regression fixture."
+        },
+        {
+          "path": "launcher/RBXLauncherViewController.h",
+          "line": 1,
+          "detail": "App scope implementation or native/UI regression fixture."
+        },
+        {
+          "path": "launcher/RBXLauncherViewController.m",
+          "line": 1,
+          "detail": "App scope implementation or native/UI regression fixture."
+        },
+        {
+          "path": "launcher/RBXLicenseViewController.h",
+          "line": 1,
+          "detail": "App scope implementation or native/UI regression fixture."
+        },
+        {
+          "path": "launcher/RBXLicenseViewController.m",
+          "line": 1,
+          "detail": "App scope implementation or native/UI regression fixture."
+        },
+        {
+          "path": "launcher/RBXMDMExporter.m",
+          "line": 1,
+          "detail": "App scope implementation or native/UI regression fixture."
+        },
+        {
+          "path": "launcher/RBXProxiesViewController.h",
+          "line": 1,
+          "detail": "App scope implementation or native/UI regression fixture."
+        },
+        {
+          "path": "launcher/RBXProxiesViewController.m",
+          "line": 1,
+          "detail": "App scope implementation or native/UI regression fixture."
+        },
+        {
+          "path": "launcher/RBXSettingsViewController.h",
+          "line": 1,
+          "detail": "App scope implementation or native/UI regression fixture."
+        },
+        {
+          "path": "launcher/RBXSettingsViewController.m",
+          "line": 1,
+          "detail": "App scope implementation or native/UI regression fixture."
+        },
+        {
+          "path": "launcher/RBXSimpleWizardViewController.h",
+          "line": 1,
+          "detail": "App scope implementation or native/UI regression fixture."
+        },
+        {
+          "path": "launcher/RBXSimpleWizardViewController.m",
+          "line": 1,
+          "detail": "App scope implementation or native/UI regression fixture."
+        },
+        {
+          "path": "tools/test_app_mdm.m",
+          "line": 1,
+          "detail": "App scope implementation or native/UI regression fixture."
+        },
+        {
+          "path": "tools/test_app_mdm.sh",
+          "line": 1,
+          "detail": "App scope implementation or native/UI regression fixture."
+        },
+        {
+          "path": "tools/test_app_scope.m",
+          "line": 1,
+          "detail": "App scope implementation or native/UI regression fixture."
+        },
+        {
+          "path": "tools/test_app_scope.sh",
+          "line": 1,
+          "detail": "App scope implementation or native/UI regression fixture."
+        },
+        {
+          "path": "tools/test_app_ipc.m",
+          "line": 1,
+          "detail": "App scope implementation or native/UI regression fixture."
+        },
+        {
+          "path": "tools/test_launcher_multiapp.py",
+          "line": 1,
+          "detail": "App scope implementation or native/UI regression fixture."
+        },
+        {
+          "path": "tools/test_launcher_selector_fixture.m",
+          "line": 1,
+          "detail": "App scope implementation or native/UI regression fixture."
+        },
+        {
+          "path": "tools/test_launcher_selector_simulator.py",
+          "line": 1,
+          "detail": "App scope implementation or native/UI regression fixture."
+        }
+      ],
+      "verification": "Actual typed IPC and MDM exporter fixtures, scoped-state tests, launcher syntax checks and UIKit selector fixtures with both inactive and test-only active Facebook registry. This does not establish Facebook device lifecycle, login or MDM route acceptance.",
+      "fix": "Keep Facebook execution disabled until its shared-keychain boundary and full daemon lifecycle/device routing are verified; complete FB-003\u2013FB-014 and FBRUN-001."
+    }
+  ]
+}

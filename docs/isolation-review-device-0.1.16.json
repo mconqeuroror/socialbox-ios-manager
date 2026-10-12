@@ -1,0 +1,395 @@
+{
+  "schemaVersion": 1,
+  "revision": "f4837dbef0c62d942082085de02ffe2c99259d06",
+  "capturedAt": "2026-09-13T23:20:26.077440+00:00",
+  "completedAt": "2026-09-13T23:21:24.566486+00:00",
+  "checks": [
+    {
+      "status": "PASS",
+      "id": "publication",
+      "title": "Daemon publication",
+      "detail": "The daemon published state within ten seconds.",
+      "rows": [
+        "ACCEPT-001",
+        "NET-037"
+      ],
+      "evidence": "snapshot"
+    },
+    {
+      "status": "PASS",
+      "id": "license",
+      "title": "Device license",
+      "detail": "Current activation state and signed validity window; open License in Settings if locked.",
+      "rows": [
+        "ACCEPT-001"
+      ],
+      "evidence": "snapshot"
+    },
+    {
+      "status": "PASS",
+      "id": "configuration",
+      "title": "Proxy saved",
+      "detail": "Saved configuration only; a successful connection and country check require Test Configuration.",
+      "rows": [
+        "NET-038",
+        "ACCEPT-001"
+      ],
+      "evidence": "snapshot"
+    },
+    {
+      "status": "PASS",
+      "id": "source",
+      "title": "Reddit source imported",
+      "detail": "The published source validation result; this is not a login test.",
+      "rows": [
+        "LIFE-001",
+        "LIFE-002"
+      ],
+      "evidence": "snapshot"
+    },
+    {
+      "status": "NOT_RUN",
+      "id": "lease-state",
+      "title": "Published lease is OPEN",
+      "detail": "CLOSED is expected during setup. OPEN alone does not prove packet routing or current hook receipts.",
+      "rows": [
+        "LIFE-021",
+        "NET-036"
+      ],
+      "evidence": "snapshot"
+    },
+    {
+      "status": "NOT_RUN",
+      "id": "reported-data-schema",
+      "title": "Startup recovery",
+      "detail": "Run diagnostics now; no recent recorded inspection is available.",
+      "rows": [
+        "LIFE-030"
+      ],
+      "evidence": "daemon-report"
+    },
+    {
+      "status": "NOT_RUN",
+      "id": "reported-clone-tools",
+      "title": "Clone tools installed",
+      "detail": "Run diagnostics now; no recent recorded inspection is available.",
+      "rows": [
+        "LIFE-010"
+      ],
+      "evidence": "daemon-report"
+    },
+    {
+      "status": "NOT_RUN",
+      "id": "reported-heartbeat",
+      "title": "Recorded safety heartbeats",
+      "detail": "Run diagnostics now; no recent recorded inspection is available.",
+      "rows": [
+        "NET-036"
+      ],
+      "evidence": "daemon-report"
+    },
+    {
+      "status": "NOT_RUN",
+      "id": "reported-lease",
+      "title": "Recorded lease/firewall agreement",
+      "detail": "Run diagnostics now; no recent recorded inspection is available.",
+      "rows": [
+        "NET-036",
+        "LIFE-021"
+      ],
+      "evidence": "daemon-report"
+    },
+    {
+      "status": "NOT_RUN",
+      "id": "reported-firewall",
+      "title": "Recorded provider enforcement",
+      "detail": "Run diagnostics now; no recent recorded inspection is available.",
+      "rows": [
+        "NET-034"
+      ],
+      "evidence": "daemon-report"
+    },
+    {
+      "status": "NOT_RUN",
+      "id": "reported-vpn-scope",
+      "title": "Recorded per-app VPN scope",
+      "detail": "Run diagnostics now; no recent recorded inspection is available.",
+      "rows": [
+        "NET-034"
+      ],
+      "evidence": "daemon-report"
+    },
+    {
+      "status": "NOT_RUN",
+      "id": "reported-clones",
+      "title": "Recorded clone validation",
+      "detail": "Run diagnostics now; no recent recorded inspection is available.",
+      "rows": [
+        "LIFE-005",
+        "LIFE-021"
+      ],
+      "evidence": "daemon-report"
+    },
+    {
+      "status": "NOT_RUN",
+      "id": "reported-hooks",
+      "title": "Recorded hook groups and behavior checks",
+      "detail": "Run diagnostics now; no recent recorded inspection is available.",
+      "rows": [
+        "NET-037",
+        "LIFE-021"
+      ],
+      "evidence": "daemon-report"
+    },
+    {
+      "status": "NOT_RUN",
+      "id": "reported-operation-recovery",
+      "title": "Unfinished operation fence",
+      "detail": "Run diagnostics now; no recent recorded inspection is available.",
+      "rows": [
+        "LIFE-030"
+      ],
+      "evidence": "daemon-report"
+    },
+    {
+      "status": "NOT_RUN",
+      "id": "h02",
+      "title": "H02 memory budget and import survival",
+      "detail": "Separate device evidence is required; a readiness report cannot establish this result.",
+      "rows": [
+        "ACCEPT-003",
+        "LIFE-002"
+      ],
+      "evidence": "operator"
+    },
+    {
+      "status": "NOT_RUN",
+      "id": "keychain-canary",
+      "title": "A/B keychain access denial",
+      "detail": "Separate device evidence is required; a readiness report cannot establish this result.",
+      "rows": [
+        "OS-008",
+        "OS-009",
+        "OS-010"
+      ],
+      "evidence": "operator"
+    },
+    {
+      "status": "NOT_RUN",
+      "id": "sandbox-denial",
+      "title": "A/B foreign sandbox access denial",
+      "detail": "Separate device evidence is required; a readiness report cannot establish this result.",
+      "rows": [
+        "OS-033",
+        "OS-035"
+      ],
+      "evidence": "operator"
+    },
+    {
+      "status": "NOT_RUN",
+      "id": "login-actions",
+      "title": "Login, post, upvote and A/B account state",
+      "detail": "Separate device evidence is required; a readiness report cannot establish this result.",
+      "rows": [
+        "AUDIT-001"
+      ],
+      "evidence": "operator"
+    },
+    {
+      "status": "NOT_RUN",
+      "id": "oauth-owner",
+      "title": "External login callback owner",
+      "detail": "Separate device evidence is required; a readiness report cannot establish this result.",
+      "rows": [
+        "LIFE-007",
+        "NET-032",
+        "NET-033"
+      ],
+      "evidence": "operator"
+    },
+    {
+      "status": "NOT_RUN",
+      "id": "packet-routing",
+      "title": "VPN assignment and disconnect behavior",
+      "detail": "Separate device evidence is required; a readiness report cannot establish this result.",
+      "rows": [
+        "NET-034",
+        "NET-036"
+      ],
+      "evidence": "operator"
+    },
+    {
+      "status": "NOT_RUN",
+      "id": "public-visibility",
+      "title": "Logged-out post visibility",
+      "detail": "Separate device evidence is required; a readiness report cannot establish this result.",
+      "rows": [
+        "AUDIT-001"
+      ],
+      "evidence": "operator"
+    },
+    {
+      "status": "NOT_RUN",
+      "id": "deletion",
+      "title": "B keychain and file cleanup after delete",
+      "detail": "Separate device evidence is required; a readiness report cannot establish this result.",
+      "rows": [
+        "LIFE-026",
+        "LIFE-027"
+      ],
+      "evidence": "operator"
+    },
+    {
+      "id": "daemon-process",
+      "title": "Daemon process",
+      "status": "PASS",
+      "detail": "One process is bound to the canonical installed daemon executable; this is a current snapshot.",
+      "rows": [
+        "ACCEPT-003",
+        "NET-037"
+      ],
+      "evidence": "mechanical"
+    },
+    {
+      "id": "h02-budget",
+      "title": "H02 budget",
+      "status": "NOT_RUN",
+      "detail": "GET-only kernel query: explicit active and inactive limits must both be at least 256 MiB; defaults/unlimited or denied queries need separate evidence.",
+      "rows": [
+        "ACCEPT-003",
+        "LIFE-002"
+      ],
+      "evidence": "mechanical"
+    },
+    {
+      "id": "live-lease-agreement",
+      "title": "Live lease agreement",
+      "status": "NOT_RUN",
+      "detail": "Both captured control files must agree and have fresh heartbeats; this is not a packet capture.",
+      "rows": [
+        "NET-036",
+        "LIFE-021"
+      ],
+      "evidence": "mechanical"
+    },
+    {
+      "id": "live-lease-open",
+      "title": "Live lease open",
+      "status": "NOT_RUN",
+      "detail": "OPEN is required for active-clone acceptance; CLOSED is expected during setup.",
+      "rows": [
+        "LIFE-021"
+      ],
+      "evidence": "mechanical"
+    },
+    {
+      "id": "live-provider",
+      "title": "Live provider",
+      "status": "NOT_RUN",
+      "detail": "Provider self-reports per-app enforcement. OS assignment and real traffic still need capture.",
+      "rows": [
+        "NET-034"
+      ],
+      "evidence": "mechanical"
+    },
+    {
+      "id": "A-keychain-sync-policy",
+      "title": "A keychain sync policy",
+      "status": "NOT_RUN",
+      "detail": "Default keychain sync behavior is unchanged; READY does not establish sync isolation.",
+      "rows": [
+        "OS-011"
+      ],
+      "evidence": "mechanical"
+    },
+    {
+      "id": "A-structure",
+      "title": "A structure",
+      "status": "PASS",
+      "detail": "Installed main bundle ID and one expected keychain group; shared/cloud/push/associated-domain entitlements absent. No claim about clone access denial.",
+      "rows": [
+        "ID-005",
+        "LIFE-005",
+        "OS-008",
+        "OS-026"
+      ],
+      "evidence": "mechanical"
+    },
+    {
+      "id": "A-removed-extensions",
+      "title": "A removed extensions",
+      "status": "PASS",
+      "detail": "PlugIns, Watch and AppClips are absent from the installed clone.",
+      "rows": [
+        "LIFE-006"
+      ],
+      "evidence": "mechanical"
+    },
+    {
+      "id": "A-data-container",
+      "title": "A data container",
+      "status": "PASS",
+      "detail": "One OS metadata record matches the selected clone bundle.",
+      "rows": [
+        "ID-005",
+        "OS-030"
+      ],
+      "evidence": "mechanical"
+    },
+    {
+      "id": "B-structure",
+      "title": "B structure",
+      "status": "NOT_RUN",
+      "detail": "Pass --a and --b with the actual container IDs.",
+      "rows": [
+        "ID-005",
+        "LIFE-005"
+      ],
+      "evidence": "mechanical"
+    },
+    {
+      "id": "capture-generation",
+      "title": "Capture generation",
+      "status": "NOT_RUN",
+      "detail": "Lease changed or final safety heartbeat was stale; rerun without switching.",
+      "rows": [
+        "NET-036",
+        "LIFE-021"
+      ],
+      "evidence": "mechanical"
+    },
+    {
+      "id": "temporary-observer-cleanup",
+      "title": "Temporary observer cleanup",
+      "status": "PASS",
+      "detail": "Temporary observer removed.",
+      "rows": [
+        "ACCEPT-002"
+      ],
+      "evidence": "mechanical"
+    }
+  ],
+  "scope": "Observed readiness/structure and optional fixed in-clone nonce probes only. No automatic post, vote, authentication or gate mutation.",
+  "remaining": "NOT_RUN is not PASS. Follow docs/device-acceptance-final.md.",
+  "installedPackageVersion": "0.1.16",
+  "installedCodeRevision": "a336fd0",
+  "deviceProduct": "iPhone10,4",
+  "iOS": "16.7.16",
+  "scheme": "rootless",
+  "collectorWorkingTreeNote": "The captured revision is the host checkout, not installed code. This capture includes rootless staging but predates the explicit JSON Boolean correction in f06c912; its NOT_RUN statuses are preserved. Final collector cannot be rerun until USB returns.",
+  "additionalNativeObservation": {
+    "activeMiB": 256,
+    "inactiveMiB": 256,
+    "kernelQuery": "GET only",
+    "resultNote": "Separate native helper emitted memoryRead=1 and exited 0. The later strict Boolean collector correction passed a compiled host fixture but was not yet rerun on this disconnected phone."
+  },
+  "notExecuted": [
+    "Two admitted running clones",
+    "A/B/A Keychain/filesystem canaries",
+    "Managed routing and packet capture",
+    "Facebook clone lifecycle",
+    "Account login/browse/post/share",
+    "30-50 container acceptance",
+    "Candidate 0.1.17 installation"
+  ]
+}

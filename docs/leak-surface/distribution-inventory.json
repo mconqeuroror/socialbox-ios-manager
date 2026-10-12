@@ -1,0 +1,139 @@
+{
+  "schemaVersion": 1,
+  "rows": [
+    {
+      "id": "DIST-001",
+      "category": "release distribution",
+      "surface": "Hash-bound candidate acceptance, stable update manifest and signed immutable APT snapshots",
+      "mechanism": "Build-owned candidate catalog preserves engineering blockers and exact predecessor; owner-only same-origin receipt/promotion API uses private atomic release state. Stable pointer changes no package bytes, licenses or user data. Dedicated public Blob uploads reuse the shared APT publication lock with origin hash verification. APT snapshots prepared and GPG-verified offline; old rootless/rootful RedditBox repositories unchanged. Customer installation remains an explicit package-manager upgrade. Temporary owner-only website mode redirects /updates and /admin/releases to licenses; machine manifest and owner-only release API stay intact. Public distribution requires restoring the customer instructions route.",
+      "coverage": [
+        "blocked"
+      ],
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "cloud/src/lib/socialbox-release-policy.ts",
+          "line": 1,
+          "detail": "Release channel control, signed preparation, immutable artifact verification or synthetic regression. Not a completed customer/device acceptance."
+        },
+        {
+          "path": "cloud/src/lib/socialbox-releases.ts",
+          "line": 1,
+          "detail": "Release channel control, signed preparation, immutable artifact verification or synthetic regression. Not a completed customer/device acceptance."
+        },
+        {
+          "path": "cloud/src/lib/storage.ts",
+          "line": 1,
+          "detail": "Release channel control, signed preparation, immutable artifact verification or synthetic regression. Not a completed customer/device acceptance."
+        },
+        {
+          "path": "cloud/src/data/socialbox-releases.json",
+          "line": 1,
+          "detail": "Release channel control, signed preparation, immutable artifact verification or synthetic regression. Not a completed customer/device acceptance."
+        },
+        {
+          "path": "cloud/src/app/admin/releases/page.tsx",
+          "line": 1,
+          "detail": "Release channel control, signed preparation, immutable artifact verification or synthetic regression. Not a completed customer/device acceptance."
+        },
+        {
+          "path": "cloud/src/app/admin/page.tsx",
+          "line": 1,
+          "detail": "Release channel control, signed preparation, immutable artifact verification or synthetic regression. Not a completed customer/device acceptance."
+        },
+        {
+          "path": "cloud/src/app/api/admin/releases/route.ts",
+          "line": 1,
+          "detail": "Release channel control, signed preparation, immutable artifact verification or synthetic regression. Not a completed customer/device acceptance."
+        },
+        {
+          "path": "cloud/src/app/api/releases/socialbox/latest/route.ts",
+          "line": 1,
+          "detail": "Release channel control, signed preparation, immutable artifact verification or synthetic regression. Not a completed customer/device acceptance."
+        },
+        {
+          "path": "cloud/src/app/apt/socialbox/[...path]/route.ts",
+          "line": 1,
+          "detail": "Release channel control, signed preparation, immutable artifact verification or synthetic regression. Not a completed customer/device acceptance."
+        },
+        {
+          "path": "cloud/src/app/updates/page.tsx",
+          "line": 1,
+          "detail": "Release channel control, signed preparation, immutable artifact verification or synthetic regression. Not a completed customer/device acceptance."
+        },
+        {
+          "path": "cloud/scripts/apt-publisher.mjs",
+          "line": 1,
+          "detail": "Release channel control, signed preparation, immutable artifact verification or synthetic regression. Not a completed customer/device acceptance."
+        },
+        {
+          "path": "cloud/scripts/apt-publication-test.mjs",
+          "line": 1,
+          "detail": "Release channel control, signed preparation, immutable artifact verification or synthetic regression. Not a completed customer/device acceptance."
+        },
+        {
+          "path": "cloud/scripts/register-socialbox-release.ts",
+          "line": 1,
+          "detail": "Release channel control, signed preparation, immutable artifact verification or synthetic regression. Not a completed customer/device acceptance."
+        },
+        {
+          "path": "cloud/scripts/socialbox-release-test.ts",
+          "line": 1,
+          "detail": "Release channel control, signed preparation, immutable artifact verification or synthetic regression. Not a completed customer/device acceptance."
+        },
+        {
+          "path": "scripts/prepare-socialbox-release.py",
+          "line": 1,
+          "detail": "Release channel control, signed preparation, immutable artifact verification or synthetic regression. Not a completed customer/device acceptance."
+        },
+        {
+          "path": "tools/test_socialbox_release_preparation.py",
+          "line": 1,
+          "detail": "Release channel control, signed preparation, immutable artifact verification or synthetic regression. Not a completed customer/device acceptance."
+        },
+        {
+          "path": "cloud/package.json",
+          "line": 1,
+          "detail": "Release channel control, signed preparation, immutable artifact verification or synthetic regression. Not a completed customer/device acceptance."
+        },
+        {
+          "path": "docs/socialbox-release-workflow.md",
+          "line": 1,
+          "detail": "Release channel control, signed preparation, immutable artifact verification or synthetic regression. Not a completed customer/device acceptance."
+        },
+        {
+          "path": "cloud/scripts/socialbox-releases-ui-test.mjs",
+          "line": 1,
+          "detail": "18 browser checks against real built pages with intercepted synthetic admin API; no production release or device claim."
+        },
+        {
+          "path": "docs/socialbox-update-delivery-2026-09-28.md",
+          "line": 1,
+          "detail": "Recorded .16 owner installation, scoped data comparison and deployed update workflow; physical UI, new customer activation and isolation acceptance remain NOT_RUN."
+        },
+        {
+          "path": "docs/release-evidence/socialbox-updates-2026-09-28/delivery.json",
+          "line": 1,
+          "detail": "Recorded .16 owner installation, scoped data comparison and deployed update workflow; physical UI, new customer activation and isolation acceptance remain NOT_RUN."
+        },
+        {
+          "path": "docs/release-evidence/socialbox-updates-2026-09-28/browser-tests.json",
+          "line": 1,
+          "detail": "Recorded .16 owner installation, scoped data comparison and deployed update workflow; physical UI, new customer activation and isolation acceptance remain NOT_RUN."
+        },
+        {
+          "path": "docs/release-evidence/socialbox-updates-2026-09-28/workspace-tests.json",
+          "line": 1,
+          "detail": "Recorded .16 owner installation, scoped data comparison and deployed update workflow; physical UI, new customer activation and isolation acceptance remain NOT_RUN."
+        },
+        {
+          "path": "cloud/PRIVATE_CONSOLE.md",
+          "line": 1,
+          "detail": "Temporary browser-only restriction; retained release API now canonical owner-only."
+        }
+      ],
+      "verification": "27 release policy/route/storage checks, 17 mocked Blob publication groups and 8 GPG preparation tests PASS. Existing cloud suites and production build PASS. Current .16 engineering blockers remain and prevent promotion. 18 real-page browser checks with synthetic release APIs PASS. .16 owner installation PASS: 59 payload hashes, byte-identical global metadata and 63 scoped entries unchanged across three manifests; aggregate live runtime comparison INCONCLUSIVE. Staging/production routes and 16 unchanged old APT metadata files PASS. Public stable channel remains empty. Physical foreground, new customer activation and restore acceptance NOT_RUN. Current browser scope supersedes the earlier public /updates observation: license-only private console requested on 2026-09-28.",
+      "fix": "Complete licensed customer upgrade, data restore and measured network acceptance, then record exact hash-bound results before Release. Implement/test skipped-version migrations independently. Preserve historical candidate snapshots on future website deploys."
+    }
+  ]
+}

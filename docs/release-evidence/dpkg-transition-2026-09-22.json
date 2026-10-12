@@ -1,0 +1,78 @@
+{
+  "date": "2026-09-22",
+  "version": "3.1.0-1+socialbox.6",
+  "packageSHA256": "20c68ed03dee2cafff03c6f7b7985d5170eb78a3a6c19566fd0b06fcb9f0d319",
+  "status": "INSTALLER_TRANSITION_FIX_INSTALLED_DEVICE_ACCEPTANCE_CONTINUES",
+  "failedFirstRegression": "test_dpkg_inflight_state_only_admitted_by_incoming_preinst: failed before fix, passed after fix",
+  "recoveredPackageGroups": 32,
+  "helperCompositionGroups": 5,
+  "staticCheck": "ALL CLEAN",
+  "archive": {
+    "status": "PASS",
+    "packageSHA256": "20c68ed03dee2cafff03c6f7b7985d5170eb78a3a6c19566fd0b06fcb9f0d319",
+    "payloadFiles": 58,
+    "rootOwnershipAndMD5": "PASS",
+    "managerMode": "06755",
+    "originalProgramsUnchanged": 15,
+    "originalSlicesUnchanged": 25,
+    "sourceHashesCurrent": true,
+    "scriptsSyntax": "PASS",
+    "installed": false
+  },
+  "actualArchiveStateBoundaries": {
+    "incomingPreinst": [
+      "installed",
+      "half-installed",
+      "half-configured",
+      "unpacked"
+    ],
+    "externalPreflight": [
+      "installed"
+    ]
+  },
+  "priorPhoneAttempt": {
+    "version": "3.1.0-1+socialbox.5",
+    "result": "REJECTED_BY_INCOMING_PREINST_BEFORE_PAYLOAD_UNPACK",
+    "originalRecoveryExit": 0,
+    "sourceRecoveryExit": 0,
+    "dataPurged": false,
+    "dpkgStatusFileEdited": false,
+    "forceOptionsUsed": false
+  },
+  "scope": "Packaging transition correction; unchanged runtime source. Original manager/helper injection, target switching and network containment require their own device receipt.",
+  "phoneInstallation": {
+    "status": "INSTALLED_AWAITING_ORIGINAL_APP_ACCEPTANCE",
+    "version": "3.1.0-1+socialbox.6",
+    "packageSHA256": "20c68ed03dee2cafff03c6f7b7985d5170eb78a3a6c19566fd0b06fcb9f0d319",
+    "sourcePackageRemovedWithoutPurge": true,
+    "sourceDataRetained": true,
+    "globalMetadataByteIdentical": true,
+    "services": {
+      "com.socialbox.processdrain": {
+        "registered": true,
+        "running": true
+      },
+      "com.secretsauce.doritoshelper": {
+        "registered": true,
+        "running": true
+      },
+      "com.secretsauce.secretsauced": {
+        "registered": true,
+        "running": true
+      },
+      "com.secretsauce.secretsaucemonitor": {
+        "registered": true,
+        "running": true
+      }
+    },
+    "events": [
+      "Original control shape restored after previous successful rollback",
+      "Existing loader selection preserved; no loader operations or data switching",
+      "Narrow original-postinst recovery prepared",
+      "Every other unmodified preflight predicate passed",
+      "Empty source package removed without purge; runtime data retained",
+      "Original unmodified complete external preflight PASS",
+      "58 payload hashes/mode/version and unchanged original metadata verified"
+    ]
+  }
+}

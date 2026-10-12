@@ -1,0 +1,309 @@
+{
+  "schemaVersion": 1,
+  "scope": "2026-09-19 reference-flow implementation. Host/simulator and source evidence only; preserve existing physical/runtime gaps.",
+  "rows": [
+    {
+      "id": "UI-009",
+      "category": "Reference UI and safe configuration",
+      "surface": "Reviewed HTTP proxy-list import and searchable device library",
+      "mechanism": "Explicit Paste reads clipboard only on tap. The parser accepts existing HTTP URL/provider formats, previews counts, duplicate endpoints and per-line errors, rejects unsupported SOCKS/HTTPS-to-proxy formats, and enforces size/line/library bounds. Save compares the current input/library to the reviewed preview, then updates one secure configuration record. Any invalid/stale/failed write leaves the library intact. Import never selects a proxy, enables traffic, changes a cloud assignment or replaces license/account data. The private list/editor retains user-requested visible URL credentials; summaries and diagnostics omit them. No QR scanner or Shadowrocket private-store import is claimed.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "covered-in-code",
+      "verification": "PASS: native parser/store45 and actual UIKit importer20 assertions, including no automatic clipboard reads, no partial import, stale preview/changed library, duplicate handling, explicit cancel/confirm, preserved disabled/license state and readable card layout. Existing library regressions pass. No live egress tested.",
+      "fix": "One secure-record atomic update is not a cross-process compare-and-swap guarantee. Keep selected-device configuration distinct from per-container cloud assignment; verify physical keyboard/clipboard flow and retain external routing acceptance.",
+      "evidence": [
+        {
+          "path": "shared/RBXProxyLibrary.m",
+          "line": 39,
+          "anchor": "static NSDictionary *ImportPreview(",
+          "detail": "Bounded read-only parser and semantic duplicate detection include credentials without logging them."
+        },
+        {
+          "path": "shared/RBXProxyLibrary.m",
+          "line": 127,
+          "anchor": "+ (BOOL)importText:",
+          "detail": "Rebuilds and matches reviewed snapshot, assigns IDs only at commit and performs one secure record update."
+        },
+        {
+          "path": "shared/RBXProxyLibrary.h",
+          "line": 1,
+          "detail": "Explicit private preview/import contract; no automatic selection or network actions."
+        },
+        {
+          "path": "launcher/RBXProxiesViewController.m",
+          "line": 60,
+          "anchor": "- (void)confirmImport {",
+          "detail": "Explicit preview then user confirmation before library mutation."
+        },
+        {
+          "path": "tools/test_proxy_import.m",
+          "line": 1,
+          "detail": "45 assertions against actual parser/store code with observable secure writes."
+        },
+        {
+          "path": "tools/test_proxy_import_ui.m",
+          "line": 1,
+          "detail": "20 UIKit assertions against actual controller/library with inert Keychain and IPC."
+        },
+        {
+          "path": "tools/test_proxy_import_ui.py",
+          "line": 1,
+          "detail": "Explicit simulator capture runner; no real credentials or networking."
+        },
+        {
+          "path": "scripts/build-mac.sh",
+          "line": 1,
+          "detail": "Native importer regression included in package gates."
+        }
+      ]
+    },
+    {
+      "id": "UI-010",
+      "category": "Reference UI and safe configuration",
+      "surface": "Settings readiness, scoped Cloud console and transfer explanations",
+      "mechanism": "Settings presents existing timestamped source/license/server/network readiness and actions in cards; advanced technical details remain available. Saved HTTPS origin is not labelled connected without fresh published evidence. No MDM or network gate is removed. Cloud links use an exact registered app route and a validated HTTPS origin. Existing encrypted backup and license integration is retained; copy warns that Keychain/hardware-bound credentials do not transfer and login continuity is not guaranteed. Settings, Cloud and maintenance are absent from the locked root, rather than being accessible behind an activation sheet. Detailed Account/license controls remain reachable after a valid grant; that screen refreshes current publication on appearance, foreground and timer. The root activation screen reuses the existing configured HTTPS origin or established production default without changing signing keys.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "covered-in-code",
+      "verification": "PASS:32 host assertions for actual status and Cloud route functions, plus integrated UIKit workspace checks. Source inspection confirms existing readiness predicates and launcher requests remain intact. No live Cloud deployment, cross-device account migration or phone enforcement acceptance from this presentation change. Root-level49, workspace240 and license-screen33 regression assertions pass with synthetic authority; this does not establish real server activation or MDM/network readiness.",
+      "fix": "Verify installed-phone setup labels and account/backup flows separately. No-MDM online launch, original-icon routing, real A/B traffic and complete login restoration remain unverified/unimplemented.",
+      "evidence": [
+        {
+          "path": "launcher/RBXSettingsViewController.m",
+          "line": 32,
+          "anchor": "static NSDictionary *RBXSettingsStatusPresentation(",
+          "detail": "Freshness-aware license/server projection; unknown/stale publication stays explicit."
+        },
+        {
+          "path": "launcher/RBXSettingsViewController.m",
+          "line": 798,
+          "anchor": "- (void)renderSetupChecklist:",
+          "detail": "Existing checklist actions and conservative per-app setup evaluation retained."
+        },
+        {
+          "path": "launcher/RBXSettingsViewController.m",
+          "line": 462,
+          "anchor": "stack = RBXFormSection(page, @\"Network protection\"",
+          "detail": "Makes required managed routing explicit; saved proxy is insufficient."
+        },
+        {
+          "path": "launcher/RBXCloudVaultViewController.m",
+          "line": 11,
+          "anchor": "static NSURL *RBXCloudConsoleURL(",
+          "detail": "Validates selected registered app and HTTPS origin for app-scoped console URL."
+        },
+        {
+          "path": "launcher/RBXCloudVaultViewController.m",
+          "line": 199,
+          "anchor": "- (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section {return",
+          "detail": "Backup scope and credential-transfer limitations displayed to operator."
+        },
+        {
+          "path": "tools/test_settings_presentation.py",
+          "line": 1,
+          "detail": "32 native assertions using extracted actual presentation/route helpers."
+        },
+        {
+          "path": "tools/test_workspace_fixture.m",
+          "line": 1,
+          "detail": "Integrated Settings navigation and card checks with synthetic state."
+        },
+        {
+          "path": "launcher/RBXLicenseViewController.m",
+          "line": 302,
+          "anchor": "- (void)refreshDetailedLicenseState {",
+          "detail": "Detailed post-unlock license page reads fresh published state rather than retaining stale constructor snapshot."
+        },
+        {
+          "path": "launcher/RBXLicenseViewController.m",
+          "line": 50,
+          "anchor": "static NSString *RBXActivationOnlyServer(",
+          "detail": "Only absent initial configuration uses the existing production origin; invalid nonempty configuration is not silently replaced."
+        }
+      ]
+    },
+    {
+      "id": "UI-011",
+      "category": "Reference UI and safe configuration",
+      "surface": "Searchable compatible model/iOS/region/city/carrier catalog selection",
+      "mechanism": "A local searchable grouped picker replaces long action sheets. It accepts only catalog option dictionaries, deduplicates values, marks current selection, supports cancel/no-results and applies one selection. The identity editor rechecks pending request and first-use lock at selection time. Model choice keeps compatible iOS; manual language remains limited to supported regional catalog entries. No remote catalog, randomized range policy or device-wide hook is invented. Model options are now ranked against the unhooked launcher screen native pixels, logical points, display scale and native scale with orientation normalization. Exact geometry matches are recommendations; when absent, closest catalog models are explicitly labelled not exact. Existing selection never changes from ranking. Invalid/missing/boolean/nonfinite metrics cannot produce a verified match. Selecting a model still uses the unchanged compatible-iOS and identity-draft path.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "covered-in-code",
+      "verification": "PASS:233 UIKit editor assertions include search, current checkmarks, cancel, empty result, model/iOS compatibility, carrier/city selection and durable receipt handling across modal dismissal; this is one editor suite, not233 extra isolation checks. Existing catalog/identity validation remains separate. The original198 cases remain; native48 covers geometry and location constraints. Current catalog has no exact iPhone X geometry; no older specifications or hardware identity are invented.",
+      "fix": "Keep compatible catalog tuples and exact confirmation before Save. App hardware/OS values are synthetic fields, not firmware emulation; actual hook consistency needs physical evidence.",
+      "evidence": [
+        {
+          "path": "launcher/RBXCatalogPickerViewController.m",
+          "line": 15,
+          "anchor": "- (instancetype)initWithTitle:",
+          "detail": "Copies and filters local catalog options without writing profiles."
+        },
+        {
+          "path": "launcher/RBXCatalogPickerViewController.m",
+          "line": 70,
+          "anchor": "- (void)updateSearchResultsForSearchController:",
+          "detail": "Searches names/codes and groups; no external lookup."
+        },
+        {
+          "path": "launcher/RBXCatalogPickerViewController.m",
+          "line": 111,
+          "anchor": "- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:",
+          "detail": "Completes once, applies chosen value, and dismisses; cancel never applies."
+        },
+        {
+          "path": "launcher/RBXCatalogPickerViewController.h",
+          "line": 1,
+          "detail": "Local picker contract; caller retains validation and lifecycle locks."
+        },
+        {
+          "path": "launcher/RBXIdentityViewController.m",
+          "line": 567,
+          "anchor": "- (void)choose:(NSString *)title options:(NSArray<NSDictionary *> *)options prepareDraft:",
+          "detail": "Rechecks identity readiness, pending operation and first-use lock before updating fields."
+        },
+        {
+          "path": "launcher/Makefile",
+          "line": 1,
+          "detail": "New picker linked into launcher only."
+        },
+        {
+          "path": "tools/test_identity_editor_fixture.m",
+          "line": 1,
+          "detail": "Actual UIKit233 suite, retaining original198 cases; candidate review, searchable catalog and explicit map draft flow."
+        },
+        {
+          "path": "tools/test_identity_editor_simulator.py",
+          "line": 1,
+          "detail": "Explicit simulator runner for actual editor/picker; no device use."
+        },
+        {
+          "path": "launcher/RBXScreenRecommendation.h",
+          "line": 11,
+          "anchor": "static inline NSDictionary *RBXScreenMatch(",
+          "detail": "Compares exact native/logical geometry and both scales; unknown/malformed metrics remain unknown, not compatible."
+        },
+        {
+          "path": "launcher/RBXScreenRecommendation.h",
+          "line": 28,
+          "anchor": "static inline NSArray<NSDictionary *> *RBXScreenModelOptions(",
+          "detail": "Ranks without selection mutation; groups approximate models explicitly and skips malformed model records."
+        },
+        {
+          "path": "launcher/Makefile",
+          "line": 10,
+          "anchor": "RedditBox_FRAMEWORKS =",
+          "detail": "MapKit/CoreLocation are linked only into the launcher; no hook or entitlement changes."
+        }
+      ]
+    },
+    {
+      "id": "UI-012",
+      "category": "Reference UI and safe configuration",
+      "surface": "Organizational container rename with revisioned cloud synchronization",
+      "mechanism": "Rename updates only optional profile nickname as organizational metadata. ID, bundle family, installed clone name, sandbox, identity and credentials remain unchanged. Launcher, replacement/backup naming and publication prefer a validated optional label with existing central-store fallback. Partial name/role/notes edits preserve omitted fields; metadata revisions reject stale cloud writes and exact newer acknowledgements recover lost replies. Explicit new names are bounded and reject controls; unchanged legacy long names and canonical ID fallbacks remain accepted for synchronization. Only an exact echoed legacy nickname is omitted from native metadata application; all other raw reply validation remains strict. Existing names are never silently truncated. First publication of an existing offline legacy display name is accepted without truncation; later changed names still require current validation and exact metadata revision.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "covered-in-code",
+      "verification": "PASS:55 native assertions execute shipped rename/metadata methods in both app namespaces with inert persistence; metadata helper regressions cover divergent/exact name acknowledgements and exact legacy reply handling. Cloud endpoint metadata14 and inventory9 checks pass with fixture storage. UIKit workspace216 assertions include Rename, Cancel, invalid/unchanged names and search retaining the same container ID. No physical rename or Cloud production deployment is claimed.",
+      "fix": "Keep legacy display names and cloud revision compatibility. Verify on-device rename/display/backup roundtrip separately. A changed UI label is neither a new identity nor proof of isolation.",
+      "evidence": [
+        {
+          "path": "shared/RBXProfileMetadata.h",
+          "line": 18,
+          "anchor": "static inline BOOL RBXProfileNicknameValid(",
+          "detail": "Bounded explicit rename validation and separate legacy fallback helpers."
+        },
+        {
+          "path": "shared/RBXProfileMetadata.h",
+          "line": 53,
+          "anchor": "static inline BOOL RBXMetadataAcknowledgesLocalEdit(",
+          "detail": "Lost-reply acknowledgement includes local rename equality when present."
+        },
+        {
+          "path": "launcher/RBXLauncherViewController.m",
+          "line": 1168,
+          "anchor": "- (void)renameContainer:",
+          "detail": "Explicit Save uses existing updateMetadata action; no clone/identity mutation."
+        },
+        {
+          "path": "daemon/RBXContainerRegistry.m",
+          "line": 1680,
+          "anchor": "- (BOOL)updateMetadata:",
+          "detail": "App-scoped partial organizational updates, cloud revision validation and private profile persistence."
+        },
+        {
+          "path": "daemon/RBXLauncherState.m",
+          "line": 188,
+          "anchor": "@\"name\": RBXProfileDisplayName",
+          "detail": "Read-only launcher display name uses reviewed profile label then legacy store fallback."
+        },
+        {
+          "path": "daemon/RBXCloudSync.m",
+          "line": 1215,
+          "anchor": "@\"nickname\": RBXProfileDisplayName(profile, stored",
+          "detail": "Inventory publication uses current display name; ownership binding remains unchanged."
+        },
+        {
+          "path": "daemon/RBXReplacement.m",
+          "line": 240,
+          "anchor": "NSString *name = RBXProfileDisplayName",
+          "detail": "Replacement preserves user-facing label through existing lifecycle."
+        },
+        {
+          "path": "cloud/src/app/api/profiles/route.ts",
+          "line": 1,
+          "detail": "API handles nickname type and existing exact ownership/metadata revision contract."
+        },
+        {
+          "path": "cloud/src/lib/profile-inventory.ts",
+          "line": 1,
+          "detail": "Cloud stores names with metadata revision and legacy compatibility checks."
+        },
+        {
+          "path": "tools/test_profile_rename.py",
+          "line": 1,
+          "detail": "Native extraction fixture exercises actual metadata methods and unchanged sibling/identity fields."
+        },
+        {
+          "path": "tools/test_profile_metadata.m",
+          "line": 1,
+          "detail": "Explicit nickname validation and lost rename response acknowledgement cases."
+        },
+        {
+          "path": "cloud/scripts/profile-metadata-test.ts",
+          "line": 1,
+          "detail": "Cloud endpoint/inventory name and stale-revision regression fixtures."
+        },
+        {
+          "path": "shared/RBXProfileMetadata.h",
+          "line": 44,
+          "anchor": "static inline NSDictionary *RBXMetadataReplyWithLegacyName(",
+          "detail": "Only exact echoed old invalid-length/control name is omitted; malformed other metadata remains rejected and central legacy fallback is preserved."
+        },
+        {
+          "path": "cloud/scripts/profile-inventory-test.ts",
+          "line": 1,
+          "detail": "Nine cloud inventory lifecycle/ownership fixtures with local test storage."
+        },
+        {
+          "path": "daemon/main.m",
+          "line": 799,
+          "anchor": "if (![RBXProfileIO isSafeContainerIdentifier:cid] || !RBXProfileNicknameValid(name)",
+          "detail": "Creation preparation uses the same bounded Unicode nickname validation before proxy lookup."
+        },
+        {
+          "path": "launcher/RBXSimpleWizardViewController.m",
+          "line": 271,
+          "anchor": "if (!RBXProfileNicknameValid(name)",
+          "detail": "Wizard rejects malformed names locally; daemon repeats validation independently."
+        }
+      ]
+    }
+  ]
+}

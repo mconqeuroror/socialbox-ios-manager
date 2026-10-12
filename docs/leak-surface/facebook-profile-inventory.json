@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "rows": [
+    {
+      "id": "FBPROF-001",
+      "category": "App-owned profile lifecycle admission",
+      "surface": "Create preflight, shared profile generator ownership, clone sync and durable receipts",
+      "mechanism": "Canonical app type travels from request or persisted owner through generation and clone manager. Legacy untagged Reddit profile/receipt shapes remain unchanged. Inactive or missing Facebook source is rejected before operation admission, region lookup, identifier inventory/reservation, file/store/proxy/pool mutation.",
+      "coverage": [
+        "generator",
+        "blocked"
+      ],
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "daemon/RBXContainerRegistry.h",
+          "line": 1,
+          "detail": "Actual profile/receipt implementation or isolated native regression fixture."
+        },
+        {
+          "path": "daemon/RBXContainerRegistry.m",
+          "line": 1,
+          "detail": "Actual profile/receipt implementation or isolated native regression fixture."
+        },
+        {
+          "path": "daemon/RBXProfileGenerator.h",
+          "line": 1,
+          "detail": "Actual profile/receipt implementation or isolated native regression fixture."
+        },
+        {
+          "path": "daemon/RBXProfileGenerator.m",
+          "line": 1,
+          "detail": "Actual profile/receipt implementation or isolated native regression fixture."
+        },
+        {
+          "path": "daemon/main.m",
+          "line": 1,
+          "detail": "Actual profile/receipt implementation or isolated native regression fixture."
+        },
+        {
+          "path": "tools/test_device_catalog.m",
+          "line": 1,
+          "detail": "Actual profile/receipt implementation or isolated native regression fixture."
+        },
+        {
+          "path": "tools/test_app_profile.py",
+          "line": 1,
+          "detail": "Actual profile/receipt implementation or isolated native regression fixture."
+        },
+        {
+          "path": "docs/facebook-profile-scoping.md",
+          "line": 1,
+          "detail": "Actual profile/receipt implementation or isolated native regression fixture."
+        },
+        {
+          "path": "scripts/build-mac.sh",
+          "line": 1,
+          "detail": "Actual profile/receipt implementation or isolated native regression fixture."
+        }
+      ],
+      "verification": "Actual generator/catalog tests, extracted shipped registry/receipt methods with inert service boundaries, active/inactive admission fixtures and iPhoneOS syntax compile. Facebook-specific SDK IDs are not inferred from legacy Reddit-named schema fields; full Facebook switch/backup/delete/recovery and MDM remain unverified.",
+      "fix": "Resolve shared group/key-item lifecycle and complete cross-app process/MDM acceptance before enabling Facebook."
+    }
+  ]
+}

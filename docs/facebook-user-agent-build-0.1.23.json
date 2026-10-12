@@ -1,0 +1,1392 @@
+{
+  "schemaVersion": 1,
+  "packages": [
+    {
+      "version": "0.1.23",
+      "filename": "debs/com.redditbox_0.1.23_iphoneos-arm64.deb",
+      "sha256": "5869c1ccbef2514d50e20defaec7a54003656c4ae904785e4777071a0974cb6a",
+      "size": 1900054,
+      "control": {
+        "Package": "com.redditbox",
+        "Name": "RedditBox",
+        "Depends": "mobilesubstrate, firmware (>= 15.0), ldid, ai.akemi.appinst (>= 2.1.1), zip, ai.akemi.appsyncunified, uikittools (>= 2.1.6)",
+        "Description": "Multi-account containers + anti-fingerprint system for Reddit (palera1n rootless/rootful and Dopamine rootless)",
+        "Maintainer": "PC",
+        "Author": "PC",
+        "Section": "Tweaks",
+        "Architecture": "iphoneos-arm64",
+        "Version": "0.1.23",
+        "Installed-Size": "5452"
+      },
+      "release": {
+        "version": "0.1.23",
+        "schemaVersion": 2,
+        "signingContractHash": "33f04fef9446cb9c093d287415a6e7b3757b0265367dd8212363a96e7e46f325",
+        "requiresMDMReadoption": true,
+        "packageScheme": "rootless",
+        "packageArchitecture": "iphoneos-arm64",
+        "installPrefix": "/var/jb"
+      },
+      "sourceBaseCommit": "a70b422c297c13bbee616913d69c8c700ec2b9ab",
+      "workingTreeModified": true,
+      "sourceInventorySHA256": "5a7f2aaa2072d2aeafe1d541b26ca82952e709ecc2361023d0a065512e2749ed",
+      "recordedAtUTC": "2026-09-14T23:05:53.599675+00:00",
+      "distribution": "Private local test package; not installed or published",
+      "machOComponents": [
+        {
+          "path": "var/jb/Applications/RedditBox.app/RedditBox",
+          "sha256": "43bade15aac530389ea684928cbf14e35ffd5d3f51b8bf7779fa3eef5e298007",
+          "architectures": [
+            "arm64",
+            "arm64e"
+          ],
+          "slices": [
+            {
+              "architecture": "arm64",
+              "entitlementKeys": [
+                "application-identifier",
+                "keychain-access-groups"
+              ],
+              "entitlementPayloadSHA256": "29a9e60cf871c275f97c9d06dd9f9694c03fc032ea58497212e7d2c06e308d96"
+            },
+            {
+              "architecture": "arm64e",
+              "entitlementKeys": [
+                "application-identifier",
+                "keychain-access-groups"
+              ],
+              "entitlementPayloadSHA256": "29a9e60cf871c275f97c9d06dd9f9694c03fc032ea58497212e7d2c06e308d96"
+            }
+          ]
+        },
+        {
+          "path": "var/jb/Applications/RedditBoxFirewall.app/PlugIns/PacketTunnel.appex/PacketTunnel",
+          "sha256": "f12355b6280fd14b2abc1379255633dd50886439c77e6735a1ee8af6302456be",
+          "architectures": [
+            "arm64"
+          ],
+          "slices": [
+            {
+              "architecture": "arm64",
+              "entitlementKeys": [
+                "application-identifier",
+                "com.apple.developer.networking.networkextension",
+                "com.apple.developer.team-identifier",
+                "com.apple.security.application-groups"
+              ],
+              "entitlementPayloadSHA256": "4555b49667e11192cde4384d788e9acc17435d158d5c61e280b71f131d5655d3"
+            }
+          ]
+        },
+        {
+          "path": "var/jb/Applications/RedditBoxFirewall.app/RedditBoxFirewall",
+          "sha256": "575695ec7609807405ad8527705aa56f3efb4ae7f0850db028b9fa5e0e41cc50",
+          "architectures": [
+            "arm64"
+          ],
+          "slices": [
+            {
+              "architecture": "arm64",
+              "entitlementKeys": [
+                "application-identifier",
+                "com.apple.developer.networking.networkextension",
+                "com.apple.developer.team-identifier",
+                "com.apple.security.application-groups"
+              ],
+              "entitlementPayloadSHA256": "ed190db6fed36895054468d44eb3ad05f685f249e5ecb2369dfcaf605bbbb943"
+            }
+          ]
+        },
+        {
+          "path": "var/jb/Library/MobileSubstrate/DynamicLibraries/RedditBox.dylib",
+          "sha256": "d9369e1923ef2121fcf110231fa67314e4ade10e8f50b839f41f49bc5ea2b90a",
+          "architectures": [
+            "arm64",
+            "arm64e"
+          ],
+          "slices": [
+            {
+              "architecture": "arm64",
+              "entitlementKeys": [],
+              "entitlementPayloadSHA256": "9261ecceda608ef174256e5fdc774c1e6e3dcf533409c1bc393d490d01c713f1"
+            },
+            {
+              "architecture": "arm64e",
+              "entitlementKeys": [],
+              "entitlementPayloadSHA256": "9261ecceda608ef174256e5fdc774c1e6e3dcf533409c1bc393d490d01c713f1"
+            }
+          ]
+        },
+        {
+          "path": "var/jb/Library/PreferenceBundles/RedditBoxPrefs.bundle/RedditBoxPrefs",
+          "sha256": "790f75afb1464a537696133788066edca24d90734a112a80841d44497f2d82af",
+          "architectures": [
+            "arm64",
+            "arm64e"
+          ],
+          "slices": [
+            {
+              "architecture": "arm64",
+              "entitlementKeys": [],
+              "entitlementPayloadSHA256": "9261ecceda608ef174256e5fdc774c1e6e3dcf533409c1bc393d490d01c713f1"
+            },
+            {
+              "architecture": "arm64e",
+              "entitlementKeys": [],
+              "entitlementPayloadSHA256": "9261ecceda608ef174256e5fdc774c1e6e3dcf533409c1bc393d490d01c713f1"
+            }
+          ]
+        },
+        {
+          "path": "var/jb/usr/bin/redditboxd",
+          "sha256": "bb655f71a13fad8c8246fa4d999c3f4e5c575f2a399a837f38de4c885e1b9573",
+          "architectures": [
+            "arm64",
+            "arm64e"
+          ],
+          "slices": [
+            {
+              "architecture": "arm64",
+              "entitlementKeys": [
+                "application-identifier",
+                "com.apple.private.mobileinstall.allowedSPI",
+                "com.apple.private.uninstall.deletion",
+                "com.apple.security.exception.mach-lookup.global-name",
+                "keychain-access-groups",
+                "platform-application"
+              ],
+              "entitlementPayloadSHA256": "d2fea7c7a4c4ed94a58edf2d737235ca35165f29baa65124ebffd903fa368d75"
+            },
+            {
+              "architecture": "arm64e",
+              "entitlementKeys": [
+                "application-identifier",
+                "com.apple.private.mobileinstall.allowedSPI",
+                "com.apple.private.uninstall.deletion",
+                "com.apple.security.exception.mach-lookup.global-name",
+                "keychain-access-groups",
+                "platform-application"
+              ],
+              "entitlementPayloadSHA256": "d2fea7c7a4c4ed94a58edf2d737235ca35165f29baa65124ebffd903fa368d75"
+            }
+          ]
+        },
+        {
+          "path": "var/jb/usr/libexec/redditbox-keychain-cleaner",
+          "sha256": "4d5148921823833c3d1bebc3e7090d16144665832ebff608b6c2375ee3187508",
+          "architectures": [
+            "arm64",
+            "arm64e"
+          ],
+          "slices": [
+            {
+              "architecture": "arm64",
+              "entitlementKeys": [],
+              "entitlementPayloadSHA256": "9261ecceda608ef174256e5fdc774c1e6e3dcf533409c1bc393d490d01c713f1"
+            },
+            {
+              "architecture": "arm64e",
+              "entitlementKeys": [],
+              "entitlementPayloadSHA256": "9261ecceda608ef174256e5fdc774c1e6e3dcf533409c1bc393d490d01c713f1"
+            }
+          ]
+        }
+      ],
+      "machOInspection": {
+        "componentCount": 7,
+        "sliceCount": 12,
+        "allExpectedPathsAndArchitecturesChecked": true
+      },
+      "licensePin": {
+        "publicKeyID": "b2c5d4176c727107c9826ad69386d4d65f90920074981bd842127d6b22add6e9",
+        "matchesExistingDeploymentPublicPEM": true,
+        "publicKeyReplaced": false,
+        "embeddedInEveryDaemonSlice": true
+      },
+      "catalog": {
+        "models": 21,
+        "modelIOSChoices": 159,
+        "payloadMatchesCommittedCatalog": true
+      },
+      "entitlementValuesMatch0_1_18Rootless": true,
+      "entitlementValuesMatchBothVariants": true,
+      "codeDirectoryIntegrity": {
+        "schemaVersion": 1,
+        "package": "com.redditbox_0.1.23_iphoneos-arm64.deb",
+        "sha256": "5869c1ccbef2514d50e20defaec7a54003656c4ae904785e4777071a0974cb6a",
+        "scope": "CodeDirectory code pages and every nonzero available special slot; no OS trust, Apple certificate, MDM adoption or full resource-tree claim.",
+        "source": "https://raw.githubusercontent.com/apple-oss-distributions/xnu/main/osfmk/kern/cs_blobs.h",
+        "components": [
+          {
+            "path": "var/jb/Applications/RedditBox.app/RedditBox",
+            "slices": [
+              {
+                "cpu": 16777228,
+                "cpuSubtype": 0,
+                "sliceOffset": 16384,
+                "directories": [
+                  {
+                    "slot": 0,
+                    "version": "0x20400",
+                    "flags": "0x0",
+                    "hashType": 2,
+                    "codePages": 158,
+                    "codeBytes": 643568,
+                    "boundSpecialSlots": [
+                      2,
+                      5,
+                      7
+                    ],
+                    "zeroSpecialSlots": [
+                      1,
+                      3,
+                      4,
+                      6
+                    ],
+                    "codeDirectorySHA256": "76ac78007f067655d3b9b4a18599c9dce4e822511f2e6fd185bda75ffa502ee4"
+                  }
+                ]
+              },
+              {
+                "cpu": 16777228,
+                "cpuSubtype": 2147483650,
+                "sliceOffset": 671744,
+                "directories": [
+                  {
+                    "slot": 0,
+                    "version": "0x20400",
+                    "flags": "0x0",
+                    "hashType": 2,
+                    "codePages": 162,
+                    "codeBytes": 659968,
+                    "boundSpecialSlots": [
+                      2,
+                      5,
+                      7
+                    ],
+                    "zeroSpecialSlots": [
+                      1,
+                      3,
+                      4,
+                      6
+                    ],
+                    "codeDirectorySHA256": "f407100e48cd86a8c67473019ad0cb1b86fdbd21c338f38960e5b8fe513c07ee"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "path": "var/jb/Applications/RedditBoxFirewall.app/PlugIns/PacketTunnel.appex/PacketTunnel",
+            "slices": [
+              {
+                "cpu": 16777228,
+                "cpuSubtype": 0,
+                "sliceOffset": 0,
+                "directories": [
+                  {
+                    "slot": 0,
+                    "version": "0x20400",
+                    "flags": "0x0",
+                    "hashType": 2,
+                    "codePages": 37,
+                    "codeBytes": 148464,
+                    "boundSpecialSlots": [
+                      1,
+                      2,
+                      3,
+                      5,
+                      7
+                    ],
+                    "zeroSpecialSlots": [
+                      4,
+                      6
+                    ],
+                    "codeDirectorySHA256": "a1289194999c36771e2c4659d703ba16c778164706f47658c9b29871b5affb8f"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "path": "var/jb/Applications/RedditBoxFirewall.app/RedditBoxFirewall",
+            "slices": [
+              {
+                "cpu": 16777228,
+                "cpuSubtype": 0,
+                "sliceOffset": 0,
+                "directories": [
+                  {
+                    "slot": 0,
+                    "version": "0x20400",
+                    "flags": "0x0",
+                    "hashType": 2,
+                    "codePages": 23,
+                    "codeBytes": 93840,
+                    "boundSpecialSlots": [
+                      1,
+                      2,
+                      3,
+                      5,
+                      7
+                    ],
+                    "zeroSpecialSlots": [
+                      4,
+                      6
+                    ],
+                    "codeDirectorySHA256": "8c1450b9b911ce7e906be2e84940f1bf7963503ddae3684905bd85feb983fa39"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "path": "var/jb/Library/MobileSubstrate/DynamicLibraries/RedditBox.dylib",
+            "slices": [
+              {
+                "cpu": 16777228,
+                "cpuSubtype": 0,
+                "sliceOffset": 32768,
+                "directories": [
+                  {
+                    "slot": 0,
+                    "version": "0x20400",
+                    "flags": "0x0",
+                    "hashType": 2,
+                    "codePages": 139,
+                    "codeBytes": 568720,
+                    "boundSpecialSlots": [
+                      2
+                    ],
+                    "zeroSpecialSlots": [
+                      1
+                    ],
+                    "codeDirectorySHA256": "6a2ba64b4e29174a5f2ac1a212cd88a602f44e2ab8861a135549d22ac4674be8"
+                  }
+                ]
+              },
+              {
+                "cpu": 16777228,
+                "cpuSubtype": 2147483650,
+                "sliceOffset": 622592,
+                "directories": [
+                  {
+                    "slot": 0,
+                    "version": "0x20400",
+                    "flags": "0x0",
+                    "hashType": 2,
+                    "codePages": 143,
+                    "codeBytes": 585248,
+                    "boundSpecialSlots": [
+                      2
+                    ],
+                    "zeroSpecialSlots": [
+                      1
+                    ],
+                    "codeDirectorySHA256": "5ccb17c3af220482e9e5f05017bf01b13af0e16046f965304b8138467b2f2423"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "path": "var/jb/Library/PreferenceBundles/RedditBoxPrefs.bundle/RedditBoxPrefs",
+            "slices": [
+              {
+                "cpu": 16777228,
+                "cpuSubtype": 0,
+                "sliceOffset": 16384,
+                "directories": [
+                  {
+                    "slot": 0,
+                    "version": "0x20400",
+                    "flags": "0x0",
+                    "hashType": 2,
+                    "codePages": 17,
+                    "codeBytes": 67008,
+                    "boundSpecialSlots": [
+                      2
+                    ],
+                    "zeroSpecialSlots": [
+                      1
+                    ],
+                    "codeDirectorySHA256": "59a9dd4655580696845ab83d362f266966c116bdaee1dc75f1beb9788532dc21"
+                  }
+                ]
+              },
+              {
+                "cpu": 16777228,
+                "cpuSubtype": 2147483650,
+                "sliceOffset": 98304,
+                "directories": [
+                  {
+                    "slot": 0,
+                    "version": "0x20400",
+                    "flags": "0x0",
+                    "hashType": 2,
+                    "codePages": 17,
+                    "codeBytes": 67008,
+                    "boundSpecialSlots": [
+                      2
+                    ],
+                    "zeroSpecialSlots": [
+                      1
+                    ],
+                    "codeDirectorySHA256": "7eb487a8ee4d6353d2e0d2e9fe86318c30bbd30d52901aa8c9660d6fee7bc4c4"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "path": "var/jb/usr/bin/redditboxd",
+            "slices": [
+              {
+                "cpu": 16777228,
+                "cpuSubtype": 0,
+                "sliceOffset": 16384,
+                "directories": [
+                  {
+                    "slot": 0,
+                    "version": "0x20400",
+                    "flags": "0x0",
+                    "hashType": 2,
+                    "codePages": 275,
+                    "codeBytes": 1125648,
+                    "boundSpecialSlots": [
+                      2,
+                      5,
+                      7
+                    ],
+                    "zeroSpecialSlots": [
+                      1,
+                      3,
+                      4,
+                      6
+                    ],
+                    "codeDirectorySHA256": "34e1514fab07bd8ddfce7f6846835b5d13a3203f6058b01118728ef0316c8a6a"
+                  }
+                ]
+              },
+              {
+                "cpu": 16777228,
+                "cpuSubtype": 2147483650,
+                "sliceOffset": 1163264,
+                "directories": [
+                  {
+                    "slot": 0,
+                    "version": "0x20400",
+                    "flags": "0x0",
+                    "hashType": 2,
+                    "codePages": 283,
+                    "codeBytes": 1158464,
+                    "boundSpecialSlots": [
+                      2,
+                      5,
+                      7
+                    ],
+                    "zeroSpecialSlots": [
+                      1,
+                      3,
+                      4,
+                      6
+                    ],
+                    "codeDirectorySHA256": "162f702e5c1cb7c9c04b5083743e14b6744ba2a1675cd2c052988cf5ad15ecdc"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "path": "var/jb/usr/libexec/redditbox-keychain-cleaner",
+            "slices": [
+              {
+                "cpu": 16777228,
+                "cpuSubtype": 0,
+                "sliceOffset": 16384,
+                "directories": [
+                  {
+                    "slot": 0,
+                    "version": "0x20400",
+                    "flags": "0x0",
+                    "hashType": 2,
+                    "codePages": 18,
+                    "codeBytes": 71040,
+                    "boundSpecialSlots": [
+                      2,
+                      5,
+                      7
+                    ],
+                    "zeroSpecialSlots": [
+                      1,
+                      3,
+                      4,
+                      6
+                    ],
+                    "codeDirectorySHA256": "0ac0641ba79cecc8f3a79900371a0b746b215c627d692897dca5f06c48707642"
+                  }
+                ]
+              },
+              {
+                "cpu": 16777228,
+                "cpuSubtype": 2147483650,
+                "sliceOffset": 98304,
+                "directories": [
+                  {
+                    "slot": 0,
+                    "version": "0x20400",
+                    "flags": "0x0",
+                    "hashType": 2,
+                    "codePages": 18,
+                    "codeBytes": 71040,
+                    "boundSpecialSlots": [
+                      2,
+                      5,
+                      7
+                    ],
+                    "zeroSpecialSlots": [
+                      1,
+                      3,
+                      4,
+                      6
+                    ],
+                    "codeDirectorySHA256": "859db2d3a0eb00ab4a36889114f7900014f775e5ed0f9e7258e833f48697f35f"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "buildVerification": {
+        "completeBuildExitCode": 0,
+        "testEntrypoints": [
+          "tools/test_build_version.py",
+          "tools/test_package_variants.py",
+          "tools/test_apt_release.py",
+          "tools/test_facebook_binary_audit.py",
+          "tools/test_app_bundle_policy.sh",
+          "tools/test_app_runtime.sh",
+          "tools/test_facebook_user_agent.py",
+          "tools/test_facebook_user_agent_hooks.py",
+          "tools/test_app_profile.py",
+          "tools/test_clone_profile_ownership.py",
+          "tools/test_app_registry.sh",
+          "tools/test_app_keychain_policy.sh",
+          "tools/test_app_keychain_hooks.sh",
+          "tools/test_app_keychain_entitlements.sh",
+          "tools/test_app_process.sh",
+          "tools/test_app_process_coordinator.sh",
+          "tools/test_app_source.py",
+          "tools/test_app_mdm.sh",
+          "tools/test_app_scope.sh",
+          "tools/test_launcher_multiapp.py",
+          "tools/test_apt_metadata_refresh.py",
+          "tools/test_clone_architecture.py",
+          "tools/test_identity_editor.py",
+          "tools/test_clone_visibility_metadata.py",
+          "tools/test_installer_evidence.py",
+          "tools/test_app_install_recovery.py",
+          "tools/test_app_removal_identity.py",
+          "tools/test_app_deletion_flow.py",
+          "tools/test_app_deletion_targets.py",
+          "tools/test_app_deletion_closure.py",
+          "tools/test_app_launch_flow.py",
+          "tools/test_app_gate_control.py",
+          "tools/test_app_gate_readiness.py",
+          "tools/test_app_global_recovery.py",
+          "tools/test_app_maintenance_closure.py",
+          "tools/test_app_replacement_backend.py",
+          "tools/test_identity_manual_inputs.py",
+          "tools/test_automatic_identity.py",
+          "tools/test_passcode_removal.py",
+          "tools/test_passcode_store.sh",
+          "tools/test_identity_user_agent.py",
+          "tools/test_app_version_settings.py",
+          "tools/test_creation_defaults.py",
+          "tools/test_device_catalog_data.py",
+          "tools/test_device_version_hook.py",
+          "tools/test_identity_choices.py",
+          "tools/test_launcher_architecture.py",
+          "tests/test_replacement_architecture.py",
+          "tools/test_firewall_policy.sh",
+          "tools/test_request_queue.sh",
+          "tools/test_secure_config.sh",
+          "tools/test_identity_draft_store.sh",
+          "tools/test_preinstall.py",
+          "tools/test_postinstall.py",
+          "tools/test_macho_probe.py",
+          "tools/test_request_budgets.py",
+          "tools/test_proxy_library.sh",
+          "tools/test_proxy_configuration.py",
+          "tools/test_proxy_redirect_policy.py",
+          "tools/test_proxy_region.sh",
+          "tools/test_proxy_region_transport.py",
+          "tools/test_rotation_secrets.sh",
+          "tools/test_backup_snapshot.sh",
+          "tools/test_backup_identity.py",
+          "tools/test_app_backup_flow.py",
+          "tools/test_app_backup_transaction.py",
+          "tools/test_backup_restore_cleanup.py",
+          "tools/test_backup_archive.py",
+          "tools/test_identity_freeze.py",
+          "tools/test_smoke_log_order.py",
+          "tools/test_sign_firewall_app.py",
+          "tools/test_keychain_cleaner.sh",
+          "tools/test_keychain_sync.sh",
+          "tools/test_clone_acceptance.sh",
+          "tools/test_isolation_sentinel.sh",
+          "tools/test_launch_safety.sh",
+          "tools/test_proxy_route_transport.py",
+          "tools/test_acceptance_checks.sh",
+          "tools/test_operator_wording.sh",
+          "tools/test_wizard_draft.sh",
+          "tools/test_device_acceptance_ssh.py",
+          "tools/test_device_acceptance_canaries.py",
+          "tools/test_deletion_journal.sh",
+          "tools/test_profile_metadata.sh",
+          "tests/test_replacement.sh",
+          "tools/test_profile_metadata.py",
+          "tools/test_account_status_browser.py",
+          "tools/test_license_key.py",
+          "tools/test_license_screen.py",
+          "tools/test_license_presentation.py",
+          "tools/test_license_presentation.sh",
+          "tests/test_license_token.sh",
+          "tests/test_license_architecture.py",
+          "tests/test_data_schema.sh",
+          "tests/test_data_schema_architecture.py",
+          "tools/test_update_startup.py",
+          "tools/test_device_catalog.sh",
+          "tools/test_fingerprint_registry.sh",
+          "tools/test_operation_context.sh",
+          "tools/test_memory_budget.sh",
+          "tools/test_request_deadlines.sh",
+          "tools/test_bounded_process.sh",
+          "tools/test_service_lifetime.sh",
+          "tools/test_socket_guard.sh",
+          "tools/test_hook_readiness.sh",
+          "tools/test_http_proxy.sh",
+          "tools/test_reddit_payload.sh",
+          "tools/test_leak_audit.py",
+          "tools/test_leak_surface.py"
+        ],
+        "testEntrypointCount": 109,
+        "staticCheck": "ALL CLEAN",
+        "logSHA256": "a6603f1c35a0fb0b35055c31381233c574c1cd3776aa14b949f9791842ade813"
+      },
+      "facebookRunnable": false,
+      "facebookDefaultsWireReady": false,
+      "installedOnDevice": false,
+      "publishedToAPT": false,
+      "signingContractMatches0_1_22": true
+    },
+    {
+      "version": "0.1.23",
+      "filename": "debs/com.redditbox_0.1.23_iphoneos-arm.deb",
+      "sha256": "675fc2f923662407f06fa142fba8b379dcbfe2306c1714c9675b771d39ae0566",
+      "size": 1895168,
+      "control": {
+        "Package": "com.redditbox",
+        "Name": "RedditBox",
+        "Depends": "mobilesubstrate, firmware (>= 15.0), ldid, ai.akemi.appinst (>= 2.1.1), zip, ai.akemi.appsyncunified, uikittools (>= 2.1.6)",
+        "Description": "Multi-account containers + anti-fingerprint system for Reddit (palera1n rootless/rootful and Dopamine rootless)",
+        "Maintainer": "PC",
+        "Author": "PC",
+        "Section": "Tweaks",
+        "Architecture": "iphoneos-arm",
+        "Version": "0.1.23",
+        "Installed-Size": "5452"
+      },
+      "release": {
+        "version": "0.1.23",
+        "schemaVersion": 2,
+        "signingContractHash": "9a5ef7c3b56c49e8b7ff8fe5bbd793c0f66c5ca6be7b0f8a606dd0e397769bbe",
+        "requiresMDMReadoption": true,
+        "packageScheme": "rootful",
+        "packageArchitecture": "iphoneos-arm",
+        "installPrefix": ""
+      },
+      "sourceBaseCommit": "a70b422c297c13bbee616913d69c8c700ec2b9ab",
+      "workingTreeModified": true,
+      "sourceInventorySHA256": "5a7f2aaa2072d2aeafe1d541b26ca82952e709ecc2361023d0a065512e2749ed",
+      "recordedAtUTC": "2026-09-14T23:05:54.004131+00:00",
+      "distribution": "Private local test package; not installed or published",
+      "machOComponents": [
+        {
+          "path": "Applications/RedditBox.app/RedditBox",
+          "sha256": "c67a5e6f8bb0654f912214bc0734f1258583618dfaac42b8cf2f8d81b919055b",
+          "architectures": [
+            "arm64",
+            "arm64e"
+          ],
+          "slices": [
+            {
+              "architecture": "arm64",
+              "entitlementKeys": [
+                "application-identifier",
+                "keychain-access-groups"
+              ],
+              "entitlementPayloadSHA256": "29a9e60cf871c275f97c9d06dd9f9694c03fc032ea58497212e7d2c06e308d96"
+            },
+            {
+              "architecture": "arm64e",
+              "entitlementKeys": [
+                "application-identifier",
+                "keychain-access-groups"
+              ],
+              "entitlementPayloadSHA256": "29a9e60cf871c275f97c9d06dd9f9694c03fc032ea58497212e7d2c06e308d96"
+            }
+          ]
+        },
+        {
+          "path": "Applications/RedditBoxFirewall.app/PlugIns/PacketTunnel.appex/PacketTunnel",
+          "sha256": "f12355b6280fd14b2abc1379255633dd50886439c77e6735a1ee8af6302456be",
+          "architectures": [
+            "arm64"
+          ],
+          "slices": [
+            {
+              "architecture": "arm64",
+              "entitlementKeys": [
+                "application-identifier",
+                "com.apple.developer.networking.networkextension",
+                "com.apple.developer.team-identifier",
+                "com.apple.security.application-groups"
+              ],
+              "entitlementPayloadSHA256": "4555b49667e11192cde4384d788e9acc17435d158d5c61e280b71f131d5655d3"
+            }
+          ]
+        },
+        {
+          "path": "Applications/RedditBoxFirewall.app/RedditBoxFirewall",
+          "sha256": "575695ec7609807405ad8527705aa56f3efb4ae7f0850db028b9fa5e0e41cc50",
+          "architectures": [
+            "arm64"
+          ],
+          "slices": [
+            {
+              "architecture": "arm64",
+              "entitlementKeys": [
+                "application-identifier",
+                "com.apple.developer.networking.networkextension",
+                "com.apple.developer.team-identifier",
+                "com.apple.security.application-groups"
+              ],
+              "entitlementPayloadSHA256": "ed190db6fed36895054468d44eb3ad05f685f249e5ecb2369dfcaf605bbbb943"
+            }
+          ]
+        },
+        {
+          "path": "Library/MobileSubstrate/DynamicLibraries/RedditBox.dylib",
+          "sha256": "a5e191f207d9b88a6f42e2380f001a286b4fcb3942f516b50ff03f48c9f29bc7",
+          "architectures": [
+            "arm64",
+            "arm64e"
+          ],
+          "slices": [
+            {
+              "architecture": "arm64",
+              "entitlementKeys": [],
+              "entitlementPayloadSHA256": "9261ecceda608ef174256e5fdc774c1e6e3dcf533409c1bc393d490d01c713f1"
+            },
+            {
+              "architecture": "arm64e",
+              "entitlementKeys": [],
+              "entitlementPayloadSHA256": "9261ecceda608ef174256e5fdc774c1e6e3dcf533409c1bc393d490d01c713f1"
+            }
+          ]
+        },
+        {
+          "path": "Library/PreferenceBundles/RedditBoxPrefs.bundle/RedditBoxPrefs",
+          "sha256": "274b9e21bcdfb14eac1c58625b006ac1103ba85ff6fd8b2dc6d42a30541e39b2",
+          "architectures": [
+            "arm64",
+            "arm64e"
+          ],
+          "slices": [
+            {
+              "architecture": "arm64",
+              "entitlementKeys": [],
+              "entitlementPayloadSHA256": "9261ecceda608ef174256e5fdc774c1e6e3dcf533409c1bc393d490d01c713f1"
+            },
+            {
+              "architecture": "arm64e",
+              "entitlementKeys": [],
+              "entitlementPayloadSHA256": "9261ecceda608ef174256e5fdc774c1e6e3dcf533409c1bc393d490d01c713f1"
+            }
+          ]
+        },
+        {
+          "path": "usr/bin/redditboxd",
+          "sha256": "9f11355a98102385ced0e9a4d8be56b138e8a6b174541249110feb5c06ca4031",
+          "architectures": [
+            "arm64",
+            "arm64e"
+          ],
+          "slices": [
+            {
+              "architecture": "arm64",
+              "entitlementKeys": [
+                "application-identifier",
+                "com.apple.private.mobileinstall.allowedSPI",
+                "com.apple.private.uninstall.deletion",
+                "com.apple.security.exception.mach-lookup.global-name",
+                "keychain-access-groups",
+                "platform-application"
+              ],
+              "entitlementPayloadSHA256": "d2fea7c7a4c4ed94a58edf2d737235ca35165f29baa65124ebffd903fa368d75"
+            },
+            {
+              "architecture": "arm64e",
+              "entitlementKeys": [
+                "application-identifier",
+                "com.apple.private.mobileinstall.allowedSPI",
+                "com.apple.private.uninstall.deletion",
+                "com.apple.security.exception.mach-lookup.global-name",
+                "keychain-access-groups",
+                "platform-application"
+              ],
+              "entitlementPayloadSHA256": "d2fea7c7a4c4ed94a58edf2d737235ca35165f29baa65124ebffd903fa368d75"
+            }
+          ]
+        },
+        {
+          "path": "usr/libexec/redditbox-keychain-cleaner",
+          "sha256": "506b565948665fc56c64b12932bad52d47fb7a63ac3e7da5c24b190a99d86a18",
+          "architectures": [
+            "arm64",
+            "arm64e"
+          ],
+          "slices": [
+            {
+              "architecture": "arm64",
+              "entitlementKeys": [],
+              "entitlementPayloadSHA256": "9261ecceda608ef174256e5fdc774c1e6e3dcf533409c1bc393d490d01c713f1"
+            },
+            {
+              "architecture": "arm64e",
+              "entitlementKeys": [],
+              "entitlementPayloadSHA256": "9261ecceda608ef174256e5fdc774c1e6e3dcf533409c1bc393d490d01c713f1"
+            }
+          ]
+        }
+      ],
+      "machOInspection": {
+        "componentCount": 7,
+        "sliceCount": 12,
+        "allExpectedPathsAndArchitecturesChecked": true
+      },
+      "licensePin": {
+        "publicKeyID": "b2c5d4176c727107c9826ad69386d4d65f90920074981bd842127d6b22add6e9",
+        "matchesExistingDeploymentPublicPEM": true,
+        "publicKeyReplaced": false,
+        "embeddedInEveryDaemonSlice": true
+      },
+      "catalog": {
+        "models": 21,
+        "modelIOSChoices": 159,
+        "payloadMatchesCommittedCatalog": true
+      },
+      "entitlementValuesMatch0_1_18Rootless": true,
+      "entitlementValuesMatchBothVariants": true,
+      "codeDirectoryIntegrity": {
+        "schemaVersion": 1,
+        "package": "com.redditbox_0.1.23_iphoneos-arm.deb",
+        "sha256": "675fc2f923662407f06fa142fba8b379dcbfe2306c1714c9675b771d39ae0566",
+        "scope": "CodeDirectory code pages and every nonzero available special slot; no OS trust, Apple certificate, MDM adoption or full resource-tree claim.",
+        "source": "https://raw.githubusercontent.com/apple-oss-distributions/xnu/main/osfmk/kern/cs_blobs.h",
+        "components": [
+          {
+            "path": "Applications/RedditBox.app/RedditBox",
+            "slices": [
+              {
+                "cpu": 16777228,
+                "cpuSubtype": 0,
+                "sliceOffset": 16384,
+                "directories": [
+                  {
+                    "slot": 0,
+                    "version": "0x20400",
+                    "flags": "0x0",
+                    "hashType": 2,
+                    "codePages": 158,
+                    "codeBytes": 643248,
+                    "boundSpecialSlots": [
+                      2,
+                      5,
+                      7
+                    ],
+                    "zeroSpecialSlots": [
+                      1,
+                      3,
+                      4,
+                      6
+                    ],
+                    "codeDirectorySHA256": "53172bb19bb384e0a21b2dc2cd98dc3ebc10cbd6bdbd89b9ff7e8bd443ffa624"
+                  }
+                ]
+              },
+              {
+                "cpu": 16777228,
+                "cpuSubtype": 2147483650,
+                "sliceOffset": 671744,
+                "directories": [
+                  {
+                    "slot": 0,
+                    "version": "0x20400",
+                    "flags": "0x0",
+                    "hashType": 2,
+                    "codePages": 162,
+                    "codeBytes": 659648,
+                    "boundSpecialSlots": [
+                      2,
+                      5,
+                      7
+                    ],
+                    "zeroSpecialSlots": [
+                      1,
+                      3,
+                      4,
+                      6
+                    ],
+                    "codeDirectorySHA256": "9e8e798931e9b69e4f0845c669ed1aa6eee073a3c915a6011e4aac9f2f1290e8"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "path": "Applications/RedditBoxFirewall.app/PlugIns/PacketTunnel.appex/PacketTunnel",
+            "slices": [
+              {
+                "cpu": 16777228,
+                "cpuSubtype": 0,
+                "sliceOffset": 0,
+                "directories": [
+                  {
+                    "slot": 0,
+                    "version": "0x20400",
+                    "flags": "0x0",
+                    "hashType": 2,
+                    "codePages": 37,
+                    "codeBytes": 148464,
+                    "boundSpecialSlots": [
+                      1,
+                      2,
+                      3,
+                      5,
+                      7
+                    ],
+                    "zeroSpecialSlots": [
+                      4,
+                      6
+                    ],
+                    "codeDirectorySHA256": "a1289194999c36771e2c4659d703ba16c778164706f47658c9b29871b5affb8f"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "path": "Applications/RedditBoxFirewall.app/RedditBoxFirewall",
+            "slices": [
+              {
+                "cpu": 16777228,
+                "cpuSubtype": 0,
+                "sliceOffset": 0,
+                "directories": [
+                  {
+                    "slot": 0,
+                    "version": "0x20400",
+                    "flags": "0x0",
+                    "hashType": 2,
+                    "codePages": 23,
+                    "codeBytes": 93840,
+                    "boundSpecialSlots": [
+                      1,
+                      2,
+                      3,
+                      5,
+                      7
+                    ],
+                    "zeroSpecialSlots": [
+                      4,
+                      6
+                    ],
+                    "codeDirectorySHA256": "8c1450b9b911ce7e906be2e84940f1bf7963503ddae3684905bd85feb983fa39"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "path": "Library/MobileSubstrate/DynamicLibraries/RedditBox.dylib",
+            "slices": [
+              {
+                "cpu": 16777228,
+                "cpuSubtype": 0,
+                "sliceOffset": 32768,
+                "directories": [
+                  {
+                    "slot": 0,
+                    "version": "0x20400",
+                    "flags": "0x0",
+                    "hashType": 2,
+                    "codePages": 139,
+                    "codeBytes": 568720,
+                    "boundSpecialSlots": [
+                      2
+                    ],
+                    "zeroSpecialSlots": [
+                      1
+                    ],
+                    "codeDirectorySHA256": "2477ac5114c95c5b4be8ac31bbe6d798a3a19e4d48156e4fb66bfe877d07713e"
+                  }
+                ]
+              },
+              {
+                "cpu": 16777228,
+                "cpuSubtype": 2147483650,
+                "sliceOffset": 622592,
+                "directories": [
+                  {
+                    "slot": 0,
+                    "version": "0x20400",
+                    "flags": "0x0",
+                    "hashType": 2,
+                    "codePages": 143,
+                    "codeBytes": 585248,
+                    "boundSpecialSlots": [
+                      2
+                    ],
+                    "zeroSpecialSlots": [
+                      1
+                    ],
+                    "codeDirectorySHA256": "4fa37a7710e10eddeaeecfe72629bf3e4f477580b82c0af9159ce60a6ed11def"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "path": "Library/PreferenceBundles/RedditBoxPrefs.bundle/RedditBoxPrefs",
+            "slices": [
+              {
+                "cpu": 16777228,
+                "cpuSubtype": 0,
+                "sliceOffset": 16384,
+                "directories": [
+                  {
+                    "slot": 0,
+                    "version": "0x20400",
+                    "flags": "0x0",
+                    "hashType": 2,
+                    "codePages": 17,
+                    "codeBytes": 67008,
+                    "boundSpecialSlots": [
+                      2
+                    ],
+                    "zeroSpecialSlots": [
+                      1
+                    ],
+                    "codeDirectorySHA256": "18da28f8b3649ff7983e8dbc59ce1cdf9e8eee34a50f7245f393daa7944e12c5"
+                  }
+                ]
+              },
+              {
+                "cpu": 16777228,
+                "cpuSubtype": 2147483650,
+                "sliceOffset": 98304,
+                "directories": [
+                  {
+                    "slot": 0,
+                    "version": "0x20400",
+                    "flags": "0x0",
+                    "hashType": 2,
+                    "codePages": 17,
+                    "codeBytes": 67008,
+                    "boundSpecialSlots": [
+                      2
+                    ],
+                    "zeroSpecialSlots": [
+                      1
+                    ],
+                    "codeDirectorySHA256": "8622824afed6eea0e7c889fb93a6fdc51443dd15ae95c6ce7ce4ce85e8c23d0b"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "path": "usr/bin/redditboxd",
+            "slices": [
+              {
+                "cpu": 16777228,
+                "cpuSubtype": 0,
+                "sliceOffset": 16384,
+                "directories": [
+                  {
+                    "slot": 0,
+                    "version": "0x20400",
+                    "flags": "0x0",
+                    "hashType": 2,
+                    "codePages": 275,
+                    "codeBytes": 1125504,
+                    "boundSpecialSlots": [
+                      2,
+                      5,
+                      7
+                    ],
+                    "zeroSpecialSlots": [
+                      1,
+                      3,
+                      4,
+                      6
+                    ],
+                    "codeDirectorySHA256": "b213a36444d782a9336edcc45572e3b4c469422ca5ea5b99c50b00d5d947121e"
+                  }
+                ]
+              },
+              {
+                "cpu": 16777228,
+                "cpuSubtype": 2147483650,
+                "sliceOffset": 1179648,
+                "directories": [
+                  {
+                    "slot": 0,
+                    "version": "0x20400",
+                    "flags": "0x0",
+                    "hashType": 2,
+                    "codePages": 279,
+                    "codeBytes": 1141920,
+                    "boundSpecialSlots": [
+                      2,
+                      5,
+                      7
+                    ],
+                    "zeroSpecialSlots": [
+                      1,
+                      3,
+                      4,
+                      6
+                    ],
+                    "codeDirectorySHA256": "334f8a8bf2d8c18555733c83c3f04b33d308540df4db8c7d69a6475108705985"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "path": "usr/libexec/redditbox-keychain-cleaner",
+            "slices": [
+              {
+                "cpu": 16777228,
+                "cpuSubtype": 0,
+                "sliceOffset": 16384,
+                "directories": [
+                  {
+                    "slot": 0,
+                    "version": "0x20400",
+                    "flags": "0x0",
+                    "hashType": 2,
+                    "codePages": 18,
+                    "codeBytes": 71040,
+                    "boundSpecialSlots": [
+                      2,
+                      5,
+                      7
+                    ],
+                    "zeroSpecialSlots": [
+                      1,
+                      3,
+                      4,
+                      6
+                    ],
+                    "codeDirectorySHA256": "0a4d83b92d237507afe59c1ea1c1dba0160117bf61973d30dc64136eb0308f18"
+                  }
+                ]
+              },
+              {
+                "cpu": 16777228,
+                "cpuSubtype": 2147483650,
+                "sliceOffset": 98304,
+                "directories": [
+                  {
+                    "slot": 0,
+                    "version": "0x20400",
+                    "flags": "0x0",
+                    "hashType": 2,
+                    "codePages": 18,
+                    "codeBytes": 71040,
+                    "boundSpecialSlots": [
+                      2,
+                      5,
+                      7
+                    ],
+                    "zeroSpecialSlots": [
+                      1,
+                      3,
+                      4,
+                      6
+                    ],
+                    "codeDirectorySHA256": "eb13a6bb5cc35cd45d43a8c372fc24baf273c58880d03bbe4f34438802673ccf"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "buildVerification": {
+        "completeBuildExitCode": 0,
+        "testEntrypoints": [
+          "tools/test_build_version.py",
+          "tools/test_package_variants.py",
+          "tools/test_apt_release.py",
+          "tools/test_facebook_binary_audit.py",
+          "tools/test_app_bundle_policy.sh",
+          "tools/test_app_runtime.sh",
+          "tools/test_facebook_user_agent.py",
+          "tools/test_facebook_user_agent_hooks.py",
+          "tools/test_app_profile.py",
+          "tools/test_clone_profile_ownership.py",
+          "tools/test_app_registry.sh",
+          "tools/test_app_keychain_policy.sh",
+          "tools/test_app_keychain_hooks.sh",
+          "tools/test_app_keychain_entitlements.sh",
+          "tools/test_app_process.sh",
+          "tools/test_app_process_coordinator.sh",
+          "tools/test_app_source.py",
+          "tools/test_app_mdm.sh",
+          "tools/test_app_scope.sh",
+          "tools/test_launcher_multiapp.py",
+          "tools/test_apt_metadata_refresh.py",
+          "tools/test_clone_architecture.py",
+          "tools/test_identity_editor.py",
+          "tools/test_clone_visibility_metadata.py",
+          "tools/test_installer_evidence.py",
+          "tools/test_app_install_recovery.py",
+          "tools/test_app_removal_identity.py",
+          "tools/test_app_deletion_flow.py",
+          "tools/test_app_deletion_targets.py",
+          "tools/test_app_deletion_closure.py",
+          "tools/test_app_launch_flow.py",
+          "tools/test_app_gate_control.py",
+          "tools/test_app_gate_readiness.py",
+          "tools/test_app_global_recovery.py",
+          "tools/test_app_maintenance_closure.py",
+          "tools/test_app_replacement_backend.py",
+          "tools/test_identity_manual_inputs.py",
+          "tools/test_automatic_identity.py",
+          "tools/test_passcode_removal.py",
+          "tools/test_passcode_store.sh",
+          "tools/test_identity_user_agent.py",
+          "tools/test_app_version_settings.py",
+          "tools/test_creation_defaults.py",
+          "tools/test_device_catalog_data.py",
+          "tools/test_device_version_hook.py",
+          "tools/test_identity_choices.py",
+          "tools/test_launcher_architecture.py",
+          "tests/test_replacement_architecture.py",
+          "tools/test_firewall_policy.sh",
+          "tools/test_request_queue.sh",
+          "tools/test_secure_config.sh",
+          "tools/test_identity_draft_store.sh",
+          "tools/test_preinstall.py",
+          "tools/test_postinstall.py",
+          "tools/test_macho_probe.py",
+          "tools/test_request_budgets.py",
+          "tools/test_proxy_library.sh",
+          "tools/test_proxy_configuration.py",
+          "tools/test_proxy_redirect_policy.py",
+          "tools/test_proxy_region.sh",
+          "tools/test_proxy_region_transport.py",
+          "tools/test_rotation_secrets.sh",
+          "tools/test_backup_snapshot.sh",
+          "tools/test_backup_identity.py",
+          "tools/test_app_backup_flow.py",
+          "tools/test_app_backup_transaction.py",
+          "tools/test_backup_restore_cleanup.py",
+          "tools/test_backup_archive.py",
+          "tools/test_identity_freeze.py",
+          "tools/test_smoke_log_order.py",
+          "tools/test_sign_firewall_app.py",
+          "tools/test_keychain_cleaner.sh",
+          "tools/test_keychain_sync.sh",
+          "tools/test_clone_acceptance.sh",
+          "tools/test_isolation_sentinel.sh",
+          "tools/test_launch_safety.sh",
+          "tools/test_proxy_route_transport.py",
+          "tools/test_acceptance_checks.sh",
+          "tools/test_operator_wording.sh",
+          "tools/test_wizard_draft.sh",
+          "tools/test_device_acceptance_ssh.py",
+          "tools/test_device_acceptance_canaries.py",
+          "tools/test_deletion_journal.sh",
+          "tools/test_profile_metadata.sh",
+          "tests/test_replacement.sh",
+          "tools/test_profile_metadata.py",
+          "tools/test_account_status_browser.py",
+          "tools/test_license_key.py",
+          "tools/test_license_screen.py",
+          "tools/test_license_presentation.py",
+          "tools/test_license_presentation.sh",
+          "tests/test_license_token.sh",
+          "tests/test_license_architecture.py",
+          "tests/test_data_schema.sh",
+          "tests/test_data_schema_architecture.py",
+          "tools/test_update_startup.py",
+          "tools/test_device_catalog.sh",
+          "tools/test_fingerprint_registry.sh",
+          "tools/test_operation_context.sh",
+          "tools/test_memory_budget.sh",
+          "tools/test_request_deadlines.sh",
+          "tools/test_bounded_process.sh",
+          "tools/test_service_lifetime.sh",
+          "tools/test_socket_guard.sh",
+          "tools/test_hook_readiness.sh",
+          "tools/test_http_proxy.sh",
+          "tools/test_reddit_payload.sh",
+          "tools/test_leak_audit.py",
+          "tools/test_leak_surface.py"
+        ],
+        "testEntrypointCount": 109,
+        "staticCheck": "ALL CLEAN",
+        "logSHA256": "b8dddd7748236a56238be91c0c6000145f88e804a3468912b2308a9de68f9d94"
+      },
+      "facebookRunnable": false,
+      "facebookDefaultsWireReady": false,
+      "installedOnDevice": false,
+      "publishedToAPT": false,
+      "signingContractMatches0_1_22": true
+    }
+  ],
+  "codeDirectoryVerifier": {
+    "privateScriptSHA256": "833daa6a1a16c701d7405da4c0be205ce134ec2c94169029592ac39c728bd53a",
+    "tamperChecks": {
+      "inMemoryOnly": true,
+      "packageBytesUnchanged": true,
+      "codePageTamperRejected": true,
+      "entitlementBlobTamperRejected": true
+    },
+    "macOSCodesignResult": "Rejected rootless 0.1.23 and prior 0.1.18 for all seven targets with code object is not signed at all. No macOS trust/Apple certificate acceptance is claimed."
+  },
+  "hostUnitTests": {
+    "policyAssertions": 69,
+    "actualInstallerWrapperAssertions": 66,
+    "freshProcessScenarios": 19,
+    "failingFirst": [
+      "unmodified Mozilla prefix",
+      "missing producer installer",
+      "non-null invalid trampoline called after failed installation"
+    ]
+  },
+  "deviceAvailability": {
+    "checkedAtUTC": "2026-09-14T23:07:31.074012+00:00",
+    "usbDeviceCount": 0,
+    "lastVerifiedInstalledVersion": "0.1.22",
+    "newCandidateDeviceAcceptance": "NOT RUN",
+    "mdmPrerequisite": "User input pending; last device state had zero verified managed installations and zero armed VPN rows."
+  }
+}

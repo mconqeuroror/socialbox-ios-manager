@@ -1,0 +1,160 @@
+{
+  "schemaVersion": 1,
+  "unit": 30,
+  "kind": "socialbox-explicit-saved-settings-retirement-ui",
+  "recordedAt": "2026-10-01T16:53:08.352868+00:00",
+  "status": "PASS_HOST_UI_WITH_RELEASE_BLOCKERS",
+  "clientDeliveryReady": false,
+  "customerArtifactReleased": false,
+  "customerCodeIssued": false,
+  "scope": {
+    "implemented": "Existing Saved setups editor adds explicit Remove saved settings and destructive confirmation. Loaded full original, not unsaved fields or list projection, is the request input. Existing visual system and Connection are unchanged.",
+    "stage": "Fresh signed validation, authenticated root status and FULL read equality precede immutable original/stable stageRequestID/expected-empty epoch retention BEFORE stage-retire. Root acknowledgement supplies exact token/epoch; root alone decides strict unreserved eligibility.",
+    "recovery": "Separate retirement coordinator methods and visible Check/Retry removal use separate stage-retire/execute-retire/reconcile-retire results. Generic save/retry refuses retirement; retirement recovery refuses create/update. Only typed retired plus full exact document/completed slot/no pending and retained intent/slot match clears uncertainty.",
+    "failure": "Every unsuccessful mutation may follow publication. Keep exact original document/UUID/request/slot; freshly validate/reconcile, never regenerate/discard/reset/adopt. Same empty epoch preserves uncertain intent. Different newer rendering never replaces retained authority.",
+    "lifetime": "No startup mutation/resend. Singleton preserves unpublished uncertain input across dismissal only while process alive. Restart recovers durable root slots, not lost unpublished memory. Late/duplicate callbacks use per-step/generation guards; UI requires current generation, live presented navigation and exact current editor/top editor.",
+    "afterProof": "Confirmed retirement locks old editor and reloads active inventory. Empty list/missing read never confirms removal. Permanent private tombstone/UUID occupation remain; no secure erase.",
+    "excluded": "No role relaxation, mobile501/501 journal change/use, first-provisioning authority, raw writer fallback, numeric CID/app-data/accounts/allocated purge, UUID release, runtime grant or client release."
+  },
+  "acceptance": {
+    "status": "PASS",
+    "hostAssertions": 2447,
+    "hostQuotedInputs": 35,
+    "ui": {
+      "ui-attempt-04": {
+        "status": "PASS",
+        "assertions": 83,
+        "quotedInputs": 58,
+        "reportSHA256": "8aea64a1e3c41f4ae3c7f02d573d588fbe98ab61f31b2e4f393ccda764790d88"
+      },
+      "saved-regression-03": {
+        "status": "PASS",
+        "assertions": 126,
+        "quotedInputs": 58,
+        "reportSHA256": "b1c5e8cc5ff8a4dfa690859abad05a7a47c05452b7c4ccfbe7f2691dfeb36b94"
+      },
+      "activation-regression-01": {
+        "status": "PASS",
+        "assertions": 86,
+        "quotedInputs": 58,
+        "reportSHA256": "70a6f22c57088e4f9a44b4ee1bc04b7c0d0ff73ed4fc0c26438ec4b415201da8"
+      },
+      "workspace-regression-01": {
+        "status": "PASS",
+        "assertions": 239,
+        "quotedInputs": 58,
+        "reportSHA256": "beded49da2ce913ca8c5906bf964ba0e6df77f92ae081c8434d10f4c3dedbeaf"
+      }
+    },
+    "copyAssertions": 815,
+    "totalAssertions": 3796,
+    "productionQuotedInputs": 69,
+    "overlaySHA256": "23d02d936f76a571af62377710fba60cfbd20329dcd8861521b0b7e3023f3e3e",
+    "strictMacSignature": "PASS",
+    "deviceTrust": "NOT_RUN",
+    "limits": "Current byte equality/strict macOS ad-hoc signature and named seam absence; no publisher/OS device trust, native service exchange or runtime acceptance."
+  },
+  "hostScope": "Actual fresh host root owner/vault/store files through existing test-only role/client seams and ephemeral synthetic signed source admission. No kernel peer or installation provenance.",
+  "uiScope": "83 synthetic UIKit assertions plus126 saved-setup,86 activation and239 workspace regressions; each58 quoted inputs stable/current. Typed in-memory transport; no native root files/live license/physical touch. Source UIAlertAction handler is invoked after fixture dismissal. Narrow320-point removal reachability, cancellation, full original, uncertainty, reopen, separate controls and dismissed/duplicate callbacks pass. Attached replacement-editor supersession is source-reviewed, not synthetic acceptance.",
+  "copyScope": "815 native catalog checks and302 references across8 files; successful output retained. No before/after copied-source graph freeze is claimed for this unchanged copy runner.",
+  "production": {
+    "status": "PASS",
+    "architectures": [
+      "arm64",
+      "arm64e"
+    ],
+    "quotedInputs": 69,
+    "sourceStable": true,
+    "overlaySHA256": "23d02d936f76a571af62377710fba60cfbd20329dcd8861521b0b7e3023f3e3e",
+    "strictMacAdHocSignature": "PASS",
+    "emptyEntitlements": "PASS",
+    "namedFixtureProvidersAbsent": "PASS",
+    "limits": "32 translation units/35 quoted project headers plus Makefile/filter; source-owned inputs only, SDK/Theos/compiler/OS excluded. Ad-hoc host verification is not publisher/device trust or launch acceptance. Native service/installer unchanged and not rebuilt; their earlier strict arm64e FAIL remains unresolved.",
+    "privateBuildReportSHA256": "c6405b4f9f8fcc81e375e06f39e2968e0ea7ecc47dc6e002b45b69678447034a",
+    "independentEvidenceSHA256": "352bdcf4916e7d951da62db3263e1f2fd660d9d2dd94a350011298fa8966a111"
+  },
+  "retainedAttempts": [
+    {
+      "attempt": "ui-attempt-01",
+      "status": "FAIL_BEFORE_INSTALL",
+      "detail": "Fixture cast grouping typo before simulator install. Corrected only fixture cast; no production check relaxed."
+    },
+    {
+      "attempt": "host-attempt-01",
+      "status": "FAIL",
+      "assertions": 2447,
+      "failures": 1,
+      "sourceStable": true,
+      "detail": "Missing-history fixture incorrectly required no new explicit Retry proof request. Exact completed token/epoch must ask root for NEW full proof; corrected expects one request and still requires conflict/retained intent/no tombstone recreation/unchanged bytes-inodes. Production unchanged."
+    },
+    {
+      "attempt": "saved-regression-01",
+      "status": "FAIL",
+      "assertions": 117,
+      "failures": 1,
+      "sourceStable": true,
+      "detail": "Old text matcher searched differs after source conflict copy changed to differ/cannot be changed. Corrected matcher only; production unchanged."
+    },
+    {
+      "attempt": "ui-attempt-02",
+      "status": "PASS",
+      "assertions": 79,
+      "sourceStable": true,
+      "detail": "Narrower initial scope retained. Read-only review found synthetic completed-retire fixture token check gap; final provider explicitly refuses wrong token. New final UI attempt adds wrong-token refusal and320-point reachability, PASS83."
+    },
+    {
+      "attempt": "saved-regression-02",
+      "status": "PASS",
+      "assertions": 126,
+      "sourceStable": true,
+      "detail": "Retained previous provider version. New final regression accepts stricter provider without production changes."
+    },
+    {
+      "attempt": "ui-attempt-03",
+      "status": "PASS",
+      "assertions": 83,
+      "sourceStable": true,
+      "detail": "Independent review found viewport wording stronger than test: minY lower bound was missing. New final ui-attempt-04 adds minY>=0 and passes83 with58 current stable inputs. Production is unchanged; previous passing evidence retained, not reused/rerun."
+    }
+  ],
+  "review": {
+    "status": "PASS_SCOPED",
+    "detail": "Independent reviewer checked root-authored production/UI/transport/runner and suggested stricter fixture completed-token refusal, applied without production changes. Reviewer authored host fixture and did not independently review it; root independently reviewed/ran and corrected missing-history expectation. Current source/hash/count/native-evidence verifier checked independently. Final counts/hashes/verifier/strict host signature and claim scope independently reviewed. Narrow viewport assertion strengthened in a new83-check attempt after review, without production changes."
+  },
+  "sourceSHA256": {
+    "lucid/Containers/LBXContainerRootMutationCoordinator.h": "9ac8a4b7efe1d0e981b0771d36ca762b615521c1666adb7e6635495f9c13440f",
+    "lucid/Containers/LBXContainerRootMutationCoordinator.m": "7f2820da59654fbcb01568a31bf60510adff327677f2a62fe52063c0a3a3ecf1",
+    "lucid/Presentation/SBSavedContainerSetup.m": "23a5fe90b6787fbdba4153009864f7494c7267c102dfef89f6ed37b4c513927d",
+    "lucid/Presentation/Tests/retirement_fixture.m": "accbae20167235c6ab2be91420ea7ba2a549505dbe5670939e03f75bbdf6937e",
+    "lucid/Presentation/Tests/saved_setup_fixture.m": "7c4452a1186c9d14063ddea1f3e9493c7314d5bed5af95ddb20bc7f9fe75b016",
+    "lucid/Presentation/Tests/saved_setup_transport_fixture.m": "0a45b7ffab64ead69fde326a78dae666260f04bb0f246ecaa57c198ddb090a67",
+    "lucid/Presentation/Tests/run_simulator.py": "2964e3170e5a7fc5f170541663d84a5c798c5893ce69d8fe61509d7fba3a9ade",
+    "lucid/tests/root_mutation_coordinator.m": "3d9ccabb5b8e73ed479f55a1d34c00ecefcaef96765ffc7240bb282c2ecdb3d8"
+  },
+  "notRun": [
+    "actual authenticated kernel-peer retirement exchange",
+    "default production endpoint/original locked owner-page/customer installer",
+    "owner overlay/service installation",
+    "physical touch/new actual website license",
+    "physical process kill/crash/reboot/power loss/concurrency",
+    "attached replacement-editor supersession acceptance",
+    "target isolation/switching/recovery/running-session licensing/accounts/proxy/runtime",
+    "customer package/access code/download release"
+  ],
+  "effects": {
+    "phone": "NOT_RUN",
+    "websiteDeployment": "NOT_RUN",
+    "realLicenseIssued": "NOT_RUN",
+    "ownerUpdate": "NOT_RUN",
+    "accountContentsRead": false,
+    "customerPublished": false
+  },
+  "releaseBlockers": "Legitimate first-provisioning issuer/history/target trust contract and clean target unavailable; private check-only installer unusable for fresh configure. IG sibling read FAIL and Facebook launch FAIL remain; Twitter runtime unaccepted. No source metadata proof fixes runtime or grants release.",
+  "postCommitGovernance": {
+    "sourceCommit": "954a52a73120988354416a0193e4e06f594add9b",
+    "requiredTrailer": "MISSING",
+    "historicalGate": "FAIL",
+    "supplement": "docs/release-evidence/socialbox-saved-settings-retirement-audit-supplement-2026-10-01.json",
+    "handling": "Own-commit mapping recorded without history rewrite or checker exception. Successful code checks do not repair the missing historical declaration."
+  }
+}

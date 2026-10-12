@@ -1,0 +1,193 @@
+{
+  "date": "2026-09-22",
+  "version": "3.1.0-1+socialbox.5",
+  "status": "PRIVATE_SINGLE_FILE_WRITE_FIX_NOT_COMPLETE_CONTAINER_TRANSACTION",
+  "packageSHA256": "76655bce7942309a31bb65470068366263d4ce2619915a36aead63200b0a2cc0",
+  "packageInstalled": false,
+  "helperBuildInputs": {
+    "translation_units": {
+      "library": [
+        "lucid/HelperSafety/LBXHelperSafety.m",
+        "lucid/HelperSafety/LBXDrainClient.m",
+        "lucid/HelperSafety/LBXDrainProtocol.m",
+        "lucid/Switching/LBXManagedApplications.m"
+      ],
+      "app_library": [
+        "lucid/HelperSafety/LBXAppSwitchSafety.m",
+        "lucid/HelperSafety/LBXDrainClient.m",
+        "lucid/HelperSafety/LBXDrainProtocol.m",
+        "lucid/HelperSafety/LBXGlobalMetadata.m",
+        "lucid/HelperSafety/LBXGlobalMetadataHook.m",
+        "lucid/Switching/LBXManagedApplications.m"
+      ],
+      "service": [
+        "lucid/HelperSafety/Service.m",
+        "lucid/HelperSafety/LBXDrainProtocol.m",
+        "lucid/Switching/LBXManagedApplications.m",
+        "lucid/Switching/LBXProcessDrain.m",
+        "lucid/Switching/LBXDarwinDrainBackend.m",
+        "shared/RBXProcessIdentity.m"
+      ]
+    },
+    "sha256": {
+      "lucid/HelperSafety/LBXAppSwitchSafety.m": "de57b0a23584e5cefffd2ebf3f41b73062078436a7a8ddb4cf84ab4333f31b18",
+      "lucid/HelperSafety/LBXAppSwitchSafety.plist": "3681e6755aaf909f9edf29e045857ef8a99c861dd48a7230aeb5292674575f66",
+      "lucid/HelperSafety/LBXDrainClient.h": "3ebccf306187a38c0de34a63026d9ac4fe31ece570913d5c9d8aa4c062b7462a",
+      "lucid/HelperSafety/LBXDrainClient.m": "c49b3fc7b5b0ad0ec6b0c8568bc3703809abe27805f5a94a53577a0c14f0b99f",
+      "lucid/HelperSafety/LBXDrainProtocol.h": "187bf432a1576b01443c7f8a70ffcd954ec3240dc66267ea800137abf1add060",
+      "lucid/HelperSafety/LBXDrainProtocol.m": "b4d5bb295a4b93ef39091ac80d93df6ff442bdbc879543f45b0d309a60bc897b",
+      "lucid/HelperSafety/LBXGlobalMetadata.h": "530b1a15a3b42c6ca6b009a80458e4c3cee82fb78d39b759fca669d8295417f5",
+      "lucid/HelperSafety/LBXGlobalMetadata.m": "bd7ce2db7181055d1501051347967e02cf1d56b104b5c25f984f9aa513983ac4",
+      "lucid/HelperSafety/LBXGlobalMetadataHook.m": "c0aa2756bcfa7760ffcff19446ea5822b23c1836d2a2df8c4350916ccd9c97a3",
+      "lucid/HelperSafety/LBXHelperSafety.m": "a82aa23322c4f82a0ced8b7457739add7e9d564e54860afd0a78e3b7b5d21122",
+      "lucid/HelperSafety/LBXXPC.h": "dd03df90efb001c332e622a2a1f1292d1f3ceaca02916a8a7dc3d86f1c4d474d",
+      "lucid/HelperSafety/Makefile": "a3651b6cf732cd12e41e5b6836272edeb6629c452edba63189e2b2fca2f2421f",
+      "lucid/HelperSafety/Service.m": "78fa7f3b676ef16b88a20665bae296f356bdbe7c735759971fb8c7eb2bbafdf5",
+      "lucid/HelperSafety/com.socialbox.processdrain.plist": "128ef3cc587c523f053ef1daf437c68753cfcaa1a4a34e0808cff1a21fbbaa6a",
+      "lucid/Switching/LBXDarwinDrainBackend.h": "bc30c2a9b426e687c0747fd530d137f7413815f481bfa40be0edb705f4c67b03",
+      "lucid/Switching/LBXDarwinDrainBackend.m": "ce44648d82c1fd9699d73f4b05e5a3c7ea54c6556c3372d0ed6473275042ad1c",
+      "lucid/Switching/LBXManagedApplications.def": "ed091393567df59f5c4bf239dcdebdc35c2dd70d39ceb23045ea435eba3e8f39",
+      "lucid/Switching/LBXManagedApplications.h": "1a143502bb2a3e59bbe88ba22bd46c37faf3ed2a4d1199d84010c8898d932981",
+      "lucid/Switching/LBXManagedApplications.m": "dbd31dbe4266b1c0fcbb336972541ef4b6f76d3e77d4c707008e4f58da4750af",
+      "lucid/Switching/LBXProcessDrain.h": "4d1947fecec1da0ba1725626f19eb6b6b28b1b0844d73dfaa35214533bba49be",
+      "lucid/Switching/LBXProcessDrain.m": "ecf3211f9cbbaac20b01209764cda632ff3f844715353516d8679956a1200b3c",
+      "lucid/Switching/ProcessDrain.entitlements": "52c5e6e55e09b154c9e3d214e036c1eb0f92e164c80a1d8b2d1b079a8e55a2b4",
+      "shared/RBXProc.h": "988131ea103712173f484ff1226477c141b5ab21a1d232241210941010fe410e",
+      "shared/RBXProcessIdentity.h": "49867f126d4004dae91ba8f6902dfa4303e09ab90f20763b0bf57430179dcc57",
+      "shared/RBXProcessIdentity.m": "824117806f274f96fb3d5e29c38f60361754dbd10403af96de27b3ab0cca16ab"
+    }
+  },
+  "outputs": {
+    "library": {
+      "sha256": "09a0b5cd08e199b0c8a034db24925d0872b05966601c5cec25109443e77211b0",
+      "slices": [
+        {
+          "subtype": 0,
+          "sha256": "c4a60034ff3186ddc7c2de3cb8424b18a4658e53ebe4e0d3202b164cfa0204f5"
+        },
+        {
+          "subtype": 2147483650,
+          "sha256": "60c30f29a9f91a29c3db2e1b3071a8a0141c2b78054296f084140e4e8d14a0ea"
+        }
+      ]
+    },
+    "app_library": {
+      "sha256": "d82d94d3d9dc3c79fb2ee2ec5145d119b31d7c3d6ff3d8caf55725f37c982cd2",
+      "slices": [
+        {
+          "subtype": 0,
+          "sha256": "1c16747bb2288e7fb813d538556900d86e3ba8fcfb5766bc8e54e46b0bc31d53"
+        },
+        {
+          "subtype": 2147483650,
+          "sha256": "febcec060860eb2af5e35d7f51310b29924d708f2a8ee819f30a22af2c6c1f72"
+        }
+      ]
+    },
+    "service": {
+      "sha256": "627ece9d4c26ff053ce6ddb232444085aa81d948dac4e6c393c823f5c8c53228",
+      "slices": [
+        {
+          "subtype": 0,
+          "sha256": "1eb4c504551f267d964621ece3a7289d02b0f15102384ef60dc63174745ba0d6"
+        },
+        {
+          "subtype": 2147483650,
+          "sha256": "3f2a05d7152752276865d08988fb3fbdb04a72064710992f8e72603717172dd8"
+        }
+      ]
+    }
+  },
+  "independentArchiveVerification": {
+    "status": "PASS",
+    "packageSHA256": "76655bce7942309a31bb65470068366263d4ce2619915a36aead63200b0a2cc0",
+    "payloadFiles": 58,
+    "rootOwnershipAndMD5": "PASS",
+    "managerMode": "06755",
+    "originalProgramsUnchanged": 15,
+    "originalSlicesUnchanged": 25,
+    "sourceHashesCurrent": true,
+    "scriptsSyntax": "PASS",
+    "installed": false
+  },
+  "hostChecks": {
+    "protocol": 96,
+    "client": 54,
+    "helperMethod": 39,
+    "peerAuthentication": 30,
+    "perAppGuard": 175,
+    "globalMetadata": 80,
+    "metadataHook": 27,
+    "packageGroups": 5,
+    "recoveredPackageGroups": 31,
+    "staticCheck": "ALL CLEAN"
+  },
+  "staticOriginalBinary": {
+    "status": "PASS_STATIC_TWO_ARCHITECTURE_BOUNDARY",
+    "originalSHA256": "e230dab07690e30c292962a3c0a3ea8301f9532aaa583a7209fdf33142552dd0",
+    "results": [
+      {
+        "architecture": "arm64",
+        "managerMethods": "MATCH",
+        "sourceCodePins": "MATCH",
+        "getterReturnPC": "0x100229c44",
+        "timeoutSkipsSuccessBlock": true,
+        "failureCompletionBOOL": false,
+        "globalMetadataMethods": "MATCH",
+        "originalWorkerExecuted": false,
+        "networkOrStorageIsolationProven": false
+      },
+      {
+        "architecture": "arm64e",
+        "managerMethods": "MATCH",
+        "sourceCodePins": "MATCH",
+        "getterReturnPC": "0x10022f4c8",
+        "timeoutSkipsSuccessBlock": true,
+        "failureCompletionBOOL": false,
+        "globalMetadataMethods": "MATCH",
+        "originalWorkerExecuted": false,
+        "networkOrStorageIsolationProven": false
+      }
+    ]
+  },
+  "phone": {
+    "model": "iPhone X",
+    "os": "16.7.16",
+    "architecture": "arm64",
+    "fixtureChecks": [
+      {
+        "name": "metadata-device-fs",
+        "sha256": "f3a7277e116016b1d695a5a845190e70ce5c54f134f009bd92dc07fa0adfe46b",
+        "passed": true,
+        "result": "PASS global metadata: 80 checks, 0 failures; real filesystem/concurrency/crash boundaries"
+      },
+      {
+        "name": "metadata-device-hook",
+        "sha256": "5602ea5282100275062727820cda2e2a95a7da427e8a0007dc85156fea0e6c54",
+        "passed": true,
+        "result": "PASS metadata hook: 27 checks, 0 failures; actual Objective-C methods, mocked storage/alias"
+      },
+      {
+        "name": "metadata-device-switch",
+        "sha256": "e1e6d8a4275130abc21f86f66e2c10283db2b4369c0d67857fcc8454a1b5ee24",
+        "passed": true,
+        "result": "PASS app switch guard: 175 checks, 0 failures; synthetic worker, real Objective-C callsite/dispatch"
+      }
+    ],
+    "candidateServiceSHA256": "627ece9d4c26ff053ce6ddb232444085aa81d948dac4e6c393c823f5c8c53228",
+    "serviceBoot": true,
+    "unrelatedRootRefused": true,
+    "serviceStopped": true,
+    "serviceUnregistered": true,
+    "productionOriginalManager": "NOT_RUN",
+    "arm64eRuntime": "NOT_RUN",
+    "fortyRealContainers": "NOT_RUN",
+    "networkContainment": "NOT_RUN"
+  },
+  "residuals": [
+    "Single-file transaction only; other original writers and ignored outer errors remain.",
+    "No launch fence, cross-file recovery or network containment is established.",
+    "Private snapshot of the separate installed source package is prepared; no migration or installation claimed.",
+    "Original licensing and server behavior remain unchanged."
+  ]
+}

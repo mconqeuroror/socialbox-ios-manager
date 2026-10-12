@@ -1,0 +1,29 @@
+{
+  "scope": "synthetic UIKit renderer only",
+  "failures": [
+    "only-exact-backup-type-slot-maps-user-filename-identical-remains",
+    "badge-refresh-never-rewrites-filename",
+    "unproven-backup-cell-shape-fails-to-owned-unavailable",
+    "actual-mapper-removes-reviewed-command-guidance-preserves-action",
+    "section-header-preserves-user-label-without-triggering-selection",
+    "section-header-reflects-native-async-update",
+    "destination-unproven-search-contract-is-owned-unavailable-without-actions",
+    "added-route-owned-presentation",
+    "sessions-keeps-live-original-progress-indicator",
+    "session-and-cloud-row-values-and-selection-remain-original",
+    "added-route-owned-presentation",
+    "session-and-cloud-row-values-and-selection-remain-original",
+    "added-route-owned-presentation",
+    "cloud-batch-keeps-exact-fields-and-delegates",
+    "cloud-batch-fields-have-owned-English-accessibility-labels",
+    "cloud-batch-native-header-is-not-visible",
+    "session-and-cloud-row-values-and-selection-remain-original",
+    "added-route-owned-presentation",
+    "session-and-cloud-row-values-and-selection-remain-original",
+    "added-route-owned-presentation",
+    "destination-keeps-original-search-value-and-delegate",
+    "session-and-cloud-row-values-and-selection-remain-original"
+  ],
+  "ok": 0,
+  "checks": 81
+}

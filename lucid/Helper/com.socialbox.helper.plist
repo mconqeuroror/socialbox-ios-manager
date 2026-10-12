@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.socialbox.helper</string>
+	<key>Program</key>
+	<string>/var/jb/usr/libexec/SocialBoxHelper</string>
+	<key>MachServices</key>
+	<dict>
+		<key>com.socialbox.helper.xpc</key>
+		<true/>
+	</dict>
+	<key>UserName</key>
+	<string>root</string>
+	<key>ProcessType</key>
+	<string>Interactive</string>
+	<key>RunAtLoad</key>
+	<true/>
+	<key>KeepAlive</key>
+	<true/>
+	<key>EnableTransactions</key>
+	<true/>
+</dict>
+</plist>

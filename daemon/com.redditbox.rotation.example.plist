@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>proxyURL</key>
+	<string>http://username:password@proxy.example.invalid:8080</string>
+	<key>rotationURL</key>
+	<string>https://provider.example.invalid/api/rotate</string>
+	<key>authorization</key>
+	<string>Bearer replace-me</string>
+	<key>authHeader</key>
+	<string>Authorization</string>
+	<key>method</key>
+	<string>POST</string>
+</dict>
+</plist>

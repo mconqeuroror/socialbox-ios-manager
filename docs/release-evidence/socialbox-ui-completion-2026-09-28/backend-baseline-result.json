@@ -1,0 +1,18 @@
+{
+  "evidence": "synthetic adapter ABI and UI actions only",
+  "failures": [
+    "exact screen registry including one denied store alias",
+    "only presentation screens installed",
+    "exact cloud-plans store alias denied without classifying licensed cloud as store",
+    "reviewed session or bulk-cloud table getter is read-only",
+    "reviewed sessions spinner identity",
+    "reviewed session or bulk-cloud table getter is read-only",
+    "reviewed session or bulk-cloud table getter is read-only",
+    "bulk-cloud exact native fields",
+    "reviewed session or bulk-cloud table getter is read-only",
+    "reviewed session or bulk-cloud table getter is read-only",
+    "destination reads exact search control without exposing completion or models"
+  ],
+  "ok": 0,
+  "checks": 113
+}

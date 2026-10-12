@@ -1,0 +1,8 @@
+{
+  "scope" : "synthetic UIKit renderer only",
+  "failures" : [
+
+  ],
+  "ok" : 1,
+  "checks" : 27
+}

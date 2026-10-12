@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "rows": [
+    {
+      "id": "AUDIT-001",
+      "category": "audit method",
+      "surface": "Cross-container capture comparison and missing observations",
+      "mechanism": "Local request-time labels, per-run HMAC fingerprints and per-container sets; request headers are recorded before response completion, and missing labels/fields retain NOT_VERIFIED coverage.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "tools/leak_audit.py",
+          "line": 1,
+          "detail": "Actual observer and analyzer; raw auth/session values do not enter output. Labels never change request headers."
+        },
+        {
+          "path": "tools/test_leak_audit.py",
+          "line": 1,
+          "detail": "Twelve behavioral cases cover reuse, one-container repeats, missing labels/fields, no response, delayed response, multi-value headers and private output."
+        }
+      ],
+      "verification": "RED old deduplication printed same A/B value as ok. GREEN 12 tests; initial repaired observer also failed a no-response case, fixed before completion. No actual mitmproxy/iPhone capture executed.",
+      "fix": "Fixed 98aecc9 and 6c48b23. NO_REUSE_OBSERVED is restricted to compared headers; coverage_status remains NOT_VERIFIED with missing evidence. Keep clone/PID provenance outside the observer and never treat comparison as a full leak verdict."
+    },
+    {
+      "id": "AUDIT-002",
+      "category": "audit method",
+      "surface": "Inventory drift, evidence completeness and stable row contract",
+      "mechanism": "Reproducible full reference data, source file hashes, per-row evidence and a generated Markdown ledger; CI requires affected row trailers for changed shipped files.",
+      "coverage": [
+        "none"
+      ],
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "tools/check_leak_surface.py",
+          "line": 1,
+          "detail": "Actual scanner/validator source; verified against current generated evidence and rejection fixtures."
+        },
+        {
+          "path": "tools/enumerate_leak_source.py",
+          "line": 1,
+          "detail": "Actual scanner/validator source; verified against current generated evidence and rejection fixtures."
+        },
+        {
+          "path": "tools/enumerate_leak_binary.py",
+          "line": 1,
+          "detail": "Actual scanner/validator source; verified against current generated evidence and rejection fixtures."
+        },
+        {
+          "path": ".github/workflows/leak-surface.yml",
+          "line": 1,
+          "detail": "CI validates current source snapshot and individual commit trailers; pull requests use the actual branch head."
+        }
+      ],
+      "verification": "Eight validator regressions include deletion with retained row history, prevention of cross-commit trailer masking, entitlement/workflow inclusion and unresolved binary-reference rejection, plus empty/stale/absolute evidence and unsupported absence verdicts. These are method checks, not on-device leak evidence.",
+      "fix": "Future changes must preserve IDs and add explicit row evidence; do not treat regenerated hashes or static class presence as semantic proof."
+    }
+  ],
+  "contractBaseline": "fdf181f"
+}

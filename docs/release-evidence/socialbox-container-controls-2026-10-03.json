@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "unit": 44,
+  "date": "2026-10-03",
+  "status": "PASS_CONTAINER_UI_AND_DEVICE_LIST_SMOKE_ONLY",
+  "clientRelease": "NOT_READY",
+  "sourceParent": "6f9db4e8fdf902fa4b1ae5eea754f4dfe0f11046",
+  "branch": "feat/lucid-base",
+  "changes": [
+    "Left swipe Delete for inactive containers, original confirmation, full swipe disabled and no optimistic row deletion.",
+    "Right swipe Rename using the original native prompt.",
+    "Exact saved row names and selected-name heading; long header names truncate visually while row names wrap.",
+    "Original native alert view uses #007AFF around presentation/completion; original actions, handlers, styles, fields and names preserved."
+  ],
+  "preservation": {
+    "proxyInputChanged": false,
+    "authLogicChanged": false,
+    "identityOrIsolationRuntimeChanged": false,
+    "fakeIsolationOK": false,
+    "debugUnlock": false,
+    "composedInputs": 52,
+    "changedComposedFiles": 13,
+    "byteIdenticalComposedFiles": 39,
+    "activationBehavior": "Exact baseline except existing Unit43 button color",
+    "connectionBehavior": "Exact baseline; existing Unit43 Settings update entry only",
+    "backendAdapter": "Byte-identical accepted baseline"
+  },
+  "build": {
+    "status": "PASS",
+    "overlaySHA256": "52d28be3f9f850541b9e24258e8a6fe9b6a3ca872d51a6854f7eedcd5a5bb6a3",
+    "packageSHA256": "9c18ad8002c3f0dd32d786db4bd8abf24bf92f14a20e046c0a10d868702dc00c",
+    "sourceStable": true,
+    "arm64AndArm64e": true,
+    "packageInstallable": false,
+    "customerArtifactPublished": false
+  },
+  "tests": {
+    "currentActionsAssertions": 66,
+    "composedActionsAssertions": 66,
+    "currentPresentationAssertions": 272,
+    "composedPopupAssertions": 31,
+    "composedLayoutAssertions": 1052,
+    "composedLayoutCases": 7,
+    "composedCreationAssertions": 283,
+    "currentWorkspaceAssertions": 324,
+    "interfaceCopyAssertions": 764,
+    "compositionMethods": 11,
+    "brandingMethods": 9,
+    "brandingNativeAssertions": 31,
+    "scope": "Host and inert UIKit tests. Original-shaped synthetic handlers test cancel, confirm, stale IDs, selected-container refusal and refresh. No real container deletion or runtime isolation acceptance."
+  },
+  "phone": {
+    "ssh": "PASS_PASSWORD_AUTHENTICATED_PINNED_HOST",
+    "sudo": "PASS_REAL_AND_EFFECTIVE_ROOT",
+    "credentialsSaved": false,
+    "overlay": "INSTALLED_FOR_PRIVATE_OWNER_UI_TRIAL",
+    "overlaySHA256": "52d28be3f9f850541b9e24258e8a6fe9b6a3ca872d51a6854f7eedcd5a5bb6a3",
+    "filterChanged": false,
+    "packageInstalled": false,
+    "otherWitnessedProgramsAndControlsChanged": false,
+    "managerAndThreeServicesRestored": true,
+    "managerStateFilesUnchangedWhileQuiescent": true,
+    "privateArchiveStateFiles": 21,
+    "privateArchiveProgramControlFiles": 10,
+    "recognizedAppleDoubleMetadataNodes": 3,
+    "archiveRestorationTested": false,
+    "screenshot": "PASS_NAMES_SELECTED_HEADING_AND_BLUE_LIST",
+    "observedSelectedName": "Container 7",
+    "createSwitchRenameDeleteOrAccountAction": false,
+    "nativeGestureAndPopupAcceptance": "NOT_RUN_ON_PHONE",
+    "rollbackCommandRetainedPrivately": true,
+    "deploymentScriptSHA256": "ba74057ba401a4971eb0ab2d5a8e42b1328852b5b8309a04c6d84b3e185b614b",
+    "receiptSHA256": "db75ff096e676708b45267a7b46921ca966731f3d2383147f2871c7198cd87ea",
+    "visualReceiptSHA256": "4b0186c720c7d57212788824bfe0699fdee590de36cd5ad578c6dd7223ada001"
+  },
+  "retainedAttempts": [
+    "Earlier popup fixtures assumed textColor directly represented UIKit26 tint/destructive rendering; those assertions failed. Final fixture checks rendered exact-blue/semantic-red pixels and unchanged original action objects/styles. Production tint code stayed unchanged."
+  ],
+  "unfinished": [
+    "Physical native swipe, rename/delete completion and Switch popup interaction remain unaccepted; installed list appearance and state preservation passed.",
+    "Prior native Instagram sibling-file leak, exact per-container runtime profile, recovered-engine licensing integration, complete account/proxy flow and final customer Sileo/download acceptance remain open."
+  ],
+  "changedSourceSHA256": {
+    "lucid/Presentation/LBXDisplayCopy.h": "395350870b9cb2e560dde7edda74f2d3b88c0485b9940626525eac32a2e7c5a6",
+    "lucid/Presentation/LBXDisplayCopy.m": "9717cbfcd09b2f36ec02c4a9dd1274e97d098f78a54e4ed8ed98746fe5099ccd",
+    "lucid/Presentation/LBXPresentation.m": "8b9b974d5ef4844c1f659e948ede4e2d2ba87c74396ae3a92f1cc585170eb177",
+    "lucid/Presentation/SBContainersView.m": "74fdcbfe8f52b22bcbda2750c0ad0a530bca74db94abe21950cf433f1e7f5e10",
+    "lucid/Presentation/SBInterfaceCopy.m": "733c2ab9e1d53ad0f43e9d8fb7e6ddc31711d153c28bdc25a5e2aa059c65ac37",
+    "lucid/Presentation/Tests/fixture.m": "1719ba18c11d2b832841cbe90e407e29cee04afb874655d0ab7ae3a029b9450a",
+    "lucid/Presentation/Tests/layout_fixture.m": "7eb68f4e472375424fe5e97547b8f155624f07a494cbd40ab4c48d5906b7c1d3",
+    "lucid/Presentation/Tests/run_simulator.py": "89e946d9b4ea9085b8ab9b19a04d958be0077e86faf3e3c31b6c3f0a2d79eb85",
+    "lucid/Presentation/Tests/workspace_fixture.m": "d8fb2df25e6259ed58b0cd191730e9ff9dab4978473545da245c6dc6ba443757",
+    "tools/build_socialbox_owner_ui.py": "122f352aa82cd18288b8baaff881184770f6d86358afc957989b535aa13bd0bc",
+    "tools/test_owner_ui_composition.py": "17ec69b044701080eab6767545c98a029b9cf7826719f3ae30bc091c6d203492",
+    "tools/test_socialbox_branding.py": "851edf2a60cd1bcdeefe77ad0a82dc890129d8d700a053e88f32b9d92ee0db37",
+    "lucid/Presentation/Tests/container_actions_fixture.m": "af1b5e4d282fbe0429600db3ffc35c969083d3f0583ec244fedac71de7f3b87c",
+    "tools/test_container_actions_simulator.py": "d19fe12dcbea861b1d8c8ff78750b0086fa9c33c775582e0b7d4dc6c92d1a47e"
+  }
+}

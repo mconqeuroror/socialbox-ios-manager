@@ -1,0 +1,257 @@
+{
+  "schemaVersion": 1,
+  "appType": "facebook",
+  "rows": [
+    {
+      "id": "FBKEY-001",
+      "category": "Facebook Keychain isolation",
+      "surface": "Compiled ordered multi-group identity policy and immutable registry data",
+      "mechanism": "Three audited source groups map one-to-one to the exact clone primary, .family and .app groups. Complete-set versioned metadata is derived, not caller-selected. Omitted groups and legacy Reddit single-group values remain unchanged.",
+      "coverage": [
+        "hook"
+      ],
+      "verdict": "covered-in-code",
+      "verification": "Failing-first native fixture could not compile before the policy existed. All 39 assertions now pass, including independent golden values. Existing Reddit registry goldens, cloud registry/authenticated scope and build-contract tests pass. Signing/recovery integration is a separate pending unit.",
+      "fix": "Policy implemented. Keep Facebook activation denied until signing, runtime validation, deletion/recovery and physical-device acceptance prove the full set.",
+      "evidence": [
+        {
+          "path": "shared/RBXAppKeychainPolicy.h",
+          "line": 7,
+          "anchor": "static inline NSArray<NSString *> *RBXAppKeychainGroups",
+          "detail": "Exact descriptor/bundle group derivation, metadata validation and explicit-group dictionary transformation."
+        },
+        {
+          "path": "cloud/src/config/app-registry.json",
+          "line": 52,
+          "anchor": "\"T84QZS65DQ.platformFamily\"",
+          "detail": "Canonical audited FB source groups and distinct suffixes; Reddit mapping remains empty."
+        },
+        {
+          "path": "shared/RBXAppRegistryData.h",
+          "line": 53,
+          "anchor": "@\"keychainSourceGroups\": @[@\"T84",
+          "detail": "Generated native group mapping."
+        },
+        {
+          "path": "cloud/src/lib/app-registry.ts",
+          "line": 3,
+          "anchor": "type GroupFields =",
+          "detail": "Cloud registry freezes both arrays; license and route behavior preserved."
+        },
+        {
+          "path": "cloud/scripts/app-registry-test.ts",
+          "line": 31,
+          "anchor": "assert.ok(Object.isFrozen(descriptor[key]))",
+          "detail": "Mutation of canonical group arrays rejected."
+        },
+        {
+          "path": "scripts/build-version.py",
+          "line": 29,
+          "anchor": "\"shared/RBXAppRegistryData.h\",",
+          "detail": "Group policy participates in signing-contract invalidation."
+        },
+        {
+          "path": "scripts/build-mac.sh",
+          "line": 49,
+          "anchor": "bash \"$ROOT/tools/test_app_keychain_policy.sh\"",
+          "detail": "New native policy and wrapper tests are release gates."
+        },
+        {
+          "path": "tools/test_app_keychain_policy.m",
+          "line": 9,
+          "anchor": "int main(void)",
+          "detail": "39 assertions: separated groups, unchanged Reddit, refs, nested attrs, malformed and foreign inputs."
+        }
+      ]
+    },
+    {
+      "id": "FBKEY-002",
+      "category": "Facebook Keychain isolation",
+      "surface": "SecItem and SecKey entry points composed with optional sync policy",
+      "mechanism": "A seven-entry-point installer maps registered source groups once. Security result objects, refs, attributes and errors remain intact; foreign groups fail without retry. Requires validated bootstrap and full group metadata. Reddit retains its four sync wrappers and unhooked default.",
+      "coverage": [
+        "hook"
+      ],
+      "verdict": "covered-in-code",
+      "verification": "Failing-first extraction found no app wrappers. Now 200 shipped-wrapper assertions plus 16 installer assertions in six fresh processes pass. All previous native/build entrypoints passed. FBKEY-003 establishes the separate synthetic Security device boundary; live app interception and early SDK ordering remain unverified.",
+      "fix": "Integrate and verify real signed clone entitlements, A/B key and persistent-reference access, startup ordering and application compatibility before Facebook activation.",
+      "evidence": [
+        {
+          "path": "tweak/Container/RBXKeychainHooks.xm",
+          "line": 667,
+          "anchor": "// BEGIN APP KEYCHAIN WRAPPERS",
+          "detail": "Actual add/copy/update/delete and random/data/pair creation wrappers; existing runtime activation gate retained."
+        },
+        {
+          "path": "tools/test_app_keychain_hooks.m",
+          "line": 63,
+          "anchor": "int main(int argc",
+          "detail": "Actual wrappers and installer with synthetic provider boundaries."
+        },
+        {
+          "path": "tools/test_keychain_sync.sh",
+          "line": 16,
+          "anchor": "end = \"// BEGIN APP KEYCHAIN WRAPPERS\"",
+          "detail": "Unchanged Reddit sync wrapper fixture remains isolated from new installer."
+        },
+        {
+          "path": "docs/facebook-keychain-api-evidence.json",
+          "line": 5,
+          "anchor": "\"interpretation\":",
+          "detail": "Current binary imports justify coverage of three key-creation families; invocation and key purpose unproven."
+        }
+      ]
+    },
+    {
+      "id": "FBKEY-003",
+      "category": "Facebook Keychain isolation",
+      "surface": "Synthetic A/B physical-device authorization, persistent references and isolated cleanup",
+      "mechanism": "Two independently signed mobile-uid helpers use disjoint exact three-group entitlements with no source/App Groups/platform entitlement. Standard Security operations test four stored classes; no real account services or app profiles are queried.",
+      "coverage": [
+        "sandbox"
+      ],
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "tools/device_app_keychain_probe.m",
+          "anchor": "static BOOL Entitled",
+          "line": 19,
+          "detail": "Exact effective groups, application identifier, team and mobile identity required before any synthetic operation."
+        },
+        {
+          "path": "docs/facebook-keychain-device-evidence.json",
+          "anchor": "\"assertionCount\": 237",
+          "line": 1258,
+          "detail": "Redacted 237-check A/B device results with source, binary and private-receipt hashes."
+        },
+        {
+          "path": "docs/facebook-keychain-boundary-plan.md",
+          "anchor": "The [synthetic device probe]",
+          "line": 15,
+          "detail": "Device proof scope, initial execution issue, cleanup and remaining integration limits."
+        }
+      ],
+      "verification": "237 physical iPhone10,4 / iOS 16.7.16 assertions pass: seed both, read own values/refs, deny foreign groups/refs, omitted-group search only own three groups, clear B while A survives, then clear A. All 24 synthetic items were removed. This is Security entitlement evidence, not an app sandbox or live hook/network/MDM proof.",
+      "fix": "Synthetic Security boundary verified. Complete signing/lifecycle integration and repeat actual Facebook clone startup/account/sandbox/network acceptance; do not promote this fixture into whole-app readiness."
+    },
+    {
+      "id": "FBKEY-004",
+      "category": "Facebook Keychain isolation",
+      "surface": "Signing, bootstrap, marker and runtime readiness bound to complete per-app group policy",
+      "mechanism": "Facebook main signatures carry three exact groups; marker format 2 and bootstrap/profile carry policy version 1 and complete ordered groups. Runtime validates the team/group set and every group canary. Bootstrap comparison selects the profile app namespace rather than requiring Reddit for Facebook.",
+      "coverage": [
+        "hook",
+        "sandbox"
+      ],
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "daemon/RBXCloneManager.m",
+          "anchor": "static BOOL RBXBootstrapMatchesIdentity",
+          "line": 1305,
+          "detail": "App-aware bootstrap comparison; actual complete rewrite signs and inspects the full group set and emits group-bound FB marker/profile metadata."
+        },
+        {
+          "path": "daemon/RBXProfileIO.m",
+          "anchor": "NSArray *sections =",
+          "line": 114,
+          "detail": "Typed Facebook namespace plus shared immutable app/group identity validation."
+        },
+        {
+          "path": "shared/RBXAppProfileIdentity.h",
+          "anchor": "return @\"Profile clone Keychain policy",
+          "line": 28,
+          "detail": "Profile load/write rejects partial or foreign FB group metadata."
+        },
+        {
+          "path": "shared/RBXAppKeychainPolicy.h",
+          "anchor": "static inline BOOL RBXAppKeychainMarkerMatches",
+          "line": 38,
+          "detail": "FB marker binds format 2, app/source ownership and complete policy; legacy Reddit marker shape preserved."
+        },
+        {
+          "path": "shared/RBXAppRuntime.h",
+          "anchor": "RBXAppKeychainMetadataMatches(descriptor, actualBundle, app)",
+          "line": 16,
+          "detail": "Runtime bootstrap requires the complete group set."
+        },
+        {
+          "path": "tweak/Container/RBXContainerManager.xm",
+          "anchor": "static BOOL RBXCloneEntitlementsMatchProfile",
+          "line": 122,
+          "detail": "Runtime verifies team and complete exact group set, then probes each group including successful canary cleanup."
+        },
+        {
+          "path": "scripts/build-mac.sh",
+          "anchor": "bash \"$ROOT/tools/test_app_keychain_entitlements.sh\"",
+          "line": 51,
+          "detail": "Actual runtime entitlement/probe tests included in release gates."
+        },
+        {
+          "path": "tools/test_clone_visibility_metadata.py",
+          "anchor": "This verifies produced metadata",
+          "line": 4,
+          "detail": "Full shipped rewrite and validator under active/inactive copied registries, with synthetic signer/service boundaries."
+        },
+        {
+          "path": "tools/test_app_keychain_entitlements.m",
+          "anchor": "int main(void)",
+          "line": 55,
+          "detail": "57 checks of actual runtime entitlement inspection, every group probe, locked/errors, metadata and cleanup failure."
+        },
+        {
+          "path": "docs/facebook-keychain-build-0.1.22.json",
+          "line": 215,
+          "anchor": "\"stage\": \"Intermediate Facebook",
+          "detail": "Complete ldid-only rootless build, seven Mach-O components/twelve architecture slices, unchanged global entitlements and existing license pin; not installed or published."
+        }
+      ],
+      "verification": "Failing tests first exposed single-group signing, missing-metadata runtime acceptance, failed cleanup reported as success, and Facebook rejection due to mandatory Reddit bootstrap data. Actual full rewrite/validator fixtures now pass 189 inactive-registry and 213 active-registry checks; runtime group/entitlement fixture 57; policy/marker 47; bootstrap/runtime 176. Pre-existing full native/build test list also passes. Full scripts/build-mac.sh rootless 0.1.22 build passed with 95 native/host entrypoints. Package SHA-256 b06f55e416792c2c369b02e372065503346728bfe889cc191274bac884ef2544; seven components and twelve slices inspected.",
+      "fix": "Implemented signing/profile/runtime unit. Installation/deletion/replacement journals, production multi-group cleanup, Facebook app-specific defaults/wire proof and account/network/MDM acceptance remain required before activation."
+    },
+    {
+      "id": "FBKEY-005",
+      "category": "Facebook Keychain isolation",
+      "surface": "Complete multi-group cleanup and nonce-bound aggregate authorization receipt",
+      "mechanism": "The helper independently derives the exact registered clone and group set, verifies effective app/team/groups, irreversibly drops to mobile, proves each group with its own fresh canary, erases four classes and sweeps every group again. The daemon signs the full set and accepts only a complete canonical per-group receipt. Reddit keeps its one-group format-1 receipt.",
+      "coverage": [
+        "sandbox"
+      ],
+      "verdict": "covered-in-code",
+      "verification": "Failing-first actual-helper fixture rejected Facebook; the extended implementation passes all legacy groups plus three-group cleanup, each-group locked failure and retry, late cross-group writes, entitlement mismatch and forged aggregate receipts. All 95 host/native entrypoints and static checks pass. The production helper ran successfully on iPhone10,4 / iOS16.7.16 against synthetic B: all 12 group/class combinations cleared, independent queries found B already absent, and A remained readable. 237 accompanying device assertions pass; all 24 synthetic items and temporary executables removed.",
+      "fix": "Cleaner and parent receipt validation implemented and physically verified with synthetic identities. Per-app deletion/installation/replacement journal admission and end-to-end clone deletion still need integration before Facebook activation.",
+      "evidence": [
+        {
+          "path": "daemon/RBXKeychainCleaner.m",
+          "anchor": "static BOOL RBXEffectiveEntitlementsMatch",
+          "detail": "Actual production helper derives groups from the registry and verifies every group/class under irreversibly dropped mobile credentials.",
+          "line": 44
+        },
+        {
+          "path": "daemon/RBXCloneManager.m",
+          "anchor": "if (!RBXAppKeychainCleanupReceiptComplete",
+          "detail": "Parent consumes complete bound receipt before reporting Keychain erasure success; exact group set also used to sign helper.",
+          "line": 3154
+        },
+        {
+          "path": "shared/RBXAppKeychainPolicy.h",
+          "anchor": "static inline BOOL RBXAppKeychainCleanupReceiptComplete",
+          "detail": "Nonce/app/bundle/policy and complete ordered per-group authorization/class proof required.",
+          "line": 61
+        },
+        {
+          "path": "tools/test_keychain_cleaner.m",
+          "anchor": "static void VerifyFacebookReceipt",
+          "detail": "Actual helper with per-group synthetic Security store and production parent receipt validator; no real host Keychain accessed.",
+          "line": 284
+        },
+        {
+          "path": "docs/facebook-keychain-cleanup-device-evidence.json",
+          "anchor": "\"assertionCount\": 237",
+          "detail": "Redacted production cleaner receipt and physical A/B evidence with source/binary/private-receipt hashes.",
+          "line": 1322
+        }
+      ]
+    }
+  ]
+}

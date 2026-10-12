@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "rows": [
+    {
+      "id": "FBBUILD-001",
+      "category": "Multi-app build regression",
+      "surface": "Byte-identical registry derivation in Objective-C and Objective-C++ consumers",
+      "mechanism": "An explicit const byte-pointer cast allows the same registry header to compile in Logos Objective-C++ mode without changing hash bytes or algorithm. Fixed pre-refactor golden bundle/group vectors execute in both language modes.",
+      "coverage": [
+        "generator"
+      ],
+      "verdict": "covered-in-code",
+      "evidence": [
+        {
+          "path": "shared/RBXAppRegistry.h",
+          "line": 44,
+          "anchor": "const uint8_t *cursor = (const uint8_t *)bytes.bytes;",
+          "detail": "Type-only cast; FNV offset basis and bytes remain unchanged."
+        },
+        {
+          "path": "tools/test_app_registry.sh",
+          "line": 1,
+          "detail": "Actual native fixed-vector test now compiles/runs in both language modes."
+        }
+      ],
+      "verification": "Real ldid build failed at the previous implicit const void-pointer conversion; the expanded native test reproduced the same failure first, then both modes passed after the one-line cast.",
+      "fix": "Retain both compilation modes in the build regression gate."
+    }
+  ]
+}

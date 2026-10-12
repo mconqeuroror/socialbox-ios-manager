@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "kind": "socialbox-console-license-transaction-authority",
+  "unit": 24,
+  "recordedAt": "2026-10-01T12:59:45.828279+00:00",
+  "status": "PASS_WITH_DEPLOYMENT_AND_CUSTOMER_GAPS",
+  "clientDeliveryReady": false,
+  "customerArtifactReleased": false,
+  "customerCodeIssued": false,
+  "contract": {
+    "before": "Console owner was authenticated before JSON/hash work or entering the license transaction. An actor demotion, email change, removal or duplicate ID committed while the request waited was missed by generation/edit/enable/delete/revoke.",
+    "after": "Every fresh auth-state transaction callback requires exactly one current actor satisfying the existing canonical owner email and admin-role policy before inspecting or mutating license records. Typed denial is thrown before publication and projected as403 without plaintext keys or audit changes.",
+    "revokeBoundary": "Production revoke HTTP route uses the required-actor revokeLicenseForConsoleOwner API. Existing revokeLicense remains an explicitly trusted server-internal core utility; it is not a request-selected fallback or proof that every future internal caller authorizes.",
+    "unchanged": "Existing user-session verification, license signer/claims, device activation limits, paired credentials and expiry/revocation behavior; no installation authority, schema migration, reset, runtime grant or UI change."
+  },
+  "host": {
+    "status": "PASS",
+    "focusedGroups": 42,
+    "routeExecutions": 42,
+    "validOwnerControls": 7,
+    "actualLocalActorDriftTransactions": 28,
+    "syntheticDiscardedCallbackReplays": 7,
+    "actorDrifts": [
+      "role demotion",
+      "canonical email change",
+      "account removal",
+      "duplicate actor ID"
+    ],
+    "operations": [
+      "generate to independent existing recipient",
+      "edit",
+      "enable",
+      "PATCH delete",
+      "DELETE",
+      "revoke",
+      "already-revoked retry"
+    ],
+    "denial": "Exact403/error body and byte equality of auth-state (including document version) and separate audit after actor drift. No issued keys or success body.",
+    "regressionGroups": {
+      "deviceLicensing": 23,
+      "ownerConsole": 10,
+      "authenticationConcurrency": 11,
+      "legacyLicenseAuth": 18
+    },
+    "typecheck": "PASS",
+    "sourceStable": true,
+    "frozenCloudFiles": 116,
+    "sourceStabilityScope": "Versioned/new non-ignored cloud TS/TSX/JS/MJS/JSON files before/after all six jobs; dependencies, Node, OS, compiler/tsx and environment values excluded.",
+    "privateReportSHA256": "fb5899df212651bd4e579543bab3ff0a27dc18cf83fb594f5dc3bbc5ebf79dbc",
+    "privateLogSHA256": {
+      "console": "9af8fabb2e83504dc1cf13d8c49d50ed04fc1d5a5d44f1160a40a5ed0e421070",
+      "legacy": "448c6ccd4e8bacacfd2561e13091a4534ea05106dcdde3d8a8efa674a561a46a",
+      "concurrency": "33530d5666f5cb6f01a9e68c96e34f20ecc8e0eb65ee23082c59cc352a94016a",
+      "authority": "7899f817077946e085fc7509d2ef6db1d6d137745684c772402ca297517aee94",
+      "device": "6564c7b57615995a580332ba8b42c25cb165cfb130c1956ca62e422d0ff52c23",
+      "types": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "scope": "Real HTTP handlers and isolated local auth commits, synthetic credentials/RSA signatures;28 actual local actor-drift transactions and7 explicit synthetic callback replays. No real Blob conflict, live server, device, provisioning or deployment."
+  },
+  "counterfactual": {
+    "status": "FAIL_EXPECTED",
+    "oldImplementationGroups": 42,
+    "validOwnerControlsPassed": 7,
+    "deniedActorCasesFailed": 35,
+    "privateLogSHA256": "772bcbef8004cd090f44bf0f2ef49c343d94f38d6e3be0ce346d600b76931af1",
+    "productionScope": "Seven current inputs verified unchanged against committed HEAD immediately after run and before implementation; no before/after whole graph freeze claimed.",
+    "scope": "Current new test against unchanged previously committed seven production inputs before correction; after-run comparison withHEAD, not a complete before/after dependency freeze."
+  },
+  "productionBuild": {
+    "status": "PASS",
+    "frameworkBuild": "Next14.2.35 optimized compile/typecheck/prerender/build tracing",
+    "sourceStable": true,
+    "sourceCopyCurrent": true,
+    "frozenCopiedCloudFiles": 150,
+    "privateReportSHA256": "6d77c94672f6fa82a6e541cdb843b5193368ae3ace16cf1dbba7e6e8e9342776",
+    "privateLogSHA256": "14e1415847633e7ae4922866af56fe5f4a807bac0aa344d9cf84e584978d0542",
+    "scope": "Next production build in a new private source copy with synthetic in-memory RSA key and auth secrets, local storage, no copied environment files and disabled telemetry. Dependencies/Node/toolchain/OS excluded. No deployment, real signing key, provisioning or device acceptance.",
+    "deployed": false
+  },
+  "independentReview": {
+    "status": "PASS_WITH_LIMITS",
+    "reviewer": "normal_activation_route_review",
+    "blockingFindings": [],
+    "findings": [
+      "Unique current actor guard runs before effects on every callback; typed403 throws before auth publication and outside audit.",
+      "Production revoke route uses required-ID API exclusively; unguarded core remains trusted internal utility, no request-selected fallback.",
+      "42 groups meaningfully cover7 normal controls,28 paused actual-route/local actor changes and7 synthetic callback replays.",
+      "Old implementation35 expected failures retained;116-file test and150-file private build are separate accurate scopes."
+    ],
+    "limits": [
+      "No real Blob ETag conflict/deployment/device/provisioning/runtime acceptance.",
+      "No edits or additional tests performed by reviewer."
+    ]
+  },
+  "device": {
+    "status": "NOT_RUN",
+    "effectsPerformed": false,
+    "newRealLicenseIssued": false,
+    "ownerProgramsOrAccountsChanged": false
+  },
+  "limits": [
+    "This is ordinary server-side console mutation authorization, not independently authenticated first-provisioning/history authority.",
+    "Synthetic discarded callback replay does not accept actual Blob ETag contention or production deployment. The existing adapter supplies fresh CAS callbacks; no adapter change.",
+    "Read-only handlers and other administrative domains are outside this mutation unit. Commit-authorized success is not post-commit lifetime authority.",
+    "Trusted internal core revoke utility remains; future callers must select the required-actor API for requests.",
+    "No device/default activation/customer installer/download/code or website/APT deployment in this unit.",
+    "First-provisioning issuer/verifier, target/history binding and durable external one-shot consumption remain unavailable/unimplemented; fresh-device question pending.",
+    "Actual automatic runtime isolation/switch/recovery, running-session licensing and account/proxy acceptance remain open; earlier Instagram sibling read FAIL unfixed, Facebook launch FAIL, Twitter runtime unaccepted."
+  ],
+  "next": "Accept a genuinely fresh test target when owner answers, define legitimate external first-preparation contracts and accept normal package/default locked-page flow. Continue bounded useful local work without fabricated authority or retrying risk-blocked runtime tasks.",
+  "sourceSHA256": {
+    "cloud/src/lib/console-owner.ts": "1685dc17f5aea4e1d026a0128e376993f1c70ca958b45a910f0ccb06b0f7f9a2",
+    "cloud/src/lib/device-licenses.ts": "382252021f550c8c972352079f1b77e20a733e8acaf28665a6dc9a09ebf24f10",
+    "cloud/src/lib/licenses.ts": "dcf6e6f4baaafba7c8137a7abde2a1459371a562379e10c668059d81bf49cabd",
+    "cloud/src/app/api/admin/licenses/route.ts": "e0323f4ee72bbd9707c3e0ee4be1ed3e61192b0d03556ce7c205cc92e9adc3ba",
+    "cloud/src/app/api/admin/licenses/[id]/revoke/route.ts": "ad900126b8bfcb89d6852fbbb74ffa8c6847736a1ba57ae871ecef8d59ebee2f",
+    "cloud/scripts/console-license-authority-test.ts": "9a9707f4906efaebf8f3836356484f7a85a8cec4861dd6029cda45cc2572b070",
+    "cloud/package.json": "250c9d50c9f3e355a61728546a78dc6b7f0db7f20043bd30a23c5e4727e7f133"
+  }
+}

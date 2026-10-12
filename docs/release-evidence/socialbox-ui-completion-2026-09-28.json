@@ -1,0 +1,304 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-09-28",
+  "version": "3.1.0-1+socialbox.15",
+  "previousVersion": "3.1.0-1+socialbox.14",
+  "baseRevision": "e1a4cca",
+  "status": "INSTALLED_HOST_AND_SCOPED_DATA_VERIFIED_PHYSICAL_UI_PENDING",
+  "scope": "Source-owned English UIKit over the retained version-pinned compiled core. Results below use synthetic backend objects, not the imported executable or a physical device.",
+  "primarySections": [
+    "Containers",
+    "Connection",
+    "Settings"
+  ],
+  "changes": [
+    "Containers header, filters and empty guidance scroll with results; narrow and accessibility layouts adapt, and Search or dragging dismisses the keyboard.",
+    "Live safe-area constraints keep the three-section dock above the home indicator. Heading, Tools, dock captions and persistent create action use bounded font growth; body text retains full accessibility scaling.",
+    "Proxy cards replace their interior artwork and layout while retaining original action carriers, control targets, enabled and hidden states, model associations and user values. Unknown structures show an owned unavailable row.",
+    "Added exact source-owned routes for current sessions, session import, batch Cloud upload, session export and session destination. Original tables, delegates, navigation actions, selection, spinner, search and secure input objects remain authoritative.",
+    "Backup type copy changes only in the verified native badge slot; filenames and other data remain exact. Section-header overlays retain original tags and gesture carriers.",
+    "The exact CloudPlans store alias joins denied marketplace routes; licensed Cloud routes remain admitted. Archive display descriptions use SocialBox while identifiers, suffixes, formats and routing remain unchanged.",
+    "Header callback admission validates the actual installed method encoding; an inherited or protocol signature cannot mask an unsupported section argument ABI. Original callbacks run once before owned drawing.",
+    "Saved-proxy selection indicator uses a leading vertical wrapper; regression checks its actual 22-point UIKit alignment rectangle to prevent stretching."
+  ],
+  "validation": {
+    "fixtures": [
+      {
+        "name": "backend",
+        "status": "PASS",
+        "assertions": 119,
+        "resultPath": "docs/release-evidence/socialbox-ui-completion-2026-09-28/backend-synthetic-result.json",
+        "resultSHA256": "6fecd9e7ea5d96d2d52643ef213de1ba8ea19d11df6eae3ab5354d4492c838b0"
+      },
+      {
+        "name": "secondary",
+        "status": "PASS",
+        "assertions": 81,
+        "resultPath": "docs/release-evidence/socialbox-ui-completion-2026-09-28/secondary-synthetic-result.json",
+        "resultSHA256": "55b9d0b6d974538a7f2104718ed63a4d72dd005971f3b56099fa3ceefe37d08e"
+      },
+      {
+        "name": "workspace",
+        "status": "PASS",
+        "assertions": 166,
+        "resultPath": "docs/release-evidence/socialbox-ui-completion-2026-09-28/workspace-synthetic-result.json",
+        "resultSHA256": "770d0fc5c9bbe1041fecaab1bc02fb7da17c2e7522e826cdce8436911270e4b9"
+      },
+      {
+        "name": "layout",
+        "status": "PASS",
+        "assertions": 559,
+        "resultPath": "docs/release-evidence/socialbox-ui-completion-2026-09-28/layout-synthetic-result.json",
+        "resultSHA256": "b2b98e42878cc9ae78632296ee71c599fd3b4fec37ba9e1e345b8333430070fd"
+      },
+      {
+        "name": "base",
+        "status": "PASS",
+        "assertions": 232,
+        "resultPath": "docs/release-evidence/socialbox-ui-completion-2026-09-28/base-synthetic-result.json",
+        "resultSHA256": "2413051f026c588c38cb0d2728c3c191a7019ee90a7075d6981d6851a89a433f"
+      },
+      {
+        "name": "identity",
+        "status": "PASS",
+        "assertions": 41,
+        "resultPath": "docs/release-evidence/socialbox-ui-completion-2026-09-28/identity-synthetic-result.json",
+        "resultSHA256": "cc45d002baf1155259a4347f62bad1fb0e256a65f8bf63911e714b3b8053a70e"
+      }
+    ],
+    "catalog": {
+      "status": "PASS",
+      "entries": 273,
+      "nativeChecks": 833,
+      "referenceChecks": 310,
+      "sourceFiles": 6,
+      "resultPath": "docs/release-evidence/socialbox-ui-completion-2026-09-28/catalog-result.json",
+      "resultSHA256": "d6d70440f0d8a5df621cd133fee30247496fd1e2a3b9d96b0dc439eea0696e47"
+    },
+    "sourceBrandingGuard": {
+      "status": "PASS",
+      "scannedFiles": 22,
+      "unapprovedReferences": 0,
+      "resultPath": "docs/release-evidence/socialbox-ui-completion-2026-09-28/source-guard-result.json",
+      "resultSHA256": "d72930f3c60ed8eab7742ba46a3079d9785fd2ce12fa761b1c578cb7ce6f755c"
+    },
+    "regressionBaselines": [
+      {
+        "name": "backend",
+        "status": "EXPECTED_FAIL",
+        "assertions": 113,
+        "failureCount": 11,
+        "resultPath": "docs/release-evidence/socialbox-ui-completion-2026-09-28/backend-baseline-result.json",
+        "resultSHA256": "d8ec9489cfabd66e423b63968db2fbad7ef7b4ecee13add7ac9927a4d3545d68"
+      },
+      {
+        "name": "secondary",
+        "status": "EXPECTED_FAIL",
+        "assertions": 81,
+        "failureCount": 22,
+        "resultPath": "docs/release-evidence/socialbox-ui-completion-2026-09-28/secondary-baseline-result.json",
+        "resultSHA256": "ce5403659703f3d4f33f73673ee3d2aa57b0fb3536397cede7c7adf8c104eddc"
+      },
+      {
+        "name": "layout",
+        "status": "EXPECTED_FAIL",
+        "assertions": 475,
+        "failureCount": 37,
+        "resultPath": "docs/release-evidence/socialbox-ui-completion-2026-09-28/layout-baseline-result.json",
+        "resultSHA256": "aad6b449dc260d21abbd2fe1725817e094435eb49ac27acaf14b1078a2f690b0"
+      }
+    ],
+    "baselineLimits": "Baseline UI implementations are from e1a4cca. Layout baseline predates the final heading-specific checks; new header descendants also increase assertion count. These are regression witnesses, not identical-count comparisons.",
+    "layout": {
+      "viewports": [
+        "320 x 568",
+        "375 x 667",
+        "390 x 844",
+        "667 x 375"
+      ],
+      "additionalCases": [
+        "34-point live bottom-inset change",
+        "Largest accessibility text at 320 and 390 points",
+        "216-point synthetic input view driving the native keyboard layout guide"
+      ],
+      "backendOperations": 0,
+      "stableContainerIDs": 40,
+      "scope": "Synthetic viewport geometry is not physical rotation, hardware-keyboard or phone acceptance."
+    },
+    "pending": [],
+    "hostChecks": {
+      "static": "ALL CLEAN",
+      "packageRegressionGroups": 36,
+      "helperPackageGroups": 7,
+      "brandingPythonTests": 9,
+      "brandingNativeAssertions": 31,
+      "leakContractTests": 8
+    },
+    "baseRegressionWitness": {
+      "status": "INITIAL_FAIL_RESOLVED",
+      "initialChecks": 230,
+      "initialFailures": 2,
+      "resultPath": "docs/release-evidence/socialbox-ui-completion-2026-09-28/base-initial-synthetic-result.json",
+      "resolution": "Replaced stale count with exact hook-set assertion, laid out the native header before validation, and added a malformed callback ABI regression that exposed and fixed the actual method-encoding guard.",
+      "malformedABIResultPath": "docs/release-evidence/socialbox-ui-completion-2026-09-28/header-abi-regression-before-fix.json",
+      "malformedABIResultSHA256": "197507f49e62a5dcdafb149a604b4e8afc6cd3823b5da0903afb63d54bb6a0b4"
+    },
+    "uiAssertions": 1198
+  },
+  "package": {
+    "status": "BUILD_AND_READBACK_PASS",
+    "version": "3.1.0-1+socialbox.15",
+    "sha256": "67104de576dcbc8e901fffed1bada89df07169347dbbfcc6d21154e25a85087a",
+    "payloadFiles": 59,
+    "architectures": [
+      "arm64",
+      "arm64e"
+    ],
+    "signing": "ldid",
+    "originalProgramsByteIdentical": 15,
+    "sourceHashesMatchFinalWorkingSource": true,
+    "installed": true,
+    "publishedToAPT": false,
+    "reportPath": "docs/release-evidence/socialbox-ui-completion-2026-09-28/build-report.json",
+    "reportSHA256": "f2744140f7e980b1d4b961363a04ee0b7c9ed70b96636d54559470745743dd8b"
+  },
+  "installation": {
+    "status": "INSTALLED_PAYLOAD_VERIFIED",
+    "previousInstalledVersion": "3.1.0-1+socialbox.14",
+    "previousReceipt": "docs/release-evidence/socialbox-english-ui-2026-09-27.json",
+    "device": "iPhone X / iOS 16.7.16",
+    "version": "3.1.0-1+socialbox.15",
+    "payloadFilesVerified": 59,
+    "globalContainerMetadataByteIdentical": true,
+    "backup": {
+      "archiveSHA256": "f9e635606b338d625e4074dab3a1ab90dea9efd776aedb5c5c5f2e541f0aa16e",
+      "rawArchiveSHA256": "6eca8a277badb0c69cb9a638cafdc0f426a021638818027893813c506062db33",
+      "storage": "Mac-only private gzip archive",
+      "deviceArchiveCreated": false,
+      "manifestSHA256": "28811e1055efaa092ca1af0c23f138cf9136dfc5f4845d20237b0f28b44f6d9f",
+      "archiveBytes": 359914574,
+      "rawArchiveBytes": 854691840,
+      "uncompressedKiB": 848436,
+      "entryCount": 17906,
+      "rootCount": 18,
+      "twoMatchingManifests": true,
+      "persistedGzipDigestAndManifestVerified": true,
+      "scope": "owned runtime state; global system Keychain and foreign target-account recovery not covered"
+    },
+    "scopedData": {
+      "beforeToFirstPost": {
+        "added": 0,
+        "modified": 0,
+        "removed": 0
+      },
+      "beforeToSecondPost": {
+        "added": 0,
+        "modified": 0,
+        "removed": 0
+      },
+      "entryCounts": [
+        63,
+        63,
+        63
+      ],
+      "firstToSecondPost": {
+        "added": 0,
+        "modified": 0,
+        "removed": 0
+      },
+      "normalizedSHA256": [
+        "f34fa671b8ba94229c4c98f4b8603b1762d2f677144a6c4e154c1526777db346",
+        "f34fa671b8ba94229c4c98f4b8603b1762d2f677144a6c4e154c1526777db346",
+        "f34fa671b8ba94229c4c98f4b8603b1762d2f677144a6c4e154c1526777db346"
+      ],
+      "postSnapshotsEqual": true,
+      "regularOrHardlinkCounts": [
+        14,
+        14,
+        14
+      ],
+      "status": "same",
+      "threeEqual": true
+    },
+    "aggregateRuntimeComparison": "INCONCLUSIVE: two running-service log/state files changed between post-install snapshots; three changed from baseline. Current state retained.",
+    "resultPath": "docs/release-evidence/socialbox-ui-completion-2026-09-28/installation-result.json",
+    "resultSHA256": "0d0548e90193967903fe7a67b958e27efd7b565fcd1d7af2dcad210ef4034f21",
+    "scopedResultPath": "docs/release-evidence/socialbox-ui-completion-2026-09-28/scoped-state-result.json",
+    "scopedResultSHA256": "bb64e774cdadd59a0387d694e58427a891db4ec41fde826732849a42cf4e7ba4",
+    "launchReadbackPath": "docs/release-evidence/socialbox-ui-completion-2026-09-28/launch-readback.json",
+    "launchReadbackSHA256": "2b7871e05518f9a4ba428129b25c3e10b5e9a001ad1df99d7a2c1bfd0b41b70a"
+  },
+  "syntheticPreviews": [
+    {
+      "path": "docs/release-evidence/socialbox-ui-completion-2026-09-28/containers-synthetic.png",
+      "sha256": "a3623ba55ee13accbdb00991770726a7318a0586dd3518b2f50441b26d38e77c",
+      "scope": "Normal-size source-owned workspace with 40 synthetic records."
+    },
+    {
+      "path": "docs/release-evidence/socialbox-ui-completion-2026-09-28/containers-320-accessibility-synthetic.png",
+      "sha256": "a6ebaf9e8bd68214543b5b159e6641f437d68f3fcbe639601aaf22c8a3c25dae",
+      "scope": "Synthetic 320-point viewport at the largest accessibility text category. Header caps preserve space while body text scales fully."
+    },
+    {
+      "path": "docs/release-evidence/socialbox-ui-completion-2026-09-28/sessions-synthetic.png",
+      "sha256": "2783db0d316028511ab36b93ae5eed006eca41675fb69fd361106db300f1ea66",
+      "scope": "Source-owned session list with synthetic rows and the retained native progress indicator."
+    },
+    {
+      "path": "docs/release-evidence/socialbox-ui-completion-2026-09-28/cloud-batch-synthetic.png",
+      "sha256": "1614fa48fe421cce1eb12645752767c9457f5d244f1bd4d2140f9f71a8b966fc",
+      "scope": "Source-owned bulk-upload form. The legacy-looking archive label is deliberate synthetic user data and remains unchanged."
+    },
+    {
+      "path": "docs/release-evidence/socialbox-ui-completion-2026-09-28/proxy-controls-synthetic.png",
+      "sha256": "77652f884fc0ef250dbf9f8e93063b22204f7cf99a1982a025166df0bef3a7fc",
+      "scope": "Production proxy UI with synthetic native controls and records; no live proxy/network acceptance."
+    },
+    {
+      "path": "docs/release-evidence/socialbox-ui-completion-2026-09-28/proxy-connections-synthetic.png",
+      "sha256": "9c1287c60f973b2743775d712180743885de6a68a21771ed79c461525ec173b2",
+      "scope": "Production proxy UI with synthetic native controls and records; no live proxy/network acceptance."
+    },
+    {
+      "path": "docs/release-evidence/socialbox-ui-completion-2026-09-28/proxy-empty-synthetic.png",
+      "sha256": "e7e2280a24fd63a6e98d45c5ca42d3ab10f3e08bd39ea0b3ec75fea1112c06b3",
+      "scope": "Production proxy UI with synthetic native controls and records; no live proxy/network acceptance."
+    }
+  ],
+  "physical": {
+    "uiAcceptance": "NOT_RUN",
+    "coldLaunchAcceptance": "NOT_RUN",
+    "recordingAvailable": false,
+    "reason": "SSH launch request returns zero; the working USB preview shows the iPhone lock screen. No unlocked foreground app walkthrough or recording was completed.",
+    "usbPreview": "AVAILABLE_LOCK_SCREEN_OBSERVED_AFTER_UPDATE"
+  },
+  "preservedBoundary": [
+    "Original executable behavior and licensing admission",
+    "Original identifiers, selectors, service identities and archive routing",
+    "Exact user values, filenames, credentials, secure fields and delegate/action ownership",
+    "License notices, attribution and recovery provenance"
+  ],
+  "isolation": {
+    "status": "NOT_VERIFIED",
+    "outstandingGap": "ADOPT-003",
+    "note": "UI completion does not prove a network fence, successful container switching, restore correctness or cross-container isolation."
+  },
+  "commits": [
+    {
+      "id": "47373fe",
+      "unit": "Archive display metadata; legacy routing preserved"
+    },
+    {
+      "id": "dd98ce4",
+      "unit": "Responsive container list and own dock"
+    },
+    {
+      "id": "5ba8f87",
+      "unit": "Owned proxy/session/Cloud routes and actual header ABI validation"
+    },
+    {
+      "id": "e06f45c",
+      "unit": "Version15 package pinned to predecessor14"
+    }
+  ]
+}

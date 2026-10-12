@@ -1,0 +1,73 @@
+{
+  "date": "2026-09-22",
+  "version": "3.1.0-1+socialbox.7",
+  "packageSHA256": "521ed1871a79413a0143c9b2d3b5f9e7331d4e5f0664b1939df06b04804e326c",
+  "device": {
+    "model": "iPhone10,6",
+    "iOS": "16.7.16",
+    "jailbreak": "palera1n rootless",
+    "runtimeArchitecture": "arm64"
+  },
+  "status": "HELPER_FILTER_INSTALLED_AND_METHOD_INSTALLATION_OBSERVED",
+  "reproduction": {
+    "priorVersion": "3.1.0-1+socialbox.6",
+    "onDiskDYLDSettingPresent": true,
+    "registeredDYLDSettingPresent": false,
+    "priorHelperLibraryMapped": false,
+    "trueJobReloadFixedIt": false
+  },
+  "repair": {
+    "filter": {
+      "Executables": [
+        "DoritosHelper"
+      ]
+    },
+    "originalHelperPlistRestored": true,
+    "originalProgramsUnmodified": 15,
+    "originalSlicesUnmodified": 25,
+    "wholeHostHashUIDPathAndMethodChecksRetained": true,
+    "licensingChanged": false
+  },
+  "actualOriginalHelper": {
+    "mappedLibrary": "LBXHelperSafety.dylib",
+    "fixedSyslogMessage": "LBX_HELPER_DRAIN installed=yes",
+    "lastObservedLocalTime": "19:31:31",
+    "methodInstallation": "PASS",
+    "requestAndStorageEndToEnd": "NOT_RUN"
+  },
+  "packaging": {
+    "installed": true,
+    "payloadFilesVerified": 59,
+    "metadataByteIdentical": true,
+    "priorArchiveSHA256": "20c68ed03dee2cafff03c6f7b7985d5170eb78a3a6c19566fd0b06fcb9f0d319",
+    "exactPriorControlAndModeGuard": "PASS",
+    "firstAttemptRecoveryExit": 0,
+    "recoveryPayload": "Exact .6 package payload; private recovery omitted its original-only incoming preinst. Prior control bytes restored only after payload and remaining control verification.",
+    "privateRecoverySHA256": "c0327c3d2455aaf7c1da15a9fc4143aae67620c693d7f41beeb9f0fd6f48bf34"
+  },
+  "validation": {
+    "failingFirstFilterRegression": "PASS after demonstrated failure",
+    "helperAssertions": 501,
+    "packageGroups": 33,
+    "compositionGroups": 7,
+    "staticCheck": "ALL CLEAN",
+    "leakContractTests": 8,
+    "sourceSnapshotFiles": 431,
+    "signedBuildArchitectures": [
+      "arm64",
+      "arm64e"
+    ],
+    "arm64eDevice": "NOT_RUN"
+  },
+  "managementRecovery": {
+    "finding": "Rollback after opening the manager replaced its executable vnode. The old live manager then had proc_pidpath ENOENT and correctly invalidated complete snapshots.",
+    "action": "Closed only the registered manager through a separate private RunningBoard bundle predicate; no raw-PID or name fallback added to the container drain.",
+    "containerDrainPolicyChanged": false
+  },
+  "residuals": [
+    "No manager guard/UI acceptance: uiopen returned zero but did not prove a foreground usable screen.",
+    "No complete global/deactivation/batch transaction or measured network containment; ADOPT-003 remains a gap.",
+    "No target app or 40-container isolation claim. Existing loader selection was preserved and never used as an isolation target."
+  ],
+  "formatReference": "https://github.com/tealbathingsuit/ellekit/blob/1017a0d09606ea49ba8bc4d6cccc530d372e640e/injector/injector.c"
+}

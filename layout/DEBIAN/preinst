@@ -1,0 +1,55 @@
+#!/bin/sh
+set -eu
+case "${1:-}" in install|upgrade) ;; *) exit 0 ;; esac
+# Compatibility check only: these implementations have different data formats
+# and injected components. Never let an ordinary dpkg upgrade mix the engines.
+if [ -e /var/jb/Applications/SocialBox.app/SocialBox ]; then
+  echo "SocialBox: another container engine is installed. Complete a backed-up data migration before installing the source version; nothing was changed." >&2
+  exit 1
+fi
+# Stop only these exact installed UI executables before dpkg replaces their files.
+# A live unlinked executable makes the daemon's strict process inspection fail.
+# The packet-tunnel provider and user containers are not selected here.
+app_pids() {
+  snapshot=$(ps -axo pid=,comm=) || return 1
+  printf '%s\n' "$snapshot" | while read -r pid executable; do
+    case "$pid" in ''|*[!0-9]*) continue ;; esac
+    if [ "$executable" = "$1" ]; then printf '%s\n' "$pid"; fi
+  done
+}
+for name in RedditBox RedditBoxFirewall SocialBoxFacebook; do
+  app="/var/jb/Applications/$name.app"
+  [ -d "$app" ] || continue
+  physical=$(CDPATH= cd -- "$app" && pwd -P) || exit 1
+  executable="$physical/$name"
+  pids=$(app_pids "$executable") || exit 1
+  for pid in $pids; do
+    kill -TERM "$pid" 2>/dev/null || ! kill -0 "$pid" 2>/dev/null || exit 1
+  done
+  attempt=0
+  while :; do
+    pids=$(app_pids "$executable") || exit 1
+    [ -n "$pids" ] || break
+    attempt=$((attempt + 1))
+    if [ "$attempt" -gt 5 ]; then
+      echo "RedditBox: close $name before updating; its old executable is still running." >&2
+      exit 1
+    fi
+    sleep 1
+  done
+done
+
+# Version 0.1.26 shipped a separate entry shortcut. Retire only that bundle,
+# while its Info.plist is still present; dpkg removes its obsolete owned files.
+# Never refresh all apps or remove the original Facebook/Reddit or user data.
+retired_app=/var/jb/Applications/SocialBoxFacebook.app
+if [ -f "$retired_app/Info.plist" ]; then
+  if [ -x /var/jb/usr/bin/uicache ]; then
+    /var/jb/usr/bin/uicache -u "$retired_app"
+  elif command -v uicache >/dev/null 2>&1; then
+    uicache -u "$retired_app"
+  else
+    echo "SocialBox: uicache is required to remove the retired entry icon." >&2
+    exit 1
+  fi
+fi

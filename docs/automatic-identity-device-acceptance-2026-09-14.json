@@ -1,0 +1,851 @@
+{
+  "schemaVersion": 1,
+  "recordedAtUTC": "2026-09-14T14:15:28.957858+00:00",
+  "installedVersion": "0.1.20",
+  "scheme": "rootless",
+  "installation": "PASS",
+  "originalProfileJSONBytesPreserved": true,
+  "packageSha256": "6968ef9c8fb5fdd078b325b0514244efec92e2b92735757d2c5b0ad904adf924",
+  "preflight": {
+    "capturedAtUTC": "2026-09-14T11:02:40.144314+00:00",
+    "collection": "read-only SSH shared master, mobile uid501; no helper execution, sudo, profile reads, install or network opening",
+    "installedPackageVersion": "0.1.16",
+    "physicalDevice": {
+      "productType": "iPhone10,4",
+      "iOS": "16.7.16",
+      "build": "20H392"
+    },
+    "dataVolume": {
+      "totalKiB": 62469236,
+      "usedKiB": 10109272,
+      "availableKiB": 44251280
+    },
+    "processCounts": {
+      "redditboxd": 1,
+      "RedditBox": 1,
+      "Reddit": 0,
+      "Facebook": 1
+    },
+    "publicState": {
+      "ageSecondsAtCapture": 1.18,
+      "activeContainerPresent": false,
+      "networkState": "closed",
+      "licenseStatus": "active",
+      "configuration": {
+        "configured": true,
+        "readable": true,
+        "disabled": false
+      },
+      "operationRecoveryPresent": false,
+      "operationRecoveryUnsafe": null,
+      "startupRecoveryOK": true,
+      "lastOperationAction": "deleteContainer",
+      "lastOperationOK": true,
+      "sources": {
+        "reddit": {
+          "decrypted": true,
+          "version": "2026.36.0",
+          "build": "664762"
+        },
+        "facebook": {
+          "decrypted": true,
+          "version": "578.1.0",
+          "build": "1063022819"
+        }
+      },
+      "containerCounts": {
+        "total": 1,
+        "active": 0,
+        "profileErrors": 0,
+        "deletionStates": 0,
+        "identityFrozen": 0,
+        "managedVerified": 0,
+        "hooksReady": 0,
+        "vpnArmed": 0
+      }
+    },
+    "activeOperationJournalCount": null,
+    "activeOperationJournalInspection": "unavailable to mobile; public recovery state only",
+    "limits": [
+      "Public state is a snapshot; no live proxy/geolocation/VPN traffic probe performed.",
+      "No UUID, UDID, container IDs, proxy hosts/URLs, credentials, profiles or raw public state persisted.",
+      "Process names are counts only; Facebook process ownership was not resolved."
+    ]
+  },
+  "afterInstall": {
+    "capturedAtUTC": "2026-09-14T11:15:54.298743+00:00",
+    "collection": "read-only SSH shared master, mobile uid501; no helper execution, sudo, profile reads, install or network opening",
+    "installedPackageVersion": "0.1.19",
+    "physicalDevice": {
+      "productType": "iPhone10,4",
+      "iOS": "16.7.16",
+      "build": "20H392"
+    },
+    "dataVolume": {
+      "totalKiB": 62469236,
+      "usedKiB": 10113808,
+      "availableKiB": 44244880
+    },
+    "processCounts": {
+      "redditboxd": 1,
+      "RedditBox": 0,
+      "Reddit": 0,
+      "Facebook": 1
+    },
+    "publicState": {
+      "ageSecondsAtCapture": 0.66,
+      "activeContainerPresent": false,
+      "networkState": "closed",
+      "licenseStatus": "active",
+      "configuration": {
+        "configured": true,
+        "readable": true,
+        "disabled": false
+      },
+      "operationRecoveryPresent": false,
+      "operationRecoveryUnsafe": null,
+      "startupRecoveryOK": true,
+      "lastOperationAction": "deleteContainer",
+      "lastOperationOK": true,
+      "sources": {
+        "reddit": {
+          "decrypted": true,
+          "version": "2026.36.0",
+          "build": "664762"
+        },
+        "facebook": {
+          "decrypted": true,
+          "version": "578.1.0",
+          "build": "1063022819"
+        }
+      },
+      "containerCounts": {
+        "total": 1,
+        "active": 0,
+        "profileErrors": 0,
+        "deletionStates": 0,
+        "identityFrozen": 0,
+        "managedVerified": 0,
+        "hooksReady": 0,
+        "vpnArmed": 0
+      }
+    },
+    "activeOperationJournalCount": null,
+    "activeOperationJournalInspection": "unavailable to mobile; public recovery state only",
+    "limits": [
+      "Public state is a snapshot; no live proxy/geolocation/VPN traffic probe performed.",
+      "No UUID, UDID, container IDs, proxy hosts/URLs, credentials, profiles or raw public state persisted.",
+      "Process names are counts only; Facebook process ownership was not resolved."
+    ],
+    "comparisonWithPreInstall": {
+      "installedVersionBefore": "0.1.16",
+      "installedVersionAfter": "0.1.19",
+      "physicalDeviceUnchanged": true,
+      "publicFieldsUnchanged": {
+        "licenseStatus": true,
+        "networkState": true,
+        "activeContainerPresent": true,
+        "configuration": true,
+        "operationRecoveryPresent": true,
+        "startupRecoveryOK": true,
+        "sources": true,
+        "containerCounts": true
+      },
+      "availableStorageDeltaKiB": -6400
+    }
+  },
+  "observations": {
+    "createInitialStrictObserver": {
+      "result": {
+        "ok": false,
+        "checks": {
+          "dedicated-profile-created": false,
+          "allowed-test-name": true,
+          "gate-remained-closed": false,
+          "process-ownership-proven": true,
+          "facebook-process-set-unchanged": true,
+          "no-reddit-owned-process": true,
+          "fresh-gate-closed": true,
+          "request-queue-quiescent": true,
+          "target-profile-absent": true
+        },
+        "cloneLaunch": "NOT_RUN",
+        "manualApply": "NOT_RUN",
+        "uiInteraction": "NOT_RUN",
+        "fullIsolation": "NOT_RUN",
+        "stage": "gate-not-closed",
+        "errorCode": 0
+      },
+      "privateLog": "automatic-device-create.log",
+      "sha256": "8e2a159261a8cb22d927526dd5f912f9f9a95da8e69c67724d629d19b5820394"
+    },
+    "dedicatedProfileProbe": {
+      "result": {
+        "ok": true,
+        "checks": {
+          "initial-required-identifiers-complete": true,
+          "allowed-test-name": true,
+          "process-ownership-proven": true,
+          "dedicated-profile-marker": true,
+          "private-draft-readable": true,
+          "facebook-process-set-unchanged": true,
+          "no-reddit-owned-process": true,
+          "fresh-gate-closed": true,
+          "request-queue-quiescent": true,
+          "identity-never-used": true
+        },
+        "cloneLaunch": "NOT_RUN",
+        "manualApply": "NOT_RUN",
+        "uiInteraction": "NOT_RUN",
+        "fullIsolation": "NOT_RUN",
+        "stage": "probe-complete",
+        "errorCode": 0
+      },
+      "privateLog": "automatic-device-probe.log",
+      "sha256": "e8c0b8ad59e1f01cd7b82a418a4c03267051db7f2b5b39acfb645aa456521f59"
+    },
+    "automaticDraftAndPreview": {
+      "result": {
+        "ok": true,
+        "checks": {
+          "facebook-process-set-unchanged": true,
+          "request-queue-quiescent": true,
+          "allowed-test-name": true,
+          "initial-required-identifiers-complete": true,
+          "automatic-origin": true,
+          "fresh-gate-closed": true,
+          "private-draft-readable": true,
+          "automatic-and-preview-did-not-save": true,
+          "gate-remained-closed": true,
+          "identity-never-used": true,
+          "automatic-full-draft": true,
+          "dedicated-profile-marker": true,
+          "no-reddit-owned-process": true,
+          "verified-region-matches-draft": true,
+          "new-private-identifiers": true,
+          "security-policies-preserved": true,
+          "public-records-exclude-private-identifiers": true,
+          "process-ownership-proven": true,
+          "exact-manual-preview-accepted": true
+        },
+        "cloneLaunch": "NOT_RUN",
+        "manualApply": "NOT_RUN",
+        "uiInteraction": "NOT_RUN",
+        "fullIsolation": "NOT_RUN",
+        "stage": "verified-unsaved-draft",
+        "errorCode": 0
+      },
+      "privateLog": "automatic-device-verify.log",
+      "sha256": "2c96f0c382b3ceb615f2b074c4cf3f7c62c93de149ac6410b375544e50e1f22f"
+    },
+    "manualApplyFirstAttempt": {
+      "result": {
+        "ok": false,
+        "checks": {
+          "new-private-identifiers": true,
+          "initial-required-identifiers-complete": true,
+          "allowed-test-name": true,
+          "identity-never-used": true,
+          "process-ownership-proven": true,
+          "fresh-gate-closed": true,
+          "request-queue-quiescent": true,
+          "private-draft-readable": true,
+          "security-policies-preserved": true,
+          "manual-apply-accepted": false,
+          "dedicated-profile-marker": true,
+          "verified-region-matches-draft": true,
+          "quiescent-before-apply": true,
+          "public-records-exclude-private-identifiers": true,
+          "automatic-and-preview-did-not-save": true,
+          "exact-manual-preview-accepted": true,
+          "facebook-process-set-unchanged": true,
+          "automatic-origin": true,
+          "no-reddit-owned-process": true,
+          "automatic-full-draft": true
+        },
+        "cloneLaunch": "NOT_RUN",
+        "staleSamples": 0,
+        "maxClosedHeartbeatAge": 1.0689339637756348,
+        "manualApply": "SUBMITTED",
+        "uiInteraction": "NOT_RUN",
+        "fullIsolation": "NOT_RUN",
+        "watcherVersion": 2,
+        "stage": "manual-apply",
+        "errorCode": 0
+      },
+      "privateLog": "automatic-device-apply.log",
+      "sha256": "d2781482987bb013b512064babf3894d060d8cfc10c414cdcf0584f2ac0def09"
+    },
+    "manualSave0_1_20": {
+      "result": {
+        "fullIsolation": "NOT_RUN",
+        "staleSamples": 0,
+        "lastSafeModeReadError": 0,
+        "springBoardReadErrors": 0,
+        "cloneLaunch": "NOT_RUN",
+        "springBoardChangedSamples": 0,
+        "springBoardUnchanged": true,
+        "watcherVersion": 3,
+        "safeModePresentSamples": 0,
+        "stage": "manual-save-readback-complete",
+        "safeModeReadErrors": 0,
+        "ok": true,
+        "noSafeMode": true,
+        "maxClosedHeartbeatAge": 1.0678651332855225,
+        "uiInteraction": "NOT_RUN",
+        "errorCode": 0,
+        "observerSamples": 953,
+        "applyTerminalObserved": true,
+        "checks": {
+          "new-private-identifiers": true,
+          "initial-required-identifiers-complete": true,
+          "allowed-test-name": true,
+          "identity-never-used": true,
+          "saved-security-unchanged": true,
+          "process-ownership-proven": true,
+          "fresh-gate-closed": true,
+          "request-queue-quiescent": true,
+          "private-draft-readable": true,
+          "security-policies-preserved": true,
+          "manual-apply-accepted": true,
+          "dedicated-profile-marker": true,
+          "verified-region-matches-draft": true,
+          "public-records-exclude-private-identifiers": true,
+          "quiescent-before-apply": true,
+          "identity-still-unused": true,
+          "automatic-and-preview-did-not-save": true,
+          "no-safe-mode-marker-observed": true,
+          "springboard-identity-unchanged": true,
+          "exact-manual-preview-accepted": true,
+          "public-records-still-exclude-identifiers": true,
+          "facebook-process-set-unchanged": true,
+          "installed-clone-registration-and-owner": true,
+          "automatic-origin": true,
+          "installed-clone-unsupported-visibility-absent": true,
+          "no-reddit-owned-process": true,
+          "gate-remained-closed": true,
+          "automatic-full-draft": true,
+          "all-reviewed-fields-persisted": true,
+          "installed-clone-hidden-contract": true
+        },
+        "manualApply": "SUBMITTED"
+      },
+      "privateLog": "automatic-device-apply-0.1.20-v3.log",
+      "sha256": "6d50c065b68aed91457d319787f8aa68eaaf6d575375cce2f78e2da123528225",
+      "qualifiedOutcome": "PASS: actual Auto \u2192 explicit manual preview \u2192 Save \u2192 persisted readback. Physical UI taps and clone launch remain NOT_RUN."
+    }
+  },
+  "initialObserverQualification": "The first helper required a CLOSED lease with a heartbeat no older than2.5s at every sample, and exited when that combined predicate failed. It did not retain the failed lease sample, so the exact cause of that window is unverified; this is not proof of OPEN or a leak. The daemon later reported successful Create. Privileged journal inspection was quiescent, and a separate owned-profile probe plus Auto/preview verification passed. No Create retry was issued.",
+  "deviceUITaps": "NOT_RUN",
+  "cloneLaunch": "NOT_RUN",
+  "fullIsolation": "NOT_RUN",
+  "facebookRuntime": "NOT_RUN",
+  "manualApply": "PASS_0.1.20_PERSISTED_READBACK",
+  "installerFailure": {
+    "code": "0xe800801c",
+    "systemMessage": "No code signature found.",
+    "service": "installd",
+    "installationPhase": "verification",
+    "transactionPhase": "install-attempted",
+    "backupsRetained": true,
+    "recoveryFencePresent": false,
+    "originalScratchProfileRestored": "VERIFIED_BY_SEPARATE_OFFLINE_RECOVERY",
+    "networkAtSubsequentInspection": "closed",
+    "causeBeyondSignatureRejection": "AppSync absent after SpringBoard crash triggered ElleKit safe mode; exact icon crash trigger remains unproven.",
+    "note": "Terminal stage deadline reflects cancellation after the installer fence; it does not prove request-budget expiry. Public identityResult retained prior preview; applied=false does not prove profile rollback."
+  },
+  "appSyncLoadedImageObservation": {
+    "result": {
+      "moduleCounts": {
+        "TweakLoader.dylib": 0,
+        "pspawn.dylib": 0,
+        "libsubstrate.dylib": 0,
+        "libinjector.dylib": 0,
+        "libellekit.dylib": 0,
+        "AppSyncUnified-installd.dylib": 0,
+        "TweakInject.dylib": 0,
+        "libhooker.dylib": 0,
+        "MobileSafety.dylib": 0
+      },
+      "stableImageArray": true,
+      "stableProcessIdentity": 1,
+      "taskReadOK": true,
+      "knownInstalldExecutable": true,
+      "imageSnapshotComplete": 1,
+      "imageCount": 271,
+      "unreadableImageNameCount": 0,
+      "processEnumerationComplete": true,
+      "installdCount": 1,
+      "readOnly": true,
+      "inspectorVersion": 1,
+      "taskInfoCode": 0,
+      "taskAccessCode": 0
+    },
+    "privateLog": "automatic-appsync-loaded-inspection.log",
+    "sha256": "5eccf0bdefd585c3d1967ed85d76dee3eca19c504edec329ec475c8c8a434059"
+  },
+  "protectedTransactionObservation": {
+    "parsedOK": true,
+    "profileOwnerAndMarkerConfirmed": true,
+    "registration": {
+      "registeredIdentifierMatches": true,
+      "registeredDataOwnershipProven": true,
+      "savedPathMatchesRegistration": true,
+      "registeredBundlePresent": true,
+      "lookupAvailable": true
+    },
+    "signatureEvidence": {
+      "installed-main": {
+        "xmlEntitlementsParsed": true,
+        "codeSignatureBytes": 1646368,
+        "codeDirectoryCount": 1,
+        "loadCommandPresent": true,
+        "superBlobParsed": true
+      },
+      "staged-main": {
+        "xmlEntitlementsParsed": true,
+        "codeSignatureBytes": 1646368,
+        "codeDirectoryCount": 1,
+        "loadCommandPresent": true,
+        "superBlobParsed": true
+      },
+      "previous-main": {
+        "xmlEntitlementsParsed": true,
+        "codeSignatureBytes": 1646368,
+        "codeDirectoryCount": 1,
+        "loadCommandPresent": true,
+        "superBlobParsed": true
+      }
+    },
+    "installedPreviousWholeBundle": {
+      "leftEntryCount": 14323,
+      "mtimeEqual": true,
+      "contentDifferences": 0,
+      "metadataDifferences": 0,
+      "xattrDifferences": 0,
+      "rightEntryCount": 14323,
+      "completeContentEqual": true,
+      "metadataEqual": true,
+      "xattrsEqual": true,
+      "structureEqual": true,
+      "available": true,
+      "beforeAfterFilesystemSnapshotAtomic": false
+    },
+    "installedPreviousWholeData": {
+      "leftEntryCount": 8,
+      "mtimeEqual": true,
+      "contentDifferences": 0,
+      "metadataDifferences": 0,
+      "xattrDifferences": 0,
+      "rightEntryCount": 8,
+      "completeContentEqual": true,
+      "metadataEqual": true,
+      "xattrsEqual": true,
+      "structureEqual": true,
+      "available": true,
+      "beforeAfterFilesystemSnapshotAtomic": false
+    },
+    "installedPreviousBootstrapEqual": {
+      "timing": true,
+      "ids": true,
+      "device": true,
+      "reddit": true,
+      "mgOverrides": true,
+      "serials": true,
+      "containerId": true,
+      "security": true
+    },
+    "candidateMatchesStagedBootstrap": {
+      "timing": true,
+      "ids": true,
+      "device": true,
+      "reddit": true,
+      "mgOverrides": true,
+      "serials": true,
+      "containerId": true,
+      "security": true
+    },
+    "privateLog": "automatic-device-apply-inspection-v3.log",
+    "sha256": "4f421ce5ac82bf2c133f044b4891f0e53452b7e77c1c97d13debaef569ee3f82",
+    "qualification": "Tree observation is not atomic. Metadata equality covers mode/uid/gid/link count; xattrs and mtime separately. Prior V1 inspector rejected installd-owned metadata by an overly narrow owner policy; its null/false values were not product ownership findings."
+  },
+  "safeModeTimeline": {
+    "localTimezone": "Europe/Bratislava",
+    "createSucceeded": "2026-09-14 13:21:16",
+    "safeModeMarkerCreated": "2026-09-14 13:21:17",
+    "springBoardCrash": "2026-09-14 13:21:22",
+    "installdRestarted": "2026-09-14 13:39:47",
+    "signatureRejected": "2026-09-14 13:40:40",
+    "faultPath": [
+      "SBHIconModel isIconVisible:",
+      "SBHLibraryCategoriesFolderDataSource _regenerateCategoriesFolder",
+      "SBIconModel _reloadAppIcons"
+    ],
+    "redditBoxTweakLoadedInSpringBoard": false,
+    "causeOfSpringBoardCrash": "UNPROVEN: clone visibility metadata is a candidate; no controlled causal comparison yet."
+  },
+  "offlineRecovery": {
+    "status": "COMPLETED_AND_VERIFIED",
+    "daemonStopped": false,
+    "originalProfileChecksumPassedBeforeStop": true,
+    "leaseBeforeStop": {
+      "CLOSED": true,
+      "heartbeatAgeSeconds": 0.9836280345916748,
+      "activeContainerAbsent": true,
+      "bindingPresent": true
+    },
+    "observations": {
+      "preflight": {
+        "result": {
+          "networkOpen": "NOT_RUN",
+          "automaticResume": "DISABLED",
+          "profileRestored": false,
+          "appInstallOrLaunch": "NOT_RUN",
+          "stage": "read-only-admission",
+          "transactionCompleted": false,
+          "fixedOwnedScratchOnly": true,
+          "unsafeArchivedLast": false,
+          "activeArchived": false,
+          "readOnly": true,
+          "ok": false,
+          "blockedCheck": "none",
+          "serviceIdleFromProcessCount": "NOT_CLAIMED",
+          "evidenceCreated": false
+        },
+        "privateLog": "automatic-recovery-preflight.log",
+        "sha256": "ca805565875b12bd3957e7547fb802ea58c452cb33d008c31f709023fa6524f9"
+      },
+      "diagnose": {
+        "result": {
+          "diagnosticFacts": {
+            "operationsReadErrorCode": 0,
+            "unexpectedEntryIsDirectory": false,
+            "operationEntryCount": 5,
+            "unexpectedEntryIsLock": false
+          },
+          "networkOpen": "NOT_RUN",
+          "automaticResume": "DISABLED",
+          "profileRestored": false,
+          "appInstallOrLaunch": "NOT_RUN",
+          "stage": "read-only-admission",
+          "transactionCompleted": false,
+          "fixedOwnedScratchOnly": true,
+          "unsafeArchivedLast": false,
+          "activeArchived": false,
+          "readOnly": true,
+          "ok": false,
+          "blockedCheck": "none",
+          "diagnosticOnly": true,
+          "evidenceCreated": false,
+          "serviceIdleFromProcessCount": "NOT_CLAIMED",
+          "diagnosticCheck": "unexpected-operations-entry"
+        },
+        "privateLog": "automatic-recovery-diagnose.log",
+        "sha256": "e8c1080ab64a1da3b9cbea235c330eba811405d891c8af00e8b7a4080f5a4d59"
+      },
+      "v2FirstPreflight": {
+        "result": {
+          "networkOpen": "NOT_RUN",
+          "automaticResume": "DISABLED",
+          "profileRestored": false,
+          "appInstallOrLaunch": "NOT_RUN",
+          "stage": "read-only-admission",
+          "transactionCompleted": false,
+          "fixedOwnedScratchOnly": true,
+          "unsafeArchivedLast": false,
+          "activeArchived": false,
+          "readOnly": true,
+          "ok": false,
+          "blockedCheck": "daemon-worker-or-owned-profile-unproven",
+          "serviceIdleFromProcessCount": "NOT_CLAIMED",
+          "evidenceCreated": false
+        },
+        "privateLog": "automatic-recovery-v2-preflight.log",
+        "sha256": "3004dece98bd9aec1fe5765df8a458771ac0a051323c0b2e85e19b5fd68535fc"
+      },
+      "v2SequentialPreflight": {
+        "result": {
+          "networkOpen": "NOT_RUN",
+          "automaticResume": "DISABLED",
+          "profileRestored": false,
+          "appInstallOrLaunch": "NOT_RUN",
+          "stage": "read-only-admission",
+          "transactionCompleted": false,
+          "fixedOwnedScratchOnly": true,
+          "unsafeArchivedLast": false,
+          "activeArchived": false,
+          "readOnly": true,
+          "ok": false,
+          "blockedCheck": "daemon-worker-or-owned-profile-unproven",
+          "serviceIdleFromProcessCount": "NOT_CLAIMED",
+          "evidenceCreated": false
+        },
+        "privateLog": "automatic-recovery-v2-preflight-sequential.log",
+        "sha256": "cc4e8111f130587fea57d990385253246211f3df1b3c395f47fcc51ca5b5a796"
+      },
+      "v2QuiescentPreflight": {
+        "result": {
+          "networkOpen": "NOT_RUN",
+          "automaticResume": "DISABLED",
+          "profileRestored": false,
+          "appInstallOrLaunch": "NOT_RUN",
+          "stage": "ready-for-reviewed-offline-restore",
+          "transactionCompleted": false,
+          "fixedOwnedScratchOnly": true,
+          "unsafeArchivedLast": false,
+          "activeArchived": false,
+          "readOnly": true,
+          "ok": true,
+          "blockedCheck": "none",
+          "serviceIdleFromProcessCount": "NOT_CLAIMED",
+          "evidenceCreated": false
+        },
+        "privateLog": "automatic-recovery-v2-preflight-quiescent.log",
+        "sha256": "9036172b18606c20ee7cd83ac5a6718810e144fdb4b179bcb1992b3af248ee28"
+      },
+      "v2Restore": {
+        "result": {
+          "networkOpen": "NOT_RUN",
+          "automaticResume": "DISABLED",
+          "profileRestored": true,
+          "appInstallOrLaunch": "NOT_RUN",
+          "stage": "archiving-matching-unsafe-last",
+          "transactionCompleted": true,
+          "fixedOwnedScratchOnly": true,
+          "unsafeArchivedLast": false,
+          "activeArchived": true,
+          "readOnly": false,
+          "ok": false,
+          "blockedCheck": "daemon-worker-or-registration-guard",
+          "serviceIdleFromProcessCount": "NOT_CLAIMED",
+          "evidenceCreated": true
+        },
+        "privateLog": "automatic-recovery-v2-restore.log",
+        "sha256": "36e6b3b3738ad3528cb39d0606de43df8a066d808e1cac8191c38487cc52444b"
+      },
+      "partialInspection": {
+        "result": {
+          "journalSecurityMetadataAcceptable": true,
+          "storeMatchesCaptured": true,
+          "queueExpectedAtPartialStage": true,
+          "allDeviceGuardComponentsPassNow": false,
+          "leaseMatchesCapturedClosed": true,
+          "journalMatchesExpectedCompletion": true,
+          "profileSecurityMetadataAcceptable": true,
+          "currentProfileMatchesExpectedRestore": true,
+          "liveActiveAbsent": true,
+          "directoriesStableNow": true,
+          "writes": "NOT_RUN",
+          "ok": true,
+          "directoryPinsAvailable": true,
+          "previousRunProcessBaselineAvailable": false,
+          "queueCounts": {
+            "operationsReadable": true,
+            "activeCount": 0,
+            "unknownCount": 0,
+            "InboxPlistCount": 0,
+            "InboxReadable": true,
+            "unsafeCount": 1,
+            "historicalCount": 3,
+            "ProcessingPlistCount": 0,
+            "ProcessingReadable": true
+          },
+          "processQuietNow": false,
+          "registrationMatchesNow": true,
+          "readOnly": true,
+          "activeArchivedMatchesCaptured": true,
+          "publicStateMatchesCaptured": true,
+          "unsafeMatchesCaptured": true,
+          "unsafeArchiveAbsent": true,
+          "historicalEvidenceVerified": true,
+          "profileNamesReadableNow": true,
+          "targetTransactionCount": 1
+        },
+        "privateLog": "automatic-partial-recovery-inspection.log",
+        "sha256": "938c3b59e2078ec7cbdd6a66cfb3022e52fbe63d3a2a4d51a64f7a3a093c0e79"
+      },
+      "finalOnlyPreflight": {
+        "result": {
+          "ok": true,
+          "readOnly": true,
+          "blockedCheck": "none",
+          "profileOrJournalWrites": "NOT_RUN",
+          "launchOrGateWrite": "NOT_RUN",
+          "unsafeArchivedLast": false,
+          "automaticRetry": "DISABLED",
+          "stage": "ready-for-final-unsafe-archive-only",
+          "activeArchive": "NOT_RUN"
+        },
+        "privateLog": "automatic-final-only-preflight.log",
+        "sha256": "eaf4336e877b007852336238af1e97e2f56ef6f8f81f41eda81c312dcda19b99"
+      },
+      "finalOnlyArchive": {
+        "result": {
+          "ok": true,
+          "readOnly": false,
+          "blockedCheck": "none",
+          "profileOrJournalWrites": "NOT_RUN",
+          "launchOrGateWrite": "NOT_RUN",
+          "unsafeArchivedLast": true,
+          "automaticRetry": "DISABLED",
+          "stage": "remaining-unsafe-archived-and-durable",
+          "activeArchive": "NOT_RUN"
+        },
+        "privateLog": "automatic-final-only-archive.log",
+        "sha256": "c5eb0cfc730b3d6ba507ba39312f3a8c258ea9a5ccb42c5c97f646e14fdca20b"
+      }
+    },
+    "diagnosis": "The remaining process guard refusal was caused by newly running registered Reddit source/original-clone processes. Their initiator is unproven. A second fixed PID/start/path close was followed by independent complete final-only verification and one durable unsafe archival. No profile/journal rewrite occurred in final completion.",
+    "safeModeMarkerUntouched": true,
+    "profileOrFenceWritesByRecovery": true,
+    "profileRestored": true,
+    "transactionCompleted": true,
+    "activeArchived": true,
+    "unsafeArchived": true,
+    "ownedRedditProcessesClosed": {
+      "readOnly": false,
+      "ok": true,
+      "termCount": 2,
+      "killCount": 0,
+      "facebookUnchanged": true,
+      "profileStoreGateWrites": "NOT_RUN",
+      "privateLog": "automatic-stop-two-result.log",
+      "sha256": "a43f2252d032911d9e8ca03412ac8699c9f851f462bdc0e4c073332d95e6c395"
+    }
+  },
+  "mobileBootstrapReadObservation": {
+    "privateLog": "automatic-mobile-profile-read.log",
+    "sha256": "58bcb7fc242ea49253aebf0b5211ab880eebe0ee04a77824a505df59bb874cd7",
+    "installedBootstrapReadableToUID501": true,
+    "installedBootstrapMode": "0644",
+    "installedBootstrapOwnerUID": 33,
+    "sandboxOverrideAbsentWithENOENT": true,
+    "qualification": "Absence of the sandbox override is not evidence of a permission denial; protected launch has separate profile synchronization checks."
+  },
+  "installationHistory": [
+    {
+      "version": "0.1.19",
+      "result": "PASS",
+      "packageSha256": "92dabb4c7be2c3268b4d7a472d1ac41bb7c38fd60455b86c6b1d952ca29676f8",
+      "manualSaveResult": "FAILED_INSTALLER_SAFE_MODE_CHAIN"
+    }
+  ],
+  "safeModeRecovery": {
+    "archive": {
+      "archiveComplete": 1,
+      "formatVersion": 1,
+      "launchctlInvoked": false,
+      "markerMoved": true,
+      "renameAttempted": true,
+      "retryAllowed": false,
+      "stage": "complete",
+      "verified": true,
+      "verifyOnly": false
+    },
+    "sameSpringBoardAndCrashBaselineAcrossUpgradeAndRecovery": true,
+    "appSync": {
+      "checks": {
+        "bothCapturesComplete": true,
+        "springBoardUnchanged": true,
+        "crashBaselineUnchanged": true,
+        "safeModeMarkerAbsent": true,
+        "oneInstalldStableAcrossInspection": true,
+        "noPackagingHelpers": true,
+        "AppSyncLoaded": true,
+        "stableImageArray": true,
+        "stableProcessIdentity": true,
+        "taskReadOK": true,
+        "knownInstalldExecutable": true,
+        "imageSnapshotComplete": true,
+        "processEnumerationComplete": true,
+        "noUnreadableImageNames": true
+      },
+      "moduleObservation": {
+        "moduleCounts": {
+          "TweakLoader.dylib": 0,
+          "pspawn.dylib": 0,
+          "libsubstrate.dylib": 0,
+          "libinjector.dylib": 0,
+          "libellekit.dylib": 1,
+          "AppSyncUnified-installd.dylib": 1,
+          "TweakInject.dylib": 0,
+          "libhooker.dylib": 0,
+          "MobileSafety.dylib": 0
+        },
+        "stableImageArray": true,
+        "stableProcessIdentity": 1,
+        "taskReadOK": true,
+        "knownInstalldExecutable": true,
+        "imageSnapshotComplete": 1,
+        "imageCount": 275,
+        "unreadableImageNameCount": 0,
+        "processEnumerationComplete": true,
+        "installdCount": 1,
+        "readOnly": true,
+        "inspectorVersion": 1,
+        "taskInfoCode": 0,
+        "taskAccessCode": 0
+      }
+    },
+    "installerServiceAction": "Started the verified existing waiting user/501/com.apple.mobile.installd job once; no running service killed, no respring, no injection bypass.",
+    "markerEvidenceRetainedPrivately": true,
+    "note": "This does not prove the original icon crash cause. No automatic marker clearing or service restart loop."
+  },
+  "currentStatus": {
+    "installedVersion": "0.1.20",
+    "recovery": "COMPLETE",
+    "automaticManualSave": "PASS",
+    "deviceChecksPassed": 30,
+    "observerSamples": 953,
+    "safeModeRecreated": false,
+    "springBoardChanged": false,
+    "cloneLaunch": "NOT_RUN",
+    "facebookRuntime": "NOT_RUN",
+    "networkMDMAcceptance": "NOT_RUN",
+    "fullIsolation": "NOT_RUN",
+    "productionPublishedThisWork": false
+  },
+  "readOnlyVerificationBeforeSave": {
+    "capturedAtUTC": "2026-09-14T14:06:05.792591+00:00",
+    "readOnly": true,
+    "cloneLaunch": "NOT_RUN",
+    "fullIsolation": "NOT_RUN",
+    "installedVersion": "0.1.20",
+    "allInstalledMachOComponentsMatchPackage": [
+      "var/jb/Applications/RedditBox.app/RedditBox",
+      "var/jb/Applications/RedditBoxFirewall.app/PlugIns/PacketTunnel.appex/PacketTunnel",
+      "var/jb/Applications/RedditBoxFirewall.app/RedditBoxFirewall",
+      "var/jb/Library/MobileSubstrate/DynamicLibraries/RedditBox.dylib",
+      "var/jb/Library/PreferenceBundles/RedditBoxPrefs.bundle/RedditBoxPrefs",
+      "var/jb/usr/bin/redditboxd",
+      "var/jb/usr/libexec/redditbox-keychain-cleaner"
+    ],
+    "bothProfilesByteIdenticalAcrossUpgrade": true,
+    "freshClosedHeartbeatAgeSeconds": 0.5067920684814453,
+    "noActiveContainerOrRecoveryFence": true,
+    "licenseActive": true,
+    "containerCount": 2,
+    "sources": {
+      "facebook": {
+        "decrypted": true,
+        "version": "578.1.0",
+        "build": "1063022819"
+      },
+      "reddit": {
+        "decrypted": true,
+        "version": "2026.36.0",
+        "build": "664762"
+      }
+    }
+  },
+  "finalReadOnlyPhoneCheck": {
+    "captureComplete": true,
+    "springBoardUnchanged": true,
+    "crashBaselineUnchanged": true,
+    "safeModeAbsent": true,
+    "noPackagingHelpers": true,
+    "originalProfileChecksumPassed": true,
+    "privateLog": "automatic-final-phone-capture-private.json",
+    "sha256": "91c368aa45ccfd4d6fd79cf14125a6b8f6acee8a4f503f5d570d9a228dd7badc"
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "version": "rootless 0.1.14 / rootful 0.1.12",
+  "checkedAtUTC": "2026-09-12T21:08:20.927734+00:00",
+  "installURL": "https://redditspoof.vercel.app/install",
+  "aptSigningFingerprint": "B020EEB51600D74C02D6FE57448FA877778E0D1F",
+  "repositories": [
+    {
+      "scheme": "rootless",
+      "url": "https://redditspoof.vercel.app/apt/redditbox/",
+      "architecture": "iphoneos-arm64",
+      "version": "0.1.14",
+      "filename": "debs/com.redditbox_0.1.14_iphoneos-arm64.deb",
+      "sha256": "518575121e319cee3531d87c9a5c0d54877aa976644627767ff0cc5630e0c2e4",
+      "size": 1645894,
+      "retainedVersions": [
+        "0.1.14",
+        "0.1.13",
+        "0.1.12"
+      ],
+      "dependencies": [
+        "ai.akemi.appinst@2.1.1-redditbox2",
+        "ai.akemi.appsyncunified@116.0"
+      ],
+      "requiresMDMReadoption": false,
+      "stagedDeployment": "https://redditspoof-f5xaov83q-modelclone.vercel.app",
+      "signedIndexesAndAllRetainedDownloads": "PASS",
+      "localMetadataMatchesProduction": true,
+      "stagingLicenseHealthEvidence": {
+        "variant": "rootless",
+        "version": "0.1.14",
+        "deploymentURL": "https://redditspoof-f5xaov83q-modelclone.vercel.app",
+        "status": "PASS",
+        "ready": true,
+        "issuerMatches": true,
+        "keyIdMatches": true,
+        "expectedKeyId": "b2c5d4176c727107c9826ad69386d4d65f90920074981bd842127d6b22add6e9",
+        "httpStatus": 200,
+        "journalPhaseBeforeRequest": "deployed",
+        "journalPhaseAfterRequest": "deployed",
+        "beforePromotionConfirmed": true,
+        "isReleaseGate": false,
+        "requestStartedAt": "2026-09-12T20:57:49.585790+00:00",
+        "requestCompletedAt": "2026-09-12T20:57:50.262353+00:00"
+      }
+    },
+    {
+      "scheme": "rootful",
+      "url": "https://redditspoof.vercel.app/apt/redditbox-rootful/",
+      "architecture": "iphoneos-arm",
+      "version": "0.1.12",
+      "filename": "debs/com.redditbox_0.1.12_iphoneos-arm.deb",
+      "sha256": "a91c14e659a5378d962413bd1d7c8594ee277d01097f4e419b64259df13c7c7e",
+      "size": 1638226,
+      "retainedVersions": [
+        "0.1.12",
+        "0.1.11",
+        "0.1.10"
+      ],
+      "dependencies": [
+        "ai.akemi.appinst@2.1.1-redditbox2",
+        "ai.akemi.appsyncunified@116.0"
+      ],
+      "requiresMDMReadoption": false,
+      "stagedDeployment": "https://redditspoof-crs6vxcwe-modelclone.vercel.app",
+      "signedIndexesAndAllRetainedDownloads": "PASS",
+      "localMetadataMatchesProduction": true,
+      "stagingLicenseHealthEvidence": {
+        "variant": "rootful",
+        "version": "0.1.12",
+        "deploymentURL": "https://redditspoof-crs6vxcwe-modelclone.vercel.app",
+        "status": "PASS",
+        "ready": true,
+        "issuerMatches": true,
+        "keyIdMatches": true,
+        "expectedKeyId": "b2c5d4176c727107c9826ad69386d4d65f90920074981bd842127d6b22add6e9",
+        "httpStatus": 200,
+        "journalPhaseBeforeRequest": "deployed",
+        "journalPhaseAfterRequest": "deployed",
+        "beforePromotionConfirmed": true,
+        "isReleaseGate": false,
+        "requestStartedAt": "2026-09-12T21:05:00.483110+00:00",
+        "requestCompletedAt": "2026-09-12T21:05:01.012050+00:00"
+      }
+    }
+  ],
+  "deviceAcceptance": "NOT_RUN: iPhone absent from USB; actual MDM routing and A/B isolation remain unverified.",
+  "licenseSigner": {
+    "ready": true,
+    "issuer": "https://redditspoof.vercel.app",
+    "keyId": "b2c5d4176c727107c9826ad69386d4d65f90920074981bd842127d6b22add6e9",
+    "matchesExistingPublicPEM": true
+  },
+  "web": {
+    "installHTTP": 200,
+    "homeHTTP": 200,
+    "canonicalSileoLinks": [
+      "sileo://source/https://redditspoof.vercel.app/apt/redditbox/",
+      "sileo://source/https://redditspoof.vercel.app/apt/redditbox-rootful/"
+    ],
+    "bothDisplayedVersions": [
+      "0.1.14",
+      "0.1.12"
+    ],
+    "copyButtonsRendered": 2,
+    "browserClickOrSileoAcceptance": "NOT_RUN",
+    "hydratedHomeLinkRecheck": "NOT_RUN; homepage unchanged from 0.1.3"
+  },
+  "sourceCodeCommit": "0e35a675cc6a111f73cda48ea4120cad2d07be41",
+  "nativeBuilds": {
+    "rootless": "PASS",
+    "rootful": "PASS",
+    "signing": "Procursus ldid only; no Apple team"
+  }
+}

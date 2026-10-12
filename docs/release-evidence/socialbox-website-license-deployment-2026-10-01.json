@@ -1,0 +1,434 @@
+{
+  "schemaVersion": 1,
+  "kind": "socialbox-website-license-deployment",
+  "unit": 25,
+  "recordedAt": "2026-10-01T13:34:55.913888+00:00",
+  "status": "PASS_WEBSITE_ONLY_WITH_CUSTOMER_GAPS",
+  "clientDeliveryReady": false,
+  "freshInstallReady": false,
+  "customerArtifactReleased": false,
+  "customerCodeIssued": false,
+  "deployment": {
+    "status": "PASS",
+    "provider": "Vercel",
+    "existingProject": "redditspoof",
+    "projectID": "prj_ePNbkHomNxrP0Iyob0zLWOOK6aEW",
+    "sourceCommit": "7f1d88092aac4fc0825f4c503f7553031c72b81e",
+    "previousDeploymentID": "dpl_9cdw1dXTRrVQGqEfcGpqcdEZc2dz",
+    "deploymentID": "dpl_H7CgNzAtQo51hW27iqA2LY9KNJAZ",
+    "deploymentURL": "https://redditspoof-jmef27pql-modelclone.vercel.app",
+    "productionOrigin": "https://redditspoof.vercel.app",
+    "productionDeploymentID": "dpl_H7CgNzAtQo51hW27iqA2LY9KNJAZ",
+    "normalEnvironment": "Existing Vercel production environment inherited by unaliased build; no secret export, rotation or environment-file upload.",
+    "order": "Exact tracked source stage and dry manifest; cooperative APT lock; previous production ID and public gates; unaliased production build; stage checks and repeated previous ID; promote; final production ID/gates/APT; conditional owned unlock.",
+    "provenance": {
+      "status": "PASS",
+      "projectID": "prj_ePNbkHomNxrP0Iyob0zLWOOK6aEW",
+      "sourceCommitMetadata": "7f1d88092aac4fc0825f4c503f7553031c72b81e",
+      "deploymentID": "dpl_H7CgNzAtQo51hW27iqA2LY9KNJAZ",
+      "privateResponseSHA256": "132c571c9ee3b1ec4b2a8707fa65117a756c981a840521220dfc842936c11874",
+      "scope": "Vercel API metadata matches exact CLI deployment and project; commit is supplied build metadata, not independently verified compiled-bundle bytes."
+    },
+    "build": "PASS remote Next14.2.35 optimized compilation, types,30 static pages and traces; deployment READY.",
+    "limits": "CLI upload/dry manifest and immutable API deployment/project/commit metadata, not independent compiled-bundle byte verification or signed publisher attestation."
+  },
+  "host": {
+    "status": "PASS",
+    "suiteCount": 18,
+    "sourceCommit": "7f1d88092aac4fc0825f4c503f7553031c72b81e",
+    "frozenCopiedInputs": 151,
+    "sourceStable": true,
+    "copyCurrent": true,
+    "suites": [
+      {
+        "script": "scripts/license-auth-test.ts",
+        "exitCode": 0,
+        "elapsedSeconds": 0.367,
+        "privateLogSHA256": "448c6ccd4e8bacacfd2561e13091a4534ea05106dcdde3d8a8efa674a561a46a"
+      },
+      {
+        "script": "scripts/auth-concurrency-test.ts",
+        "exitCode": 0,
+        "elapsedSeconds": 0.907,
+        "privateLogSHA256": "33530d5666f5cb6f01a9e68c96e34f20ecc8e0eb65ee23082c59cc352a94016a"
+      },
+      {
+        "script": "scripts/blob-storage-etag-test.ts",
+        "exitCode": 0,
+        "elapsedSeconds": 0.317,
+        "privateLogSHA256": "8df70c565557a8dd4cf811a21a5303445c088c0814281c6d0c223f0b230eb35b"
+      },
+      {
+        "script": "scripts/device-license-test.ts",
+        "exitCode": 0,
+        "elapsedSeconds": 1.636,
+        "privateLogSHA256": "6564c7b57615995a580332ba8b42c25cb165cfb130c1956ca62e422d0ff52c23"
+      },
+      {
+        "script": "scripts/console-license-authority-test.ts",
+        "exitCode": 0,
+        "elapsedSeconds": 1.636,
+        "privateLogSHA256": "7899f817077946e085fc7509d2ef6db1d6d137745684c772402ca297517aee94"
+      },
+      {
+        "script": "scripts/http-proxy-test.ts",
+        "exitCode": 0,
+        "elapsedSeconds": 0.141,
+        "privateLogSHA256": "52f412c5635d23b6b56d34a88829173cb9f5326179635e2098c514a8d8016f47"
+      },
+      {
+        "script": "scripts/profile-inventory-test.ts",
+        "exitCode": 0,
+        "elapsedSeconds": 0.399,
+        "privateLogSHA256": "c7e840bc74b43575c462c5bfc0c330311e8ee411b512298e3414ce3c5bf81808"
+      },
+      {
+        "script": "scripts/app-registry-test.ts",
+        "exitCode": 0,
+        "elapsedSeconds": 0.463,
+        "privateLogSHA256": "9c792ccb7bcd1b277dfeeff956d67528e7b64028ec1ccecbf8d7f5496f9eba61"
+      },
+      {
+        "script": "scripts/profile-metadata-test.ts",
+        "exitCode": 0,
+        "elapsedSeconds": 0.643,
+        "privateLogSHA256": "a747ff6aa0d96fd122f9be3a4b53156330b5995a794c29aafe1a0f75c101609b"
+      },
+      {
+        "script": "scripts/assignment-migration-test.ts",
+        "exitCode": 0,
+        "elapsedSeconds": 0.412,
+        "privateLogSHA256": "95f94bd2bccfa47027a50827d7b6c25601126c6a914dcad804fd84de5e393fcf"
+      },
+      {
+        "script": "scripts/device-scope-test.ts",
+        "exitCode": 0,
+        "elapsedSeconds": 0.51,
+        "privateLogSHA256": "fcab634bfa9552f31421ad933ab22aeeaad03ba4c0bf458ebed26bc36c2b8e25"
+      },
+      {
+        "script": "scripts/backup-transfer-test.ts",
+        "exitCode": 0,
+        "elapsedSeconds": 0.671,
+        "privateLogSHA256": "fba77b7804323a451ff6d0baeee1bfa4c8e6c8bf7ad384e4857c647948fef818"
+      },
+      {
+        "script": "scripts/backup-chunks-test.ts",
+        "exitCode": 0,
+        "elapsedSeconds": 0.783,
+        "privateLogSHA256": "34fd1d81317563ba69c98eadfbd8f5575e762ae340c4de78c94a6363a2ce2377"
+      },
+      {
+        "script": "scripts/apt-publication-test.mjs",
+        "exitCode": 0,
+        "elapsedSeconds": 0.352,
+        "privateLogSHA256": "2cb9e194fe02aaee22e17ab685ac0545cd51bf0fd33b925c3ed3751476629d5c"
+      },
+      {
+        "script": "scripts/apt-route-test.ts",
+        "exitCode": 0,
+        "elapsedSeconds": 0.202,
+        "privateLogSHA256": "9e2c832982f6f707ae07f9c0d6cbe72822abad06adb32a5a987cff9336370e38"
+      },
+      {
+        "script": "scripts/installation-test.ts",
+        "exitCode": 0,
+        "elapsedSeconds": 0.143,
+        "privateLogSHA256": "c38b7ac08a59596b37142a3422d2b160d7d23eb349a9100f50bad08b6dfdfe88"
+      },
+      {
+        "script": "scripts/admin-console-test.ts",
+        "exitCode": 0,
+        "elapsedSeconds": 0.628,
+        "privateLogSHA256": "9af8fabb2e83504dc1cf13d8c49d50ed04fc1d5a5d44f1160a40a5ed0e421070"
+      },
+      {
+        "script": "scripts/socialbox-release-test.ts",
+        "exitCode": 0,
+        "elapsedSeconds": 0.289,
+        "privateLogSHA256": "672a8f66213d425e0d12b5e1183317332e7b6431a3185337415cd8c206cc5408"
+      }
+    ],
+    "scope": "Complete package.json cloud test chain in a new source copy, isolated synthetic/local data.150 tracked cloud inputs excluding environment files plus one profile-ID fixture frozen before/after and exact copied content. Dependencies/Node/toolchain/OS excluded; no production account/device/client/provisioning acceptance.",
+    "syntheticEnvironment": "No environment files copied; BLOB token forced empty. Parent presence inspection found production signing/auth/proxy/profile/Vercel credentials absent; tests establish their own synthetic/local configuration. This does not assert all secrets were forcibly unset by runner.",
+    "privateReportSHA256": "b16302777cae8b51dfe3ad73697398e6735e704cf409561d615076c46dbb5375"
+  },
+  "upload": {
+    "status": "PASS",
+    "trackedCloudInputs": 150,
+    "uploadedInputs": 150,
+    "uploadedSizeBytes": 1615136,
+    "scope": "149 exact tracked cloud files plus explicit root ignore file; cloud/.gitignore ignored. No .env/state/node_modules/.next/native .deb/.ipa uploaded. Existing public source archives remain unchanged.",
+    "privateDryManifestSHA256": "6a62aaf364ac53b9e43929a0672df994eff40b0d65a550578ea3189588f91623",
+    "cloudSourceSHA256": {
+      "cloud/.gitignore": "0c6bce4f64079a683bd2e0605362fe433153ad62674b88227b5f8143640a68b4",
+      "cloud/.vercelignore": "1afc678f2cbf7343cb7fc1acf3ddaee79fe069a75cc9ca31dd903e7b7ad42642",
+      "cloud/PRIVATE_CONSOLE.md": "acf5d034e87fea02244f56c6f64a98336d54c8a359b856fdf034ff0847395276",
+      "cloud/README.md": "2704c4ba90e1a1ddbe3c57c4f0bcab73264acaa665aba5213b06263ce3563908",
+      "cloud/docs/app-types.md": "b4af8449fb6de1e12d4dcded97d775342c34e54479132d01d39c1500467c3da1",
+      "cloud/next.config.mjs": "8c996c8a7aaa0f64944c701e4819c1c7a2992484b2f87d6f775b21ece9f1ee6a",
+      "cloud/package-lock.json": "e16e5ed4b306245a8ef89d097136ec72a92cf658e0eaa36bed4af779379ab479",
+      "cloud/package.json": "250c9d50c9f3e355a61728546a78dc6b7f0db7f20043bd30a23c5e4727e7f133",
+      "cloud/postcss.config.mjs": "efa65c65e17d51d58570edce9d702b0604fdf6a9b8db65afaed8f075af8867c7",
+      "cloud/public/apt/redditbox-rootful/InRelease": "771f77501fdb8ac8c6af5ebd68a362bc2a8edee71e4020ea47566a73df3497c0",
+      "cloud/public/apt/redditbox-rootful/Packages": "752b45bd1b31a928b766e4723731e2be0c2513b611cf9bfd628ebad2df8f62c4",
+      "cloud/public/apt/redditbox-rootful/Packages.gz": "81e3b6c9b4313db61b05e60f65c7e56fd51e29e2d0f05721cdef91acd5dc03d5",
+      "cloud/public/apt/redditbox-rootful/Release": "775089b5bb4c7f1f9839d405ecfd53eecb3dae584c906b43e5ad97de3c5d8137",
+      "cloud/public/apt/redditbox-rootful/Release.gpg": "498d1ad29e731d39d6068a0e2b6558db465d2d673a2fc0816215311bd8fd8623",
+      "cloud/public/apt/redditbox-rootful/by-hash/SHA256/0a62d7fb0e632fdf9d25b62a8ae55550dc7f17d762afc1a37d44ec6e08c012f3": "0a62d7fb0e632fdf9d25b62a8ae55550dc7f17d762afc1a37d44ec6e08c012f3",
+      "cloud/public/apt/redditbox-rootful/by-hash/SHA256/35e32153d26987d3ad652351fca9825c4bbf9a6be8ad91057f1d1742f82ed1fc": "35e32153d26987d3ad652351fca9825c4bbf9a6be8ad91057f1d1742f82ed1fc",
+      "cloud/public/apt/redditbox-rootful/by-hash/SHA256/55e9e6ff8ff584838f0728b027f6562fd40be2ef17ef6087de4d57536a9c22af": "55e9e6ff8ff584838f0728b027f6562fd40be2ef17ef6087de4d57536a9c22af",
+      "cloud/public/apt/redditbox-rootful/by-hash/SHA256/752b45bd1b31a928b766e4723731e2be0c2513b611cf9bfd628ebad2df8f62c4": "752b45bd1b31a928b766e4723731e2be0c2513b611cf9bfd628ebad2df8f62c4",
+      "cloud/public/apt/redditbox-rootful/by-hash/SHA256/81e3b6c9b4313db61b05e60f65c7e56fd51e29e2d0f05721cdef91acd5dc03d5": "81e3b6c9b4313db61b05e60f65c7e56fd51e29e2d0f05721cdef91acd5dc03d5",
+      "cloud/public/apt/redditbox-rootful/by-hash/SHA256/b3884293e87fa701eb6aafb76fd1ce2b8da6f35ddee1ebfacadc9b23f3136136": "b3884293e87fa701eb6aafb76fd1ce2b8da6f35ddee1ebfacadc9b23f3136136",
+      "cloud/public/apt/redditbox-rootful/public-key.asc": "3cf802738b810e31347a7544d143db43fba3975a5480dc159cdddee991bd0f01",
+      "cloud/public/apt/redditbox-rootful/redditbox-archive-keyring.gpg": "dd4ca3fe3b31923c22090d3d308244c79dc3a1317e3e402917a12a4591fb500b",
+      "cloud/public/apt/redditbox-rootful/repository.json": "78718111a692acac6349dc1656fa64444d345cc890df33c1668ff629e15fc206",
+      "cloud/public/apt/redditbox/InRelease": "7d07445fc76ef47fad835b9634fe8872cf51b9fc8f94af110e94ad92ff0f5175",
+      "cloud/public/apt/redditbox/Packages": "fd473c17525db5e0d6efe0663d89c2ea53adb85446a97c17ab480dbf5fd8fdc8",
+      "cloud/public/apt/redditbox/Packages.gz": "a51fddb5413cc87e03be67b5239416f2d15419fa8ada9e68394d87009723c59e",
+      "cloud/public/apt/redditbox/Release": "d1383769143456159f4e380634e0aba54b702bf86b80948a449a0959c6a39516",
+      "cloud/public/apt/redditbox/Release.gpg": "de0fb7ac7a9b082f1859913900ee2acaff6655b78c1ce0f12e1786e01382ccbf",
+      "cloud/public/apt/redditbox/by-hash/SHA256/4224934fd2754a388e80388a3f5105da1758ac4e76d058ee885cb3dba54f0e2a": "4224934fd2754a388e80388a3f5105da1758ac4e76d058ee885cb3dba54f0e2a",
+      "cloud/public/apt/redditbox/by-hash/SHA256/53c0487e6c302e181b132b39f403d031ccde8df0320aaeb260ae761c5b4027cb": "53c0487e6c302e181b132b39f403d031ccde8df0320aaeb260ae761c5b4027cb",
+      "cloud/public/apt/redditbox/by-hash/SHA256/8b12804843e853e9bbc8afea5e3053cb9fd9a3e335c6c2dbc6b1ee003a83ae63": "8b12804843e853e9bbc8afea5e3053cb9fd9a3e335c6c2dbc6b1ee003a83ae63",
+      "cloud/public/apt/redditbox/by-hash/SHA256/a51fddb5413cc87e03be67b5239416f2d15419fa8ada9e68394d87009723c59e": "a51fddb5413cc87e03be67b5239416f2d15419fa8ada9e68394d87009723c59e",
+      "cloud/public/apt/redditbox/by-hash/SHA256/f76ff15a9aca4182e0c2c28d7cc732fbac2f3ca262cdf49d3d360c23bce19341": "f76ff15a9aca4182e0c2c28d7cc732fbac2f3ca262cdf49d3d360c23bce19341",
+      "cloud/public/apt/redditbox/by-hash/SHA256/fd473c17525db5e0d6efe0663d89c2ea53adb85446a97c17ab480dbf5fd8fdc8": "fd473c17525db5e0d6efe0663d89c2ea53adb85446a97c17ab480dbf5fd8fdc8",
+      "cloud/public/apt/redditbox/public-key.asc": "3cf802738b810e31347a7544d143db43fba3975a5480dc159cdddee991bd0f01",
+      "cloud/public/apt/redditbox/redditbox-archive-keyring.gpg": "dd4ca3fe3b31923c22090d3d308244c79dc3a1317e3e402917a12a4591fb500b",
+      "cloud/public/apt/redditbox/repository.json": "a69c862cbafdfc1b7854443dffd2b462970243227f915fd96122c4e1e36cf8e9",
+      "cloud/public/install/sources/appinst-2.1.1-redditbox1-source.tar.xz": "712629cc3f991b3197ebcfd77688c6804b7f4c65c1b635310eb00d5f92782147",
+      "cloud/public/install/sources/appinst-2.1.1-redditbox2-source.tar.xz": "e598e1a61d4772b808cb4ee01df9405d4e612375c1bbba7c222695beca66e08b",
+      "cloud/scripts/admin-console-test.ts": "47af44161963fd34611afb6e78b848e742319b00ea993f8728b8b280ead62f4b",
+      "cloud/scripts/admin-console-ui-test.mjs": "f69960098f99bf2aa74074183e4e99a993e156b3424f40fde7ec81ca2757e280",
+      "cloud/scripts/app-registry-test.ts": "489c856f646d0a52530c1345371444c72eef30c71f51c74942ddabb9884f16bd",
+      "cloud/scripts/apt-publication-test.mjs": "29522ef50a288f4eb8385b0a4a79f0101e183ef4b8c518962d801131c1294e10",
+      "cloud/scripts/apt-publish.mjs": "0b3a85d5dd6f60be24f07d7d8a8e4a24547ea76a3444177cf7f2680b9f895a43",
+      "cloud/scripts/apt-publisher.mjs": "b133e0333c87e9c713c3de6de050c8e3465fdf934d0d60ad17cba09a66248f07",
+      "cloud/scripts/apt-route-test.ts": "1ea36fe9a6b05a5a2477dca6d995b8abac7ed5e4169d8b9d1495b2d46621d01e",
+      "cloud/scripts/assignment-migration-test.ts": "f2c11894282f3814f50819a3681f38370ebad4bfb1ca1f6f1c7136057ee5a8a4",
+      "cloud/scripts/auth-concurrency-test.ts": "fd1836c9730d14ca6a8350391d50dd006b2ba4e1a7ec81a032f25679a20a9e4d",
+      "cloud/scripts/backup-chunks-test.ts": "f39d95cad3bed65551fd7483b7f077aa717820cf2ec75270ff13703a13fb5d4b",
+      "cloud/scripts/backup-transfer-test.ts": "3c9b7628e16df9167c4c84fa2bc3f760c60d7e43904db171e2c414a64347a4aa",
+      "cloud/scripts/blob-storage-etag-test.ts": "6cd1fd8f6c59bc2d48d5a33bf5d4df9295c1df5ad8fd98e3b7a5eaa51672659f",
+      "cloud/scripts/cloud-vault-ui-test.mjs": "60cc93a7c17b64b16c75474d45564b1962958a9b23a2b2ef0a8253bbb8db814c",
+      "cloud/scripts/console-license-authority-test.ts": "9a9707f4906efaebf8f3836356484f7a85a8cec4861dd6029cda45cc2572b070",
+      "cloud/scripts/device-license-test.ts": "7df0f68fa13c02849a61ea9ad930b18248609c80694ec9790fe88ab52f33516c",
+      "cloud/scripts/device-scope-test.ts": "ac2241d0cfe001c61ae4cdbe1c3fadec35454957b8f25dc855e21c2f54832aec",
+      "cloud/scripts/http-proxy-test.ts": "54af189500d419fab46fc99e942cbe6fa0591e959fe448beb4cb19f12c6a6239",
+      "cloud/scripts/installation-test.ts": "9353173c1755db979bea7f5b580b745c467cbc39f6816d219abd0e50f9c21be3",
+      "cloud/scripts/license-auth-test.ts": "c6706a704afa6b921f9009b2925cc234e4d6e703b8cb0903b913e837a83e1692",
+      "cloud/scripts/private-console-ui-test.mjs": "175d4096773f5ac43e4d667c4d5b2b94ac6e214fd88d1017d6a11ae500d1c161",
+      "cloud/scripts/profile-inventory-test.ts": "21095217e66c2d943a034d61e704c4ceeaffe2ee0837c60e97d16e3053af6d73",
+      "cloud/scripts/profile-metadata-test.ts": "c298f46013997a9d7146a5e589a395a7713b302c276bb1d5f468b773a86a42c7",
+      "cloud/scripts/register-socialbox-release.ts": "a08ec6357ccc5502b85797f3d71f4935ded90aa8185a0033fb6f1c7857c792d2",
+      "cloud/scripts/seed-va.ts": "9f596933b72934273589ebcd3a4f8272945184dbef7eebfc6d3109290fcaebc0",
+      "cloud/scripts/smoke-test.mjs": "7a8bbfb4ec258655ac68d305c56c1774f7332191e97e829181d5d7c8281c602b",
+      "cloud/scripts/socialbox-release-test.ts": "cc2ac51ddd1f320680d403ab71b20155fd0d1214987b5cc9ffb0d481d36b1494",
+      "cloud/scripts/socialbox-releases-ui-test.mjs": "94ffcda9e801fcde1cbc425f09c27c65f0670906707fc29735c2e28ad3bab84a",
+      "cloud/src/app/admin/device-license-details.tsx": "b55dc2148376d3eb256cbae320de28fa90e5454c1963974181836063a9213d46",
+      "cloud/src/app/admin/layout.tsx": "e32e0567ba54bf045d583970a4028752277687c0bab0238dda93d4163638d68e",
+      "cloud/src/app/admin/page.tsx": "9236ec8c42ba71a46c2c38a468b7777deff2cf5680005cc047b25d04fd442a7a",
+      "cloud/src/app/admin/releases/page.tsx": "ee9265da28b17347caf334dfee4dc63fae0ad428d4e9aeb837ff545a9442b8fe",
+      "cloud/src/app/api/admin/licenses/[id]/revoke/route.ts": "ad900126b8bfcb89d6852fbbb74ffa8c6847736a1ba57ae871ecef8d59ebee2f",
+      "cloud/src/app/api/admin/licenses/[id]/route.ts": "5e7b7ba300f89bd3fb5eb719445d618f50c5d1a3fb9c7918709e5056380bf76e",
+      "cloud/src/app/api/admin/licenses/route.ts": "e0323f4ee72bbd9707c3e0ee4be1ed3e61192b0d03556ce7c205cc92e9adc3ba",
+      "cloud/src/app/api/admin/releases/route.ts": "3031b2e703ade77413913e121386ce21a2607ef9b68e5c8f798c790071d6244d",
+      "cloud/src/app/api/admin/users/route.ts": "01337d4ef0681fe320211df7ce8c84658100843976afc4c6e087a3e163158a15",
+      "cloud/src/app/api/auth/login/route.ts": "5081e57b7d0c0c2ab193c217327c66905127b7e1e8de76ac89aedb43fc560525",
+      "cloud/src/app/api/auth/logout/route.ts": "87290f2476abefea8e480f37b7d206570ca36c3d160d0be3948a5240d23aaec5",
+      "cloud/src/app/api/auth/me/route.ts": "eea0ebe182e546a3354aa2ae8da8320d155bc1f15e9a213fe83c817faf7ce30c",
+      "cloud/src/app/api/auth/owner-login/route.ts": "0ba3673dcc68d235776661dc9d00ca24209ecbcb7b809bb455e787b127516b23",
+      "cloud/src/app/api/auth/register/route.ts": "682405fb5540302446b0fdb43c9429c652f8076ca5be5bf2d619dd2c7d8b4e39",
+      "cloud/src/app/api/backups/[id]/route.ts": "dc2b579def68883844528e756f4c68ad0c41387a637bf55bc3f180cd7880b13a",
+      "cloud/src/app/api/backups/route.ts": "d3281b5294a61c0e0a8b3758d4a0700ea31513e5828254db9f36a5a9e7032ddc",
+      "cloud/src/app/api/backups/transfer/route.ts": "ec0fcf3dc9f00559621e14b93d0489affd6ce97d840e3559d2b0a6c22852773c",
+      "cloud/src/app/api/devices/claim/route.ts": "44c33993bf36eefb34fd382704f729dc2e97836b9d43cb27137dadb27562ed1c",
+      "cloud/src/app/api/devices/pair/route.ts": "8137a1901930284f74d39d62558ab30565ac6024a64c62e2a6cc933f987c02e4",
+      "cloud/src/app/api/devices/route.ts": "0b9eea1e9617fe21d8eec28e743c01080cb926b2f85eecc2915e2ef5801a67fd",
+      "cloud/src/app/api/licenses/activate/route.ts": "b00b9db8471f99f048e9558fc3af27d63cf9f199f2683b278fe390c6b24aa48c",
+      "cloud/src/app/api/licenses/status/route.ts": "c0555b8aef79dca78cbaf2dbcb1738fab0a21b7f437289bea2b0c17bb57e9864",
+      "cloud/src/app/api/licenses/validate/route.ts": "a827b1515fc3d2a11cafc4c98dfe015cc01570a4e9a9d5fac0345a3d5d0c6250",
+      "cloud/src/app/api/pairing-code/route.ts": "28f2c41a6d68ede7ca1928296d42b098f652da7286be554e89dd1f417e86553d",
+      "cloud/src/app/api/profile-proxies/[profileId]/route.ts": "4b19ec1091f798c72389590a7be9f23b0064dd8ef4ccc644f241e421422e9026",
+      "cloud/src/app/api/profile-proxies/route.ts": "6e8fdc41d765e9ab56f865058afdab79da1533c5ec69fce8ab971a25a077f5d0",
+      "cloud/src/app/api/profile-rotation-auth/[profileId]/route.ts": "dc56bf8e348a8b8f70cef1b5070515403806163abd4360827a7452d25fb26564",
+      "cloud/src/app/api/profiles/reconcile/route.ts": "f13b53514263bddcaaab6c7fbf1161fbb5b982f38247c6773d330a8f72b91edb",
+      "cloud/src/app/api/profiles/route.ts": "eba849c92f1444f760c6db045d43c9c782fa4bd87e70e242086085124ce50ec7",
+      "cloud/src/app/api/proxies/[id]/health/route.ts": "b8f4106d376bbb84cda54d6f301ec18432f7f5795ca5cc53bfc44ce98a9c719a",
+      "cloud/src/app/api/proxies/[id]/route.ts": "6e4bcdbd08aac8a0fb4a7f7af3a137aada82f111fcb2fe24ecee632f97bf6e47",
+      "cloud/src/app/api/proxies/route.ts": "f91149232cbc378819bea3a4a8dfa42f62634339cf80907a784cb854361cf843",
+      "cloud/src/app/api/releases/socialbox/latest/route.ts": "d7b7ad08c2b636e3943f4f2a2e91c014304ea3f8d6465885a792e309cdfb632f",
+      "cloud/src/app/api/rotation-settings/route.ts": "a824d2ea0056979b2585ba28e71abf02ccdb0d9a8c792a251190bafda56ff17e",
+      "cloud/src/app/apps/reddit/page.tsx": "d95687b27f0c8816274422562cd223831bba8630257d3e60ac0f9bb322578169",
+      "cloud/src/app/apps/reddit/profile-metadata-editor.tsx": "3b4527f3d5e06824496c282d8a68f42398853ee008104bc99e3ea149c3f65e9a",
+      "cloud/src/app/apt/redditbox-rootful/debs/[filename]/route.ts": "51a71188e91e2e908d949ab87bbdbcc5b0be2c781b183d42f6472eac90a9427c",
+      "cloud/src/app/apt/redditbox/debs/[filename]/route.ts": "4964a39977033593d5938e2b1e378ff7b3cc269c548d68460d47f9250cf05a03",
+      "cloud/src/app/apt/socialbox/[...path]/route.ts": "55486f4d2ff6e64b249d2bdd74e0944f969ffcbd1119b87688822597eb666e2d",
+      "cloud/src/app/error.tsx": "0abfb757a15ced977132a926ff654fd2fc49e9f4a310de8d4f193cc5484b5bc5",
+      "cloud/src/app/globals.css": "dc7c7391fb5912a541739ed041a4b3eae5745f4e7c79ff367da3d51d56d36f41",
+      "cloud/src/app/install/page.tsx": "f62b84320f0e931bde4579cb7e7681e8720e959af454c3a6cc7842f5d386a9ab",
+      "cloud/src/app/install/source-card.tsx": "20d9c5b8cec57f8264e06b0cf47e4e1061ef3eafce31759c20ac42b8ed6b71c0",
+      "cloud/src/app/layout.tsx": "9e9fa6a40479dc9b9d7cf88e4b57857faa4211d289da19d31425ef1fbb0b4526",
+      "cloud/src/app/loading.tsx": "da1c6d91bacf8803ccb93c10630d5bcb394df881ecd343a7d102a1d2a3e0727f",
+      "cloud/src/app/login/page.tsx": "49d48af8188de3e73a560c28285e714e00cb37dfcd28e896cdcb6b45e55182f6",
+      "cloud/src/app/not-found.tsx": "9f28863715b20a1a73840dad5c9315394c524b85f966c2ef067062227a036d84",
+      "cloud/src/app/page.tsx": "d95687b27f0c8816274422562cd223831bba8630257d3e60ac0f9bb322578169",
+      "cloud/src/app/updates/page.tsx": "8801a83e24384a3d1155a499e9f3918faa3d4bc9e1013cd81acb98a7f6e120da",
+      "cloud/src/config/app-registry.json": "8b3489c24b2e4249df95a3f63e30cbf0467faf57487611582a09938f4bcb550d",
+      "cloud/src/data/socialbox-releases.json": "3884424998e0f7965496eb7c180e85d8ef4a8988dea21b84c60fb1c57bf12bfb",
+      "cloud/src/lib/admin.ts": "7c15ef0e5ca33333bb99118cd8c7f610e74805e02874c3d7954b4ef4da210276",
+      "cloud/src/lib/app-registry.ts": "35954400342a1230d4466783f9efde7433465426723e8a6feae89fca10bd7445",
+      "cloud/src/lib/apt-download.ts": "21c31114b2474f64e5897a7d99c7abde7a59190e30900d8f70c15b27f17b21ad",
+      "cloud/src/lib/apt-policy.mjs": "d273d3ad38ac855ae098461497f83030f96a4460ff05cc233a066be684271b66",
+      "cloud/src/lib/audit.ts": "33450c97c7de1f11a471c467b37a15003485923c1b5a2554358172dc220c9cd6",
+      "cloud/src/lib/auth.ts": "704e0693db9f72abdb19d7ad9e4bb27cc49489b3c8366c7f8981c0f40302550e",
+      "cloud/src/lib/backup-access.ts": "5fc1fe4049f835f83cbfcdeef54249a938d03e39f95ee29b889cea42e5390be8",
+      "cloud/src/lib/backup-transfer.ts": "bf1739e665333953d419c990ff4664b4f20390ad06dd66c32c2667b3247919cc",
+      "cloud/src/lib/client.ts": "e2d893b3560ac013e592d980af57eacca598ae83b25ee6cdf4908c3d77689bfc",
+      "cloud/src/lib/console-auth.ts": "bcd69327afab64977a4e64c9713f4fbbc7dfc66c67d18ed237ac60092c844079",
+      "cloud/src/lib/console-owner.ts": "1685dc17f5aea4e1d026a0128e376993f1c70ca958b45a910f0ccb06b0f7f9a2",
+      "cloud/src/lib/device-licenses.ts": "382252021f550c8c972352079f1b77e20a733e8acaf28665a6dc9a09ebf24f10",
+      "cloud/src/lib/devices.ts": "c0fb4a0858789e9dcff743002da425e8599675ef6e5b1c5dd3728a35f4e02ef2",
+      "cloud/src/lib/http-proxy.ts": "15737ec035c741e9deda2f76bee5a03738d05fe2404ea8b44aed78737f34a7bb",
+      "cloud/src/lib/identity.ts": "e61b63c23057a1e4746830331c754de6b920b0192c65ed21e810b424b6082e35",
+      "cloud/src/lib/ids.ts": "961624d5ad7af1a8845fb5e60a0e4796b0fc748999e87a8adeff961c683130bc",
+      "cloud/src/lib/installation.ts": "9eef5882ce39bfcb0f937c4d707ac174f36ca025e28aa7bda5f8dc9fbb77c8c7",
+      "cloud/src/lib/license-service-errors.ts": "43b29205593bd29441eafa0fceaabacc95c4aca7910ca74a68352ef2984926f3",
+      "cloud/src/lib/license-signing.ts": "fb0b2293b0d4cf5b042c0aceb497c8547e94248174c46d8773ff358abc19b62d",
+      "cloud/src/lib/licenses.ts": "dcf6e6f4baaafba7c8137a7abde2a1459371a562379e10c668059d81bf49cabd",
+      "cloud/src/lib/pairing.ts": "e7565abd9a1ccf27887855bd2b6fe9f6303af9d3d27006fb0f2af347012053ce",
+      "cloud/src/lib/profile-inventory.ts": "0d990b5f6577260e01e9f1c6ff45ae3adcc3c102630e1ebdd00b7368e12b42fe",
+      "cloud/src/lib/profile-metadata.ts": "7dac73e7223a8e0524e98e8992684339f51f34ffc8aaf7d6797b30b83e4cb8e6",
+      "cloud/src/lib/proxies.ts": "7b8c039679d5e9602d2b49f78b21fd8e0639f257ea554a677ac41bc8dea44a29",
+      "cloud/src/lib/proxy-secrets.ts": "c7170fbff22fe0aaed3cb4a8726600b8e461fdd4a2bd032cd3a2aad23a27e6bd",
+      "cloud/src/lib/socialbox-release-policy.ts": "546235cf52fa53546db8123ef2e6e5c72f4391721f26444c5c13323126052190",
+      "cloud/src/lib/socialbox-releases.ts": "9b5018f0e68f3e714c5fd93e65f74f3c60f78186cb1a168ce914a47a100b5d54",
+      "cloud/src/lib/storage.ts": "0e75bef4812a7e86745b20652d7cc2d0b6bedc88bbf752d8568709603249cbb5",
+      "cloud/src/middleware.ts": "a357c92ebe411d44e9755868307469929a1277ab5f4128d816dcd40861d04207",
+      "cloud/src/scripts/seed.ts": "1c1fc03ced630dcb7deab09d028771c34f8d00ea431ec91c00b7c6367a3047ad",
+      "cloud/tailwind.config.ts": "42fa41cf2f28768f6186099d7cd4fbee382c2464bc4f912c7bd05e6d408e377d",
+      "cloud/tsconfig.json": "e2d9ae53f03f7efc44027d15fdc501ac12e5b491ace23ae316dbadd24a355f3b",
+      "cloud/vercel.json": "09ccb233849ac5b1ab2ea69fe8021fcfa6135742e6e9bd608f3727d32efbc40b"
+    }
+  },
+  "live": {
+    "status": "PASS",
+    "stageChecks": {
+      "/login": {
+        "status": 200,
+        "sha256": "89b71ea220ca28afcfbb7152df9a7b85b8d530e56ff0c830a87202d3efe43153"
+      },
+      "/install": {
+        "status": 200,
+        "sha256": "4ad0363e005885bff3f18eb6267ed0b7550f31bcaf0b03b95822afbd33dbfed3"
+      },
+      "/api/admin/licenses": {
+        "status": 403,
+        "sha256": "3baf776a54b2814ba590c79324cc5da66e586efe56550a28e8230bb8eb5fa619"
+      },
+      "/api/releases/socialbox/latest": {
+        "status": 200,
+        "sha256": "d3980e2d7750e6e8aaa198aa92f7a6d581fc39ed2d476bbbaab74f84c4944844"
+      },
+      "/apt/socialbox/Release": {
+        "status": 404,
+        "sha256": "ec23e0099ee669be3d4b33641ff1b122cf9cd5e6a3dd1b093e6a00c8d28bad2f"
+      }
+    },
+    "productionChecks": {
+      "/login": {
+        "status": 200,
+        "sha256": "89b71ea220ca28afcfbb7152df9a7b85b8d530e56ff0c830a87202d3efe43153"
+      },
+      "/install": {
+        "status": 200,
+        "sha256": "4ad0363e005885bff3f18eb6267ed0b7550f31bcaf0b03b95822afbd33dbfed3"
+      },
+      "/api/admin/licenses": {
+        "status": 403,
+        "sha256": "3baf776a54b2814ba590c79324cc5da66e586efe56550a28e8230bb8eb5fa619"
+      },
+      "/api/releases/socialbox/latest": {
+        "status": 200,
+        "sha256": "d3980e2d7750e6e8aaa198aa92f7a6d581fc39ed2d476bbbaab74f84c4944844"
+      },
+      "/apt/socialbox/Release": {
+        "status": 404,
+        "sha256": "ec23e0099ee669be3d4b33641ff1b122cf9cd5e6a3dd1b093e6a00c8d28bad2f"
+      }
+    },
+    "aptMetadataFiles": 16,
+    "aptByteEquality": "PASS before/stage/final production and local source for both redditbox and redditbox-rootful.",
+    "aptSHA256": {
+      "/apt/redditbox/Packages": "fd473c17525db5e0d6efe0663d89c2ea53adb85446a97c17ab480dbf5fd8fdc8",
+      "/apt/redditbox/Packages.gz": "a51fddb5413cc87e03be67b5239416f2d15419fa8ada9e68394d87009723c59e",
+      "/apt/redditbox/Release": "d1383769143456159f4e380634e0aba54b702bf86b80948a449a0959c6a39516",
+      "/apt/redditbox/InRelease": "7d07445fc76ef47fad835b9634fe8872cf51b9fc8f94af110e94ad92ff0f5175",
+      "/apt/redditbox/Release.gpg": "de0fb7ac7a9b082f1859913900ee2acaff6655b78c1ce0f12e1786e01382ccbf",
+      "/apt/redditbox/repository.json": "a69c862cbafdfc1b7854443dffd2b462970243227f915fd96122c4e1e36cf8e9",
+      "/apt/redditbox/public-key.asc": "3cf802738b810e31347a7544d143db43fba3975a5480dc159cdddee991bd0f01",
+      "/apt/redditbox/redditbox-archive-keyring.gpg": "dd4ca3fe3b31923c22090d3d308244c79dc3a1317e3e402917a12a4591fb500b",
+      "/apt/redditbox-rootful/Packages": "752b45bd1b31a928b766e4723731e2be0c2513b611cf9bfd628ebad2df8f62c4",
+      "/apt/redditbox-rootful/Packages.gz": "81e3b6c9b4313db61b05e60f65c7e56fd51e29e2d0f05721cdef91acd5dc03d5",
+      "/apt/redditbox-rootful/Release": "775089b5bb4c7f1f9839d405ecfd53eecb3dae584c906b43e5ad97de3c5d8137",
+      "/apt/redditbox-rootful/InRelease": "771f77501fdb8ac8c6af5ebd68a362bc2a8edee71e4020ea47566a73df3497c0",
+      "/apt/redditbox-rootful/Release.gpg": "498d1ad29e731d39d6068a0e2b6558db465d2d673a2fc0816215311bd8fd8623",
+      "/apt/redditbox-rootful/repository.json": "78718111a692acac6349dc1656fa64444d345cc890df33c1668ff629e15fc206",
+      "/apt/redditbox-rootful/public-key.asc": "3cf802738b810e31347a7544d143db43fba3975a5480dc159cdddee991bd0f01",
+      "/apt/redditbox-rootful/redditbox-archive-keyring.gpg": "dd4ca3fe3b31923c22090d3d308244c79dc3a1317e3e402917a12a4591fb500b"
+    },
+    "publicationLock": "PASS exact owner/ETag checks and conditional unlock; cooperating publishers only, no independent Vercel deploy lease.",
+    "noRedirectFixture": "PASS inert302 response did not reach second server; no production bypass header forwarded. Exact HTTPS preview origin and fixed path are checked before headers.",
+    "licenseMutationsPerformed": false,
+    "authenticationAccountChangesPerformed": false,
+    "realBlobActorConflict": "NOT_RUN",
+    "productionSigningReadiness": "NOT_RUN",
+    "ownerLogin": "NOT_RUN",
+    "actorRaceAcceptance": "Unit24 local42-group receipt; no deliberate production actor drift or license mutation."
+  },
+  "independentReview": {
+    "status": "PASS_WITH_LIMITS",
+    "reviewer": "normal_activation_route_review",
+    "findings": "Cloud-only release gate reviewed; redirect header forwarding risk corrected before external requests, staged link/special-node checks strengthened before promotion. No remaining reviewed publication blocker.",
+    "scope": "Read-only source/runner review, not customer/runtime acceptance."
+  },
+  "device": {
+    "status": "NOT_RUN",
+    "effectsPerformed": false,
+    "newRealLicenseIssued": false,
+    "ownerProgramsOrAccountsChanged": false
+  },
+  "retainedFailures": [
+    {
+      "attempt": "acceptance-01",
+      "status": "FAIL_PRIVATE_RUNNER_COUNT",
+      "reason": "Runner expected19 suites; actual package has18. Failed before suite execution."
+    },
+    {
+      "attempt": "acceptance-02",
+      "status": "FAIL_PRIVATE_FIXTURE_PREPARATION",
+      "reason": "Cloud-only test copy omitted one repository profile identifier fixture; first6 suites passed then inventory ENOENT. New attempt03 included exact tracked fixture and all18 passed."
+    }
+  ],
+  "limits": [
+    "Website publication of Unit24 authorization does not supply trusted first-install authority, target/history binding or a durable external one-shot issuer/verifier backend.",
+    "Check-only customer package remains unusable for fresh configure and was not published. Existing release/download gates stay closed.",
+    "Public gate checks do not exercise actual owner login, production actor contention, signer readiness, default native activation or a client installer.",
+    "No UI/native installer/phone/account or real license changes.",
+    "Known Instagram sibling normal/direct read FAIL remains unfixed; Facebook launch FAIL and Twitter retained runtime unaccepted.",
+    "Safe automatic switching/isolation/recovery, running-session expiry/revocation, two-account and proxy acceptance remain NOT_RUN.",
+    "Full local freezes cover copied tracked inputs only; Node/dependencies/SDK/toolchain/OS and remote build environment/cache excluded.",
+    "Instantaneous source/public/deployment checks and cooperating APT lock are not atomic lifetime or arbitrary concurrent-writer guarantees."
+  ],
+  "privateEvidenceSHA256": {
+    "journal.json": "5764a445eb632ff640576d8ed6f759835e5b0697f7e11414886e25fec3cfbb78",
+    "deploy.json": "39a411d4ff944edeac19eea3780afefecfeb7260de7f490b1ce3935a4c17657f",
+    "deploy.log": "e2f2ea4669a6fdaececb34fd6cc9a5a813c613a4e70b27059f3e4fcd1a112b47",
+    "stage-api-metadata.json": "132c571c9ee3b1ec4b2a8707fa65117a756c981a840521220dfc842936c11874",
+    "promote.log": "b5d609ac2df10746237a860ab70434582d3da6f0c80880fc0e580ef8deaf44d1",
+    "production-final.json": "ac0800bf217ad760cab74cb1db058823ae14c74aa7ae48f0837c6208907cd72a"
+  },
+  "next": "Await the already pending genuinely fresh jailbroken target answer and legitimate external first-preparation contracts; continue useful bounded ordinary licensing/saved-settings/package work without manufacturing authority or retrying risk-blocked runtime/identity prompts."
+}

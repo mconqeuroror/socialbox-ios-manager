@@ -1,0 +1,716 @@
+{
+  "schemaVersion": 1,
+  "unit": 42,
+  "date": "2026-10-02",
+  "status": "PASS_LOCAL_ONLY",
+  "clientRelease": "NOT_READY",
+  "request": "Renewed backed-up phone testing and pre-create profile information with existing country/carrier/iPhone/iOS choices.",
+  "sourceParent": "74314988330e76371023b270f64dd7ff85802ba6",
+  "changes": [
+    "Create opens a separate current-profile review before any original create entry.",
+    "Sixteen allowlisted existing Home labels are copied for display; unavailable values are not inferred.",
+    "Device settings forwards only the existing reviewed home.configureIdentity entry. No new picker, catalog, resolver, schema, identity writer or runtime hook.",
+    "Cancel invokes no backend action; edit never queues creation. Explicit Continue consumes its UI action once, dismisses, freshly checks current source/home/navigation/metadata/control, then forwards the unchanged original create entry.",
+    "Fixed source-byte pins update the private accepted-owner composition; exactly nine creation strings are imported into baseline copy."
+  ],
+  "limits": [
+    "Current reported values are cached display, not an exact proposed/generated per-container profile or effect proof.",
+    "Original device settings are shared; original creation may generate new values. No automatic per-container app choice or model/iOS/carrier effect acceptance.",
+    "The accepted baseline activation/backend/Connection/license source is preserved as Git bytes, not current installed/mapped bytes, OS/publisher/lifetime trust.",
+    "Private two-file composition package always refuses preinst/postinst with 78 and must NEVER be installed/published as a customer package. No preparation, reset, migration, adoption or history authority.",
+    "Previously rejected runtime/identity integration is not retried, rephrased or routed around. Instagram sibling-file leak remains unfixed."
+  ],
+  "phone": {
+    "status": "FAIL_AUTHENTICATION_BEFORE_OBSERVATION",
+    "trustedPasswordlessAttemptExit": 255,
+    "credentialGuesses": false,
+    "appDeletion": false,
+    "install": false,
+    "codeRevocation": false,
+    "newCodeIssuance": false,
+    "accountContentsRead": false,
+    "next": "Restore current trusted access; new read-only role/path/program/control/default-state inspection, quiescence and private backups precede any authorized reversible acceptance."
+  },
+  "tests": {
+    "currentSource": {
+      "attempt": "ui06",
+      "status": "PASS",
+      "assertions": 283,
+      "inputs": 14,
+      "uniqueSimulatorUninstall": "PASS",
+      "finalFixtureDiffersOnlyByAdditionalScreenshotCapture": true
+    },
+    "composedOwner": {
+      "attempt": "composed-ui01",
+      "status": "PASS",
+      "assertions": 283,
+      "stableInputPaths": 56,
+      "productionGraphInputs": 52,
+      "uniqueSimulatorUninstall": "PASS",
+      "originalEngineLoaded": false,
+      "phoneAction": false,
+      "scenarios": 12,
+      "syntheticCreateEntries": 1,
+      "syntheticSettingsEntries": 1,
+      "coverage": [
+        "zero-effect rendering and Cancel",
+        "all sixteen values and unavailable getter",
+        "fresh carrier on a new review",
+        "existing settings entry only, no queued create",
+        "explicit create once, duplicate refusal",
+        "disabled original create control",
+        "unsupported host metadata",
+        "source navigation changes during dismissal",
+        "Home navigation changes during dismissal",
+        "offscreen source",
+        "narrow 320x568 and maximum accessibility text",
+        "value width, at least 44-point actions, scroll reachability"
+      ]
+    },
+    "composition": {
+      "status": "PASS",
+      "unittestMethods": 11,
+      "scope": "Updated exact-source and copy pins, byte preservation and inert archive/lifecycle refusals; unittest console observed, no frozen transitive unittest graph or independent reviewer claim."
+    },
+    "legacyWorkspaceFixture": {
+      "status": "UPDATED_NOT_RUN",
+      "scope": "Create assertion now expects the review with zero original action. Full unrelated workspace/license/saved-settings suite was not rerun."
+    },
+    "retained": [
+      {
+        "attempt": "ui01",
+        "status": "FAIL_BEFORE_JOURNAL",
+        "reason": "Missing new output parent; no simulator effect."
+      },
+      {
+        "attempt": "ui02",
+        "publishedStatus": "FAIL",
+        "functionalAssertions": 102,
+        "functionalFailures": 12,
+        "rawOkJSONType": "int",
+        "inputDrift": [],
+        "rawResultSHA256": "31e5e0490a2d0170e45484802c55d492ee73fc7ef4e2857b02181e8c06fa1670"
+      },
+      {
+        "attempt": "ui03",
+        "publishedStatus": "FAIL",
+        "functionalAssertions": 102,
+        "functionalFailures": 9,
+        "rawOkJSONType": "int",
+        "inputDrift": [],
+        "rawResultSHA256": "40e580f731b453452a42331ba673fd7e82d9a2ed5af08b59bfb979247f354f30"
+      },
+      {
+        "attempt": "ui04",
+        "publishedStatus": "FAIL",
+        "functionalAssertions": 113,
+        "functionalFailures": 0,
+        "rawOkJSONType": "int",
+        "inputDrift": [],
+        "rawResultSHA256": "d1d0bb3e01c022da2dbb3d3e892887b7839ed4ff1827540ad0eb55562ee91097"
+      },
+      {
+        "attempt": "ui05",
+        "publishedStatus": "FAIL",
+        "functionalAssertions": 283,
+        "functionalFailures": 0,
+        "rawOkJSONType": "int",
+        "inputDrift": [],
+        "rawResultSHA256": "2d0916feb9cc79594cc7564f853c809e2f77fb7a097bd221c4b80c4e72e2081f"
+      },
+      {
+        "attempt": "ui06",
+        "publishedStatus": "PASS",
+        "functionalAssertions": 283,
+        "functionalFailures": 0,
+        "rawOkJSONType": "bool",
+        "inputDrift": [],
+        "rawResultSHA256": "b38b738609a5e11e1286632a05cc7dd87d3280fedacdf96f7d4b7b4de751308e"
+      }
+    ]
+  },
+  "production": {
+    "attempt": "production01",
+    "status": "PASS",
+    "acceptedCommit": "ca333e80d89e3ee86f3c62a77503738430239467",
+    "acceptedTree": "81ca825314080cc958a20e5abfd9e5080013650f",
+    "sourcePins": {
+      "lucid/Presentation/SBContainersView.m": "5aa99fa3ab2e048725562d58fa51dfc7193e7cc8f6ba415fe9b1c3d5d4117c1e",
+      "lucid/Presentation/SBInterfaceCopy.m": "4cc3825aa789c67c8694daae84066fa6a26f84710925f434647df763ba2da1c2"
+    },
+    "changedFiles": [
+      "lucid/Presentation/LBXPresentation.m",
+      "lucid/Presentation/SBContainersView.m",
+      "lucid/Presentation/SBInterfaceCopy.m",
+      "lucid/Presentation/SBSwitchProgress.h",
+      "lucid/Presentation/SBSwitchProgress.m"
+    ],
+    "preservedFiles": [
+      "lucid/Authorization/LBXLicenseClient.h",
+      "lucid/Authorization/LBXLicenseClient.m",
+      "lucid/Authorization/LBXLicenseEndpoints.h",
+      "lucid/Authorization/LBXLicenseIPC.h",
+      "lucid/Authorization/LBXLicenseIPC.m",
+      "lucid/Authorization/LBXLicensePeer.h",
+      "lucid/Authorization/LBXLicensePeer.m",
+      "lucid/Diagnostics/LBXIsolationAssessment.h",
+      "lucid/Diagnostics/LBXIsolationAssessment.m",
+      "lucid/Diagnostics/LBXIsolationViewController.h",
+      "lucid/Diagnostics/LBXIsolationViewController.m",
+      "lucid/Diagnostics/LBXRecoveredContextAdapter.h",
+      "lucid/Diagnostics/LBXRecoveredContextAdapter.m",
+      "lucid/HelperSafety/LBXCallerFile.h",
+      "lucid/HelperSafety/LBXCallerFile.m",
+      "lucid/HelperSafety/LBXXPC.h",
+      "lucid/LBXPresentation.plist",
+      "lucid/Makefile",
+      "lucid/Presentation/LBXDisplayCopy.h",
+      "lucid/Presentation/LBXDisplayCopy.m",
+      "lucid/Presentation/LBXPresentation.h",
+      "lucid/Presentation/LBXWorkspace.h",
+      "lucid/Presentation/LBXWorkspace.m",
+      "lucid/Presentation/SBActivationView.h",
+      "lucid/Presentation/SBActivationView.m",
+      "lucid/Presentation/SBBackendAdapter.h",
+      "lucid/Presentation/SBBackendAdapter.m",
+      "lucid/Presentation/SBContainersView.h",
+      "lucid/Presentation/SBDesign.h",
+      "lucid/Presentation/SBDesign.m",
+      "lucid/Presentation/SBIdentityForm.h",
+      "lucid/Presentation/SBIdentityForm.m",
+      "lucid/Presentation/SBInterfaceCopy.h",
+      "lucid/Presentation/SBLegacyDisplayCatalog.h",
+      "lucid/Presentation/SBLegacyDisplayCatalog.m",
+      "lucid/Presentation/SBSecondaryScreens.h",
+      "lucid/Presentation/SBSecondaryScreens.m",
+      "lucid/Presentation/SBUpdateService.h",
+      "lucid/Presentation/SBUpdateService.m",
+      "lucid/Presentation/SBWorkspaceCoordinator.h",
+      "lucid/Presentation/SBWorkspaceCoordinator.m",
+      "lucid/ProxyInput/LBXProxyInput.h",
+      "lucid/ProxyInput/LBXProxyInput.m",
+      "lucid/ProxyInput/LBXProxyInputHook.m",
+      "shared/RBXHTTPProxy.h",
+      "shared/RBXHTTPProxy.m",
+      "shared/RBXProc.h"
+    ],
+    "productionInputs": 52,
+    "sourceStable": true,
+    "producerContracts": {
+      "tools/build_socialbox_owner_ui.py": "624606a63658af41251c5e2a0d84fd667a07f5f84703b8eeb3f1dbf4e786b9ec",
+      "tools/enumerate_leak_binary.py": "9eaf4c33c63431dff420076a888fa013778bf4e3a56dfd29a79656f9f9c3a8c7",
+      "tools/verify_socialbox_presentation.py": "f012cf01f2e5fdf64f923651ff250f58cfec6311bb6a2715b23df17dd232ca35"
+    },
+    "toolSteps": [
+      {
+        "command": [
+          "/usr/bin/git",
+          "-C",
+          "/Users/martin/Documents/Codex/2026-09-30/i/work/socialbox-import/work/redditspoof-distribution",
+          "rev-parse",
+          "ca333e80d89e3ee86f3c62a77503738430239467^{tree}"
+        ],
+        "name": "baseline-tree",
+        "returncode": 0,
+        "status": "PASS",
+        "stderrBytes": 0,
+        "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdoutBytes": 41,
+        "stdoutSHA256": "614ec2ec19d3ef7d8c861a87de8a46f9a67b0a30b3fa6cb0ac494b71f467f76a"
+      },
+      {
+        "command": [
+          "/usr/bin/git",
+          "-C",
+          "/Users/martin/Documents/Codex/2026-09-30/i/work/socialbox-import/work/redditspoof-distribution",
+          "ls-tree",
+          "-rz",
+          "ca333e80d89e3ee86f3c62a77503738430239467"
+        ],
+        "name": "baseline-files",
+        "returncode": 0,
+        "status": "PASS",
+        "stderrBytes": 0,
+        "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdoutBytes": 109915,
+        "stdoutSHA256": "03bd174d02cd177ac5fd287e55a6d598807362658f9122641a81346f22af8edd"
+      },
+      {
+        "command": [
+          "/usr/bin/git",
+          "-C",
+          "/Users/martin/Documents/Codex/2026-09-30/i/work/socialbox-import/work/redditspoof-distribution",
+          "archive",
+          "--format=tar",
+          "ca333e80d89e3ee86f3c62a77503738430239467",
+          "lucid/Authorization/ClientProbe.m",
+          "lucid/Authorization/LBXLicenseClient.h",
+          "lucid/Authorization/LBXLicenseClient.m",
+          "lucid/Authorization/LBXLicenseEndpoints.h",
+          "lucid/Authorization/LBXLicenseExchange.h",
+          "lucid/Authorization/LBXLicenseExchange.m",
+          "lucid/Authorization/LBXLicenseIPC.h",
+          "lucid/Authorization/LBXLicenseIPC.m",
+          "lucid/Authorization/LBXLicenseOwner.h",
+          "lucid/Authorization/LBXLicenseOwner.m",
+          "lucid/Authorization/LBXLicensePeer.h",
+          "lucid/Authorization/LBXLicensePeer.m",
+          "lucid/Authorization/LBXLicenseTransport.h",
+          "lucid/Authorization/LBXLicenseTransport.m",
+          "lucid/Authorization/LBXLicenseVault.h",
+          "lucid/Authorization/LBXLicenseVault.m",
+          "lucid/Authorization/LicenseService.m",
+          "lucid/Authorization/Probe.m",
+          "lucid/Authorization/VaultProbe.m",
+          "lucid/Diagnostics/LBXIsolationAssessment.h",
+          "lucid/Diagnostics/LBXIsolationAssessment.m",
+          "lucid/Diagnostics/LBXIsolationViewController.h",
+          "lucid/Diagnostics/LBXIsolationViewController.m",
+          "lucid/Diagnostics/LBXRecoveredContextAdapter.h",
+          "lucid/Diagnostics/LBXRecoveredContextAdapter.m",
+          "lucid/HelperSafety/LBXAppSwitchSafety.m",
+          "lucid/HelperSafety/LBXCallerFile.h",
+          "lucid/HelperSafety/LBXCallerFile.m",
+          "lucid/HelperSafety/LBXDrainClient.h",
+          "lucid/HelperSafety/LBXDrainClient.m",
+          "lucid/HelperSafety/LBXDrainProtocol.h",
+          "lucid/HelperSafety/LBXDrainProtocol.m",
+          "lucid/HelperSafety/LBXGlobalMetadata.h",
+          "lucid/HelperSafety/LBXGlobalMetadata.m",
+          "lucid/HelperSafety/LBXGlobalMetadataHook.m",
+          "lucid/HelperSafety/LBXHelperSafety.m",
+          "lucid/HelperSafety/LBXXPC.h",
+          "lucid/HelperSafety/Service.m",
+          "lucid/LBXPresentation.plist",
+          "lucid/Makefile",
+          "lucid/Presentation/LBXDisplayCopy.h",
+          "lucid/Presentation/LBXDisplayCopy.m",
+          "lucid/Presentation/LBXPresentation.h",
+          "lucid/Presentation/LBXPresentation.m",
+          "lucid/Presentation/LBXWorkspace.h",
+          "lucid/Presentation/LBXWorkspace.m",
+          "lucid/Presentation/SBActivationView.h",
+          "lucid/Presentation/SBActivationView.m",
+          "lucid/Presentation/SBBackendAdapter.h",
+          "lucid/Presentation/SBBackendAdapter.m",
+          "lucid/Presentation/SBContainersView.h",
+          "lucid/Presentation/SBContainersView.m",
+          "lucid/Presentation/SBDesign.h",
+          "lucid/Presentation/SBDesign.m",
+          "lucid/Presentation/SBIdentityForm.h",
+          "lucid/Presentation/SBIdentityForm.m",
+          "lucid/Presentation/SBInterfaceCopy.h",
+          "lucid/Presentation/SBInterfaceCopy.m",
+          "lucid/Presentation/SBLegacyDisplayCatalog.h",
+          "lucid/Presentation/SBLegacyDisplayCatalog.m",
+          "lucid/Presentation/SBSecondaryScreens.h",
+          "lucid/Presentation/SBSecondaryScreens.m",
+          "lucid/Presentation/SBUpdateService.h",
+          "lucid/Presentation/SBUpdateService.m",
+          "lucid/Presentation/SBWorkspaceCoordinator.h",
+          "lucid/Presentation/SBWorkspaceCoordinator.m",
+          "lucid/ProxyInput/LBXProxyInput.h",
+          "lucid/ProxyInput/LBXProxyInput.m",
+          "lucid/ProxyInput/LBXProxyInputHook.m",
+          "shared/RBXAcceptanceChecks.h",
+          "shared/RBXAcceptanceChecks.m",
+          "shared/RBXAppAdmission.h",
+          "shared/RBXAppBundlePolicy.h",
+          "shared/RBXAppKeychainPolicy.h",
+          "shared/RBXAppLifecycle.h",
+          "shared/RBXAppProcess.h",
+          "shared/RBXAppProfileIdentity.h",
+          "shared/RBXAppRegistry.h",
+          "shared/RBXAppRegistryData.h",
+          "shared/RBXAppRuntime.h",
+          "shared/RBXCloneAcceptanceProbe.h",
+          "shared/RBXCloneSupportDirectory.h",
+          "shared/RBXCloudOrigin.h",
+          "shared/RBXDataSchema.h",
+          "shared/RBXFacebookPrivateGroupStore.h",
+          "shared/RBXFacebookStoragePolicy.h",
+          "shared/RBXFacebookUserAgent.h",
+          "shared/RBXHTTPProxy.h",
+          "shared/RBXHTTPProxy.m",
+          "shared/RBXHookReadiness.h",
+          "shared/RBXIdentityFields.h",
+          "shared/RBXInstallPaths.h",
+          "shared/RBXIsolationSentinel.h",
+          "shared/RBXKeychainSyncPolicy.h",
+          "shared/RBXLaunchSafety.h",
+          "shared/RBXLicensePin.h",
+          "shared/RBXLicensePresentation.h",
+          "shared/RBXLiveness.h",
+          "shared/RBXMGOverrides.h",
+          "shared/RBXMGOverrides.m",
+          "shared/RBXProc.h",
+          "shared/RBXProcessIdentity.h",
+          "shared/RBXProcessIdentity.m",
+          "shared/RBXProfileIdentifier.h",
+          "shared/RBXProfileMetadata.h",
+          "shared/RBXProfileTransport.h",
+          "shared/RBXProxyLibrary.h",
+          "shared/RBXProxyLibrary.m",
+          "shared/RBXProxyRouteEvidence.h",
+          "shared/RBXRequestQueue.h",
+          "shared/RBXRequestQueue.m",
+          "shared/RBXSecureConfig.h",
+          "shared/RBXSecureConfig.m",
+          "shared/RBXSentinelIO.h",
+          "shared/RBXSetupChecklist.h",
+          "shared/RBXStagedExecutable.h",
+          "shared/RBXStorageGate.h",
+          "shared/RBXWorkspaceSelection.h"
+        ],
+        "name": "baseline-blobs",
+        "returncode": 0,
+        "status": "PASS",
+        "stderrBytes": 0,
+        "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdoutBytes": 778240,
+        "stdoutSHA256": "f3cc8235e6ca480e8093eef5c03e394060129747de953266b264b625a485ca69"
+      },
+      {
+        "command": [
+          "/usr/bin/git",
+          "-C",
+          "/Users/martin/Documents/Codex/2026-09-30/i/work/socialbox-import/work/redditspoof-distribution",
+          "show",
+          "a6011d5179930dfa18f0b3dec74a5f63007e87fb:lucid/Presentation/SBSwitchProgress.m"
+        ],
+        "name": "reviewed-edit-0",
+        "returncode": 0,
+        "status": "PASS",
+        "stderrBytes": 0,
+        "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdoutBytes": 8851,
+        "stdoutSHA256": "a2caaa4c8b0d55591b31691234528509468b03716611b6ea5ca0b3e5026101de"
+      },
+      {
+        "command": [
+          "/usr/bin/git",
+          "-C",
+          "/Users/martin/Documents/Codex/2026-09-30/i/work/socialbox-import/work/redditspoof-distribution",
+          "show",
+          "a6011d5179930dfa18f0b3dec74a5f63007e87fb:lucid/Presentation/SBSwitchProgress.h"
+        ],
+        "name": "reviewed-edit-1",
+        "returncode": 0,
+        "status": "PASS",
+        "stderrBytes": 0,
+        "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdoutBytes": 319,
+        "stdoutSHA256": "39ed2ecae3cbcd8df4cdc1eefff7acb643d69e74526e9cbc7af1a0f92dd0edd7"
+      },
+      {
+        "command": [
+          "/usr/bin/make",
+          "-C",
+          "/Users/martin/Documents/Codex/2026-09-30/i/work/creation-profile-review-2026-10-02/production01/source/lucid",
+          "THEOS=/Users/martin/Documents/Codex/2026-09-30/i/work/socialbox-import/work/theos",
+          "TARGET_CODESIGN=/Users/martin/Documents/Codex/2026-09-30/i/work/socialbox-import/work/local-tools/bin/ldid",
+          "TARGET=iphone:clang:26.5:15.0",
+          "LBXPresentation_FILES=Authorization/LBXLicenseClient.m Authorization/LBXLicenseIPC.m Authorization/LBXLicensePeer.m Diagnostics/LBXIsolationAssessment.m Diagnostics/LBXIsolationViewController.m Diagnostics/LBXRecoveredContextAdapter.m HelperSafety/LBXCallerFile.m Presentation/LBXDisplayCopy.m Presentation/LBXPresentation.m Presentation/LBXWorkspace.m Presentation/SBActivationView.m Presentation/SBBackendAdapter.m Presentation/SBContainersView.m Presentation/SBDesign.m Presentation/SBIdentityForm.m Presentation/SBInterfaceCopy.m Presentation/SBLegacyDisplayCatalog.m Presentation/SBSecondaryScreens.m Presentation/SBSwitchProgress.m Presentation/SBUpdateService.m Presentation/SBWorkspaceCoordinator.m ProxyInput/LBXProxyInput.m ProxyInput/LBXProxyInputHook.m ../shared/RBXHTTPProxy.m",
+          "TARGET_CODESIGN_FLAGS=-S",
+          "THEOS_PACKAGE_SCHEME=rootless",
+          "FINALPACKAGE=1",
+          "ARCHS=arm64 arm64e",
+          "stage"
+        ],
+        "name": "compile",
+        "returncode": 0,
+        "status": "PASS",
+        "stderrBytes": 86,
+        "stderrSHA256": "dd3e8d3ce80ef57f4ce2cfe0048bed2b05a8ae0884404a615da588cb08957e73",
+        "stdoutBytes": 4364,
+        "stdoutSHA256": "00c4863697278dab2895015c21474e33e2502bed3e8aecbc83d4c9fc9c422a75"
+      },
+      {
+        "command": [
+          "/usr/bin/codesign",
+          "--force",
+          "--sign",
+          "-",
+          "--timestamp=none",
+          "--identifier",
+          "com.socialbox.presentation.owner-ui",
+          "--requirements",
+          "=designated => identifier \"com.socialbox.presentation.owner-ui\"",
+          "/Users/martin/Documents/Codex/2026-09-30/i/work/creation-profile-review-2026-10-02/production01/source/lucid/.theos/_/Library/MobileSubstrate/DynamicLibraries/LBXPresentation.dylib"
+        ],
+        "name": "sign-final",
+        "returncode": 0,
+        "status": "PASS",
+        "stderrBytes": 211,
+        "stderrSHA256": "96684ddb21fe2e9f94ff747f8117e267e2a3f083e8101292849992fe934bbea7",
+        "stdoutBytes": 0,
+        "stdoutSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "command": [
+          "/usr/bin/plutil",
+          "-convert",
+          "xml1",
+          "-o",
+          "-",
+          "/Users/martin/Documents/Codex/2026-09-30/i/work/creation-profile-review-2026-10-02/production01/source/lucid/.theos/_/Library/MobileSubstrate/DynamicLibraries/LBXPresentation.plist"
+        ],
+        "name": "canonical-filter",
+        "returncode": 0,
+        "status": "PASS",
+        "stderrBytes": 0,
+        "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdoutBytes": 313,
+        "stdoutSHA256": "a521e2edf4b0a69a54b5421d41c98cf17eff488b397d9f8dd26956d5ad96bc02"
+      },
+      {
+        "command": [
+          "/usr/bin/xcrun",
+          "nm",
+          "-arch",
+          "arm64",
+          "-gU",
+          "/Users/martin/Documents/Codex/2026-09-30/i/work/creation-profile-review-2026-10-02/production01/source/lucid/.theos/_/Library/MobileSubstrate/DynamicLibraries/LBXPresentation.dylib"
+        ],
+        "name": "exports-arm64",
+        "returncode": 0,
+        "status": "PASS",
+        "stderrBytes": 0,
+        "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdoutBytes": 6620,
+        "stdoutSHA256": "976712119b95d51e9dfdf26c683fd7034bf326f74e905c171f4b6d68c76a78f0"
+      },
+      {
+        "command": [
+          "/usr/bin/lipo",
+          "/Users/martin/Documents/Codex/2026-09-30/i/work/creation-profile-review-2026-10-02/production01/source/lucid/.theos/_/Library/MobileSubstrate/DynamicLibraries/LBXPresentation.dylib",
+          "-thin",
+          "arm64",
+          "-output",
+          "/Users/martin/Documents/Codex/2026-09-30/i/work/creation-profile-review-2026-10-02/production01/arm64.dylib"
+        ],
+        "name": "thin-arm64",
+        "returncode": 0,
+        "status": "PASS",
+        "stderrBytes": 0,
+        "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdoutBytes": 0,
+        "stdoutSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "command": [
+          "/usr/bin/codesign",
+          "--verify",
+          "--strict",
+          "--verbose=4",
+          "/Users/martin/Documents/Codex/2026-09-30/i/work/creation-profile-review-2026-10-02/production01/arm64.dylib"
+        ],
+        "name": "signature-arm64",
+        "returncode": 0,
+        "status": "PASS",
+        "stderrBytes": 269,
+        "stderrSHA256": "1f29bffd197fe5602994a15854bd3fe73e5a9aa8c7700e15c0e60f59b058e98d",
+        "stdoutBytes": 0,
+        "stdoutSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "command": [
+          "/usr/bin/codesign",
+          "-d",
+          "--verbose=4",
+          "/Users/martin/Documents/Codex/2026-09-30/i/work/creation-profile-review-2026-10-02/production01/arm64.dylib"
+        ],
+        "name": "identity-arm64",
+        "returncode": 0,
+        "status": "PASS",
+        "stderrBytes": 890,
+        "stderrSHA256": "f227aaf22224ae3a326e247657e15849d588a52c174ecd728b6bc76364e64e08",
+        "stdoutBytes": 0,
+        "stdoutSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "command": [
+          "/Users/martin/Documents/Codex/2026-09-30/i/work/socialbox-import/work/local-tools/bin/ldid",
+          "-e",
+          "/Users/martin/Documents/Codex/2026-09-30/i/work/creation-profile-review-2026-10-02/production01/arm64.dylib"
+        ],
+        "name": "entitlements-arm64",
+        "returncode": 0,
+        "status": "PASS",
+        "stderrBytes": 0,
+        "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdoutBytes": 0,
+        "stdoutSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "command": [
+          "/usr/bin/xcrun",
+          "nm",
+          "-arch",
+          "arm64e",
+          "-gU",
+          "/Users/martin/Documents/Codex/2026-09-30/i/work/creation-profile-review-2026-10-02/production01/source/lucid/.theos/_/Library/MobileSubstrate/DynamicLibraries/LBXPresentation.dylib"
+        ],
+        "name": "exports-arm64e",
+        "returncode": 0,
+        "status": "PASS",
+        "stderrBytes": 0,
+        "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdoutBytes": 6620,
+        "stdoutSHA256": "b3aec171713eb8e24409d4cd7101d78af3cbe0951a8596d36c60d08c6013c139"
+      },
+      {
+        "command": [
+          "/usr/bin/lipo",
+          "/Users/martin/Documents/Codex/2026-09-30/i/work/creation-profile-review-2026-10-02/production01/source/lucid/.theos/_/Library/MobileSubstrate/DynamicLibraries/LBXPresentation.dylib",
+          "-thin",
+          "arm64e",
+          "-output",
+          "/Users/martin/Documents/Codex/2026-09-30/i/work/creation-profile-review-2026-10-02/production01/arm64e.dylib"
+        ],
+        "name": "thin-arm64e",
+        "returncode": 0,
+        "status": "PASS",
+        "stderrBytes": 0,
+        "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdoutBytes": 0,
+        "stdoutSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "command": [
+          "/usr/bin/codesign",
+          "--verify",
+          "--strict",
+          "--verbose=4",
+          "/Users/martin/Documents/Codex/2026-09-30/i/work/creation-profile-review-2026-10-02/production01/arm64e.dylib"
+        ],
+        "name": "signature-arm64e",
+        "returncode": 0,
+        "status": "PASS",
+        "stderrBytes": 271,
+        "stderrSHA256": "853e6788d99493fd44ac10bcd0c5cc7301d8450c4787d991823c97ffaf1e308f",
+        "stdoutBytes": 0,
+        "stdoutSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "command": [
+          "/usr/bin/codesign",
+          "-d",
+          "--verbose=4",
+          "/Users/martin/Documents/Codex/2026-09-30/i/work/creation-profile-review-2026-10-02/production01/arm64e.dylib"
+        ],
+        "name": "identity-arm64e",
+        "returncode": 0,
+        "status": "PASS",
+        "stderrBytes": 892,
+        "stderrSHA256": "54bccdc693f6338eaa0ec237c874c7ac3858e9cce49051c325ac61a2f4b36f45",
+        "stdoutBytes": 0,
+        "stdoutSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "command": [
+          "/Users/martin/Documents/Codex/2026-09-30/i/work/socialbox-import/work/local-tools/bin/ldid",
+          "-e",
+          "/Users/martin/Documents/Codex/2026-09-30/i/work/creation-profile-review-2026-10-02/production01/arm64e.dylib"
+        ],
+        "name": "entitlements-arm64e",
+        "returncode": 0,
+        "status": "PASS",
+        "stderrBytes": 0,
+        "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdoutBytes": 0,
+        "stdoutSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    ],
+    "overlaySHA256": "c68cd1aa43443cdf42f36c19eed7642c244261026f8616c96bf9c06676d3d957",
+    "overlayBytes": 1130192,
+    "packageSHA256": "f9f21af87f42ed1b28efda7496a144b30aff6da249e382cd008e36de0b188ba6",
+    "packageBytes": 357786,
+    "perSlice": [
+      {
+        "architecture": "arm64",
+        "sliceSHA256": "f37b046fc657cdf1c5bfd8012b72054c90875f2109eaaa3c8ad5431c7e3e94c5",
+        "exportCount": 144,
+        "strictAdHoc": true,
+        "emptyEntitlements": true
+      },
+      {
+        "architecture": "arm64e",
+        "sliceSHA256": "5bcfd126b0b3a1ce84711fc4b0fdbf9967972b600c0aaeffa058bb5a2f28fd15",
+        "exportCount": 144,
+        "strictAdHoc": true,
+        "emptyEntitlements": true
+      }
+    ],
+    "inventory": {
+      "control": {
+        "control": {
+          "bytes": 485,
+          "mode": "0o644",
+          "sha256": "3a594e9abb519b083cb3907e455e20ba05461f5c4bddb5de17641a402104343e"
+        },
+        "postinst": {
+          "bytes": 130,
+          "mode": "0o755",
+          "sha256": "298d96bfd15d8a867182ea094c8fa7320308c60471576d92af1ac7e490451601"
+        },
+        "preinst": {
+          "bytes": 130,
+          "mode": "0o755",
+          "sha256": "298d96bfd15d8a867182ea094c8fa7320308c60471576d92af1ac7e490451601"
+        }
+      },
+      "customerDeliveryReady": false,
+      "installable": false,
+      "payload": {
+        "var/jb/Library/MobileSubstrate/DynamicLibraries/LBXPresentation.dylib": {
+          "bytes": 1130192,
+          "mode": "0o755",
+          "sha256": "c68cd1aa43443cdf42f36c19eed7642c244261026f8616c96bf9c06676d3d957"
+        },
+        "var/jb/Library/MobileSubstrate/DynamicLibraries/LBXPresentation.plist": {
+          "bytes": 313,
+          "mode": "0o644",
+          "sha256": "a521e2edf4b0a69a54b5421d41c98cf17eff488b397d9f8dd26956d5ad96bc02"
+        }
+      }
+    },
+    "namedForbiddenMarkers": 9,
+    "rootArchiveInventoryObservation": "ar and libarchive/tar outer member lists agree; not a second full signature/archive verification or independent review.",
+    "excludedDependencies": "SDK/Theos/compiler/OS/dynamically linked signer dependencies; producer imports precede snapshot."
+  },
+  "evidenceHashes": {
+    "production01/build-report.json": "b39cfc0e732d97a2ad76c9ec4c8a0360223e3b194dca94def79808ad7cdb5019",
+    "production01/provenance.json": "1eedd4107890b536240a568c95048a2a5fe701b6b050c632c28a71594490716b",
+    "composed-ui01/result.json": "56cca36ee35f948f51fb1a8cd204ba0aeb8380417707c415772c04df599f4ee8",
+    "composed-ui01/creation-review-result.json": "b38b738609a5e11e1286632a05cc7dd87d3280fedacdf96f7d4b7b4de751308e",
+    "composed-ui01/inputs-before.json": "4c9381e5c5de554d6dac6637c1a34693c8ba18e4bb4901a803ee9cff99989c4f",
+    "composed-ui01/inputs-after.json": "4c9381e5c5de554d6dac6637c1a34693c8ba18e4bb4901a803ee9cff99989c4f",
+    "composed-ui01/creation-review.png": "3e546d0d723b34780343c45c6743667395ce5cfcd40533f002e2bc73bb05695f",
+    "composed-ui01/creation-review-actions.png": "8fbea18cae2bc9a32f829d121b42063c20330c8ebf83a2ebeeabe5c88a90ed0b",
+    "composed-ui01/creation-review-large-text.png": "f99ca48d17b48b3d9fe1cb294fec1b2229e9124f3564c4945d4788a5bfa2bcb8"
+  },
+  "acceptance": {
+    "ownerInstall": "NOT_RUN",
+    "nativeCountryCarrierModelIOS": "NOT_RUN",
+    "nativeCreate": "NOT_RUN",
+    "normalActivation": "NOT_RUN",
+    "runtimeIsolation": "NOT_ACCEPTED",
+    "instagramSiblingLeak": "UNFIXED",
+    "facebookDifferentPages": "OWNER_REPORTED_PASS",
+    "historicalManagedFacebookLaunch": "FAIL_HISTORICAL",
+    "accountsThroughProxy": "NOT_RUN",
+    "customerInstallSileoDownload": "NOT_READY",
+    "freshInstallReady": false,
+    "customerDeliveryReady": false,
+    "deviceAction": false
+  },
+  "completion": "All creation-profile-review ui01-ui06, production01 and composed-ui01 attempts are completed; never rerun their private helpers/state. New work requires a changed prerequisite and new attempt. Own-range postcommit gate must pass before export; historical Unit30 full-history FAIL remains unchanged.",
+  "sourceInventory": {
+    "initialContractCheck": "FAIL_SOURCE_HASH_DRIFT_BEFORE_COMMIT",
+    "corrected": "Only SBContainersView.m and SBInterfaceCopy.m hashes change; all lexical reference counts and records unchanged. Regenerated normally, no waiver/checker exception.",
+    "precommitContract": "PASS_400_ROWS",
+    "postcommitOwnRange": "REQUIRED_BEFORE_EXPORT",
+    "historicalUnit30FullHistory": "FAIL_UNCHANGED"
+  }
+}

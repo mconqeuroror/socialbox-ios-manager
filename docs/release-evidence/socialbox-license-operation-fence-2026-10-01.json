@@ -1,0 +1,39 @@
+{
+  "formatVersion": 1,
+  "unit": "source-owned synchronous license operation fence",
+  "status": "PASS",
+  "host": {
+    "ownerIPCAssertions": 220,
+    "result": "PASS"
+  },
+  "productionCompilation": {
+    "arm64": "PASS",
+    "arm64e": "PASS",
+    "testSeamsExcluded": true
+  },
+  "physicalDevice": {
+    "model": "iPhone X",
+    "iOS": "16.7.16",
+    "syntheticSignedFixture": true,
+    "productionWebsiteLicenseAcceptance": "NOT_RUN",
+    "assertions": 220,
+    "result": "PASS",
+    "helperSHA256": "a889daddfdd399af6753a5650317420727ac25fb645fc42c86c9d03bbe06b599",
+    "ownerSixPayloadHashesUnchanged": "PASS",
+    "exactTemporaryFixtureRemoval": "PASS"
+  },
+  "mechanisms": [
+    "same owner serial queue as online validation",
+    "absolute submission deadline includes queue wait",
+    "fresh committed signed admission checked before effect and before successful result",
+    "same-owner and cross-owner nested source calls refused",
+    "failed handler, exception or final assessment closes admission"
+  ],
+  "limitations": [
+    "trusted short synchronous handlers only; no arbitrary mobile block or new IPC operation",
+    "no hard queue watchdog, handler cancellation or undo of completed effects",
+    "no ongoing target-process, storage or network fence",
+    "installed recovered licensing consumers remain unconnected",
+    "full fresh-client package and customer acceptance NOT_RUN"
+  ]
+}

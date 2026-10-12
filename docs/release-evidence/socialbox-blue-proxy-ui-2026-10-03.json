@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "milestone": "Unit45 \u2014 blue native palette and proxy-list controls",
+  "recordedAtUTC": "2026-10-03T21:13:52.953120+00:00",
+  "status": "PASS_SOURCE_BUILD_SIMULATOR_AND_BACKED_UP_OWNER_UI_TRIAL",
+  "branch": "feat/lucid-base",
+  "sourceParent": "f40a30c4046d92287d6fbbf3d2e485b899086f6b",
+  "isolationDeferredByOwner": true,
+  "implemented": [
+    "Brand #007AFF for retained manager theme, system-orange requests and three observed native RGB triples; preserve alpha and unrelated colors",
+    "Blue Create/count/Switch/Add proxy/HTTP/SOCKS popup tint with original actions, delegates and fields",
+    "Remove exact empty connection guidance card; retain Add proxy and saved/native controls",
+    "Preserve saved-proxy context menus, callback/model sender, cache refresh and selection visibility",
+    "Replace remaining orange/amber web styles and launcher gradient"
+  ],
+  "preserved": [
+    "Existing account/container data and selections",
+    "Proxy input parser, values and handlers",
+    "Accepted native backend, activation and license source",
+    "Original manager/CLI/helper/daemon/runtime bytes, filter and service controls"
+  ],
+  "sourceAudit": {
+    "productionFiles": 486,
+    "lines": 68273,
+    "remainingDetectedOrangeUILiterals": 0,
+    "remainingDetectedOrangeRGBLiterals": 0,
+    "intentionalSystemOrangeOverrideSelector": 1,
+    "receiptSHA256": "bfd246d064e07b5eb2822d841a2e3d6e53f8d2179671c95c22067d1fed52b485",
+    "note": "Synthetic test colors, reviewed orange matching constants, historical evidence and carrier names remain; inventory rules are in the audit receipt"
+  },
+  "build": {
+    "status": "PASS",
+    "sourceStable": true,
+    "productionInputs": 52,
+    "reviewedChangedFiles": 13,
+    "preservedAcceptedFiles": 39,
+    "architectures": [
+      "arm64",
+      "arm64e"
+    ],
+    "strictAdHocSignatures": true,
+    "overlaySHA256": "b05e1a9a15e28b979ccce7badbf5ce5691f8f11c4d0d43755f55474fe64b6c5a",
+    "packageInstallable": false
+  },
+  "tests": {
+    "compositionMethods": 11,
+    "brandingMethods": 9,
+    "brandingNativeAssertions": 31,
+    "proxyInputAssertions": 139,
+    "UIKitAssertions": {
+      "workspaceCurrent": 346,
+      "workspaceComposed": 346,
+      "alertsCurrent": 93,
+      "alertsComposed": 93,
+      "presentationCurrent": 288,
+      "containersComposed": 1052
+    },
+    "containersViewports": 7,
+    "fixtureSourceStable": true,
+    "uniqueSimulatorFixturesUninstalled": true,
+    "strictColorHelperCompilationBothArchitectures": true,
+    "cloudTypeScriptAndTailwind": "PASS; not deployed",
+    "privateRollbackHelperMethods": 3,
+    "receiptSHA256": {
+      "workspaceCurrent": "180350e0c84010bb37089c286100cabcc69f2a1054c1b13403fc6a7ff301db1a",
+      "workspaceComposed": "9bb551494c0d1e9048a0c8491f4475b24a297bcb09d04984676309146b02579b",
+      "alertsCurrent": "0c803fa66674904794c91105ff377e471d0e0cd8b970ee1c3937df95f980ee9f",
+      "alertsComposed": "ed75e4332b424ecac9628515ab9f7359607769be7551f34da2352addd5b7a373",
+      "presentationCurrent": "2abee8bc069bdfc35361ea527f55c3691450513bf2d6ca2212991dd76e37d8aa",
+      "containersComposed": "24f6ffd75d7d28ecb2c445aec7cfe4225816aac0cc2c5cca3816fd4ae3b7c6de"
+    }
+  },
+  "phone": {
+    "ownerOverlayUpdate": "PASS_WITH_FRESH_QUIESCED_BACKUPS",
+    "overlaySHA256": "b05e1a9a15e28b979ccce7badbf5ce5691f8f11c4d0d43755f55474fe64b6c5a",
+    "stateFileHashesUnchangedWhileQuiescent": true,
+    "stateBackupRegularFiles": 21,
+    "stateBackupAppleDoubleNodes": 3,
+    "programControlBackupRegularFiles": 10,
+    "archiveHashesMatchedWitnessedFiles": true,
+    "archiveRestoreTested": false,
+    "originalServicesRestoredAndIndependentlyVerified": 3,
+    "programAndControlHashesIndependentlyVerified": 10,
+    "overlayMetadata": "0:0:755; one hard link",
+    "managerReopenedAndIndependentlyObserved": true,
+    "selectionsAndCountsUnchanged": true,
+    "physicalContainersScreenshot": "PASS_BLUE_LIST_NAMES_SELECTED_NAME",
+    "physicalPopupInteraction": "NOT_RUN",
+    "physicalProxyMenuInteraction": "NOT_RUN",
+    "savedProxyCount": 0,
+    "temporaryPhoneChangesPending": false,
+    "packageInstalled": false,
+    "privateBackupsPublished": false
+  },
+  "remainingAcceptance": {
+    "nativeABASwitchAndSeparateInstagramAccounts": "NOT_RUN; expected test account/container identifiers not provided",
+    "actualInstagramProxyTraffic": "NOT_RUN; no saved proxy exists",
+    "physicalCreateAndHTTPPopupAppearance": "NOT_RUN; simulator tested",
+    "isolation": "DEFERRED_BY_OWNER",
+    "publicSileoReleaseAndFreshProvisioning": "NOT_READY"
+  },
+  "customerAppReady": false,
+  "limits": "UI source/build/fixtures and preserved owner-phone overlay trial. No claim of actual account switching, network routing, isolation or full app acceptance."
+}

@@ -1,0 +1,60 @@
+{
+  "date": "2026-09-22",
+  "status": "CHECKED_HELPER_CANDIDATE_NOT_COMPLETE_ISOLATION",
+  "version": "3.1.0-1+socialbox.3",
+  "packageSHA256": "2791df58cfb9c2a241c74a6fec326881da22dcc1aa1fa68fd22fb432e484e61e",
+  "originalProgramsPreserved": 15,
+  "payloadFiles": 56,
+  "hostChecks": {
+    "helperProtocol": 96,
+    "clientTransport": 54,
+    "methodInterposition": 39,
+    "peerAuthentication": 22,
+    "registeredApps": 16,
+    "registryMatchesPinnedFilter": true,
+    "drainOrchestration": 46,
+    "darwinDrainAdapter": 235,
+    "packagingGroups": 5,
+    "existingPackagingGroups": 31,
+    "leakContractRows": 387,
+    "existingLeakTests": 8,
+    "staticCheck": "ALL CLEAN"
+  },
+  "physicalDevice": {
+    "model": "iPhone X",
+    "systemVersion": "16.7.16",
+    "architecture": "arm64",
+    "serviceSmoke": {
+      "candidateVersion": "3.1.0-1+socialbox.3",
+      "serviceSHA256": "f0bd5be64c58682ccd13a3f3b6f7750ceec03f4f36b13f0d165d64b969a8e1f9",
+      "probeSHA256": "d1f6ad4589b8a21a4d02b7d89d9de03ebe1543fc1886ab9435fa0590a77885d3",
+      "serviceStarted": true,
+      "probeExit": 0,
+      "probe": {
+        "completed": true,
+        "elapsedSeconds": 0.0007599999999001739,
+        "originalHelperInjection": "NOT_RUN",
+        "symbols": {
+          "proc_pidpath_audittoken": true,
+          "xpc_connection_create_mach_service": true,
+          "xpc_dictionary_get_audit_token": true
+        },
+        "targetAppStopTest": "NOT_RUN",
+        "unrelatedRootCallerRefused": 1
+      },
+      "serviceObservedUnauthorizedPeer": true,
+      "pass": true,
+      "serviceStopped": true,
+      "serviceUnregistered": true
+    }
+  },
+  "originalHelperInjection": "NOT_RUN",
+  "targetAppStop": "NOT_RUN",
+  "storageTransaction": "NOT_IMPLEMENTED",
+  "networkContainment": "NOT_RUN",
+  "appPackageInstalled": false,
+  "originalLicensingChanged": false,
+  "originalProgramEntitlementsChanged": false,
+  "implemented": "Exact recovered killApp:reply: adapter to source-owned authenticated Mach service; 16 main-app registry; bounded request/result identity and existing two-snapshot process drain.",
+  "notClaimed": "Original callers still discard the BOOL. No storage atomicity, launch fence, network fence, cross-container isolation or full application acceptance is inferred."
+}

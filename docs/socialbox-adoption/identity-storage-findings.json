@@ -1,0 +1,3674 @@
+{
+  "categories": [
+    {
+      "category": "UIDevice IDFV",
+      "decisionRationale": "Keep SocialBox validated immutable per-profile identity and identity-readiness mechanism. The reference fallback is a test case, not proof of separation.",
+      "socialboxStaticBehavior": "UIDevice identifierForVendor is registered to FUN_000ff534. The wrapper consults per-bundle app-level values and a configured IdentifierForVendor value, creates NSUUID, and has an explicit original-call fallback when no replacement is available. Obfuscated activation/application gates precede it; no claim that every bundle receives a replacement.",
+      "evidence": [
+        {
+          "address": "0x000fec98",
+          "anchors": [
+            {
+              "line": 188802
+            }
+          ],
+          "component": "SocialBox.dylib",
+          "function": "FUN_000fec98",
+          "functionEndLine": 189051,
+          "functionStartLine": 188652,
+          "indexLine": 262,
+          "indexPath": "decompiled/SocialBox.dylib.functions.tsv",
+          "indexStatus": "decompiled_after_retry",
+          "pseudocodePath": "decompiled/SocialBox.dylib.c"
+        },
+        {
+          "address": "0x000ff534",
+          "anchors": [
+            {
+              "line": 189255
+            },
+            {
+              "line": 189539
+            },
+            {
+              "line": 190289
+            },
+            {
+              "line": 190360
+            },
+            {
+              "line": 190381
+            },
+            {
+              "line": 190386
+            }
+          ],
+          "component": "SocialBox.dylib",
+          "function": "FUN_000ff534",
+          "functionEndLine": 190455,
+          "functionStartLine": 189216,
+          "indexLine": 264,
+          "indexPath": "decompiled/SocialBox.dylib.functions.tsv",
+          "indexStatus": "decompiled_after_retry",
+          "pseudocodePath": "decompiled/SocialBox.dylib.c"
+        }
+      ],
+      "evidenceLevel": "static decompilation and registration only; no runtime execution",
+      "id": "DS-01",
+      "proposedDecision": "retain",
+      "requiredVerification": "A/B/A seeded values; missing/invalid configured values; independent LSD producer; process restart; log only equality verdicts.",
+      "socialBoxComparison": [
+        {
+          "evidence": [
+            {
+              "detail": "Random posture generates UUID, denied posture returns zero; IDFV random UUID in profile ids.",
+              "line": 223,
+              "path": "daemon/RBXProfileGenerator.m"
+            }
+          ],
+          "id": "ID-001",
+          "mechanism": "Per-container UUID fields persisted; all-zero IDFA is deliberately shared for ATT-denied posture, nonzero identities subject to uniqueness.",
+          "path": "docs/leak-surface/lifecycle-inventory.json",
+          "surface": "IDFV and IDFA generation/posture",
+          "verdict": "covered-in-code",
+          "verification": "Generator/catalog and consistency tests; outbound current Reddit observations pending."
+        },
+        {
+          "evidence": [
+            {
+              "detail": "identifierForVendor returns profile.idfv; readiness compares actual API result.",
+              "line": 54,
+              "path": "tweak/Identity/RBXDeviceHooks.xm"
+            }
+          ],
+          "id": "OS-040",
+          "mechanism": "Per-profile UUID returned; original is saved only for internal comparison.",
+          "path": "docs/leak-surface/os-network-inventory.json",
+          "surface": "UIDevice identifierForVendor",
+          "verdict": "covered-in-code",
+          "verification": "Installed-hook code reviewed; current Reddit binary references must be joined to the binary inventory. A two-clone runtime call/capture is still required; installer success alone is not behavior proof."
+        },
+        {
+          "evidence": [
+            {
+              "anchor": "## Platform and local app identity",
+              "detail": "FB-002 static findings, exact offsets and explicit runtime limits.",
+              "line": 57,
+              "path": "docs/facebook-binary-audit.md"
+            },
+            {
+              "anchor": "\"platform_identifiers\": [",
+              "detail": "Hash-bound selected structural reference records; examples capped with match_count; not observed invocation.",
+              "line": 53253,
+              "path": "docs/leak-surface/facebook-binary-evidence.json"
+            }
+          ],
+          "id": "FB-002",
+          "mechanism": "Main and framework selector references are candidate callers; platform hooks need app-specific installation and return-value evidence.",
+          "path": "docs/leak-surface/facebook-inventory.json",
+          "surface": "IDFV, IDFA and platform identifier callers",
+          "verdict": "unverified",
+          "verification": "Main identifierForVendor at 0xfc6208 and advertisingIdentifier at 0xfc5bd8; no instrumented clone API result captured."
+        }
+      ],
+      "socialBoxRows": [
+        "ID-001",
+        "OS-040",
+        "FB-002"
+      ],
+      "unresolvedSocialBoxRowIds": []
+    },
+    {
+      "category": "Advertising ID and tracking enabled",
+      "decisionRationale": "SocialBox explicitly tracks its IDFA/ATT posture; do not import reference fallbacks or infer ATT authorization from one deprecated tracking selector.",
+      "socialboxStaticBehavior": "ASIdentifierManager advertisingIdentifier and isAdvertisingTrackingEnabled are installed. When the common gate allows it, AdvertisingIdentifier is converted to NSUUID; missing value calls original. Tracking-enabled returns zero in the enabled branch.",
+      "evidence": [
+        {
+          "address": "0x001034d8",
+          "anchors": [
+            {
+              "line": 192260
+            },
+            {
+              "line": 192261
+            }
+          ],
+          "component": "SocialBox.dylib",
+          "function": "FUN_001034d8",
+          "functionEndLine": 192502,
+          "functionStartLine": 192226,
+          "indexLine": 281,
+          "indexPath": "decompiled/SocialBox.dylib.functions.tsv",
+          "indexStatus": "decompiled_after_retry",
+          "pseudocodePath": "decompiled/SocialBox.dylib.c"
+        },
+        {
+          "address": "0x001038c8",
+          "anchors": [
+            {
+              "line": 192518
+            },
+            {
+              "line": 192523
+            },
+            {
+              "line": 192525
+            },
+            {
+              "line": 192529
+            }
+          ],
+          "component": "SocialBox.dylib",
+          "function": "FUN_001038c8",
+          "functionEndLine": 192536,
+          "functionStartLine": 192503,
+          "indexLine": 282,
+          "indexPath": "decompiled/SocialBox.dylib.functions.tsv",
+          "indexStatus": "decompiled_after_retry",
+          "pseudocodePath": "decompiled/SocialBox.dylib.c"
+        },
+        {
+          "address": "0x00103988",
+          "anchors": [
+            {
+              "line": 192546
+            },
+            {
+              "line": 192553
+            }
+          ],
+          "component": "SocialBox.dylib",
+          "function": "FUN_00103988",
+          "functionEndLine": 192559,
+          "functionStartLine": 192537,
+          "indexLine": 283,
+          "indexPath": "decompiled/SocialBox.dylib.functions.tsv",
+          "indexStatus": "decompiled_after_retry",
+          "pseudocodePath": "decompiled/SocialBox.dylib.c"
+        }
+      ],
+      "evidenceLevel": "static decompilation and registration only; no runtime execution",
+      "id": "DS-02",
+      "proposedDecision": "retain",
+      "requiredVerification": "Compare ATT authorized/denied, zero/nonzero IDFA, invalid UUID and SDK-cached first-run values.",
+      "socialBoxComparison": [
+        {
+          "evidence": [
+            {
+              "detail": "Random posture generates UUID, denied posture returns zero; IDFV random UUID in profile ids.",
+              "line": 223,
+              "path": "daemon/RBXProfileGenerator.m"
+            }
+          ],
+          "id": "ID-001",
+          "mechanism": "Per-container UUID fields persisted; all-zero IDFA is deliberately shared for ATT-denied posture, nonzero identities subject to uniqueness.",
+          "path": "docs/leak-surface/lifecycle-inventory.json",
+          "surface": "IDFV and IDFA generation/posture",
+          "verdict": "covered-in-code",
+          "verification": "Generator/catalog and consistency tests; outbound current Reddit observations pending."
+        },
+        {
+          "evidence": [
+            {
+              "detail": "IDFA and tracking-enabled getter values derive from profile.",
+              "line": 29,
+              "path": "tweak/Identity/RBXAppleIdentifierHooks.xm"
+            }
+          ],
+          "id": "OS-041",
+          "mechanism": "Per-profile UUID or zero/denied posture.",
+          "path": "docs/leak-surface/os-network-inventory.json",
+          "surface": "ASIdentifierManager advertisingIdentifier/isAdvertisingTrackingEnabled",
+          "verdict": "covered-in-code",
+          "verification": "Installed-hook code reviewed; current Reddit binary references must be joined to the binary inventory. A two-clone runtime call/capture is still required; installer success alone is not behavior proof."
+        },
+        {
+          "evidence": [
+            {
+              "anchor": "## Platform and local app identity",
+              "detail": "FB-002 static findings, exact offsets and explicit runtime limits.",
+              "line": 57,
+              "path": "docs/facebook-binary-audit.md"
+            },
+            {
+              "anchor": "\"platform_identifiers\": [",
+              "detail": "Hash-bound selected structural reference records; examples capped with match_count; not observed invocation.",
+              "line": 53253,
+              "path": "docs/leak-surface/facebook-binary-evidence.json"
+            }
+          ],
+          "id": "FB-002",
+          "mechanism": "Main and framework selector references are candidate callers; platform hooks need app-specific installation and return-value evidence.",
+          "path": "docs/leak-surface/facebook-inventory.json",
+          "surface": "IDFV, IDFA and platform identifier callers",
+          "verdict": "unverified",
+          "verification": "Main identifierForVendor at 0xfc6208 and advertisingIdentifier at 0xfc5bd8; no instrumented clone API result captured."
+        }
+      ],
+      "socialBoxRows": [
+        "ID-001",
+        "OS-041",
+        "FB-002"
+      ],
+      "unresolvedSocialBoxRowIds": []
+    },
+    {
+      "category": "UIDevice model/name/system version",
+      "decisionRationale": "Use coherent SocialBox catalog identity and screen recommendations; these reference hooks do not change physical hardware or prove model/build consistency.",
+      "socialboxStaticBehavior": "An installer registers systemVersion, name, model, localizedModel, systemName and optional platform. The inspected model replacement reads DeviceClass and falls back to the original if missing.",
+      "evidence": [
+        {
+          "address": "0x000fec98",
+          "anchors": [
+            {
+              "line": 188801
+            },
+            {
+              "line": 188803
+            },
+            {
+              "line": 188804
+            },
+            {
+              "line": 188805
+            },
+            {
+              "line": 188806
+            },
+            {
+              "line": 188809
+            }
+          ],
+          "component": "SocialBox.dylib",
+          "function": "FUN_000fec98",
+          "functionEndLine": 189051,
+          "functionStartLine": 188652,
+          "indexLine": 262,
+          "indexPath": "decompiled/SocialBox.dylib.functions.tsv",
+          "indexStatus": "decompiled_after_retry",
+          "pseudocodePath": "decompiled/SocialBox.dylib.c"
+        },
+        {
+          "address": "0x00101970",
+          "anchors": [
+            {
+              "line": 190648
+            },
+            {
+              "line": 190770
+            },
+            {
+              "line": 190772
+            }
+          ],
+          "component": "SocialBox.dylib",
+          "function": "FUN_00101970",
+          "functionEndLine": 190783,
+          "functionStartLine": 190620,
+          "indexLine": 266,
+          "indexPath": "decompiled/SocialBox.dylib.functions.tsv",
+          "indexStatus": "decompiled_after_retry",
+          "pseudocodePath": "decompiled/SocialBox.dylib.c"
+        }
+      ],
+      "evidenceLevel": "static decompilation and registration only; no runtime execution",
+      "id": "DS-03",
+      "proposedDecision": "retain",
+      "requiredVerification": "Compare selected model/build/name across public APIs, MG/sysctl and screen scene/rendering paths.",
+      "socialBoxComparison": [
+        {
+          "evidence": [
+            {
+              "detail": "Exact implemented methods are name/model/localizedModel/systemVersion/idfv.",
+              "line": 30,
+              "path": "tweak/Identity/RBXDeviceHooks.xm"
+            }
+          ],
+          "id": "OS-043",
+          "mechanism": "Profile name/version and iPhone class; systemName is not rewritten.",
+          "path": "docs/leak-surface/os-network-inventory.json",
+          "surface": "UIDevice name/model/localizedModel/systemVersion",
+          "verdict": "covered-in-code",
+          "verification": "Installed-hook code reviewed; current Reddit binary references must be joined to the binary inventory. A two-clone runtime call/capture is still required; installer success alone is not behavior proof. Do not extend verdict to private device identifiers."
+        },
+        {
+          "evidence": [
+            {
+              "detail": "Current UIDevice hook set enumerated; no private identifier selectors.",
+              "line": 30,
+              "path": "tweak/Identity/RBXDeviceHooks.xm"
+            }
+          ],
+          "id": "OS-044",
+          "mechanism": "No blanket private-UIDevice hook; supported MG path may cover some internal calls only.",
+          "path": "docs/leak-surface/os-network-inventory.json",
+          "surface": "UIDevice private identifier selectors and late dynamic lookup",
+          "verdict": "unverified",
+          "verification": "Mechanical constructor/selector scan found no dedicated hook. Correlate current binary symbols/selectors, then run a clone-context probe before assigning non-use or isolation."
+        },
+        {
+          "evidence": [
+            {
+              "detail": "Exact five display geometry properties mapped and startup checked.",
+              "line": 196,
+              "path": "tweak/Identity/RBXSensorHooks.xm"
+            },
+            {
+              "anchor": "- (NSDictionary *)physicalScreenMetrics {",
+              "detail": "Reads launcher screen geometry for a local recommendation; no profile publication or hardware mutation.",
+              "line": 604,
+              "path": "launcher/RBXIdentityViewController.m"
+            },
+            {
+              "anchor": "static inline NSDictionary *RBXScreenMatch(",
+              "detail": "Exact geometry or explicit approximate recommendation, preserving existing selection.",
+              "line": 11,
+              "path": "launcher/RBXScreenRecommendation.h"
+            }
+          ],
+          "id": "OS-064",
+          "mechanism": "Profile dimensions/scale/FPS returned. Launcher-only model recommendations compare measured native/logical dimensions and both scales; they do not change the existing clone display hooks or saved identity automatically.",
+          "path": "docs/leak-surface/os-network-inventory.json",
+          "surface": "UIScreen nativeBounds/bounds/scale/nativeScale/maximumFramesPerSecond",
+          "verdict": "covered-in-code",
+          "verification": "Installed-hook code reviewed; current Reddit binary references must be joined to the binary inventory. A two-clone runtime call/capture is still required; installer success alone is not behavior proof. Scene/window/screen-mode geometry can still expose physical display and requires independent row. Native48 and UIKit233 verify only recommendation and editor consistency. They do not prove that every display API in the actual clone returns the chosen values; two-clone runtime checks remain required."
+        }
+      ],
+      "socialBoxRows": [
+        "OS-043",
+        "OS-044",
+        "OS-064"
+      ],
+      "unresolvedSocialBoxRowIds": []
+    },
+    {
+      "category": "NSProcessInfo version and memory",
+      "decisionRationale": "Reference demonstrates a wider installed NSProcessInfo set than SocialBox ledger OS-054, but OS-availability/version predicates affect app behavior. Need actual caller evidence and compatibility proof before changing them.",
+      "socialboxStaticBehavior": "Registration covers operatingSystemVersion/String, hostName, operatingSystemName, globallyUniqueString, isOperatingSystemAtLeastVersion, thermalState, low power and physicalMemory. Inspected version parses ProductVersion; memory branch derives a model key and can call original.",
+      "evidence": [
+        {
+          "address": "0x001027a0",
+          "anchors": [
+            {
+              "line": 191615
+            },
+            {
+              "line": 191616
+            },
+            {
+              "line": 191617
+            },
+            {
+              "line": 191619
+            },
+            {
+              "line": 191620
+            },
+            {
+              "line": 191621
+            },
+            {
+              "line": 191622
+            },
+            {
+              "line": 191623
+            }
+          ],
+          "component": "SocialBox.dylib",
+          "function": "FUN_001027a0",
+          "functionEndLine": 191865,
+          "functionStartLine": 191581,
+          "indexLine": 271,
+          "indexPath": "decompiled/SocialBox.dylib.functions.tsv",
+          "indexStatus": "decompiled_after_retry",
+          "pseudocodePath": "decompiled/SocialBox.dylib.c"
+        },
+        {
+          "address": "0x00102c70",
+          "anchors": [
+            {
+              "line": 191882
+            },
+            {
+              "line": 191885
+            },
+            {
+              "line": 191890
+            }
+          ],
+          "component": "SocialBox.dylib",
+          "function": "FUN_00102c70",
+          "functionEndLine": 191924,
+          "functionStartLine": 191866,
+          "indexLine": 272,
+          "indexPath": "decompiled/SocialBox.dylib.functions.tsv",
+          "indexStatus": "decompiled_after_retry",
+          "pseudocodePath": "decompiled/SocialBox.dylib.c"
+        },
+        {
+          "address": "0x001033dc",
+          "anchors": [
+            {
+              "line": 192207
+            },
+            {
+              "line": 192210
+            },
+            {
+              "line": 192214
+            }
+          ],
+          "component": "SocialBox.dylib",
+          "function": "FUN_001033dc",
+          "functionEndLine": 192225,
+          "functionStartLine": 192189,
+          "indexLine": 280,
+          "indexPath": "decompiled/SocialBox.dylib.functions.tsv",
+          "indexStatus": "decompiled_after_retry",
+          "pseudocodePath": "decompiled/SocialBox.dylib.c"
+        }
+      ],
+      "evidenceLevel": "static decompilation and registration only; no runtime execution",
+      "id": "DS-04",
+      "proposedDecision": "unknown",
+      "requiredVerification": "Record values and caller sites across two clones, missing model data, real memory pressure and supported API availability; preserve app stability.",
+      "socialBoxComparison": [
+        {
+          "evidence": [
+            {
+              "detail": "Two OS-version selectors overridden; malformed tuple falls back original.",
+              "line": 67,
+              "path": "tweak/Identity/RBXDeviceHooks.xm"
+            }
+          ],
+          "id": "OS-053",
+          "mechanism": "Profile OS tuple/string returned.",
+          "path": "docs/leak-surface/os-network-inventory.json",
+          "surface": "NSProcessInfo operatingSystemVersion/String",
+          "verdict": "covered-in-code",
+          "verification": "Installed-hook code reviewed; current Reddit binary references must be joined to the binary inventory. A two-clone runtime call/capture is still required; installer success alone is not behavior proof."
+        },
+        {
+          "evidence": [
+            {
+              "detail": "NSProcessInfo device hook only overrides operatingSystemVersion/String; runtime and sensor hooks add uptime/thermal/low-power.",
+              "line": 67,
+              "path": "tweak/Identity/RBXDeviceHooks.xm"
+            },
+            {
+              "detail": "Current IPA exact references: Payload/RedditApp.app/RedditApp processorCount @0xb263100 sha256=b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5; Payload/RedditApp.app/RedditApp physicalMemory @0xb2692e0 sha256=b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5; Payload/RedditApp.app/RedditApp activeProcessorCount @0xb269f48 sha256=b4feb734585599912e67a74493b1ba9b8f562eb77ac6659d20be92c209906ab5; complete reference arrays retained in binary-inventory.full.json.gz.",
+              "line": 1,
+              "path": "docs/leak-surface/binary-inventory.json"
+            }
+          ],
+          "id": "OS-054",
+          "mechanism": "Current exact references are physicalMemory, processorCount and activeProcessorCount; hostName is not proven. No CPU/RAM API hook is added from a name alone.",
+          "path": "docs/leak-surface/os-network-inventory.json",
+          "surface": "NSProcessInfo physicalMemory/processorCount/activeProcessorCount/hostName",
+          "verdict": "gap",
+          "verification": "Current binary evidence and live constructor paths reviewed. Existing native catalog/identity regressions pass. Two-clone caller/value/capture acceptance NOT RUN; exact-reference absence is not dynamic non-use."
+        },
+        {
+          "evidence": [
+            {
+              "detail": "Getter overrides use sSensorsBlocked.",
+              "line": 187,
+              "path": "tweak/Identity/RBXSensorHooks.xm"
+            }
+          ],
+          "id": "OS-070",
+          "mechanism": "Default sensor policy nominal/false.",
+          "path": "docs/leak-surface/os-network-inventory.json",
+          "surface": "NSProcessInfo thermalState/isLowPowerModeEnabled",
+          "verdict": "covered-in-code",
+          "verification": "Installed-hook code reviewed; current Reddit binary references must be joined to the binary inventory. A two-clone runtime call/capture is still required; installer success alone is not behavior proof. Notifications still require observation."
+        }
+      ],
+      "socialBoxRows": [
+        "OS-053",
+        "OS-054",
+        "OS-070"
+      ],
+      "unresolvedSocialBoxRowIds": []
+    },
+    {
+      "category": "sysctl/sysctlbyname/uname",
+      "decisionRationale": "SocialBox already has named/numeric mapping plus explicit unknown-key/syscall gaps. Do not convert broad reference symbol coverage into syscall-level isolation.",
+      "socialboxStaticBehavior": "All three C entrypoints are hooked. Named wrapper includes hw.machine and kern.boottime and obtains activeContainerID for synthetic boot-time state. uname calls original then supplies configured hostname/release/version/machine fields. Numeric sysctl wrapper includes mixed-purpose logic that was not fully classified.",
+      "evidence": [
+        {
+          "address": "0x000f7158",
+          "anchors": [
+            {
+              "line": 185013
+            }
+          ],
+          "component": "SocialBox.dylib",
+          "function": "FUN_000f7158",
+          "functionEndLine": 185255,
+          "functionStartLine": 184982,
+          "indexLine": 254,
+          "indexPath": "decompiled/SocialBox.dylib.functions.tsv",
+          "indexStatus": "decompiled_after_retry",
+          "pseudocodePath": "decompiled/SocialBox.dylib.c"
+        },
+        {
+          "address": "0x000f7514",
+          "anchors": [
+            {
+              "line": 185287
+            }
+          ],
+          "component": "SocialBox.dylib",
+          "function": "FUN_000f7514",
+          "functionEndLine": 185528,
+          "functionStartLine": 185256,
+          "indexLine": 255,
+          "indexPath": "decompiled/SocialBox.dylib.functions.tsv",
+          "indexStatus": "decompiled_after_retry",
+          "pseudocodePath": "decompiled/SocialBox.dylib.c"
+        },
+        {
+          "address": "0x000f78d0",
+          "anchors": [
+            {
+              "line": 185559
+            }
+          ],
+          "component": "SocialBox.dylib",
+          "function": "FUN_000f78d0",
+          "functionEndLine": 185799,
+          "functionStartLine": 185529,
+          "indexLine": 256,
+          "indexPath": "decompiled/SocialBox.dylib.functions.tsv",
+          "indexStatus": "decompiled_after_retry",
+          "pseudocodePath": "decompiled/SocialBox.dylib.c"
+        },
+        {
+          "address": "0x000eece4",
+          "anchors": [
+            {
+              "line": 180606
+            },
+            {
+              "line": 180610
+            },
+            {
+              "line": 180671
+            },
+            {
+              "line": 180693
+            },
+            {
+              "line": 180695
+            },
+            {
+              "line": 180726
+            }
+          ],
+          "component": "SocialBox.dylib",
+          "function": "FUN_000eece4",
+          "functionEndLine": 183066,
+          "functionStartLine": 180549,
+          "indexLine": 232,
+          "indexPath": "decompiled/SocialBox.dylib.functions.tsv",
+          "indexStatus": "decompiled_after_retry",
+          "pseudocodePath": "decompiled/SocialBox.dylib.c"
+        },
+        {
+          "address": "0x000f3110",
+          "anchors": [
+            {
+              "line": 183102
+            },
+            {
+              "line": 183222
+            },
+            {
+              "line": 183223
+            },
+            {
+              "line": 183224
+            },
+            {
+              "line": 183225
+            }
+          ],
+          "component": "SocialBox.dylib",
+          "function": "FUN_000f3110",
+          "functionEndLine": 183258,
+          "functionStartLine": 183067,
+          "indexLine": 233,
+          "indexPath": "decompiled/SocialBox.dylib.functions.tsv",
+          "indexStatus": "decompiled_after_retry",
+          "pseudocodePath": "decompiled/SocialBox.dylib.c"
+        }
+      ],
+      "evidenceLevel": "static decompilation and registration only; no runtime execution",
+      "id": "DS-05",
+      "proposedDecision": "retain",
+      "requiredVerification": "Compare numeric/named APIs and direct syscall with size-only/buffer-short requests; no hidden original-value fallback for configured fields.",
+      "socialBoxComparison": [
+        {
+          "evidence": [
+            {
+              "detail": "Explicit branches cover hw.machine/model/memsize, kern.boottime/osrelease/version/osversion/bootsessionuuid/bootargs, hw.uuid/kern.uuid/hostname.",
+              "line": 28,
+              "path": "tweak/Identity/RBXSysctlHooks.xm"
+            }
+          ],
+          "id": "OS-047",
+          "mechanism": "Listed names map to profile; kern.proc denied.",
+          "path": "docs/leak-surface/os-network-inventory.json",
+          "surface": "sysctlbyname model/RAM/OS/boot/UUID/hostname and kern.proc",
+          "verdict": "covered-in-code",
+          "verification": "Installed-hook code reviewed; current Reddit binary references must be joined to the binary inventory. A two-clone runtime call/capture is still required; installer success alone is not behavior proof. Readiness probes selected model/OS/RAM and buffer contracts, not every mapped branch."
+        },
+        {
+          "evidence": [
+            {
+              "detail": "Exact numeric MIB mapping is narrower than by-name set.",
+              "line": 118,
+              "path": "tweak/Identity/RBXSysctlHooks.xm"
+            }
+          ],
+          "id": "OS-048",
+          "mechanism": "CTL_HW machine/model/memsize and CTL_KERN proc/boot/OS/hostname mapped; other MIBs pass through.",
+          "path": "docs/leak-surface/os-network-inventory.json",
+          "surface": "sysctl numeric MIB forms",
+          "verdict": "covered-in-code",
+          "verification": "Installed-hook code reviewed; current Reddit binary references must be joined to the binary inventory. A two-clone runtime call/capture is still required; installer success alone is not behavior proof. Resolve each current-binary MIB and test numeric aliases."
+        },
+        {
+          "evidence": [
+            {
+              "detail": "Unmatched names and MIBs explicitly call original.",
+              "line": 115,
+              "path": "tweak/Identity/RBXSysctlHooks.xm"
+            },
+            {
+              "detail": "Existing catalog consistency is retained and native generator/validator tests pass; no new hardware hooks or catalog guesses.",
+              "line": 100,
+              "path": "daemon/RBXConsistencyValidator.m"
+            }
+          ],
+          "id": "OS-049",
+          "mechanism": "Intentional shared fingerprint. Unlisted named/numeric sysctl keys and direct syscall paths remain physical. Existing catalog model/board/RAM consistency stays enforced; no guessed CPU/cache feature values are added.",
+          "path": "docs/leak-surface/os-network-inventory.json",
+          "surface": "sysctl unlisted hardware/kernel keys and syscall bypass",
+          "verdict": "gap",
+          "verification": "No device-indistinguishability claim. The physical hardware fingerprint is intentionally shared; this is not a closed isolation row. daemon/RBXConsistencyValidator.m:100 checks catalog board/RAM/screen/iOS coherence; RBXSysctlHooks substitutes only its explicit allowlist and returns original for other MIBs. On-device capture NOT RUN."
+        }
+      ],
+      "socialBoxRows": [
+        "OS-047",
+        "OS-048",
+        "OS-049"
+      ],
+      "unresolvedSocialBoxRowIds": []
+    },
+    {
+      "category": "MobileGestalt",
+      "decisionRationale": "Retain SocialBox typed-return handling and record private/hashed keys as unverified. Reference aliases are useful comparison targets, not proof of coverage.",
+      "socialboxStaticBehavior": "Installer resolves MGCopyAnswer, MGCopyAnswer_internal and MGCopyAnswerWithError. Inspected MG wrapper consults a mapping dictionary/profile values, has IntegratedCircuitCardIdentity handling and an original-call route for unmapped/missing fields.",
+      "evidence": [
+        {
+          "address": "0x000f7c8c",
+          "anchors": [
+            {
+              "line": 186164
+            },
+            {
+              "line": 186227
+            },
+            {
+              "line": 186229
+            },
+            {
+              "line": 186291
+            },
+            {
+              "line": 186293
+            },
+            {
+              "line": 186356
+            }
+          ],
+          "component": "SocialBox.dylib",
+          "function": "FUN_000f7c8c",
+          "functionEndLine": 186552,
+          "functionStartLine": 185800,
+          "indexLine": 257,
+          "indexPath": "decompiled/SocialBox.dylib.functions.tsv",
+          "indexStatus": "decompiled_after_retry",
+          "pseudocodePath": "decompiled/SocialBox.dylib.c"
+        },
+        {
+          "address": "0x000fbbb0",
+          "anchors": [
+            {
+              "line": 188567
+            },
+            {
+              "line": 188573
+            },
+            {
+              "line": 188577
+            },
+            {
+              "line": 188581
+            },
+            {
+              "line": 188586
+            }
+          ],
+          "component": "SocialBox.dylib",
+          "function": "FUN_000fbbb0",
+          "functionEndLine": 188605,
+          "functionStartLine": 186811,
+          "indexLine": 260,
+          "indexPath": "decompiled/SocialBox.dylib.functions.tsv",
+          "indexStatus": "decompiled_after_retry",
+          "pseudocodePath": "decompiled/SocialBox.dylib.c"
+        }
+      ],
+      "evidenceLevel": "static decompilation and registration only; no runtime execution",
+      "id": "DS-06",
+      "proposedDecision": "retain",
+      "requiredVerification": "Exercise typed callers and hashed/plain aliases; verify ownership and CF type contracts; preserve the existing numeric MobileGestalt crash regression.",
+      "socialBoxComparison": [
+        {
+          "evidence": [
+            {
+              "detail": "Mapped values require expected CF type and type code; missing sensitive answer returns NULL.",
+              "line": 128,
+              "path": "tweak/Identity/RBXIdentityEngine.xm"
+            },
+            {
+              "detail": "Actual contract, typed fallback and positive interception checks.",
+              "line": 1,
+              "path": "tools/test_hook_readiness.mm"
+            },
+            {
+              "detail": "Runtime fix declaration and mandatory executable regression integration.",
+              "line": 1,
+              "path": "scripts/build-mac.sh"
+            }
+          ],
+          "id": "OS-045",
+          "mechanism": "Internal provider returns only learned, type-compatible profile values. Unsupported identity values remain unavailable. Typed string/bool/integer/float accessors preserve caller defaults for unavailable controlled keys rather than invoking the native abort path.",
+          "path": "docs/leak-surface/os-network-inventory.json",
+          "surface": "MobileGestalt MGCopyAnswer mapped device/serial/carrier/ID fields",
+          "verdict": "covered-in-code",
+          "verification": "Host test executes actual provider, learning, typed wrappers and readiness verification. Complete and reduced profiles pass; a typed path returning the correct default without interception fails the call-counter check. Actual iOS 16.7.16 Facebook rendering previously aborted in MGGetSInt64Answer(ChipID), absent from this generated profile. After repair the clone remains running and MobileGestalt readiness passes. This is not exhaustive opaque-key coverage (OS-046)."
+        },
+        {
+          "evidence": [
+            {
+              "detail": "Unrecognized non-sensitive name falls through orig_MGCopyAnswer_internal.",
+              "line": 140,
+              "path": "tweak/Identity/RBXIdentityEngine.xm"
+            }
+          ],
+          "id": "OS-046",
+          "mechanism": "Five typed accessor detours preserve native behavior for unrelated queries and controlled value/default semantics for identities. Unmapped opaque names remain unresolved; sensitive substring matching is not hash coverage.",
+          "path": "docs/leak-surface/os-network-inventory.json",
+          "surface": "MobileGestalt typed wrappers and hashed/private keys",
+          "verdict": "unverified",
+          "verification": "Installed-hook code reviewed; current Reddit binary references must be joined to the binary inventory. A two-clone runtime call/capture is still required; installer success alone is not behavior proof. Enumerate every binary constant/hash and dynamic key; typed wrapper probe only covers selected examples. Follow-up OS-045 fixes the reproduced typed accessor abort and validates missing-value denial. It does not classify all opaque keys."
+        }
+      ],
+      "socialBoxRows": [
+        "OS-045",
+        "OS-046"
+      ],
+      "unresolvedSocialBoxRowIds": []
+    },
+    {
+      "category": "IOKit registry properties",
+      "decisionRationale": "SocialBox additionally models bulk property rewriting in source; no runtime breadth comparison is established. Keep raw/user-client and unknown-property gaps.",
+      "socialboxStaticBehavior": "Both scalar create and search C APIs are registered. The inspected scalar wrapper has named profile substitutions including platform UUID, inverse ID, AWDID and chip identifier, with original-call fallbacks.",
+      "evidence": [
+        {
+          "address": "0x000f5a54",
+          "anchors": [
+            {
+              "line": 183898
+            },
+            {
+              "line": 183899
+            }
+          ],
+          "component": "SocialBox.dylib",
+          "function": "FUN_000f5a54",
+          "functionEndLine": 184139,
+          "functionStartLine": 183868,
+          "indexLine": 251,
+          "indexPath": "decompiled/SocialBox.dylib.functions.tsv",
+          "indexStatus": "decompiled_after_retry",
+          "pseudocodePath": "decompiled/SocialBox.dylib.c"
+        },
+        {
+          "address": "0x000f5e2c",
+          "anchors": [
+            {
+              "line": 184178
+            },
+            {
+              "line": 184529
+            },
+            {
+              "line": 184603
+            },
+            {
+              "line": 184606
+            },
+            {
+              "line": 184614
+            },
+            {
+              "line": 184620
+            },
+            {
+              "line": 184626
+            }
+          ],
+          "component": "SocialBox.dylib",
+          "function": "FUN_000f5e2c",
+          "functionEndLine": 184678,
+          "functionStartLine": 184140,
+          "indexLine": 252,
+          "indexPath": "decompiled/SocialBox.dylib.functions.tsv",
+          "indexStatus": "decompiled_after_retry",
+          "pseudocodePath": "decompiled/SocialBox.dylib.c"
+        }
+      ],
+      "evidenceLevel": "static decompilation and registration only; no runtime execution",
+      "id": "DS-07",
+      "proposedDecision": "retain",
+      "requiredVerification": "Join actual imported IOKit calls to scalar/search/bulk APIs and test type/buffer semantics and unknown property behavior.",
+      "socialBoxComparison": [
+        {
+          "evidence": [
+            {
+              "detail": "Hooks installed on CreateCFProperty, SearchCFProperty, CreateCFProperties; bulk nested sanitizer included.",
+              "line": 115,
+              "path": "tweak/Identity/RBXIOKitHooks.xm"
+            }
+          ],
+          "id": "OS-051",
+          "mechanism": "Three public CF-property functions sanitize tree, map serial/UUID, remove sensitive key fragments.",
+          "path": "docs/leak-surface/os-network-inventory.json",
+          "surface": "IOKit scalar/search/bulk registry properties",
+          "verdict": "covered-in-code",
+          "verification": "Installed-hook code reviewed; current Reddit binary references must be joined to the binary inventory. A two-clone runtime call/capture is still required; installer success alone is not behavior proof. Probe uses synthetic input through hooked functions, not real registry traversal."
+        },
+        {
+          "evidence": [
+            {
+              "detail": "Installer only hooks three CF-property entry points; sanitizer returns unknown scalar values unchanged at64.",
+              "line": 115,
+              "path": "tweak/Identity/RBXIOKitHooks.xm"
+            }
+          ],
+          "id": "OS-052",
+          "mechanism": "Intentional shared fingerprint. Unknown IOKit properties and raw/user-client APIs remain physical or OS-denied. Existing IOPlatformSerialNumber and IOPlatformUUID mappings remain coherent with profile/MobileGestalt identifiers.",
+          "path": "docs/leak-surface/os-network-inventory.json",
+          "surface": "IOKit raw/user-client calls and unknown properties",
+          "verdict": "gap",
+          "verification": "No device-indistinguishability claim. The physical hardware fingerprint is intentionally shared; this is not a closed isolation row. RBXIOKitHooks maps only two exact identity properties, recursively sanitizes its selected property APIs, and includes a behavior self-probe. No exact IOConnect/registry-ID import was found in scanned reference kinds; dynamic use remains possible. On-device capture NOT RUN."
+        }
+      ],
+      "socialBoxRows": [
+        "OS-051",
+        "OS-052"
+      ],
+      "unresolvedSocialBoxRowIds": []
+    },
+    {
+      "category": "Telephony carrier and subscriber fields",
+      "decisionRationale": "Use SocialBox per-profile coherent region/carrier data. Private selector registration is not evidence of SIM behavior or valid proxy geography.",
+      "socialboxStaticBehavior": "Installer registers carrierName, MCC/MNC, country and several private IMEI/MEID/ICCID methods. The inspected carrierName wrapper reads CarrierName and falls back to original when absent.",
+      "evidence": [
+        {
+          "address": "0x0010c978",
+          "anchors": [
+            {
+              "line": 195960
+            },
+            {
+              "line": 195964
+            },
+            {
+              "line": 195971
+            },
+            {
+              "line": 195975
+            },
+            {
+              "line": 195979
+            },
+            {
+              "line": 195983
+            }
+          ],
+          "component": "SocialBox.dylib",
+          "function": "FUN_0010c978",
+          "functionEndLine": 197791,
+          "functionStartLine": 195922,
+          "indexLine": 304,
+          "indexPath": "decompiled/SocialBox.dylib.functions.tsv",
+          "indexStatus": "decompiled_after_retry",
+          "pseudocodePath": "decompiled/SocialBox.dylib.c"
+        },
+        {
+          "address": "0x0010c978",
+          "anchors": [
+            {
+              "line": 196110
+            },
+            {
+              "line": 196230
+            },
+            {
+              "line": 196348
+            },
+            {
+              "line": 196701
+            }
+          ],
+          "component": "SocialBox.dylib",
+          "function": "FUN_0010c978",
+          "functionEndLine": 197791,
+          "functionStartLine": 195922,
+          "indexLine": 304,
+          "indexPath": "decompiled/SocialBox.dylib.functions.tsv",
+          "indexStatus": "decompiled_after_retry",
+          "pseudocodePath": "decompiled/SocialBox.dylib.c"
+        },
+        {
+          "address": "0x002982a0",
+          "anchors": [
+            {
+              "line": 404033
+            },
+            {
+              "line": 404155
+            },
+            {
+              "line": 404156
+            },
+            {
+              "line": 404157
+            }
+          ],
+          "component": "SocialBox.dylib",
+          "function": "FUN_002982a0",
+          "functionEndLine": 404284,
+          "functionStartLine": 404003,
+          "indexLine": 1149,
+          "indexPath": "decompiled/SocialBox.dylib.functions.tsv",
+          "indexStatus": "decompiled_after_retry",
+          "pseudocodePath": "decompiled/SocialBox.dylib.c"
+        }
+      ],
+      "evidenceLevel": "static decompilation and registration only; no runtime execution",
+      "id": "DS-08",
+      "proposedDecision": "retain",
+      "requiredVerification": "Test dual-SIM/service dictionaries, missing carrier data, proxy-country mismatch and all API names actually referenced by the app.",
+      "socialBoxComparison": [
+        {
+          "evidence": [
+            {
+              "detail": "CTCarrier and CTTelephonyNetworkInfo listed methods hooked.",
+              "line": 21,
+              "path": "tweak/Identity/RBXTelephonyHooks.xm"
+            }
+          ],
+          "id": "OS-078",
+          "mechanism": "Profile carrier metadata, stable synthetic service ID and LTE; SIM-change callbacks suppressed.",
+          "path": "docs/leak-surface/os-network-inventory.json",
+          "surface": "CoreTelephony carrier name/MCC/MNC/country/radio/service identifiers",
+          "verdict": "covered-in-code",
+          "verification": "Installed-hook code reviewed; current Reddit binary references must be joined to the binary inventory. A two-clone runtime call/capture is still required; installer success alone is not behavior proof. Does not cover all private telephony/XPC APIs."
+        }
+      ],
+      "socialBoxRows": [
+        "OS-078"
+      ],
+      "unresolvedSocialBoxRowIds": []
+    },
+    {
+      "category": "Locale, language and timezone",
+      "decisionRationale": "SocialBox already keeps country/city/timezone consistency and explicit CFLocale/autoupdating gaps. Do not replace city timezone by arbitrary country-only choice without checking multi-zone regions.",
+      "socialboxStaticBehavior": "Registers locale countryCode, localeIdentifier, objectForKey, preferredLanguages and timezone system/local/default getters. Timezone helper derives a catalog timezone from country, creates NSTimeZone, and falls back to original for absent/invalid country or timezone.",
+      "evidence": [
+        {
+          "address": "0x0010c978",
+          "anchors": [
+            {
+              "line": 197059
+            },
+            {
+              "line": 197063
+            },
+            {
+              "line": 197067
+            },
+            {
+              "line": 197186
+            },
+            {
+              "line": 197306
+            },
+            {
+              "line": 197310
+            },
+            {
+              "line": 197314
+            },
+            {
+              "line": 197320
+            }
+          ],
+          "component": "SocialBox.dylib",
+          "function": "FUN_0010c978",
+          "functionEndLine": 197791,
+          "functionStartLine": 195922,
+          "indexLine": 304,
+          "indexPath": "decompiled/SocialBox.dylib.functions.tsv",
+          "indexStatus": "decompiled_after_retry",
+          "pseudocodePath": "decompiled/SocialBox.dylib.c"
+        },
+        {
+          "address": "0x00299d70",
+          "anchors": [
+            {
+              "line": 405450
+            },
+            {
+              "line": 405455
+            },
+            {
+              "line": 405460
+            },
+            {
+              "line": 405467
+            }
+          ],
+          "component": "SocialBox.dylib",
+          "function": "FUN_00299d70",
+          "functionEndLine": 405477,
+          "functionStartLine": 405435,
+          "indexLine": 1162,
+          "indexPath": "decompiled/SocialBox.dylib.functions.tsv",
+          "indexStatus": "decompiled_after_retry",
+          "pseudocodePath": "decompiled/SocialBox.dylib.c"
+        }
+      ],
+      "evidenceLevel": "static decompilation and registration only; no runtime execution",
+      "id": "DS-09",
+      "proposedDecision": "retain",
+      "requiredVerification": "A/B locale/autoupdating/CFLocale, explicit app language, DST and multi-timezone countries; compare proxy observation without claiming GPS measurement.",
+      "socialBoxComparison": [
+        {
+          "evidence": [
+            {
+              "detail": "Exact class getters and specific instance identifier override.",
+              "line": 30,
+              "path": "tweak/Identity/RBXLocaleHooks.xm"
+            }
+          ],
+          "id": "OS-071",
+          "mechanism": "Profile locale/language returned; explicit app-created locales preserved.",
+          "path": "docs/leak-surface/os-network-inventory.json",
+          "surface": "NSLocale currentLocale/systemLocale/preferredLanguages",
+          "verdict": "covered-in-code",
+          "verification": "Installed-hook code reviewed; current Reddit binary references must be joined to the binary inventory. A two-clone runtime call/capture is still required; installer success alone is not behavior proof."
+        },
+        {
+          "evidence": [
+            {
+              "detail": "Complete locale hook block omits these APIs.",
+              "line": 30,
+              "path": "tweak/Identity/RBXLocaleHooks.xm"
+            }
+          ],
+          "id": "OS-072",
+          "mechanism": "No exact autoupdatingCurrentLocale or CFLocale reference/import match was found in current scanned kinds. Existing NSLocale current/system/preferred getters stay installed; no speculative CF hook is added.",
+          "path": "docs/leak-surface/os-network-inventory.json",
+          "surface": "NSLocale autoupdatingCurrentLocale and CFLocale APIs",
+          "verdict": "gap",
+          "verification": "Current binary evidence and live constructor paths reviewed. Two-clone caller/value/capture acceptance NOT RUN; exact-reference absence is not dynamic non-use."
+        }
+      ],
+      "socialBoxRows": [
+        "OS-071",
+        "OS-072"
+      ],
+      "unresolvedSocialBoxRowIds": []
+    },
+    {
+      "category": "Pasteboard read suppression",
+      "decisionRationale": "SocialBox source deliberately blocks factory/named/unique, writes, metadata, typed/item-provider/detection and concrete subclasses, with an explicit compatibility mode. The inspected reference installer does not establish these families; absence elsewhere is not asserted.",
+      "socialboxStaticBehavior": "Inspected installer explicitly installs string, strings, URL, URLs, items, hasStrings and hasURLs. Scalar wrappers return nil/false and items returns empty array when common gate and bundle predicate apply; otherwise original access remains. This is read suppression, not an observed private mutable clipboard.",
+      "evidence": [
+        {
+          "address": "0x001191c4",
+          "anchors": [
+            {
+              "line": 203688
+            },
+            {
+              "line": 203690
+            },
+            {
+              "line": 203691
+            },
+            {
+              "line": 203692
+            },
+            {
+              "line": 203693
+            },
+            {
+              "line": 203694
+            },
+            {
+              "line": 203695
+            },
+            {
+              "line": 203696
+            }
+          ],
+          "component": "SocialBox.dylib",
+          "function": "FUN_001191c4",
+          "functionEndLine": 203705,
+          "functionStartLine": 203649,
+          "indexLine": 335,
+          "indexPath": "decompiled/SocialBox.dylib.functions.tsv",
+          "indexStatus": "decompiled_after_retry",
+          "pseudocodePath": "decompiled/SocialBox.dylib.c"
+        },
+        {
+          "address": "0x00119464",
+          "anchors": [
+            {
+              "line": 11621
+            },
+            {
+              "line": 11623
+            }
+          ],
+          "component": "SocialBox.dylib",
+          "function": "FUN_00119464",
+          "functionEndLine": 11630,
+          "functionStartLine": 11614,
+          "indexLine": 336,
+          "indexPath": "decompiled/SocialBox.dylib.functions.tsv",
+          "indexStatus": "decompiled",
+          "pseudocodePath": "decompiled/SocialBox.dylib.c"
+        },
+        {
+          "address": "0x0011a248",
+          "anchors": [
+            {
+              "line": 204248
+            },
+            {
+              "line": 204249
+            },
+            {
+              "line": 204251
+            },
+            {
+              "line": 204254
+            }
+          ],
+          "component": "SocialBox.dylib",
+          "function": "FUN_0011a248",
+          "functionEndLine": 204260,
+          "functionStartLine": 204233,
+          "indexLine": 344,
+          "indexPath": "decompiled/SocialBox.dylib.functions.tsv",
+          "indexStatus": "decompiled_after_retry",
+          "pseudocodePath": "decompiled/SocialBox.dylib.c"
+        },
+        {
+          "address": "0x0011a418",
+          "anchors": [
+            {
+              "line": 204360
+            },
+            {
+              "line": 204362
+            },
+            {
+              "line": 204365
+            }
+          ],
+          "component": "SocialBox.dylib",
+          "function": "FUN_0011a418",
+          "functionEndLine": 204371,
+          "functionStartLine": 204345,
+          "indexLine": 348,
+          "indexPath": "decompiled/SocialBox.dylib.functions.tsv",
+          "indexStatus": "decompiled_after_retry",
+          "pseudocodePath": "decompiled/SocialBox.dylib.c"
+        },
+        {
+          "address": "0x0011a490",
+          "anchors": [
+            {
+              "line": 204390
+            }
+          ],
+          "component": "SocialBox.dylib",
+          "function": "FUN_0011a490",
+          "functionEndLine": 204396,
+          "functionStartLine": 204372,
+          "indexLine": 349,
+          "indexPath": "decompiled/SocialBox.dylib.functions.tsv",
+          "indexStatus": "decompiled_after_retry",
+          "pseudocodePath": "decompiled/SocialBox.dylib.c"
+        }
+      ],
+      "evidenceLevel": "static decompilation and registration only; no runtime execution",
+      "id": "DS-10",
+      "proposedDecision": "retain",
+      "requiredVerification": "Foreign canaries through every public pasteboard family, writer/reader switch-back, class clusters, compatibility mode and new selectors; inspect other constructors before concluding reference absence.",
+      "socialBoxComparison": [
+        {
+          "evidence": [
+            {
+              "detail": "generalPasteboard/pasteboardWithUniqueName/pasteboardWithName are overridden.",
+              "line": 14,
+              "path": "tweak/Container/RBXPasteboardHooks.xm"
+            }
+          ],
+          "id": "OS-013",
+          "mechanism": "General returns private empty view; named and unique requests denied; no OS board creation.",
+          "path": "docs/leak-surface/os-network-inventory.json",
+          "surface": "UIPasteboard general/named/unique acquisition",
+          "verdict": "covered-in-code",
+          "verification": "Installed-hook code reviewed; current Reddit binary references must be joined to the binary inventory. A two-clone runtime call/capture is still required; installer success alone is not behavior proof. Verify no named board appears in external observer."
+        },
+        {
+          "evidence": [
+            {
+              "detail": "Scalar getters/setters, typed data and value methods are blocked.",
+              "line": 84,
+              "path": "tweak/Container/RBXPasteboardHooks.xm"
+            }
+          ],
+          "id": "OS-014",
+          "mechanism": "Installed blocking methods return nil and suppress mutation.",
+          "path": "docs/leak-surface/os-network-inventory.json",
+          "surface": "UIPasteboard scalar string/image/URL/color reads and writes",
+          "verdict": "covered-in-code",
+          "verification": "Installed-hook code reviewed; current Reddit binary references must be joined to the binary inventory. A two-clone runtime call/capture is still required; installer success alone is not behavior proof."
+        },
+        {
+          "evidence": [
+            {
+              "detail": "addItems/setItems:options:/URLs/images/colors/strings are blocked.",
+              "line": 51,
+              "path": "tweak/Container/RBXPasteboardHooks.xm"
+            }
+          ],
+          "id": "OS-015",
+          "mechanism": "Installed blocking methods return empty arrays and suppress writes.",
+          "path": "docs/leak-surface/os-network-inventory.json",
+          "surface": "UIPasteboard arrays/items/options and addItems",
+          "verdict": "covered-in-code",
+          "verification": "Installed-hook code reviewed; current Reddit binary references must be joined to the binary inventory. A two-clone runtime call/capture is still required; installer success alone is not behavior proof."
+        },
+        {
+          "evidence": [
+            {
+              "detail": "pasteboardTypes/containsPasteboardTypes/itemSetWithPasteboardTypes and indexed reads are blocked.",
+              "line": 44,
+              "path": "tweak/Container/RBXPasteboardHooks.xm"
+            }
+          ],
+          "id": "OS-016",
+          "mechanism": "Empty type/item-set/data/value answers.",
+          "path": "docs/leak-surface/os-network-inventory.json",
+          "surface": "UIPasteboard typed item-set and type membership APIs",
+          "verdict": "covered-in-code",
+          "verification": "Installed-hook code reviewed; current Reddit binary references must be joined to the binary inventory. A two-clone runtime call/capture is still required; installer success alone is not behavior proof."
+        },
+        {
+          "evidence": [
+            {
+              "detail": "itemProviders and setItemProviders/setObjects families blocked.",
+              "line": 37,
+              "path": "tweak/Container/RBXPasteboardHooks.xm"
+            }
+          ],
+          "id": "OS-017",
+          "mechanism": "No providers returned or accepted; both localOnly/expiration families suppressed.",
+          "path": "docs/leak-surface/os-network-inventory.json",
+          "surface": "UIPasteboard NSItemProvider and setObjects APIs",
+          "verdict": "covered-in-code",
+          "verification": "Installed-hook code reviewed; current Reddit binary references must be joined to the binary inventory. A two-clone runtime call/capture is still required; installer success alone is not behavior proof."
+        },
+        {
+          "evidence": [
+            {
+              "detail": "Both indexed and unindexed detection variants implemented.",
+              "line": 65,
+              "path": "tweak/Container/RBXPasteboardHooks.xm"
+            }
+          ],
+          "id": "OS-018",
+          "mechanism": "Completion callbacks receive empty results.",
+          "path": "docs/leak-surface/os-network-inventory.json",
+          "surface": "UIPasteboard detection patterns and values completion APIs",
+          "verdict": "covered-in-code",
+          "verification": "Installed-hook code reviewed; current Reddit binary references must be joined to the binary inventory. A two-clone runtime call/capture is still required; installer success alone is not behavior proof."
+        },
+        {
+          "evidence": [
+            {
+              "detail": "Installer snapshots real general board and mirrors hooks to class-cluster subclass.",
+              "line": 112,
+              "path": "tweak/Container/RBXPasteboardHooks.xm"
+            }
+          ],
+          "id": "OS-019",
+          "mechanism": "Private name, zero item/change counts; installer mirrors blocking methods onto actual subclass.",
+          "path": "docs/leak-surface/os-network-inventory.json",
+          "surface": "UIPasteboard metadata, change count, persistence and class-cluster overrides",
+          "verdict": "covered-in-code",
+          "verification": "Installed-hook code reviewed; current Reddit binary references must be joined to the binary inventory. A two-clone runtime call/capture is still required; installer success alone is not behavior proof. Compare change notifications while external clipboard changes; callback channel not tested."
+        }
+      ],
+      "socialBoxRows": [
+        "OS-013",
+        "OS-014",
+        "OS-015",
+        "OS-016",
+        "OS-017",
+        "OS-018",
+        "OS-019"
+      ],
+      "unresolvedSocialBoxRowIds": []
+    },
+    {
+      "category": "securityd caller attribution",
+      "decisionRationale": "Service hooks change a global security authority. Retain clone signing/compiled exact group authority until a complete audited service contract is available.",
+      "socialboxStaticBehavior": "securityd installs a private connection handler alongside SecItem functions. The handler checks XPC connection type, gets caller PID through a resolved function, checks cached classification, and uses proc_pidpath on a miss. Exact lifecycle/cache invalidation and process-owner binding are not proved by this bounded trace.",
+      "evidence": [
+        {
+          "address": "0x0000714c",
+          "anchors": [
+            {
+              "line": 3615
+            }
+          ],
+          "component": "SocialBoxSecurityd.dylib",
+          "function": "FUN_0000714c",
+          "functionEndLine": 3801,
+          "functionStartLine": 1939,
+          "indexLine": 14,
+          "indexPath": "decompiled/SocialBoxSecurityd.dylib.functions.tsv",
+          "indexStatus": "decompiled",
+          "pseudocodePath": "decompiled/SocialBoxSecurityd.dylib.c"
+        },
+        {
+          "address": "0x0000ce10",
+          "anchors": [
+            {
+              "line": 5972
+            },
+            {
+              "line": 5974
+            },
+            {
+              "line": 5995
+            },
+            {
+              "line": 5998
+            },
+            {
+              "line": 6005
+            }
+          ],
+          "component": "SocialBoxSecurityd.dylib",
+          "function": "FUN_0000ce10",
+          "functionEndLine": 6624,
+          "functionStartLine": 5911,
+          "indexLine": 22,
+          "indexPath": "decompiled/SocialBoxSecurityd.dylib.functions.tsv",
+          "indexStatus": "decompiled",
+          "pseudocodePath": "decompiled/SocialBoxSecurityd.dylib.c"
+        }
+      ],
+      "evidenceLevel": "static decompilation and registration only; no runtime execution",
+      "id": "DS-11",
+      "proposedDecision": "unknown",
+      "requiredVerification": "PID reuse/start-time/audit-token binding, unknown client rejection, daemon threads/concurrency, extensions, service restart and simultaneous original app vs clone.",
+      "socialBoxComparison": [
+        {
+          "evidence": [
+            {
+              "anchor": "static inline NSArray<NSString *> *RBXAppKeychainGroups",
+              "detail": "Exact descriptor/bundle group derivation, metadata validation and explicit-group dictionary transformation.",
+              "line": 7,
+              "path": "shared/RBXAppKeychainPolicy.h"
+            },
+            {
+              "anchor": "\"T84QZS65DQ.platformFamily\"",
+              "detail": "Canonical audited FB source groups and distinct suffixes; Reddit mapping remains empty.",
+              "line": 52,
+              "path": "cloud/src/config/app-registry.json"
+            },
+            {
+              "anchor": "@\"keychainSourceGroups\": @[@\"T84",
+              "detail": "Generated native group mapping.",
+              "line": 53,
+              "path": "shared/RBXAppRegistryData.h"
+            },
+            {
+              "anchor": "type GroupFields =",
+              "detail": "Cloud registry freezes both arrays; license and route behavior preserved.",
+              "line": 3,
+              "path": "cloud/src/lib/app-registry.ts"
+            }
+          ],
+          "id": "FBKEY-001",
+          "mechanism": "Three audited source groups map one-to-one to the exact clone primary, .family and .app groups. Complete-set versioned metadata is derived, not caller-selected. Omitted groups and legacy Reddit single-group values remain unchanged.",
+          "path": "docs/leak-surface/facebook-keychain-inventory.json",
+          "surface": "Compiled ordered multi-group identity policy and immutable registry data",
+          "verdict": "covered-in-code",
+          "verification": "Failing-first native fixture could not compile before the policy existed. All 39 assertions now pass, including independent golden values. Existing Reddit registry goldens, cloud registry/authenticated scope and build-contract tests pass. Signing/recovery integration is a separate pending unit."
+        },
+        {
+          "evidence": [
+            {
+              "anchor": "static BOOL RBXBootstrapMatchesIdentity",
+              "detail": "App-aware bootstrap comparison; actual complete rewrite signs and inspects the full group set and emits group-bound FB marker/profile metadata.",
+              "line": 1305,
+              "path": "daemon/RBXCloneManager.m"
+            },
+            {
+              "anchor": "NSArray *sections =",
+              "detail": "Typed Facebook namespace plus shared immutable app/group identity validation.",
+              "line": 114,
+              "path": "daemon/RBXProfileIO.m"
+            },
+            {
+              "anchor": "return @\"Profile clone Keychain policy",
+              "detail": "Profile load/write rejects partial or foreign FB group metadata.",
+              "line": 28,
+              "path": "shared/RBXAppProfileIdentity.h"
+            },
+            {
+              "anchor": "static inline BOOL RBXAppKeychainMarkerMatches",
+              "detail": "FB marker binds format 2, app/source ownership and complete policy; legacy Reddit marker shape preserved.",
+              "line": 38,
+              "path": "shared/RBXAppKeychainPolicy.h"
+            }
+          ],
+          "id": "FBKEY-004",
+          "mechanism": "Facebook main signatures carry three exact groups; marker format 2 and bootstrap/profile carry policy version 1 and complete ordered groups. Runtime validates the team/group set and every group canary. Bootstrap comparison selects the profile app namespace rather than requiring Reddit for Facebook.",
+          "path": "docs/leak-surface/facebook-keychain-inventory.json",
+          "surface": "Signing, bootstrap, marker and runtime readiness bound to complete per-app group policy",
+          "verdict": "covered-in-code",
+          "verification": "Failing tests first exposed single-group signing, missing-metadata runtime acceptance, failed cleanup reported as success, and Facebook rejection due to mandatory Reddit bootstrap data. Actual full rewrite/validator fixtures now pass 189 inactive-registry and 213 active-registry checks; runtime group/entitlement fixture 57; policy/marker 47; bootstrap/runtime 176. Pre-existing full native/build test list also passes. Full scripts/build-mac.sh rootless 0.1.22 build passed with 95 native/host entrypoints. Package SHA-256 b06f55e416792c2c369b02e372065503346728bfe889cc191274bac884ef2544; seven components and twelve slices inspected."
+        },
+        {
+          "evidence": [
+            {
+              "detail": "Runtime checks one expected keychain group and application-identifier, then runs a same-group probe.",
+              "line": 155,
+              "path": "tweak/Container/RBXContainerManager.xm"
+            },
+            {
+              "detail": "Optional bounded root-owned challenge runs within actual clone after readiness; specific canary checks only. Default absent request has no side effects.",
+              "line": 1,
+              "path": "shared/RBXCloneAcceptanceProbe.h"
+            },
+            {
+              "detail": "Host exercises the shipped core with synthetic Security and real temporary filesystem. Host foreign access correctly fails isolation; actual iOS sandbox proof still required.",
+              "line": 1,
+              "path": "tools/test_clone_acceptance.m"
+            },
+            {
+              "anchor": "test_clone_acceptance.sh",
+              "detail": "Build runs actual shared probe fixtures; synthetic Security and unsandboxed host are not device acceptance.",
+              "line": 130,
+              "path": "scripts/build-mac.sh"
+            }
+          ],
+          "id": "OS-008",
+          "mechanism": "Clone signature grants exactly its generated access group; platform keychain authorization is boundary.",
+          "path": "docs/leak-surface/os-network-inventory.json",
+          "surface": "Keychain SecItem* with explicit original or foreign access group",
+          "verdict": "unverified",
+          "verification": "Host architectural checks only (tools/test_clone_architecture.py); two managed clones with different sentinel values and denied cross-read are still required on iPhone. Negative original/foreign-group read/add/update/delete tests remain required. Prepared clone-only acceptance sequence A seed -> B verify -> A cleanup publishes keychain-seed-own-group, keychain-foreign-group-denied. Collector must validate live/stage PID, bundle, generation/epoch and source sentinel presence around B; root/companion output alone cannot close these rows. Actual device execution NOT RUN. Aggregate Keychain acceptance also requires keychain-before-cleanup PASS on returning to A, proving its exact seeded nonce item still exists before deletion; this is a sampled continuity check, not continuous observation."
+        },
+        {
+          "evidence": [
+            {
+              "detail": "Selftest always supplies kSecAttrAccessGroup explicitly.",
+              "line": 176,
+              "path": "tweak/Container/RBXContainerManager.xm"
+            },
+            {
+              "detail": "Optional bounded root-owned challenge runs within actual clone after readiness; specific canary checks only. Default absent request has no side effects.",
+              "line": 1,
+              "path": "shared/RBXCloneAcceptanceProbe.h"
+            },
+            {
+              "detail": "Host exercises the shipped core with synthetic Security and real temporary filesystem. Host foreign access correctly fails isolation; actual iOS sandbox proof still required.",
+              "line": 1,
+              "path": "tools/test_clone_acceptance.m"
+            }
+          ],
+          "id": "OS-009",
+          "mechanism": "Keychain Add without group chooses default group; CopyMatching/Update/Delete search all accessible groups. Sole generated entitlement narrows ordinary groups, but external-token and jailbreak semantics need proof.",
+          "path": "docs/leak-surface/os-network-inventory.json",
+          "surface": "Keychain SecItem* without kSecAttrAccessGroup",
+          "verdict": "unverified",
+          "verification": "Host architectural checks only (tools/test_clone_architecture.py); two managed clones with different sentinel values and denied cross-read are still required on iPhone. Add/query/update/delete without group in A/B; verify no default team sharing. Prepared clone-only acceptance sequence A seed -> B verify -> A cleanup publishes keychain-seed-default, keychain-default-absent, keychain-cleanup. Collector must validate live/stage PID, bundle, generation/epoch and source sentinel presence around B; root/companion output alone cannot close these rows. Actual device execution NOT RUN. Aggregate Keychain acceptance also requires keychain-before-cleanup PASS on returning to A, proving its exact seeded nonce item still exists before deletion; this is a sampled continuity check, not continuous observation."
+        }
+      ],
+      "socialBoxRows": [
+        "FBKEY-001",
+        "FBKEY-004",
+        "OS-008",
+        "OS-009"
+      ],
+      "unresolvedSocialBoxRowIds": []
+    },
+    {
+      "category": "securityd SecItemCopyMatching and result reconstruction",
+      "decisionRationale": "Do not replace SocialBox signed access-group boundary with reconstructed item rewriting merely because a broad hook exists. Retain exact foreign-group rejection and unchanged Security results.",
+      "socialboxStaticBehavior": "Private __SecItemCopyMatching/_SecItemCopyMatching symbol resolution leads to FUN_0000e0a0. That wrapper contains a _drt_ prefix check, calls original and reconstructs attribute dictionaries including class/service/account/access-group/generic/label/description/sync/data/protection. The full namespace and result-ownership contract is obscured by helper calls and not established here.",
+      "evidence": [
+        {
+          "address": "0x0000714c",
+          "anchors": [
+            {
+              "line": 2033
+            },
+            {
+              "line": 2038
+            },
+            {
+              "line": 3616
+            }
+          ],
+          "component": "SocialBoxSecurityd.dylib",
+          "function": "FUN_0000714c",
+          "functionEndLine": 3801,
+          "functionStartLine": 1939,
+          "indexLine": 14,
+          "indexPath": "decompiled/SocialBoxSecurityd.dylib.functions.tsv",
+          "indexStatus": "decompiled",
+          "pseudocodePath": "decompiled/SocialBoxSecurityd.dylib.c"
+        },
+        {
+          "address": "0x0000e0a0",
+          "anchors": [
+            {
+              "line": 6916
+            },
+            {
+              "line": 7210
+            },
+            {
+              "line": 7300
+            },
+            {
+              "line": 7303
+            },
+            {
+              "line": 7308
+            },
+            {
+              "line": 7311
+            },
+            {
+              "line": 7316
+            },
+            {
+              "line": 7323
+            },
+            {
+              "line": 7337
+            },
+            {
+              "line": 7344
+            }
+          ],
+          "component": "SocialBoxSecurityd.dylib",
+          "function": "FUN_0000e0a0",
+          "functionEndLine": 9354,
+          "functionStartLine": 6625,
+          "indexLine": 23,
+          "indexPath": "decompiled/SocialBoxSecurityd.dylib.functions.tsv",
+          "indexStatus": "decompiled",
+          "pseudocodePath": "decompiled/SocialBoxSecurityd.dylib.c"
+        }
+      ],
+      "evidenceLevel": "static decompilation and registration only; no runtime execution",
+      "id": "DS-12",
+      "proposedDecision": "unknown",
+      "requiredVerification": "A/B/A all item classes, omitted groups, broad matches, return attributes/data/ref/persistent-ref arrays, synchronization modes and unchanged OSStatus/error semantics.",
+      "socialBoxComparison": [
+        {
+          "evidence": [
+            {
+              "anchor": "static inline NSArray<NSString *> *RBXAppKeychainGroups",
+              "detail": "Exact descriptor/bundle group derivation, metadata validation and explicit-group dictionary transformation.",
+              "line": 7,
+              "path": "shared/RBXAppKeychainPolicy.h"
+            },
+            {
+              "anchor": "\"T84QZS65DQ.platformFamily\"",
+              "detail": "Canonical audited FB source groups and distinct suffixes; Reddit mapping remains empty.",
+              "line": 52,
+              "path": "cloud/src/config/app-registry.json"
+            },
+            {
+              "anchor": "@\"keychainSourceGroups\": @[@\"T84",
+              "detail": "Generated native group mapping.",
+              "line": 53,
+              "path": "shared/RBXAppRegistryData.h"
+            },
+            {
+              "anchor": "type GroupFields =",
+              "detail": "Cloud registry freezes both arrays; license and route behavior preserved.",
+              "line": 3,
+              "path": "cloud/src/lib/app-registry.ts"
+            }
+          ],
+          "id": "FBKEY-001",
+          "mechanism": "Three audited source groups map one-to-one to the exact clone primary, .family and .app groups. Complete-set versioned metadata is derived, not caller-selected. Omitted groups and legacy Reddit single-group values remain unchanged.",
+          "path": "docs/leak-surface/facebook-keychain-inventory.json",
+          "surface": "Compiled ordered multi-group identity policy and immutable registry data",
+          "verdict": "covered-in-code",
+          "verification": "Failing-first native fixture could not compile before the policy existed. All 39 assertions now pass, including independent golden values. Existing Reddit registry goldens, cloud registry/authenticated scope and build-contract tests pass. Signing/recovery integration is a separate pending unit."
+        },
+        {
+          "evidence": [
+            {
+              "anchor": "// BEGIN APP KEYCHAIN WRAPPERS",
+              "detail": "Actual add/copy/update/delete and random/data/pair creation wrappers; existing runtime activation gate retained.",
+              "line": 667,
+              "path": "tweak/Container/RBXKeychainHooks.xm"
+            },
+            {
+              "anchor": "int main(int argc",
+              "detail": "Actual wrappers and installer with synthetic provider boundaries.",
+              "line": 63,
+              "path": "tools/test_app_keychain_hooks.m"
+            },
+            {
+              "anchor": "end = \"// BEGIN APP KEYCHAIN WRAPPERS\"",
+              "detail": "Unchanged Reddit sync wrapper fixture remains isolated from new installer.",
+              "line": 16,
+              "path": "tools/test_keychain_sync.sh"
+            },
+            {
+              "anchor": "\"interpretation\":",
+              "detail": "Current binary imports justify coverage of three key-creation families; invocation and key purpose unproven.",
+              "line": 5,
+              "path": "docs/facebook-keychain-api-evidence.json"
+            }
+          ],
+          "id": "FBKEY-002",
+          "mechanism": "A seven-entry-point installer maps registered source groups once. Security result objects, refs, attributes and errors remain intact; foreign groups fail without retry. Requires validated bootstrap and full group metadata. Reddit retains its four sync wrappers and unhooked default.",
+          "path": "docs/leak-surface/facebook-keychain-inventory.json",
+          "surface": "SecItem and SecKey entry points composed with optional sync policy",
+          "verdict": "covered-in-code",
+          "verification": "Failing-first extraction found no app wrappers. Now 200 shipped-wrapper assertions plus 16 installer assertions in six fresh processes pass. All previous native/build entrypoints passed. FBKEY-003 establishes the separate synthetic Security device boundary; live app interception and early SDK ordering remain unverified."
+        },
+        {
+          "evidence": [
+            {
+              "detail": "Runtime checks one expected keychain group and application-identifier, then runs a same-group probe.",
+              "line": 155,
+              "path": "tweak/Container/RBXContainerManager.xm"
+            },
+            {
+              "detail": "Optional bounded root-owned challenge runs within actual clone after readiness; specific canary checks only. Default absent request has no side effects.",
+              "line": 1,
+              "path": "shared/RBXCloneAcceptanceProbe.h"
+            },
+            {
+              "detail": "Host exercises the shipped core with synthetic Security and real temporary filesystem. Host foreign access correctly fails isolation; actual iOS sandbox proof still required.",
+              "line": 1,
+              "path": "tools/test_clone_acceptance.m"
+            },
+            {
+              "anchor": "test_clone_acceptance.sh",
+              "detail": "Build runs actual shared probe fixtures; synthetic Security and unsandboxed host are not device acceptance.",
+              "line": 130,
+              "path": "scripts/build-mac.sh"
+            }
+          ],
+          "id": "OS-008",
+          "mechanism": "Clone signature grants exactly its generated access group; platform keychain authorization is boundary.",
+          "path": "docs/leak-surface/os-network-inventory.json",
+          "surface": "Keychain SecItem* with explicit original or foreign access group",
+          "verdict": "unverified",
+          "verification": "Host architectural checks only (tools/test_clone_architecture.py); two managed clones with different sentinel values and denied cross-read are still required on iPhone. Negative original/foreign-group read/add/update/delete tests remain required. Prepared clone-only acceptance sequence A seed -> B verify -> A cleanup publishes keychain-seed-own-group, keychain-foreign-group-denied. Collector must validate live/stage PID, bundle, generation/epoch and source sentinel presence around B; root/companion output alone cannot close these rows. Actual device execution NOT RUN. Aggregate Keychain acceptance also requires keychain-before-cleanup PASS on returning to A, proving its exact seeded nonce item still exists before deletion; this is a sampled continuity check, not continuous observation."
+        },
+        {
+          "evidence": [
+            {
+              "detail": "Selftest always supplies kSecAttrAccessGroup explicitly.",
+              "line": 176,
+              "path": "tweak/Container/RBXContainerManager.xm"
+            },
+            {
+              "detail": "Optional bounded root-owned challenge runs within actual clone after readiness; specific canary checks only. Default absent request has no side effects.",
+              "line": 1,
+              "path": "shared/RBXCloneAcceptanceProbe.h"
+            },
+            {
+              "detail": "Host exercises the shipped core with synthetic Security and real temporary filesystem. Host foreign access correctly fails isolation; actual iOS sandbox proof still required.",
+              "line": 1,
+              "path": "tools/test_clone_acceptance.m"
+            }
+          ],
+          "id": "OS-009",
+          "mechanism": "Keychain Add without group chooses default group; CopyMatching/Update/Delete search all accessible groups. Sole generated entitlement narrows ordinary groups, but external-token and jailbreak semantics need proof.",
+          "path": "docs/leak-surface/os-network-inventory.json",
+          "surface": "Keychain SecItem* without kSecAttrAccessGroup",
+          "verdict": "unverified",
+          "verification": "Host architectural checks only (tools/test_clone_architecture.py); two managed clones with different sentinel values and denied cross-read are still required on iPhone. Add/query/update/delete without group in A/B; verify no default team sharing. Prepared clone-only acceptance sequence A seed -> B verify -> A cleanup publishes keychain-seed-default, keychain-default-absent, keychain-cleanup. Collector must validate live/stage PID, bundle, generation/epoch and source sentinel presence around B; root/companion output alone cannot close these rows. Actual device execution NOT RUN. Aggregate Keychain acceptance also requires keychain-before-cleanup PASS on returning to A, proving its exact seeded nonce item still exists before deletion; this is a sampled continuity check, not continuous observation."
+        },
+        {
+          "evidence": [
+            {
+              "detail": "Legacy RBXInstallKeychainHooks exists but is absent from constructor and intentionally excluded by architecture test.",
+              "line": 613,
+              "path": "tweak/Container/RBXKeychainHooks.xm"
+            }
+          ],
+          "id": "OS-010",
+          "mechanism": "Sole entitlement applies to item access; no live SecItem query rewriter.",
+          "path": "docs/leak-surface/os-network-inventory.json",
+          "surface": "Keychain generic/internet password, keys, certificates and identities",
+          "verdict": "unverified",
+          "verification": "Host architectural checks only (tools/test_clone_architecture.py); two managed clones with different sentinel values and denied cross-read are still required on iPhone. Test all referenced classes and persistent-ref queries, not generic password alone."
+        }
+      ],
+      "socialBoxRows": [
+        "FBKEY-001",
+        "FBKEY-002",
+        "OS-008",
+        "OS-009",
+        "OS-010"
+      ],
+      "unresolvedSocialBoxRowIds": []
+    },
+    {
+      "category": "securityd Add/Update/Delete transformations",
+      "decisionRationale": "Broad deletion and fallback query paths must be combined with entitlement/caller context before assessing isolation. SocialBox preserves Security behavior with exact per-app aliases and bounded cleanup receipts.",
+      "socialboxStaticBehavior": "Private add/delete/update are all registered. Update calls a common transformation separately for query and changes before forwarding. Delete transforms only when identity/reference selector keys are present; a broad query without those keys goes to original in the inspected branch. Add contains delete-before-add handling for a branch. These are concrete branch targets for testing, not confirmed leakage.",
+      "evidence": [
+        {
+          "address": "0x0000714c",
+          "anchors": [
+            {
+              "line": 2034
+            },
+            {
+              "line": 2035
+            },
+            {
+              "line": 2036
+            },
+            {
+              "line": 3617
+            },
+            {
+              "line": 3618
+            },
+            {
+              "line": 3619
+            }
+          ],
+          "component": "SocialBoxSecurityd.dylib",
+          "function": "FUN_0000714c",
+          "functionEndLine": 3801,
+          "functionStartLine": 1939,
+          "indexLine": 14,
+          "indexPath": "decompiled/SocialBoxSecurityd.dylib.functions.tsv",
+          "indexStatus": "decompiled",
+          "pseudocodePath": "decompiled/SocialBoxSecurityd.dylib.c"
+        },
+        {
+          "address": "0x00012a20",
+          "anchors": [
+            {
+              "line": 9772
+            },
+            {
+              "line": 9788
+            },
+            {
+              "line": 9868
+            },
+            {
+              "line": 9869
+            },
+            {
+              "line": 9903
+            }
+          ],
+          "component": "SocialBoxSecurityd.dylib",
+          "function": "FUN_00012a20",
+          "functionEndLine": 10010,
+          "functionStartLine": 9355,
+          "indexLine": 24,
+          "indexPath": "decompiled/SocialBoxSecurityd.dylib.functions.tsv",
+          "indexStatus": "decompiled",
+          "pseudocodePath": "decompiled/SocialBoxSecurityd.dylib.c"
+        },
+        {
+          "address": "0x00013c40",
+          "anchors": [
+            {
+              "line": 10118
+            },
+            {
+              "line": 10147
+            },
+            {
+              "line": 10153
+            },
+            {
+              "line": 10160
+            }
+          ],
+          "component": "SocialBoxSecurityd.dylib",
+          "function": "FUN_00013c40",
+          "functionEndLine": 10171,
+          "functionStartLine": 10011,
+          "indexLine": 25,
+          "indexPath": "decompiled/SocialBoxSecurityd.dylib.functions.tsv",
+          "indexStatus": "decompiled",
+          "pseudocodePath": "decompiled/SocialBoxSecurityd.dylib.c"
+        },
+        {
+          "address": "0x00014104",
+          "anchors": [
+            {
+              "line": 10283
+            },
+            {
+              "line": 10284
+            },
+            {
+              "line": 10294
+            }
+          ],
+          "component": "SocialBoxSecurityd.dylib",
+          "function": "FUN_00014104",
+          "functionEndLine": 10311,
+          "functionStartLine": 10172,
+          "indexLine": 26,
+          "indexPath": "decompiled/SocialBoxSecurityd.dylib.functions.tsv",
+          "indexStatus": "decompiled",
+          "pseudocodePath": "decompiled/SocialBoxSecurityd.dylib.c"
+        }
+      ],
+      "evidenceLevel": "static decompilation and registration only; no runtime execution",
+      "id": "DS-13",
+      "proposedDecision": "unknown",
+      "requiredVerification": "Broad delete/update without service/account, persistent refs, four stored classes, access controls, duplicate items, one sibling retained unchanged, crash/restart mid-operation.",
+      "socialBoxComparison": [
+        {
+          "evidence": [
+            {
+              "anchor": "// BEGIN APP KEYCHAIN WRAPPERS",
+              "detail": "Actual add/copy/update/delete and random/data/pair creation wrappers; existing runtime activation gate retained.",
+              "line": 667,
+              "path": "tweak/Container/RBXKeychainHooks.xm"
+            },
+            {
+              "anchor": "int main(int argc",
+              "detail": "Actual wrappers and installer with synthetic provider boundaries.",
+              "line": 63,
+              "path": "tools/test_app_keychain_hooks.m"
+            },
+            {
+              "anchor": "end = \"// BEGIN APP KEYCHAIN WRAPPERS\"",
+              "detail": "Unchanged Reddit sync wrapper fixture remains isolated from new installer.",
+              "line": 16,
+              "path": "tools/test_keychain_sync.sh"
+            },
+            {
+              "anchor": "\"interpretation\":",
+              "detail": "Current binary imports justify coverage of three key-creation families; invocation and key purpose unproven.",
+              "line": 5,
+              "path": "docs/facebook-keychain-api-evidence.json"
+            }
+          ],
+          "id": "FBKEY-002",
+          "mechanism": "A seven-entry-point installer maps registered source groups once. Security result objects, refs, attributes and errors remain intact; foreign groups fail without retry. Requires validated bootstrap and full group metadata. Reddit retains its four sync wrappers and unhooked default.",
+          "path": "docs/leak-surface/facebook-keychain-inventory.json",
+          "surface": "SecItem and SecKey entry points composed with optional sync policy",
+          "verdict": "covered-in-code",
+          "verification": "Failing-first extraction found no app wrappers. Now 200 shipped-wrapper assertions plus 16 installer assertions in six fresh processes pass. All previous native/build entrypoints passed. FBKEY-003 establishes the separate synthetic Security device boundary; live app interception and early SDK ordering remain unverified."
+        },
+        {
+          "evidence": [
+            {
+              "anchor": "static BOOL RBXEffectiveEntitlementsMatch",
+              "detail": "Actual production helper derives groups from the registry and verifies every group/class under irreversibly dropped mobile credentials.",
+              "line": 44,
+              "path": "daemon/RBXKeychainCleaner.m"
+            },
+            {
+              "anchor": "if (!RBXAppKeychainCleanupReceiptComplete",
+              "detail": "Parent consumes complete bound receipt before reporting Keychain erasure success; exact group set also used to sign helper.",
+              "line": 3154,
+              "path": "daemon/RBXCloneManager.m"
+            },
+            {
+              "anchor": "static inline BOOL RBXAppKeychainCleanupReceiptComplete",
+              "detail": "Nonce/app/bundle/policy and complete ordered per-group authorization/class proof required.",
+              "line": 61,
+              "path": "shared/RBXAppKeychainPolicy.h"
+            },
+            {
+              "anchor": "static void VerifyFacebookReceipt",
+              "detail": "Actual helper with per-group synthetic Security store and production parent receipt validator; no real host Keychain accessed.",
+              "line": 284,
+              "path": "tools/test_keychain_cleaner.m"
+            }
+          ],
+          "id": "FBKEY-005",
+          "mechanism": "The helper independently derives the exact registered clone and group set, verifies effective app/team/groups, irreversibly drops to mobile, proves each group with its own fresh canary, erases four classes and sweeps every group again. The daemon signs the full set and accepts only a complete canonical per-group receipt. Reddit keeps its one-group format-1 receipt.",
+          "path": "docs/leak-surface/facebook-keychain-inventory.json",
+          "surface": "Complete multi-group cleanup and nonce-bound aggregate authorization receipt",
+          "verdict": "covered-in-code",
+          "verification": "Failing-first actual-helper fixture rejected Facebook; the extended implementation passes all legacy groups plus three-group cleanup, each-group locked failure and retry, late cross-group writes, entitlement mismatch and forged aggregate receipts. All 95 host/native entrypoints and static checks pass. The production helper ran successfully on iPhone10,4 / iOS16.7.16 against synthetic B: all 12 group/class combinations cleared, independent queries found B already absent, and A remained readable. 237 accompanying device assertions pass; all 24 synthetic items and temporary executables removed."
+        },
+        {
+          "evidence": [
+            {
+              "detail": "Legacy RBXInstallKeychainHooks exists but is absent from constructor and intentionally excluded by architecture test.",
+              "line": 613,
+              "path": "tweak/Container/RBXKeychainHooks.xm"
+            }
+          ],
+          "id": "OS-010",
+          "mechanism": "Sole entitlement applies to item access; no live SecItem query rewriter.",
+          "path": "docs/leak-surface/os-network-inventory.json",
+          "surface": "Keychain generic/internet password, keys, certificates and identities",
+          "verdict": "unverified",
+          "verification": "Host architectural checks only (tools/test_clone_architecture.py); two managed clones with different sentinel values and denied cross-read are still required on iPhone. Test all referenced classes and persistent-ref queries, not generic password alone."
+        }
+      ],
+      "socialBoxRows": [
+        "FBKEY-002",
+        "FBKEY-005",
+        "OS-010"
+      ],
+      "unresolvedSocialBoxRowIds": []
+    },
+    {
+      "category": "securityd entitlement response rewriting",
+      "decisionRationale": "Never port a general entitlement-response rewrite as an isolation shortcut. Keep SocialBox signed exact groups and deny foreign groups; entitlement rewriting can enlarge blast radius and conflict with OS authorization.",
+      "socialboxStaticBehavior": "SecTaskCopyValueForEntitlement is intercepted. Wrapper explicitly branches for keychain-access-groups, application groups, application-identifier and associated-application-identifier; original entitlement calls and thread-context lookups participate. Exact returned sets are not completely recovered in this review.",
+      "evidence": [
+        {
+          "address": "0x0000714c",
+          "anchors": [
+            {
+              "line": 3620
+            },
+            {
+              "line": 3622
+            }
+          ],
+          "component": "SocialBoxSecurityd.dylib",
+          "function": "FUN_0000714c",
+          "functionEndLine": 3801,
+          "functionStartLine": 1939,
+          "indexLine": 14,
+          "indexPath": "decompiled/SocialBoxSecurityd.dylib.functions.tsv",
+          "indexStatus": "decompiled",
+          "pseudocodePath": "decompiled/SocialBoxSecurityd.dylib.c"
+        },
+        {
+          "address": "0x00014514",
+          "anchors": [
+            {
+              "line": 10387
+            },
+            {
+              "line": 10463
+            },
+            {
+              "line": 10464
+            },
+            {
+              "line": 10465
+            },
+            {
+              "line": 10467
+            },
+            {
+              "line": 10535
+            }
+          ],
+          "component": "SocialBoxSecurityd.dylib",
+          "function": "FUN_00014514",
+          "functionEndLine": 11323,
+          "functionStartLine": 10312,
+          "indexLine": 27,
+          "indexPath": "decompiled/SocialBoxSecurityd.dylib.functions.tsv",
+          "indexStatus": "decompiled",
+          "pseudocodePath": "decompiled/SocialBoxSecurityd.dylib.c"
+        }
+      ],
+      "evidenceLevel": "static decompilation and registration only; no runtime execution",
+      "id": "DS-14",
+      "proposedDecision": "unknown",
+      "requiredVerification": "Actual securityd authorization versus exposed entitlement return values for own/sibling/source/system callers; nested requests; denied operations remain denied; failure fallback.",
+      "socialBoxComparison": [
+        {
+          "evidence": [
+            {
+              "anchor": "static BOOL RBXBootstrapMatchesIdentity",
+              "detail": "App-aware bootstrap comparison; actual complete rewrite signs and inspects the full group set and emits group-bound FB marker/profile metadata.",
+              "line": 1305,
+              "path": "daemon/RBXCloneManager.m"
+            },
+            {
+              "anchor": "NSArray *sections =",
+              "detail": "Typed Facebook namespace plus shared immutable app/group identity validation.",
+              "line": 114,
+              "path": "daemon/RBXProfileIO.m"
+            },
+            {
+              "anchor": "return @\"Profile clone Keychain policy",
+              "detail": "Profile load/write rejects partial or foreign FB group metadata.",
+              "line": 28,
+              "path": "shared/RBXAppProfileIdentity.h"
+            },
+            {
+              "anchor": "static inline BOOL RBXAppKeychainMarkerMatches",
+              "detail": "FB marker binds format 2, app/source ownership and complete policy; legacy Reddit marker shape preserved.",
+              "line": 38,
+              "path": "shared/RBXAppKeychainPolicy.h"
+            }
+          ],
+          "id": "FBKEY-004",
+          "mechanism": "Facebook main signatures carry three exact groups; marker format 2 and bootstrap/profile carry policy version 1 and complete ordered groups. Runtime validates the team/group set and every group canary. Bootstrap comparison selects the profile app namespace rather than requiring Reddit for Facebook.",
+          "path": "docs/leak-surface/facebook-keychain-inventory.json",
+          "surface": "Signing, bootstrap, marker and runtime readiness bound to complete per-app group policy",
+          "verdict": "covered-in-code",
+          "verification": "Failing tests first exposed single-group signing, missing-metadata runtime acceptance, failed cleanup reported as success, and Facebook rejection due to mandatory Reddit bootstrap data. Actual full rewrite/validator fixtures now pass 189 inactive-registry and 213 active-registry checks; runtime group/entitlement fixture 57; policy/marker 47; bootstrap/runtime 176. Pre-existing full native/build test list also passes. Full scripts/build-mac.sh rootless 0.1.22 build passed with 95 native/host entrypoints. Package SHA-256 b06f55e416792c2c369b02e372065503346728bfe889cc191274bac884ef2544; seven components and twelve slices inspected."
+        },
+        {
+          "evidence": [
+            {
+              "detail": "Runtime checks one expected keychain group and application-identifier, then runs a same-group probe.",
+              "line": 155,
+              "path": "tweak/Container/RBXContainerManager.xm"
+            },
+            {
+              "detail": "Optional bounded root-owned challenge runs within actual clone after readiness; specific canary checks only. Default absent request has no side effects.",
+              "line": 1,
+              "path": "shared/RBXCloneAcceptanceProbe.h"
+            },
+            {
+              "detail": "Host exercises the shipped core with synthetic Security and real temporary filesystem. Host foreign access correctly fails isolation; actual iOS sandbox proof still required.",
+              "line": 1,
+              "path": "tools/test_clone_acceptance.m"
+            },
+            {
+              "anchor": "test_clone_acceptance.sh",
+              "detail": "Build runs actual shared probe fixtures; synthetic Security and unsandboxed host are not device acceptance.",
+              "line": 130,
+              "path": "scripts/build-mac.sh"
+            }
+          ],
+          "id": "OS-008",
+          "mechanism": "Clone signature grants exactly its generated access group; platform keychain authorization is boundary.",
+          "path": "docs/leak-surface/os-network-inventory.json",
+          "surface": "Keychain SecItem* with explicit original or foreign access group",
+          "verdict": "unverified",
+          "verification": "Host architectural checks only (tools/test_clone_architecture.py); two managed clones with different sentinel values and denied cross-read are still required on iPhone. Negative original/foreign-group read/add/update/delete tests remain required. Prepared clone-only acceptance sequence A seed -> B verify -> A cleanup publishes keychain-seed-own-group, keychain-foreign-group-denied. Collector must validate live/stage PID, bundle, generation/epoch and source sentinel presence around B; root/companion output alone cannot close these rows. Actual device execution NOT RUN. Aggregate Keychain acceptance also requires keychain-before-cleanup PASS on returning to A, proving its exact seeded nonce item still exists before deletion; this is a sampled continuity check, not continuous observation."
+        },
+        {
+          "evidence": [
+            {
+              "detail": "Selftest always supplies kSecAttrAccessGroup explicitly.",
+              "line": 176,
+              "path": "tweak/Container/RBXContainerManager.xm"
+            },
+            {
+              "detail": "Optional bounded root-owned challenge runs within actual clone after readiness; specific canary checks only. Default absent request has no side effects.",
+              "line": 1,
+              "path": "shared/RBXCloneAcceptanceProbe.h"
+            },
+            {
+              "detail": "Host exercises the shipped core with synthetic Security and real temporary filesystem. Host foreign access correctly fails isolation; actual iOS sandbox proof still required.",
+              "line": 1,
+              "path": "tools/test_clone_acceptance.m"
+            }
+          ],
+          "id": "OS-009",
+          "mechanism": "Keychain Add without group chooses default group; CopyMatching/Update/Delete search all accessible groups. Sole generated entitlement narrows ordinary groups, but external-token and jailbreak semantics need proof.",
+          "path": "docs/leak-surface/os-network-inventory.json",
+          "surface": "Keychain SecItem* without kSecAttrAccessGroup",
+          "verdict": "unverified",
+          "verification": "Host architectural checks only (tools/test_clone_architecture.py); two managed clones with different sentinel values and denied cross-read are still required on iPhone. Add/query/update/delete without group in A/B; verify no default team sharing. Prepared clone-only acceptance sequence A seed -> B verify -> A cleanup publishes keychain-seed-default, keychain-default-absent, keychain-cleanup. Collector must validate live/stage PID, bundle, generation/epoch and source sentinel presence around B; root/companion output alone cannot close these rows. Actual device execution NOT RUN. Aggregate Keychain acceptance also requires keychain-before-cleanup PASS on returning to A, proving its exact seeded nonce item still exists before deletion; this is a sampled continuity check, not continuous observation."
+        },
+        {
+          "evidence": [
+            {
+              "detail": "Runtime profile validation requires appGroups=nil.",
+              "line": 163,
+              "path": "tweak/Container/RBXContainerManager.xm"
+            }
+          ],
+          "id": "OS-026",
+          "mechanism": "Clone builder removes all app-group entitlements; current ctor never installs legacy method that recreated group subdirectories.",
+          "path": "docs/leak-surface/os-network-inventory.json",
+          "surface": "App Group entitlement and containerURLForSecurityApplicationGroupIdentifier",
+          "verdict": "unverified",
+          "verification": "Host architectural checks only (tools/test_clone_architecture.py); two managed clones with different sentinel values and denied cross-read are still required on iPhone. Compare AppGroup filesystem before/after first run; verify original group not re-created."
+        }
+      ],
+      "socialBoxRows": [
+        "FBKEY-004",
+        "OS-008",
+        "OS-009",
+        "OS-026"
+      ],
+      "unresolvedSocialBoxRowIds": []
+    },
+    {
+      "category": "cfprefsd preferences path virtualization",
+      "decisionRationale": "This is a different shared service storage architecture. Keep SocialBox per-clone domains plus recorded filesystem limitations; do not add shared preference roots until permission and path authority are proven.",
+      "socialboxStaticBehavior": "Private __CFPrefsGetPathForTriplet is installed. Its wrapper first obtains an original path and then branches on Library/Preferences and application-container paths; it constructs a Shared/AppGroup preferences path and alternative rewritten path and copies it to the output. Namespace selection depends on other helpers.",
+      "evidence": [
+        {
+          "address": "0x00029bd0",
+          "anchors": [
+            {
+              "line": 23068
+            },
+            {
+              "line": 23073
+            }
+          ],
+          "component": "SocialBoxCfPrefsd.dylib",
+          "function": "FUN_00029bd0",
+          "functionEndLine": 23102,
+          "functionStartLine": 23060,
+          "indexLine": 50,
+          "indexPath": "decompiled/SocialBoxCfPrefsd.dylib.functions.tsv",
+          "indexStatus": "decompiled",
+          "pseudocodePath": "decompiled/SocialBoxCfPrefsd.dylib.c"
+        },
+        {
+          "address": "0x00029ca8",
+          "anchors": [
+            {
+              "line": 23551
+            },
+            {
+              "line": 23713
+            },
+            {
+              "line": 23715
+            },
+            {
+              "line": 23722
+            },
+            {
+              "line": 23725
+            },
+            {
+              "line": 23736
+            },
+            {
+              "line": 23748
+            },
+            {
+              "line": 23755
+            }
+          ],
+          "component": "SocialBoxCfPrefsd.dylib",
+          "function": "FUN_00029ca8",
+          "functionEndLine": 23829,
+          "functionStartLine": 23486,
+          "indexLine": 51,
+          "indexPath": "decompiled/SocialBoxCfPrefsd.dylib.functions.tsv",
+          "indexStatus": "decompiled",
+          "pseudocodePath": "decompiled/SocialBoxCfPrefsd.dylib.c"
+        }
+      ],
+      "evidenceLevel": "static decompilation and registration only; no runtime execution",
+      "id": "DS-15",
+      "proposedDecision": "unknown",
+      "requiredVerification": "Domain/user/host/suite matrix, symlinks/path traversal, atomic writes, cross-process caches, direct file reads, original app coexistence and service restart.",
+      "socialBoxComparison": [
+        {
+          "evidence": [
+            {
+              "detail": "bundleIdentifierForContainer derives a clone identifier; installer later requires an allocated data container.",
+              "line": 1591,
+              "path": "daemon/RBXCloneManager.m"
+            }
+          ],
+          "id": "OS-001",
+          "mechanism": "Distinct clone bundle identifier and OS data container; no NSUserDefaults remapping hook is installed.",
+          "path": "docs/leak-surface/os-network-inventory.json",
+          "surface": "NSUserDefaults.standardUserDefaults and app persistent domain",
+          "verdict": "unverified",
+          "verification": "Host architectural checks only (tools/test_clone_architecture.py); two managed clones with different sentinel values and denied cross-read are still required on iPhone."
+        },
+        {
+          "evidence": [
+            {
+              "detail": "Installer performs %init only; no defaults hook group or C preference hook registration.",
+              "line": 981,
+              "path": "tweak/Network/RBXRedditAPIHooks.xm"
+            }
+          ],
+          "id": "OS-002",
+          "mechanism": "Named suites rely on OS sandbox and removed App Group entitlements; no live suite remapping.",
+          "path": "docs/leak-surface/os-network-inventory.json",
+          "surface": "NSUserDefaults initWithSuiteName/addSuiteNamed/removeSuiteNamed",
+          "verdict": "unverified",
+          "verification": "Host architectural checks only (tools/test_clone_architecture.py); two managed clones with different sentinel values and denied cross-read are still required on iPhone. Exercise identical suite names in A/B and original Reddit."
+        },
+        {
+          "evidence": [
+            {
+              "detail": "Defined legacy isolation helpers are never installed.",
+              "line": 981,
+              "path": "tweak/Network/RBXRedditAPIHooks.xm"
+            }
+          ],
+          "id": "OS-003",
+          "mechanism": "Per-domain requests are not intercepted; clone-local storage is intended boundary.",
+          "path": "docs/leak-surface/os-network-inventory.json",
+          "surface": "NSUserDefaults persistentDomainForName/setPersistentDomain/removePersistentDomain",
+          "verdict": "unverified",
+          "verification": "Host architectural checks only (tools/test_clone_architecture.py); two managed clones with different sentinel values and denied cross-read are still required on iPhone. Include third-party SDK domains and arbitrary domain names."
+        },
+        {
+          "evidence": [
+            {
+              "detail": "C replacement exists, but installer at 1045 does not hook it.",
+              "line": 870,
+              "path": "tweak/Network/RBXRedditAPIHooks.xm"
+            }
+          ],
+          "id": "OS-006",
+          "mechanism": "Defined replacement functions are dead code; OS preferences domain/container applies.",
+          "path": "docs/leak-surface/os-network-inventory.json",
+          "surface": "CFPreferencesCopyAppValue/SetAppValue",
+          "verdict": "unverified",
+          "verification": "Host architectural checks only (tools/test_clone_architecture.py); two managed clones with different sentinel values and denied cross-read are still required on iPhone. Probe same app-domain identifier from both clones."
+        },
+        {
+          "evidence": [
+            {
+              "detail": "Defined replacement ignores user/host, but is not registered and cannot count as coverage.",
+              "line": 881,
+              "path": "tweak/Network/RBXRedditAPIHooks.xm"
+            }
+          ],
+          "id": "OS-007",
+          "mechanism": "No installed CFPreferences hooks; any-user/any-host/system domains need separate evidence.",
+          "path": "docs/leak-surface/os-network-inventory.json",
+          "surface": "CFPreferencesCopyValue/SetValue user and host domains",
+          "verdict": "unverified",
+          "verification": "Mechanical constructor/selector scan found no dedicated hook. Correlate current binary symbols/selectors, then run a clone-context probe before assigning non-use or isolation."
+        },
+        {
+          "evidence": [
+            {
+              "anchor": "static inline BOOL RBXFacebookMapStorageDomain",
+              "detail": "Exact per-clone source/private-domain policy.",
+              "line": 25,
+              "path": "shared/RBXFacebookStoragePolicy.h"
+            },
+            {
+              "anchor": "Compile actual Logos storage hooks",
+              "detail": "Actual wrappers, native Foundation/CF and installer negative cases.",
+              "line": 2,
+              "path": "tools/test_facebook_storage_hooks.py"
+            },
+            {
+              "anchor": "int main(void)",
+              "detail": "Deterministic policy and foreign-owner regression.",
+              "line": 5,
+              "path": "tools/test_facebook_storage_policy.m"
+            },
+            {
+              "anchor": "BOOL RBXInstallFacebookStorageHooks",
+              "detail": "Checked app/profile/version-bound installation; Facebook readiness is not granted.",
+              "line": 172,
+              "path": "tweak/Container/RBXFacebookStorageHooks.xm"
+            }
+          ],
+          "id": "FBSTORE-001",
+          "mechanism": "Exact four source-group aliases and source app map to distinct clone domains; foreign/unknown domains rejected; keys and opaque values unchanged; no writable platform suite objects.",
+          "path": "docs/leak-surface/facebook-storage-inventory.json",
+          "surface": "NSUserDefaults suites/domains and CFPreferences app/group access",
+          "verdict": "covered-in-code",
+          "verification": "50 policy checks; 238 host hook/installer checks; 22 seed/97 real-Substrate iOS verification/13 cleanup checks. Device helper is not an actual sandboxed FB clone. Actual offline A/B Facebook clones now pass own/foreign standard and four-suite CFPreferences canary probes, including relaunch. This does not prove unreadability of the backing files; DEVISO-001 is an open filesystem release blocker."
+        },
+        {
+          "evidence": [
+            {
+              "anchor": "**FAIL: cross-container filesystem isolation",
+              "detail": "Scope, actual defects, limited results and release blocker.",
+              "line": 3,
+              "path": "docs/facebook-clone-device-acceptance.md"
+            },
+            {
+              "detail": "Sanitized real clone output plus raw evidence hashes.",
+              "line": 1,
+              "path": "docs/release-evidence/facebook-clone-acceptance-0.1.32.json"
+            },
+            {
+              "detail": "Observer using ordinary Keychain, defaults, CFPreferences, NSFileManager and sockets in the clone.",
+              "line": 1,
+              "path": "tools/fixtures/facebook_offline_acceptance/FBOfflineProbe.m"
+            },
+            {
+              "detail": "Offline-only disposable clone provisioning/deletion via real operation and lifecycle methods.",
+              "line": 1,
+              "path": "tools/fixtures/facebook_offline_acceptance/FBOfflineAcceptance.m"
+            }
+          ],
+          "id": "DEVISO-001",
+          "mechanism": "OS home separation and restricted app entitlements were assumed to supply the filesystem boundary. Runtime public APIs disproved enforcement: both clones read the sibling canary. Production Facebook remains inactive and defaults-wire false.",
+          "path": "docs/leak-surface/device-acceptance-inventory.json",
+          "surface": "Sibling data-home file read/stat in two real Facebook clones on palera1n",
+          "verdict": "gap",
+          "verification": "132 primary offline clone checks: 126 pass, six repeated foreign-file read/stat failures across B seed, A verify and B verify. System sandbox policy query denies the sibling path while actual read succeeds. Three source Keychain aliases and four defaults suites passed same-key canary isolation. Facebook later terminates in its framework. No full account, transport, cloud restore or MDM acceptance. The follow-up direct-syscall experiment reproduced foreign marker reads, then denied foreign content in both directions with a root-owned single-active permission gate. Foreign home metadata remains visible and closed-home sync fails; the candidate is not production-integrated (SGATE-001). Follow-up SGATE-002 integrates durable lifecycle enforcement: fresh A/B creation/sync, sealed export/deletion and both direct-syscall foreign-content denials passed. Foreign home root metadata remains visible; this verdict stays a gap."
+        }
+      ],
+      "socialBoxRows": [
+        "OS-001",
+        "OS-002",
+        "OS-003",
+        "OS-006",
+        "OS-007",
+        "FBSTORE-001",
+        "DEVISO-001"
+      ],
+      "unresolvedSocialBoxRowIds": []
+    },
+    {
+      "category": "cfprefsd XPC request context",
+      "decisionRationale": "Do not trust a request-supplied bundle identifier solely because a connection exists. SocialBox has exact app/profile domains but direct-file boundary remains unresolved.",
+      "socialboxStaticBehavior": "Hooks CFPrefsDaemon handleSourceMessage:replyHandler:. Wrapper verifies dictionary and XPC connection shapes, reads CFPreferencesHostBundleIdentifier and a connection-derived caller value, then records thread context. Whether the supplied bundle is bound to authoritative audit identity needs further tracing.",
+      "evidence": [
+        {
+          "address": "0x00029bd0",
+          "anchors": [
+            {
+              "line": 23077
+            },
+            {
+              "line": 23082
+            }
+          ],
+          "component": "SocialBoxCfPrefsd.dylib",
+          "function": "FUN_00029bd0",
+          "functionEndLine": 23102,
+          "functionStartLine": 23060,
+          "indexLine": 50,
+          "indexPath": "decompiled/SocialBoxCfPrefsd.dylib.functions.tsv",
+          "indexStatus": "decompiled",
+          "pseudocodePath": "decompiled/SocialBoxCfPrefsd.dylib.c"
+        },
+        {
+          "address": "0x0002a6ec",
+          "anchors": [
+            {
+              "line": 23338
+            },
+            {
+              "line": 23340
+            },
+            {
+              "line": 23343
+            },
+            {
+              "line": 23344
+            }
+          ],
+          "component": "SocialBoxCfPrefsd.dylib",
+          "function": "FUN_0002a6ec",
+          "functionEndLine": 23485,
+          "functionStartLine": 23282,
+          "indexLine": 52,
+          "indexPath": "decompiled/SocialBoxCfPrefsd.dylib.functions.tsv",
+          "indexStatus": "decompiled",
+          "pseudocodePath": "decompiled/SocialBoxCfPrefsd.dylib.c"
+        }
+      ],
+      "evidenceLevel": "static decompilation and registration only; no runtime execution",
+      "id": "DS-16",
+      "proposedDecision": "unknown",
+      "requiredVerification": "Forged host bundle, PID reuse, concurrent nested requests, missing connection, exceptions and thread-context cleanup; original source calls must not inherit another context.",
+      "socialBoxComparison": [
+        {
+          "evidence": [
+            {
+              "detail": "C replacement exists, but installer at 1045 does not hook it.",
+              "line": 870,
+              "path": "tweak/Network/RBXRedditAPIHooks.xm"
+            }
+          ],
+          "id": "OS-006",
+          "mechanism": "Defined replacement functions are dead code; OS preferences domain/container applies.",
+          "path": "docs/leak-surface/os-network-inventory.json",
+          "surface": "CFPreferencesCopyAppValue/SetAppValue",
+          "verdict": "unverified",
+          "verification": "Host architectural checks only (tools/test_clone_architecture.py); two managed clones with different sentinel values and denied cross-read are still required on iPhone. Probe same app-domain identifier from both clones."
+        },
+        {
+          "evidence": [
+            {
+              "detail": "Defined replacement ignores user/host, but is not registered and cannot count as coverage.",
+              "line": 881,
+              "path": "tweak/Network/RBXRedditAPIHooks.xm"
+            }
+          ],
+          "id": "OS-007",
+          "mechanism": "No installed CFPreferences hooks; any-user/any-host/system domains need separate evidence.",
+          "path": "docs/leak-surface/os-network-inventory.json",
+          "surface": "CFPreferencesCopyValue/SetValue user and host domains",
+          "verdict": "unverified",
+          "verification": "Mechanical constructor/selector scan found no dedicated hook. Correlate current binary symbols/selectors, then run a clone-context probe before assigning non-use or isolation."
+        },
+        {
+          "evidence": [
+            {
+              "anchor": "static inline BOOL RBXFacebookMapStorageDomain",
+              "detail": "Exact per-clone source/private-domain policy.",
+              "line": 25,
+              "path": "shared/RBXFacebookStoragePolicy.h"
+            },
+            {
+              "anchor": "Compile actual Logos storage hooks",
+              "detail": "Actual wrappers, native Foundation/CF and installer negative cases.",
+              "line": 2,
+              "path": "tools/test_facebook_storage_hooks.py"
+            },
+            {
+              "anchor": "int main(void)",
+              "detail": "Deterministic policy and foreign-owner regression.",
+              "line": 5,
+              "path": "tools/test_facebook_storage_policy.m"
+            },
+            {
+              "anchor": "BOOL RBXInstallFacebookStorageHooks",
+              "detail": "Checked app/profile/version-bound installation; Facebook readiness is not granted.",
+              "line": 172,
+              "path": "tweak/Container/RBXFacebookStorageHooks.xm"
+            }
+          ],
+          "id": "FBSTORE-001",
+          "mechanism": "Exact four source-group aliases and source app map to distinct clone domains; foreign/unknown domains rejected; keys and opaque values unchanged; no writable platform suite objects.",
+          "path": "docs/leak-surface/facebook-storage-inventory.json",
+          "surface": "NSUserDefaults suites/domains and CFPreferences app/group access",
+          "verdict": "covered-in-code",
+          "verification": "50 policy checks; 238 host hook/installer checks; 22 seed/97 real-Substrate iOS verification/13 cleanup checks. Device helper is not an actual sandboxed FB clone. Actual offline A/B Facebook clones now pass own/foreign standard and four-suite CFPreferences canary probes, including relaunch. This does not prove unreadability of the backing files; DEVISO-001 is an open filesystem release blocker."
+        }
+      ],
+      "socialBoxRows": [
+        "OS-006",
+        "OS-007",
+        "FBSTORE-001"
+      ],
+      "unresolvedSocialBoxRowIds": []
+    },
+    {
+      "category": "cfprefsd domain policy and active selection",
+      "decisionRationale": "Retain SocialBox compiled exact four Facebook source aliases; Reddit remains unchanged. Dynamic active-selection service state must not affect unrelated platform preference domains.",
+      "socialboxStaticBehavior": "Private withSourceForDomain:inContainer:... is hooked. Wrapper has explicit checks for Instagram and Apple/group/systemgroup prefixes, reads activeContainer and DEFAULT, and forwards changed arguments. Exact policy and namespace derivation require further recovery.",
+      "evidence": [
+        {
+          "address": "0x00029bd0",
+          "anchors": [
+            {
+              "line": 23088
+            },
+            {
+              "line": 23093
+            }
+          ],
+          "component": "SocialBoxCfPrefsd.dylib",
+          "function": "FUN_00029bd0",
+          "functionEndLine": 23102,
+          "functionStartLine": 23060,
+          "indexLine": 50,
+          "indexPath": "decompiled/SocialBoxCfPrefsd.dylib.functions.tsv",
+          "indexStatus": "decompiled",
+          "pseudocodePath": "decompiled/SocialBoxCfPrefsd.dylib.c"
+        },
+        {
+          "address": "0x0002ad08",
+          "anchors": [
+            {
+              "line": 25734
+            },
+            {
+              "line": 25811
+            },
+            {
+              "line": 25814
+            },
+            {
+              "line": 25817
+            },
+            {
+              "line": 25820
+            },
+            {
+              "line": 25822
+            },
+            {
+              "line": 25858
+            },
+            {
+              "line": 25864
+            },
+            {
+              "line": 25976
+            }
+          ],
+          "component": "SocialBoxCfPrefsd.dylib",
+          "function": "FUN_0002ad08",
+          "functionEndLine": 26069,
+          "functionStartLine": 25314,
+          "indexLine": 53,
+          "indexPath": "decompiled/SocialBoxCfPrefsd.dylib.functions.tsv",
+          "indexStatus": "decompiled",
+          "pseudocodePath": "decompiled/SocialBoxCfPrefsd.dylib.c"
+        }
+      ],
+      "evidenceLevel": "static decompilation and registration only; no runtime execution",
+      "id": "DS-17",
+      "proposedDecision": "unknown",
+      "requiredVerification": "Compare exact-domain versus prefix edge cases, system/Apple domains, rapid switch, in-flight operations, crash between selection and path update, shared group aliases.",
+      "socialBoxComparison": [
+        {
+          "evidence": [
+            {
+              "detail": "Installer performs %init only; no defaults hook group or C preference hook registration.",
+              "line": 981,
+              "path": "tweak/Network/RBXRedditAPIHooks.xm"
+            }
+          ],
+          "id": "OS-002",
+          "mechanism": "Named suites rely on OS sandbox and removed App Group entitlements; no live suite remapping.",
+          "path": "docs/leak-surface/os-network-inventory.json",
+          "surface": "NSUserDefaults initWithSuiteName/addSuiteNamed/removeSuiteNamed",
+          "verdict": "unverified",
+          "verification": "Host architectural checks only (tools/test_clone_architecture.py); two managed clones with different sentinel values and denied cross-read are still required on iPhone. Exercise identical suite names in A/B and original Reddit."
+        },
+        {
+          "evidence": [
+            {
+              "detail": "Even legacy suite classification explicitly treated Apple/global domains as system, and is not installed.",
+              "line": 764,
+              "path": "tweak/Network/RBXRedditAPIHooks.xm"
+            }
+          ],
+          "id": "OS-005",
+          "mechanism": "Global Apple/user preference domains stay unchanged. The current scanned reference kinds contain no exact NSGlobalDomain/AppleLanguages/AppleLocale key match; CFPreferences imports alone do not identify a device-telemetry key or its caller.",
+          "path": "docs/leak-surface/os-network-inventory.json",
+          "surface": "NSUserDefaults NSGlobalDomain and com.apple.* domains",
+          "verdict": "gap",
+          "verification": "Current IPA CFPreferences imports and storage-key candidates were rejoined. No confirmed global telemetry key was established. This is not proof of non-use; dynamic keys and system defaults remain reachable. No blind domain rewrite was added."
+        },
+        {
+          "evidence": [
+            {
+              "anchor": "static inline BOOL RBXFacebookMapStorageDomain",
+              "detail": "Exact per-clone source/private-domain policy.",
+              "line": 25,
+              "path": "shared/RBXFacebookStoragePolicy.h"
+            },
+            {
+              "anchor": "Compile actual Logos storage hooks",
+              "detail": "Actual wrappers, native Foundation/CF and installer negative cases.",
+              "line": 2,
+              "path": "tools/test_facebook_storage_hooks.py"
+            },
+            {
+              "anchor": "int main(void)",
+              "detail": "Deterministic policy and foreign-owner regression.",
+              "line": 5,
+              "path": "tools/test_facebook_storage_policy.m"
+            },
+            {
+              "anchor": "BOOL RBXInstallFacebookStorageHooks",
+              "detail": "Checked app/profile/version-bound installation; Facebook readiness is not granted.",
+              "line": 172,
+              "path": "tweak/Container/RBXFacebookStorageHooks.xm"
+            }
+          ],
+          "id": "FBSTORE-001",
+          "mechanism": "Exact four source-group aliases and source app map to distinct clone domains; foreign/unknown domains rejected; keys and opaque values unchanged; no writable platform suite objects.",
+          "path": "docs/leak-surface/facebook-storage-inventory.json",
+          "surface": "NSUserDefaults suites/domains and CFPreferences app/group access",
+          "verdict": "covered-in-code",
+          "verification": "50 policy checks; 238 host hook/installer checks; 22 seed/97 real-Substrate iOS verification/13 cleanup checks. Device helper is not an actual sandboxed FB clone. Actual offline A/B Facebook clones now pass own/foreign standard and four-suite CFPreferences canary probes, including relaunch. This does not prove unreadability of the backing files; DEVISO-001 is an open filesystem release blocker."
+        }
+      ],
+      "socialBoxRows": [
+        "OS-002",
+        "OS-005",
+        "FBSTORE-001"
+      ],
+      "unresolvedSocialBoxRowIds": []
+    },
+    {
+      "category": "containermanagerd interception",
+      "decisionRationale": "SocialBox has an actual foreign-content failure history and gated storage remediation. Preserve that evidence; suppressing a corruption flag is not isolation and could hide inconsistencies.",
+      "socialboxStaticBehavior": "Installer hooks two MCMContainerFactory creation variants and MCMContainerCacheEntry setCorrupt:. Both creation wrappers first call original then common helper FUN_0002e4d4. setCorrupt inspects containerPath and can force false for a matching root. This alone does not establish a denied sibling read boundary.",
+      "evidence": [
+        {
+          "address": "0x0002838c",
+          "anchors": [
+            {
+              "line": 22302
+            },
+            {
+              "line": 22306
+            },
+            {
+              "line": 22310
+            },
+            {
+              "line": 22318
+            }
+          ],
+          "component": "SocialBoxContainermanagerd.dylib",
+          "function": "FUN_0002838c",
+          "functionEndLine": 22328,
+          "functionStartLine": 22290,
+          "indexLine": 48,
+          "indexPath": "decompiled/SocialBoxContainermanagerd.dylib.functions.tsv",
+          "indexStatus": "decompiled",
+          "pseudocodePath": "decompiled/SocialBoxContainermanagerd.dylib.c"
+        },
+        {
+          "address": "0x0002e22c",
+          "anchors": [
+            {
+              "line": 24184
+            },
+            {
+              "line": 24185
+            }
+          ],
+          "component": "SocialBoxContainermanagerd.dylib",
+          "function": "FUN_0002e22c",
+          "functionEndLine": 24190,
+          "functionStartLine": 24169,
+          "indexLine": 55,
+          "indexPath": "decompiled/SocialBoxContainermanagerd.dylib.functions.tsv",
+          "indexStatus": "decompiled",
+          "pseudocodePath": "decompiled/SocialBoxContainermanagerd.dylib.c"
+        },
+        {
+          "address": "0x0002e394",
+          "anchors": [
+            {
+              "line": 24241
+            },
+            {
+              "line": 24246
+            },
+            {
+              "line": 24251
+            }
+          ],
+          "component": "SocialBoxContainermanagerd.dylib",
+          "function": "FUN_0002e394",
+          "functionEndLine": 24256,
+          "functionStartLine": 24213,
+          "indexLine": 57,
+          "indexPath": "decompiled/SocialBoxContainermanagerd.dylib.functions.tsv",
+          "indexStatus": "decompiled",
+          "pseudocodePath": "decompiled/SocialBoxContainermanagerd.dylib.c"
+        }
+      ],
+      "evidenceLevel": "static decompilation and registration only; no runtime execution",
+      "id": "DS-18",
+      "proposedDecision": "unknown",
+      "requiredVerification": "Trace helper before port; direct open/stat/openat syscall canaries across A/B, metadata consistency, locked-home lifecycle and power loss.",
+      "socialBoxComparison": [
+        {
+          "evidence": [
+            {
+              "anchor": "**FAIL: cross-container filesystem isolation",
+              "detail": "Scope, actual defects, limited results and release blocker.",
+              "line": 3,
+              "path": "docs/facebook-clone-device-acceptance.md"
+            },
+            {
+              "detail": "Sanitized real clone output plus raw evidence hashes.",
+              "line": 1,
+              "path": "docs/release-evidence/facebook-clone-acceptance-0.1.32.json"
+            },
+            {
+              "detail": "Observer using ordinary Keychain, defaults, CFPreferences, NSFileManager and sockets in the clone.",
+              "line": 1,
+              "path": "tools/fixtures/facebook_offline_acceptance/FBOfflineProbe.m"
+            },
+            {
+              "detail": "Offline-only disposable clone provisioning/deletion via real operation and lifecycle methods.",
+              "line": 1,
+              "path": "tools/fixtures/facebook_offline_acceptance/FBOfflineAcceptance.m"
+            }
+          ],
+          "id": "DEVISO-001",
+          "mechanism": "OS home separation and restricted app entitlements were assumed to supply the filesystem boundary. Runtime public APIs disproved enforcement: both clones read the sibling canary. Production Facebook remains inactive and defaults-wire false.",
+          "path": "docs/leak-surface/device-acceptance-inventory.json",
+          "surface": "Sibling data-home file read/stat in two real Facebook clones on palera1n",
+          "verdict": "gap",
+          "verification": "132 primary offline clone checks: 126 pass, six repeated foreign-file read/stat failures across B seed, A verify and B verify. System sandbox policy query denies the sibling path while actual read succeeds. Three source Keychain aliases and four defaults suites passed same-key canary isolation. Facebook later terminates in its framework. No full account, transport, cloud restore or MDM acceptance. The follow-up direct-syscall experiment reproduced foreign marker reads, then denied foreign content in both directions with a root-owned single-active permission gate. Foreign home metadata remains visible and closed-home sync fails; the candidate is not production-integrated (SGATE-001). Follow-up SGATE-002 integrates durable lifecycle enforcement: fresh A/B creation/sync, sealed export/deletion and both direct-syscall foreign-content denials passed. Foreign home root metadata remains visible; this verdict stays a gap."
+        },
+        {
+          "evidence": [
+            {
+              "detail": "Storage lifecycle implementation or executable regression.",
+              "line": 1,
+              "path": "daemon/RBXStorageAccess.h"
+            },
+            {
+              "detail": "Storage lifecycle implementation or executable regression.",
+              "line": 1,
+              "path": "daemon/RBXStorageAccess.m"
+            },
+            {
+              "detail": "Storage lifecycle implementation or executable regression.",
+              "line": 1,
+              "path": "shared/RBXStorageGate.h"
+            },
+            {
+              "detail": "Storage lifecycle implementation or executable regression.",
+              "line": 1,
+              "path": "shared/RBXStagedExecutable.h"
+            }
+          ],
+          "id": "SGATE-002",
+          "mechanism": "Root-only receipts bind exact registered clone code/home inodes. Process coordinator seals all app families before drain, authorizes one selected clone only under its current reservation, and reseals on failure. Closed-home sync/deletion require a matching receipt and OS identity. Code-only staged copies regain executable modes beneath private transaction roots.",
+          "path": "docs/leak-surface/device-acceptance-inventory.json",
+          "surface": "Durable storage ownership, single-active admission, closed sync/delete and private IPA staging",
+          "verdict": "unverified",
+          "verification": "Host authority: 10,354 assertions; staged executable 23; primitive 50,386 including 40 entries and 120 selections. Physical: two fresh actual Facebook clones created/synced, both final verify runs 38 PASS/1 FAIL (observable sibling root metadata), own direct syscall markers retained, foreign Foundation/POSIX/raw reads denied. Prior pair closed export and scoped installer deletion passed. Final rootless upgrade and a second daemon restart complete startup recovery with both existing Reddit containers preserved, empty operation fence and CLOSED network. No online, account or 40-real-clone acceptance claimed. First production upgrade exposed the old three-second startup budget failing the second registered family drain. The actual dispatcher-budget regression failed first; shared aggregate stop budget now includes all registered families and remains capped by operation deadline. Final physical retest passes startup recovery after upgrade and another daemon restart."
+        }
+      ],
+      "socialBoxRows": [
+        "DEVISO-001",
+        "SGATE-002"
+      ],
+      "unresolvedSocialBoxRowIds": []
+    },
+    {
+      "category": "accountsd client/store coupling",
+      "decisionRationale": "Global account service changes can affect system accounts unrelated to supported apps; retain current architecture until exact account scope and transaction ownership are proven.",
+      "socialboxStaticBehavior": "Registers ACDDatabaseInitializer dataclass/account-type methods and ACDAccountStore initWithClient:databaseConnection:. The inspected initializer gets the client PID, resolves context, forwards original, then binds context via helper and schedules asynchronous work. Actual account partition and credential access are not established.",
+      "evidence": [
+        {
+          "address": "0x000282a4",
+          "anchors": [
+            {
+              "line": 23321
+            },
+            {
+              "line": 23328
+            },
+            {
+              "line": 23337
+            },
+            {
+              "line": 23347
+            }
+          ],
+          "component": "SocialBoxAccountsd.dylib",
+          "function": "FUN_000282a4",
+          "functionEndLine": 23355,
+          "functionStartLine": 23306,
+          "indexLine": 47,
+          "indexPath": "decompiled/SocialBoxAccountsd.dylib.functions.tsv",
+          "indexStatus": "decompiled",
+          "pseudocodePath": "decompiled/SocialBoxAccountsd.dylib.c"
+        },
+        {
+          "address": "0x000302a4",
+          "anchors": [
+            {
+              "line": 28162
+            },
+            {
+              "line": 28164
+            },
+            {
+              "line": 28169
+            },
+            {
+              "line": 28175
+            },
+            {
+              "line": 28180
+            }
+          ],
+          "component": "SocialBoxAccountsd.dylib",
+          "function": "FUN_000302a4",
+          "functionEndLine": 28204,
+          "functionStartLine": 28136,
+          "indexLine": 63,
+          "indexPath": "decompiled/SocialBoxAccountsd.dylib.functions.tsv",
+          "indexStatus": "decompiled",
+          "pseudocodePath": "decompiled/SocialBoxAccountsd.dylib.c"
+        }
+      ],
+      "evidenceLevel": "static decompilation and registration only; no runtime execution",
+      "id": "DS-19",
+      "proposedDecision": "unknown",
+      "requiredVerification": "Synthetic app-local service canaries only, client spoof/PID reuse, concurrent stores, original accounts unaffected, process exit/restart and database recovery.",
+      "socialBoxComparison": [],
+      "socialBoxRows": [],
+      "socialBoxScopeNote": "No accountsd-specific hook or dedicated ledger row established in this bounded comparison; do not map generic account/license rows to system Accounts.framework authority.",
+      "unresolvedSocialBoxRowIds": []
+    },
+    {
+      "category": "lsd identifier production",
+      "decisionRationale": "Candidate for a narrowly scoped supplementary producer audit/reimplementation if actual app traffic bypasses in-process IDFV. Not authorization to copy service hook now; retain SocialBox until true caller binding and UUID lifetime are proven.",
+      "socialboxStaticBehavior": "Hooks _LSDDeviceIdentifierClient getIdentifierOfType:completionHandler: (selector pointer name truncated in pseudocode). The inspected type-zero branch reads XPCConnection processIdentifier, resolves process path/context, uses activeContainer/DEFAULT, hashes an input string with SHA256 and constructs UUID-shaped bytes for callback; other branches can forward original.",
+      "evidence": [
+        {
+          "address": "0x0002766c",
+          "anchors": [
+            {
+              "line": 22620
+            },
+            {
+              "line": 22621
+            },
+            {
+              "line": 22638
+            }
+          ],
+          "component": "SocialBoxLsd.dylib",
+          "function": "FUN_0002766c",
+          "functionEndLine": 22649,
+          "functionStartLine": 22291,
+          "indexLine": 45,
+          "indexPath": "decompiled/SocialBoxLsd.dylib.functions.tsv",
+          "indexStatus": "decompiled",
+          "pseudocodePath": "decompiled/SocialBoxLsd.dylib.c"
+        },
+        {
+          "address": "0x00028248",
+          "anchors": [
+            {
+              "line": 23675
+            },
+            {
+              "line": 23678
+            },
+            {
+              "line": 23698
+            },
+            {
+              "line": 23741
+            },
+            {
+              "line": 23774
+            },
+            {
+              "line": 23879
+            },
+            {
+              "line": 23880
+            },
+            {
+              "line": 23884
+            },
+            {
+              "line": 23893
+            },
+            {
+              "line": 23899
+            }
+          ],
+          "component": "SocialBoxLsd.dylib",
+          "function": "FUN_00028248",
+          "functionEndLine": 23910,
+          "functionStartLine": 23607,
+          "indexLine": 48,
+          "indexPath": "decompiled/SocialBoxLsd.dylib.functions.tsv",
+          "indexStatus": "decompiled",
+          "pseudocodePath": "decompiled/SocialBoxLsd.dylib.c"
+        }
+      ],
+      "evidenceLevel": "static decompilation and registration only; no runtime execution",
+      "id": "DS-20",
+      "proposedDecision": "port",
+      "requiredVerification": "Confirm requested type, exact hash inputs and per-container namespace; original/system apps unaffected; A/B/A restart consistency and process attribution race tests.",
+      "socialBoxComparison": [
+        {
+          "evidence": [
+            {
+              "detail": "Random posture generates UUID, denied posture returns zero; IDFV random UUID in profile ids.",
+              "line": 223,
+              "path": "daemon/RBXProfileGenerator.m"
+            }
+          ],
+          "id": "ID-001",
+          "mechanism": "Per-container UUID fields persisted; all-zero IDFA is deliberately shared for ATT-denied posture, nonzero identities subject to uniqueness.",
+          "path": "docs/leak-surface/lifecycle-inventory.json",
+          "surface": "IDFV and IDFA generation/posture",
+          "verdict": "covered-in-code",
+          "verification": "Generator/catalog and consistency tests; outbound current Reddit observations pending."
+        },
+        {
+          "evidence": [
+            {
+              "anchor": "## Platform and local app identity",
+              "detail": "FB-002 static findings, exact offsets and explicit runtime limits.",
+              "line": 57,
+              "path": "docs/facebook-binary-audit.md"
+            },
+            {
+              "anchor": "\"platform_identifiers\": [",
+              "detail": "Hash-bound selected structural reference records; examples capped with match_count; not observed invocation.",
+              "line": 53253,
+              "path": "docs/leak-surface/facebook-binary-evidence.json"
+            }
+          ],
+          "id": "FB-002",
+          "mechanism": "Main and framework selector references are candidate callers; platform hooks need app-specific installation and return-value evidence.",
+          "path": "docs/leak-surface/facebook-inventory.json",
+          "surface": "IDFV, IDFA and platform identifier callers",
+          "verdict": "unverified",
+          "verification": "Main identifierForVendor at 0xfc6208 and advertisingIdentifier at 0xfc5bd8; no instrumented clone API result captured."
+        }
+      ],
+      "socialBoxRows": [
+        "ID-001",
+        "FB-002"
+      ],
+      "unresolvedSocialBoxRowIds": []
+    },
+    {
+      "category": "mediaserverd identifiers and media User-Agent",
+      "decisionRationale": "Candidate for measuring media-service egress and adding a caller-bound policy if relevant. Shared global service values must not be mistaken for per-container isolation.",
+      "socialboxStaticBehavior": "Service installs MGCopyAnswer, sysctlbyname and CFHTTPMessageSetHeaderFieldValue. Inspected MG branch supplies ProductVersion/BuildVersion/ProductType/DeviceClass from globals. Header wrapper specifically recognizes User-Agent and AppleCoreMedia and reconstructs matching portions. Per-request client/container binding was not established.",
+      "evidence": [
+        {
+          "address": "0x00027f54",
+          "anchors": [
+            {
+              "line": 23050
+            },
+            {
+              "line": 23052
+            },
+            {
+              "line": 23054
+            },
+            {
+              "line": 23056
+            },
+            {
+              "line": 23058
+            },
+            {
+              "line": 23060
+            }
+          ],
+          "component": "SocialBoxMediaServerd.dylib",
+          "function": "FUN_00027f54",
+          "functionEndLine": 23072,
+          "functionStartLine": 22866,
+          "indexLine": 48,
+          "indexPath": "decompiled/SocialBoxMediaServerd.dylib.functions.tsv",
+          "indexStatus": "decompiled",
+          "pseudocodePath": "decompiled/SocialBoxMediaServerd.dylib.c"
+        },
+        {
+          "address": "0x00028474",
+          "anchors": [
+            {
+              "line": 23112
+            },
+            {
+              "line": 23114
+            },
+            {
+              "line": 23116
+            },
+            {
+              "line": 23118
+            },
+            {
+              "line": 23148
+            }
+          ],
+          "component": "SocialBoxMediaServerd.dylib",
+          "function": "FUN_00028474",
+          "functionEndLine": 23210,
+          "functionStartLine": 23073,
+          "indexLine": 49,
+          "indexPath": "decompiled/SocialBoxMediaServerd.dylib.functions.tsv",
+          "indexStatus": "decompiled",
+          "pseudocodePath": "decompiled/SocialBoxMediaServerd.dylib.c"
+        },
+        {
+          "address": "0x000287f0",
+          "anchors": [
+            {
+              "line": 23324
+            },
+            {
+              "line": 23333
+            },
+            {
+              "line": 23341
+            },
+            {
+              "line": 23353
+            },
+            {
+              "line": 23374
+            }
+          ],
+          "component": "SocialBoxMediaServerd.dylib",
+          "function": "FUN_000287f0",
+          "functionEndLine": 23392,
+          "functionStartLine": 23298,
+          "indexLine": 51,
+          "indexPath": "decompiled/SocialBoxMediaServerd.dylib.functions.tsv",
+          "indexStatus": "decompiled",
+          "pseudocodePath": "decompiled/SocialBoxMediaServerd.dylib.c"
+        }
+      ],
+      "evidenceLevel": "static decompilation and registration only; no runtime execution",
+      "id": "DS-21",
+      "proposedDecision": "port",
+      "requiredVerification": "Capture actual media requests from two clones and unrelated apps; concurrent playback, switch while request in-flight, no credentials logged; define daemon-side attribution before adoption.",
+      "socialBoxComparison": [
+        {
+          "evidence": [
+            {
+              "anchor": "static NSString *RBXBuiltUserAgent(",
+              "detail": "A stored override may become stale after app/source upgrade. Profile model/OS coherence must be checked separately.",
+              "line": 48,
+              "path": "tweak/Network/RBXRedditAPIHooks.xm"
+            }
+          ],
+          "id": "WIRE-014",
+          "mechanism": "RBXBuiltUserAgent accepts stored profile UA first, otherwise constructs from current app version/build and profile device metadata.",
+          "path": "docs/leak-surface/wire-inventory.json",
+          "surface": "User-Agent actual app version vs configured override",
+          "verdict": "unverified",
+          "verification": "No runtime comparison of internal SDK UA builders with final transmitted UA across source upgrade."
+        },
+        {
+          "evidence": [
+            {
+              "anchor": "## User agent and browser state",
+              "detail": "FB-013 static findings, exact offsets and explicit runtime limits.",
+              "line": 189,
+              "path": "docs/facebook-binary-audit.md"
+            },
+            {
+              "anchor": "\"user_agent\": [",
+              "detail": "Hash-bound selected structural reference records; examples capped with match_count; not observed invocation.",
+              "line": 55855,
+              "path": "docs/leak-surface/facebook-binary-evidence.json"
+            }
+          ],
+          "id": "FB-013",
+          "mechanism": "Multiple Meta UA construction references identify independent formatting paths requiring consistency checks with platform/generated device fields.",
+          "path": "docs/leak-surface/facebook-inventory.json",
+          "surface": "Facebook user agent and device fingerprint consistency",
+          "verdict": "unverified",
+          "verification": "Exact main formatting-block and shared userAgent/builder selector offsets recorded; no emitted UA or receiving caller has been observed."
+        }
+      ],
+      "socialBoxRows": [
+        "WIRE-014",
+        "FB-013"
+      ],
+      "socialBoxScopeNote": "These ledger rows concern app User-Agent consistency; they do not prove coverage of shared mediaserverd egress.",
+      "unresolvedSocialBoxRowIds": []
+    },
+    {
+      "category": "Cookie identifier persistence",
+      "decisionRationale": "Keep per-clone cookie storage and domain-specific SocialBox wire policy. Reference name-only branches require unrelated-domain negative tests; do not infer absence of additional guards elsewhere.",
+      "socialboxStaticBehavior": "Main tweak registers setCookie:. Wrapper recognizes loid under a bundle predicate, replaces its value from a helper, and recognizes mid under another bundle predicate, reading/writing an app value store. The inspected body does not show a cookie-domain guard before the named-cookie branch. This does not prove all cookie stores are partitioned.",
+      "evidence": [
+        {
+          "address": "0x001039e0",
+          "anchors": [
+            {
+              "line": 194421
+            }
+          ],
+          "component": "SocialBox.dylib",
+          "function": "FUN_001039e0",
+          "functionEndLine": 194724,
+          "functionStartLine": 192560,
+          "indexLine": 284,
+          "indexPath": "decompiled/SocialBox.dylib.functions.tsv",
+          "indexStatus": "decompiled_after_retry",
+          "pseudocodePath": "decompiled/SocialBox.dylib.c"
+        },
+        {
+          "address": "0x002eb668",
+          "anchors": [
+            {
+              "line": 457151
+            },
+            {
+              "line": 457153
+            },
+            {
+              "line": 457156
+            },
+            {
+              "line": 457158
+            },
+            {
+              "line": 457165
+            },
+            {
+              "line": 457387
+            },
+            {
+              "line": 457390
+            },
+            {
+              "line": 457395
+            },
+            {
+              "line": 457401
+            }
+          ],
+          "component": "SocialBox.dylib",
+          "function": "FUN_002eb668",
+          "functionEndLine": 457550,
+          "functionStartLine": 457111,
+          "indexLine": 1233,
+          "indexPath": "decompiled/SocialBox.dylib.functions.tsv",
+          "indexStatus": "decompiled_after_retry",
+          "pseudocodePath": "decompiled/SocialBox.dylib.c"
+        }
+      ],
+      "evidenceLevel": "static decompilation and registration only; no runtime execution",
+      "id": "DS-22",
+      "proposedDecision": "retain",
+      "requiredVerification": "NSHTTPCookieStorage/custom/session/WebKit stores, same cookie names on unrelated domains, authenticated cookie continuity and new-container initial state.",
+      "socialBoxComparison": [
+        {
+          "evidence": [
+            {
+              "detail": "Only WebRTC, WebKit load, auth, and KVS policy hooks installed; storage relies on clone sandbox.",
+              "line": 106,
+              "path": "tweak/Container/RBXWebStorageHooks.xm"
+            }
+          ],
+          "id": "OS-020",
+          "mechanism": "Unique app sandbox owns normal persistent cookie file; no installed cookie getter/setter hooks.",
+          "path": "docs/leak-surface/os-network-inventory.json",
+          "surface": "NSHTTPCookieStorage shared and custom cookie stores",
+          "verdict": "unverified",
+          "verification": "Host architectural checks only (tools/test_clone_architecture.py); two managed clones with different sentinel values and denied cross-read are still required on iPhone. Test shared storage, custom containers, session cookie ownership and restore."
+        },
+        {
+          "evidence": [
+            {
+              "anchor": "static BOOL RBXIsRedditAPIHost(",
+              "detail": "Old substring matcher accepted notreddit.com and reddit.com.attacker.invalid. Current IPA hostname literals support these four domain families; snooguts has no corroborating literal.",
+              "line": 25,
+              "path": "tweak/Network/RBXRedditAPIHooks.xm"
+            }
+          ],
+          "id": "WIRE-001",
+          "mechanism": "Exact reddit.com/redditmedia.com/redditstatic.com/redd.it domain or dot-delimited subdomain, case-insensitive. This is header classification, not egress enforcement.",
+          "path": "docs/leak-surface/wire-inventory.json",
+          "surface": "Reddit header host classification",
+          "verdict": "covered-in-code",
+          "verification": "Production-function regression: lookalike domain failed before fa2d835, accepted/rejected/missing-host cases pass afterward. Device redirects and new server-driven hostnames remain capture work."
+        }
+      ],
+      "socialBoxRows": [
+        "OS-020",
+        "WIRE-001"
+      ],
+      "unresolvedSocialBoxRowIds": []
+    },
+    {
+      "category": "Sandbox extension request/consume path",
+      "decisionRationale": "Do not broadly grant extensions to sibling data as a compatibility workaround. Retain exact SocialBox storage authority and require a least-privilege helper contract.",
+      "socialboxStaticBehavior": "Named applyExtensionsForContainer:bundleID: opens an XPC connection, requests extensions via the recovered issueSandboxExtensionsForContainer:bundleID:reply: stub, waits up to five seconds, iterates returned strings through a resolved consumer and returns success only when consumed count matches. Exact granted paths/classes and helper authorization are outside this inspected function.",
+      "evidence": [
+        {
+          "address": "0x00336a28",
+          "anchors": [
+            {
+              "line": 61402
+            },
+            {
+              "line": 61407
+            },
+            {
+              "line": 61437
+            },
+            {
+              "line": 61438
+            },
+            {
+              "line": 61439
+            },
+            {
+              "line": 61476
+            },
+            {
+              "line": 61487
+            }
+          ],
+          "component": "SocialBox.dylib",
+          "function": "_Xs8c::applyExtensionsForContainer:bundleID:",
+          "functionEndLine": 61503,
+          "functionStartLine": 61247,
+          "indexLine": 1412,
+          "indexPath": "decompiled/SocialBox.dylib.functions.tsv",
+          "indexStatus": "decompiled",
+          "pseudocodePath": "decompiled/SocialBox.dylib.c"
+        },
+        {
+          "address": "0x00342920",
+          "anchors": [
+            {
+              "line": 66421
+            }
+          ],
+          "component": "SocialBox.dylib",
+          "function": "objc_stub::issueSandboxExtensionsForContainer:bundleID:reply:",
+          "functionEndLine": 66426,
+          "functionStartLine": 66416,
+          "indexLine": 2711,
+          "indexPath": "decompiled/SocialBox.dylib.functions.tsv",
+          "indexStatus": "decompiled",
+          "pseudocodePath": "decompiled/SocialBox.dylib.c"
+        }
+      ],
+      "evidenceLevel": "static decompilation and registration only; no runtime execution",
+      "id": "DS-23",
+      "proposedDecision": "unknown",
+      "requiredVerification": "Trace the issuing helper and consumer symbol, authorize caller bundle/container/audit identity, deny sibling and arbitrary paths, revoke on switch and test actual syscall access after revocation.",
+      "socialBoxComparison": [
+        {
+          "evidence": [
+            {
+              "anchor": "**FAIL: cross-container filesystem isolation",
+              "detail": "Scope, actual defects, limited results and release blocker.",
+              "line": 3,
+              "path": "docs/facebook-clone-device-acceptance.md"
+            },
+            {
+              "detail": "Sanitized real clone output plus raw evidence hashes.",
+              "line": 1,
+              "path": "docs/release-evidence/facebook-clone-acceptance-0.1.32.json"
+            },
+            {
+              "detail": "Observer using ordinary Keychain, defaults, CFPreferences, NSFileManager and sockets in the clone.",
+              "line": 1,
+              "path": "tools/fixtures/facebook_offline_acceptance/FBOfflineProbe.m"
+            },
+            {
+              "detail": "Offline-only disposable clone provisioning/deletion via real operation and lifecycle methods.",
+              "line": 1,
+              "path": "tools/fixtures/facebook_offline_acceptance/FBOfflineAcceptance.m"
+            }
+          ],
+          "id": "DEVISO-001",
+          "mechanism": "OS home separation and restricted app entitlements were assumed to supply the filesystem boundary. Runtime public APIs disproved enforcement: both clones read the sibling canary. Production Facebook remains inactive and defaults-wire false.",
+          "path": "docs/leak-surface/device-acceptance-inventory.json",
+          "surface": "Sibling data-home file read/stat in two real Facebook clones on palera1n",
+          "verdict": "gap",
+          "verification": "132 primary offline clone checks: 126 pass, six repeated foreign-file read/stat failures across B seed, A verify and B verify. System sandbox policy query denies the sibling path while actual read succeeds. Three source Keychain aliases and four defaults suites passed same-key canary isolation. Facebook later terminates in its framework. No full account, transport, cloud restore or MDM acceptance. The follow-up direct-syscall experiment reproduced foreign marker reads, then denied foreign content in both directions with a root-owned single-active permission gate. Foreign home metadata remains visible and closed-home sync fails; the candidate is not production-integrated (SGATE-001). Follow-up SGATE-002 integrates durable lifecycle enforcement: fresh A/B creation/sync, sealed export/deletion and both direct-syscall foreign-content denials passed. Foreign home root metadata remains visible; this verdict stays a gap."
+        },
+        {
+          "evidence": [
+            {
+              "detail": "Runtime profile validation requires appGroups=nil.",
+              "line": 163,
+              "path": "tweak/Container/RBXContainerManager.xm"
+            }
+          ],
+          "id": "OS-026",
+          "mechanism": "Clone builder removes all app-group entitlements; current ctor never installs legacy method that recreated group subdirectories.",
+          "path": "docs/leak-surface/os-network-inventory.json",
+          "surface": "App Group entitlement and containerURLForSecurityApplicationGroupIdentifier",
+          "verdict": "unverified",
+          "verification": "Host architectural checks only (tools/test_clone_architecture.py); two managed clones with different sentinel values and denied cross-read are still required on iPhone. Compare AppGroup filesystem before/after first run; verify original group not re-created."
+        },
+        {
+          "evidence": [
+            {
+              "anchor": "static inline NSURL *RBXFacebookPrivateGroupURL",
+              "detail": "Private home anchored storage with O_NOFOLLOW directory traversal.",
+              "line": 9,
+              "path": "shared/RBXFacebookPrivateGroupStore.h"
+            },
+            {
+              "anchor": "int main(void)",
+              "detail": "A/B real temporary filesystem canaries, distinct roles, symlink and file rejection.",
+              "line": 4,
+              "path": "tools/test_facebook_private_group_store.m"
+            },
+            {
+              "anchor": "BOOL RBXInstallFacebookStorageHooks",
+              "detail": "Checked app/profile/version-bound installation; Facebook readiness is not granted.",
+              "line": 172,
+              "path": "tweak/Container/RBXFacebookStorageHooks.xm"
+            },
+            {
+              "anchor": "installed[@\"facebook-storage\"]",
+              "detail": "Only Facebook registers this observer; other readiness stays separate.",
+              "line": 80,
+              "path": "tweak/RedditBox.xm"
+            }
+          ],
+          "id": "FBSTORE-002",
+          "mechanism": "Group URL API resolves exact source aliases to private directories beneath OS clone home; no original entitlements or fallback; component-by-component no-symlink traversal.",
+          "path": "docs/leak-surface/facebook-storage-inventory.json",
+          "surface": "Four declared App Group filesystem containers",
+          "verdict": "gap",
+          "verification": "42 real filesystem checks on Mac and iPhone; actual group URL interception included in 97-check device probe. Separate OS clone homes still need actual paired-app acceptance. Actual A/B clones resolve and read their own four private groups after FSOWN-001. However public file reads and stat reach the sibling OS home (DEVISO-001), invalidating reliance on that home as an enforced boundary on this device."
+        }
+      ],
+      "socialBoxRows": [
+        "DEVISO-001",
+        "OS-026",
+        "FBSTORE-002"
+      ],
+      "unresolvedSocialBoxRowIds": []
+    }
+  ],
+  "categoryCount": 23,
+  "date": "2026-09-20",
+  "injectionFilters": {
+    "SocialBox": {
+      "filter": {
+        "Bundles": [
+          "com.socialbox.app",
+          "com.apple.Preferences",
+          "com.burbn.instagram",
+          "com.facebook.Facebook",
+          "com.burbn.barcelona",
+          "com.facebook.PageAdminApp",
+          "co.hinge.mobile.ios",
+          "com.reddit.Reddit",
+          "com.reddit.Reddit.NotificationServiceExtension",
+          "com.reddit.Reddit.ShareExtension",
+          "com.reddit.Reddit.RedditIntents",
+          "com.reddit.Reddit.RedditWidgets",
+          "com.reddit.Reddit.stickers",
+          "com.cardify.tinder",
+          "com.moxco.bumble",
+          "com.badoo.Badoo",
+          "com.zhiliaoapp.musically",
+          "com.grindrapp.Grindr",
+          "com.grindrguy.grindrx",
+          "com.draftkings.sportsbook",
+          "lt.manodrabuziai.fr",
+          "ph.telegra.Telegraph",
+          "com.toyopagroup.picaboo"
+        ],
+        "Mode": "Any"
+      },
+      "path": "compiled/var/jb/Library/MobileSubstrate/DynamicLibraries/SocialBox.plist"
+    },
+    "SocialBoxAccountsd": {
+      "filter": {
+        "Executables": [
+          "accountsd"
+        ]
+      },
+      "path": "compiled/var/jb/Library/MobileSubstrate/DynamicLibraries/SocialBoxAccountsd.plist"
+    },
+    "SocialBoxCfPrefsd": {
+      "filter": {
+        "Executables": [
+          "cfprefsd"
+        ]
+      },
+      "path": "compiled/var/jb/Library/MobileSubstrate/DynamicLibraries/SocialBoxCfPrefsd.plist"
+    },
+    "SocialBoxContainermanagerd": {
+      "filter": {
+        "Executables": [
+          "containermanagerd"
+        ]
+      },
+      "path": "compiled/var/jb/Library/MobileSubstrate/DynamicLibraries/SocialBoxContainermanagerd.plist"
+    },
+    "SocialBoxLsd": {
+      "filter": {
+        "Executables": [
+          "lsd"
+        ]
+      },
+      "path": "compiled/var/jb/Library/MobileSubstrate/DynamicLibraries/SocialBoxLsd.plist"
+    },
+    "SocialBoxMediaServerd": {
+      "filter": {
+        "Executables": [
+          "mediaserverd"
+        ]
+      },
+      "path": "compiled/var/jb/Library/MobileSubstrate/DynamicLibraries/SocialBoxMediaServerd.plist"
+    },
+    "SocialBoxSecurityd": {
+      "filter": {
+        "Executables": [
+          "securityd"
+        ]
+      },
+      "path": "compiled/var/jb/Library/MobileSubstrate/DynamicLibraries/SocialBoxSecurityd.plist"
+    },
+    "SocialBoxSpringBoard": {
+      "filter": {
+        "Bundles": [
+          "com.apple.springboard"
+        ],
+        "Executables": [
+          "runningboardd"
+        ]
+      },
+      "path": "compiled/var/jb/Library/MobileSubstrate/DynamicLibraries/SocialBoxSpringBoard.plist"
+    }
+  },
+  "interferenceRisks": [
+    "Both products can intercept Security, CFPreferences, UIDevice/MG/IOKit and clipboard paths. Hook order and original-pointer chaining can apply double transforms or permit unexpected fallback; test one product at a time before any coexistence trial.",
+    "SocialBox injects system services and Preferences/SpringBoard/runningboardd, outside SocialBox clone processes. Enabling it on the same phone can change the environment of SocialBox acceptance even when the clone bundle is absent from its app filter.",
+    "Service global state, thread-local request attribution, PID caches and activeContainer lookups require process-lifetime and concurrency binding; references here are insufficient to prove race-free A/B switching.",
+    "securityd entitlement-response changes and sandbox-extension issuance can change effective access, not merely report synthetic identifiers. Port only with a narrow reviewed authority contract and direct-syscall foreign-data tests."
+  ],
+  "limitations": [
+    "Pseudocode is reconstructed, obfuscated, and has unresolved indirect calls/type/control-flow warnings. Addresses and function-index status are provided for reproduction; static registration does not prove successful installation or behavior.",
+    "The name-based authentication omission means exported code is partial. Mixed-purpose unnamed functions may include other logic; no authentication semantics were changed or relied on.",
+    "No secret, runtime credential, session token or saved profile values are included. Only structural names and source anchors are reported.",
+    "No overall winner or 100% isolation claim. SocialBox explicitly records unverified/gap rows and actual foreign-filesystem failures; SocialBox runtime isolation is not measured here.",
+    "The 23 categories are a bounded adoption inventory, not an exhaustive entire-binary audit; no non-use claim is based solely on a missing string."
+  ],
+  "priorityFindings": [
+    "Keychain authority is architecturally different: SocialBox service interception and context-dependent rewriting versus SocialBox generated entitlements/compiled per-app alias mapping. Preserve current validated behavior while resolving service authority.",
+    "Read-suppression pasteboard installer is directly traced for seven selectors; SocialBox source covers more public families, but neither static breadth nor hook counters substitute for actual sibling probes.",
+    "IDFV, IDFA, carrier, timezone and IOKit traces contain original-value fallback paths. Whether reachable under an intended enabled configuration is a specific acceptance test.",
+    "SocialBox broad SecItemDelete forwarding branch, cookie name-only inspected branch, and shared media service globals deserve negative-scope tests before reuse; these are static review leads, not reproduced vulnerabilities.",
+    "Promising ports are supplementary caller-bound LSD/media-service measurement/policy and lifecycle diagnostics; copying all service hooks wholesale would change the security boundary."
+  ],
+  "provenance": [
+    {
+      "path": "decompiled/SocialBox.dylib.c",
+      "sha256": "cdebcfa27fdf76389a93646d5053f7711ddcad01540c1a7e85465666f25feaae"
+    },
+    {
+      "path": "decompiled/SocialBox.dylib.functions.tsv",
+      "sha256": "8f863e114c2305d13f67c34ea656984018da649ad66ef358d6497d963b458bf8"
+    },
+    {
+      "path": "decompiled/SocialBoxAccountsd.dylib.c",
+      "sha256": "cd75de6116ab19d8fb87e1bc328be61768fc750692d14400423c5fae0a1470ef"
+    },
+    {
+      "path": "decompiled/SocialBoxAccountsd.dylib.functions.tsv",
+      "sha256": "5e43495ba277fe4a553cf0c573f5a7dfc9c1fce17a13491be6706f033397c65b"
+    },
+    {
+      "path": "decompiled/SocialBoxCfPrefsd.dylib.c",
+      "sha256": "4153e277a423323f93b3a997d58e39e128dadad4fe28623019cef41a22bccf04"
+    },
+    {
+      "path": "decompiled/SocialBoxCfPrefsd.dylib.functions.tsv",
+      "sha256": "c474217eea7477cdeb6e6db79736e2a09684a72357d72cf23acdeb725bbf98af"
+    },
+    {
+      "path": "decompiled/SocialBoxContainermanagerd.dylib.c",
+      "sha256": "4fa3be75bf82c18cca7b2b79c55dad51da90c0e14799f463eb09327859d1a69a"
+    },
+    {
+      "path": "decompiled/SocialBoxContainermanagerd.dylib.functions.tsv",
+      "sha256": "a4422a6b373f45b05a6cfc44ee82b34c3fe78fc44c007699800c7e2da26d32ce"
+    },
+    {
+      "path": "decompiled/SocialBoxLsd.dylib.c",
+      "sha256": "e558a414ed17a3ab33c8ed1b14288fca1263dc5d088fe2209f913dc72aad85f7"
+    },
+    {
+      "path": "decompiled/SocialBoxLsd.dylib.functions.tsv",
+      "sha256": "6cceaa4dc4a56213504008ba513fba4b29fb8d32a3f37b8e0455968be865ef44"
+    },
+    {
+      "path": "decompiled/SocialBoxMediaServerd.dylib.c",
+      "sha256": "c92359ca8c274fb54473540fffeeba068577265e80b94d1c3a6de69c403778c6"
+    },
+    {
+      "path": "decompiled/SocialBoxMediaServerd.dylib.functions.tsv",
+      "sha256": "5d3914b3bd4f8b9ea0b242a35c2e654d6abf180ff9a2b5aea75f93a88109485b"
+    },
+    {
+      "path": "decompiled/SocialBoxSecurityd.dylib.c",
+      "sha256": "9ddb558fc9bb3cd042c505a2714d0f7f17e67dbb19eb5034fbde94e9576f9c32"
+    },
+    {
+      "path": "decompiled/SocialBoxSecurityd.dylib.functions.tsv",
+      "sha256": "b2cd0cadd118cf27692408a81ea184f6a0a52d45b0b2eb8a4812d3c1cff0f0b2"
+    }
+  ],
+  "referenceCoverage": [
+    {
+      "component": "SocialBoxMediaServerd.dylib",
+      "final_analysis_timed_out": false,
+      "first_pass_analysis_timed_out": false,
+      "functions": {
+        "decompiled": 152,
+        "external_or_thunk": 96
+      },
+      "pseudocode_bytes": 1796444
+    },
+    {
+      "component": "SocialBoxAccountsd.dylib",
+      "final_analysis_timed_out": false,
+      "first_pass_analysis_timed_out": false,
+      "functions": {
+        "decompiled": 177,
+        "external_or_thunk": 108
+      },
+      "pseudocode_bytes": 1846822
+    },
+    {
+      "component": "SocialBoxSecurityd.dylib",
+      "final_analysis_timed_out": false,
+      "first_pass_analysis_timed_out": false,
+      "functions": {
+        "decompiled": 127,
+        "external_or_thunk": 99
+      },
+      "pseudocode_bytes": 625419
+    },
+    {
+      "component": "SocialBoxCfPrefsd.dylib",
+      "final_analysis_timed_out": false,
+      "first_pass_analysis_timed_out": false,
+      "functions": {
+        "decompiled": 204,
+        "external_or_thunk": 122
+      },
+      "pseudocode_bytes": 1986368
+    },
+    {
+      "component": "SocialBoxContainermanagerd.dylib",
+      "final_analysis_timed_out": false,
+      "first_pass_analysis_timed_out": false,
+      "functions": {
+        "decompiled": 197,
+        "external_or_thunk": 108
+      },
+      "pseudocode_bytes": 1893003
+    },
+    {
+      "component": "SocialBoxLsd.dylib",
+      "final_analysis_timed_out": false,
+      "first_pass_analysis_timed_out": false,
+      "functions": {
+        "decompiled": 168,
+        "external_or_thunk": 101
+      },
+      "pseudocode_bytes": 1827274
+    },
+    {
+      "component": "SocialBox.dylib",
+      "final_analysis_timed_out": false,
+      "first_pass_analysis_timed_out": true,
+      "functions": {
+        "auth_license_name_omitted": 12,
+        "decompiled": 1250,
+        "decompiled_after_retry": 1450,
+        "external_or_thunk": 561,
+        "unresolved_with_instruction_listing": 1
+      },
+      "pseudocode_bytes": 17254800
+    }
+  ],
+  "referenceRoot": "<handoff>",
+  "schemaVersion": 1,
+  "scope": "Bounded static identifier/storage review of SocialBox3.1.0-1 reconstructed pseudocode against current SocialBox ledger. No original buildable source supplied; no execution, runtime data access, authentication changes, repository edits or installation.",
+  "socialBoxHead": "72899ee23f92cfe6d93a6c0f4b54bbf7232467ff",
+  "socialBoxRoot": "<socialbox-repository>",
+  "validation": {
+    "allFunctionIndexAndPseudocodeAnchorsVerified": true,
+    "binariesExecuted": false,
+    "categoryCount": 23,
+    "functionEvidenceCount": 59,
+    "repoFilesModified": false,
+    "runtimeVerdict": "NOT_RUN"
+  }
+}

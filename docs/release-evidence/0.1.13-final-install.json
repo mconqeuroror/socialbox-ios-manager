@@ -1,0 +1,19 @@
+{
+  "version": "0.1.13",
+  "deviceProduct": "iPhone10,4",
+  "iOS": "16.7.16",
+  "packageSHA256": "3b2eab487c4e4a3dcd03711c0cf0435a9bd89b7e69789265e195c3496694aa28",
+  "matchesPublishedPackage": true,
+  "installedDaemonTweakAndLauncherMatchPackage": [
+    "RedditBox",
+    "RedditBox.dylib",
+    "redditboxd"
+  ],
+  "licenseActive": true,
+  "recoveryRequired": false,
+  "sentinelRestoredOff": true,
+  "networkState": "closed",
+  "realCloneSentinelProbes": "NOT_RUN",
+  "twoCloneIsolation": "NOT_RUN",
+  "rootfulDevice": "NOT_RUN"
+}

@@ -1,0 +1,52 @@
+{
+  "testedAt": "2026-09-30T21:50:01.826197+02:00",
+  "device": "iPhone10,6 / iOS 16.7.16",
+  "instagramVersion": "448.0.0 / 1072661960",
+  "managerVersion": "3.1.0-1+socialbox.17 with owner contact patch",
+  "method": "Two fresh containers created and switched through the installed CLI, using local identity generation. A signed Instagram-only diagnostic ran in the actual main app process as UID 501. Only test-owned canaries were queried.",
+  "results": {
+    "instagramLaunch": "PASS",
+    "createTwoDormantContainers": "PASS",
+    "normalFileAndPreferenceSeparation": "PASS",
+    "ownKeychainCanarySeparation": "PASS",
+    "localIDFVChangesBetweenAAndB": "PASS",
+    "returnToARetainsCanariesAndIDFV": "PASS",
+    "siblingFilesystemDenialThroughOpen": "FAIL: B read A’s witnessed test file",
+    "siblingFilesystemDenialThroughDirectSyscall": "FAIL: B read A’s witnessed test file",
+    "twoAccountSignInRetention": "NOT_RUN",
+    "proxyAndNetworkIsolation": "NOT_RUN",
+    "newWebsiteLicenseActivation": "NOT_RUN",
+    "freshClientInstall": "NOT_RUN",
+    "restoreOriginalActiveSelection": "PASS: Instagram active ID returned to 0",
+    "temporaryTestInjectionRemoved": "PASS",
+    "originalSignedInStateVisuallyResumed": "PASS: original/default selection reopened to a signed-in home feed",
+    "exactOriginalAccountIdentityConfirmation": "NOT_RUN: account identity was not inspected in the final feed"
+  },
+  "trialContainerNames": [
+    "SCT-IG-Trial-A",
+    "SCT-IG-Trial-B"
+  ],
+  "existingContainerIDsRetained": 107,
+  "totalContainerRecordsAfterTest": 109,
+  "backup": {
+    "sha256": "71b64ab175f23dc6c19dcf28c1493b48beca4738c13577e63ce821afc37c9830",
+    "archiveBytes": 17342670,
+    "entries": 1050,
+    "dataBytes": 39291071,
+    "attributeRecords": 674,
+    "globalKeychainIncluded": false,
+    "accountRestoreTested": false
+  },
+  "customerReleaseReady": false,
+  "nextFix": "Prevent an unprivileged active app from accessing inactive container files through kernel filesystem checks; repeat the witnessed-canary test after implementing safe switching and recovery.",
+  "diagnosticBuild": {
+    "binarySHA256": "5fd69d1e3b15bbfebf384e5ee64b46d66f21201f9648c1281eeadfb3c2a1005b",
+    "filterSHA256": "2e2f60bd9a76c35a6766fa2e6fbe8cb1fd0fc52e2d33efd2cf8d9ed57ded5c2a",
+    "target": "com.burbn.instagram",
+    "architectures": [
+      "arm64",
+      "arm64e"
+    ],
+    "enabledOnlyWithExplicitPhaseEnvironment": true
+  }
+}

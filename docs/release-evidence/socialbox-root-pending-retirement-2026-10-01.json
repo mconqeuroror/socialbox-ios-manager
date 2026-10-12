@@ -1,0 +1,294 @@
+{
+  "schemaVersion": 1,
+  "kind": "socialbox-root-pending-metadata-retirement",
+  "unit": 29,
+  "recordedAt": "2026-10-01T16:08:12.034661+00:00",
+  "status": "PASS_HOST_ROOT_RETIREMENT_WITH_CLIENT_AND_SIGNATURE_GAPS",
+  "clientDeliveryReady": false,
+  "customerArtifactReleased": false,
+  "customerCodeIssued": false,
+  "retainedToolingFailure": {
+    "status": "FAIL_BEFORE_EFFECTS",
+    "detail": "Initial private ledger updater assumed entries/surfaces rather than actual rows and raised KeyError before any write. Corrected new helper used the existing rows schema; no production policy, source or test changed."
+  },
+  "scope": {
+    "implemented": "Distinct typed stage-retire/execute-retire/reconcile-retire through existing fixed-manager service/root owner assembly. Same live source owner and original request deadline. No old raw writer, UI action or role change.",
+    "input": "Stage CAS uses authenticated expected-empty epoch, stable stageRequestID and complete expected document. Immutable retire slot retains configuration==expected at original UUID/revision; no new generation. Existing empty-proxy wire subset is unchanged; unsupported full documents refused, never stripped.",
+    "pending": "Strict retained input/slot parsing, attempt before record effect and same pending lock. Unfinished old create/update and retirement work conflict without discard or rewrite. Global old raw writer closure remains unchanged.",
+    "proof": "Clear uses new synchronous performWithExactRetirement callback with strict full canonical v2 proof, descriptor-pinned configuration.lock, same original fence/namespace and before/after record rereads. Checksum is correlation only. Final callback/source/proof failure may follow completion publication.",
+    "separation": "Only retirement_staged/retirement_retry_required/retired confirm retirement. Old execute/reconcile and staged/retry_required/saved never execute or confirm retire; new verbs refuse create/update. Existing frontend is not a retirement consumer.",
+    "retry": "Exact staged/completed retry, reopen and fresh validation retain full original UUID/document/request/slot. Completed retry freshly proves full durable retirement; missing/different/malformed/unsafe history never proves success. Every unsuccessful mutation may follow effects; keep exact input and revalidate/reconcile, never regenerate.",
+    "eligibility": "Only exact current v1 Boolean false unreserved authored records; reserved true and legacy UNKNOWN, missing/changed originals refuse before stage/effect. Reservation or change after stage preserves unresolved retirement.",
+    "permanence": "Full private v2 history and UUID occupation remain. No secure erase/unlimited capacity. Cooperating current-version writers and preserved history required; arbitrary root mutation, ABA/lifetime authority, lost history, mixed readers/writers and image-policy migration unsupported.",
+    "notAuthorized": "No numeric CID/app-data/account purge, allocated storage cleanup, identity release, pending discard/reset/adoption, runtime grant, first-preparation authority or customer readiness."
+  },
+  "host": {
+    "status": "PASS",
+    "focusedAssertions": 1277,
+    "regressionAssertions": 3776,
+    "totalAssertions": 5053,
+    "focusedQuotedInputs": 31,
+    "regressionRepositoryInputs": 113,
+    "sourceStable": true,
+    "fixtureScope": "actual fresh host files with existing test-only role assembly and ephemeral synthetic signed source admission; no kernel-peer/device/UI/runtime/customer acceptance",
+    "groups": [
+      "actual lifecycle/exact stage and completed byte-inode retry",
+      "fresh admission/reopen/restart and UUID reuse refusal",
+      "unfinished old create/update and unknown-kind preservation",
+      "strict eligibility before and after staging",
+      "typed request/reply cross-kind token/epoch/full-document boundaries",
+      "stage/attempt/clear before/after-publication failures",
+      "signed source expiry after actual tombstone publication and fresh reconciliation",
+      "malformed/noncanonical/unsafe/different tombstone refusal",
+      "held actual flock/namespace observation/nested proof and mutation refusal",
+      "post-callback full-record/lock/source/callback drift"
+    ],
+    "limitations": [
+      "trusted host-only pristine assembly through existing test seams, not installer provenance",
+      "clear-boundary fixture publishes actual tombstone while holding pending lock and same source fence; not a simulated caller proof",
+      "object restart/reopen only, not process kill/crash/reboot/power loss",
+      "no actual kernel audit/client-image exchange; no physical concurrency"
+    ],
+    "focusedReportSHA256": "002aad23240e9fe6ed0d844a0720c762bd9fa09ae28db6cb89d87619d49fc7c9",
+    "focusedLogSHA256": "85f2b88fe157ccd9a2deff8d1c7f5443cef099a032b6892f7d886f0570a8caa1",
+    "focusedInputSHA256": "6d9fa6a1441c8621b3dce288f339479ff192f5bde8b5a2214217b37e835054f0",
+    "regressionReportSHA256": "a9acbc7a30244a1086dea883e930900399337cd1f0f1db560691b99d2b4dc0f8",
+    "regressions": {
+      "test_root_pending_mutation": {
+        "status": "PASS",
+        "assertions": 581,
+        "privateLogSHA256": "08c5af3cc019320eb157bb1433dea8c7ab292cfee6f79c0087ecd9b72d06b2a2"
+      },
+      "test_container_mutation_ipc": {
+        "status": "PASS",
+        "assertions": 560,
+        "privateLogSHA256": "13780af9bbd358ccc50f620277fa019081a4d91909050d3f68aa6a52adebb540"
+      },
+      "test_container_mutation_client": {
+        "status": "PASS",
+        "assertions": 128,
+        "privateLogSHA256": "5bc85b09fe91a00ef0aea990ff7159da1a4f299d7062094b81d29773b7a78325"
+      },
+      "test_container_configuration_retirement": {
+        "status": "PASS",
+        "assertions": 843,
+        "privateLogSHA256": "c5fdee045fd77af71fb8ee9d9469137a59f1b96b5bbbb12bdf13c4f7e276e83b"
+      },
+      "test_container_configuration_store": {
+        "status": "PASS",
+        "assertions": 494,
+        "privateLogSHA256": "fbd1413df5e25131649d31d369577d5615869467882df329a84ba346c01405e8"
+      },
+      "test_license_owner": {
+        "status": "PASS",
+        "assertions": 285,
+        "privateLogSHA256": "a9018519363d47f23583a036233b2dea40364e13dc94097a91cd3ece13d85e8e"
+      },
+      "test_paired_pending_establishment": {
+        "status": "PASS",
+        "assertions": 163,
+        "privateLogSHA256": "24625968590b96715c7eabfbbf8c0c87789345c2747c1ad236694c0ad2edbeb9"
+      },
+      "test_root_mutation_coordinator": {
+        "status": "PASS",
+        "assertions": 722,
+        "privateLogSHA256": "331b100fa53ff107e02e8a095ba0108f7e267d0e1af9db8a35b3672bf90d9e5f"
+      }
+    },
+    "additionalProductionBoundaries": {
+      "installerRoleChecks": 3,
+      "pairedEstablishmentArchitectures": [
+        "arm64",
+        "arm64e"
+      ],
+      "rootCoordinatorArchitectures": [
+        "arm64",
+        "arm64e"
+      ]
+    },
+    "excludedInputs": [
+      "SDK",
+      "compiler",
+      "OS",
+      "Foundation",
+      "Security"
+    ]
+  },
+  "retainedFailure": {
+    "status": "FAIL_RETAINED_FIXTURE_SEQUENCE_ONLY",
+    "assertions": 1269,
+    "failures": 1,
+    "cause": "Retired active lookup correctly fails and closes source admission. Fixture incorrectly expected immediately following list to succeed without fresh signed validation.",
+    "correction": "Fixture asserts closed admission and protected bytes, explicitly validates, then separately asserts active list and sibling preservation. No production policy or source hash changed.",
+    "reportSHA256": "73aa55c64779f550f9123a33ab7472276ad4d0a79952abf9b9614fcb8862584e",
+    "logSHA256": "f2da5455724f61ee37b2826c60ec4f527218c4c5398cd15245ea445716cdfe23"
+  },
+  "production": {
+    "nativeCompilation": "PASS",
+    "quotedSourceCount": 45,
+    "quotedSourceCurrent": "PASS",
+    "generatedHeaderCurrent": "PASS",
+    "programs": {
+      "service": {
+        "sha256": "a3335c815f0b6fd520f2246cdeeff4cf5181eb660460aa4f6820459882dbb0a1",
+        "size": 1123664,
+        "slices": [
+          {
+            "subtype": 0,
+            "sha256": "90de31348056ce39cf425847c5ed1d986402e5dd09f3827740ccc2c26d309d6c",
+            "directories": [
+              {
+                "flags": 0,
+                "codePages": 134,
+                "pageHashes": "PASS"
+              }
+            ],
+            "namedFixtureSelectors": "ABSENT",
+            "entitlements": "EMPTY"
+          },
+          {
+            "subtype": 2147483650,
+            "sha256": "8e795daaabe37fd96759abfc209a1fed80a9869c6886feb03ca523a7edfffde7",
+            "directories": [
+              {
+                "flags": 0,
+                "codePages": 134,
+                "pageHashes": "PASS"
+              }
+            ],
+            "namedFixtureSelectors": "ABSENT",
+            "entitlements": "EMPTY"
+          }
+        ],
+        "macOSStrictSignature": "FAIL",
+        "macOSStrictExitCode": 1
+      },
+      "installer": {
+        "sha256": "c839261c2b09a7aff9ca220653309e31c3e67b789fefc8d13e0db1bdda573cdb",
+        "size": 1121952,
+        "slices": [
+          {
+            "subtype": 0,
+            "sha256": "1f69765fb8e870d799c54665a840af8f773bd6992ad8499aa0394b875a74f17e",
+            "directories": [
+              {
+                "flags": 0,
+                "codePages": 133,
+                "pageHashes": "PASS"
+              }
+            ],
+            "namedFixtureSelectors": "ABSENT",
+            "entitlements": "EMPTY"
+          },
+          {
+            "subtype": 2147483650,
+            "sha256": "91f188bc18dfec0ceb733d47e8980af6aa46a0a3fdda93c87b7b16b7dd878726",
+            "directories": [
+              {
+                "flags": 0,
+                "codePages": 133,
+                "pageHashes": "PASS"
+              }
+            ],
+            "namedFixtureSelectors": "ABSENT",
+            "entitlements": "EMPTY"
+          }
+        ],
+        "macOSStrictSignature": "FAIL",
+        "macOSStrictExitCode": 1
+      }
+    },
+    "sourceSHA256": {
+      "daemon/RBXLicenseToken.h": "a21d1072b10136c4ecc809ad1855bebd368849a2bc0628db63202399fcb52979",
+      "daemon/RBXLicenseToken.m": "e3f00d563c99a47400d22b31b152ec4d2ab6123505b9aaa0f2d2d787f13d55da",
+      "lucid/Authorization/ClientProbe.m": "7320ae045e50acf3e26248d871320b12958eb1a77bb56071dc141fdaf5c2594a",
+      "lucid/Authorization/InstallPreparation.m": "f373c755463fe34ad093b3046579e8c32082796159f2d1f5f8c0f8a5193ae8cd",
+      "lucid/Authorization/LBXLicenseClient.h": "63267ad770a9f373edadc18b700b8c1909a25784ff054b2e43c6011bd7ec9686",
+      "lucid/Authorization/LBXLicenseClient.m": "34f06ce5d479543172b9dddecba5d3b847dc499f432c57a78b3181f2bfb1fd94",
+      "lucid/Authorization/LBXLicenseEndpoints.h": "cd0287d7b0f443ef9964b3a0679531c82d18d067a8ed03dbe1ca979bf5c7d016",
+      "lucid/Authorization/LBXLicenseExchange.h": "ab24d7e92934dce040add199712c0bce2cdd29e581b7e0c1a6246708c90f9b29",
+      "lucid/Authorization/LBXLicenseExchange.m": "5a7ed4ef11dcf87ec32876ce34f75463077215734525929f9750f4afc02e7c93",
+      "lucid/Authorization/LBXLicenseIPC.h": "8ff579acaa3b3113e6480f472022df893095d633de08b362a42de3b63df839ea",
+      "lucid/Authorization/LBXLicenseIPC.m": "7c3aec2a53d8c666b4cfd6ba8deb323f172b5c962de82c809834876b9396ffbc",
+      "lucid/Authorization/LBXLicenseInstallationEstablishment.h": "3a88f7bd3b2e6f5dfc3c7409ac0a910c8e9e2c0d768adc09fda45b39f308ddad",
+      "lucid/Authorization/LBXLicenseInstallationEstablishment.m": "8a0676f50d6e3b7b9d4bed655dc7e4c9dcc0f44957c5a9e859e38f6c25d7fcef",
+      "lucid/Authorization/LBXLicenseOwner.h": "ec2b0a3bc4354ae0f2ed942c8f45e54767e97e0a6ff35e8d79c0c67e4e159736",
+      "lucid/Authorization/LBXLicenseOwner.m": "b61bc078a29087947608963f0d0f3963889238dbe098bfb98676a0b2ea3e3154",
+      "lucid/Authorization/LBXLicensePeer.h": "bcd2c336db43e00c5f549f0db2a12d54c1945f4ec8d51916640df9ff6c36f208",
+      "lucid/Authorization/LBXLicensePeer.m": "92e2207673a79030442664a66a46a2610bace3875a77ab99f4943f0f6bc50787",
+      "lucid/Authorization/LBXLicenseTransport.h": "bbf31e9e89f19ad7edca17ceb4bfec5e66ff6566d7daff1c125e44af0682e54a",
+      "lucid/Authorization/LBXLicenseTransport.m": "40999576d5d20030ecb50631e4ba69d333de79c2119867923975691147acf35a",
+      "lucid/Authorization/LBXLicenseVault.h": "a9a0583689fa9ec7f8f9861df9533a4b443670aa88d15b948b7fe58fc224fd2f",
+      "lucid/Authorization/LBXLicenseVault.m": "e2d3d3ce123655913d10ca983db7de7f4aa62aed4138434fc50f9f139c4639d0",
+      "lucid/Authorization/LicenseService.m": "59a5265c1b5ab09040e77edf26701f0de10cc294dadac9ef9424540452a5dd6c",
+      "lucid/Containers/LBXContainerConfiguration.h": "bf178269d63bccf8ee2651113ba43401784aff79724b25062026f74e465828fe",
+      "lucid/Containers/LBXContainerConfiguration.m": "0475f4c7443d6a74bca17e47bd19c4c736af8faa319b2bd18d4e2a9c405b58a8",
+      "lucid/Containers/LBXContainerConfigurationStore.h": "34a163269430c95d3aee1904938d08c5bacaff6af2a71462952510631caf5abc",
+      "lucid/Containers/LBXContainerConfigurationStore.m": "83d42357e974f9f5f58f871a24e5fe97da7db358e5c4156c1bf4373283287567",
+      "lucid/Containers/LBXContainerEndpoints.h": "f2a247fad88f4c33a7f724639b9721f5888597c034dd57e00cbe8e79714d4f14",
+      "lucid/Containers/LBXContainerIPC.h": "b1cadb446b6f2b9e420bea05b7def048e2dbb17a3b621b523f596f5695a8ea93",
+      "lucid/Containers/LBXContainerIPC.m": "a997795f418a5fb498008c15e159e23e9e499b88ca2f14f4dfe3206297e6e68c",
+      "lucid/Containers/LBXContainerMutationClient.h": "c20e7f98ddd5624e44017ba930d12ded38b0e7fed6a19e84ba4d93bb33d721eb",
+      "lucid/Containers/LBXContainerMutationClient.m": "4d0464df8a6b06a81528c76aaf5a2b6b1fea9e2fed220ac3b29c7fe4b13c8e00",
+      "lucid/Containers/LBXContainerMutationIPC.h": "630258f7b034d9ef541c735c9a43da223c88ed606ba3e229023eee83ba488aaa",
+      "lucid/Containers/LBXContainerMutationIPC.m": "f8a1ec968105064aa3404d605e45eda190723dc4d166c646d8ef5d0cc193e25c",
+      "lucid/Containers/LBXContainerRootMutationOwner.h": "2440d0272a20564c6716f6f939245db592105a214318f31497ab5d50d631ebe1",
+      "lucid/Containers/LBXContainerRootMutationOwner.m": "1e75e9cabbc47aee7ed9c51668cc35abedb1f086744bdfec890c58470bfd99aa",
+      "lucid/Containers/LBXContainerRootPendingStore.h": "463d6d7cfd299ef3022f1680ac69c0d28a98c882d7184dbc046374166f549be2",
+      "lucid/Containers/LBXContainerRootPendingStore.m": "57667cb55201f010cc0b3e83067569c6142f884101b62b66124dd5aa2b8e9ca6",
+      "lucid/HelperSafety/LBXCallerFile.h": "d538e65c56b235190971dee04aa9ae57606d22ff176519e006079bef05853888",
+      "lucid/HelperSafety/LBXCallerFile.m": "8eaece9470b8024f514f35c52fb35fdeb24d9bb8b139eb18be9a9a42b67a75b0",
+      "lucid/HelperSafety/LBXXPC.h": "dd03df90efb001c332e622a2a1f1292d1f3ceaca02916a8a7dc3d86f1c4d474d",
+      "scripts/build-socialbox-license-service.py": "f1ad0e22cc1c4893a841951680ef32334cd2214b1af33767faececd91cabc903",
+      "scripts/license-key.py": "25b7a73e6e14dca7cfe690a76279810e558aefe1dd6d0c266d95f08c1644e465",
+      "shared/RBXLicensePin.h": "e81b82da4597828a48c3dbfa76055a06c3e4a4323a165ed3e7d70b7e97ee9f3f",
+      "shared/RBXProc.h": "988131ea103712173f484ff1226477c141b5ab21a1d232241210941010fe410e",
+      "shared/RBXStorageGate.h": "95e77751b8b78276d6ef34699176eab2df3243b902f494d5a23cfb257d7fe9ac"
+    },
+    "generatedHeaderSHA256": "e1d5e2c1c7f1f024396b7b4760823123801493af72db78d00d001772bdd8be93",
+    "scope": "embedded code-page SHA256 comparisons and empty entitlement extraction only; no special-slot, CMS, publisher, operating-system or device trust",
+    "excludedInputs": [
+      "SDK",
+      "compiler",
+      "OS",
+      "public key input"
+    ],
+    "deviceExecution": "NOT_RUN",
+    "customerDeliveryReady": false,
+    "sourceStabilityScope": "Builder before/after45 quoted repository source/build inputs and independent final current reread. Generated owner-config.h observed once after build and independently rehashed; no64-file graph. SDK/compiler/OS/public-pin input excluded."
+  },
+  "review": {
+    "status": "PASS_SCOPED",
+    "privateReportSHA256": "dd702e80ee8b4a50aebae8f8a4253e714c7ba47c0e0988b504a215bdb660a4f9",
+    "fixtureIndependence": "Reviewer authored the two new fixture files and did not execute or independently review them. Root separately reviewed all fixture source and performed fresh frozen attempts; root corrected only fixture sequencing after retained failure.",
+    "limits": [
+      "completed retry is current read-only observation, not permission lifetime",
+      "no kernel peer, phone, UI, provisioning, runtime or customer acceptance"
+    ]
+  },
+  "notRun": [
+    "retirement frontend/visible control",
+    "actual authenticated kernel-peer retirement IPC",
+    "phone/default endpoint/owner update",
+    "physical process kill/crash/reboot/power loss/concurrency",
+    "first-install authority/customer package/download",
+    "actual account/proxy/isolation/switching/runtime acceptance",
+    "CMS/special-slot/publisher/OS/device signature trust"
+  ],
+  "preserved": {
+    "phoneEffect": false,
+    "websiteEffect": false,
+    "realLicenseIssued": false,
+    "ownerUIOrAccountsChanged": false,
+    "privateStateUploaded": false,
+    "websiteProductionId": "dpl_8gVkfngk8PvzQun2UhY2JzppNCfz",
+    "websiteReprobedOrRedeployed": false
+  },
+  "releaseBlockers": [
+    "missing legitimate first-preparation issuer/history and pending clean-device input",
+    "known macOS strict arm64e signature FAIL",
+    "prior actual Instagram sibling read FAIL remains unfixed",
+    "Facebook launch FAIL and Twitter runtime unaccepted",
+    "full install/runtime/account/proxy/safe switch/recovery acceptance incomplete"
+  ]
+}
