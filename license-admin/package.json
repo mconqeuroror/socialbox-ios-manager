@@ -1,0 +1,14 @@
+{
+  "name": "socialbox-license-admin",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": "22.x" },
+  "scripts": {
+    "build": "node scripts/check.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "dev": "node --env-file-if-exists=.env.local scripts/dev.mjs",
+    "setup": "node scripts/setup.mjs",
+    "check:env": "node --env-file-if-exists=.env.local scripts/check-env.mjs"
+  }
+}

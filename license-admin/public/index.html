@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="dark"><meta name="robots" content="noindex,nofollow">
+<title>SocialBox · License admin</title><link rel="icon" href="/favicon.svg"><link rel="stylesheet" href="/style.css"><script type="module" src="/app.js"></script>
+</head>
+<body>
+<header class="topbar"><a class="brand" href="/"><span class="mark" aria-hidden="true">◇</span><span>SocialBox <small>License admin</small></span></a><button id="logout" class="quiet" hidden>Sign out</button></header>
+<main>
+<section id="loading" class="login-card"><p class="muted">Connecting securely…</p></section>
+<section id="login-panel" class="login-card" hidden>
+<span class="eyebrow">PRIVATE ACCESS</span><h1>Your keys.<br>Your control.</h1><p class="muted">Sign in to manage SocialBox licenses.</p>
+<form id="login-form"><label>Email<input id="email" type="email" autocomplete="username" maxlength="254" required></label><label>Password<input id="password" type="password" autocomplete="current-password" maxlength="1024" required></label><button type="submit">Sign in <span aria-hidden="true">↗</span></button></form>
+</section>
+<section id="dashboard" hidden>
+<div class="heading"><div><span class="eyebrow">ACCESS MANAGEMENT</span><h1>License keys</h1><p class="muted">One key. One installation. A duration you choose.</p></div><button id="refresh" class="quiet">↻ Refresh</button></div>
+<div class="stats"><article><span>Total licenses</span><strong id="total">—</strong></article><article><span>Activation</span><strong class="stat-text">First use</strong><small>Duration starts on activation</small></article><article><span>Offline access</span><strong class="stat-text">72 hours</strong><small>Never extends beyond expiry</small></article></div>
+<section class="panel"><div class="panel-heading"><h2>Create licenses</h2><span class="muted">Full keys are shown once</span></div>
+<form id="generate-form" class="generate-form"><label>Quantity<input id="count" type="number" min="1" max="100" value="1" required></label><label>Duration<select id="duration"><option value="7">7 days</option><option value="30" selected>30 days</option><option value="90">90 days</option><option value="custom">Custom days</option></select></label><label id="custom-days-label" hidden>Days<input id="custom-days" type="number" min="1" max="3650" value="30"></label><label class="note-field">Note / label<input id="note" maxlength="240" placeholder="Customer or batch label"></label><button type="submit">Create keys <span aria-hidden="true">＋</span></button></form>
+</section>
+<section id="new-keys" class="panel new-keys" hidden><div class="panel-heading"><div><span class="eyebrow">SAVE BEFORE CLOSING</span><h2>Your new licenses</h2></div><button id="close-keys" class="quiet">Close</button></div><p class="muted">Save these keys securely. Only a masked preview is retained on the server.</p><textarea id="keys-output" readonly spellcheck="false" aria-label="New license keys"></textarea><div class="row"><button id="copy-keys">Copy all</button><button id="download-keys" class="quiet">Download .txt</button></div></section>
+<section class="panel table-panel"><div class="panel-heading"><h2>All licenses</h2><span id="page-info" class="muted"></span></div><div class="table-scroll"><table><thead><tr><th>License / note</th><th>Status</th><th>Duration</th><th>First activation</th><th>Expires</th><th>Last check-in</th><th><span class="sr-only">Actions</span></th></tr></thead><tbody id="license-rows"></tbody></table></div><p id="empty" class="empty" hidden>No licenses yet. Create your first 30-day key above.</p><div class="pagination"><button id="previous" class="quiet" disabled>← Previous</button><button id="next" class="quiet" disabled>Next →</button></div></section>
+</section>
+<div id="notice" class="notice" role="status" aria-live="polite" hidden></div>
+</main>
+<footer>For any issues message <a href="https://t.me/sctweaks" target="_blank" rel="noopener noreferrer">@sctweaks on Telegram</a><span>SocialBox · Private license management</span></footer>
+</body>
+</html>
